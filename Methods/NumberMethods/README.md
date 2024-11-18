@@ -56,7 +56,7 @@ print(result) // Outputs: 1 (true)
 ```
 
 ###### .random_from
-The `.random_from` method generates a random number in the range of 1 (or optional parameter) to number. Example usage:![image](https://github.com/user-attachments/assets/78235c4e-ba17-479f-9ace-510487a59698)
+The `.random_from` method generates a random number in the range of 1 (or optional parameter) to number. Example usage:![image](https://github.com/user-attachments/assets/52cc4813-51af-46d0-8d8a-a0d6d2140f4c)
 ```greyscript
 myNumber = 42
 myNumber2 = 100
