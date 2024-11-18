@@ -82,3 +82,58 @@ newString = "Hello"
 print(newString.remove_last_character) // Outputs: Hell
 ```
 
+  ###### .remove_bold
+The `.remove_bold` method allows you to remove bold tags from the given text. Example usage:![image](https://github.com/user-attachments/assets/1aafa4e7-2181-4242-89b9-27c6065008cd)
+```
+newString = "<b>Hello</b>"
+
+print(newString.remove_bold) // Outputs: Hello
+```
+
+  ###### .remove_italic
+The `.remove_italic` method allows you to remove italic tags from the given text. Example usage:![image](https://github.com/user-attachments/assets/1335de93-87ec-4af4-a13c-f6c5b9fa2e40)
+```
+newString = "<i>Hello</i>"
+
+print(newString.remove_italic) // Outputs: Hello
+```
+
+  ###### .remove_underline
+The `.remove_underline` method allows you to remove underline tags from the given text. Example usage:![image](https://github.com/user-attachments/assets/9edc210f-b8aa-43c0-a88c-5640478cdd75)
+```
+newString = "<u>Hello</u>"
+
+print(newString.remove_underline) // Outputs: Hello
+```
+
+  ###### .remove_strike
+The `.remove_strike` method allows you to remove strikethrough tags from the given text. Example usage:![image](https://github.com/user-attachments/assets/af14cfb9-6dde-4d1a-b58c-54a27611a0da)
+```
+newString = "<s>Hello</s>"
+
+print(newString.remove_strike) // Outputs: Hello
+```
+
+  ###### .remove_highlight
+The `.remove_strike` method allows you to remove mark tags from the given text. Example usage:![image](https://github.com/user-attachments/assets/70a2557b-7acf-44d3-8af1-1adf2d7f73d6)
+```
+newString = "<mark>Hello</mark>"
+
+print(newString.remove_mark) // Outputs: Hello
+```
+
+  ###### .remove_tiny
+The `.remove_tiny` method allows you to remove sub tags from the given text. Example usage:![image](https://github.com/user-attachments/assets/a65a4085-d7d7-4d39-b947-90181b3ae6e8)
+```
+newString = "<sub>Hello</sub>"
+
+print(newString.remove_tiny) // Outputs: Hello
+```
+
+  ###### .remove_sup
+The `.remove_tiny` method allows you to remove superscript tags from the given text. Example usage:![image](https://github.com/user-attachments/assets/27c47d75-875c-4d30-bfe2-181dfb2398d9)
+```
+newString = "<sup>Hello</sup>"
+
+print(newString.remove_sup) // Outputs: Hello
+```
