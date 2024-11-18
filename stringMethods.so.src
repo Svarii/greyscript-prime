@@ -1,0 +1,153 @@
+//Extended string object methods
+
+        //v1.0 by Svarii
+        //@description   
+            //
+            //  * **Description:**
+            //  * Applies a color to the given text.
+            //  * @description     
+            //  * Color values maybe be #**FFFFFF** or **color** format
+            //  * @param {string} colorValue - The color to apply.
+            //  * @return {string} - The colorized text.
+            //  * @example
+            //  * newString = "Hello"
+            //  * @example
+            //  * @example
+            //  * result = newString.color("blue");
+            //  * @example
+            //  * print(result); // Outputs: <color=blue>Hello</color>
+            //  * @example
+            //  * @example
+            //  * result = newString.color("#FFFFFF");
+            //  * @example
+            //  * print(result); // Outputs: <color=#FFFFFF>Hello</color>
+            //  *
+                string.color = function(colorValue = "red")
+                    if not typeof(colorValue) == "string" then return "Error: string.color passed object type of " + typeof(colorValue) + ", string required"
+                    return "<color=" + colorValue + ">" + self + "</color>"
+                end function
+        //v1.0 by Svarii
+        //@description   
+            //  * **Description:**
+            //  * Applies bold to the given text.
+            //  *
+            //  * @return {string} - The bold text.
+            //  * @example
+            //  * newString = "Hello"
+            //  * @example
+            //  * @example        
+            //  * result = newString.bold
+            //  * @example
+            //  * print(result); // Outputs: <b>Hello</b>
+            //  *
+                string.bold = function()
+                    return "<b>" + self + "</b>"
+                end function
+        //v1.0 by Svarii
+        //@description   
+            //  * **Description:**
+            //  * Applies italic to the given text.
+            //  *
+            //  * @return {string} - The italic text.
+            //  * @example
+            //  * newString = "Hello"
+            //  * @example
+            //  * @example        
+            //  * result = newString.italic
+            //  * @example
+            //  * print(result); // Outputs: <i>Hello</i>
+            //  *
+                string.italic = function()
+                    return "<i>" + self + "</i>"
+                end function 
+        //v1.0 by Svarii
+        //@description   
+            //  * **Description:**
+            //  * Applies underline to the given text.
+            //  *
+            //  * @return {string} - The underline text.
+            //  * @example
+            //  * newString = "Hello"
+            //  * @example
+            //  * @example        
+            //  * result = newString.underline
+            //  * @example
+            //  * print(result); // Outputs: <u>Hello</u>
+            //  *
+                string.underline = function()
+                    return "<u>" + self + "</u>"
+                end function
+        //v1.0 by Svarii
+        //@description    
+            //  * **Description:**
+            //  * Applies strikethrough to the given text.
+            //  *
+            //  * @return {string} - The strikthrough text.
+            //  * @example
+            //  * newString = "Hello"
+            //  * @example
+            //  * @example        
+            //  * result = newString.strike
+            //  * @example
+            //  * print(result); // Outputs: <s>Hello</s>
+            //  *
+                string.strike = function()
+                    return "<s>" + self + "</s>"
+                end function
+        //v1.0 by Svarii
+        //@description    
+            //  * **Description:**
+            //  * Applies highlight to the given text.
+            //  *
+            //  * @return {string} - The highlight text.
+            //  * @example
+            //  * newString = "Hello"
+            //  * @example
+            //  * @example        
+            //  * result = newString.highlight
+            //  * @example
+            //  * print(result); // Outputs: <mark>Hello</mark>
+            //  *
+                string.highlight = function
+                    return "<mark>" + self + "</mark>"
+                end function
+        //v1.0 by Svarii
+        //@description      
+            //  * **Description:**
+            //  * Applies subscript to the given text.
+            //  *
+            //  * @return {string} - The subscript text.
+            //  * @example
+            //  * newString = "Hello"
+            //  * @example
+            //  * @example        
+            //  * result = newString.tiny
+            //  * @example
+            //  * print(result); // Outputs: <sub>Hello</sub>
+            //  *    
+                string.tiny = function
+                    return "<sub>" + self + "</sub>"    
+                end function            
+        //v1.0 by Svarii
+        //@description    
+            //  * **Description:**
+            //  * Remove the last character of the given text.
+            //  *
+            //  * @return {string} - The subscript text.
+            //  * @example
+            //  * newString = "Hello"
+            //  * @example
+            //  * @example        
+            //  * result = newString.remove_last_character
+            //  * @example
+            //  * print(result); // Outputs: Hell
+            //  *        
+                string.remove_last_character = function()             
+                    charList = self.values
+                    newList = charList.pop
+                    newString = ""
+                    for char in charList
+                        newString = newString + char
+                    end for
+                    return newString
+                end function
