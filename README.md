@@ -12,7 +12,7 @@ The comments in this **GreyScript** are designed to be used in tanden with **VSC
   ##### [.remove_last_character](#remove_last_character)
 
   ###### .color
-The `.color` method allows you to apply a color to the given text. Example usage:![image](https://github.com/user-attachments/assets/48643a76-8cd0-4aca-a159-7928e3ea3b13)
+The `.color` method allows you to apply a color to the given text. Example usage:![image](https://github.com/user-attachments/assets/1df01792-5749-4076-bc71-7a4c6e4e45cd)
 ```
 newString = "Hello"
 
