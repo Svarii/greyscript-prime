@@ -72,6 +72,13 @@ newString = "Hello"
 
 print(newString.tiny) // Outputs: <sub>Hello</sub>
 ```
+  ##### .sup
+The `.sup` method allows you to apply superscript to the given text. Example usage:
+```
+newString = "Hello"
+
+print(newString.sup) // Outputs: <sup>Hello</sup>
+```
 
   ##### .remove_last_character
 The `.remove_last_character` method allows you to remove the last character to the given text. Example usage:![image](https://github.com/user-attachments/assets/794a176d-75b3-4abc-88f0-2c89d22ff4b3)
