@@ -1,0 +1,33 @@
+
+//v1.0 by Svarii
+//@description   
+	//  * **Description:**
+	//  * Generates an object that contains a shell and computer object
+	//  *
+	//  * @return {SystemObject} - System Object {.shell and .computer}
+	//  * @example
+	//  * terminal = get_system_object
+	//  * @example
+	//  * print typeof(terminal)  //Outputs: SystemObject      
+    //  * @example	
+	//  * print terminal.computer.get_name  //Outputs: The name of the computer
+    //  * @example		
+	//  * print terminal.shell.launch("ls")  //Outputs: launches ls
+	//  *
+	get_system_object = function(user = "", password = "")
+		System = {"shell":null, "computer":null}
+			terminal = new System
+			if not user == "" then
+				terminal.shell = get_shell(user, password)
+			else
+				terminal.shell = get_shell
+			end if
+			terminal.computer = terminal.shell.host_computer
+			terminal.classID = "SystemObject"
+			return terminal
+	end function
+
+	terminal = get_system_object typeof()
+	print typeof(terminal)
+	
+
