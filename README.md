@@ -10,6 +10,13 @@ The comments in this **GreyScript** are designed to be used in tanden with **VSC
   ##### [.highlight](#highlight)
   ##### [.tiny](#tiny)
   ##### [.remove_last_character](#remove_last_character)
+  ##### [.remove_bold](#remove_bold)
+  ##### [.remove_italic](#remove_italic)
+  ##### [.remove_underline](#remove_underline)
+  ##### [.remove_strike](#remove_strike)
+  ##### [.remove_highlight](#remove_highlight)
+  ##### [.remove_tiny](#remove_tiny)
+  ##### [.remove_sup](#remove_sup)
 
   ###### .color
 The `.color` method allows you to apply a color to the given text. Example usage:![image](https://github.com/user-attachments/assets/1df01792-5749-4076-bc71-7a4c6e4e45cd)
