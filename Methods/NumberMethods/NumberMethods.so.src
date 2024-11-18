@@ -110,3 +110,25 @@
                     if isLesser < self then return true
                     return false
             end function
+        //v1.0 by Svarii
+        //@description   
+            //
+            //  * **Description:**
+            //  * Generate a random number from 1 to number opt: min
+            //  * @description     
+            //  * @param {number} amount - The amount to add.
+            //  * @return {bool number | string on type error} - The result of the subtraction.
+            //  * @example
+            //  * myNumber = 100;
+            //  * @example
+            //  * @example
+            //  * result = myNumber.random_from(50);
+            //  * @example
+            //  * print(result); // Outputs: {rnd:50-100}
+            //  * @example
+            //  *    
+            number.random_from = function(min = 1)
+                if not typeof(min) == "number" then return "Error: number.random_from passed object type of " + typeof(min) + ", number required"
+                    max = self
+                    return floor((rnd * (max - min + 1)) + min)  
+            end function            
