@@ -1,0 +1,17 @@
+//load metaxploit.so
+load_lib_metax = function(metaxLibLocation = "/lib/metaxploit.so")
+    metax = include_lib(metaxLibLocation)
+    exeOutput = []
+    if not metax then
+            push(exeOutput, "> "+ active_user + "@" + get_shell.host_computer.get_name + ":~$ " + metaxLibLocation + " not Found")
+		    return exeOutput.join("\n")
+    else
+        if typeof(metax) == "MetaxploitLib" then
+            push(exeOutput, "> " + metax + " loaded sucessfully")
+			return metax; break;
+        else
+            push(exeOutput, "type: " + typeof(metax) + " not a MetaxploitLib library object")
+		    return exeOutput.join("\n")
+        end if
+    end if
+end function
