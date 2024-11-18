@@ -3,10 +3,9 @@
 [![Svarii](https://img.shields.io/badge/Svarii-blue?&style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADX0lEQVQ4T1WTXUxbZRzGf6ftoYVCacvHKF8KXYaTjTE25zZAiQS3hMx5MRMXEjMVvPLGOJ3xZkEzLxbRiMZEzbxRE6MY2ZYRFYZ10/FppguI4WNCgUFbCqVQOG3P4fgWw4LP9fs+ef7Ph6QLsA2hUIgfrnVw4xcP3qlJ9JhK6Z5Snn7mFI8cOYosy9ufI20RbGxs4LnexcXmZjRVIbyySji4hBJewaTFyM21UffUSV4+34LdmXGfZJMgIaLjcjufvX+R6qojFBfnk+FwEPT5GP17gva2NgoyZdxFabjLDlJz+hzFJeUYDIb/FAz09PBq0xnKKvbidrvJTLfidNqxmmUCgmRhfobARD+FOQZSUrLAVcTD1Y3s2X8IKRqN6g31x4lGwuw9sI8d2dnY7TbsqVYMGxrTM9OkWGSK8pLIy4nS2vwNux+r4o+/5nnvqytIg7239DdeeI7KJ2vFx3QS51gsZpJNMoW5LtLtqSz6l/HPjSKvDXG9e4z+kQCSZKT1u8tIlz7+UB8e/I28/Hw0YaSmqijRdcy6gUMVB5CNiZCM/Nz1Ezc7u4isx0izm6mrK0V+oBbpwpuv6Yu+WTKzstA0lV97B1kMhVmPRIQiO5Xl+5iau8eqz8/Y8Ig4zYI12cjkssLBYyeRzjU+ryvampAu4Z2cZeTuBC6Hk11Ckb4Bu9z5RONGgpNDJIXn8fpXGRUnLcZiPHqsHunsS436QnAWlyuXjh+7mQ4GsRoNnDhcjSXZTFaWjYLcYuZvXSXiX0AX3gTWBYkvTGXDi0iff/qJPtR/gxzXDtqvdTLrWwItSsWDbmwZNoZGx6naXYI8NbwZqxLXGF9aJipZeOvr75GmvV790kctrIkYe/puMzYxiUv4UZidicOWirIep3JnHsnzIyiKylxIYUWNYykp48IXbUiiwrqnu4sr336Jx3OT6XsBkYbGzoI8jpbvR9VVrCjEA/9giMPSYgSbI41n327lcI1IYavK3V2dNJ1pYE2JE4/GUDUNpyMdZ1qiE0aM8RgaOpLRxNnz71B/6jQmk+n/Yxro7+ODlncZu/M7M8KwYHiNh/IzsJiThLFG7K4Cml55neP1JzZ3kMD9NW7NSxVFujs+xkBfL7f/vMOyf44UUeua2joqH3+CbFH17fgXYyeLWHQBpfgAAAAASUVORK5CYII=&labelColor=white)](https://github.com/Svarii/GreyScript/blob/main/README.md)
 
 
-
 The comments in this **GreyScript** are designed to be used in tanden with **VSCode** and the **greybel** extention.  This limited format is compatible with the ingame compiler.
 
-# GreyScript Extentions
+# GreyScript Extentions ![Static Badge](https://img.shields.io/badge/version-0.1a-red)
 ### stringMethods.so.src
   ##### [.color](#color)
   ##### [.bold](#bold)
