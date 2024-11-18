@@ -5,6 +5,7 @@
   ##### [.diff](#diff)
   ##### [.greater_than](#greater_than)
   ##### [.lesser_than](#lesser_than)
+  ##### [.random_from](#random_from)
 
 ###### .plus
 The `.plus` method allows you to add a specified amount to a number. If no amount is provided, it defaults to `1`. Example usage:![image](https://github.com/user-attachments/assets/e9c828a9-747b-4033-a6c5-df598750951f)
@@ -46,6 +47,16 @@ print(result) // Outputs: 0 (false)
 
 ###### .lesser_than
 The `.lesser_than` method checks if the current number is less than a provided number. Returns `true` if lesser, `false` otherwise. Example usage:![image](https://github.com/user-attachments/assets/78235c4e-ba17-479f-9ace-510487a59698)
+```greyscript
+myNumber = 42
+myNumber2 = 100
+
+result = myNumber.lesser_than(myNumber2)
+print(result) // Outputs: 1 (true)
+```
+
+###### .random_from
+The `.random_from` method generates a random number in the range of 1 (or optional parameter) to number. Example usage:![image](https://github.com/user-attachments/assets/78235c4e-ba17-479f-9ace-510487a59698)
 ```greyscript
 myNumber = 42
 myNumber2 = 100
