@@ -1,4 +1,4 @@
-//load metaxploit.so
+//load crypto.so
 load_lib_crypto = function(cryptoLibLocation = "/lib/crypto.so")
     crypto = include_lib(cryptoLibLocation)
     exeOutput = []    
