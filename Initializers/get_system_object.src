@@ -9,9 +9,9 @@
 	//  * terminal = get_system_object
 	//  * @example
 	//  * print typeof(terminal)  //Outputs: SystemObject      
-    //  * @example	
+        //  * @example	
 	//  * print terminal.computer.get_name  //Outputs: The name of the computer
-    //  * @example		
+        //  * @example		
 	//  * print terminal.shell.launch("ls")  //Outputs: launches ls
 	//  *
 	get_system_object = function(user = "", password = "")
