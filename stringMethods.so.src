@@ -151,3 +151,129 @@
                     end for
                     return newString
                 end function
+        //v1.0 by Svarii
+        //@description    
+            //  * **Description:**
+            //  * Remove the bold tag of the given text.
+            //  *
+            //  * @return {string} - The subscript text.
+            //  * @example
+            //  * newString = "<b>Hello</b>"
+            //  * @example
+            //  * @example        
+            //  * result = newString.remove_bold
+            //  * @example
+            //  * print(result); // Outputs: Hello
+            //  *  
+                string.remove_bold = function()
+                    newString = self.remove("<b>")
+                    return newString.remove("</b>")
+                end function
+        //v1.0 by Svarii
+        //@description    
+            //  * **Description:**
+            //  * Remove the italic tag of the given text.
+            //  *
+            //  * @return {string} - The subscript text.
+            //  * @example
+            //  * newString = "<i>Hello</i>"
+            //  * @example
+            //  * @example        
+            //  * result = newString.remove_italic
+            //  * @example
+            //  * print(result); // Outputs: Hello
+            //  *  
+                string.remove_italic = function()
+                    newString = self.remove("<i>")
+                    return newString.remove("</i>")
+                end function                
+        //v1.0 by Svarii
+        //@description    
+            //  * **Description:**
+            //  * Remove the underline tag of the given text.
+            //  *
+            //  * @return {string} - The underline text.
+            //  * @example
+            //  * newString = "<u>Hello</u>"
+            //  * @example
+            //  * @example        
+            //  * result = newString.remove_underline
+            //  * @example
+            //  * print(result); // Outputs: Hello
+            //  * 
+                string.remove_underline = function()
+                    newString = self.remove("<u>")
+                    return newString.remove("</u>")
+                end function                
+        //v1.0 by Svarii
+        //@description    
+            //  * **Description:**
+            //  * Remove the strike tag of the given text.
+            //  *
+            //  * @return {string} - The strikethrough text.
+            //  * @example
+            //  * newString = "<s>Hello</s>"
+            //  * @example
+            //  * @example        
+            //  * result = newString.remove_strike
+            //  * @example
+            //  * print(result); // Outputs: Hello
+            //  * 
+                string.remove_strike = function()
+                    newString = self.remove("<s>")
+                    return newString.remove("</s>")
+                end function                
+        //v1.0 by Svarii
+        //@description    
+            //  * **Description:**
+            //  * Remove the mark tag of the given text.
+            //  *
+            //  * @return {string} - The highlight text.
+            //  * @example
+            //  * newString = "<mark>Hello</mark>"
+            //  * @example
+            //  * @example        
+            //  * result = newString.remove_highlight
+            //  * @example
+            //  * print(result); // Outputs: Hello
+            //  * 
+                string.remove_highlight = function()
+                    newString = self.remove("<mark>")
+                    return newString.remove("</mark>")
+                end function
+        //v1.0 by Svarii
+        //@description    
+            //  * **Description:**
+            //  * Remove the sub tag of the given text.
+            //  *
+            //  * @return {string} - The tiny text.
+            //  * @example
+            //  * newString = "<sub>Hello</sub>"
+            //  * @example
+            //  * @example        
+            //  * result = newString.remove_tiny
+            //  * @example
+            //  * print(result); // Outputs: Hello
+            //  * 
+                string.remove_tiny = function()
+                    newString = self.remove("<sub>")
+                    return newString.remove("</sub>")
+                end function                
+        //v1.0 by Svarii
+        //@description    
+            //  * **Description:**
+            //  * Remove the superscript tag of the given text.
+            //  *
+            //  * @return {string} - The superscriptny text.
+            //  * @example
+            //  * newString = "<sup>Hello</sup>"
+            //  * @example
+            //  * @example        
+            //  * result = newString.remove_sup
+            //  * @example
+            //  * print(result); // Outputs: Hello
+            //  * 
+                string.remove_sup = function()
+                    newString = self.remove("<sup>")
+                    return newString.remove("</sup>")
+                end function                                
