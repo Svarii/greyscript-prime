@@ -8,6 +8,7 @@ The comments in this **GreyScript** are designed to be used in tanden with **VSC
   #### [.strike](#strike)
   #### [.highlight](#highlight)
   #### [.tiny](#tiny)
+  #### [.sup](#sup)
   #### [.remove_last_character](#remove_last_character)
   #### [.remove_bold](#remove_bold)
   #### [.remove_italic](#remove_italic)
