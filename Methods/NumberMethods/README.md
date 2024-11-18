@@ -1,6 +1,5 @@
 
-# GreyScript Extensions
-### numberMethods.so.src
+# numberMethods.so.src
   ##### [.plus](#plus)
   ##### [.minus](#minus)
   ##### [.diff](#diff)
