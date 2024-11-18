@@ -1,8 +1,8 @@
 
 # numberMethods.so.src
-  #### [.plus](.plus)
+  #### [.plus](#plus)
   #### [.minus](#minus)
-  #### [.diff](.diff)
+  #### [.diff](#diff)
   #### [.greater_than](#greater_than)
   #### [.lesser_than](#lesser_than)
   #### [.random_from](#random_from)
