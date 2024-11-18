@@ -264,7 +264,7 @@
             //  * **Description:**
             //  * Remove the superscript tag of the given text.
             //  *
-            //  * @return {string} - The superscriptny text.
+            //  * @return {string} - The superscript text.
             //  * @example
             //  * newString = "<sup>Hello</sup>"
             //  * @example
