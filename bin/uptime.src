@@ -1,0 +1,73 @@
+//uptime v0.1a
+//Author: Svarii
+//Show the uptime of the game in Real Time
+
+calculate_uptime = function()
+    // Helper function to convert date to total minutes
+    date_to_minutes = function(day, month, year, hour, minute)
+        months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+        monthIndex = months.indexOf(month)
+
+        // Days in each month for leap and non-leap years
+        daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+        if year % 4 == 0 and (year % 100 != 0 or year % 400 == 0) then
+            daysInMonth[1] = 29 // Adjust for leap year
+        end if
+
+        totalMinutes = (year - 2000) * 365 * 24 * 60 // Convert years to minutes
+
+        // Loop through the months to add their total days in minutes
+        i = 0
+        while i < monthIndex
+            totalMinutes = totalMinutes + (daysInMonth[i] * 24 * 60)
+            i = i + 1
+        end while
+
+        // Add days, hours, and minutes
+        totalMinutes = totalMinutes + ((day - 1) * 24 * 60)
+        totalMinutes = totalMinutes + (hour * 60) + minute
+
+        return totalMinutes
+    end function
+    // Retrieve the current date from the system
+    currentDateStr = current_date
+
+    // Split the current date and time
+    dateSegments = currentDateStr.split(" - ")
+    datePart = dateSegments[0].split("/")
+    timePart = dateSegments[1].split(":")
+
+    // Extract the current day, month, year, hour, and minute
+    currentDay = datePart[0].to_int
+    currentMonth = datePart[1]
+    currentYear = datePart[2].to_int
+    currentHour = timePart[0].to_int
+    currentMinute = timePart[1].to_int
+
+    // Define the starting point (1st January 2000, 06:00)
+    startDay = 1
+    startMonth = "Jan"
+    startYear = 2000
+    startHour = 6
+    startMinute = 0
+	daysLeft = 0
+
+    // Convert both start and current date to total minutes
+    startMinutes = date_to_minutes(startDay, startMonth, startYear, startHour, startMinute)
+    currentMinutes = date_to_minutes(currentDay, currentMonth, currentYear, currentHour, currentMinute)
+
+    // Calculate uptime in in-game minutes, then convert to real-time minutes
+    uptimeInMinutes = currentMinutes - startMinutes
+    realTimeMinutes = uptimeInMinutes / 15
+
+    // Format the uptime in days, hours, and minutes
+    days = realTimeMinutes / (24 * 60)
+    hours = (realTimeMinutes % (24 * 60)) / 60
+    minutes = realTimeMinutes % 60
+
+    // Return formatted uptime
+    return floor(days) + "d " + floor(hours) + "h " + floor(minutes) + "m"
+end function
+
+uptimeString = calculate_uptime()
+print(format_columns("<b>Uptime</b>: " + uptimeString))
