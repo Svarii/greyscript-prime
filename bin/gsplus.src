@@ -1,0 +1,403 @@
+//Extended string object methods
+//v1.0 by Svarii
+    //@name color   
+        //
+        //  * **Description:**
+        //  * Applies a color to the given text.
+        //  * @description     
+        //  * Color values maybe be #**FFFFFF** or **color** format
+        //  * @param {string} colorValue - The color to apply.
+        //  * @return {string} - The colorized text.
+        //  * @example
+        //  * newString = "Hello"
+        //  * @example
+        //  * @example
+        //  * result = newString.color("blue");
+        //  * @example
+        //  * print(result); // Outputs: <color=blue>Hello</color>
+        //  * @example
+        //  * @example
+        //  * result = newString.color("#FFFFFF");
+        //  * @example
+        //  * print(result); // Outputs: <color=#FFFFFF>Hello</color>
+        //  *
+    string.color = function(colorValue = "red")
+    if not typeof(colorValue) == "string" then return "Error: string.color passed object type of " + typeof(colorValue) + ", string required"
+    return "<color=" + colorValue + ">" + self + "</color>"
+    end function
+    //@name bold   
+        //  * **Description:**
+        //  * Applies bold to the given text.
+        //  *
+        //  * @return {string} - The bold text.
+        //  * @example
+        //  * newString = "Hello"
+        //  * @example
+        //  * @example        
+        //  * result = newString.bold
+        //  * @example
+        //  * print(result); // Outputs: <b>Hello</b>
+        //  *
+    string.bold = function()
+        return "<b>" + self + "</b>"
+    end function
+    //@name italic   
+        //  * **Description:**
+        //  * Applies italic to the given text.
+        //  *
+        //  * @return {string} - The italic text.
+        //  * @example
+        //  * newString = "Hello"
+        //  * @example
+        //  * @example        
+        //  * result = newString.italic
+        //  * @example
+        //  * print(result); // Outputs: <i>Hello</i>
+        //  *
+    string.italic = function()
+        return "<i>" + self + "</i>"
+    end function 
+    //@name underline   
+        //  * **Description:**
+        //  * Applies underline to the given text.
+        //  *
+        //  * @return {string} - The underline text.
+        //  * @example
+        //  * newString = "Hello"
+        //  * @example
+        //  * @example        
+        //  * result = newString.underline
+        //  * @example
+        //  * print(result); // Outputs: <u>Hello</u>
+        //  *
+    string.underline = function()
+        return "<u>" + self + "</u>"
+    end function
+    //@name strike    
+        //  * **Description:**
+        //  * Applies strikethrough to the given text.
+        //  *
+        //  * @return {string} - The strikthrough text.
+        //  * @example
+        //  * newString = "Hello"
+        //  * @example
+        //  * @example        
+        //  * result = newString.strike
+        //  * @example
+        //  * print(result); // Outputs: <s>Hello</s>
+        //  *
+    string.strike = function()
+        return "<s>" + self + "</s>"
+    end function
+    //@name highlight    
+        //  * **Description:**
+        //  * Applies highlight to the given text.
+        //  *
+        //  * @return {string} - The highlight text.
+        //  * @example
+        //  * newString = "Hello"
+        //  * @example
+        //  * @example        
+        //  * result = newString.highlight
+        //  * @example
+        //  * print(result); // Outputs: <mark>Hello</mark>
+        //  *
+    string.highlight = function
+        return "<mark>" + self + "</mark>"
+    end function
+    //@name sub      
+        //  * **Description:**
+        //  * Applies subscript to the given text.
+        //  *
+        //  * @return {string} - The subscript text.
+        //  * @example
+        //  * newString = "Hello"
+        //  * @example
+        //  * @example        
+        //  * result = newString.sub
+        //  * @example
+        //  * print(result); // Outputs: <sub>Hello</sub>
+        //  *    
+    string.sub = function
+        return "<sub>" + self + "</sub>"    
+    end function
+    //@name sup      
+        //  * **Description:**
+        //  * Applies superscript to the given text.
+        //  *
+        //  * @return {string} - The superscript text.
+        //  * @example
+        //  * newString = "Hello"
+        //  * @example
+        //  * @example        
+        //  * result = newString.sup
+        //  * @example
+        //  * print(result); // Outputs: <sup>Hello</sup>
+        //  *    
+    string.sup = function
+        return "<sup>" + self + "</sup>"    
+    end function                             
+    //@name remove_character_last
+        //  * **Description:**
+        //  * Remove the last character of the given text.
+        //  *
+        //  * @return {string} - The subscript text.
+        //  * @example
+        //  * newString = "Hello"
+        //  * @example
+        //  * @example        
+        //  * result = newString.remove_character_last
+        //  * @example
+        //  * print(result); // Outputs: Hell
+        //  *        
+    string.remove_character_last = function(index = (self.len - 1))
+        charList = self.values
+        return charList.remove(index)
+    end function
+    //@name remove_bold    
+        //  * **Description:**
+        //  * Remove the bold tag of the given text.
+        //  *
+        //  * @return {string} - The subscript text.
+        //  * @example
+        //  * newString = "<b>Hello</b>"
+        //  * @example
+        //  * @example        
+        //  * result = newString.remove_bold
+        //  * @example
+        //  * print(result); // Outputs: Hello
+        //  *  
+    string.remove_bold = function()
+        newString = self.remove("<b>")
+        return newString.remove("</b>")
+    end function
+    //@name description    
+        //  * **Description:**
+        //  * Remove the italic tag of the given text.
+        //  *
+        //  * @return {string} - The subscript text.
+        //  * @example
+        //  * newString = "<i>Hello</i>"
+        //  * @example
+        //  * @example        
+        //  * result = newString.remove_italic
+        //  * @example
+        //  * print(result); // Outputs: Hello
+        //  *  
+    string.remove_italic = function()
+        newString = self.remove("<i>")
+        return newString.remove("</i>")
+    end function                
+    //@name remove_underline    
+        //  * **Description:**
+        //  * Remove the underline tag of the given text.
+        //  *
+        //  * @return {string} - The underline text.
+        //  * @example
+        //  * newString = "<u>Hello</u>"
+        //  * @example
+        //  * @example        
+        //  * result = newString.remove_underline
+        //  * @example
+        //  * print(result); // Outputs: Hello
+        //  * 
+    string.remove_underline = function()
+        newString = self.remove("<u>")
+        return newString.remove("</u>")
+    end function                
+    //@name strike    
+        //  * **Description:**
+        //  * Remove the strike tag of the given text.
+        //  *
+        //  * @return {string} - The strikethrough text.
+        //  * @example
+        //  * newString = "<s>Hello</s>"
+        //  * @example
+        //  * @example        
+        //  * result = newString.remove_strike
+        //  * @example
+        //  * print(result); // Outputs: Hello
+        //  * 
+    string.remove_strike = function()
+        newString = self.remove("<s>")
+        return newString.remove("</s>")
+    end function                
+    //@name highlight    
+        //  * **Description:**
+        //  * Remove the mark tag of the given text.
+        //  *
+        //  * @return {string} - The highlight text.
+        //  * @example
+        //  * newString = "<mark>Hello</mark>"
+        //  * @example
+        //  * @example        
+        //  * result = newString.remove_highlight
+        //  * @example
+        //  * print(result); // Outputs: Hello
+        //  * 
+    string.remove_highlight = function()
+        newString = self.remove("<mark>")
+        return newString.remove("</mark>")
+    end function
+    //@name remove_sub    
+        //  * **Description:**
+        //  * Remove the sub tag of the given text.
+        //  *
+        //  * @return {string} - The sub text.
+        //  * @example
+        //  * newString = "<sub>Hello</sub>"
+        //  * @example
+        //  * @example        
+        //  * result = newString.remove_sub
+        //  * @example
+        //  * print(result); // Outputs: Hello
+        //  * 
+    string.remove_sub = function()
+        newString = self.remove("<sub>")
+        return newString.remove("</sub>")
+    end function                
+    //@name remove_sup    
+        //  * **Description:**
+        //  * Remove the superscript tag of the given text.
+        //  *
+        //  * @return {string} - The superscript text.
+        //  * @example
+        //  * newString = "<sup>Hello</sup>"
+        //  * @example
+        //  * @example        
+        //  * result = newString.remove_sup
+        //  * @example
+        //  * print(result); // Outputs: Hello
+        //  * 
+    string.remove_sup = function()
+        newString = self.remove("<sup>")
+        return newString.remove("</sup>")
+    end function                                
+//Extended number object methods
+//v1.0 by Svarii
+    //@name plus   
+        //
+        //  * **Description:**
+        //  * Add 1 to the number or opt: amount
+        //  * @description     
+        //  * @param {opt:number} amount - The amount to add.
+        //  * @return {number | string on type error} - The result of the addition.
+        //  * @example
+        //  * newNumber = 40
+        //  * @example
+        //  * @example
+        //  * result = newNumber.plus(2);
+        //  * @example
+        //  * print(result); // Outputs: 42
+        //  *
+    number.plus = function(amount = 1)
+        if not typeof(amount) == "number" then return "Error: number.plus passed object type of " + typeof(amount) + ", number required"
+            return self + amount
+    end function
+    //@name minus   
+        //
+        //  * **Description:**
+        //  * Subtrac 1 from the number or opt: amount
+        //  * @description     
+        //  * @param {opt:number} amount - The amount to add.
+        //  * @return {number | string on type error} - The result of the subtraction.
+        //  * @example
+        //  * newNumber = 44
+        //  * @example
+        //  * @example
+        //  * result = newNumber.minus(2);
+        //  * @example
+        //  * print(result); // Outputs: 42
+        //  * @example
+        //  *     
+    number.minus = function(amount = 1)
+        if not typeof(amount) == "number" then return "Error: number.minus passed object type of " + typeof(amount) + ", number required"
+            return self - amount
+    end function
+    //@name diff   
+        //
+        //  * **Description:**
+        //  * Return Difference from provided integer to distanceTo
+        //  * @description     
+        //  * @param {number} amount - The amount to add.
+        //  * @return {number | string on type error} - The result of the subtraction.
+        //  * @example
+        //  * newNumber = 44;
+        //  * newNumber2 = 2;            
+        //  * @example
+        //  * @example
+        //  * result = newNumber.diff(newNumber2);
+        //  * @example
+        //  * print(result); // Outputs: 42
+        //  * @example
+        //  *             
+    number.diff = function(distanceTo)
+        if not typeof(distanceTo) == "number" then return "Error: number.difference passed object type of " + typeof(distanceTo) + ", number required"
+            return abs(self - distanceTo)
+            return 
+    end function
+    //@name greater_than   
+        //
+        //  * **Description:**
+        //  * Check if number is greater than provided number
+        //  * @description     
+        //  * @param {number} isGreater - The amount to add.
+        //  * @return {bool number | string on type error} - The result of the subtraction.
+        //  * @example
+        //  * myNumber = 42;
+        //  * myNumber2 = 100;
+        //  * @example
+        //  * @example
+        //  * result = newNumber.greater_than(myNumber2);
+        //  * @example
+        //  * print(result); // Outputs: 0
+        //  * @example
+        //  *          
+    number.greater_than = function(isGreater)
+        if not typeof(isGreater) == "number" then return "Error: number.greater_than passed object type of " + typeof(isGreater) + ", number required"
+            if isGreater > self then return true
+            return false
+    end function
+    //@name lesser_than   
+        //
+        //  * **Description:**
+        //  * Check if number is lesser than provided number
+        //  * @description     
+        //  * @param {number} amount - The amount to add.
+        //  * @return {bool number | string on type error} - The result of the subtraction.
+        //  * @example
+        //  * myNumber = 42;
+        //  * myNumber2 = 100;
+        //  * @example
+        //  * @example
+        //  * result = newNumber.lesser_than(myNumber2);
+        //  * @example
+        //  * print(result); // Outputs: 1
+        //  * @example
+        //  *                
+    number.lesser_than = function(isLesser)
+        if not typeof(isLesser) == "number" then return "Error: number.lesser_than passed object type of " + typeof(isLesser) + ", number required"
+            if isLesser < self then return true
+            return false
+    end function
+    //@name random_from   
+        //
+        //  * **Description:**
+        //  * Generate a random number from 1 to number opt: min
+        //  * @description     
+        //  * @param {number} amount - The amount to add.
+        //  * @return {bool number | string on type error} - The result of the subtraction.
+        //  * @example
+        //  * myNumber = 100;
+        //  * @example
+        //  * @example
+        //  * result = myNumber.random_from(50);
+        //  * @example
+        //  * print(result); // Outputs: {rnd:50-100}
+        //  * @example
+        //  *    
+    number.random_from = function(min = 0)
+        if not typeof(min) == "number" then return "Error: number.random_from passed object type of " + typeof(min) + ", number required"
+            max = self
+            return floor((rnd * (max - min + 1)) + min)  
+    end function
