@@ -7,7 +7,7 @@ The comments in this **GreyScript** are designed to be used in tanden with **VSC
 
 # GreyScript Plus ![Static Badge](https://img.shields.io/badge/version-0.1a-red)
 ![image](https://github.com/user-attachments/assets/356f4986-ae12-40aa-93fd-a6f1edb4b8b9)
-## stringMethods.so.src
+## methodsString ![Static Badge](https://img.shields.io/badge/method-string-green)
   ##### [.color](#color)
   ##### [.bold](#bold)
   ##### [.italic](#italic)
@@ -24,7 +24,7 @@ The comments in this **GreyScript** are designed to be used in tanden with **VSC
   ##### [.remove_highlight](#remove_highlight)
   ##### [.remove_tiny](#remove_tiny)
   ##### [.remove_sup](#remove_sup)
-## numberMethods.so.src ![Static Badge](https://img.shields.io/badge/version-0.1a-red)
+## methodsNumber ![Static Badge](https://img.shields.io/badge/method-number-green)
   #### [.plus](#plus)
   #### [.minus](#minus)
   #### [.diff](#diff)
