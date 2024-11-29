@@ -6,7 +6,7 @@
 The comments in this **GreyScript** are designed to be used in tanden with **VSCode** and the **greybel** extention.  This limited format is compatible with the ingame compiler.
 
 # GreyScript Plus ![Static Badge](https://img.shields.io/badge/version-0.1a-red)
-![image](https://github.com/user-attachments/assets/356f4986-ae12-40aa-93fd-a6f1edb4b8b9)
+![image](https://github.com/user-attachments/assets/5f670b60-6d42-48cb-9004-2d9015ccfca9)
 ## methodsString ![Static Badge](https://img.shields.io/badge/method-string-green)
   ##### [.color](#color)
   ##### [.bold](#bold)
