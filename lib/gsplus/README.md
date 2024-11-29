@@ -6,6 +6,7 @@
 The comments in this **GreyScript** are designed to be used in tanden with **VSCode** and the **greybel** extention.  This limited format is compatible with the ingame compiler.
 
 # GreyScript Plus ![Static Badge](https://img.shields.io/badge/version-0.1a-red)
+![image](https://github.com/user-attachments/assets/356f4986-ae12-40aa-93fd-a6f1edb4b8b9)
 ## stringMethods.so.src
   ##### [.color](#color)
   ##### [.bold](#bold)
@@ -96,7 +97,7 @@ print(newString.sup) // Outputs: <sup>Hello</sup>
 ```
 
   ## .remove_last_character
-The `.remove_last_character` method allows you to remove the last character to the given text. Example usage:![image](https://github.com/user-attachments/assets/794a176d-75b3-4abc-88f0-2c89d22ff4b3)
+The `.remove_last_character` method allows you to remove the last character to the given text. Example usage:![image](https://github.com/user-attachments/assets/3ccd6df0-6da2-4287-9a05-7e0681128d51) ![image](https://github.com/user-attachments/assets/794a176d-75b3-4abc-88f0-2c89d22ff4b3)
 ```
 newString = "Hello"
 
