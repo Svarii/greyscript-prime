@@ -14,16 +14,16 @@ The comments in this **GreyScript** are designed to be used in tanden with **VSC
   ##### [.italic](#italic)
   ##### [.underline](#underline)
   ##### [.strike](#strike)
-  ##### [.highlight](#highlight)
-  ##### [.tiny](#tiny)
+  ##### [.mark](#highlight)
+  ##### [.sub](#sub)
   ##### [.sup](#sup)
   ##### [.remove_last_character](#remove_last_character)
   ##### [.remove_bold](#remove_bold)
   ##### [.remove_italic](#remove_italic)
   ##### [.remove_underline](#remove_underline)
   ##### [.remove_strike](#remove_strike)
-  ##### [.remove_highlight](#remove_highlight)
-  ##### [.remove_tiny](#remove_tiny)
+  ##### [.remove_mark](#remove_highlight)
+  ##### [.remove_sub](#remove_sub)
   ##### [.remove_sup](#remove_sup)
 ## methodsNumber ![Static Badge](https://img.shields.io/badge/method-number-green)
   #### [.plus](#plus)
@@ -89,8 +89,8 @@ newString = "Hello"
 print(newString.highlight) // Outputs: <mark>Hello</mark>
 ```
 
-  ## .tiny
-The `.tiny` method allows you to apply subscript to the given text. Example usage:![image](https://github.com/user-attachments/assets/bc44925e-739a-46ae-8d67-a1b4ece39a86)
+  ## .sub
+The `.sub` method allows you to apply subscript to the given text. Example usage:![image](https://github.com/user-attachments/assets/708ef112-3e33-466c-a32b-aa18bb08ed3b)
 ```
 newString = "Hello"
 
@@ -145,24 +145,24 @@ newString = "<s>Hello</s>"
 print(newString.remove_strike) // Outputs: Hello
 ```
 
-  ## .remove_highlight
-The `.remove_strike` method allows you to remove mark tags from the given text. Example usage:![image](https://github.com/user-attachments/assets/70a2557b-7acf-44d3-8af1-1adf2d7f73d6)
+  ## .remove_mark
+The `.remove_mark` method allows you to remove mark tags from the given text. Example usage:![image](https://github.com/user-attachments/assets/70a2557b-7acf-44d3-8af1-1adf2d7f73d6)
 ```
 newString = "<mark>Hello</mark>"
 
 print(newString.remove_mark) // Outputs: Hello
 ```
 
-  ## .remove_tiny
-The `.remove_tiny` method allows you to remove sub tags from the given text. Example usage:![image](https://github.com/user-attachments/assets/a65a4085-d7d7-4d39-b947-90181b3ae6e8)
+  ## .remove_sub
+The `.remove_sub` method allows you to remove sub tags from the given text. Example usage:![image](https://github.com/user-attachments/assets/a65a4085-d7d7-4d39-b947-90181b3ae6e8)
 ```
 newString = "<sub>Hello</sub>"
 
-print(newString.remove_tiny) // Outputs: Hello
+print(newString.remove_sub) // Outputs: Hello
 ```
 
   ## .remove_sup
-The `.remove_tiny` method allows you to remove superscript tags from the given text. Example usage:![image](https://github.com/user-attachments/assets/27c47d75-875c-4d30-bfe2-181dfb2398d9)
+The `.remove_sup` method allows you to remove superscript tags from the given text. Example usage:![image](https://github.com/user-attachments/assets/27c47d75-875c-4d30-bfe2-181dfb2398d9)
 ```
 newString = "<sup>Hello</sup>"
 
