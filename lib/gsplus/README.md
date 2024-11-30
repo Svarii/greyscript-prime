@@ -2,40 +2,42 @@
 [![Svarii](https://img.shields.io/badge/Svarii-blue?&style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADYElEQVQ4Tx2TyW9bVRjFf8/D8xxnsp2BRk3S1KZOmzRRHZJYpF1Ahay0sIQlG3aIv4UNu8ICVdlUQQgJNhQqWpFCSjMIUBonTWPsNHbsDPbz9Ox3+ZrFu4sr3fO+c87v0/rdDoVStNsWrTbYbdCyFE1Ak88pp8cO3T4ngYAbTdcYGh1kY/0VuVIVbUAEPPKq1W7JCxuxeJzZuQSFoyL5XI6d7ZeUiwX6e730Rfw4XXYuxi9zUCiz9nwHLeTQVEC343bYWUilmJwcp9Pvoq+vn3qtSil/yP1v7uPmlKvREN3dfnpiUZa/XxXxHFqvTVNeJ4zE3mYmOcfQQITODh/dXUE8uoNXL3dwOZxk/3nEUMRJ5aSOd3iEnGHn3lfLaEMum/K6dG7dvSMjhgj19hDweQn6PTSqDU5Lh1iWxchwmNl3db784h6ngV4yO/s8/iuDFg/oanp+jvj0FC4RMs02Pp8Ht7KIXYoT7Ozk7LjIVnqTQHmN9c0MSz+/wO/RKdZMtIXYiPrgo0Xcbhem1NA0WzSNCgHdyY3rCTTVwma389vvT/lu6VtsLWlL0/js02ke/PACbTGZUJNTE3j9PhqNJj89fIxq1skfn9DV0cFicoaN3X3MSpWt9ef4XE76xd7+qUG6KhOkblxTk3MzHB7kyb4+JL2XI9rXw0A4TLtlcn18nHzJoHr0CiuzLWDYePhvFkOslpqWCEzE1Pj8LIX8EU+ePjv35ZNKP7k5L1Bp9IZCvHUhSvrXB1jHBUwBzibc/JkpsCdTaO9NRNX7H97FqBh8vbSMUyorGwY342M4dRfPtnZJzb5D7e8V+gMezuomB2InW65hvqE1lZhQt++k2Mtk+fGXJ9SMGoM9XUSEg3AwyMlZlamxUfT0H2+Ix2iYVCTsjdcl/isLytPDAyq5kKQiyo9WVikdnwrRDhKxUaJDAxRksmuDYTylNC5Jf3M7jy7kFmp1do8qaJ9/fEvV6WBldY1c8URqUzTqTSQeJi5fIuB3Uy8fQ7spNbewJIOrFyMc5Yu0JUjtduKKqske7WeFa/FkCUA22caSVFSXB6PhDvxer+AsayriddOkJkGP9LgpFMVC8soFFfAI60XjHKKTpsIhfwvK3a7cjUWCApkbp6bO19yypD7DJKJDVYT+B3hpidBMcnLFAAAAAElFTkSuQmCC)](https://github.com/Svarii/GreyScript/blob/main/README.md)
 
 
-The comments in this **GreyScript** are designed to be used in tanden with **VSCode** and the following extentions:
-
-**Greybel VS** | **PHP Doc Extended** | **Plant UML**  | **JSDocs Live Preview**.
+GreyScript Plus is a powerful, customizable scripting language extension for **Grey Script** that allows for advanced text and number manipulations. With the combination of `Greybel VS`, `PHP Doc Extended`, `Plant UML`, and `JSDocs Live Preview`, this tool is designed to enhance your coding efficiency in **VSCode**.
 
 Limited custom formatting of DocBlocks and Plant UML allow for insertion to GreyScript Compiler.
 
 # GreyScript Plus ![Static Badge](https://img.shields.io/badge/version-0.1a-red)
 ![image](https://github.com/user-attachments/assets/5f670b60-6d42-48cb-9004-2d9015ccfca9) ![image](https://github.com/user-attachments/assets/36572ec7-ec9c-4ab0-97d7-58eeded768fd)
 
+## 📄 Methods Overview
+
+| Category         | Method                      | Description                          |
+|------------------|-----------------------------|--------------------------------------|
+| **String**       | `.color('colorName')`       | Apply a color to text.               |
+|                  | `.bold()`                   | Make the text bold.                  |
+|                  | `.italic()`                 | Make the text italic.                |
+|                  | `.underline()`              | Underline the text.                  |
+|                  | `.strike()`                 | Apply strikethrough to text.         |
+|                  | `.mark()`                   | Highlight the text.                  |
+|                  | `.sub()`                    | Apply subscript to text.             |
+|                  | `.sup()`                    | Apply superscript to text.           |
+|                  | `.remove_last_character()`  | Remove the last character from text. |
+|                  | `.remove_bold()`            | Remove bold formatting from text.    |
+|                  | `.remove_italic()`          | Remove italic formatting from text.  |
+|                  | `.remove_underline()`       | Remove underline formatting.         |
+|                  | `.remove_strike()`          | Remove strikethrough formatting.     |
+|                  | `.remove_mark()`            | Remove highlight from text.          |
+|                  | `.remove_sub()`             | Remove subscript from text.          |
+|                  | `.remove_sup()`             | Remove superscript from text.        |
+| **Number**       | `.plus(value)`              | Add a value to a number.             |
+|                  | `.minus(value)`             | Subtract a value from a number.      |
+|                  | `.diff(value)`              | Calculate the absolute difference.   |
+|                  | `.greater_than(value)`      | Check if number is greater.          |
+|                  | `.lesser_than(value)`       | Check if number is lesser.           |
+|                  | `.random_from(value)`       | Generate a random number.            |
+
 
 ## methodsString ![Static Badge](https://img.shields.io/badge/method-string-green)
-  ##### [.color](#color)
-  ##### [.bold](#bold)
-  ##### [.italic](#italic)
-  ##### [.underline](#underline)
-  ##### [.strike](#strike)
-  ##### [.mark](#highlight)
-  ##### [.sub](#sub)
-  ##### [.sup](#sup)
-  ##### [.remove_last_character](#remove_last_character)
-  ##### [.remove_bold](#remove_bold)
-  ##### [.remove_italic](#remove_italic)
-  ##### [.remove_underline](#remove_underline)
-  ##### [.remove_strike](#remove_strike)
-  ##### [.remove_mark](#remove_highlight)
-  ##### [.remove_sub](#remove_sub)
-  ##### [.remove_sup](#remove_sup)
-## methodsNumber ![Static Badge](https://img.shields.io/badge/method-number-green)
-  #### [.plus](#plus)
-  #### [.minus](#minus)
-  #### [.diff](#diff)
-  #### [.greater_than](#greater_than)
-  #### [.lesser_than](#lesser_than)
-  #### [.random_from](#random_from)
   
   ## .color
 The `.color` method allows you to apply a color to the given text. Example usage:
