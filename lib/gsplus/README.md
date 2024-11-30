@@ -206,7 +206,7 @@ print(newString.remove_sub) // Outputs: Hello
   ## .remove_sup
 The `.remove_sup` method allows you to remove superscript tags from the given text. Example usage:
 
-![image](https://github.com/user-attachments/assets/27c47d75-875c-4d30-bfe2-181dfb2398d9) <img src="https://github.com/user-attachments/assets/beb486c8-9272-4cd0-a822-75215ecd2821" align="right">
+![image](https://github.com/user-attachments/assets/14996b4a-aa3c-4b02-a06c-2303cde34328) <img src="https://github.com/user-attachments/assets/46ea574e-1c99-4d5b-b0e9-0f4f889dc27b" align="right">
 
 ```
 newString = "<sup>Hello</sup>"
