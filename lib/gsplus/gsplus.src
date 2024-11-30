@@ -25,10 +25,16 @@
         //  *
         //  * @uml
         //  * @startuml
-        //  * entity String
+        //  * title string.color
+        //  * header
+        //  * The **.color** function is used to apply
+        //  * - specific hex #color codes.
+        //  * - basic css color names
+        //  * endheader        
+        //  * entity StringObject
         //  * control ".color" as color
-        //  * String -> color : .color("blue")
-        //  * color -> String : "<color=blue>string</color>"
+        //  * StringObject -> color : .color("blue")
+        //  * color -> StringObject : "<color=blue>string</color>"
         //  * @enduml               
         //
         //  * **Description:**
