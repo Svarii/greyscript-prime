@@ -175,7 +175,7 @@
         //  * @example
         //  * print(result); // Outputs: <mark>Hello</mark>
         //  *
-    string.highlight = function()
+    string.mark = function()
         return "<mark>" + self + "</mark>"
     end function
     //@name sub
@@ -333,7 +333,7 @@
         newString = self.remove("<s>")
         return newString.remove("</s>")
     end function                
-    //@name highlight    
+    //@name mark    
         //  * **Description:**
         //  * Remove the mark tag of the given text.
         //  *
@@ -342,11 +342,11 @@
         //  * newString = "<mark>Hello</mark>"
         //  * @example
         //  * @example        
-        //  * result = newString.remove_highlight
+        //  * result = newString.remove_mark
         //  * @example
         //  * print(result); // Outputs: Hello
         //  * 
-    string.remove_highlight = function()
+    string.remove_mark = function()
         newString = self.remove("<mark>")
         return newString.remove("</mark>")
     end function
