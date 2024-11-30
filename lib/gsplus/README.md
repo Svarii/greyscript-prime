@@ -7,7 +7,6 @@ GreyScript Plus is a powerful, customizable scripting language extension for **G
 Limited custom formatting of DocBlocks and Plant UML allow for insertion to GreyScript Compiler.
 
 # GreyScript Plus ![Static Badge](https://img.shields.io/badge/version-0.1a-red)
-![image](https://github.com/user-attachments/assets/5f670b60-6d42-48cb-9004-2d9015ccfca9) ![image](https://github.com/user-attachments/assets/36572ec7-ec9c-4ab0-97d7-58eeded768fd)
 
 ## 📄 Methods Overview
 
@@ -36,9 +35,8 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 |                  | [`.lesser_than(value)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#lesser_than) | Check if number is lesser.           |
 |                  | [`.random_from(value)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#random_from) | Generate a random number.            |
 
-
-
 ## methodsString ![Static Badge](https://img.shields.io/badge/method-string-green)
+![image](https://github.com/user-attachments/assets/5f670b60-6d42-48cb-9004-2d9015ccfca9)
   
   ## .color
 The `.color` method allows you to apply a color to the given text.
@@ -177,12 +175,7 @@ newString = "<sup>Hello</sup>"
 print(newString.remove_sup) // Outputs: Hello
 ```
 # numberMethods.so.src ![Static Badge](https://img.shields.io/badge/version-0.1a-red)
-  #### [.plus](#plus)
-  #### [.minus](#minus)
-  #### [.diff](#diff)
-  #### [.greater_than](#greater_than)
-  #### [.lesser_than](#lesser_than)
-  #### [.random_from](#random_from)
+ ![image](https://github.com/user-attachments/assets/36572ec7-ec9c-4ab0-97d7-58eeded768fd)
 
 ##### .plus
 The `.plus` method allows you to add a specified amount to a number. If no amount is provided, it defaults to `1`. Example usage:![image](https://github.com/user-attachments/assets/e9c828a9-747b-4033-a6c5-df598750951f)
