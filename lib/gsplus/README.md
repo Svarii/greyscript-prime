@@ -2,44 +2,45 @@
 [![Svarii](https://img.shields.io/badge/Svarii-blue?&style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADYElEQVQ4Tx2TyW9bVRjFf8/D8xxnsp2BRk3S1KZOmzRRHZJYpF1Ahay0sIQlG3aIv4UNu8ICVdlUQQgJNhQqWpFCSjMIUBonTWPsNHbsDPbz9Ox3+ZrFu4sr3fO+c87v0/rdDoVStNsWrTbYbdCyFE1Ak88pp8cO3T4ngYAbTdcYGh1kY/0VuVIVbUAEPPKq1W7JCxuxeJzZuQSFoyL5XI6d7ZeUiwX6e730Rfw4XXYuxi9zUCiz9nwHLeTQVEC343bYWUilmJwcp9Pvoq+vn3qtSil/yP1v7uPmlKvREN3dfnpiUZa/XxXxHFqvTVNeJ4zE3mYmOcfQQITODh/dXUE8uoNXL3dwOZxk/3nEUMRJ5aSOd3iEnGHn3lfLaEMum/K6dG7dvSMjhgj19hDweQn6PTSqDU5Lh1iWxchwmNl3db784h6ngV4yO/s8/iuDFg/oanp+jvj0FC4RMs02Pp8Ht7KIXYoT7Ozk7LjIVnqTQHmN9c0MSz+/wO/RKdZMtIXYiPrgo0Xcbhem1NA0WzSNCgHdyY3rCTTVwma389vvT/lu6VtsLWlL0/js02ke/PACbTGZUJNTE3j9PhqNJj89fIxq1skfn9DV0cFicoaN3X3MSpWt9ef4XE76xd7+qUG6KhOkblxTk3MzHB7kyb4+JL2XI9rXw0A4TLtlcn18nHzJoHr0CiuzLWDYePhvFkOslpqWCEzE1Pj8LIX8EU+ePjv35ZNKP7k5L1Bp9IZCvHUhSvrXB1jHBUwBzibc/JkpsCdTaO9NRNX7H97FqBh8vbSMUyorGwY342M4dRfPtnZJzb5D7e8V+gMezuomB2InW65hvqE1lZhQt++k2Mtk+fGXJ9SMGoM9XUSEg3AwyMlZlamxUfT0H2+Ix2iYVCTsjdcl/isLytPDAyq5kKQiyo9WVikdnwrRDhKxUaJDAxRksmuDYTylNC5Jf3M7jy7kFmp1do8qaJ9/fEvV6WBldY1c8URqUzTqTSQeJi5fIuB3Uy8fQ7spNbewJIOrFyMc5Yu0JUjtduKKqske7WeFa/FkCUA22caSVFSXB6PhDvxer+AsayriddOkJkGP9LgpFMVC8soFFfAI60XjHKKTpsIhfwvK3a7cjUWCApkbp6bO19yypD7DJKJDVYT+B3hpidBMcnLFAAAAAElFTkSuQmCC)](https://github.com/Svarii/GreyScript/blob/main/README.md)
 
 
-The comments in this **GreyScript** are designed to be used in tanden with **VSCode** and the following extentions:
-
-**Greybel VS** | **PHP Doc Extended** | **Plant UML**  | **JSDocs Live Preview**.
+GreyScript Plus is an extension for **Grey Script** that adds additional methods for object manipulation. With the combination of `Greybel VS`, `PHP Doc Extended`, `Plant UML`, and `JSDocs Live Preview`, this tool is designed to enhance your coding efficiency in **VSCode**.
 
 Limited custom formatting of DocBlocks and Plant UML allow for insertion to GreyScript Compiler.
 
 # GreyScript Plus ![Static Badge](https://img.shields.io/badge/version-0.1a-red)
-![image](https://github.com/user-attachments/assets/5f670b60-6d42-48cb-9004-2d9015ccfca9) ![image](https://github.com/user-attachments/assets/36572ec7-ec9c-4ab0-97d7-58eeded768fd)
 
+## 📄 Methods Overview
+
+| Category         | Method                      | Description                          |
+|------------------|-----------------------------|--------------------------------------|
+| **String**       | [`.color("#color")`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#color) | Apply a color to text.               |
+|                  | [`.bold()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#bold)               | Make the text bold.                  |
+|                  | [`.italic()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#italic)             | Make the text italic.                |
+|                  | [`.underline()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#underline)       | Underline the text.                  |
+|                  | [`.strike()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#strike)             | Apply strikethrough to text.         |
+|                  | [`.mark()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#mark)                 | Highlight the text.                  |
+|                  | [`.sub()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#sub)                   | Apply subscript to text.             |
+|                  | [`.sup()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#sup)                   | Apply superscript to text.           |
+|                  | [`.remove_last_character()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_last_character) | Remove the last character from text. |
+|                  | [`.remove_bold()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_bold)    | Remove bold formatting from text.    |
+|                  | [`.remove_italic()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_italic) | Remove italic formatting from text.  |
+|                  | [`.remove_underline()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_underline) | Remove underline formatting.         |
+|                  | [`.remove_strike()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_strike) | Remove strikethrough formatting.     |
+|                  | [`.remove_mark()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_mark)    | Remove highlight from text.          |
+|                  | [`.remove_sub()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_sub)      | Remove subscript from text.          |
+|                  | [`.remove_sup()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_sup)      | Remove superscript from text.        |
+| **Number**       | [`.plus(number)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#plus)             | Add a value to a number.             |
+|                  | [`.minus(number)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#minus)           | Subtract a value from a number.      |
+|                  | [`.diff(number)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#diff)             | Calculate the absolute difference.   |
+|                  | [`.greater_than(number)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#greater_than) | Check if number is greater.          |
+|                  | [`.lesser_than(number)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#lesser_than) | Check if number is lesser.           |
+|                  | [`.random_from(number)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#random_from) | Generate a random number.            |
 
 ## methodsString ![Static Badge](https://img.shields.io/badge/method-string-green)
-  ##### [.color](#color)
-  ##### [.bold](#bold)
-  ##### [.italic](#italic)
-  ##### [.underline](#underline)
-  ##### [.strike](#strike)
-  ##### [.mark](#highlight)
-  ##### [.sub](#sub)
-  ##### [.sup](#sup)
-  ##### [.remove_last_character](#remove_last_character)
-  ##### [.remove_bold](#remove_bold)
-  ##### [.remove_italic](#remove_italic)
-  ##### [.remove_underline](#remove_underline)
-  ##### [.remove_strike](#remove_strike)
-  ##### [.remove_mark](#remove_highlight)
-  ##### [.remove_sub](#remove_sub)
-  ##### [.remove_sup](#remove_sup)
-## methodsNumber ![Static Badge](https://img.shields.io/badge/method-number-green)
-  #### [.plus](#plus)
-  #### [.minus](#minus)
-  #### [.diff](#diff)
-  #### [.greater_than](#greater_than)
-  #### [.lesser_than](#lesser_than)
-  #### [.random_from](#random_from)
   
   ## .color
-The `.color` method allows you to apply a color to the given text. Example usage:
-![image](https://github.com/user-attachments/assets/1df01792-5749-4076-bc71-7a4c6e4e45cd) ![image](https://github.com/user-attachments/assets/66d13911-3d93-43e4-bd76-a6b1a46d19d9)
+The `.color` method allows you to apply a color to the given text.
+
+![image](https://github.com/user-attachments/assets/1df01792-5749-4076-bc71-7a4c6e4e45cd) &nbsp;&nbsp;&nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/66d13911-3d93-43e4-bd76-a6b1a46d19d9" align="right">
 ```
 newString = "Hello"
 
@@ -47,9 +48,9 @@ print(newString.color("blue")) // Outputs: <color=blue>Hello</color>
 ```
 
   ## .bold
-The `.bold` method allows you to apply bold to the given text. Example usage:
+The `.bold` method allows you to apply bold to the given text.
 
-![image](https://github.com/user-attachments/assets/1125b1a9-3884-415c-992b-13b07b22e0e5) ![image](https://github.com/user-attachments/assets/5e4eb592-54ea-463f-8eab-a5f983a69330)
+![image](https://github.com/user-attachments/assets/1125b1a9-3884-415c-992b-13b07b22e0e5) &nbsp;&nbsp;&nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/5e4eb592-54ea-463f-8eab-a5f983a69330" align="right">
 ```
 newString = "Hello"
 
@@ -57,9 +58,10 @@ print(newString.bold) // Outputs: <b>Hello</b>
 ```
 
   ## .italic
-The `.italic` method allows you to apply italic to the given text. Example usage:
+The `.italic` method allows you to apply italic to the given text.
 
-![image](https://github.com/user-attachments/assets/31e5f53a-1560-4bf0-be13-9b7b5a4c23df) ![image](https://github.com/user-attachments/assets/dd4a97ce-b61e-4491-bee8-3e451f6bb69f)
+![image](https://github.com/user-attachments/assets/31e5f53a-1560-4bf0-be13-9b7b5a4c23df) &nbsp;&nbsp;&nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/dd4a97ce-b61e-4491-bee8-3e451f6bb69f" align
+="right">
 ```
 newString = "Hello"
 
@@ -67,9 +69,9 @@ print(newString.italic) // Outputs: <i>Hello</i>
 ```
 
   ## .underline
-The `.underline` method allows you to apply underline to the given text. Example usage:
+The `.underline` method allows you to apply underline to the given text.
 
-![image](https://github.com/user-attachments/assets/801251ed-5cbc-432f-93e8-a298ee50bc4d) ![image](https://github.com/user-attachments/assets/95775a74-1d15-4c9b-8ea2-ae9c1cdd61a5)
+![image](https://github.com/user-attachments/assets/801251ed-5cbc-432f-93e8-a298ee50bc4d) &nbsp;&nbsp;&nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/95775a74-1d15-4c9b-8ea2-ae9c1cdd61a5" align="right">
 ```
 newString = "Hello"
 
@@ -77,24 +79,31 @@ print(newString.underline) // Outputs: <u>Hello</u>
 ```
 
   ## .strike
-The `.strike` method allows you to apply strikethrough to the given text. Example usage:
-![image](https://github.com/user-attachments/assets/ae49ab0a-bd0b-4252-85e0-24b698f75db7) ![image](https://github.com/user-attachments/assets/aa65b396-fd3c-41c6-948e-8d6a2c84a44d)
+The `.strike` method allows you to apply strikethrough to the given text.
+
+![image](https://github.com/user-attachments/assets/ae49ab0a-bd0b-4252-85e0-24b698f75db7) &nbsp;&nbsp;&nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/aa65b396-fd3c-41c6-948e-8d6a2c84a44d" align="right">
 ```
 newString = "Hello"
 
 print(newString.strike) // Outputs: <s>Hello</s>
 ```
 
-  ## .highlight
-The `.highlight` method allows you to apply highlight to the given text. Example usage:![image](https://github.com/user-attachments/assets/83f429b3-1296-47a7-ae3f-c00c238631c4)
+  ## .mark
+The `.mark` method allows you to apply highlight to the given text. Example usage:
+
+![image](https://github.com/user-attachments/assets/dbdb2209-9899-401d-9df6-efb9a3d78c7f) &nbsp;&nbsp;&nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/19f4f122-0220-4c14-a982-3e5b78dad3ea" align="right">
+
 ```
 newString = "Hello"
 
-print(newString.highlight) // Outputs: <mark>Hello</mark>
+print(newString.mark) // Outputs: <mark>Hello</mark>
 ```
 
   ## .sub
-The `.sub` method allows you to apply subscript to the given text. Example usage:![image](https://github.com/user-attachments/assets/708ef112-3e33-466c-a32b-aa18bb08ed3b)
+The `.sub` method allows you to apply subscript to the given text. Example usage:
+
+![image](https://github.com/user-attachments/assets/199e42e5-dbe6-433e-a858-b587b6123954) <img src="https://github.com/user-attachments/assets/f425fb19-9deb-4599-865b-a8f7571461b9" align="right">
+
 ```
 newString = "Hello"
 
@@ -102,7 +111,10 @@ print(newString.tiny) // Outputs: <sub>Hello</sub>
 ```
 
   ## .sup
-The `.sup` method allows you to apply superscript to the given text. Example usage:![image](https://github.com/user-attachments/assets/c1495566-7069-4e7a-92a3-d9c037b9579a)
+The `.sup` method allows you to apply superscript to the given text. Example usage:
+
+![image](https://github.com/user-attachments/assets/c1495566-7069-4e7a-92a3-d9c037b9579a) <img src="https://github.com/user-attachments/assets/d8c3a4bb-c92e-45aa-a048-2898c14458d7" align="right">
+
 ```
 newString = "Hello"
 
@@ -110,7 +122,9 @@ print(newString.sup) // Outputs: <sup>Hello</sup>
 ```
 
   ## .remove_last_character
-The `.remove_last_character` method allows you to remove the last character to the given text. Example usage:![image](https://github.com/user-attachments/assets/3ccd6df0-6da2-4287-9a05-7e0681128d51) ![image](https://github.com/user-attachments/assets/794a176d-75b3-4abc-88f0-2c89d22ff4b3)
+The `.remove_last_character` method allows you to remove the last character to the given text. Example usage:
+
+![image](https://github.com/user-attachments/assets/794a176d-75b3-4abc-88f0-2c89d22ff4b3) <img src="https://github.com/user-attachments/assets/3ccd6df0-6da2-4287-9a05-7e0681128d51" align="right">
 ```
 newString = "Hello"
 
@@ -118,7 +132,10 @@ print(newString.remove_last_character) // Outputs: Hell
 ```
 
   ## .remove_bold
-The `.remove_bold` method allows you to remove bold tags from the given text. Example usage:![image](https://github.com/user-attachments/assets/1aafa4e7-2181-4242-89b9-27c6065008cd)
+The `.remove_bold` method allows you to remove bold tags from the given text. Example usage:
+
+![image](https://github.com/user-attachments/assets/1aafa4e7-2181-4242-89b9-27c6065008cd) <img src="https://github.com/user-attachments/assets/079b609c-2090-4354-a68f-72139b891000" align="right">
+
 ```
 newString = "<b>Hello</b>"
 
@@ -126,7 +143,10 @@ print(newString.remove_bold) // Outputs: Hello
 ```
 
   ## .remove_italic
-The `.remove_italic` method allows you to remove italic tags from the given text. Example usage:![image](https://github.com/user-attachments/assets/1335de93-87ec-4af4-a13c-f6c5b9fa2e40)
+The `.remove_italic` method allows you to remove italic tags from the given text. Example usage:
+
+![image](https://github.com/user-attachments/assets/1335de93-87ec-4af4-a13c-f6c5b9fa2e40) <img src="https://github.com/user-attachments/assets/8fcf5e79-0a37-42c8-bc7d-60842d19247d" align="right">
+
 ```
 newString = "<i>Hello</i>"
 
@@ -134,7 +154,10 @@ print(newString.remove_italic) // Outputs: Hello
 ```
 
   ## .remove_underline
-The `.remove_underline` method allows you to remove underline tags from the given text. Example usage:![image](https://github.com/user-attachments/assets/9edc210f-b8aa-43c0-a88c-5640478cdd75)
+The `.remove_underline` method allows you to remove underline tags from the given text. Example usage:
+
+![image](https://github.com/user-attachments/assets/9edc210f-b8aa-43c0-a88c-5640478cdd75) <img src="https://github.com/user-attachments/assets/4a4303fa-b4bc-4466-9830-b775b64a45b9" align="right">
+
 ```
 newString = "<u>Hello</u>"
 
@@ -142,7 +165,10 @@ print(newString.remove_underline) // Outputs: Hello
 ```
 
   ## .remove_strike
-The `.remove_strike` method allows you to remove strikethrough tags from the given text. Example usage:![image](https://github.com/user-attachments/assets/af14cfb9-6dde-4d1a-b58c-54a27611a0da)
+The `.remove_strike` method allows you to remove strikethrough tags from the given text. Example usage:
+
+![image](https://github.com/user-attachments/assets/af14cfb9-6dde-4d1a-b58c-54a27611a0da) <img src="https://github.com/user-attachments/assets/ac42c1c5-011c-41cf-92cd-1044759c2e4f" align="right">
+
 ```
 newString = "<s>Hello</s>"
 
@@ -150,7 +176,10 @@ print(newString.remove_strike) // Outputs: Hello
 ```
 
   ## .remove_mark
-The `.remove_mark` method allows you to remove mark tags from the given text. Example usage:![image](https://github.com/user-attachments/assets/70a2557b-7acf-44d3-8af1-1adf2d7f73d6)
+The `.remove_mark` method allows you to remove mark tags from the given text. Example usage:
+
+![image](https://github.com/user-attachments/assets/0d928add-5c34-41b9-8d33-af89222edeb1) <img src="https://github.com/user-attachments/assets/9b29f194-8dcf-4d6c-9c01-389c31fab636" align="right">
+
 ```
 newString = "<mark>Hello</mark>"
 
@@ -158,7 +187,10 @@ print(newString.remove_mark) // Outputs: Hello
 ```
 
   ## .remove_sub
-The `.remove_sub` method allows you to remove sub tags from the given text. Example usage:![image](https://github.com/user-attachments/assets/a65a4085-d7d7-4d39-b947-90181b3ae6e8)
+The `.remove_sub` method allows you to remove sub tags from the given text. Example usage:
+
+![image](https://github.com/user-attachments/assets/b066465c-5cb2-4a65-a7f7-52440d7977ab) <img src="https://github.com/user-attachments/assets/a36dd0a5-e750-4826-8d5c-287bf8e07c51" align="right">
+
 ```
 newString = "<sub>Hello</sub>"
 
@@ -166,19 +198,16 @@ print(newString.remove_sub) // Outputs: Hello
 ```
 
   ## .remove_sup
-The `.remove_sup` method allows you to remove superscript tags from the given text. Example usage:![image](https://github.com/user-attachments/assets/27c47d75-875c-4d30-bfe2-181dfb2398d9)
+The `.remove_sup` method allows you to remove superscript tags from the given text. Example usage:
+
+![image](https://github.com/user-attachments/assets/27c47d75-875c-4d30-bfe2-181dfb2398d9) <img src="https://github.com/user-attachments/assets/beb486c8-9272-4cd0-a822-75215ecd2821" align="right">
+
 ```
 newString = "<sup>Hello</sup>"
 
 print(newString.remove_sup) // Outputs: Hello
 ```
 # numberMethods.so.src ![Static Badge](https://img.shields.io/badge/version-0.1a-red)
-  #### [.plus](#plus)
-  #### [.minus](#minus)
-  #### [.diff](#diff)
-  #### [.greater_than](#greater_than)
-  #### [.lesser_than](#lesser_than)
-  #### [.random_from](#random_from)
 
 ##### .plus
 The `.plus` method allows you to add a specified amount to a number. If no amount is provided, it defaults to `1`. Example usage:![image](https://github.com/user-attachments/assets/e9c828a9-747b-4033-a6c5-df598750951f)
