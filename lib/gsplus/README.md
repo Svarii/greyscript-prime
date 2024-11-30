@@ -28,19 +28,20 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 |                  | [`.remove_mark`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_mark)    | Remove highlight from text.          |
 |                  | [`.remove_sub`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_sub)      | Remove subscript from text.          |
 |                  | [`.remove_sup`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_sup)      | Remove superscript from text.        |
-| **Number**       | [`.plus(number)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#plus)             | Add a value to a number.             |
-|                  | [`.minus(number)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#minus)           | Subtract a value from a number.      |
+| **Number**       | [`.plus(number)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#plus)             | Add 1 or value to a number.             |
+|                  | [`.minus(number)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#minus)           | Subtract 1 or a value from a number.      |
 |                  | [`.diff(number)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#diff)             | Calculate the absolute difference.   |
 |                  | [`.greater_than(number)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#greater_than) | Check if number is greater.          |
 |                  | [`.lesser_than(number)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#lesser_than) | Check if number is lesser.           |
-|                  | [`.random_from(number)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#random_from) | Generate a random number.            |
+|                  | [`.random_from(number)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#random_from) | Generate a random number from 0 (or number) to number.            |
 
 ## methodsString ![Static Badge](https://img.shields.io/badge/method-string-green)
   
   ## .color
 The `.color` method allows you to apply a color to the given text.
 
-![image](https://github.com/user-attachments/assets/1df01792-5749-4076-bc71-7a4c6e4e45cd) &nbsp;&nbsp;&nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/66d13911-3d93-43e4-bd76-a6b1a46d19d9" align="right">
+![image](https://github.com/user-attachments/assets/2aa4792e-838f-441d-866f-cf44ba5eb9d6) <img src="https://github.com/user-attachments/assets/b61e6ae5-97ca-4213-9f63-5689232a3ac8" align="right">
+
 ```
 newString = "Hello"
 
