@@ -184,7 +184,7 @@ print(newString.remove_strike) // Outputs: Hello
   ## .remove_mark
 The `.remove_mark` method allows you to remove mark tags from the given text. Example usage:
 
-![image](https://github.com/user-attachments/assets/0d928add-5c34-41b9-8d33-af89222edeb1) <img src="https://github.com/user-attachments/assets/9b29f194-8dcf-4d6c-9c01-389c31fab636" align="right">
+![image](https://github.com/user-attachments/assets/e8c5bdbe-e881-4ad2-996b-ef8eff80fcbe) <img src="https://github.com/user-attachments/assets/6002997b-ace8-4972-a2c2-8e38215a0fcc" align="right">
 
 ```
 newString = "<mark>Hello</mark>"
