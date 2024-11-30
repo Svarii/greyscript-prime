@@ -242,27 +242,27 @@
     string.sup = function()
         return "<sup>" + self + "</sup>"    
     end function                             
-    //@name remove_character_last
+    //@name remove_char_last
         //  *
         //  * @uml
         //  * @startuml
-        //  * title string.remove_character_last
+        //  * title string.remove_char_last
         //  * entity StringObject
         //  * control ".remove_char_last" as remove_char_last
         //  * StringObject -> remove_char_last : string
         //  * remove_char_last -> StringObject : strin
-        //  * footer Removes the last character from a string object
+        //  * footer Removes the last char from a string object
         //  * @enduml        
         //        
         //  * **Description:**
-        //  * Remove the last character of the given text.
+        //  * Remove the last char of the given text.
         //  *
         //  * @return {string}
         //  * @example
         //  * newString = "Hello"
         //  * @example
         //  * @example        
-        //  * result = newString.remove_character_last
+        //  * result = newString.remove_char_last
         //  * @example
         //  * print(result); // Outputs: Hell
         //  *      
