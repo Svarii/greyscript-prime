@@ -154,15 +154,15 @@
         return "<s>" + self + "</s>"
     end function
     //@name mark
-            //  *
+        //  *
         //  * @uml
         //  * @startuml
         //  * entity StringObject
-        //  * control ".mark" as strike
+        //  * control ".mark" as mark
         //  * StringObject -> mark : string
         //  * mark -> StringObject : //<mark>//string//</mark>//
         //  * @enduml        
-        //    
+        //       
         //  * **Description:**
         //  * Applies mark to the given text.
         //  *
@@ -234,9 +234,9 @@
         //  * @startuml
         //  * title string.remove_character_last
         //  * entity StringObject
-        //  * control ".remove_character_last" as remove_character_last
-        //  * StringObject -> remove_character_last : string
-        //  * remove_character_last -> StringObject : strin
+        //  * control ".remove_char_last" as remove_char_last
+        //  * StringObject -> remove_char_last : string
+        //  * remove_char_last -> StringObject : strin
         //  * footer Removes the last character from a string object
         //  * @enduml        
         //        
@@ -252,7 +252,7 @@
         //  * @example
         //  * print(result); // Outputs: Hell
         //  *        
-    string.remove_character_last = function(index = (self.len - 1))
+    string.remove_char_last = function(index = (self.len - 1))
         charList = self.values
         return charList.remove(index)
     end function
@@ -264,6 +264,8 @@
         //  * control ".remove_bold" as remove_bold
         //  * StringObject -> remove_bold : //<b>//string//</b>//
         //  * remove_bold -> StringObject : string
+        //  * StringObject -> remove_bold : //<b>//string//</b>// //<b>//string//</b>//
+        //  * remove_bold -> StringObject : string string   
         //  * @enduml        
         //              
         //  * **Description:**
@@ -282,7 +284,18 @@
         newString = self.remove("<b>")
         return newString.remove("</b>")
     end function
-    //@name description    
+    //@name remove italic 
+        //  *
+        //  * @uml
+        //  * @startuml
+        //  * entity StringObject
+        //  * control ".remove_italic" as remove_italic
+        //  * StringObject -> remove_italic : //<i>//string//</i>//
+        //  * remove_italic -> StringObject : string
+        //  * StringObject -> remove_italic : //<i>//string//</i>// //<i>//string//</i>//
+        //  * remove_italic -> StringObject : string string   
+        //  * @enduml        
+        //              
         //  * **Description:**
         //  * Remove the italic tag of the given text.
         //  *
@@ -299,7 +312,18 @@
         newString = self.remove("<i>")
         return newString.remove("</i>")
     end function                
-    //@name remove_underline    
+    //@name remove_underline
+        //  *
+        //  * @uml
+        //  * @startuml
+        //  * entity StringObject
+        //  * control ".remove_underline" as remove_underline
+        //  * StringObject -> remove_underline : //<u>//string//</u>//
+        //  * remove_underline -> StringObject : string
+        //  * StringObject -> remove_underline : //<u>//string//</u>// //<u>//string//</u>//
+        //  * remove_underline -> StringObject : string string   
+        //  * @enduml        
+        //               
         //  * **Description:**
         //  * Remove the underline tag of the given text.
         //  *
@@ -318,6 +342,17 @@
     end function                
     //@name strike    
         //  * **Description:**
+        //  *
+        //  * @uml
+        //  * @startuml
+        //  * entity StringObject
+        //  * control ".remove_strike" as remove_strike
+        //  * StringObject -> remove_strike : //<s>//string//</s>//
+        //  * remove_strike -> StringObject : string
+        //  * StringObject -> remove_strike : //<s>//string//</s>// //<s>//string//</s>//
+        //  * remove_strike -> StringObject : string string   
+        //  * @enduml        
+        //                
         //  * Remove the strike tag of the given text.
         //  *
         //  * @return {string}
@@ -335,6 +370,17 @@
     end function                
     //@name mark    
         //  * **Description:**
+        //  *
+        //  * @uml
+        //  * @startuml
+        //  * entity StringObject
+        //  * control ".remove_mark" as remove_mark
+        //  * StringObject -> remove_mark : //<mark>//string//</mark>//
+        //  * remove_mark -> StringObject : string
+        //  * StringObject -> remove_mark : //<mark>//string//</mark>// //<mark>//string//</mark>//
+        //  * remove_mark -> StringObject : string string   
+        //  * @enduml        
+        //                
         //  * Remove the mark tag of the given text.
         //  *
         //  * @return {string}
@@ -352,6 +398,18 @@
     end function
     //@name remove_sub    
         //  * **Description:**
+        //  *
+        //  * @uml
+        //  * @startuml
+        //  * entity StringObject
+        //  * control ".remove_sub" as remove_sub
+        //  * StringObject -> remove_sub : //<sub>//string//</sub>//
+        //  * header string.remove_sub
+        //  * remove_sub -> StringObject : string
+        //  * StringObject -> remove_sub : //<sub>//string//</sub>// //<sub>//string//</sub>//
+        //  * remove_sub -> StringObject : string string   
+        //  * @enduml        
+        //                
         //  * Remove the sub tag of the given text.
         //  *
         //  * @return {string}
@@ -367,7 +425,19 @@
         newString = self.remove("<sub>")
         return newString.remove("</sub>")
     end function                
-    //@name remove_sup    
+    //@name remove_sup
+        //  *
+        //  * @uml
+        //  * @startuml
+        //  * entity StringObject
+        //  * control ".remove_sup" as remove_sup
+        //  * StringObject -> remove_sup : //<sup>//string//</sup>//
+        //  * header string.remove_sup
+        //  * remove_sup -> StringObject : string
+        //  * StringObject -> remove_sup : //<sup>//string//</sup>// //<sup>//string//</sup>//
+        //  * remove_sup -> StringObject : string string   
+        //  * @enduml        
+        //       
         //  * **Description:**
         //  * Remove the superscript tag of the given text.
         //  *
@@ -387,7 +457,6 @@
 //Extended number object methods
 //v1.0 by Svarii
         //  *
-
         // * @uml
         // * @startyaml
         // * number : " [calculate <b>number</b>] "
