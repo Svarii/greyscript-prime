@@ -225,7 +225,9 @@ print(result) // Outputs: 42
 ```
 
 ##### .minus
-The `.minus` method allows you to subtract a specified amount from a number. If no amount is provided, it defaults to `1`. Example usage:![image](https://github.com/user-attachments/assets/3a41b282-6973-49ae-828e-cfc69b38992c)
+The `.minus` method allows you to subtract a specified amount from a number. If no amount is provided, it defaults to `1`. 
+![image](https://github.com/user-attachments/assets/aca2249d-bf43-4031-abff-130f4a853d76) <img src="https://github.com/user-attachments/assets/6560d055-3bf9-414d-8160-696a80459be7" align="right">
+
 ```greyscript
 newNumber = 44
 
