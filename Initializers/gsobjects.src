@@ -1,6 +1,16 @@
 
 //v1.0 by Svarii
-//@description   
+//@description
+	//  * @startuml
+	//  * class SystemObject {
+	//  * **terminal**
+	//  * |_ shell
+	//  * |_ computer
+	//  * --
+	//  //* loads get_shell and get_shell.host_computer
+	// //objects into a SystemObject
+	//  * }
+	//  * @endum  
 	//  * **Description:**
 	//  * Generates an object that contains a shell and computer object
 	//  *

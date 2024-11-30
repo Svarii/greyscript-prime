@@ -28,8 +28,8 @@
         //  * entity String
         //  * control ".color" as color
         //  * String -> color : .color("blue")
-        //  * color -> String : "<color=blue>Hello</color>"
-        //  * @enduml        
+        //  * color -> String : "<color=blue>string</color>"
+        //  * @enduml               
         //
         //  * **Description:**
         //  * Applies a color to the given text.
@@ -66,7 +66,7 @@
         //  * **Description:**
         //  * Applies bold to the given text.
         //  *
-        //  * @return {string} - The bold text.
+        //  * @return {string}
         //  * @example
         //  * newString = "Hello"
         //  * @example
@@ -91,7 +91,7 @@
         //  * **Description:**
         //  * Applies italic to the given text.
         //  *
-        //  * @return {string} - The italic text.
+        //  * @return {string}
         //  * @example
         //  * newString = "Hello"
         //  * @example
@@ -116,7 +116,7 @@
         //  * **Description:**
         //  * Applies underline to the given text.
         //  *
-        //  * @return {string} - The underline text.
+        //  * @return {string}
         //  * @example
         //  * newString = "Hello"
         //  * @example
@@ -141,7 +141,7 @@
         //  * **Description:**
         //  * Applies strikethrough to the given text.
         //  *
-        //  * @return {string} - The strikthrough text.
+        //  * @return {string}
         //  * @example
         //  * newString = "Hello"
         //  * @example
@@ -166,7 +166,7 @@
         //  * **Description:**
         //  * Applies mark to the given text.
         //  *
-        //  * @return {string} - The highlight text.
+        //  * @return {string}
         //  * @example
         //  * newString = "Hello"
         //  * @example
@@ -191,7 +191,7 @@
         //  * **Description:**
         //  * Applies subscript to the given text.
         //  *
-        //  * @return {string} - The subscript text.
+        //  * @return {string}
         //  * @example
         //  * newString = "Hello"
         //  * @example
@@ -216,7 +216,7 @@
         //  * **Description:**
         //  * Applies superscript to the given text.
         //  *
-        //  * @return {string} - The superscript text.
+        //  * @return {string}
         //  * @example
         //  * newString = "Hello"
         //  * @example
@@ -243,7 +243,7 @@
         //  * **Description:**
         //  * Remove the last character of the given text.
         //  *
-        //  * @return {string} - The subscript text.
+        //  * @return {string}
         //  * @example
         //  * newString = "Hello"
         //  * @example
@@ -269,7 +269,7 @@
         //  * **Description:**
         //  * Remove the bold tag of the given text.
         //  *
-        //  * @return {string} - The subscript text.
+        //  * @return {string}
         //  * @example
         //  * newString = "<b>Hello</b>"
         //  * @example
@@ -286,7 +286,7 @@
         //  * **Description:**
         //  * Remove the italic tag of the given text.
         //  *
-        //  * @return {string} - The subscript text.
+        //  * @return {string}
         //  * @example
         //  * newString = "<i>Hello</i>"
         //  * @example
@@ -303,7 +303,7 @@
         //  * **Description:**
         //  * Remove the underline tag of the given text.
         //  *
-        //  * @return {string} - The underline text.
+        //  * @return {string}
         //  * @example
         //  * newString = "<u>Hello</u>"
         //  * @example
@@ -320,7 +320,7 @@
         //  * **Description:**
         //  * Remove the strike tag of the given text.
         //  *
-        //  * @return {string} - The strikethrough text.
+        //  * @return {string}
         //  * @example
         //  * newString = "<s>Hello</s>"
         //  * @example
@@ -337,7 +337,7 @@
         //  * **Description:**
         //  * Remove the mark tag of the given text.
         //  *
-        //  * @return {string} - The highlight text.
+        //  * @return {string}
         //  * @example
         //  * newString = "<mark>Hello</mark>"
         //  * @example
@@ -354,7 +354,7 @@
         //  * **Description:**
         //  * Remove the sub tag of the given text.
         //  *
-        //  * @return {string} - The sub text.
+        //  * @return {string}
         //  * @example
         //  * newString = "<sub>Hello</sub>"
         //  * @example
@@ -371,7 +371,7 @@
         //  * **Description:**
         //  * Remove the superscript tag of the given text.
         //  *
-        //  * @return {string} - The superscript text.
+        //  * @return {string}
         //  * @example
         //  * newString = "<sup>Hello</sup>"
         //  * @example
@@ -386,6 +386,18 @@
     end function                                
 //Extended number object methods
 //v1.0 by Svarii
+        //  *
+
+        // * @uml
+        // * @startyaml
+        // * number : " [calculate <b>number</b>] "
+        // * .plus(x): "adds x=1"
+        // * .minus(x): "subtract x=1"
+        // * .diff(x): "distance to x=0"
+        // * .greater_than: "true / false"
+        // * .lesser_than: "true / false"
+        // * .random_from(min=0): random in range
+        // * @enduml
     //@name plus   
         //
         //  * **Description:**
@@ -430,7 +442,7 @@
         //  * **Description:**
         //  * Return Difference from provided integer to distanceTo
         //  * @description     
-        //  * @param {number} amount - The amount to add.
+        //  * @param {number} amount
         //  * @return {number | string on type error} - The result of the subtraction.
         //  * @example
         //  * newNumber = 44;
@@ -442,7 +454,7 @@
         //  * print(result); // Outputs: 42
         //  * @example
         //  *             
-    number.diff = function(distanceTo)
+    number.diff = function(distanceTo = 0)
         if not typeof(distanceTo) == "number" then return null
             return abs(self - distanceTo)
     end function
@@ -451,7 +463,7 @@
         //  * **Description:**
         //  * Check if number is greater than provided number
         //  * @description     
-        //  * @param {number} isGreater - The amount to add.
+        //  * @param {number} isGreater
         //  * @return {bool number | string on type error} - The result of the subtraction.
         //  * @example
         //  * myNumber = 42;
@@ -473,7 +485,7 @@
         //  * **Description:**
         //  * Check if number is lesser than provided number
         //  * @description     
-        //  * @param {number} amount - The amount to add.
+        //  * @param {number} amount
         //  * @return {bool number | string on type error} - The result of the subtraction.
         //  * @example
         //  * myNumber = 42;
@@ -495,7 +507,7 @@
         //  * **Description:**
         //  * Generate a random number from 1 to number opt: min
         //  * @description     
-        //  * @param {number} amount - The amount to add.
+        //  * @param {number} amount
         //  * @return {bool number | string on type error} - The result of the subtraction.
         //  * @example
         //  * myNumber = 100;
@@ -512,10 +524,14 @@
             return floor((rnd * (max - min + 1)) + min)  
     end function
 
-    //LIST FUNCTIONS
+//LIST FUNCTIONS
 //.trim removes zero length list items at start and end
 list.trim = function()
-	if not self[self.len - 1].len > 0 then self.remove(self.len - 1)
-	if not self[0].len > 0 then self.remove(0)
+	while not self[self.len - 1].len > 0
+        self.remove(self.len - 1)
+    end while
+	while not self[0].len > 0
+        self.remove(0)
+    end while
 	return self
 end function
