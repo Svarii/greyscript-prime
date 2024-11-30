@@ -140,8 +140,7 @@ print(newString.remove_last_character) // Outputs: Hell
   ## .remove_bold
 The `.remove_bold` method allows you to remove bold tags from the given text. Example usage:
 
-![image](https://github.com/user-attachments/assets/1aafa4e7-2181-4242-89b9-27c6065008cd) <img src="https://github.com/user-attachments/assets/079b609c-2090-4354-a68f-72139b891000" align="right">
-![image]()
+![image](https://github.com/user-attachments/assets/b9163072-533f-4614-b418-630d2d3c6749) <img src="https://github.com/user-attachments/assets/f4c50d5b-8d28-4c7b-9bd0-71bb88c28b02" align="right">
 
 ```
 newString = "<b>Hello</b>"
