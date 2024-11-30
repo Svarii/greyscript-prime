@@ -118,7 +118,7 @@ print(newString.tiny) // Outputs: <sub>Hello</sub>
   ## .sup
 The `.sup` method allows you to apply superscript to the given text. Example usage:
 
-![image](https://github.com/user-attachments/assets/c1495566-7069-4e7a-92a3-d9c037b9579a) <img src="https://github.com/user-attachments/assets/d8c3a4bb-c92e-45aa-a048-2898c14458d7" align="right">
+![image](https://github.com/user-attachments/assets/a94caa5a-6a99-4c90-8022-4c0b8ecd9531) <img src="https://github.com/user-attachments/assets/1d4607bb-62df-4c92-88a7-244ac5ae008a" align="right">
 
 ```
 newString = "Hello"
