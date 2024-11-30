@@ -13,21 +13,21 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 | Category         | Method                      | Description                          |
 |------------------|-----------------------------|--------------------------------------|
 | **String**       | [`.color("#color")`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#color) | Apply a color to text.               |
-|                  | [`.bold()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#bold)               | Make the text bold.                  |
-|                  | [`.italic()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#italic)             | Make the text italic.                |
-|                  | [`.underline()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#underline)       | Underline the text.                  |
-|                  | [`.strike()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#strike)             | Apply strikethrough to text.         |
-|                  | [`.mark()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#mark)                 | Highlight the text.                  |
-|                  | [`.sub()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#sub)                   | Apply subscript to text.             |
-|                  | [`.sup()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#sup)                   | Apply superscript to text.           |
-|                  | [`.remove_last_character()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_last_character) | Remove the last character from text. |
-|                  | [`.remove_bold()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_bold)    | Remove bold formatting from text.    |
-|                  | [`.remove_italic()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_italic) | Remove italic formatting from text.  |
-|                  | [`.remove_underline()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_underline) | Remove underline formatting.         |
-|                  | [`.remove_strike()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_strike) | Remove strikethrough formatting.     |
-|                  | [`.remove_mark()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_mark)    | Remove highlight from text.          |
-|                  | [`.remove_sub()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_sub)      | Remove subscript from text.          |
-|                  | [`.remove_sup()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_sup)      | Remove superscript from text.        |
+|                  | [`.bold`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#bold)               | Make the text bold.                  |
+|                  | [`.italic`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#italic)             | Make the text italic.                |
+|                  | [`.underline`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#underline)       | Underline the text.                  |
+|                  | [`.strike`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#strike)             | Apply strikethrough to text.         |
+|                  | [`.mark`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#mark)                 | Highlight the text.                  |
+|                  | [`.sub`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#sub)                   | Apply subscript to text.             |
+|                  | [`.sup`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#sup)                   | Apply superscript to text.           |
+|                  | [`.remove_last_character`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_last_character) | Remove the last character from text. |
+|                  | [`.remove_bold`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_bold)    | Remove bold formatting from text.    |
+|                  | [`.remove_italic`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_italic) | Remove italic formatting from text.  |
+|                  | [`.remove_underline`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_underline) | Remove underline formatting.         |
+|                  | [`.remove_strike`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_strike) | Remove strikethrough formatting.     |
+|                  | [`.remove_mark`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_mark)    | Remove highlight from text.          |
+|                  | [`.remove_sub`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_sub)      | Remove subscript from text.          |
+|                  | [`.remove_sup`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_sup)      | Remove superscript from text.        |
 | **Number**       | [`.plus(number)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#plus)             | Add a value to a number.             |
 |                  | [`.minus(number)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#minus)           | Subtract a value from a number.      |
 |                  | [`.diff(number)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#diff)             | Calculate the absolute difference.   |
