@@ -1,6 +1,35 @@
 //Extended string object methods
+        //  *
+
+        // * @uml
+        // * @startyaml
+        // * string : " [mutate <b>string</b>] "
+        // * .bold: "//<b>//string</b>"
+        // * .italic: "//<i>//string</i>"
+        // * .underline: "//<u>//string</u>"
+        // * .strike: "//<s>//string</s>"
+        // * .sup: "//<sup>//string</sup>"
+        // * .sub: "//<sub>//string</sub>"
+        // * .mark: "//<mark>//string</mark>"
+        // * .remove_character_last: "Removes last character"
+        // * .remove_bold: "<s>//<b>//</s>string<s></b></s>"
+        // * .remove_italic: "<s>//<i>//</s>string<s></i></s>"
+        // * .remove_underline: "<s>//<u>//</s>string<s></u></s>"
+        // * .remove_strike: "<s>//<s>//</s>string<s></s></s>"
+        // * .remove_sup: "<s>//<sup>//</s>string<s></sup></s>"
+        // * .remove_sub: "<s>//<sub>//</s>string<s></sub></s>"
+        // * .remove_mark: "<s>//<mark>//</s>string<s></mark></s>"        
+        // * @enduml
 //v1.0 by Svarii
-    //@name color   
+    //@name color
+        //  *
+        //  * @uml
+        //  * @startuml
+        //  * entity String
+        //  * control ".color" as color
+        //  * String -> color : .color("blue")
+        //  * color -> String : "<color=blue>Hello</color>"
+        //  * @enduml        
         //
         //  * **Description:**
         //  * Applies a color to the given text.
@@ -19,13 +48,21 @@
         //  * @example
         //  * result = newString.color("#FFFFFF");
         //  * @example
-        //  * print(result); // Outputs: <color=#FFFFFF>Hello</color>
-        //  *
+        //  * print(result); // Outputs: <color=#FFFFFF>Hello</color>       
     string.color = function(colorValue = "red")
-    if not typeof(colorValue) == "string" then return "Error: string.color passed object type of " + typeof(colorValue) + ", string required"
+    if not typeof(colorValue) == "string" then return null
     return "<color=" + colorValue + ">" + self + "</color>"
     end function
-    //@name bold   
+    //@name bold
+        //  *
+        //  * @uml
+        //  * @startuml
+        //  * entity StringObject
+        //  * control ".bold" as bold
+        //  * StringObject -> bold : string
+        //  * bold -> StringObject : //<b>//string//</b>//
+        //  * @enduml        
+        //    
         //  * **Description:**
         //  * Applies bold to the given text.
         //  *
@@ -41,7 +78,16 @@
     string.bold = function()
         return "<b>" + self + "</b>"
     end function
-    //@name italic   
+    //@name italic
+        //  *
+        //  * @uml
+        //  * @startuml
+        //  * entity StringObject
+        //  * control ".italic" as italic
+        //  * StringObject -> italic : string
+        //  * italic -> StringObject : //<i>//string//</i>//
+        //  * @enduml        
+        //         
         //  * **Description:**
         //  * Applies italic to the given text.
         //  *
@@ -57,7 +103,16 @@
     string.italic = function()
         return "<i>" + self + "</i>"
     end function 
-    //@name underline   
+    //@name underline 
+        //  *
+        //  * @uml
+        //  * @startuml
+        //  * entity StringObject
+        //  * control ".underline" as underline
+        //  * StringObject -> underline : string
+        //  * underline -> StringObject : //<u>//string//</u>//
+        //  * @enduml        
+        //            
         //  * **Description:**
         //  * Applies underline to the given text.
         //  *
@@ -73,7 +128,16 @@
     string.underline = function()
         return "<u>" + self + "</u>"
     end function
-    //@name strike    
+    //@name strike
+            //  *
+        //  * @uml
+        //  * @startuml
+        //  * entity StringObject
+        //  * control ".strike" as strike
+        //  * StringObject -> strike : string
+        //  * strike -> StringObject : //<s>//string//</s>//
+        //  * @enduml        
+        //  
         //  * **Description:**
         //  * Applies strikethrough to the given text.
         //  *
@@ -89,23 +153,41 @@
     string.strike = function()
         return "<s>" + self + "</s>"
     end function
-    //@name highlight    
+    //@name mark
+            //  *
+        //  * @uml
+        //  * @startuml
+        //  * entity StringObject
+        //  * control ".mark" as strike
+        //  * StringObject -> mark : string
+        //  * mark -> StringObject : //<mark>//string//</mark>//
+        //  * @enduml        
+        //    
         //  * **Description:**
-        //  * Applies highlight to the given text.
+        //  * Applies mark to the given text.
         //  *
         //  * @return {string} - The highlight text.
         //  * @example
         //  * newString = "Hello"
         //  * @example
         //  * @example        
-        //  * result = newString.highlight
+        //  * result = newString.mark
         //  * @example
         //  * print(result); // Outputs: <mark>Hello</mark>
         //  *
-    string.highlight = function
+    string.mark = function()
         return "<mark>" + self + "</mark>"
     end function
-    //@name sub      
+    //@name sub
+        //  *
+        //  * @uml
+        //  * @startuml
+        //  * entity StringObject
+        //  * control ".sub" as sub
+        //  * StringObject -> sub : string
+        //  * sub -> StringObject : //<sub>//string//</sub>//
+        //  * @enduml        
+        //            
         //  * **Description:**
         //  * Applies subscript to the given text.
         //  *
@@ -118,10 +200,19 @@
         //  * @example
         //  * print(result); // Outputs: <sub>Hello</sub>
         //  *    
-    string.sub = function
+    string.sub = function()
         return "<sub>" + self + "</sub>"    
     end function
-    //@name sup      
+    //@name sup
+        //  *
+        //  * @uml
+        //  * @startuml
+        //  * entity StringObject
+        //  * control ".sup" as sup
+        //  * StringObject -> sup : string
+        //  * sup -> StringObject : //<sup>//string//</sup>//
+        //  * @enduml        
+        //                 
         //  * **Description:**
         //  * Applies superscript to the given text.
         //  *
@@ -134,10 +225,21 @@
         //  * @example
         //  * print(result); // Outputs: <sup>Hello</sup>
         //  *    
-    string.sup = function
+    string.sup = function()
         return "<sup>" + self + "</sup>"    
     end function                             
     //@name remove_character_last
+        //  *
+        //  * @uml
+        //  * @startuml
+        //  * title string.remove_character_last
+        //  * entity StringObject
+        //  * control ".remove_character_last" as remove_character_last
+        //  * StringObject -> remove_character_last : string
+        //  * remove_character_last -> StringObject : strin
+        //  * footer Removes the last character from a string object
+        //  * @enduml        
+        //        
         //  * **Description:**
         //  * Remove the last character of the given text.
         //  *
@@ -154,7 +256,16 @@
         charList = self.values
         return charList.remove(index)
     end function
-    //@name remove_bold    
+    //@name remove_bold
+        //  *
+        //  * @uml
+        //  * @startuml
+        //  * entity StringObject
+        //  * control ".remove_bold" as remove_bold
+        //  * StringObject -> remove_bold : //<b>//string//</b>//
+        //  * remove_bold -> StringObject : string
+        //  * @enduml        
+        //              
         //  * **Description:**
         //  * Remove the bold tag of the given text.
         //  *
@@ -291,7 +402,7 @@
         //  * print(result); // Outputs: 42
         //  *
     number.plus = function(amount = 1)
-        if not typeof(amount) == "number" then return "Error: number.plus passed object type of " + typeof(amount) + ", number required"
+        if not typeof(amount) == "number" then return null
             return self + amount
     end function
     //@name minus   
@@ -311,7 +422,7 @@
         //  * @example
         //  *     
     number.minus = function(amount = 1)
-        if not typeof(amount) == "number" then return "Error: number.minus passed object type of " + typeof(amount) + ", number required"
+        if not typeof(amount) == "number" then return null
             return self - amount
     end function
     //@name diff   
@@ -332,9 +443,8 @@
         //  * @example
         //  *             
     number.diff = function(distanceTo)
-        if not typeof(distanceTo) == "number" then return "Error: number.difference passed object type of " + typeof(distanceTo) + ", number required"
+        if not typeof(distanceTo) == "number" then return null
             return abs(self - distanceTo)
-            return 
     end function
     //@name greater_than   
         //
@@ -354,7 +464,7 @@
         //  * @example
         //  *          
     number.greater_than = function(isGreater)
-        if not typeof(isGreater) == "number" then return "Error: number.greater_than passed object type of " + typeof(isGreater) + ", number required"
+        if not typeof(isGreater) == "number" then return null
             if isGreater > self then return true
             return false
     end function
@@ -376,7 +486,7 @@
         //  * @example
         //  *                
     number.lesser_than = function(isLesser)
-        if not typeof(isLesser) == "number" then return "Error: number.lesser_than passed object type of " + typeof(isLesser) + ", number required"
+        if not typeof(isLesser) == "number" then return null
             if isLesser < self then return true
             return false
     end function
@@ -397,7 +507,15 @@
         //  * @example
         //  *    
     number.random_from = function(min = 0)
-        if not typeof(min) == "number" then return "Error: number.random_from passed object type of " + typeof(min) + ", number required"
+        if not typeof(min) == "number" then return null
             max = self
             return floor((rnd * (max - min + 1)) + min)  
     end function
+
+    //LIST FUNCTIONS
+//.trim removes zero length list items at start and end
+list.trim = function()
+	if not self[self.len - 1].len > 0 then self.remove(self.len - 1)
+	if not self[0].len > 0 then self.remove(0)
+	return self
+end function

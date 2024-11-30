@@ -22,12 +22,14 @@
 			else
 				terminal.shell = get_shell
 			end if
-			terminal.computer = terminal.shell.host_computer
-			terminal.classID = "SystemObject"
-			return terminal
+			if not terminal.shell == null then
+				terminal.computer = terminal.shell.host_computer
+				terminal.classID = "SystemObject"
+				return terminal
+			end if
+			return null
 	end function
 
-	terminal = get_system_object typeof()
-	print typeof(terminal)
+	
 	
 

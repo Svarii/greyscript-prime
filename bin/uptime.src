@@ -70,4 +70,4 @@ calculate_uptime = function()
 end function
 
 uptimeString = calculate_uptime()
-print(format_columns("<b>Uptime</b>: " + uptimeString))
+print(format_columns("Uptime: " + "<b>" + uptimeString + "</b>"))
