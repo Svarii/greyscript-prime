@@ -9,7 +9,8 @@ The comments in this **GreyScript** are designed to be used in tanden with **VSC
 Limited custom formatting of DocBlocks and Plant UML allow for insertion to GreyScript Compiler.
 
 # GreyScript Plus ![Static Badge](https://img.shields.io/badge/version-0.1a-red)
-![image](https://github.com/user-attachments/assets/5f670b60-6d42-48cb-9004-2d9015ccfca9)
+![image](https://github.com/user-attachments/assets/5f670b60-6d42-48cb-9004-2d9015ccfca9) ![image](https://github.com/user-attachments/assets/36572ec7-ec9c-4ab0-97d7-58eeded768fd)
+
 
 ## methodsString ![Static Badge](https://img.shields.io/badge/method-string-green)
   ##### [.color](#color)
