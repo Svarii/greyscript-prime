@@ -129,7 +129,8 @@ print(newString.sup) // Outputs: <sup>Hello</sup>
   ## .remove_char_last
 The `.remove_char_last` method allows you to remove the last character to the given text. Example usage:
 
-![image](https://github.com/user-attachments/assets/794a176d-75b3-4abc-88f0-2c89d22ff4b3) <img src="https://github.com/user-attachments/assets/3ccd6df0-6da2-4287-9a05-7e0681128d51" align="right">
+![image](https://github.com/user-attachments/assets/0a870f9c-382d-41d1-a550-6a403147dbe9) <img src="https://github.com/user-attachments/assets/3a5b8ffd-1122-4811-b7df-ee09228977db" align="right">
+
 ```
 newString = "Hello"
 
@@ -140,6 +141,7 @@ print(newString.remove_last_character) // Outputs: Hell
 The `.remove_bold` method allows you to remove bold tags from the given text. Example usage:
 
 ![image](https://github.com/user-attachments/assets/1aafa4e7-2181-4242-89b9-27c6065008cd) <img src="https://github.com/user-attachments/assets/079b609c-2090-4354-a68f-72139b891000" align="right">
+![image]()
 
 ```
 newString = "<b>Hello</b>"
