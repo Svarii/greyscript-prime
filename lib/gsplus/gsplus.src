@@ -54,7 +54,8 @@
         //  * @example
         //  * result = newString.color("#FFFFFF");
         //  * @example
-        //  * print(result); // Outputs: <color=#FFFFFF>Hello</color>       
+        //  * print(result); // Outputs: <color=#FFFFFF>Hello</color>   
+        // ANCHOR string.color    
     string.color = function(colorValue = "red")
     if not typeof(colorValue) == "string" then return null
     return "<color=" + colorValue + ">" + self + "</color>"
@@ -81,6 +82,7 @@
         //  * @example
         //  * print(result); // Outputs: <b>Hello</b>
         //  *
+        // ANCHOR string.bold
     string.bold = function()
         return "<b>" + self + "</b>"
     end function
@@ -106,6 +108,7 @@
         //  * @example
         //  * print(result); // Outputs: <i>Hello</i>
         //  *
+        // ANCHOR string.italic
     string.italic = function()
         return "<i>" + self + "</i>"
     end function 
@@ -131,6 +134,7 @@
         //  * @example
         //  * print(result); // Outputs: <u>Hello</u>
         //  *
+        // ANCHOR string.underline
     string.underline = function()
         return "<u>" + self + "</u>"
     end function
@@ -156,6 +160,7 @@
         //  * @example
         //  * print(result); // Outputs: <s>Hello</s>
         //  *
+        // ANCHOR string.strike
     string.strike = function()
         return "<s>" + self + "</s>"
     end function
@@ -181,6 +186,7 @@
         //  * @example
         //  * print(result); // Outputs: <mark>Hello</mark>
         //  *
+        // ANCHOR string.mark
     string.mark = function()
         return "<mark>" + self + "</mark>"
     end function
@@ -206,6 +212,7 @@
         //  * @example
         //  * print(result); // Outputs: <sub>Hello</sub>
         //  *    
+        // ANCHOR string.sub
     string.sub = function()
         return "<sub>" + self + "</sub>"    
     end function
@@ -230,7 +237,8 @@
         //  * result = newString.sup
         //  * @example
         //  * print(result); // Outputs: <sup>Hello</sup>
-        //  *    
+        //  * 
+        // ANCHOR string.sup   
     string.sup = function()
         return "<sup>" + self + "</sup>"    
     end function                             
@@ -257,7 +265,8 @@
         //  * result = newString.remove_character_last
         //  * @example
         //  * print(result); // Outputs: Hell
-        //  *        
+        //  *      
+        // ANCHOR string.remove_char_last  
     string.remove_char_last = function(index = (self.len - 1))
         charList = self.values
         return charList.remove(index)
@@ -286,6 +295,7 @@
         //  * @example
         //  * print(result); // Outputs: Hello
         //  *  
+        // ANCHOR string.remove_bold
     string.remove_bold = function()
         newString = self.remove("<b>")
         return newString.remove("</b>")
@@ -314,6 +324,7 @@
         //  * @example
         //  * print(result); // Outputs: Hello
         //  *  
+        // ANCHOR string.remove_italic
     string.remove_italic = function()
         newString = self.remove("<i>")
         return newString.remove("</i>")
@@ -342,6 +353,7 @@
         //  * @example
         //  * print(result); // Outputs: Hello
         //  * 
+        // ANCHOR string.remove_underline
     string.remove_underline = function()
         newString = self.remove("<u>")
         return newString.remove("</u>")
@@ -370,6 +382,7 @@
         //  * @example
         //  * print(result); // Outputs: Hello
         //  * 
+        // ANCHOR string.remove_strike
     string.remove_strike = function()
         newString = self.remove("<s>")
         return newString.remove("</s>")
@@ -398,6 +411,7 @@
         //  * @example
         //  * print(result); // Outputs: Hello
         //  * 
+        // ANCHOR string.remove_mark
     string.remove_mark = function()
         newString = self.remove("<mark>")
         return newString.remove("</mark>")
@@ -427,6 +441,7 @@
         //  * @example
         //  * print(result); // Outputs: Hello
         //  * 
+        // ANCHOR string.remove_sub
     string.remove_sub = function()
         newString = self.remove("<sub>")
         return newString.remove("</sub>")
@@ -456,6 +471,7 @@
         //  * @example
         //  * print(result); // Outputs: Hello
         //  * 
+        // ANCHOR string.remove_sup
     string.remove_sup = function()
         newString = self.remove("<sup>")
         return newString.remove("</sup>")
@@ -488,6 +504,7 @@
         //  * @example
         //  * print(result); // Outputs: 42
         //  *
+        // ANCHOR number.plus
     number.plus = function(amount = 1)
         if not typeof(amount) == "number" then return null
             return self + amount
@@ -508,6 +525,7 @@
         //  * print(result); // Outputs: 42
         //  * @example
         //  *     
+        // ANCHOR number.minus
     number.minus = function(amount = 1)
         if not typeof(amount) == "number" then return null
             return self - amount
@@ -528,7 +546,8 @@
         //  * @example
         //  * print(result); // Outputs: 42
         //  * @example
-        //  *             
+        //  *       
+        // ANCHOR number.diff      
     number.diff = function(distanceTo = 0)
         if not typeof(distanceTo) == "number" then return null
             return abs(self - distanceTo)
@@ -549,7 +568,8 @@
         //  * @example
         //  * print(result); // Outputs: 0
         //  * @example
-        //  *          
+        //  *      
+        // ANCHOR number.greater_than    
     number.greater_than = function(isGreater)
         if not typeof(isGreater) == "number" then return null
             if isGreater > self then return true
@@ -571,12 +591,17 @@
         //  * @example
         //  * print(result); // Outputs: 1
         //  * @example
-        //  *                
+        //  *     
+        // ANCHOR number.lesser_than           
     number.lesser_than = function(isLesser)
         if not typeof(isLesser) == "number" then return null
             if isLesser < self then return true
             return false
     end function
+    // ## Section Title
+    // This is some documentation written in Markdown.
+    // - Bullet point 1
+    // - Bullet point 2
     //@name random_from   
         //
         //  * **Description:**
@@ -593,6 +618,7 @@
         //  * print(result); // Outputs: {rnd:50-100}
         //  * @example
         //  *    
+        // ANCHOR number.random_from
     number.random_from = function(min = 0)
         if not typeof(min) == "number" then return null
             max = self
