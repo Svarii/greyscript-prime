@@ -162,7 +162,7 @@ print(newString.remove_italic) // Outputs: Hello
   ## .remove_underline
 The `.remove_underline` method allows you to remove underline tags from the given text. Example usage:
 
-![image](https://github.com/user-attachments/assets/9edc210f-b8aa-43c0-a88c-5640478cdd75) <img src="https://github.com/user-attachments/assets/4a4303fa-b4bc-4466-9830-b775b64a45b9" align="right">
+![image](https://github.com/user-attachments/assets/768e7493-ead8-4a7f-b156-af9f8761815a) <img src="https://github.com/user-attachments/assets/f7f5b909-d70d-41e7-9e50-bedc24218dbe" align="right">
 
 ```
 newString = "<u>Hello</u>"
