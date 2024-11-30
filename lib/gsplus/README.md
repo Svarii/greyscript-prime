@@ -85,7 +85,8 @@ print(newString.underline) // Outputs: <u>Hello</u>
   ## .strike
 The `.strike` method allows you to apply strikethrough to the given text.
 
-![image](https://github.com/user-attachments/assets/ae49ab0a-bd0b-4252-85e0-24b698f75db7) &nbsp;&nbsp;&nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/aa65b396-fd3c-41c6-948e-8d6a2c84a44d" align="right">
+![image](https://github.com/user-attachments/assets/f1238124-aa01-42c3-8171-b6af0d925b4a) <img src="https://github.com/user-attachments/assets/55fb0584-10d3-45db-8b12-c1f92f818d52" align="right">
+
 ```
 newString = "Hello"
 
