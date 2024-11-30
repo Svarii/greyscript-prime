@@ -41,8 +41,9 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 ## methodsString ![Static Badge](https://img.shields.io/badge/method-string-green)
   
   ## .color
-The `.color` method allows you to apply a color to the given text. Example usage:
-![image](https://github.com/user-attachments/assets/1df01792-5749-4076-bc71-7a4c6e4e45cd) ![image](https://github.com/user-attachments/assets/66d13911-3d93-43e4-bd76-a6b1a46d19d9)
+The `.color` method allows you to apply a color to the given text.
+
+![image](https://github.com/user-attachments/assets/1df01792-5749-4076-bc71-7a4c6e4e45cd) &nbsp;&nbsp;&nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/66d13911-3d93-43e4-bd76-a6b1a46d19d9" align="right">
 ```
 newString = "Hello"
 
@@ -50,9 +51,9 @@ print(newString.color("blue")) // Outputs: <color=blue>Hello</color>
 ```
 
   ## .bold
-The `.bold` method allows you to apply bold to the given text. Example usage:
+The `.bold` method allows you to apply bold to the given text.
 
-![image](https://github.com/user-attachments/assets/1125b1a9-3884-415c-992b-13b07b22e0e5) ![image](https://github.com/user-attachments/assets/5e4eb592-54ea-463f-8eab-a5f983a69330)
+![image](https://github.com/user-attachments/assets/1125b1a9-3884-415c-992b-13b07b22e0e5) &nbsp;&nbsp;&nbsp;&nbsp; ![image](https://github.com/user-attachments/assets/5e4eb592-54ea-463f-8eab-a5f983a69330)
 ```
 newString = "Hello"
 
@@ -60,9 +61,9 @@ print(newString.bold) // Outputs: <b>Hello</b>
 ```
 
   ## .italic
-The `.italic` method allows you to apply italic to the given text. Example usage:
+The `.italic` method allows you to apply italic to the given text.
 
-![image](https://github.com/user-attachments/assets/31e5f53a-1560-4bf0-be13-9b7b5a4c23df) ![image](https://github.com/user-attachments/assets/dd4a97ce-b61e-4491-bee8-3e451f6bb69f)
+![image](https://github.com/user-attachments/assets/31e5f53a-1560-4bf0-be13-9b7b5a4c23df) &nbsp;&nbsp;&nbsp;&nbsp; ![image](https://github.com/user-attachments/assets/dd4a97ce-b61e-4491-bee8-3e451f6bb69f)
 ```
 newString = "Hello"
 
@@ -70,9 +71,9 @@ print(newString.italic) // Outputs: <i>Hello</i>
 ```
 
   ## .underline
-The `.underline` method allows you to apply underline to the given text. Example usage:
+The `.underline` method allows you to apply underline to the given text.
 
-![image](https://github.com/user-attachments/assets/801251ed-5cbc-432f-93e8-a298ee50bc4d) ![image](https://github.com/user-attachments/assets/95775a74-1d15-4c9b-8ea2-ae9c1cdd61a5)
+![image](https://github.com/user-attachments/assets/801251ed-5cbc-432f-93e8-a298ee50bc4d) &nbsp;&nbsp;&nbsp;&nbsp; ![image](https://github.com/user-attachments/assets/95775a74-1d15-4c9b-8ea2-ae9c1cdd61a5)
 ```
 newString = "Hello"
 
@@ -80,8 +81,8 @@ print(newString.underline) // Outputs: <u>Hello</u>
 ```
 
   ## .strike
-The `.strike` method allows you to apply strikethrough to the given text. Example usage:
-![image](https://github.com/user-attachments/assets/ae49ab0a-bd0b-4252-85e0-24b698f75db7) ![image](https://github.com/user-attachments/assets/aa65b396-fd3c-41c6-948e-8d6a2c84a44d)
+The `.strike` method allows you to apply strikethrough to the given text.
+![image](https://github.com/user-attachments/assets/ae49ab0a-bd0b-4252-85e0-24b698f75db7) &nbsp;&nbsp;&nbsp;&nbsp; ![image](https://github.com/user-attachments/assets/aa65b396-fd3c-41c6-948e-8d6a2c84a44d)
 ```
 newString = "Hello"
 
