@@ -151,7 +151,7 @@ print(newString.remove_bold) // Outputs: Hello
   ## .remove_italic
 The `.remove_italic` method allows you to remove italic tags from the given text. Example usage:
 
-![image](https://github.com/user-attachments/assets/1335de93-87ec-4af4-a13c-f6c5b9fa2e40) <img src="https://github.com/user-attachments/assets/8fcf5e79-0a37-42c8-bc7d-60842d19247d" align="right">
+![image](https://github.com/user-attachments/assets/aeaada4d-8aaf-44ed-8935-e49de4d6f864) <img src="https://github.com/user-attachments/assets/2c544f95-31be-4c8f-a458-3df2a7da9e60" align="right">
 
 ```
 newString = "<i>Hello</i>"
