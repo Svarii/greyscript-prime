@@ -13,28 +13,29 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 
 | Category         | Method                      | Description                          |
 |------------------|-----------------------------|--------------------------------------|
-| **String**       | `.color("#color")`          | Apply a color to text.               |
-|                  | `.bold()`                   | Make the text bold.                  |
-|                  | `.italic()`                 | Make the text italic.                |
-|                  | `.underline()`              | Underline the text.                  |
-|                  | `.strike()`                 | Apply strikethrough to text.         |
-|                  | `.mark()`                   | Highlight the text.                  |
-|                  | `.sub()`                    | Apply subscript to text.             |
-|                  | `.sup()`                    | Apply superscript to text.           |
-|                  | `.remove_last_character()`  | Remove the last character from text. |
-|                  | `.remove_bold()`            | Remove bold formatting from text.    |
-|                  | `.remove_italic()`          | Remove italic formatting from text.  |
-|                  | `.remove_underline()`       | Remove underline formatting.         |
-|                  | `.remove_strike()`          | Remove strikethrough formatting.     |
-|                  | `.remove_mark()`            | Remove highlight from text.          |
-|                  | `.remove_sub()`             | Remove subscript from text.          |
-|                  | `.remove_sup()`             | Remove superscript from text.        |
-| **Number**       | `.plus(value)`              | Add a value to a number.             |
-|                  | `.minus(value)`             | Subtract a value from a number.      |
-|                  | `.diff(value)`              | Calculate the absolute difference.   |
-|                  | `.greater_than(value)`      | Check if number is greater.          |
-|                  | `.lesser_than(value)`       | Check if number is lesser.           |
-|                  | `.random_from(value)`       | Generate a random number.            |
+| **String**       | [`.color('colorName')`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#color) | Apply a color to text.               |
+|                  | [`.bold()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#bold)               | Make the text bold.                  |
+|                  | [`.italic()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#italic)             | Make the text italic.                |
+|                  | [`.underline()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#underline)       | Underline the text.                  |
+|                  | [`.strike()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#strike)             | Apply strikethrough to text.         |
+|                  | [`.mark()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#mark)                 | Highlight the text.                  |
+|                  | [`.sub()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#sub)                   | Apply subscript to text.             |
+|                  | [`.sup()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#sup)                   | Apply superscript to text.           |
+|                  | [`.remove_last_character()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_last_character) | Remove the last character from text. |
+|                  | [`.remove_bold()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_bold)    | Remove bold formatting from text.    |
+|                  | [`.remove_italic()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_italic) | Remove italic formatting from text.  |
+|                  | [`.remove_underline()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_underline) | Remove underline formatting.         |
+|                  | [`.remove_strike()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_strike) | Remove strikethrough formatting.     |
+|                  | [`.remove_mark()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_mark)    | Remove highlight from text.          |
+|                  | [`.remove_sub()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_sub)      | Remove subscript from text.          |
+|                  | [`.remove_sup()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_sup)      | Remove superscript from text.        |
+| **Number**       | [`.plus(value)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#plus)             | Add a value to a number.             |
+|                  | [`.minus(value)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#minus)           | Subtract a value from a number.      |
+|                  | [`.diff(value)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#diff)             | Calculate the absolute difference.   |
+|                  | [`.greater_than(value)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#greater_than) | Check if number is greater.          |
+|                  | [`.lesser_than(value)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#lesser_than) | Check if number is lesser.           |
+|                  | [`.random_from(value)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#random_from) | Generate a random number.            |
+
 
 
 ## methodsString ![Static Badge](https://img.shields.io/badge/method-string-green)
