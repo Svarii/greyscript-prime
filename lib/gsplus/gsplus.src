@@ -175,7 +175,7 @@
         //  * @example
         //  * print(result); // Outputs: <mark>Hello</mark>
         //  *
-    string.mark = function()
+    string.highlight = function()
         return "<mark>" + self + "</mark>"
     end function
     //@name sub
