@@ -40,7 +40,7 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
   ## .color
 The `.color` method allows you to apply a color to the given text.
 
-![image](https://github.com/user-attachments/assets/2aa4792e-838f-441d-866f-cf44ba5eb9d6) <img src="https://github.com/user-attachments/assets/b61e6ae5-97ca-4213-9f63-5689232a3ac8" align="right">
+![image](https://github.com/user-attachments/assets/c2530db7-fee4-4454-be1d-65d7e995268b) <img src="https://github.com/user-attachments/assets/b61e6ae5-97ca-4213-9f63-5689232a3ac8" align="right">
 
 ```
 newString = "Hello"
