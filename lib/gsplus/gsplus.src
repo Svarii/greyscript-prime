@@ -1,3 +1,4 @@
+//GreyScript Plus version 1.0a by Svarii
 //Extended string object methods
         //  *
 
@@ -24,21 +25,16 @@
     //@name color
         //  *
         //  * @uml
-        //  * @startuml
-        //  * title string.color
-        //  * header
-        //  * The **.color** function is used to apply
-        //  * - specific hex #color codes.
-        //  * - basic css color names
-        //  * endheader        
+        //  * @startuml        
         //  * entity StringObject
         //  * control ".color" as color
         //  * StringObject -> color : .color("blue")
         //  * color -> StringObject : "<color=blue>string</color>"
+        //  * footer
+        //  * string.color()
+        //  * endfooter        
         //  * @enduml               
-        //
-        //  * **Description:**
-        //  * Applies a color to the given text.
+        // ANCHOR string.color 
         //  * @description     
         //  * Color values maybe be #**FFFFFF** or **color** format
         //  * @param {string} colorValue - The color to apply.
@@ -54,8 +50,7 @@
         //  * @example
         //  * result = newString.color("#FFFFFF");
         //  * @example
-        //  * print(result); // Outputs: <color=#FFFFFF>Hello</color>   
-        // ANCHOR string.color    
+        //  * print(result); // Outputs: <color=#FFFFFF>Hello</color>      
     string.color = function(colorValue = "red")
     if not typeof(colorValue) == "string" then return null
     return "<color=" + colorValue + ">" + self + "</color>"
@@ -68,9 +63,12 @@
         //  * control ".bold" as bold
         //  * StringObject -> bold : string
         //  * bold -> StringObject : //<b>//string//</b>//
+        //  * footer
+        //  * string.bold
+        //  * endfooter           
         //  * @enduml        
-        //    
-        //  * **Description:**
+        // ANCHOR string.bold
+        //  * @description    
         //  * Applies bold to the given text.
         //  *
         //  * @return {string}
@@ -82,7 +80,6 @@
         //  * @example
         //  * print(result); // Outputs: <b>Hello</b>
         //  *
-        // ANCHOR string.bold
     string.bold = function()
         return "<b>" + self + "</b>"
     end function
@@ -95,8 +92,8 @@
         //  * StringObject -> italic : string
         //  * italic -> StringObject : //<i>//string//</i>//
         //  * @enduml        
-        //         
-        //  * **Description:**
+        // ANCHOR string.italic      
+        //  * @description
         //  * Applies italic to the given text.
         //  *
         //  * @return {string}
@@ -108,7 +105,6 @@
         //  * @example
         //  * print(result); // Outputs: <i>Hello</i>
         //  *
-        // ANCHOR string.italic
     string.italic = function()
         return "<i>" + self + "</i>"
     end function 
@@ -121,8 +117,8 @@
         //  * StringObject -> underline : string
         //  * underline -> StringObject : //<u>//string//</u>//
         //  * @enduml        
-        //            
-        //  * **Description:**
+        // ANCHOR string.underline
+        //  * @description
         //  * Applies underline to the given text.
         //  *
         //  * @return {string}
@@ -134,7 +130,6 @@
         //  * @example
         //  * print(result); // Outputs: <u>Hello</u>
         //  *
-        // ANCHOR string.underline
     string.underline = function()
         return "<u>" + self + "</u>"
     end function
@@ -147,8 +142,8 @@
         //  * StringObject -> strike : string
         //  * strike -> StringObject : //<s>//string//</s>//
         //  * @enduml        
-        //  
-        //  * **Description:**
+        // ANCHOR string.strike
+        //  * @description
         //  * Applies strikethrough to the given text.
         //  *
         //  * @return {string}
@@ -160,7 +155,6 @@
         //  * @example
         //  * print(result); // Outputs: <s>Hello</s>
         //  *
-        // ANCHOR string.strike
     string.strike = function()
         return "<s>" + self + "</s>"
     end function
@@ -173,8 +167,8 @@
         //  * StringObject -> mark : string
         //  * mark -> StringObject : //<mark>//string//</mark>//
         //  * @enduml        
-        //       
-        //  * **Description:**
+        // ANCHOR string.mark
+        //  * @description
         //  * Applies mark to the given text.
         //  *
         //  * @return {string}
@@ -186,7 +180,6 @@
         //  * @example
         //  * print(result); // Outputs: <mark>Hello</mark>
         //  *
-        // ANCHOR string.mark
     string.mark = function()
         return "<mark>" + self + "</mark>"
     end function
@@ -199,8 +192,8 @@
         //  * StringObject -> sub : string
         //  * sub -> StringObject : //<sub>//string//</sub>//
         //  * @enduml        
-        //            
-        //  * **Description:**
+        // ANCHOR string.sub     
+        //  * @description
         //  * Applies subscript to the given text.
         //  *
         //  * @return {string}
@@ -212,7 +205,6 @@
         //  * @example
         //  * print(result); // Outputs: <sub>Hello</sub>
         //  *    
-        // ANCHOR string.sub
     string.sub = function()
         return "<sub>" + self + "</sub>"    
     end function
@@ -225,8 +217,8 @@
         //  * StringObject -> sup : string
         //  * sup -> StringObject : //<sup>//string//</sup>//
         //  * @enduml        
-        //                 
-        //  * **Description:**
+        // ANCHOR string.sup           
+        //  * @description
         //  * Applies superscript to the given text.
         //  *
         //  * @return {string}
@@ -238,7 +230,6 @@
         //  * @example
         //  * print(result); // Outputs: <sup>Hello</sup>
         //  * 
-        // ANCHOR string.sup   
     string.sup = function()
         return "<sup>" + self + "</sup>"    
     end function                             
@@ -253,9 +244,9 @@
         //  * remove_char_last -> StringObject : strin
         //  * footer Removes the last char from a string object
         //  * @enduml        
-        //        
-        //  * **Description:**
-        //  * Remove the last char of the given text.
+        // ANCHOR string.remove_char_last  
+        //  * @description
+        //  * Remove the last character of the given text.
         //  *
         //  * @return {string}
         //  * @example
@@ -266,7 +257,6 @@
         //  * @example
         //  * print(result); // Outputs: Hell
         //  *      
-        // ANCHOR string.remove_char_last  
     string.remove_char_last = function(index = (self.len - 1))
         charList = self.values
         return charList.remove(index)
@@ -282,7 +272,7 @@
         //  * StringObject -> remove_bold : //<b>//string//</b>// //<b>//string//</b>//
         //  * remove_bold -> StringObject : string string   
         //  * @enduml        
-        //              
+        // ANCHOR string.remove_bold
         //  * **Description:**
         //  * Remove the bold tag of the given text.
         //  *
@@ -295,7 +285,6 @@
         //  * @example
         //  * print(result); // Outputs: Hello
         //  *  
-        // ANCHOR string.remove_bold
     string.remove_bold = function()
         newString = self.remove("<b>")
         return newString.remove("</b>")
@@ -311,8 +300,8 @@
         //  * StringObject -> remove_italic : //<i>//string//</i>// //<i>//string//</i>//
         //  * remove_italic -> StringObject : string string   
         //  * @enduml        
-        //              
-        //  * **Description:**
+        // ANCHOR string.remove_italic      
+        //  * @description
         //  * Remove the italic tag of the given text.
         //  *
         //  * @return {string}
@@ -324,7 +313,6 @@
         //  * @example
         //  * print(result); // Outputs: Hello
         //  *  
-        // ANCHOR string.remove_italic
     string.remove_italic = function()
         newString = self.remove("<i>")
         return newString.remove("</i>")
@@ -340,8 +328,8 @@
         //  * StringObject -> remove_underline : //<u>//string//</u>// //<u>//string//</u>//
         //  * remove_underline -> StringObject : string string   
         //  * @enduml        
-        //               
-        //  * **Description:**
+        // ANCHOR string.remove_underline
+        //  * @description
         //  * Remove the underline tag of the given text.
         //  *
         //  * @return {string}
@@ -353,14 +341,11 @@
         //  * @example
         //  * print(result); // Outputs: Hello
         //  * 
-        // ANCHOR string.remove_underline
     string.remove_underline = function()
         newString = self.remove("<u>")
         return newString.remove("</u>")
     end function                
-    //@name strike    
-        //  * **Description:**
-        //  *
+    //@name remove_strike    
         //  * @uml
         //  * @startuml
         //  * entity StringObject
@@ -370,8 +355,9 @@
         //  * StringObject -> remove_strike : //<s>//string//</s>// //<s>//string//</s>//
         //  * remove_strike -> StringObject : string string   
         //  * @enduml        
-        //                
-        //  * Remove the strike tag of the given text.
+        // ANCHOR string.remove_strike         
+        //  * @description
+        //  * Remove the strikethrough tag of the given text.
         //  *
         //  * @return {string}
         //  * @example
@@ -382,12 +368,11 @@
         //  * @example
         //  * print(result); // Outputs: Hello
         //  * 
-        // ANCHOR string.remove_strike
     string.remove_strike = function()
         newString = self.remove("<s>")
         return newString.remove("</s>")
     end function                
-    //@name mark    
+    //@name remove_mark    
         //  * **Description:**
         //  *
         //  * @uml
@@ -399,7 +384,8 @@
         //  * StringObject -> remove_mark : //<mark>//string//</mark>// //<mark>//string//</mark>//
         //  * remove_mark -> StringObject : string string   
         //  * @enduml        
-        //                
+        // ANCHOR string.remove_mark    
+        //  * @description
         //  * Remove the mark tag of the given text.
         //  *
         //  * @return {string}
@@ -411,7 +397,6 @@
         //  * @example
         //  * print(result); // Outputs: Hello
         //  * 
-        // ANCHOR string.remove_mark
     string.remove_mark = function()
         newString = self.remove("<mark>")
         return newString.remove("</mark>")
@@ -429,7 +414,8 @@
         //  * StringObject -> remove_sub : //<sub>//string//</sub>// //<sub>//string//</sub>//
         //  * remove_sub -> StringObject : string string   
         //  * @enduml        
-        //                
+        // ANCHOR string.remove_sub             
+        //  * @description
         //  * Remove the sub tag of the given text.
         //  *
         //  * @return {string}
@@ -440,8 +426,7 @@
         //  * result = newString.remove_sub
         //  * @example
         //  * print(result); // Outputs: Hello
-        //  * 
-        // ANCHOR string.remove_sub
+        //  *
     string.remove_sub = function()
         newString = self.remove("<sub>")
         return newString.remove("</sub>")
@@ -458,9 +443,9 @@
         //  * StringObject -> remove_sup : //<sup>//string//</sup>// //<sup>//string//</sup>//
         //  * remove_sup -> StringObject : string string   
         //  * @enduml        
-        //       
-        //  * **Description:**
-        //  * Remove the superscript tag of the given text.
+        // ANCHOR string.remove_sup             
+        //  * @description
+        //  * Remove the sup tag of the given text.
         //  *
         //  * @return {string}
         //  * @example
@@ -471,7 +456,6 @@
         //  * @example
         //  * print(result); // Outputs: Hello
         //  * 
-        // ANCHOR string.remove_sup
     string.remove_sup = function()
         newString = self.remove("<sup>")
         return newString.remove("</sup>")
@@ -489,7 +473,7 @@
         // * .lesser_than: "true / false"
         // * .random_from(min=0): random in range
         // * @enduml
-    //@name plus   
+        // ANCHOR number.plus
         //
         //  * **Description:**
         //  * Add 1 to the number or opt: amount
@@ -504,14 +488,14 @@
         //  * @example
         //  * print(result); // Outputs: 42
         //  *
-        // ANCHOR number.plus
     number.plus = function(amount = 1)
         if not typeof(amount) == "number" then return null
             return self + amount
     end function
-    //@name minus   
+    //@name minus
+        // ANCHOR number.minus   
         //
-        //  * **Description:**
+        //  * @description
         //  * Subtrac 1 from the number or opt: amount
         //  * @description     
         //  * @param {opt:number} amount - The amount to add.
@@ -525,7 +509,6 @@
         //  * print(result); // Outputs: 42
         //  * @example
         //  *     
-        // ANCHOR number.minus
     number.minus = function(amount = 1)
         if not typeof(amount) == "number" then return null
             return self - amount
