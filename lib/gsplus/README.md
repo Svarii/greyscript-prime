@@ -51,7 +51,8 @@ print(newString.color("blue")) // Outputs: <color=blue>Hello</color>
   ## .bold
 The `.bold` method allows you to apply bold to the given text.
 
-![image](https://github.com/user-attachments/assets/1125b1a9-3884-415c-992b-13b07b22e0e5) &nbsp;&nbsp;&nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/5e4eb592-54ea-463f-8eab-a5f983a69330" align="right">
+![image](https://github.com/user-attachments/assets/3c6412aa-381a-4408-ba15-06ab0d0e3cfd) <img src="https://github.com/user-attachments/assets/4999242a-5c31-403b-a499-10049c4ba2f2" align="right">
+
 ```
 newString = "Hello"
 
