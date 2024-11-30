@@ -107,7 +107,7 @@ print(newString.mark) // Outputs: <mark>Hello</mark>
   ## .sub
 The `.sub` method allows you to apply subscript to the given text. Example usage:
 
-![image](https://github.com/user-attachments/assets/199e42e5-dbe6-433e-a858-b587b6123954) <img src="https://github.com/user-attachments/assets/f425fb19-9deb-4599-865b-a8f7571461b9" align="right">
+![image](https://github.com/user-attachments/assets/3fb3f69f-071f-4068-8a6f-9964c3f84e86) <img src="https://github.com/user-attachments/assets/44ccb9af-ba61-4678-9b1a-109b616ed059" align="right">
 
 ```
 newString = "Hello"
