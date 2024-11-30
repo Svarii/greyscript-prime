@@ -74,7 +74,8 @@ print(newString.italic) // Outputs: <i>Hello</i>
   ## .underline
 The `.underline` method allows you to apply underline to the given text.
 
-![image](https://github.com/user-attachments/assets/801251ed-5cbc-432f-93e8-a298ee50bc4d) &nbsp;&nbsp;&nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/95775a74-1d15-4c9b-8ea2-ae9c1cdd61a5" align="right">
+![image](https://github.com/user-attachments/assets/54683595-7cf9-481e-9ea9-14531fe8cb60) <img src="https://github.com/user-attachments/assets/07a4e6a9-c487-4a77-a0c5-e66f1c41fdd4" align="right">
+
 ```
 newString = "Hello"
 
