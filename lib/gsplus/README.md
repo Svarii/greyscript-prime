@@ -62,8 +62,9 @@ print(newString.bold) // Outputs: <b>Hello</b>
   ## .italic
 The `.italic` method allows you to apply italic to the given text.
 
-![image](https://github.com/user-attachments/assets/31e5f53a-1560-4bf0-be13-9b7b5a4c23df) &nbsp;&nbsp;&nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/dd4a97ce-b61e-4491-bee8-3e451f6bb69f" align
+![image](https://github.com/user-attachments/assets/8adc9cf4-c067-47a4-885f-e192105d169e) <img src="https://github.com/user-attachments/assets/e1d059ba-0849-41f4-9230-713eaf975a98" align
 ="right">
+
 ```
 newString = "Hello"
 
