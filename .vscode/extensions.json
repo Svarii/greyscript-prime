@@ -1,5 +1,8 @@
 {
     "recommendations": [
-        "perkovec.jsdoc-live-preview"
+        "ayecue.greybel-vs",
+        "perkovec.jsdoc-live-preview",
+        "ErnstStavroBlofeld.php-types",
+        "jebbs.plantuml"
     ]
 }
