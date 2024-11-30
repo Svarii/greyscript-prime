@@ -21,7 +21,7 @@
         // * .remove_sub: "<s>//<sub>//</s>string<s></sub></s>"
         // * .remove_mark: "<s>//<mark>//</s>string<s></mark></s>"        
         // * @enduml
-//v1.0 by Svarii
+
     //@name color
         //  *
         //  * @uml
@@ -35,7 +35,7 @@
         //  * endfooter        
         //  * @enduml               
         // ANCHOR string.color 
-        //  * @description     
+        //  * @description 
         //  * Color values maybe be #**FFFFFF** or **color** format
         //  * @param {string} colorValue - The color to apply.
         //  * @return {string} - The colorized text.
@@ -55,6 +55,7 @@
     if not typeof(colorValue) == "string" then return null
     return "<color=" + colorValue + ">" + self + "</color>"
     end function
+
     //@name bold
         //  *
         //  * @uml
@@ -83,6 +84,7 @@
     string.bold = function()
         return "<b>" + self + "</b>"
     end function
+
     //@name italic
         //  *
         //  * @uml
@@ -91,6 +93,9 @@
         //  * control ".italic" as italic
         //  * StringObject -> italic : string
         //  * italic -> StringObject : //<i>//string//</i>//
+        //  * footer
+        //  * string.italic
+        //  * endfooter         
         //  * @enduml        
         // ANCHOR string.italic      
         //  * @description
@@ -108,6 +113,7 @@
     string.italic = function()
         return "<i>" + self + "</i>"
     end function 
+
     //@name underline 
         //  *
         //  * @uml
@@ -116,6 +122,9 @@
         //  * control ".underline" as underline
         //  * StringObject -> underline : string
         //  * underline -> StringObject : //<u>//string//</u>//
+        //  * footer
+        //  * string.underline
+        //  * endfooter          
         //  * @enduml        
         // ANCHOR string.underline
         //  * @description
@@ -133,6 +142,7 @@
     string.underline = function()
         return "<u>" + self + "</u>"
     end function
+
     //@name strike
             //  *
         //  * @uml
@@ -141,6 +151,9 @@
         //  * control ".strike" as strike
         //  * StringObject -> strike : string
         //  * strike -> StringObject : //<s>//string//</s>//
+        //  * footer
+        //  * string.strike
+        //  * endfooter         
         //  * @enduml        
         // ANCHOR string.strike
         //  * @description
@@ -158,6 +171,7 @@
     string.strike = function()
         return "<s>" + self + "</s>"
     end function
+
     //@name mark
         //  *
         //  * @uml
@@ -166,6 +180,9 @@
         //  * control ".mark" as mark
         //  * StringObject -> mark : string
         //  * mark -> StringObject : //<mark>//string//</mark>//
+        //  * footer
+        //  * string.mark
+        //  * endfooter           
         //  * @enduml        
         // ANCHOR string.mark
         //  * @description
@@ -183,6 +200,7 @@
     string.mark = function()
         return "<mark>" + self + "</mark>"
     end function
+
     //@name sub
         //  *
         //  * @uml
@@ -191,6 +209,9 @@
         //  * control ".sub" as sub
         //  * StringObject -> sub : string
         //  * sub -> StringObject : //<sub>//string//</sub>//
+        //  * footer
+        //  * string.sub
+        //  * endfooter         
         //  * @enduml        
         // ANCHOR string.sub     
         //  * @description
@@ -204,10 +225,11 @@
         //  * result = newString.sub
         //  * @example
         //  * print(result); // Outputs: <sub>Hello</sub>
-        //  *    
+        //  *
     string.sub = function()
         return "<sub>" + self + "</sub>"    
     end function
+
     //@name sup
         //  *
         //  * @uml
@@ -216,6 +238,9 @@
         //  * control ".sup" as sup
         //  * StringObject -> sup : string
         //  * sup -> StringObject : //<sup>//string//</sup>//
+        //  * footer
+        //  * string.sup
+        //  * endfooter         
         //  * @enduml        
         // ANCHOR string.sup           
         //  * @description
@@ -232,17 +257,19 @@
         //  * 
     string.sup = function()
         return "<sup>" + self + "</sup>"    
-    end function                             
+    end function
+
     //@name remove_char_last
         //  *
         //  * @uml
         //  * @startuml
-        //  * title string.remove_char_last
         //  * entity StringObject
         //  * control ".remove_char_last" as remove_char_last
         //  * StringObject -> remove_char_last : string
         //  * remove_char_last -> StringObject : strin
-        //  * footer Removes the last char from a string object
+        //  * footer
+        //  * string.remove_char_last
+        //  * endfooter 
         //  * @enduml        
         // ANCHOR string.remove_char_last  
         //  * @description
@@ -256,11 +283,13 @@
         //  * result = newString.remove_char_last
         //  * @example
         //  * print(result); // Outputs: Hell
-        //  *      
-    string.remove_char_last = function(index = (self.len - 1))
+        //  *
+    string.remove_char_last = function()
+        index = (self.len - 1)
         charList = self.values
         return charList.remove(index)
     end function
+
     //@name remove_bold
         //  *
         //  * @uml
@@ -270,10 +299,13 @@
         //  * StringObject -> remove_bold : //<b>//string//</b>//
         //  * remove_bold -> StringObject : string
         //  * StringObject -> remove_bold : //<b>//string//</b>// //<b>//string//</b>//
-        //  * remove_bold -> StringObject : string string   
+        //  * remove_bold -> StringObject : string string
+        //  * footer
+        //  * string.remove_bold
+        //  * endfooter           
         //  * @enduml        
         // ANCHOR string.remove_bold
-        //  * **Description:**
+        //  * @description
         //  * Remove the bold tag of the given text.
         //  *
         //  * @return {string}
@@ -289,6 +321,7 @@
         newString = self.remove("<b>")
         return newString.remove("</b>")
     end function
+
     //@name remove italic 
         //  *
         //  * @uml
@@ -298,8 +331,11 @@
         //  * StringObject -> remove_italic : //<i>//string//</i>//
         //  * remove_italic -> StringObject : string
         //  * StringObject -> remove_italic : //<i>//string//</i>// //<i>//string//</i>//
-        //  * remove_italic -> StringObject : string string   
-        //  * @enduml        
+        //  * remove_italic -> StringObject : string string
+        //  * footer
+        //  * string.remove_italic
+        //  * endfooter           
+        //  * @enduml            
         // ANCHOR string.remove_italic      
         //  * @description
         //  * Remove the italic tag of the given text.
@@ -316,7 +352,8 @@
     string.remove_italic = function()
         newString = self.remove("<i>")
         return newString.remove("</i>")
-    end function                
+    end function
+
     //@name remove_underline
         //  *
         //  * @uml
@@ -326,7 +363,10 @@
         //  * StringObject -> remove_underline : //<u>//string//</u>//
         //  * remove_underline -> StringObject : string
         //  * StringObject -> remove_underline : //<u>//string//</u>// //<u>//string//</u>//
-        //  * remove_underline -> StringObject : string string   
+        //  * remove_underline -> StringObject : string string 
+        //  * footer
+        //  * string.remove_underline
+        //  * endfooter           
         //  * @enduml        
         // ANCHOR string.remove_underline
         //  * @description
@@ -344,7 +384,8 @@
     string.remove_underline = function()
         newString = self.remove("<u>")
         return newString.remove("</u>")
-    end function                
+    end function
+
     //@name remove_strike    
         //  * @uml
         //  * @startuml
@@ -353,7 +394,10 @@
         //  * StringObject -> remove_strike : //<s>//string//</s>//
         //  * remove_strike -> StringObject : string
         //  * StringObject -> remove_strike : //<s>//string//</s>// //<s>//string//</s>//
-        //  * remove_strike -> StringObject : string string   
+        //  * remove_strike -> StringObject : string string
+        //  * footer
+        //  * string.remove_strike
+        //  * endfooter             
         //  * @enduml        
         // ANCHOR string.remove_strike         
         //  * @description
@@ -371,7 +415,8 @@
     string.remove_strike = function()
         newString = self.remove("<s>")
         return newString.remove("</s>")
-    end function                
+    end function
+
     //@name remove_mark    
         //  * **Description:**
         //  *
@@ -383,6 +428,9 @@
         //  * remove_mark -> StringObject : string
         //  * StringObject -> remove_mark : //<mark>//string//</mark>// //<mark>//string//</mark>//
         //  * remove_mark -> StringObject : string string   
+        //  * footer
+        //  * string.remove_mark
+        //  * endfooter               
         //  * @enduml        
         // ANCHOR string.remove_mark    
         //  * @description
@@ -401,6 +449,7 @@
         newString = self.remove("<mark>")
         return newString.remove("</mark>")
     end function
+
     //@name remove_sub    
         //  * **Description:**
         //  *
@@ -412,7 +461,10 @@
         //  * header string.remove_sub
         //  * remove_sub -> StringObject : string
         //  * StringObject -> remove_sub : //<sub>//string//</sub>// //<sub>//string//</sub>//
-        //  * remove_sub -> StringObject : string string   
+        //  * remove_sub -> StringObject : string string  
+        //  * footer
+        //  * string.remove_sub
+        //  * endfooter          
         //  * @enduml        
         // ANCHOR string.remove_sub             
         //  * @description
@@ -430,7 +482,8 @@
     string.remove_sub = function()
         newString = self.remove("<sub>")
         return newString.remove("</sub>")
-    end function                
+    end function
+
     //@name remove_sup
         //  *
         //  * @uml
@@ -441,7 +494,10 @@
         //  * header string.remove_sup
         //  * remove_sup -> StringObject : string
         //  * StringObject -> remove_sup : //<sup>//string//</sup>// //<sup>//string//</sup>//
-        //  * remove_sup -> StringObject : string string   
+        //  * remove_sup -> StringObject : string string  
+        //  * footer
+        //  * string.remove_sup
+        //  * endfooter          
         //  * @enduml        
         // ANCHOR string.remove_sup             
         //  * @description
@@ -459,7 +515,8 @@
     string.remove_sup = function()
         newString = self.remove("<sup>")
         return newString.remove("</sup>")
-    end function                                
+    end function
+
 //Extended number object methods
 //v1.0 by Svarii
         //  *
@@ -492,6 +549,7 @@
         if not typeof(amount) == "number" then return null
             return self + amount
     end function
+
     //@name minus
         // ANCHOR number.minus   
         //
@@ -513,6 +571,7 @@
         if not typeof(amount) == "number" then return null
             return self - amount
     end function
+
     //@name diff   
         //
         //  * **Description:**
@@ -535,6 +594,7 @@
         if not typeof(distanceTo) == "number" then return null
             return abs(self - distanceTo)
     end function
+
     //@name greater_than   
         //
         //  * **Description:**
@@ -558,6 +618,7 @@
             if isGreater > self then return true
             return false
     end function
+
     //@name lesser_than   
         //
         //  * **Description:**
@@ -581,15 +642,11 @@
             if isLesser < self then return true
             return false
     end function
-    // ## Section Title
-    // This is some documentation written in Markdown.
-    // - Bullet point 1
-    // - Bullet point 2
+
     //@name random_from   
         //
-        //  * **Description:**
-        //  * Generate a random number from 1 to number opt: min
-        //  * @description     
+        //  * @description  
+        //  * Generate a random number from 1 to number opt: min   
         //  * @param {number} amount
         //  * @return {bool number | string on type error} - The result of the subtraction.
         //  * @example
