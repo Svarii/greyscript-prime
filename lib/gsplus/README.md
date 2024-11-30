@@ -94,9 +94,9 @@ print(newString.strike) // Outputs: <s>Hello</s>
 ```
 
   ## .mark
-The `.mark` method allows you to apply highlight to the given text. Example usage:
+The `.mark` method allows you to apply highlight to the given text.
 
-![image](https://github.com/user-attachments/assets/dbdb2209-9899-401d-9df6-efb9a3d78c7f) &nbsp;&nbsp;&nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/19f4f122-0220-4c14-a982-3e5b78dad3ea" align="right">
+![image](https://github.com/user-attachments/assets/61838003-c880-4504-a12b-94b19c29ea4b) <img src="https://github.com/user-attachments/assets/e2e0d85c-782d-4bf1-a09b-877e77ea5972" align="right">
 
 ```
 newString = "Hello"
