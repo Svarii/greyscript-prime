@@ -208,7 +208,7 @@ newString = "<sup>Hello</sup>"
 
 print(newString.remove_sup) // Outputs: Hello
 ```
-# numberMethods.so.src ![Static Badge](https://img.shields.io/badge/version-0.1a-red)
+# numbersMethod ![Static Badge](https://img.shields.io/badge/version-0.1a-red)
 
 ##### .plus
 The `.plus` method allows you to add a specified amount to a number. If no amount is provided, it defaults to `1`. Example usage:![image](https://github.com/user-attachments/assets/e9c828a9-747b-4033-a6c5-df598750951f)
