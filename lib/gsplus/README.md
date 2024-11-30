@@ -28,12 +28,12 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 |                  | [`.remove_mark()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_mark)    | Remove highlight from text.          |
 |                  | [`.remove_sub()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_sub)      | Remove subscript from text.          |
 |                  | [`.remove_sup()`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_sup)      | Remove superscript from text.        |
-| **Number**       | [`.plus(value)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#plus)             | Add a value to a number.             |
-|                  | [`.minus(value)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#minus)           | Subtract a value from a number.      |
-|                  | [`.diff(value)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#diff)             | Calculate the absolute difference.   |
-|                  | [`.greater_than(value)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#greater_than) | Check if number is greater.          |
-|                  | [`.lesser_than(value)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#lesser_than) | Check if number is lesser.           |
-|                  | [`.random_from(value)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#random_from) | Generate a random number.            |
+| **Number**       | [`.plus(number)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#plus)             | Add a value to a number.             |
+|                  | [`.minus(number)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#minus)           | Subtract a value from a number.      |
+|                  | [`.diff(number)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#diff)             | Calculate the absolute difference.   |
+|                  | [`.greater_than(number)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#greater_than) | Check if number is greater.          |
+|                  | [`.lesser_than(number)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#lesser_than) | Check if number is lesser.           |
+|                  | [`.random_from(number)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#random_from) | Generate a random number.            |
 
 ## methodsString ![Static Badge](https://img.shields.io/badge/method-string-green)
 ![image](https://github.com/user-attachments/assets/5f670b60-6d42-48cb-9004-2d9015ccfca9)
@@ -92,7 +92,8 @@ print(newString.strike) // Outputs: <s>Hello</s>
   ## .mark
 The `.mark` method allows you to apply highlight to the given text. Example usage:
 
-![image](https://github.com/user-attachments/assets/dbdb2209-9899-401d-9df6-efb9a3d78c7f)
+![image](https://github.com/user-attachments/assets/dbdb2209-9899-401d-9df6-efb9a3d78c7f) &nbsp;&nbsp;&nbsp;&nbsp; <img src="https://github.com/user-attachments/assets/19f4f122-0220-4c14-a982-3e5b78dad3ea" align="right">
+
 ```
 newString = "Hello"
 
@@ -102,7 +103,8 @@ print(newString.mark) // Outputs: <mark>Hello</mark>
   ## .sub
 The `.sub` method allows you to apply subscript to the given text. Example usage:
 
-![image](https://github.com/user-attachments/assets/708ef112-3e33-466c-a32b-aa18bb08ed3b)
+![image](https://github.com/user-attachments/assets/199e42e5-dbe6-433e-a858-b587b6123954) <img src="https://github.com/user-attachments/assets/f425fb19-9deb-4599-865b-a8f7571461b9" align="right">
+
 ```
 newString = "Hello"
 
@@ -112,7 +114,8 @@ print(newString.tiny) // Outputs: <sub>Hello</sub>
   ## .sup
 The `.sup` method allows you to apply superscript to the given text. Example usage:
 
-![image](https://github.com/user-attachments/assets/c1495566-7069-4e7a-92a3-d9c037b9579a)
+![image](https://github.com/user-attachments/assets/c1495566-7069-4e7a-92a3-d9c037b9579a) <img src="https://github.com/user-attachments/assets/d8c3a4bb-c92e-45aa-a048-2898c14458d7" align="right">
+
 ```
 newString = "Hello"
 
@@ -122,7 +125,7 @@ print(newString.sup) // Outputs: <sup>Hello</sup>
   ## .remove_last_character
 The `.remove_last_character` method allows you to remove the last character to the given text. Example usage:
 
-![image](https://github.com/user-attachments/assets/3ccd6df0-6da2-4287-9a05-7e0681128d51) ![image](https://github.com/user-attachments/assets/794a176d-75b3-4abc-88f0-2c89d22ff4b3)
+![image](https://github.com/user-attachments/assets/794a176d-75b3-4abc-88f0-2c89d22ff4b3) <img src="https://github.com/user-attachments/assets/3ccd6df0-6da2-4287-9a05-7e0681128d51" align="right">
 ```
 newString = "Hello"
 
@@ -132,7 +135,8 @@ print(newString.remove_last_character) // Outputs: Hell
   ## .remove_bold
 The `.remove_bold` method allows you to remove bold tags from the given text. Example usage:
 
-![image](https://github.com/user-attachments/assets/1aafa4e7-2181-4242-89b9-27c6065008cd)
+![image](https://github.com/user-attachments/assets/1aafa4e7-2181-4242-89b9-27c6065008cd) <img src="https://github.com/user-attachments/assets/079b609c-2090-4354-a68f-72139b891000" align="right">
+
 ```
 newString = "<b>Hello</b>"
 
@@ -142,7 +146,8 @@ print(newString.remove_bold) // Outputs: Hello
   ## .remove_italic
 The `.remove_italic` method allows you to remove italic tags from the given text. Example usage:
 
-![image](https://github.com/user-attachments/assets/1335de93-87ec-4af4-a13c-f6c5b9fa2e40)
+![image](https://github.com/user-attachments/assets/1335de93-87ec-4af4-a13c-f6c5b9fa2e40) <img src="https://github.com/user-attachments/assets/8fcf5e79-0a37-42c8-bc7d-60842d19247d" align="right">
+
 ```
 newString = "<i>Hello</i>"
 
@@ -152,7 +157,8 @@ print(newString.remove_italic) // Outputs: Hello
   ## .remove_underline
 The `.remove_underline` method allows you to remove underline tags from the given text. Example usage:
 
-![image](https://github.com/user-attachments/assets/9edc210f-b8aa-43c0-a88c-5640478cdd75)
+![image](https://github.com/user-attachments/assets/9edc210f-b8aa-43c0-a88c-5640478cdd75) <img src="https://github.com/user-attachments/assets/4a4303fa-b4bc-4466-9830-b775b64a45b9" align="right">
+
 ```
 newString = "<u>Hello</u>"
 
@@ -162,7 +168,8 @@ print(newString.remove_underline) // Outputs: Hello
   ## .remove_strike
 The `.remove_strike` method allows you to remove strikethrough tags from the given text. Example usage:
 
-![image](https://github.com/user-attachments/assets/af14cfb9-6dde-4d1a-b58c-54a27611a0da)
+![image](https://github.com/user-attachments/assets/af14cfb9-6dde-4d1a-b58c-54a27611a0da) <img src="https://github.com/user-attachments/assets/ac42c1c5-011c-41cf-92cd-1044759c2e4f" align="right">
+
 ```
 newString = "<s>Hello</s>"
 
@@ -172,7 +179,8 @@ print(newString.remove_strike) // Outputs: Hello
   ## .remove_mark
 The `.remove_mark` method allows you to remove mark tags from the given text. Example usage:
 
-![image](https://github.com/user-attachments/assets/70a2557b-7acf-44d3-8af1-1adf2d7f73d6)
+![image](https://github.com/user-attachments/assets/0d928add-5c34-41b9-8d33-af89222edeb1) <img src="https://github.com/user-attachments/assets/9b29f194-8dcf-4d6c-9c01-389c31fab636" align="right">
+
 ```
 newString = "<mark>Hello</mark>"
 
@@ -182,7 +190,8 @@ print(newString.remove_mark) // Outputs: Hello
   ## .remove_sub
 The `.remove_sub` method allows you to remove sub tags from the given text. Example usage:
 
-![image](https://github.com/user-attachments/assets/a65a4085-d7d7-4d39-b947-90181b3ae6e8)
+![image](https://github.com/user-attachments/assets/b066465c-5cb2-4a65-a7f7-52440d7977ab) <img src="https://github.com/user-attachments/assets/a36dd0a5-e750-4826-8d5c-287bf8e07c51" align="right">
+
 ```
 newString = "<sub>Hello</sub>"
 
@@ -192,7 +201,8 @@ print(newString.remove_sub) // Outputs: Hello
   ## .remove_sup
 The `.remove_sup` method allows you to remove superscript tags from the given text. Example usage:
 
-![image](https://github.com/user-attachments/assets/27c47d75-875c-4d30-bfe2-181dfb2398d9)
+![image](https://github.com/user-attachments/assets/27c47d75-875c-4d30-bfe2-181dfb2398d9) <img src="https://github.com/user-attachments/assets/beb486c8-9272-4cd0-a822-75215ecd2821" align="right">
+
 ```
 newString = "<sup>Hello</sup>"
 
