@@ -13,7 +13,7 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 
 | Category         | Method                      | Description                          |
 |------------------|-----------------------------|--------------------------------------|
-| **String**       | `.color('colorName')`       | Apply a color to text.               |
+| **String**       | `.color("#color")`          | Apply a color to text.               |
 |                  | `.bold()`                   | Make the text bold.                  |
 |                  | `.italic()`                 | Make the text italic.                |
 |                  | `.underline()`              | Underline the text.                  |
