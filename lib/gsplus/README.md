@@ -89,12 +89,12 @@ newString = "Hello"
 print(newString.strike) // Outputs: <s>Hello</s>
 ```
 
-  ## .highlight
-The `.highlight` method allows you to apply highlight to the given text. Example usage:![image](https://github.com/user-attachments/assets/83f429b3-1296-47a7-ae3f-c00c238631c4)
+  ## .mark
+The `.mark` method allows you to apply highlight to the given text. Example usage:![image](https://github.com/user-attachments/assets/83f429b3-1296-47a7-ae3f-c00c238631c4)
 ```
 newString = "Hello"
 
-print(newString.highlight) // Outputs: <mark>Hello</mark>
+print(newString.mark) // Outputs: <mark>Hello</mark>
 ```
 
   ## .sub
