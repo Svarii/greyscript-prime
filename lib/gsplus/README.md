@@ -173,7 +173,7 @@ print(newString.remove_underline) // Outputs: Hello
   ## .remove_strike
 The `.remove_strike` method allows you to remove strikethrough tags from the given text. Example usage:
 
-![image](https://github.com/user-attachments/assets/af14cfb9-6dde-4d1a-b58c-54a27611a0da) <img src="https://github.com/user-attachments/assets/ac42c1c5-011c-41cf-92cd-1044759c2e4f" align="right">
+![image](https://github.com/user-attachments/assets/1aeed45f-4ab5-4343-8dba-949faec6c0af) <img src="https://github.com/user-attachments/assets/067854d8-e9d3-49ce-a992-2d30bd516517" align="right">
 
 ```
 newString = "<s>Hello</s>"
