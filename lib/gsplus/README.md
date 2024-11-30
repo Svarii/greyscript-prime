@@ -121,8 +121,8 @@ newString = "Hello"
 print(newString.sup) // Outputs: <sup>Hello</sup>
 ```
 
-  ## .remove_last_character
-The `.remove_last_character` method allows you to remove the last character to the given text. Example usage:
+  ## .remove_char_last
+The `.remove_char_last` method allows you to remove the last character to the given text. Example usage:
 
 ![image](https://github.com/user-attachments/assets/794a176d-75b3-4abc-88f0-2c89d22ff4b3) <img src="https://github.com/user-attachments/assets/3ccd6df0-6da2-4287-9a05-7e0681128d51" align="right">
 ```
