@@ -195,7 +195,7 @@ print(newString.remove_mark) // Outputs: Hello
   ## .remove_sub
 The `.remove_sub` method allows you to remove sub tags from the given text. Example usage:
 
-![image](https://github.com/user-attachments/assets/b066465c-5cb2-4a65-a7f7-52440d7977ab) <img src="https://github.com/user-attachments/assets/a36dd0a5-e750-4826-8d5c-287bf8e07c51" align="right">
+![image](https://github.com/user-attachments/assets/db99e8ca-62dc-494b-867a-8ab204fdf366) <img src="https://github.com/user-attachments/assets/09d958b7-2fe7-488d-be54-fd8db4e31544" align="right">
 
 ```
 newString = "<sub>Hello</sub>"
