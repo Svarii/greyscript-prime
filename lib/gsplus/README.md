@@ -216,7 +216,10 @@ print(newString.remove_sup) // Outputs: Hello
 # numbersMethod ![Static Badge](https://img.shields.io/badge/version-0.1a-red)
 
 ##### .plus
-The `.plus` method allows you to add a specified amount to a number. If no amount is provided, it defaults to `1`. Example usage:![image](https://github.com/user-attachments/assets/e9c828a9-747b-4033-a6c5-df598750951f)
+The `.plus` method allows you to add a specified amount to a number. If no amount is provided, it defaults to `1`.
+![image](https://github.com/user-attachments/assets/43a689b8-e9ae-43eb-a2ee-829337d19bf3) <img src="https://github.com/user-attachments/assets/3d200e42-e58d-435b-b1b1-5b158386b535" align="right">
+
+
 ```greyscript
 newNumber = 40
 
