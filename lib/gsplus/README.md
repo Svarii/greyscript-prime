@@ -251,7 +251,7 @@ print(result) // Outputs: 42
 
 ##### .greater_than
 The `.greater_than` method checks if the current number is greater than a provided number. Returns `true` if greater, `false` otherwise.
-![image](https://github.com/user-attachments/assets/3b71c3f3-abcd-40b9-ba6a-4f7b215e9d58) <img src="https://github.com/user-attachments/assets/d678e5e0-fd7d-42ad-b45b-694a17219714" align="right">
+![image](https://github.com/user-attachments/assets/3b71c3f3-abcd-40b9-ba6a-4f7b215e9d58) <img src="https://github.com/user-attachments/assets/b966ac53-3e88-4b53-81c4-008e45aa54ca" align="right">
 
 ```greyscript
 myNumber = 42
@@ -263,7 +263,7 @@ print(result) // Outputs: 0 (false)
 
 ##### .lesser_than
 The `.lesser_than` method checks if the current number is less than a provided number. Returns `true` if lesser, `false` otherwise.
-![image](https://github.com/user-attachments/assets/d13a7320-012f-4c69-92de-524133c64405) <img src="https://github.com/user-attachments/assets/664e96e1-551b-462c-8c4f-be4da71ac966" align="right">
+![image](https://github.com/user-attachments/assets/d13a7320-012f-4c69-92de-524133c64405) <img src="https://github.com/user-attachments/assets/c0cf05b3-bf72-4237-84c6-864cf907c7dd" align="right">
 
 ```greyscript
 myNumber = 42
