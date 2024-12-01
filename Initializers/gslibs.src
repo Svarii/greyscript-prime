@@ -1,25 +1,15 @@
 //load library
-load_lib = function(libName = "metaxploit.so", libDir = "/lib", libType ="MetaxploitLib", DEBUG = false)
+load_lib = function(libName = "metaxploit.so", libDir = "/lib", libType ="")
     libLocation = libDir + "/" + libName
-    lib = include_lib(libLocation)
-    exeOutput = []
-    if not lib then
-            if DEBUG == true then
-                push(exeOutput, "> "+ active_user + "@" + get_shell.host_computer.get_name + ":~$ " + libLocation + " not Found")
-            end if
-		    return exeOutput.join("\n")
-    else
-        if typeof(lib) == libType then
-            if DEBUG == true then
-                push(exeOutput, "> " + lib + " loaded sucessfully ")
-                return exeOutput.join("\n"); break;
-            end if
-			return lib; break;
-        else
-            if DEBUG == true then
-                push(exeOutput, "type: " + typeof(lib) + " not a " + libType + " library object")
-            end if
-		    return exeOutput.join("\n")
+    yield; lib = include_lib(libLocation)
+    if not typeof(lib) == null then
+        if libType == "" then
+            return lib; break;
+        else if typeof(lib) == libType then
+            push(exeOutput, "> " + lib + " loaded sucessfully ")
+			return lib
         end if
+    else
+        return null
     end if
 end function

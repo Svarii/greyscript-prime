@@ -1,0 +1,41 @@
+//load required dependancies
+    import_code("/lib/gslibs.so")
+    import_code("/lib/gsplus.so")
+    import_code("/lib/gsobjects.so")
+
+//load .shell and .computer objects
+    terminal = get_system_object
+    if not typeof(terminal) == "SystemObject" then exit("Unable to Load SystemObject")
+
+//Set Variables    
+    databaseFolderName = "Database"
+    exploitDirectoryName = "Exploits"
+    exploit_database = "kernel_module_1.0.0_.nx"
+    usrhomeFolder = "/home/" + active_user
+    databaseFolderDir = usrhomeFolder + "/" + databaseFolderName
+    databaseFolder = terminal.computer.File(databaseFolderDir)   
+    exploitFolderLocation = databaseFolderDir + "/" + exploitDirectoryName
+    exploitFolder = terminal.computer.File(exploitFolderLocation)
+
+//Check if database folder exists
+    //	-Create if database folder does not exist
+    if not is_folder(databaseFolder) then
+        terminal.computer.create_folder(usrhomeFolder, databaseFolderName)
+        exploitFolder = terminal.computer.File(exploitFolderLocation)
+    end if
+
+//Check if Exploit folder exists in Database folder
+    //	-Create if exploit folder does not exist
+    if not is_folder(exploitFolder) then
+        terminal.computer.create_folder(databaseFolderDir, exploitDirectoryName)
+    end if    
+
+//Check if initial exploit database file exists in databaseFolder
+// TODO: Scan /lib for .so files are auto generate first library of exploits mem:val
+    exploitDatabaseLocation = exploitFolderLocation + "/" + exploit_database
+    exploitDatabase = terminal.computer.File(exploitDatabaseLocation)
+    //Create the file if not found
+    if exploitDatabase == null then
+        terminal.computer.touch(exploitFolderLocation, exploit_database)
+    end if
+    
