@@ -276,7 +276,7 @@ print(result) // Outputs: 1 (true)
 
 ##### .random_from
 The `.random_from` method generates a random number in the range of 1 (or optional parameter) to number.
-![image](https://github.com/user-attachments/assets/463fdf8e-438b-4316-8cca-ba8777c2b1aa) <img src="https://github.com/user-attachments/assets/9b443540-de24-4d21-852d-0994bc34dca5" align="right">
+![image](https://github.com/user-attachments/assets/4d6c9b64-73ea-4fc4-9b3f-e10509a2d8a5) <img src="https://github.com/user-attachments/assets/9b443540-de24-4d21-852d-0994bc34dca5" align="right">
 
 ```greyscript
 myNumber = 42
