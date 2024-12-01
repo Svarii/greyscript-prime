@@ -518,7 +518,6 @@
     end function
 
 //Extended number object methods
-//v1.0 by Svarii
         //  *
         // * @uml
         // * @startyaml
@@ -530,13 +529,27 @@
         // * .lesser_than: "true / false"
         // * .random_from(min=0): random in range
         // * @enduml
+
+        //  *
+        //  * @uml
+        //  * @startuml
+        //  * entity NumberObject
+        //  * control ".plus" as plus
+        //  * NumberObject -> plus : number
+        //  * plus -> NumberObject : (number + 1)
+        //  * NumberObject -> plus : number(7)
+        //  * plus -> NumberObject : (number + 7)        
+        //  * footer
+        //  * string.plus
+        //  * endfooter         
+        //  * @enduml           
         // ANCHOR number.plus
         //
         //  * **Description:**
         //  * Add 1 to the number or opt: amount
         //  * @description     
         //  * @param {opt:number} amount - The amount to add.
-        //  * @return {number | string on type error} - The result of the addition.
+        //  * @return {number | null on type error} - The result of the addition.
         //  * @example
         //  * newNumber = 40
         //  * @example
@@ -551,13 +564,25 @@
     end function
 
     //@name minus
+        //  *
+        //  * @uml
+        //  * @startuml
+        //  * entity NumberObject
+        //  * control ".minus" as minus
+        //  * NumberObject -> minus : number
+        //  * minus -> NumberObject : (number - 1)
+        //  * NumberObject -> minus : number(7)
+        //  * minus -> NumberObject : (number - 7)        
+        //  * footer
+        //  * string.minus
+        //  * endfooter         
+        //  * @enduml         
         // ANCHOR number.minus   
-        //
         //  * @description
-        //  * Subtrac 1 from the number or opt: amount
+        //  * Subtract 1 from the number or opt: amount
         //  * @description     
         //  * @param {opt:number} amount - The amount to add.
-        //  * @return {number | string on type error} - The result of the subtraction.
+        //  * @return {number | null on type error} - The result of the subtraction.
         //  * @example
         //  * newNumber = 44
         //  * @example
@@ -571,14 +596,23 @@
         if not typeof(amount) == "number" then return null
             return self - amount
     end function
-
-    //@name diff   
-        //
-        //  * **Description:**
-        //  * Return Difference from provided integer to distanceTo
+    //@name diff
+        //  *
+        //  * @uml
+        //  * @startuml
+        //  * entity NumberObject
+        //  * control ".diff" as diff
+        //  * NumberObject -> diff : <i>[2]</i>number(44)
+        //  * diff -> NumberObject : number[42]     
+        //  * footer
+        //  * string.diff
+        //  * endfooter         
+        //  * @enduml   
+        // ANCHOR number.diff  
         //  * @description     
+        //  * Return Difference from provided integer to distanceTo
         //  * @param {number} amount
-        //  * @return {number | string on type error} - The result of the subtraction.
+        //  * @return {number | null on type error} - The result of the subtraction.
         //  * @example
         //  * newNumber = 44;
         //  * newNumber2 = 2;            
@@ -588,20 +622,29 @@
         //  * @example
         //  * print(result); // Outputs: 42
         //  * @example
-        //  *       
-        // ANCHOR number.diff      
+        //  *           
     number.diff = function(distanceTo = 0)
         if not typeof(distanceTo) == "number" then return null
             return abs(self - distanceTo)
     end function
 
     //@name greater_than   
-        //
-        //  * **Description:**
+        //  *
+        //  * @uml
+        //  * @startuml
+        //  * entity NumberObject
+        //  * control ".greater_than" as greater_than
+        //  * NumberObject -> greater_than : number
+        //  * greater_than -> NumberObject : [true / false]     
+        //  * footer
+        //  * string.greater_than
+        //  * endfooter         
+        //  * @enduml 
+        // ANCHOR number.greater_than    
+        //  * @description
         //  * Check if number is greater than provided number
-        //  * @description     
         //  * @param {number} isGreater
-        //  * @return {bool number | string on type error} - The result of the subtraction.
+        //  * @return {bool number | null on type error} - The result of the subtraction.
         //  * @example
         //  * myNumber = 42;
         //  * myNumber2 = 100;
@@ -612,7 +655,6 @@
         //  * print(result); // Outputs: 0
         //  * @example
         //  *      
-        // ANCHOR number.greater_than    
     number.greater_than = function(isGreater)
         if not typeof(isGreater) == "number" then return null
             if isGreater > self then return true
@@ -620,12 +662,22 @@
     end function
 
     //@name lesser_than   
-        //
-        //  * **Description:**
-        //  * Check if number is lesser than provided number
-        //  * @description     
+        //  *
+        //  * @uml
+        //  * @startuml
+        //  * entity NumberObject
+        //  * control ".lesser_than" as lesser_than
+        //  * NumberObject -> lesser_than : number
+        //  * lesser_than -> NumberObject : [true / false]     
+        //  * footer
+        //  * string.lesser_than
+        //  * endfooter         
+        //  * @enduml 
+        // ANCHOR number.lesser_than  
+        //  * @description  
+        //  * Check if number is lesser than provided number   
         //  * @param {number} amount
-        //  * @return {bool number | string on type error} - The result of the subtraction.
+        //  * @return {bool number | null on type error} - The result of the subtraction.
         //  * @example
         //  * myNumber = 42;
         //  * myNumber2 = 100;
@@ -635,16 +687,26 @@
         //  * @example
         //  * print(result); // Outputs: 1
         //  * @example
-        //  *     
-        // ANCHOR number.lesser_than           
+        //  *              
     number.lesser_than = function(isLesser)
         if not typeof(isLesser) == "number" then return null
             if isLesser < self then return true
             return false
     end function
 
-    //@name random_from   
-        //
+    //@name random_from
+        //  *
+        //  * @uml
+        //  * @startuml
+        //  * entity NumberObject
+        //  * control ".random_from" as random_from
+        //  * NumberObject -> random_from : number
+        //  * random_from -> NumberObject : [random number in range]     
+        //  * footer
+        //  * string.random_from([opt:min])
+        //  * endfooter         
+        //  * @enduml        
+        // ANCHOR number.random_from
         //  * @description  
         //  * Generate a random number from 1 to number opt: min   
         //  * @param {number} amount
@@ -658,7 +720,6 @@
         //  * print(result); // Outputs: {rnd:50-100}
         //  * @example
         //  *    
-        // ANCHOR number.random_from
     number.random_from = function(min = 0)
         if not typeof(min) == "number" then return null
             max = self
