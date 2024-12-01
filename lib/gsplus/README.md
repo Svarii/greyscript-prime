@@ -285,3 +285,8 @@ myNumber2 = 100
 result = myNumber.lesser_than(myNumber2)
 print(result) // Outputs: 1 (true)
 ```
+
+LIST
+##### .trim
+![image](https://github.com/user-attachments/assets/a5992b5f-75ac-4ffb-9e99-66f110af1f02) ![image](https://github.com/user-attachments/assets/c202b27c-a221-4151-9e94-d54df120aa3f)
+
