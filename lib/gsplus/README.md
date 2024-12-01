@@ -1,5 +1,4 @@
 ![GreyScript](https://img.shields.io/badge/GreyScript-Plus-black?labelColor=blue&style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAC+ElEQVQ4T22T+0tTYRjHv+/u05h4KxsqW1qiiRmZEQZpCUsUJIWMJCL7IUsiCvqlftkP/gcZQr+EeClETCyk6KI/GJWSihdS58LrNnVTNy/b3M45Pe9sy6AHznue57zP+znP7WXYJ5IEGYZxBhKqSSukd3pom2GG1j6yW3ES3xmDGD7Gwoo0ilgIqKetGgnQCIIcQoBBIFelUoSCHnL20fICCjxhOVjfY5OEDgfRRqopGJCziYGjmJ82wOdVYcrhgEoTQM6JZRQVO6BWi8THe4Jc4xD2J+wG+lhLOhvpz4JXfQsZpnKotFFYcfuw43FjsKsFSewVSsqXwOSUDEMjcnGPSUM4S+Zn+qDZ9SvQ1VKK1awKMKUCVZWlcK5vobnlJQS/H9qx13h0YwRao8Bj5+lcYNIwGghQx1Nxuw6gu70E80eK4A/uwmg4DLvdAat1Diq5ErEzfbhfNopDBi+gDxXgGQeME+A4BywvxKO3swDplyqQWVKO1bUNLLs8SIiNw0BnM8bedaDGZEG6fhOIoQN6TPAUfKSqOWB2So+vPaeILIMqKhqQK0JFDOz64dveomqLqDo/i9y0UAMAHfwcQPFAw+2pYSOG+rLDzaEWivhpt0Ok6oalLH8BBdmrYTPAAeNkhVIY/ZKBiYGMiPP/AIU5DpjybHs+DJNM+kFFZKjjPxn8lAPrmCEC4OM2abMhSJGE5fQxJy4XzIOmkUtjpI18+vrf5GHRqodMIUdM4kGoo6OxZLHAvbMDh9sdAmWmbuD6xV8cwNtYvDdII3gqCezOh/YC5rLHIT45GVE6HURBgG16GhI5ebxezLpcSEncRm3ZtCSTSc/phtyNjLLgk7f1NBWafP44lmQ0UiNk/wB4IWdWVqBVbUsPKic+KqOlq+wK1iKXae5tTOy3jnP1So3uZkJqqpbxK7cvAh7FrNPl8wa8TbdLrY9THnrW9uq4T8xmsyzfs5ivS0yoppoUiYKYZrNY5JIkWMmx17mx2erq7v1qxt/r/BtM3mB6tGkzRAAAAABJRU5ErkJggg==&logoColor=white)
-[![Svarii](https://img.shields.io/badge/Svarii-blue?&style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADYElEQVQ4Tx2TyW9bVRjFf8/D8xxnsp2BRk3S1KZOmzRRHZJYpF1Ahay0sIQlG3aIv4UNu8ICVdlUQQgJNhQqWpFCSjMIUBonTWPsNHbsDPbz9Ox3+ZrFu4sr3fO+c87v0/rdDoVStNsWrTbYbdCyFE1Ak88pp8cO3T4ngYAbTdcYGh1kY/0VuVIVbUAEPPKq1W7JCxuxeJzZuQSFoyL5XI6d7ZeUiwX6e730Rfw4XXYuxi9zUCiz9nwHLeTQVEC343bYWUilmJwcp9Pvoq+vn3qtSil/yP1v7uPmlKvREN3dfnpiUZa/XxXxHFqvTVNeJ4zE3mYmOcfQQITODh/dXUE8uoNXL3dwOZxk/3nEUMRJ5aSOd3iEnGHn3lfLaEMum/K6dG7dvSMjhgj19hDweQn6PTSqDU5Lh1iWxchwmNl3db784h6ngV4yO/s8/iuDFg/oanp+jvj0FC4RMs02Pp8Ht7KIXYoT7Ozk7LjIVnqTQHmN9c0MSz+/wO/RKdZMtIXYiPrgo0Xcbhem1NA0WzSNCgHdyY3rCTTVwma389vvT/lu6VtsLWlL0/js02ke/PACbTGZUJNTE3j9PhqNJj89fIxq1skfn9DV0cFicoaN3X3MSpWt9ef4XE76xd7+qUG6KhOkblxTk3MzHB7kyb4+JL2XI9rXw0A4TLtlcn18nHzJoHr0CiuzLWDYePhvFkOslpqWCEzE1Pj8LIX8EU+ePjv35ZNKP7k5L1Bp9IZCvHUhSvrXB1jHBUwBzibc/JkpsCdTaO9NRNX7H97FqBh8vbSMUyorGwY342M4dRfPtnZJzb5D7e8V+gMezuomB2InW65hvqE1lZhQt++k2Mtk+fGXJ9SMGoM9XUSEg3AwyMlZlamxUfT0H2+Ix2iYVCTsjdcl/isLytPDAyq5kKQiyo9WVikdnwrRDhKxUaJDAxRksmuDYTylNC5Jf3M7jy7kFmp1do8qaJ9/fEvV6WBldY1c8URqUzTqTSQeJi5fIuB3Uy8fQ7spNbewJIOrFyMc5Yu0JUjtduKKqske7WeFa/FkCUA22caSVFSXB6PhDvxer+AsayriddOkJkGP9LgpFMVC8soFFfAI60XjHKKTpsIhfwvK3a7cjUWCApkbp6bO19yypD7DJKJDVYT+B3hpidBMcnLFAAAAAElFTkSuQmCC)](https://github.com/Svarii/GreyScript/blob/main/README.md)
 
 GreyScript Plus is an extension for **Grey Script** that adds additional methods for object manipulation. With the combination of `Greybel VS`, `PHP Doc Extended`, `Plant UML`, and `JSDocs Live Preview`, this tool is designed to enhance your coding efficiency in **VSCode**.
 
@@ -27,14 +26,16 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 |                  | [`.remove_mark`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_mark)    | Remove highlight from text.          |
 |                  | [`.remove_sub`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_sub)      | Remove subscript from text.          |
 |                  | [`.remove_sup`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_sup)      | Remove superscript from text.        |
+|                  | [`.extract_between`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#extract_between)                   | Extract the text between the given values.           |
 | **Number**       | [`.plus(number)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#plus)             | Add 1 or value to a number.             |
 |                  | [`.minus(number)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#minus)           | Subtract 1 or a value from a number.      |
 |                  | [`.diff(number)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#diff)             | Calculate the absolute difference.   |
 |                  | [`.greater_than(number)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#greater_than) | Check if number is greater.          |
 |                  | [`.lesser_than(number)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#lesser_than) | Check if number is lesser.           |
 |                  | [`.random_from(number)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#random_from) | Generate a random number from 0 (or number) to number.            |
+| **List**         | [`.trim`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#trim)             | Removes empty list items from list ends             |
 
-## methodsString ![Static Badge](https://img.shields.io/badge/method-string-green)
+## stringMethods ![Static Badge](https://img.shields.io/badge/method-string-green)
   
   ## .color
 The `.color` method allows you to apply a color to the given text.
@@ -212,10 +213,21 @@ newString = "<sup>Hello</sup>"
 
 print(newString.remove_sup) // Outputs: Hello
 ```
----
-# numbersMethod ![Static Badge](https://img.shields.io/badge/version-0.1a-red)
 
-##### .plus
+  ## .extract_between
+The `.extract_between` method allows you to extract the text between the provided values
+
+![image](https://github.com/user-attachments/assets/28ad9e6f-aa4c-42a1-8651-25fdad73bf18) <img src="https://github.com/user-attachments/assets/bb057877-5cdb-4152-9bbd-78dd0e7140ec" align="right">
+
+```
+newString = "<b>0x53C737</b>"
+
+print(newString.extract_between("<b>", "</b>")) // Outputs: 0x53C737
+```
+---
+# numberMethods ![Static Badge](https://img.shields.io/badge/method-number-green)
+
+## .plus
 The `.plus` method allows you to add a specified amount to a number. If no amount is provided, it defaults to `1`.
 ![image](https://github.com/user-attachments/assets/43a689b8-e9ae-43eb-a2ee-829337d19bf3) <img src="https://github.com/user-attachments/assets/e886e55f-b95d-439f-8d0d-44c84a030180" align="right">
 
@@ -226,7 +238,7 @@ result = newNumber.plus(2)
 print(result) // Outputs: 42
 ```
 
-##### .minus
+## .minus
 The `.minus` method allows you to subtract a specified amount from a number. If no amount is provided, it defaults to `1`. 
 ![image](https://github.com/user-attachments/assets/aca2249d-bf43-4031-abff-130f4a853d76) <img src="https://github.com/user-attachments/assets/edd9ae50-b11d-4870-82da-ea7957713eea" align="right">
 
@@ -237,7 +249,7 @@ result = newNumber.minus(2)
 print(result) // Outputs: 42
 ```
 
-##### .diff
+## .diff
 The `.diff` method calculates the absolute difference between the current number and another number.
 ![image](https://github.com/user-attachments/assets/65152391-7c48-4fa9-ac05-b9ba26e947f4) <img src="https://github.com/user-attachments/assets/49276e79-10dd-4bd3-901f-794d078de8f2" align="right">
 
@@ -249,7 +261,7 @@ result = newNumber.diff(newNumber2)
 print(result) // Outputs: 42
 ```
 
-##### .greater_than
+## .greater_than
 The `.greater_than` method checks if the current number is greater than a provided number. Returns `true` if greater, `false` otherwise.
 ![image](https://github.com/user-attachments/assets/3b71c3f3-abcd-40b9-ba6a-4f7b215e9d58) <img src="https://github.com/user-attachments/assets/b966ac53-3e88-4b53-81c4-008e45aa54ca" align="right">
 
@@ -261,7 +273,7 @@ result = myNumber.greater_than(myNumber2)
 print(result) // Outputs: 0 (false)
 ```
 
-##### .lesser_than
+## .lesser_than
 The `.lesser_than` method checks if the current number is less than a provided number. Returns `true` if lesser, `false` otherwise.
 ![image](https://github.com/user-attachments/assets/d13a7320-012f-4c69-92de-524133c64405) <img src="https://github.com/user-attachments/assets/c0cf05b3-bf72-4237-84c6-864cf907c7dd" align="right">
 
@@ -273,7 +285,7 @@ result = myNumber.lesser_than(myNumber2)
 print(result) // Outputs: 1 (true)
 ```
 
-##### .random_from
+## .random_from
 The `.random_from` method generates a random number in the range of 1 (or optional parameter) to number.
 ![image](https://github.com/user-attachments/assets/4d6c9b64-73ea-4fc4-9b3f-e10509a2d8a5) <img src="https://github.com/user-attachments/assets/3a5680f0-064f-4950-acea-0e451ecad8b1" align="right">
 
@@ -285,11 +297,11 @@ result = myNumber.lesser_than(myNumber2)
 print(result) // Outputs: 1 (true)
 ```
 ---
-LIST
-##### .trim
+# listMethods ![Static Badge](https://img.shields.io/badge/method-list-green)
+## .trim
 The `.trim` method Returns a new list stripped of any spacing at the beginning and ending. If any value gets passed that is not a list this method will return null.
 
-![image](https://github.com/user-attachments/assets/f7dcfc4e-81f7-46cc-b44f-96a3da4d8e97) ![image](https://github.com/user-attachments/assets/d796f888-204f-47e4-9c76-bb8593c33d98)
+![image](https://github.com/user-attachments/assets/f7dcfc4e-81f7-46cc-b44f-96a3da4d8e97) <img src="https://github.com/user-attachments/assets/d796f888-204f-47e4-9c76-bb8593c33d98" align="right">
 
 ```greyscript
 myList = ["", "string", "string", "", ""]
