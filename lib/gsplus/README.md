@@ -263,7 +263,9 @@ print(result) // Outputs: 0 (false)
 ```
 
 ##### .lesser_than
-The `.lesser_than` method checks if the current number is less than a provided number. Returns `true` if lesser, `false` otherwise. Example usage:![image](https://github.com/user-attachments/assets/78235c4e-ba17-479f-9ace-510487a59698)
+The `.lesser_than` method checks if the current number is less than a provided number. Returns `true` if lesser, `false` otherwise.
+![image](https://github.com/user-attachments/assets/d13a7320-012f-4c69-92de-524133c64405) <img src="https://github.com/user-attachments/assets/664e96e1-551b-462c-8c4f-be4da71ac966" align="right">
+
 ```greyscript
 myNumber = 42
 myNumber2 = 100
