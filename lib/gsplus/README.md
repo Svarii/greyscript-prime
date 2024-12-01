@@ -251,7 +251,9 @@ print(result) // Outputs: 42
 ```
 
 ##### .greater_than
-The `.greater_than` method checks if the current number is greater than a provided number. Returns `true` if greater, `false` otherwise. Example usage:![image](https://github.com/user-attachments/assets/7a87acd3-f3b3-4c7b-ae38-471824ac0181)
+The `.greater_than` method checks if the current number is greater than a provided number. Returns `true` if greater, `false` otherwise.
+![image](https://github.com/user-attachments/assets/3b71c3f3-abcd-40b9-ba6a-4f7b215e9d58) <img src="https://github.com/user-attachments/assets/d678e5e0-fd7d-42ad-b45b-694a17219714" align="right">
+
 ```greyscript
 myNumber = 42
 myNumber2 = 100
