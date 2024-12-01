@@ -239,7 +239,9 @@ print(result) // Outputs: 42
 ```
 
 ##### .diff
-The `.diff` method calculates the absolute difference between the current number and another number. Example usage:![image](https://github.com/user-attachments/assets/7f53d021-0089-4833-b3e1-1248b05e0d44)
+The `.diff` method calculates the absolute difference between the current number and another number.
+![image](https://github.com/user-attachments/assets/65152391-7c48-4fa9-ac05-b9ba26e947f4) <img src="https://github.com/user-attachments/assets/24fc63fe-151c-4fd0-ad65-752f4f981e66" align="right">
+
 ```greyscript
 newNumber = 44
 newNumber2 = 2
