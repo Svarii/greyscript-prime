@@ -551,8 +551,7 @@
         else
             return slice(self, startIndex, endIndex)
         end if
-    end function    
-
+    end function
 //Extended number object methods
         //  *
         // * @uml
