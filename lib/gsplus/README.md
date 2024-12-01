@@ -289,7 +289,7 @@ print(result) // Outputs: 1 (true)
 ##### .trim
 The `.trim` method Returns a new list stripped of any spacing at the beginning and ending. If any value gets passed that is not a list this method will return null.
 
-![image](https://github.com/user-attachments/assets/f7dcfc4e-81f7-46cc-b44f-96a3da4d8e97) ![image](https://github.com/user-attachments/assets/d796f888-204f-47e4-9c76-bb8593c33d98)
+![image](https://github.com/user-attachments/assets/f7dcfc4e-81f7-46cc-b44f-96a3da4d8e97) <img src="https://github.com/user-attachments/assets/d796f888-204f-47e4-9c76-bb8593c33d98" align="right">
 
 ```greyscript
 myList = ["", "string", "string", "", ""]
