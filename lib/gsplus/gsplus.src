@@ -517,6 +517,12 @@
         return newString.remove("</sup>")
     end function
 
+    string.extract_from = function(tag = "<b>")
+        startIndex = self.indexOf(tag) + (tag.len + 1)
+        endIndex = self.indexof("</") - 3
+        return slice(self, startIndex, endIndex)
+    end function    
+
 //Extended number object methods
         //  *
         // * @uml
