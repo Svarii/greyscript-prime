@@ -213,6 +213,7 @@ newString = "<sup>Hello</sup>"
 
 print(newString.remove_sup) // Outputs: Hello
 ```
+---
 # numbersMethod ![Static Badge](https://img.shields.io/badge/version-0.1a-red)
 
 ##### .plus
@@ -284,9 +285,18 @@ myNumber2 = 100
 result = myNumber.lesser_than(myNumber2)
 print(result) // Outputs: 1 (true)
 ```
-
+---
 LIST
 ##### .trim
+The `.trim` method Returns a new list stripped of any spacing at the beginning and ending. If any value gets passed that is not a list this method will return null.
+
 ![image](https://github.com/user-attachments/assets/f7dcfc4e-81f7-46cc-b44f-96a3da4d8e97) ![image](https://github.com/user-attachments/assets/d796f888-204f-47e4-9c76-bb8593c33d98)
+
+```greyscript
+myList = ["", "string", "string", "", ""]
+
+result = myList.trim
+print(result) // Outputs: ["string", "string"]
+```
 
 
