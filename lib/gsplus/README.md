@@ -215,7 +215,7 @@ print(newString.remove_sup) // Outputs: Hello
 ---
 # numberMethods ![Static Badge](https://img.shields.io/badge/method-number-green)
 
-##### .plus
+## .plus
 The `.plus` method allows you to add a specified amount to a number. If no amount is provided, it defaults to `1`.
 ![image](https://github.com/user-attachments/assets/43a689b8-e9ae-43eb-a2ee-829337d19bf3) <img src="https://github.com/user-attachments/assets/e886e55f-b95d-439f-8d0d-44c84a030180" align="right">
 
@@ -226,7 +226,7 @@ result = newNumber.plus(2)
 print(result) // Outputs: 42
 ```
 
-##### .minus
+## .minus
 The `.minus` method allows you to subtract a specified amount from a number. If no amount is provided, it defaults to `1`. 
 ![image](https://github.com/user-attachments/assets/aca2249d-bf43-4031-abff-130f4a853d76) <img src="https://github.com/user-attachments/assets/edd9ae50-b11d-4870-82da-ea7957713eea" align="right">
 
@@ -237,7 +237,7 @@ result = newNumber.minus(2)
 print(result) // Outputs: 42
 ```
 
-##### .diff
+## .diff
 The `.diff` method calculates the absolute difference between the current number and another number.
 ![image](https://github.com/user-attachments/assets/65152391-7c48-4fa9-ac05-b9ba26e947f4) <img src="https://github.com/user-attachments/assets/49276e79-10dd-4bd3-901f-794d078de8f2" align="right">
 
@@ -249,7 +249,7 @@ result = newNumber.diff(newNumber2)
 print(result) // Outputs: 42
 ```
 
-##### .greater_than
+## .greater_than
 The `.greater_than` method checks if the current number is greater than a provided number. Returns `true` if greater, `false` otherwise.
 ![image](https://github.com/user-attachments/assets/3b71c3f3-abcd-40b9-ba6a-4f7b215e9d58) <img src="https://github.com/user-attachments/assets/b966ac53-3e88-4b53-81c4-008e45aa54ca" align="right">
 
@@ -261,7 +261,7 @@ result = myNumber.greater_than(myNumber2)
 print(result) // Outputs: 0 (false)
 ```
 
-##### .lesser_than
+## .lesser_than
 The `.lesser_than` method checks if the current number is less than a provided number. Returns `true` if lesser, `false` otherwise.
 ![image](https://github.com/user-attachments/assets/d13a7320-012f-4c69-92de-524133c64405) <img src="https://github.com/user-attachments/assets/c0cf05b3-bf72-4237-84c6-864cf907c7dd" align="right">
 
@@ -273,7 +273,7 @@ result = myNumber.lesser_than(myNumber2)
 print(result) // Outputs: 1 (true)
 ```
 
-##### .random_from
+## .random_from
 The `.random_from` method generates a random number in the range of 1 (or optional parameter) to number.
 ![image](https://github.com/user-attachments/assets/4d6c9b64-73ea-4fc4-9b3f-e10509a2d8a5) <img src="https://github.com/user-attachments/assets/3a5680f0-064f-4950-acea-0e451ecad8b1" align="right">
 
@@ -286,7 +286,7 @@ print(result) // Outputs: 1 (true)
 ```
 ---
 # listMethods ![Static Badge](https://img.shields.io/badge/method-list-green)
-##### .trim
+## .trim
 The `.trim` method Returns a new list stripped of any spacing at the beginning and ending. If any value gets passed that is not a list this method will return null.
 
 ![image](https://github.com/user-attachments/assets/f7dcfc4e-81f7-46cc-b44f-96a3da4d8e97) <img src="https://github.com/user-attachments/assets/d796f888-204f-47e4-9c76-bb8593c33d98" align="right">
