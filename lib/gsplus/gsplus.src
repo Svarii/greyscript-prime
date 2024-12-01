@@ -517,10 +517,40 @@
         return newString.remove("</sup>")
     end function
 
-    string.extract_from = function(tag = "<b>")
-        startIndex = self.indexOf(tag) + (tag.len + 1)
-        endIndex = self.indexof("</") - 3
-        return slice(self, startIndex, endIndex)
+    //@name extract_between
+        //  *
+        //  * @uml
+        //  * @startuml
+        //  * entity StringObject
+        //  * control ".extract_between" as extract_between
+        //  * StringObject -> extract_between : //<b>//string//</b>//
+        //  * header string.extract_btween("//<b>//", "</b>")
+        //  * extract_between -> StringObject : string
+        //  * footer
+        //  * string.extract_between(start, end)
+        //  * endfooter          
+        //  * @enduml        
+        // ANCHOR string.extract_between             
+        //  * @description
+        //  * Extract the text between the first found indexies of the given start and end strings
+        //  * @description If returnMultiple = true | Extract the text between all found indexies of the given start and end strings
+        //  * @return {string or list<string> or null}
+        //  * @example
+        //  * newString = "<b>0x53C737</b>"
+        //  * @example
+        //  * @example        
+        //  * result = newString.extract_between("<b>", "</b>")
+        //  * @example
+        //  * print(result); // Outputs: 0x53C737
+        //  *     
+    string.extract_between = function(tagStart = "<b>", tagEnd = "</b>", returnMultiple = false)
+        startIndex = self.indexOf(tagStart) + (tagStart.len + 1)
+        endIndex = self.indexof(tagEnd) - (tagEnd.len - 1)
+        if returnMultiple == false then
+            return slice(self, startIndex, endIndex)[0]
+        else
+            return slice(self, startIndex, endIndex)
+        end if
     end function    
 
 //Extended number object methods
