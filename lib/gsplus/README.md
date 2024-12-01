@@ -32,8 +32,9 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 |                  | [`.greater_than(number)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#greater_than) | Check if number is greater.          |
 |                  | [`.lesser_than(number)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#lesser_than) | Check if number is lesser.           |
 |                  | [`.random_from(number)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#random_from) | Generate a random number from 0 (or number) to number.            |
+| **List**         | [`.trim`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#trim)             | Removes empty list items from list ends             |
 
-## methodsString ![Static Badge](https://img.shields.io/badge/method-string-green)
+## stringMethods ![Static Badge](https://img.shields.io/badge/method-string-green)
   
   ## .color
 The `.color` method allows you to apply a color to the given text.
@@ -212,7 +213,7 @@ newString = "<sup>Hello</sup>"
 print(newString.remove_sup) // Outputs: Hello
 ```
 ---
-# numbersMethod ![Static Badge](https://img.shields.io/badge/version-0.1a-red)
+# numberMethods ![Static Badge](https://img.shields.io/badge/method-number-green)
 
 ##### .plus
 The `.plus` method allows you to add a specified amount to a number. If no amount is provided, it defaults to `1`.
@@ -284,7 +285,7 @@ result = myNumber.lesser_than(myNumber2)
 print(result) // Outputs: 1 (true)
 ```
 ---
-LIST
+# listMethods ![Static Badge](https://img.shields.io/badge/method-list-green)
 ##### .trim
 The `.trim` method Returns a new list stripped of any spacing at the beginning and ending. If any value gets passed that is not a list this method will return null.
 
