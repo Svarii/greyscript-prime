@@ -18,6 +18,7 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 |                  | [`.mark`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#mark)                 | Highlight the text.                  |
 |                  | [`.sub`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#sub)                   | Apply subscript to text.             |
 |                  | [`.sup`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#sup)                   | Apply superscript to text.           |
+|                  | [`.extract_between`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#extract_between)                   | Extract the text between the given values.           |
 |                  | [`.remove_char_last`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_char_last) | Remove the last character from text. |
 |                  | [`.remove_bold`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_bold)    | Remove bold formatting from text.    |
 |                  | [`.remove_italic`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_italic) | Remove italic formatting from text.  |
@@ -123,6 +124,17 @@ The `.sup` method allows you to apply superscript to the given text. Example usa
 newString = "Hello"
 
 print(newString.sup) // Outputs: <sup>Hello</sup>
+```
+
+  ## .extract_between
+The `.extract_between` method allows you to extract the text between the provided values
+
+![image](https://github.com/user-attachments/assets/28ad9e6f-aa4c-42a1-8651-25fdad73bf18) <img src="https://github.com/user-attachments/assets/bb057877-5cdb-4152-9bbd-78dd0e7140ec" align="right">
+
+```
+newString = "<b>0x53C737</b>"
+
+print(newString.extract_between("<b>", "</b>")) // Outputs: 0x53C737
 ```
 
   ## .remove_char_last
