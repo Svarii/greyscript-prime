@@ -134,7 +134,7 @@ The `.remove_char_last` method allows you to remove the last character to the gi
 ```
 newString = "Hello"
 
-print(newString.remove_last_character) // Outputs: Hell
+print(newString.remove_char_last) // Outputs: Hell
 ```
 
   ## .remove_bold
@@ -216,7 +216,10 @@ print(newString.remove_sup) // Outputs: Hello
 # numbersMethod ![Static Badge](https://img.shields.io/badge/version-0.1a-red)
 
 ##### .plus
-The `.plus` method allows you to add a specified amount to a number. If no amount is provided, it defaults to `1`. Example usage:![image](https://github.com/user-attachments/assets/e9c828a9-747b-4033-a6c5-df598750951f)
+The `.plus` method allows you to add a specified amount to a number. If no amount is provided, it defaults to `1`.
+![image](https://github.com/user-attachments/assets/43a689b8-e9ae-43eb-a2ee-829337d19bf3) <img src="https://github.com/user-attachments/assets/3d200e42-e58d-435b-b1b1-5b158386b535" align="right">
+
+
 ```greyscript
 newNumber = 40
 
@@ -225,7 +228,9 @@ print(result) // Outputs: 42
 ```
 
 ##### .minus
-The `.minus` method allows you to subtract a specified amount from a number. If no amount is provided, it defaults to `1`. Example usage:![image](https://github.com/user-attachments/assets/3a41b282-6973-49ae-828e-cfc69b38992c)
+The `.minus` method allows you to subtract a specified amount from a number. If no amount is provided, it defaults to `1`. 
+![image](https://github.com/user-attachments/assets/aca2249d-bf43-4031-abff-130f4a853d76) <img src="https://github.com/user-attachments/assets/6560d055-3bf9-414d-8160-696a80459be7" align="right">
+
 ```greyscript
 newNumber = 44
 
@@ -234,7 +239,9 @@ print(result) // Outputs: 42
 ```
 
 ##### .diff
-The `.diff` method calculates the absolute difference between the current number and another number. Example usage:![image](https://github.com/user-attachments/assets/7f53d021-0089-4833-b3e1-1248b05e0d44)
+The `.diff` method calculates the absolute difference between the current number and another number.
+![image](https://github.com/user-attachments/assets/65152391-7c48-4fa9-ac05-b9ba26e947f4) <img src="https://github.com/user-attachments/assets/24fc63fe-151c-4fd0-ad65-752f4f981e66" align="right">
+
 ```greyscript
 newNumber = 44
 newNumber2 = 2
@@ -244,7 +251,9 @@ print(result) // Outputs: 42
 ```
 
 ##### .greater_than
-The `.greater_than` method checks if the current number is greater than a provided number. Returns `true` if greater, `false` otherwise. Example usage:![image](https://github.com/user-attachments/assets/7a87acd3-f3b3-4c7b-ae38-471824ac0181)
+The `.greater_than` method checks if the current number is greater than a provided number. Returns `true` if greater, `false` otherwise.
+![image](https://github.com/user-attachments/assets/3b71c3f3-abcd-40b9-ba6a-4f7b215e9d58) <img src="https://github.com/user-attachments/assets/d678e5e0-fd7d-42ad-b45b-694a17219714" align="right">
+
 ```greyscript
 myNumber = 42
 myNumber2 = 100
@@ -254,7 +263,9 @@ print(result) // Outputs: 0 (false)
 ```
 
 ##### .lesser_than
-The `.lesser_than` method checks if the current number is less than a provided number. Returns `true` if lesser, `false` otherwise. Example usage:![image](https://github.com/user-attachments/assets/78235c4e-ba17-479f-9ace-510487a59698)
+The `.lesser_than` method checks if the current number is less than a provided number. Returns `true` if lesser, `false` otherwise.
+![image](https://github.com/user-attachments/assets/d13a7320-012f-4c69-92de-524133c64405) <img src="https://github.com/user-attachments/assets/664e96e1-551b-462c-8c4f-be4da71ac966" align="right">
+
 ```greyscript
 myNumber = 42
 myNumber2 = 100
@@ -264,21 +275,13 @@ print(result) // Outputs: 1 (true)
 ```
 
 ##### .random_from
-The `.random_from` method generates a random number in the range of 1 (or optional parameter) to number. Example usage:![image](https://github.com/user-attachments/assets/52cc4813-51af-46d0-8d8a-a0d6d2140f4c)
+The `.random_from` method generates a random number in the range of 1 (or optional parameter) to number.
+![image](https://github.com/user-attachments/assets/463fdf8e-438b-4316-8cca-ba8777c2b1aa) <img src="https://github.com/user-attachments/assets/9b443540-de24-4d21-852d-0994bc34dca5" align="right">
+
 ```greyscript
 myNumber = 42
 myNumber2 = 100
 
 result = myNumber.lesser_than(myNumber2)
 print(result) // Outputs: 1 (true)
-```
-
-#### Notes
-- All methods validate the input type and return an error message if the argument is not a `number`.
-- Example error handling:
-```greyscript
-newNumber = 42
-
-result = newNumber.plus("string")
-print(result) // Outputs: "Error: number.plus passed object type of string, number required"
 ```
