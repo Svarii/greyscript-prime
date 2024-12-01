@@ -275,21 +275,13 @@ print(result) // Outputs: 1 (true)
 ```
 
 ##### .random_from
-The `.random_from` method generates a random number in the range of 1 (or optional parameter) to number. Example usage:![image](https://github.com/user-attachments/assets/52cc4813-51af-46d0-8d8a-a0d6d2140f4c)
+The `.random_from` method generates a random number in the range of 1 (or optional parameter) to number.
+![image](https://github.com/user-attachments/assets/463fdf8e-438b-4316-8cca-ba8777c2b1aa) <img src="https://github.com/user-attachments/assets/9b443540-de24-4d21-852d-0994bc34dca5" align="right">
+
 ```greyscript
 myNumber = 42
 myNumber2 = 100
 
 result = myNumber.lesser_than(myNumber2)
 print(result) // Outputs: 1 (true)
-```
-
-#### Notes
-- All methods validate the input type and return an error message if the argument is not a `number`.
-- Example error handling:
-```greyscript
-newNumber = 42
-
-result = newNumber.plus("string")
-print(result) // Outputs: "Error: number.plus passed object type of string, number required"
 ```
