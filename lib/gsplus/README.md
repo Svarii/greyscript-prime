@@ -288,6 +288,6 @@ print(result) // Outputs: 1 (true)
 
 LIST
 ##### .trim
-![image](https://github.com/user-attachments/assets/64623e32-7c5b-458a-b78c-5ebb77ea21e4) ![image](https://github.com/user-attachments/assets/d796f888-204f-47e4-9c76-bb8593c33d98)
+![image](https://github.com/user-attachments/assets/f7dcfc4e-81f7-46cc-b44f-96a3da4d8e97) ![image](https://github.com/user-attachments/assets/d796f888-204f-47e4-9c76-bb8593c33d98)
 
 
