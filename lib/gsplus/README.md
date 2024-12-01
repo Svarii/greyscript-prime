@@ -217,8 +217,7 @@ print(newString.remove_sup) // Outputs: Hello
 
 ##### .plus
 The `.plus` method allows you to add a specified amount to a number. If no amount is provided, it defaults to `1`.
-![image](https://github.com/user-attachments/assets/43a689b8-e9ae-43eb-a2ee-829337d19bf3) <img src="https://github.com/user-attachments/assets/3d200e42-e58d-435b-b1b1-5b158386b535" align="right">
-
+![image](https://github.com/user-attachments/assets/43a689b8-e9ae-43eb-a2ee-829337d19bf3) <img src="https://github.com/user-attachments/assets/e886e55f-b95d-439f-8d0d-44c84a030180" align="right">
 
 ```greyscript
 newNumber = 40
@@ -229,7 +228,7 @@ print(result) // Outputs: 42
 
 ##### .minus
 The `.minus` method allows you to subtract a specified amount from a number. If no amount is provided, it defaults to `1`. 
-![image](https://github.com/user-attachments/assets/aca2249d-bf43-4031-abff-130f4a853d76) <img src="https://github.com/user-attachments/assets/6560d055-3bf9-414d-8160-696a80459be7" align="right">
+![image](https://github.com/user-attachments/assets/aca2249d-bf43-4031-abff-130f4a853d76) <img src="https://github.com/user-attachments/assets/edd9ae50-b11d-4870-82da-ea7957713eea" align="right">
 
 ```greyscript
 newNumber = 44
@@ -240,7 +239,7 @@ print(result) // Outputs: 42
 
 ##### .diff
 The `.diff` method calculates the absolute difference between the current number and another number.
-![image](https://github.com/user-attachments/assets/65152391-7c48-4fa9-ac05-b9ba26e947f4) <img src="https://github.com/user-attachments/assets/24fc63fe-151c-4fd0-ad65-752f4f981e66" align="right">
+![image](https://github.com/user-attachments/assets/65152391-7c48-4fa9-ac05-b9ba26e947f4) <img src="https://github.com/user-attachments/assets/49276e79-10dd-4bd3-901f-794d078de8f2" align="right">
 
 ```greyscript
 newNumber = 44
