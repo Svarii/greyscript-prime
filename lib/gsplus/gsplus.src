@@ -737,3 +737,16 @@ list.trim = function()
     end while
 	return self
 end function
+
+//.contains return index of search value if found or null
+list.contains = function(searchValue = null)
+    locals.searchVals = self.values
+    locals.index = 0
+    for val in locals.searchVals
+        if val == searchValue then
+            return locals.index
+        end if
+        locals.index = locals.index + 1
+    end for
+    return null
+end function
