@@ -1,6 +1,6 @@
 //Kiwi v0.3a
 import_code("/lib/gsplus.so")
-import_code("/lib/load_libs.so")
+import_code("/lib/gslibs.so")
 //Get paramaters
 //output buffer
 print_list = function(lineList, clearList = false)
@@ -90,8 +90,8 @@ end function
 //Declare Variables
 output = []                                 //output buffer
 routerPublicIPAddress = params[0]                   //Router Public IP Address - String
-crypto = load_lib_crypto()                          //cryptoLib object
-metax = load_lib_metax()                            //metaLib object
+crypto = load_lib("crypto.so")                          //cryptoLib object
+metax = load_lib_("metaxploit.so")                            //metaLib object
 //print_list(output, true)                          //Print and clear output buffer
 shell = get_shell                                   //shell object - current system
 computer = shell.host_computer                      //computer object - current system
