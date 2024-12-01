@@ -524,7 +524,7 @@
         //  * entity StringObject
         //  * control ".extract_between" as extract_between
         //  * StringObject -> extract_between : //<b>//string//</b>//
-        //  * header string.extract_btween("//<b>//", "</b>")
+        //  * header string.extract_between("//<b>//", "</b>")
         //  * extract_between -> StringObject : string
         //  * footer
         //  * string.extract_between(start, end)
