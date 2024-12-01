@@ -540,7 +540,7 @@
         //  * NumberObject -> plus : number(7)
         //  * plus -> NumberObject : (number + 7)        
         //  * footer
-        //  * string.plus
+        //  * number.plus
         //  * endfooter         
         //  * @enduml           
         // ANCHOR number.plus
@@ -574,7 +574,7 @@
         //  * NumberObject -> minus : number(7)
         //  * minus -> NumberObject : (number - 7)        
         //  * footer
-        //  * string.minus
+        //  * number.minus
         //  * endfooter         
         //  * @enduml         
         // ANCHOR number.minus   
@@ -605,7 +605,7 @@
         //  * NumberObject -> diff : <i>[2]</i>number(44)
         //  * diff -> NumberObject : number[42]     
         //  * footer
-        //  * string.diff
+        //  * number.diff
         //  * endfooter         
         //  * @enduml   
         // ANCHOR number.diff  
@@ -637,7 +637,7 @@
         //  * NumberObject -> greater_than : number
         //  * greater_than -> NumberObject : [true / false]     
         //  * footer
-        //  * string.greater_than
+        //  * number.greater_than
         //  * endfooter         
         //  * @enduml 
         // ANCHOR number.greater_than    
@@ -670,7 +670,7 @@
         //  * NumberObject -> lesser_than : number
         //  * lesser_than -> NumberObject : [true / false]     
         //  * footer
-        //  * string.lesser_than
+        //  * number.lesser_than
         //  * endfooter         
         //  * @enduml 
         // ANCHOR number.lesser_than  
@@ -703,14 +703,14 @@
         //  * NumberObject -> random_from : number
         //  * random_from -> NumberObject : [random number in range]     
         //  * footer
-        //  * string.random_from([opt:min])
+        //  * number.random_from([opt:min])
         //  * endfooter         
         //  * @enduml        
         // ANCHOR number.random_from
         //  * @description  
         //  * Generate a random number from 1 to number opt: min   
         //  * @param {number} amount
-        //  * @return {bool number | string on type error} - The result of the subtraction.
+        //  * @return {bool number | null on type error} - The result of the subtraction.
         //  * @example
         //  * myNumber = 100;
         //  * @example
@@ -728,6 +728,33 @@
 
 //LIST FUNCTIONS
 //.trim removes zero length list items at start and end
+
+
+    //@name trim
+        //  *
+        //  * @uml
+        //  * @startuml
+        //  * entity ListObject
+        //  * control ".trim" as trim
+        //  * ListObject -> trim : list
+        //  * trim -> ListObject : list (no empties on ends)     
+        //  * footer
+        //  * list.trim
+        //  * endfooter         
+        //  * @enduml        
+        // ANCHOR list.trim
+        //  * @description  
+        //  * Trims a list
+        //  * @return {list} 
+        //  * @example
+        //  * myList = ["","","string","string",""];
+        //  * @example
+        //  * @example
+        //  * result = myList.trim
+        //  * @example
+        //  * print(result); // Outputs: ["string","string"]
+        //  * @example
+        //  * 
 list.trim = function()
 	while not self[self.len - 1].len > 0
         self.remove(self.len - 1)
