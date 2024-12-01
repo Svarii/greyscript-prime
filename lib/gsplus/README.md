@@ -134,7 +134,7 @@ The `.remove_char_last` method allows you to remove the last character to the gi
 ```
 newString = "Hello"
 
-print(newString.remove_last_character) // Outputs: Hell
+print(newString.remove_char_last) // Outputs: Hell
 ```
 
   ## .remove_bold
