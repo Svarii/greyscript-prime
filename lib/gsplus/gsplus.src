@@ -535,8 +535,7 @@
         //  * @contributer dynobytes
         //  * @description
         //  * Extract the text between the first found indexies of the given start and end strings
-        //  * @description If returnMultiple = true | Extract the text between all found indexies of the given start and end strings
-        //  * @return {string or list<string> or null}
+        //  * @return {string or null}
         //  * @example
         //  * newString = "<b>0x53C737</b>"
         //  * @example
@@ -545,14 +544,10 @@
         //  * @example
         //  * print(result); // Outputs: 0x53C737
         //  *     
-    string.extract_between = function(tagStart = "<b>", tagEnd = "</b>", returnMultiple = false)
-        startIndex = self.indexOf(tagStart) + (tagStart.len + 1)
-        endIndex = self.indexof(tagEnd) - (tagEnd.len - 1)
-        if returnMultiple == false then
-            return slice(self, startIndex, endIndex)[0]
-        else
-            return slice(self, startIndex, endIndex)
-        end if
+    string.extract_between = function(tagStart = "<b>", tagEnd = "</b>")
+        startIndex = self.indexOf(tagStart) + (tagStart.len)
+        endIndex = self.indexOf(tagEnd) - (tagEnd.len - tagStart.len) + 1
+        return slice(self, startIndex, endIndex)
     end function
 
     //@name format
