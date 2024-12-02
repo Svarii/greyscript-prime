@@ -549,7 +549,7 @@
         endIndex = self.indexOf(tagEnd) - (tagEnd.len - tagStart.len) + 1
         return slice(self, startIndex, endIndex)
     end function
-
+ 
     //@name format
         //  *
         //  * @uml
