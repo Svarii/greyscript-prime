@@ -530,7 +530,9 @@
         //  * string.extract_between(start, end)
         //  * endfooter          
         //  * @enduml        
-        // ANCHOR string.extract_between             
+        // ANCHOR string.extract_between
+        //  * @author Svarii
+        //  * @contributer dynobytes
         //  * @description
         //  * Extract the text between the first found indexies of the given start and end strings
         //  * @description If returnMultiple = true | Extract the text between all found indexies of the given start and end strings
@@ -551,6 +553,45 @@
         else
             return slice(self, startIndex, endIndex)
         end if
+    end function
+
+    //@name format
+        //  *
+        //  * @uml
+        //  * @startuml
+        //  * entity StringObject
+        //  * control ".format" as format
+        //  * StringObject -> format : string
+        //  * header string.format(["fox", "dog"])
+        //  * format -> StringObject : string formatted
+        //  * footer
+        //  * string.format([argsList])
+        //  * endfooter          
+        //  * @enduml        
+        // ANCHOR string.format
+        //  * @author Svarii
+        //  * @contributer dynobytes
+        //  * @description
+        //  * Allows for string interpolation
+        //  * @param {list<string>} args - List of values for delim
+        //  * @param {[opt] string} delim - %s default
+        //  * @return {string}
+        //  * @example
+        //  * variableString = "The quick brown %s jumps over the lazy %s"
+        //  * @example
+        //  * animalsList = ["fox", "dog"]
+        //  * @example        
+        //  * sentence = variableString.format(animalsList)
+        //  * @example
+        //  * print(sentence); // Outputs: The quick brown fox jumps over the lazy dog
+        //  *   
+    string.format = function(args, delim="%s")
+        locals.splitString = self.split(delim);
+        locals.recompStr = ""
+        for i in range(0, args.len()-1)
+            recompStr = recompStr + locals.splitString[i] + args[i]  
+        end for
+        return locals.recompStr
     end function
 //Extended number object methods
         //  *
@@ -597,7 +638,6 @@
         if not typeof(amount) == "number" then return null
             return self + amount
     end function
-
     //@name minus
         //  *
         //  * @uml
