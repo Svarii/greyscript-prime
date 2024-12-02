@@ -10,7 +10,7 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 
 | Category         | Method                      | Description                          |
 |------------------|-----------------------------|--------------------------------------|
-| **String**       | [`.color("#color")`](/lib/gsplus/README.md#color) | Apply a color to text.               |
+| **String**       | [`.color("#color")`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#color) | Apply a color to text.               |
 |                  | [`.bold`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#bold)               | Make the text bold.                  |
 |                  | [`.italic`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#italic)             | Make the text italic.                |
 |                  | [`.underline`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#underline)       | Underline the text.                  |
