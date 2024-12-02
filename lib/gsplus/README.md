@@ -10,31 +10,31 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 
 | Category         | Method                      | Description                          |
 |------------------|-----------------------------|--------------------------------------|
-| **String**       | [`.color("#color")`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#color) | Apply a color to text.               |
-|                  | [`.bold`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#bold)               | Make the text bold.                  |
-|                  | [`.italic`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#italic)             | Make the text italic.                |
-|                  | [`.underline`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#underline)       | Underline the text.                  |
-|                  | [`.strike`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#strike)             | Apply strikethrough to text.         |
-|                  | [`.mark`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#mark)                 | Highlight the text.                  |
-|                  | [`.sub`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#sub)                   | Apply subscript to text.             |
-|                  | [`.sup`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#sup)                   | Apply superscript to text.           |
-|                  | [`.remove_char_last`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_char_last) | Remove the last character from text. |
-|                  | [`.remove_bold`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_bold)    | Remove bold formatting from text.    |
-|                  | [`.remove_italic`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_italic) | Remove italic formatting from text.  |
-|                  | [`.remove_underline`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_underline) | Remove underline formatting.         |
-|                  | [`.remove_strike`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_strike) | Remove strikethrough formatting.     |
-|                  | [`.remove_mark`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_mark)    | Remove highlight from text.          |
-|                  | [`.remove_sub`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_sub)      | Remove subscript from text.          |
-|                  | [`.remove_sup`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_sup)      | Remove superscript from text.        |
-|                  | [`.extract_between`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#extract_between)                   | Extract the text between the given values.           |
-|                  | [`.format`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#format)                   | Allows for string interpolation.           |
-| **Number**       | [`.plus(number)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#plus)             | Add 1 or value to a number.             |
-|                  | [`.minus(number)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#minus)           | Subtract 1 or a value from a number.      |
-|                  | [`.diff(number)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#diff)             | Calculate the absolute difference.   |
-|                  | [`.greater_than(number)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#greater_than) | Check if number is greater.          |
-|                  | [`.lesser_than(number)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#lesser_than) | Check if number is lesser.           |
-|                  | [`.random_from(number)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#random_from) | Generate a random number from 0 (or number) to number.            |
-| **List**         | [`.trim`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#trim)             | Removes empty list items from list ends             |
+| **String**       | [`.color("#color")`](#color) | Apply a color to text.               |
+|                  | [`.bold`](#bold)               | Make the text bold.                  |
+|                  | [`.italic`](#italic)             | Make the text italic.                |
+|                  | [`.underline`](#underline)       | Underline the text.                  |
+|                  | [`.strike`](#strike)             | Apply strikethrough to text.         |
+|                  | [`.mark`](#mark)                 | Highlight the text.                  |
+|                  | [`.sub`](#sub)                   | Apply subscript to text.             |
+|                  | [`.sup`](#sup)                   | Apply superscript to text.           |
+|                  | [`.remove_char_last`](#remove_char_last) | Remove the last character from text. |
+|                  | [`.remove_bold`](#remove_bold)    | Remove bold formatting from text.    |
+|                  | [`.remove_italic`](#remove_italic) | Remove italic formatting from text.  |
+|                  | [`.remove_underline`](#remove_underline) | Remove underline formatting.         |
+|                  | [`.remove_strike`](#remove_strike) | Remove strikethrough formatting.     |
+|                  | [`.remove_mark`](#remove_mark)    | Remove highlight from text.          |
+|                  | [`.remove_sub`](#remove_sub)      | Remove subscript from text.          |
+|                  | [`.remove_sup`](#remove_sup)      | Remove superscript from text.        |
+|                  | [`.extract_between`](#extract_between)                   | Extract the text between the given values.           |
+|                  | [`.format`](#format)                   | Allows for string interpolation.           |
+| **Number**       | [`.plus(number)`](#plus)             | Add 1 or value to a number.             |
+|                  | [`.minus(number)`](#minus)           | Subtract 1 or a value from a number.      |
+|                  | [`.diff(number)`](#diff)             | Calculate the absolute difference.   |
+|                  | [`.greater_than(number)`](#greater_than) | Check if number is greater.          |
+|                  | [`.lesser_than(number)`](#lesser_than) | Check if number is lesser.           |
+|                  | [`.random_from(number)`](#random_from) | Generate a random number from 0 (or number) to number.            |
+| **List**         | [`.trim`](#trim)             | Removes empty list items from list ends             |
 
 ## stringMethods ![Static Badge](https://img.shields.io/badge/method-string-green)
   
