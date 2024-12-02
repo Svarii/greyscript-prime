@@ -27,6 +27,7 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 |                  | [`.remove_sub`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_sub)      | Remove subscript from text.          |
 |                  | [`.remove_sup`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#remove_sup)      | Remove superscript from text.        |
 |                  | [`.extract_between`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#extract_between)                   | Extract the text between the given values.           |
+|                  | [`.format`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#format)                   | Allows for string interpolation.           |
 | **Number**       | [`.plus(number)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#plus)             | Add 1 or value to a number.             |
 |                  | [`.minus(number)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#minus)           | Subtract 1 or a value from a number.      |
 |                  | [`.diff(number)`](https://github.com/Svarii/GreyScript/blob/main/lib/gsplus/README.md#diff)             | Calculate the absolute difference.   |
@@ -217,13 +218,26 @@ print(newString.remove_sup) // Outputs: Hello
   ## .extract_between
 The `.extract_between` method allows you to extract the text between the provided values
 
-![image](https://github.com/user-attachments/assets/28ad9e6f-aa4c-42a1-8651-25fdad73bf18) <img src="https://github.com/user-attachments/assets/bb057877-5cdb-4152-9bbd-78dd0e7140ec" align="right">
+![image](https://github.com/user-attachments/assets/2fc96f61-81a7-46a1-a922-ba15c8399937) <img src="https://github.com/user-attachments/assets/bb057877-5cdb-4152-9bbd-78dd0e7140ec" align="right">
 
 ```
 newString = "<b>0x53C737</b>"
 
 print(newString.extract_between("<b>", "</b>")) // Outputs: 0x53C737
+
 ```
+## .format
+The `.format` method allows for string interpolation
+
+![image](https://github.com/user-attachments/assets/b0661d5b-fdb9-400c-8181-7c7cfb5f3269) <img src="https://github.com/user-attachments/assets/68c231a4-f293-4569-a714-638feb61367d" align="right">
+
+```greyscript
+variableString = "The quick brown %s jumps over the lazy %s"
+animalsList = ["fox", "dog"]      
+sentence = variableString.format(animalsList)
+print(sentence); // Outputs: The quick brown fox jumps over the lazy dog
+```
+##### Modification of implimentation by dynobytes.
 ---
 # numberMethods ![Static Badge](https://img.shields.io/badge/method-number-green)
 
@@ -295,17 +309,6 @@ myNumber2 = 100
 
 result = myNumber.lesser_than(myNumber2)
 print(result) // Outputs: 1 (true)
-```
-## .format
-The `.format` method allows for string interpolation
-
-![image](https://github.com/user-attachments/assets/b0661d5b-fdb9-400c-8181-7c7cfb5f3269) <img src="https://github.com/user-attachments/assets/68c231a4-f293-4569-a714-638feb61367d" align="right">
-
-```greyscript
-variableString = "The quick brown %s jumps over the lazy %s"
-animalsList = ["fox", "dog"]      
-sentence = variableString.format(animalsList)
-print(sentence); // Outputs: The quick brown fox jumps over the lazy dog
 ```
 
 ---
