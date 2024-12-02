@@ -569,7 +569,6 @@
         //  * endfooter          
         //  * @enduml        
         // ANCHOR string.format
-        //  * @author Svarii
         //  * @contributer dynobytes
         //  * @description
         //  * Allows for string interpolation
