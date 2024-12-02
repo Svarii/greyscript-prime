@@ -218,7 +218,7 @@ print(newString.remove_sup) // Outputs: Hello
   ## .extract_between
 The `.extract_between` method allows you to extract the text between the provided values
 
-![image](https://github.com/user-attachments/assets/28ad9e6f-aa4c-42a1-8651-25fdad73bf18) <img src="https://github.com/user-attachments/assets/bb057877-5cdb-4152-9bbd-78dd0e7140ec" align="right">
+![image](https://github.com/user-attachments/assets/2fc96f61-81a7-46a1-a922-ba15c8399937) <img src="https://github.com/user-attachments/assets/bb057877-5cdb-4152-9bbd-78dd0e7140ec" align="right">
 
 ```
 newString = "<b>0x53C737</b>"
