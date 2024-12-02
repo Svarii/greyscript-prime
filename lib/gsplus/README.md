@@ -223,7 +223,20 @@ The `.extract_between` method allows you to extract the text between the provide
 newString = "<b>0x53C737</b>"
 
 print(newString.extract_between("<b>", "</b>")) // Outputs: 0x53C737
+
 ```
+## .format
+The `.format` method allows for string interpolation
+
+![image](https://github.com/user-attachments/assets/b0661d5b-fdb9-400c-8181-7c7cfb5f3269) <img src="https://github.com/user-attachments/assets/68c231a4-f293-4569-a714-638feb61367d" align="right">
+
+```greyscript
+variableString = "The quick brown %s jumps over the lazy %s"
+animalsList = ["fox", "dog"]      
+sentence = variableString.format(animalsList)
+print(sentence); // Outputs: The quick brown fox jumps over the lazy dog
+```
+##### Modification of implimentation by dynobytes.
 ---
 # numberMethods ![Static Badge](https://img.shields.io/badge/method-number-green)
 
@@ -295,17 +308,6 @@ myNumber2 = 100
 
 result = myNumber.lesser_than(myNumber2)
 print(result) // Outputs: 1 (true)
-```
-## .format
-The `.format` method allows for string interpolation
-
-![image](https://github.com/user-attachments/assets/b0661d5b-fdb9-400c-8181-7c7cfb5f3269) <img src="https://github.com/user-attachments/assets/68c231a4-f293-4569-a714-638feb61367d" align="right">
-
-```greyscript
-variableString = "The quick brown %s jumps over the lazy %s"
-animalsList = ["fox", "dog"]      
-sentence = variableString.format(animalsList)
-print(sentence); // Outputs: The quick brown fox jumps over the lazy dog
 ```
 
 ---
