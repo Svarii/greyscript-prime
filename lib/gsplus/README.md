@@ -326,7 +326,7 @@ result = myList.trim
 print(result) // Outputs: ["string", "string"]
 ```
 ***
-# Example Screen Shot of vsCode with Grey Script Plus and recommended plugins.
+## Example Screen Shot of vsCode with Grey Script Plus and recommended plugins.
 ![image](https://github.com/user-attachments/assets/bce13eb0-117e-4744-b31b-80a150655d75)
 
 
