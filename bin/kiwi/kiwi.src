@@ -91,7 +91,7 @@ end function
 output = []                                 //output buffer
 routerPublicIPAddress = params[0]                   //Router Public IP Address - String
 crypto = load_lib("crypto.so")                          //cryptoLib object
-metax = load_lib_("metaxploit.so")                            //metaLib object
+metax = load_lib("metaxploit.so")                            //metaLib object
 //print_list(output, true)                          //Print and clear output buffer
 shell = get_shell                                   //shell object - current system
 computer = shell.host_computer                      //computer object - current system
