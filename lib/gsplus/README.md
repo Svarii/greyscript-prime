@@ -329,7 +329,8 @@ print(result) // Outputs: ["string", "string"]
 ***
 ## Example
 Screen Shot of vsCode with Grey Script Plus and recommended plugins.
-![image](https://github.com/user-attachments/assets/bce13eb0-117e-4744-b31b-80a150655d75)
+![image](https://github.com/user-attachments/assets/54074b16-ca53-4f37-89cf-9462cb49f372)
+
 
 
 
