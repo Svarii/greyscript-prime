@@ -145,7 +145,7 @@ print(typeof(portScan)); // Outputs: PortMemory
 ## Example
 
 Here's a short video showcasing GreyScript Plus in within VSCode:
-![GreyScript Plus]([https://youtu.be/Jt-PkKpnxj8](https://www.youtube.com/watch?v=Jt-PkKpnxj8))
+![GreyScript Plus](https://www.youtube.com/watch?v=Jt-PkKpnxj8)
 
 ## License
 
