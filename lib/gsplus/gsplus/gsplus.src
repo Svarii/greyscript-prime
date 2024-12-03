@@ -781,7 +781,7 @@
         //  * @description  
         //  * Generate a random number from 1 to number opt: min   
         //  * @param {number} amount
-        //  * @return {bool number | null on type error} - The result of the subtraction.
+        //  * @return {number | null} - The result of the subtraction.
         //  * @example
         //  * myNumber = 100;
         //  * @example
