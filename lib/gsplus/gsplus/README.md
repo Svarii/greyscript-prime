@@ -2,7 +2,7 @@
 
 GreyScript Plus is an extension for **Grey Script** that adds additional methods for object manipulation. With the combination of `Greybel VS`, `PHP Doc Extended`, `Plant UML`, and `JSDocs Live Preview`, this tool is designed to enhance your coding efficiency in **VSCode**.
 
-[`Example Screenshot`](#Example) 
+[`Example Screenshot`](#example) 
 
 Limited custom formatting of DocBlocks and Plant UML allow for insertion to GreyScript Compiler.
 ***
@@ -216,8 +216,8 @@ The `.remove_sup` method allows you to remove superscript tags from the given te
 newString = "<sup>Hello</sup>"
 
 print(newString.remove_sup) // Outputs: Hello
-```
 
+```
 ## .extract_between
 The `.extract_between` method allows you to extract the text between the provided values
 
