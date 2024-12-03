@@ -356,6 +356,9 @@ string
 Screen Shot of vsCode with Grey Script Plus and recommended plugins.
 ![image](https://github.com/user-attachments/assets/54074b16-ca53-4f37-89cf-9462cb49f372)
 
+![image](https://github.com/user-attachments/assets/de8de8d1-f8c7-416d-a338-37c3da7e958a)
+
+
 
 
 
