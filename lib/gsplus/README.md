@@ -37,6 +37,7 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 |                  | [`.lesser_than(number)`](#lesser_than) | Check if number is lesser.           |
 |                  | [`.random_from(number)`](#random_from) | Generate a random number from 0 (or number) to number.            |
 | **List**         | [`.trim`](#trim)             | Removes empty list items from list ends             |
+|                  | [`.print`](#print)             | Loops through a list and prints each item             |
 
 ## stringMethods ![Static Badge](https://img.shields.io/badge/method-string-green)
   
