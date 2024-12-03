@@ -4,9 +4,9 @@ load_lib = function(libName = "metaxploit.so", libDir = "/lib", libType ="")
     yield; lib = include_lib(libLocation)
     if not typeof(lib) == null then
         if libType == "" then
-        	return lib; break;
+        	return lib
         else if typeof(lib) == libType then
-	   	return lib
+	   	    return lib
         end if
     else
         return null
