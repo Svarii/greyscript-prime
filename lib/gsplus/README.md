@@ -326,6 +326,23 @@ myList = ["", "string", "string", "", ""]
 result = myList.trim
 print(result) // Outputs: ["string", "string"]
 ```
+
+---
+## .print
+The `.print` method loops through a list and prints each item
+
+![image](https://github.com/user-attachments/assets/e2489ca3-569d-4009-a2d8-af71f4ec7165) <img src="https://github.com/user-attachments/assets/df9b6c0c-debe-4189-92cc-8036e010e4e8" align="right">
+
+
+```greyscript
+myList = ["string", "string"]
+myList.print
+
+// Outputs:
+string
+string
+```
+
 ***
 ## Example
 Screen Shot of vsCode with Grey Script Plus and recommended plugins.
