@@ -56,6 +56,11 @@
 // !define MAP <&map>
 // !define LIST <&list>
 //
+// legend top
+// # LIST: list			MAP: map				STAR: common port
+// # INFO: variable		PLUS: uncommon port		WARN: special port
+// end legend
+//
 // class ActiveUsers {
 //   |_ INFO admin [number] INFO
 //   |_ INFO users [number] INFO
@@ -161,18 +166,18 @@
 //   |_ LIST other_ports INFO
 // }
 //
-// PortInfo::extended o-> ExtendedPortInfo::activeUsers : leak
-// ExtendedPortInfo::activeUsers o-> ActiveUsers : active_users
-// PortInfo::status o--> status
-// PortInfo::service_name o--> service_name
-// PortInfo::service_version o--> service_version
-// PortInfo::lan_ip o--> lan_ip
-// PortScanner::other_ports o--> other_ports
-// ExtendedPortInfo::port_forwards o--> port_forwards
-// ExtendedPortInfo::registered_users o--> registered_users
-// ExtendedPortInfo::gateways_connected o--> gateways_connected
-// ActiveUsers::admin --> admin
-// ActiveUsers::users --> users
+// PortInfo::extended o-> ExtendedPortInfo::activeUsers : .leak
+// ExtendedPortInfo::activeUsers o-> ActiveUsers : .active_users
+// PortInfo::status o--> status : .status
+// PortInfo::service_name o--> service_name : .service_name
+// PortInfo::service_version o--> service_version : .service_version
+// PortInfo::lan_ip o--> lan_ip : .lan_ip
+// PortScanner::other_ports o---> other_ports : .other_ports
+// ExtendedPortInfo::port_forwards o---> port_forwards : .port_forwards
+// ExtendedPortInfo::registered_users o---> registered_users : .registered_usered
+// ExtendedPortInfo::gateways_connected o---> gateways_connected : .gateways_connected
+// ActiveUsers::admin o--> admin : .admin
+// ActiveUsers::users o--> users : .users
 //
 // PortScanner::0-PortInfo:["0"].info
 // PortScanner::21-PortInfo:["21"].info
@@ -199,20 +204,16 @@
 // metaxploit.so required
 // end note
 //
-// legend
-// # LIST: list			MAP: map				STAR: common port
-// # INFO: variable		PLUS: uncommon port		WARN: special port
-// end legend
 //
 // @enduml
 //  * @description
-//  * Generates an object that contains a shell and computer object
+//  * Generates an object that contains slots for ports to carry info.
 //  *
 //  * @return {SystemObject} - System Object {.shell and .computer}
 //  * @example
-//  * terminal = get_system_object
+//  * portScan = get_memory_portscan
 //  * @example
-//  * print typeof(terminal)  //Outputs: SystemObject      
+//  * print typeof(portScan)  //Outputs: PortMemory      
     //  * @example	
 //  * print terminal.computer.get_name  //Outputs: The name of the computer
     //  * @example		
@@ -224,7 +225,7 @@ get_memory_portscan = function()
     info = {"status": null, "service": null, "leak": null}
     standardPorts = {} // Empty map to populate dynamically
 	otherPorts = []
-    portScanner = {"standardPorts": null, "other_ports": otherPorts, "classID": "PortScannObject"}
+    portScanner = {"standardPorts": null, "other_ports": otherPorts, "classID": "PortMemory"}
 	ports = ["0", "21", "22", "23", "25", "80", "110", "141", "443", "6667", "8080", "1222", "1542", "3306", "3307", "37777", "8443", "31337"]
     for port in ports
         ActiveUsers = new activeUsers

@@ -834,6 +834,36 @@ list.trim = function()
 	return self
 end function
 
+    //@name print
+        //  *
+        //  * @uml
+        //  * @startuml
+        //  * entity ListObject
+        //  * interface ScreenOutput
+        //  * control ".print" as print
+        //  * ListObject -> print : list
+        //  * print -> ScreenOutput : print()
+        //  * footer
+        //  * list.print
+        //  * endfooter         
+        //  * @enduml        
+        // ANCHOR list.print
+        //  * @description  
+        //  * Prints a list
+        //  * @return {void} 
+        //  * @example myList = ["string","string"]
+        //  * @example myList.print
+        //  * @example // Outputs:
+        //  * @example      string
+        //  * @example      string
+        //  * @example
+        //  * 
+list.print = function()
+    for line in self
+        print line
+    end for
+end function
+
 //.contains return index of search value if found or null
 list.contains = function(searchValue = null)
     locals.searchVals = self.values

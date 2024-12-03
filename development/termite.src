@@ -5,12 +5,12 @@
 
 //load .shell and .computer objects
     terminal = get_system_object
-    if not typeof(terminal) == "SystemObject" then exit("Unable to Load SystemObject")
+    if not typeof(terminal) == "SystemObject" then exit("Unable to Load SystemObject".color("red"))
 
 //Set Variables    
     databaseFolderName = "Database"
     exploitDirectoryName = "Exploits"
-    exploit_database = "kernel_module_1.0.0_.nx"
+    exploitDatabase = "metaxploit_1.0.0_.nx"
     usrhomeFolder = "/home/" + active_user
     databaseFolderDir = usrhomeFolder + "/" + databaseFolderName
     databaseFolder = terminal.computer.File(databaseFolderDir)   
@@ -23,19 +23,39 @@
         terminal.computer.create_folder(usrhomeFolder, databaseFolderName)
         exploitFolder = terminal.computer.File(exploitFolderLocation)
     end if
-
 //Check if Exploit folder exists in Database folder
     //	-Create if exploit folder does not exist
     if not is_folder(exploitFolder) then
         terminal.computer.create_folder(databaseFolderDir, exploitDirectoryName)
     end if    
 
-//Check if initial exploit database file exists in databaseFolder
-// TODO: Scan /lib for .so files are auto generate first library of exploits mem:val
-    exploitDatabaseLocation = exploitFolderLocation + "/" + exploit_database
-    exploitDatabase = terminal.computer.File(exploitDatabaseLocation)
-    //Create the file if not found
+    // TODO: Add check for ANY files exist and if so, skip this
+// Define the paths and file names
+exploitDatabaseLocation = exploitFolderLocation + "/" + exploitDatabase
+exploitDatabase = terminal.computer.File(exploitDatabaseLocation)
+    // Check if the exploit database exists
     if exploitDatabase == null then
-        terminal.computer.touch(exploitFolderLocation, exploit_database)
-    end if
+        // Load the library directly from the file system
+        Metaxploit = include_lib("/lib/metaxploit.so")
+        if Metaxploit == null then
+            exit("Error: Unable to load 'metaxploit.so' from /lib.".color("red"))
+        end if
+
+        // Load the library as a MetaLib object
+        metaLib = Metaxploit.load("/lib/metaxploit.so")
+        
+        //get name and version of metaxploit
+        terminal.computer.touch(exploitFolderLocation, metaLib.lib_name + "_" + metaLib.version + "_.nx")
+
+        print("Scanning metaLib: " + metaLib.lib_name)
+        if metaLib == null then
+            exit("Error: Unable to load the MetaLib from 'metaxploit.so'.".color("red"))
+        end if
+
+        // Scan the MetaLib for vulnerabilities
+        vulnerableLocations = Metaxploit.scan(metaLib)
+
+        print(vulnerableLocations.join("\n")) // Prints the list of vulnerable memory addresses
+    end if    
+
     

@@ -1,0 +1,79 @@
+//load required dependancies
+import_code("/lib/gsplus.so")
+import_code("/lib/gslibs.so")
+import_code("/lib/gsobjects.so")
+
+//load .shell and .computer objects
+terminal = get_system_object
+if not typeof(terminal) == "SystemObject" then exit("Unable to Load SystemObject")
+
+//Set Variables    
+databaseFolderName = "Database"
+exploitDirectoryName = "Exploits"
+exploit_database = "kernel_module_1.0.0_.nx"
+usrhomeFolder = "/home/" + active_user
+databaseFolderDir = usrhomeFolder + "/" + databaseFolderName
+databaseFolder = terminal.computer.File(databaseFolderDir)   
+exploitFolderLocation = databaseFolderDir + "/" + exploitDirectoryName
+exploitFolder = terminal.computer.File(exploitFolderLocation)
+
+//Check if database folder exists
+//	-Create if database folder does not exist
+if not is_folder(databaseFolder) then
+    terminal.computer.create_folder(usrhomeFolder, databaseFolderName)
+    exploitFolder = terminal.computer.File(exploitFolderLocation)
+else
+//Check has permission to read and write
+    if exploitFolder.has_permission("r") == false then
+        exit("Unable to read the Folder: " + exploitFolder)
+    end if
+end if
+
+//Check if Exploit folder exists in Database folder
+//	-Create if exploit folder does not exist
+if not is_folder(exploitFolder) then
+    terminal.computer.create_folder(databaseFolderDir, exploitDirectoryName)
+end if    
+
+//Check if initial exploit database file exists in databaseFolder
+// TODO: Scan /lib for .so files are auto generate first library of exploits mem:val
+exploitDatabaseLocation = exploitFolderLocation + "/" + exploit_database
+exploitDatabase = terminal.computer.File(exploitDatabaseLocation)
+//Create the file if not found
+if exploitDatabase == null then
+    terminal.computer.touch(exploitFolderLocation, exploit_database)
+
+    //Scan local lib library Folder
+    localLibFolderLocation = "/lib"
+    localLibFolder = terminal.computer.File(localLibFolderLocation)
+    if not is_folder(localLibFolder) == true then
+        print("Unable to Locate " + localLibFolder + "skipping autoscan")
+    else
+        libFiles = localLibFolder.get_files
+        if libFiles.len > 0 then
+            for file in libFiles
+                if typeof(file) == "file" then
+                    fileName = trim(file.name)
+                    if is_match(fileName, ".so") then
+                        Metaxploit = load_lib("metaxploit.so")
+                        print localLibFolderLocation + "/" + fileName
+                        foundLib = load_lib(fileName, localLibFolderLocation)
+                        if not typeof(foundLib) == "null" then
+                            print typeof(foundLib)
+                            memoryScanResults = scan(Metaxploit, foundLib)
+                            for found in memoryScanResults
+                                print "Results: ".sub.color("red") + found
+                            end for
+                        end if
+                    end if
+                else
+                    print "not type file"
+                end if
+            end for
+        else 
+            print "libFile not > 0"
+        end if
+    end if        
+end if
+
+print "ok"
