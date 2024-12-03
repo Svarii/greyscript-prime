@@ -136,7 +136,7 @@ print char(10)              //Margin
 print print_firewall_rules(firewallRules)
 
 //Router Passive Network Information
-push(output, "Kiwi".color("#808000") + " loaded v0.2a at " + current_date)
+push(output, "Kiwi".color("#808000") + " loaded v0.3a at " + current_date)
 print_list(output, true)    //Print and clear output buffer
 
 //Router General Information
