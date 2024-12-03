@@ -304,7 +304,7 @@ print(result) // Outputs: 1 (true)
 
 ### .random_from
 The `.random_from` method generates a random number in the range of 1 (or optional parameter) to number.
-![image](https://github.com/user-attachments/assets/4d6c9b64-73ea-4fc4-9b3f-e10509a2d8a5) <img src="https://github.com/user-attachments/assets/3a5680f0-064f-4950-acea-0e451ecad8b1" align="right">
+![image](https://github.com/user-attachments/assets/20c6402d-2cbb-4778-b6fe-d787aa3b7532) <img src="https://github.com/user-attachments/assets/3a5680f0-064f-4950-acea-0e451ecad8b1" align="right">
 
 ```greyscript
 myNumber = 42
@@ -348,7 +348,9 @@ string
 ***
 # Example
 Screen Shot of vsCode with Grey Script Plus and recommended plugins.
-![image](https://github.com/user-attachments/assets/54074b16-ca53-4f37-89cf-9462cb49f372)
+![image](https://github.com/user-attachments/assets/2a299c7f-9c01-41ea-92ca-9492be1cbbf7)
+
+
 
 
 
