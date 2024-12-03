@@ -3,18 +3,6 @@ import_code("/lib/gsplus.so")
 import_code("/lib/gslibs.so")
 import_code("/lib/gsobjects.so")
 
-
-//print firewall rules
-print_firewall_rules = function(rules)
-    locals.output = []
-    if not rules then 
-        push(locals.output, "Firewall Rules: " + "None Detected".color("green"))
-    else
-        push(locals.output, "Firewall Rules: ".color("yellow") + firewallRules + " on " + routerPublicIPAddress.underline)
-    end if
-        return locals.output[0]
-end function
-
 if params.len == 0 then 
     exit ("kiwi " + "ip_address".bold + " opt:[port]")
 else if matches(params[0], "-") == 1 then

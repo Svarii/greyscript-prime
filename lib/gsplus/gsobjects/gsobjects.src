@@ -209,15 +209,11 @@
 //  * @description
 //  * Generates an object that contains slots for ports to carry info.
 //  *
-//  * @return {SystemObject} - System Object {.shell and .computer}
+//  * @return {PortMemory} - System Object {.shell and .computer}
 //  * @example
 //  * portScan = get_memory_portscan
 //  * @example
 //  * print typeof(portScan)  //Outputs: PortMemory      
-    //  * @example	
-//  * print terminal.computer.get_name  //Outputs: The name of the computer
-    //  * @example		
-//  * print terminal.shell.launch("ls")  //Outputs: launches ls
 //  *
 get_memory_portscan = function()
     activeUsers = {"admin": null, "user": null}

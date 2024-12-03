@@ -1,15 +1,59 @@
-//load library
+// @startuml
+// !define FILE <&file>
+// !define FOLDER <&folder>
+// !define WARN <&warning>
+// !define PLUS <&plus>
+// !define MINUS <&minus>
+// !define CLOUD <&cloud>
+// !define MOBILE <&phone>
+// !define INFO <&info>
+// !define STAR <&star>
+// !define DOCUMENT <&document>
+// !define CALENDAR <&calendar>
+// !define MAP <&map>
+// !define LIST <&list>
+// entity load_lib {
+//   -libName: string
+//   -libDir [opt:]: -string = "/lib"
+//   -libType [opt:]: string = ""
+// }
+// 
+// load_lib : include_lib(libName, libDir, libType)
+// load_lib : typeof(lib): string | null
+// @enduml
+// @description Loads a library from the lib directory, a specified directory, optionally verify type
+// 
+// @param {string} - The name of the library to load.
+// @param {[opt] string} - The directory where the library is located.
+// @param {[opt] string} - The expected type of the library.
+// 
+//  * @return {libraryObject | null} 
+// 
+// @example
+// // Load metaxploit.so from /lib directory
+// @example
+// lib = load_lib;
+// 
+// @example
+// // Load a library without specifying type
+// @example
+// lib = load_lib("metaxploit.so");
+// 
+// @example
+// // Load a library with a specified type, return null on type mismatch
+// @example
+// lib = load_lib("metaxploit.so", "/lib", "MetatxploitLib");
+// 
 load_lib = function(libName = "metaxploit.so", libDir = "/lib", libType ="")
-    libLocation = libDir + "/" + libName
-    yield; lib = include_lib(libLocation)
+    libLocation = libDir + "/" + libName;
+    yield; lib = include_lib(libLocation);
     if not typeof(lib) == null then
         if libType == "" then
-            return lib; break;
+            return lib;
         else if typeof(lib) == libType then
-            push(exeOutput, "> " + lib + " loaded sucessfully ")
-			return lib
+            return lib;
         end if
     else
-        return null
+        return null;
     end if
 end function

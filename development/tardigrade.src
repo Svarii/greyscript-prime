@@ -1,0 +1,8 @@
+//GreyScript
+import_code("/lib/gsplus.so")
+import_code("/lib/gslibs.so")
+import_code("/lib/gsobjects.so")
+
+
+
+
