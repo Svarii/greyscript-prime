@@ -42,7 +42,7 @@ To install GreyScript Plus, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/Svarii/GreyScript.git
+   git clone https://github.com/Svarii/greyscript-plus.git
    ```
 
 2. Install the recommended VSCode extensions:
