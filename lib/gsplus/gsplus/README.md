@@ -348,7 +348,9 @@ string
 ***
 # Example
 Screen Shot of vsCode with Grey Script Plus and recommended plugins.
-![image](https://github.com/user-attachments/assets/54074b16-ca53-4f37-89cf-9462cb49f372)
+![image](https://github.com/user-attachments/assets/2a299c7f-9c01-41ea-92ca-9492be1cbbf7)
+
+
 
 
 
