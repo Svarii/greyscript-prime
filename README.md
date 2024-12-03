@@ -6,9 +6,10 @@
 
 **GreyScript Plus** is an extension for **GreyScript** that adds powerful methods for object manipulation. Combined with tools like `Greybel VS`, `PHP Doc Extended`, `Plant UML`, and `JSDocs Live Preview`, GreyScript Plus is designed to boost your coding efficiency and make your development experience in **VSCode** seamless and productive.
 
-![VSCode Screenshot](path_to_screenshot_image) <!-- Replace with actual image path -->
+**Navigate Documentation in Preview Windows**
+![image](https://github.com/user-attachments/assets/887ffec7-44a8-4cca-a05d-47d21e8d03b9)
 
-[Example Screenshot](#example)
+![image](https://github.com/user-attachments/assets/9436684c-d6a8-48ea-9208-4f5264fa6900)
 
 ### Key Features
 
