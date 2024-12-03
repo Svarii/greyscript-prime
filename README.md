@@ -47,7 +47,7 @@ To install GreyScript Plus, follow these steps:
 
 2. Install the recommended VSCode extensions:
 
-   - [Greybel VS](https://marketplace.visualstudio.com/items?itemName=greybel.greybel-vs)
+   - [Greybel VS](https://marketplace.visualstudio.com/items?itemName=ayecue.greybel-vs)
    - [PHP Doc Extended](https://marketplace.visualstudio.com/items?itemName=neilbrayfield.php-docblocker)
    - [Markdown Preview Enhanced with litvis](https://marketplace.visualstudio.com/items?itemName=gicentre.markdown-preview-enhanced-with-litvis)
    - [Plant UML](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml)
