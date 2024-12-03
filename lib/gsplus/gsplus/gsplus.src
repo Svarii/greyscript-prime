@@ -20,6 +20,8 @@
         // * .remove_sup: "<s>//<sup>//</s>string<s></sup></s>"
         // * .remove_sub: "<s>//<sub>//</s>string<s></sub></s>"
         // * .remove_mark: "<s>//<mark>//</s>string<s></mark></s>"        
+        // * .extract_between: "Extract String from String"
+        // * .format: "String Interpolation" 
         // * @enduml
 
     //@name color
