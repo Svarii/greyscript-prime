@@ -180,7 +180,7 @@ print_list(output, true)
 push output, "ADDITIONAL LAN IPS".underline.bold
 push output, join(devices, " | ".color("white"))
 print_list(output, true)
-exit //exit clearn
+exit //exit clean
 
 push output, "Library:Version".underline.bold
 print_list(output, true)
