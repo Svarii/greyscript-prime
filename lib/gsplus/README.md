@@ -341,7 +341,6 @@ The `.print` method loops through a list and prints each item
 
 ![image](https://github.com/user-attachments/assets/e2489ca3-569d-4009-a2d8-af71f4ec7165) <img src="https://github.com/user-attachments/assets/df9b6c0c-debe-4189-92cc-8036e010e4e8" align="right">
 
-
 ```greyscript
 myList = ["string", "string"]
 myList.print
@@ -350,6 +349,7 @@ myList.print
 string
 string
 ```
+
 ---
 # 📄 Functions Overview
 ## load_lib
@@ -364,10 +364,9 @@ lib = load_lib("metaxploit.so", "/lib", "MetatxploitLib");
 // All Output: typeof(lib) == "MetaxploitLib"
 ```
 
-<img src="https://github.com/user-attachments/assets/296bdf43-2bba-4121-aa52-c85a9b96bc57" align="left">
+![imgage](https://github.com/user-attachments/assets/296bdf43-2bba-4121-aa52-c85a9b96bc57)
 
 ---
-
 # 📄 Class Overview
 ## SystemObject
 
