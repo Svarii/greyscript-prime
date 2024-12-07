@@ -13,29 +13,26 @@
 // !define MAP <&map>
 // !define LIST <&list>
 // entity load_lib {
-//   -libName: string
-//   -libDir [opt:]: -string = "/lib"
-//   -libType [opt:]: string = ""
+//   -string [libName = "metaxploit.so"]
+//   -string [libDir = "/lib"]
+//   -string [libType = "metaxploitLib"]
 // }
-// 
 // load_lib : include_lib(libName, libDir, libType)
 // load_lib : typeof(lib): string | null
 // @enduml
-// @description Loads a library from the lib directory, a specified directory, optionally verify type
+
+// * **Description:**
+// Loads a library from the lib directory, a specified directory, optionally verify type
 // 
-// @param {string} - The name of the library to load.
-// @param {[opt] string} - The directory where the library is located.
-// @param {[opt] string} - The expected type of the library.
+// @param {string} [libName] - The name of the library to load.
+// @param {string} [libDir] - The directory where the library is located.
+// @param {string} [libType] - The expected type of the library.
 // 
-//  * @return {libraryObject | null} 
-// 
-// @example // Load metaxploit.so from /lib directory
-// @example lib = load_lib;
-// @example // Load a library without specifying type
-// @example lib = load_lib("metaxploit.so");
-// @example // Load a library with a specified type, return null on type mismatch
-// @example lib = load_lib("metaxploit.so", "/lib", "MetatxploitLib");
-//
+//  * @return {objectLib | null}
+// @example lib = load_lib                                              //Load metaxploit.so from /lib directory
+// @example lib = load_lib("metaxploit.so")                             //Load a library without specifying type
+// @example lib = load_lib("customLib.so", "/altLib")                   //Load a library from specified directory
+// @example lib = load_lib("crypto.so", "/lib", "cryptoLib")            //Load a library with a specified type, return null on type mismatch
 load_lib = function(libName = "metaxploit.so", libDir = "/lib", libType ="")
     libLocation = libDir + "/" + libName
     if libName == "" then
@@ -54,17 +51,14 @@ load_lib = function(libName = "metaxploit.so", libDir = "/lib", libType ="")
 end function
 
 
-check_params = function(paramMessage, numReqParams) 
-    locals.hault = false
-        if numParams < paramMessage.len then locals.hault = true
-        if params[0] == "--help" then
-            locals.hault = true
-        end if    
-        if params[0] == "-h" then
-            locals.hault = true
-        end if        
-        if locals.hault == true then
-            print paramMessage
-            return null
-        end if
+
+force_params = function(usage, numParams)
+	if params.len < 1 then exit usage
+	if params[0] == "-h" or params[0] == "--help" then exit usage
+	if params.len < numParams then exit usage
 end function
+
+BootStrap = {"load_lib":@load_lib , "check_params":@checkparams}
+boot = new BootStrap
+print typeof(boot.load_lib)
+exit
