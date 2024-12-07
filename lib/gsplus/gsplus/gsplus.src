@@ -488,8 +488,9 @@
 
         //  * **Description:**
         //  * Extract the text between the first found indexies of the given start and end strings        
-        //  * @param {string} tagStart
-        //  * @param {string} tagEnd
+        //  * @description **Default:** Extract the text between the first found bold tag if no paramaters provided
+        //  * @param {string} [tagStart = "<b>""]
+        //  * @param {string} [tagEnd = "</b>"]
         //  * @return {string or null}
         //  * @example newString = "<b>0x53C737</b>"
         //  * @example result = newString.extract_between("<b>", "</b>")
@@ -520,7 +521,7 @@
         //  * Allows for string interpolation
         //  * @contributer dynobytes
         //  * @param {list<string>} args - List of values for delim
-        //  * @param {string} [delim] - %s default
+        //  * @param {string} [delim="%s"]
         //  * @return {string}
         //  * @example variableString = "The quick brown %s jumps over the lazy %s"
         //  * @example animalsList = ["fox", "dog"]      
