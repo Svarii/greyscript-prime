@@ -23,18 +23,18 @@
 // @enduml
 // @description Loads a library from the lib directory, a specified directory, optionally verify type
 // 
-// @param {string} - The name of the library to load.
-// @param {[opt] string} - The directory where the library is located.
-// @param {[opt] string} - The expected type of the library.
+// @param {string} [libName] - The name of the library to load.
+// @param {string} [libDir] - The directory where the library is located.
+// @param {string} [libType] - The expected type of the library.
 // 
-//  * @return {libraryObject | null} 
+//  * @return {metaxploitLib | cryptoLib | aptclientLib | netObject | null}
 // 
-// @example // Load metaxploit.so from /lib directory
-// @example lib = load_lib;
-// @example // Load a library without specifying type
-// @example lib = load_lib("metaxploit.so");
-// @example // Load a library with a specified type, return null on type mismatch
-// @example lib = load_lib("metaxploit.so", "/lib", "MetatxploitLib");
+// @example //Load metaxploit.so from /lib directory
+// @example lib = load_lib
+// @example //Load a library without specifying type
+// @example lib = load_lib("metaxploit.so")
+// @example //Load a library with a specified type, return null on type mismatch
+// @example lib = load_lib("metaxploit.so", "/lib", "MetaxploitLib")
 //
 load_lib = function(libName = "metaxploit.so", libDir = "/lib", libType ="")
     libLocation = libDir + "/" + libName
@@ -68,3 +68,8 @@ check_params = function(paramMessage, numReqParams)
             return null
         end if
 end function
+
+BootStrap = {"load_lib":@load_lib , "check_params":@checkparams}
+boot = new BootStrap
+print typeof(boot.load_lib)
+exit

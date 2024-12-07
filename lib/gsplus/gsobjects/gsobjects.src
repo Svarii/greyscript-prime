@@ -14,17 +14,11 @@
 
 	//  * **Description:**
 	//  * Generates an object that contains a shell and computer object
-	//  *
 	//  * @return {SystemObject} - System Object {.shell and .computer}
-	//  * @example
-	//  * terminal = get_system_object
-	//  * @example
-	//  * print typeof(terminal)  //Outputs: SystemObject      
-        //  * @example	
-	//  * print terminal.computer.get_name  //Outputs: The name of the computer
-        //  * @example		
-	//  * print terminal.shell.launch("ls")  //Outputs: launches ls
-	//  *
+	//  * @example terminal = get_system_object
+	//  * @example print typeof(terminal)  //Outputs: SystemObject
+    //  * @example	print terminal.computer.get_name  //Outputs: The name of the computer
+    //  * @example print terminal.shell.launch("ls")  //Outputs: launches ls	
 	get_system_object = function(user = "", password = "")
 		System = {"shell":null, "computer":null}
 			terminal = new System
@@ -206,7 +200,8 @@
 //
 //
 // @enduml
-//  * @description
+
+//  * **Description:**
 //  * Generates an object that contains slots for ports to carry info.
 //  *
 //  * @return {PortMemory} - System Object {.shell and .computer}
