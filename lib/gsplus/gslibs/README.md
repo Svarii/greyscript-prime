@@ -1,6 +1,6 @@
 # load_lib
 
-<img src="https://github.com/user-attachments/assets/a53209b8-7710-4a40-a087-b43eafe34a0c" align="left">
+<img src="https://github.com/user-attachments/assets/d132c82b-10a9-4457-8840-0b74c38d682c" align="left">
 
 ```greyscript
 lib = load_lib;
