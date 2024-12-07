@@ -532,9 +532,9 @@ string.format = function(args, delim="%s")
     locals.splitStr = self.split(delim);
     locals.recompStr = ""
     for i in range(0, args.len()-1)
-	locals.recompStr = locals.recompStr + locals.splitStr[i] + args[i]  
+	    locals.recompStr = locals.recompStr + locals.splitStr[i] + args[i]  
     end for
-    locals.recompStr = locals.recompStr + locals.splitStr[locals.splitStr.len()-1]
+        locals.recompStr = locals.recompStr + locals.splitStr[locals.splitStr.len()-1]
     return locals.recompStr
 end function
 //Extended number object methods
