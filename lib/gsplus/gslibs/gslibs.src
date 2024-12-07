@@ -23,11 +23,22 @@
 
 // * **Description:**
 // Loads a library from the lib directory, a specified directory, optionally verify type
+
+// * **Description:**
+// Loads a library from the lib directory, a specified directory, optionally verify type
 // 
 // @param {string} [libName] - The name of the library to load.
 // @param {string} [libDir] - The directory where the library is located.
 // @param {string} [libType] - The expected type of the library.
+// @param {string} [libName] - The name of the library to load.
+// @param {string} [libDir] - The directory where the library is located.
+// @param {string} [libType] - The expected type of the library.
 // 
+//  * @return {objectLib | null}
+// @example lib = load_lib                                              //Load metaxploit.so from /lib directory
+// @example lib = load_lib("metaxploit.so")                             //Load a library without specifying type
+// @example lib = load_lib("customLib.so", "/altLib")                   //Load a library from specified directory
+// @example lib = load_lib("crypto.so", "/lib", "cryptoLib")            //Load a library with a specified type, return null on type mismatch
 //  * @return {objectLib | null}
 // @example lib = load_lib                                              //Load metaxploit.so from /lib directory
 // @example lib = load_lib("metaxploit.so")                             //Load a library without specifying type
@@ -51,6 +62,11 @@ load_lib = function(libName = "metaxploit.so", libDir = "/lib", libType ="")
 end function
 
 
+
+force_params = function(usage, numParams)
+	if params.len < 1 then exit usage
+	if params[0] == "-h" or params[0] == "--help" then exit usage
+	if params.len < numParams then exit usage
 
 force_params = function(usage, numParams)
 	if params.len < 1 then exit usage

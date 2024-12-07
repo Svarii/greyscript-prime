@@ -354,7 +354,7 @@ string
 # 📄 Functions Overview
 ## load_lib
 
-<img src="https://github.com/user-attachments/assets/3d7fc930-940d-4248-817d-fe72bdd6df9d" align="left">
+<img src="https://github.com/user-attachments/assets/123d920a-ac65-4524-9cbe-dc149418f334" align="left">
 
 ```greyscript
 lib = load_lib;
@@ -364,7 +364,8 @@ lib = load_lib("metaxploit.so", "/lib", "MetatxploitLib");
 // All Output: typeof(lib) == "MetaxploitLib"
 ```
 
-![imgage](https://github.com/user-attachments/assets/296bdf43-2bba-4121-aa52-c85a9b96bc57)
+![image](https://github.com/user-attachments/assets/99db6c6a-6a90-415e-9c64-a55e6c6840d5)
+
 
 ---
 # 📄 Class Overview
