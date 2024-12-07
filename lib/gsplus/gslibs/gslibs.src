@@ -62,13 +62,19 @@ load_lib = function(libName = "metaxploit.so", libDir = "/lib", libType ="")
 end function
 
 
-force_params = function(usage, numParams)
+// * **Description:**
+// Loads a library from the lib directory, a specified directory, optionally verify type
+
+// * **Description:**
+// Specifies Usage Information and number of required paramters.
+// 
+// @param {string} usage - The name of the library to load.
+// @param {number} numReqParams - The directory where the library is located.
+// @return {void}
+// @example
+// force_params("myApp [ipAddress] [port#]", 2)
+force_params = function(usage, numReqParams)
 	if params.len < 1 then exit usage
 	if params[0] == "-h" or params[0] == "--help" then exit usage
-	if params.len < numParams then exit usage
+	if params.len < numReqParams then exit usage
 end function
-
-BootStrap = {"load_lib":@load_lib , "check_params":@checkparams}
-boot = new BootStrap
-print typeof(boot.load_lib)
-exit
