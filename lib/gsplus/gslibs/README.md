@@ -10,5 +10,7 @@ lib = load_lib("metaxploit.so", "/lib", "MetatxploitLib");
 // All Output: typeof(lib) == "MetaxploitLib"
 ```
 
+---
+
 ![image](https://github.com/user-attachments/assets/cda1b697-e02f-41e3-8949-c7e3cf0186a9)
 
