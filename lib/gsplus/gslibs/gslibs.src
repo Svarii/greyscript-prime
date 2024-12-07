@@ -29,31 +29,42 @@
 // 
 //  * @return {libraryObject | null} 
 // 
-// @example
-// // Load metaxploit.so from /lib directory
-// @example
-// lib = load_lib;
-// 
-// @example
-// // Load a library without specifying type
-// @example
-// lib = load_lib("metaxploit.so");
-// 
-// @example
-// // Load a library with a specified type, return null on type mismatch
-// @example
-// lib = load_lib("metaxploit.so", "/lib", "MetatxploitLib");
-// 
+// @example // Load metaxploit.so from /lib directory
+// @example lib = load_lib;
+// @example // Load a library without specifying type
+// @example lib = load_lib("metaxploit.so");
+// @example // Load a library with a specified type, return null on type mismatch
+// @example lib = load_lib("metaxploit.so", "/lib", "MetatxploitLib");
+//
 load_lib = function(libName = "metaxploit.so", libDir = "/lib", libType ="")
     libLocation = libDir + "/" + libName
-    yield; lib = include_lib(libLocation)
-    if not typeof(lib) == null then
-        if libType == "" then
-            return lib
-        else if typeof(lib) == libType then
-            return lib
-        end if
-    else
-        return null
+    if libName == "" then
+        return get_shell.host_computer.File("/")
     end if
+    yield; lib = include_lib(libLocation)
+        if not typeof(lib) == null then
+            if libType == "" then
+                return lib
+            else if typeof(lib) == libType then
+                return lib
+            end if
+        else
+            return null
+        end if
+end function
+
+
+check_params = function(paramMessage, numReqParams) 
+    locals.hault = false
+        if numParams < paramMessage.len then locals.hault = true
+        if params[0] == "--help" then
+            locals.hault = true
+        end if    
+        if params[0] == "-h" then
+            locals.hault = true
+        end if        
+        if locals.hault == true then
+            print paramMessage
+            return null
+        end if
 end function

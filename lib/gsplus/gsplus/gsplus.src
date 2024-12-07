@@ -1,8 +1,5 @@
 //GreyScript Plus version 1.0a by Svarii
-//Extended string object methods
-        //  *
-
-        // * @uml
+//START Extended string object methods
         // * @startyaml
         // * string : " [mutate <b>string</b>] "
         // * .bold: "//<b>//string</b>"
@@ -22,125 +19,117 @@
         // * .remove_mark: "<s>//<mark>//</s>string<s></mark></s>"        
         // * .extract_between: "Extract String from String"
         // * .format: "String Interpolation" 
-        // * @enduml
+        // * @endyaml
+//END Extended string object methods
+
+        // * @startyaml
+        // * number : " [calculate <b>number</b>] "
+        // * .plus(x): "adds x=1"
+        // * .minus(x): "subtract x=1"
+        // * .diff(x): "distance to x=0"
+        // * .greater_than: "true / false"
+        // * .lesser_than: "true / false"
+        // * .random_from(min=0): random in range
+        // * @endyaml
 
     //@name color
-        //  *
-        //  * @uml
         //  * @startuml        
-        //  * entity StringObject
-        //  * control ".color" as color
-        //  * StringObject -> color : .color("blue")
-        //  * color -> StringObject : "<color=blue>string</color>"
-        //  * footer
-        //  * string.color()
-        //  * endfooter        
+        //  *   entity StringObject
+        //  *   control ".color" as color
+        //  *       StringObject -> color : .color("blue")
+        //  *       color -> StringObject : "<color=blue>string</color>"
+        //  *   footer
+        //  *       string.color()
+        //  *   endfooter        
         //  * @enduml               
         // ANCHOR string.color 
-        //  * @description 
+
+        //  * **Description:**
         //  * Color values maybe be #**FFFFFF** or **color** format
+        //  *
         //  * @param {string} colorValue - The color to apply.
         //  * @return {string} - The colorized text.
-        //  * @example
-        //  * newString = "Hello"
-        //  * @example
-        //  * @example
-        //  * result = newString.color("blue");
-        //  * @example
+        //  * @example newString = "Hello"   
+        //  * @example result = newString.color("blue");
+        //  * @example     
         //  * print(result); // Outputs: <color=blue>Hello</color>
-        //  * @example
-        //  * @example
-        //  * result = newString.color("#FFFFFF");
-        //  * @example
-        //  * print(result); // Outputs: <color=#FFFFFF>Hello</color>      
+        //  * @example        
+        //  * @example result = newString.color("#FFFFFF");
+        //  * @example   
+        //  * print(result); // Outputs: <color=#FFFFFF>Hello</color>           
     string.color = function(colorValue = "red")
-    if not typeof(colorValue) == "string" then return null
-    return "<color=" + colorValue + ">" + self + "</color>"
+        if not typeof(colorValue) == "string" then return null
+        return "<color=" + colorValue + ">" + self + "</color>"
     end function
 
     //@name bold
-        //  *
-        //  * @uml
         //  * @startuml
         //  * entity StringObject
         //  * control ".bold" as bold
-        //  * StringObject -> bold : string
-        //  * bold -> StringObject : //<b>//string//</b>//
+        //  *   StringObject -> bold : string
+        //  *   bold -> StringObject : //<b>//string//</b>//
         //  * footer
-        //  * string.bold
+        //  *   string.bold
         //  * endfooter           
         //  * @enduml        
         // ANCHOR string.bold
-        //  * @description    
+
+        //  * **Description:**  
         //  * Applies bold to the given text.
         //  *
         //  * @return {string}
-        //  * @example
-        //  * newString = "Hello"
-        //  * @example
-        //  * @example        
-        //  * result = newString.bold
-        //  * @example
-        //  * print(result); // Outputs: <b>Hello</b>
-        //  *
+        //  * @example newString = "Hello"
+        //  * @example result = newString.bold
+        //  * @example 
+        //  * print(result); // Outputs: <b>Hello</b>       
     string.bold = function()
         return "<b>" + self + "</b>"
     end function
 
     //@name italic
-        //  *
-        //  * @uml
         //  * @startuml
         //  * entity StringObject
         //  * control ".italic" as italic
-        //  * StringObject -> italic : string
-        //  * italic -> StringObject : //<i>//string//</i>//
+        //  *   StringObject -> italic : string
+        //  *   italic -> StringObject : //<i>//string//</i>//
         //  * footer
-        //  * string.italic
+        //  *   string.italic
         //  * endfooter         
         //  * @enduml        
-        // ANCHOR string.italic      
-        //  * @description
+        // ANCHOR string.italic
+
+	    //  * **Description:**
         //  * Applies italic to the given text.
         //  *
         //  * @return {string}
-        //  * @example
-        //  * newString = "Hello"
-        //  * @example
+        //  * @example newString = "Hello"
+        //  * @example result = newString.italic        
         //  * @example        
-        //  * result = newString.italic
-        //  * @example
-        //  * print(result); // Outputs: <i>Hello</i>
-        //  *
+        //  * print(result); // Outputs: <i>Hello</i>         
     string.italic = function()
         return "<i>" + self + "</i>"
     end function 
 
     //@name underline 
-        //  *
-        //  * @uml
         //  * @startuml
         //  * entity StringObject
         //  * control ".underline" as underline
-        //  * StringObject -> underline : string
-        //  * underline -> StringObject : //<u>//string//</u>//
+        //  *   StringObject -> underline : string
+        //  *   underline -> StringObject : //<u>//string//</u>//
         //  * footer
-        //  * string.underline
+        //  *   string.underline
         //  * endfooter          
         //  * @enduml        
         // ANCHOR string.underline
-        //  * @description
+
+        //  * **Description:**
         //  * Applies underline to the given text.
         //  *
         //  * @return {string}
-        //  * @example
-        //  * newString = "Hello"
-        //  * @example
+        //  * @example newString = "Hello"
+        //  * @example result = newString.underline
         //  * @example        
-        //  * result = newString.underline
-        //  * @example
         //  * print(result); // Outputs: <u>Hello</u>
-        //  *
     string.underline = function()
         return "<u>" + self + "</u>"
     end function
@@ -158,18 +147,15 @@
         //  * endfooter         
         //  * @enduml        
         // ANCHOR string.strike
-        //  * @description
+
+        //  * **Description:**
         //  * Applies strikethrough to the given text.
         //  *
         //  * @return {string}
-        //  * @example
-        //  * newString = "Hello"
-        //  * @example
-        //  * @example        
-        //  * result = newString.strike
-        //  * @example
+        //  * @example newString = "Hello"
+        //  * @example result = newString.strike
+        //  * @example 
         //  * print(result); // Outputs: <s>Hello</s>
-        //  *
     string.strike = function()
         return "<s>" + self + "</s>"
     end function
@@ -187,18 +173,15 @@
         //  * endfooter           
         //  * @enduml        
         // ANCHOR string.mark
-        //  * @description
+
+        //  * **Description:**
         //  * Applies mark to the given text.
         //  *
         //  * @return {string}
-        //  * @example
-        //  * newString = "Hello"
-        //  * @example
-        //  * @example        
-        //  * result = newString.mark
+        //  * @example newString = "Hello"
+        //  * @example result = newString.mark
         //  * @example
         //  * print(result); // Outputs: <mark>Hello</mark>
-        //  *
     string.mark = function()
         return "<mark>" + self + "</mark>"
     end function
@@ -215,19 +198,16 @@
         //  * string.sub
         //  * endfooter         
         //  * @enduml        
-        // ANCHOR string.sub     
-        //  * @description
+        // ANCHOR string.sub   
+
+        //  * **Description:**
         //  * Applies subscript to the given text.
         //  *
         //  * @return {string}
-        //  * @example
-        //  * newString = "Hello"
-        //  * @example
+        //  * @example newString = "Hello"     
+        //  * @example result = newString.sub
         //  * @example        
-        //  * result = newString.sub
-        //  * @example
         //  * print(result); // Outputs: <sub>Hello</sub>
-        //  *
     string.sub = function()
         return "<sub>" + self + "</sub>"    
     end function
@@ -244,19 +224,16 @@
         //  * string.sup
         //  * endfooter         
         //  * @enduml        
-        // ANCHOR string.sup           
-        //  * @description
+        // ANCHOR string.sup  
+
+        //  * **Description:**
         //  * Applies superscript to the given text.
         //  *
         //  * @return {string}
-        //  * @example
-        //  * newString = "Hello"
-        //  * @example
-        //  * @example        
-        //  * result = newString.sup
+        //  * @example newString = "Hello"
+        //  * @example result = newString.sup       
         //  * @example
         //  * print(result); // Outputs: <sup>Hello</sup>
-        //  * 
     string.sup = function()
         return "<sup>" + self + "</sup>"    
     end function
@@ -274,18 +251,15 @@
         //  * endfooter 
         //  * @enduml        
         // ANCHOR string.remove_char_last  
-        //  * @description
+
+        //  * **Description:**
         //  * Remove the last character of the given text.
         //  *
         //  * @return {string}
-        //  * @example
-        //  * newString = "Hello"
-        //  * @example
-        //  * @example        
-        //  * result = newString.remove_char_last
-        //  * @example
+        //  * @example newString = "Hello"      
+        //  * @example result = newString.remove_char_last
+        //  * @example          
         //  * print(result); // Outputs: Hell
-        //  *
     string.remove_char_last = function()
         index = (self.len - 1)
         charList = self.values
@@ -298,59 +272,53 @@
         //  * @startuml
         //  * entity StringObject
         //  * control ".remove_bold" as remove_bold
-        //  * StringObject -> remove_bold : //<b>//string//</b>//
-        //  * remove_bold -> StringObject : string
-        //  * StringObject -> remove_bold : //<b>//string//</b>// //<b>//string//</b>//
-        //  * remove_bold -> StringObject : string string
+        //  *   StringObject -> remove_bold : //<b>//string//</b>//
+        //  *   remove_bold -> StringObject : string
+        //  *   StringObject -> remove_bold : //<b>//string//</b>// //<b>//string//</b>//
+        //  *   remove_bold -> StringObject : string string
         //  * footer
-        //  * string.remove_bold
+        //  *   string.remove_bold
         //  * endfooter           
         //  * @enduml        
         // ANCHOR string.remove_bold
-        //  * @description
+
+        //  * **Description:**
         //  * Remove the bold tag of the given text.
         //  *
         //  * @return {string}
+        //  * @example newString = "<b>Hello</b>"        
+        //  * @example result = newString.remove_bold
         //  * @example
-        //  * newString = "<b>Hello</b>"
-        //  * @example
-        //  * @example        
-        //  * result = newString.remove_bold
-        //  * @example
-        //  * print(result); // Outputs: Hello
-        //  *  
+        //  * print(result); // Outputs: Hello 
     string.remove_bold = function()
         newString = self.remove("<b>")
         return newString.remove("</b>")
     end function
 
-    //@name remove italic 
+    //@name remove_italic 
         //  *
         //  * @uml
         //  * @startuml
         //  * entity StringObject
         //  * control ".remove_italic" as remove_italic
-        //  * StringObject -> remove_italic : //<i>//string//</i>//
-        //  * remove_italic -> StringObject : string
-        //  * StringObject -> remove_italic : //<i>//string//</i>// //<i>//string//</i>//
-        //  * remove_italic -> StringObject : string string
+        //  *   StringObject -> remove_italic : //<i>//string//</i>//
+        //  *   remove_italic -> StringObject : string
+        //  *   StringObject -> remove_italic : //<i>//string//</i>// //<i>//string//</i>//
+        //  *   remove_italic -> StringObject : string string
         //  * footer
-        //  * string.remove_italic
+        //  *   string.remove_italic
         //  * endfooter           
         //  * @enduml            
-        // ANCHOR string.remove_italic      
-        //  * @description
+        // ANCHOR string.remove_italic   
+
+        //  * **Description:**
         //  * Remove the italic tag of the given text.
         //  *
         //  * @return {string}
-        //  * @example
-        //  * newString = "<i>Hello</i>"
-        //  * @example
+        //  * @example newString = "<i>Hello</i>"  
+        //  * @example result = newString.remove_italic
         //  * @example        
-        //  * result = newString.remove_italic
-        //  * @example
         //  * print(result); // Outputs: Hello
-        //  *  
     string.remove_italic = function()
         newString = self.remove("<i>")
         return newString.remove("</i>")
@@ -362,27 +330,24 @@
         //  * @startuml
         //  * entity StringObject
         //  * control ".remove_underline" as remove_underline
-        //  * StringObject -> remove_underline : //<u>//string//</u>//
-        //  * remove_underline -> StringObject : string
-        //  * StringObject -> remove_underline : //<u>//string//</u>// //<u>//string//</u>//
-        //  * remove_underline -> StringObject : string string 
+        //  *   StringObject -> remove_underline : //<u>//string//</u>//
+        //  *   remove_underline -> StringObject : string
+        //  *   StringObject -> remove_underline : //<u>//string//</u>// //<u>//string//</u>//
+        //  *   remove_underline -> StringObject : string string 
         //  * footer
-        //  * string.remove_underline
+        //  *   string.remove_underline
         //  * endfooter           
         //  * @enduml        
         // ANCHOR string.remove_underline
-        //  * @description
+
+        //  * **Description:**
         //  * Remove the underline tag of the given text.
         //  *
         //  * @return {string}
-        //  * @example
-        //  * newString = "<u>Hello</u>"
-        //  * @example
+        //  * @example newString = "<u>Hello</u>"       
+        //  * @example result = newString.remove_underline
         //  * @example        
-        //  * result = newString.remove_underline
-        //  * @example
         //  * print(result); // Outputs: Hello
-        //  * 
     string.remove_underline = function()
         newString = self.remove("<u>")
         return newString.remove("</u>")
@@ -393,27 +358,24 @@
         //  * @startuml
         //  * entity StringObject
         //  * control ".remove_strike" as remove_strike
-        //  * StringObject -> remove_strike : //<s>//string//</s>//
-        //  * remove_strike -> StringObject : string
-        //  * StringObject -> remove_strike : //<s>//string//</s>// //<s>//string//</s>//
-        //  * remove_strike -> StringObject : string string
+        //  *   StringObject -> remove_strike : //<s>//string//</s>//
+        //  *   remove_strike -> StringObject : string
+        //  *   StringObject -> remove_strike : //<s>//string//</s>// //<s>//string//</s>//
+        //  *   remove_strike -> StringObject : string string
         //  * footer
-        //  * string.remove_strike
+        //  *   string.remove_strike
         //  * endfooter             
         //  * @enduml        
-        // ANCHOR string.remove_strike         
-        //  * @description
+        // ANCHOR string.remove_strike  
+
+        //  * **Description:**
         //  * Remove the strikethrough tag of the given text.
         //  *
         //  * @return {string}
-        //  * @example
-        //  * newString = "<s>Hello</s>"
-        //  * @example
-        //  * @example        
-        //  * result = newString.remove_strike
-        //  * @example
+        //  * @example newString = "<s>Hello</s>"
+        //  * @example result = newString.remove_strike
+        //  * @example         
         //  * print(result); // Outputs: Hello
-        //  * 
     string.remove_strike = function()
         newString = self.remove("<s>")
         return newString.remove("</s>")
@@ -426,27 +388,24 @@
         //  * @startuml
         //  * entity StringObject
         //  * control ".remove_mark" as remove_mark
-        //  * StringObject -> remove_mark : //<mark>//string//</mark>//
-        //  * remove_mark -> StringObject : string
-        //  * StringObject -> remove_mark : //<mark>//string//</mark>// //<mark>//string//</mark>//
-        //  * remove_mark -> StringObject : string string   
+        //  *   StringObject -> remove_mark : //<mark>//string//</mark>//
+        //  *   remove_mark -> StringObject : string
+        //  *   StringObject -> remove_mark : //<mark>//string//</mark>// //<mark>//string//</mark>//
+        //  *   remove_mark -> StringObject : string string   
         //  * footer
-        //  * string.remove_mark
+        //  *   string.remove_mark
         //  * endfooter               
         //  * @enduml        
-        // ANCHOR string.remove_mark    
-        //  * @description
+        // ANCHOR string.remove_mark  
+
+        //  * **Description:**
         //  * Remove the mark tag of the given text.
         //  *
         //  * @return {string}
-        //  * @example
-        //  * newString = "<mark>Hello</mark>"
-        //  * @example
-        //  * @example        
-        //  * result = newString.remove_mark
+        //  * @example newString = "<mark>Hello</mark>"
+        //  * @example result = newString.remove_mark
         //  * @example
         //  * print(result); // Outputs: Hello
-        //  * 
     string.remove_mark = function()
         newString = self.remove("<mark>")
         return newString.remove("</mark>")
@@ -459,28 +418,25 @@
         //  * @startuml
         //  * entity StringObject
         //  * control ".remove_sub" as remove_sub
-        //  * StringObject -> remove_sub : //<sub>//string//</sub>//
-        //  * header string.remove_sub
-        //  * remove_sub -> StringObject : string
-        //  * StringObject -> remove_sub : //<sub>//string//</sub>// //<sub>//string//</sub>//
-        //  * remove_sub -> StringObject : string string  
+        //  *   StringObject -> remove_sub : //<sub>//string//</sub>//
+        //  *   header string.remove_sub
+        //  *   remove_sub -> StringObject : string
+        //  *   StringObject -> remove_sub : //<sub>//string//</sub>// //<sub>//string//</sub>//
+        //  *   remove_sub -> StringObject : string string  
         //  * footer
-        //  * string.remove_sub
+        //  *   string.remove_sub
         //  * endfooter          
         //  * @enduml        
-        // ANCHOR string.remove_sub             
-        //  * @description
+        // ANCHOR string.remove_sub  
+
+        //  * **Description:**
         //  * Remove the sub tag of the given text.
         //  *
         //  * @return {string}
-        //  * @example
-        //  * newString = "<sub>Hello</sub>"
-        //  * @example
-        //  * @example        
-        //  * result = newString.remove_sub
-        //  * @example
+        //  * @example newString = "<sub>Hello</sub>"     
+        //  * @example result = newString.remove_sub
+        //  * @example                
         //  * print(result); // Outputs: Hello
-        //  *
     string.remove_sub = function()
         newString = self.remove("<sub>")
         return newString.remove("</sub>")
@@ -492,28 +448,24 @@
         //  * @startuml
         //  * entity StringObject
         //  * control ".remove_sup" as remove_sup
-        //  * StringObject -> remove_sup : //<sup>//string//</sup>//
-        //  * header string.remove_sup
-        //  * remove_sup -> StringObject : string
-        //  * StringObject -> remove_sup : //<sup>//string//</sup>// //<sup>//string//</sup>//
-        //  * remove_sup -> StringObject : string string  
+        //  *   StringObject -> remove_sup : //<sup>//string//</sup>//
+        //  *   header string.remove_sup
+        //  *   remove_sup -> StringObject : string
+        //  *   StringObject -> remove_sup : //<sup>//string//</sup>// //<sup>//string//</sup>//
+        //  *   remove_sup -> StringObject : string string  
         //  * footer
-        //  * string.remove_sup
+        //  *   string.remove_sup
         //  * endfooter          
         //  * @enduml        
-        // ANCHOR string.remove_sup             
-        //  * @description
+        // ANCHOR string.remove_sup   
+
+        //  * **Description:**
         //  * Remove the sup tag of the given text.
-        //  *
         //  * @return {string}
-        //  * @example
-        //  * newString = "<sup>Hello</sup>"
-        //  * @example
-        //  * @example        
-        //  * result = newString.remove_sup
+        //  * @example newString = "<sup>Hello</sup>"
+        //  * @example result = newString.remove_sup        
         //  * @example
         //  * print(result); // Outputs: Hello
-        //  * 
     string.remove_sup = function()
         newString = self.remove("<sup>")
         return newString.remove("</sup>")
@@ -525,27 +477,24 @@
         //  * @startuml
         //  * entity StringObject
         //  * control ".extract_between" as extract_between
-        //  * StringObject -> extract_between : //<b>//string//</b>//
-        //  * header string.extract_between("//<b>//", "</b>")
-        //  * extract_between -> StringObject : string
+        //  *   StringObject -> extract_between : //<b>//string//</b>//
+        //  *   header string.extract_between("//<b>//", "</b>")
+        //  *   extract_between -> StringObject : string
         //  * footer
-        //  * string.extract_between(start, end)
+        //  *   string.extract_between(start, end)
         //  * endfooter          
         //  * @enduml        
         // ANCHOR string.extract_between
-        //  * @author Svarii
-        //  * @contributer dynobytes
-        //  * @description
-        //  * Extract the text between the first found indexies of the given start and end strings
+
+        //  * **Description:**
+        //  * Extract the text between the first found indexies of the given start and end strings        
+        //  * @param {string} tagStart
+        //  * @param {string} tagEnd
         //  * @return {string or null}
-        //  * @example
-        //  * newString = "<b>0x53C737</b>"
-        //  * @example
-        //  * @example        
-        //  * result = newString.extract_between("<b>", "</b>")
-        //  * @example
-        //  * print(result); // Outputs: 0x53C737
-        //  *     
+        //  * @example newString = "<b>0x53C737</b>"
+        //  * @example result = newString.extract_between("<b>", "</b>")
+        //  * @example           
+        //  * print(result); // Outputs: 0x53C737   
     string.extract_between = function(tagStart = "<b>", tagEnd = "</b>")
         startIndex = self.indexOf(tagStart) + (tagStart.len)
         endIndex = self.indexOf(tagEnd) - (tagEnd.len - tagStart.len) + 1
@@ -566,21 +515,18 @@
         //  * endfooter          
         //  * @enduml        
         // ANCHOR string.format
-        //  * @contributer dynobytes
-        //  * @description
+
+        //  * **Description:**
         //  * Allows for string interpolation
+        //  * @contributer dynobytes
         //  * @param {list<string>} args - List of values for delim
-        //  * @param {[opt] string} delim - %s default
+        //  * @param {string} [delim] - %s default
         //  * @return {string}
-        //  * @example
-        //  * variableString = "The quick brown %s jumps over the lazy %s"
-        //  * @example
-        //  * animalsList = ["fox", "dog"]
-        //  * @example        
-        //  * sentence = variableString.format(animalsList)
+        //  * @example variableString = "The quick brown %s jumps over the lazy %s"
+        //  * @example animalsList = ["fox", "dog"]      
+        //  * @example sentence = variableString.format(animalsList)
         //  * @example
         //  * print(sentence); // Outputs: The quick brown fox jumps over the lazy dog
-        //  *   
     string.format = function(args, delim="%s")
         locals.splitString = self.split(delim);
         locals.recompStr = ""
@@ -589,19 +535,8 @@
         end for
         return locals.recompStr
     end function
-//Extended number object methods
-        //  *
-        // * @uml
-        // * @startyaml
-        // * number : " [calculate <b>number</b>] "
-        // * .plus(x): "adds x=1"
-        // * .minus(x): "subtract x=1"
-        // * .diff(x): "distance to x=0"
-        // * .greater_than: "true / false"
-        // * .lesser_than: "true / false"
-        // * .random_from(min=0): random in range
-        // * @enduml
 
+//Extended number object methods
         //  *
         //  * @uml
         //  * @startuml
@@ -616,20 +551,16 @@
         //  * endfooter         
         //  * @enduml           
         // ANCHOR number.plus
-        //
+
         //  * **Description:**
-        //  * Add 1 to the number or opt: amount
+        //  * Add 1 to the number or optional amount
         //  * @description     
-        //  * @param {opt:number} amount - The amount to add.
-        //  * @return {number | null on type error} - The result of the addition.
-        //  * @example
-        //  * newNumber = 40
-        //  * @example
-        //  * @example
-        //  * result = newNumber.plus(2);
+        //  * @param {number} [amount] - The amount to add.
+        //  * @return {number | null} - The result of the addition.
+        //  * @example newNumber = 40
+        //  * @example result = newNumber.plus(2);
         //  * @example
         //  * print(result); // Outputs: 42
-        //  *
     number.plus = function(amount = 1)
         if not typeof(amount) == "number" then return null
             return self + amount
@@ -648,25 +579,22 @@
         //  * number.minus
         //  * endfooter         
         //  * @enduml         
-        // ANCHOR number.minus   
-        //  * @description
-        //  * Subtract 1 from the number or opt: amount
+        // ANCHOR number.minus  
+
+        //  * **Description:**
+        //  * Subtract 1 from the number or optional amount
         //  * @description     
-        //  * @param {opt:number} amount - The amount to add.
-        //  * @return {number | null on type error} - The result of the subtraction.
-        //  * @example
-        //  * newNumber = 44
-        //  * @example
-        //  * @example
-        //  * result = newNumber.minus(2);
-        //  * @example
+        //  * @param {number} [amount] - The amount to add.
+        //  * @return {number | null} - The result of the subtraction.
+        //  * @example newNumber = 44
+        //  * @example result = newNumber.minus(2);
+        //  * @example        
         //  * print(result); // Outputs: 42
-        //  * @example
-        //  *     
     number.minus = function(amount = 1)
         if not typeof(amount) == "number" then return null
             return self - amount
     end function
+
     //@name diff
         //  *
         //  * @uml
@@ -680,20 +608,16 @@
         //  * endfooter         
         //  * @enduml   
         // ANCHOR number.diff  
-        //  * @description     
-        //  * Return Difference from provided integer to distanceTo
+
+        //  * **Description:**
+        //  * Return difference to number
         //  * @param {number} amount
-        //  * @return {number | null on type error} - The result of the subtraction.
+        //  * @return {number | null} - The result of the subtraction.
+        //  * @example newNumber = 44
+        //  * @example newNumber2 = 2         
+        //  * @example result = newNumber.diff(newNumber2)
         //  * @example
-        //  * newNumber = 44;
-        //  * newNumber2 = 2;            
-        //  * @example
-        //  * @example
-        //  * result = newNumber.diff(newNumber2);
-        //  * @example
-        //  * print(result); // Outputs: 42
-        //  * @example
-        //  *           
+        //  * print(result); // Outputs: 42          
     number.diff = function(distanceTo = 0)
         if not typeof(distanceTo) == "number" then return null
             return abs(self - distanceTo)
@@ -712,20 +636,16 @@
         //  * endfooter         
         //  * @enduml 
         // ANCHOR number.greater_than    
-        //  * @description
+
+        //  * **Description:**
         //  * Check if number is greater than provided number
         //  * @param {number} isGreater
-        //  * @return {bool number | null on type error} - The result of the subtraction.
-        //  * @example
-        //  * myNumber = 42;
-        //  * myNumber2 = 100;
-        //  * @example
-        //  * @example
-        //  * result = newNumber.greater_than(myNumber2);
-        //  * @example
+        //  * @return {bool number | null} - The result of the subtraction.
+        //  * @example myNumber = 42;
+        //  * @example myNumber2 = 100;
+        //  * @example result = newNumber.greater_than(myNumber2);
+        //  * @example        
         //  * print(result); // Outputs: 0
-        //  * @example
-        //  *      
     number.greater_than = function(isGreater)
         if not typeof(isGreater) == "number" then return null
             if isGreater > self then return true
@@ -733,32 +653,26 @@
     end function
 
     //@name lesser_than   
-        //  *
-        //  * @uml
         //  * @startuml
         //  * entity NumberObject
         //  * control ".lesser_than" as lesser_than
-        //  * NumberObject -> lesser_than : number
-        //  * lesser_than -> NumberObject : [true / false]     
+        //  *   NumberObject -> lesser_than : number
+        //  *   lesser_than -> NumberObject : [true / false]     
         //  * footer
-        //  * number.lesser_than
+        //  *   number.lesser_than
         //  * endfooter         
         //  * @enduml 
         // ANCHOR number.lesser_than  
-        //  * @description  
+        
+        //  * **Description:**
         //  * Check if number is lesser than provided number   
         //  * @param {number} amount
-        //  * @return {bool number | null on type error} - The result of the subtraction.
-        //  * @example
-        //  * myNumber = 42;
-        //  * myNumber2 = 100;
-        //  * @example
-        //  * @example
-        //  * result = newNumber.lesser_than(myNumber2);
+        //  * @return {number [0 or 1] | null} - The result of the subtraction.
+        //  * @example myNumber = 42;
+        //  * @example myNumber2 = 100;
+        //  * @example result = newNumber.lesser_than(myNumber2);
         //  * @example
         //  * print(result); // Outputs: 1
-        //  * @example
-        //  *              
     number.lesser_than = function(isLesser)
         if not typeof(isLesser) == "number" then return null
             if isLesser < self then return true
@@ -766,31 +680,25 @@
     end function
 
     //@name random_from
-        //  *
-        //  * @uml
         //  * @startuml
         //  * entity NumberObject
         //  * control ".random_from" as random_from
-        //  * NumberObject -> random_from : number
-        //  * random_from -> NumberObject : [random number in range]     
+        //  *   NumberObject -> random_from : number
+        //  *   random_from -> NumberObject : [random number in range]     
         //  * footer
-        //  * number.random_from([opt:min])
+        //  *   number.random_from([opt:min])
         //  * endfooter         
         //  * @enduml        
         // ANCHOR number.random_from
-        //  * @description  
-        //  * Generate a random number from 1 to number opt: min   
-        //  * @param {number} amount
+
+        //  * **Description:**
+        //  * Generate a random number from 0 to number or optional minimum
+        //  * @param {number} [min]
         //  * @return {number | null} - The result of the subtraction.
-        //  * @example
-        //  * myNumber = 100;
-        //  * @example
-        //  * @example
-        //  * result = myNumber.random_from(50);
+        //  * @example myNumber = 100;
+        //  * @example result = myNumber.random_from(50);
         //  * @example
         //  * print(result); // Outputs: {rnd:50-100}
-        //  * @example
-        //  *    
     number.random_from = function(min = 0)
         if not typeof(min) == "number" then return null
             max = self
@@ -802,30 +710,24 @@
 
 
     //@name trim
-        //  *
-        //  * @uml
         //  * @startuml
         //  * entity ListObject
         //  * control ".trim" as trim
-        //  * ListObject -> trim : list
-        //  * trim -> ListObject : list (no empties on ends)     
+        //  *   ListObject -> trim : list
+        //  *   trim -> ListObject : list (no empties on ends)     
         //  * footer
-        //  * list.trim
+        //  *   list.trim
         //  * endfooter         
         //  * @enduml        
         // ANCHOR list.trim
-        //  * @description  
-        //  * Trims a list
-        //  * @return {list} 
+
+        //  * **Description:**
+        //  * Trims a <list>
+        //  * @return {string} 
+        //  * @example myList = ["","","cat","dog",""];
+        //  * @example result = myList.trim
         //  * @example
-        //  * myList = ["","","string","string",""];
-        //  * @example
-        //  * @example
-        //  * result = myList.trim
-        //  * @example
-        //  * print(result); // Outputs: ["string","string"]
-        //  * @example
-        //  * 
+        //  * print(result); // Outputs: ["cat","dog"]
 list.trim = function()
 	while not self[self.len - 1].len > 0
         self.remove(self.len - 1)
@@ -837,31 +739,28 @@ list.trim = function()
 end function
 
     //@name print
-        //  *
-        //  * @uml
         //  * @startuml
         //  * entity ListObject
         //  * interface ScreenOutput
         //  * control ".print" as print
-        //  * ListObject -> print : list
-        //  * print -> ScreenOutput : print()
+        //  *   ListObject -> print : list
+        //  *   print -> ScreenOutput : print()
         //  * footer
-        //  * list.print
+        //  *   list.print
         //  * endfooter         
         //  * @enduml        
         // ANCHOR list.print
-        //  * @description  
+
+        //  * **Description:**
         //  * Prints a list
         //  * @return {void} 
-        //  * @example myList = ["string","string"]
+        //  * @example myList = ["cat","dog"]
         //  * @example myList.print
-        //  * @example // Outputs:
-        //  * @example      string
-        //  * @example      string
         //  * @example
-        //  * 
-list.print = function()
-    for line in self
-        print line
-    end for
+        //  * @example // Outputs:
+        //  * @example      cat
+        //  * @example      dog
+list.print = function(seperator = char(10))
+    printString = split(self, seperator)
+    print printString
 end function
