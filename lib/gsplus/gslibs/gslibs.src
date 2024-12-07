@@ -62,12 +62,6 @@ load_lib = function(libName = "metaxploit.so", libDir = "/lib", libType ="")
 end function
 
 
-
-force_params = function(usage, numParams)
-	if params.len < 1 then exit usage
-	if params[0] == "-h" or params[0] == "--help" then exit usage
-	if params.len < numParams then exit usage
-
 force_params = function(usage, numParams)
 	if params.len < 1 then exit usage
 	if params[0] == "-h" or params[0] == "--help" then exit usage
