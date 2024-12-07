@@ -4,7 +4,7 @@
 
 ## Enhance Your GreyScript Coding Experience in VSCode
 
-**GreyScript Prime** is an extension for **GreyScript** that adds powerful methods for object manipulation. Combined with tools like `Greybel VS`, `PHP Doc Extended`, `Plant UML`, and `JSDocs Live Preview`, GreyScript Prime is designed to boost your coding efficiency and make your development experience in **VSCode** seamless and productive.
+**GreyScript Prime** is an extension for **GreyScript** that adds powerful methods for object manipulation. Combined with tools like `Greybel VS`, `Plant UML`, and `JSDocs Live Preview`, GreyScript Prime is designed to boost your coding efficiency and make your development experience in **VSCode** seamless and productive.
 
 **Navigate Documentation in Preview Windows**
 ![image](https://github.com/user-attachments/assets/887ffec7-44a8-4cca-a05d-47d21e8d03b9)
