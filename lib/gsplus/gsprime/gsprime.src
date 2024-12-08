@@ -260,10 +260,8 @@
         //  * @example result = newString.remove_char_last
         //  * @example          
         //  * print(result); // Outputs: Hell
-    string.remove_char_last = function()
-        index = (self.len - 1)
-        charList = self.values
-        return charList.remove(index)
+   string.remove_char_last = function()
+        return slice(self, 0, (self.len - 1))
     end function
 
     //@name remove_bold
