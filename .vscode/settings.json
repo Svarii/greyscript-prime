@@ -1,0 +1,12 @@
+{
+    "highlight.regexes": {
+        "cryptoLib": {
+            "regex": "cryptoLib",
+            "color": "green"
+        },
+        "aptclientLib": {
+            "regex": "aptclientLib",
+            "color": "green"
+        }
+    }
+}
