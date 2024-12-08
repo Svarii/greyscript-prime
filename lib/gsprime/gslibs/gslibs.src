@@ -77,4 +77,54 @@ force_params = function(usage, numReqParams)
 	if params.len < 1 then exit usage
 	if params[0] == "-h" or params[0] == "--help" then exit usage
 	if params.len < numReqParams then exit usage
+    if params.len > numReqParams then exit usage + "{Too many paramters}"
+end function
+
+program_name = function()
+	splitVal = program_path.split("/")
+	splitVal.reverse
+	return trim(splitVal[0])
+end function
+
+is_null = function (testObj, failType = "return", failStr = "")
+	if testObj == null then
+		if failType == "exit" then
+			exit failString		
+		end if
+		if failType == "print" then
+			print failString
+		end if
+		if failType == "return" then
+			return true
+		end if
+    if failType == "return" then return false
+	end if
+end function
+
+program_name = function()
+	splitVal = program_path.split("/")
+	splitVal.reverse
+	return trim(splitVal[0])
+end function
+
+networkDeviceList = function(user = "", pass = "")
+	networkDevices = split(get_shell(user,pass).host_computer.network_devices, char(10))
+	networkDeviceList = []
+	for device in networkDevices
+		if device then networkDeviceList.push(split(device, " "))
+	end for
+	return networkDeviceList
+end function
+
+is_type = function(Object, ObjectType, failType = "return", failStr = "")
+	if failType == "return" then
+		if not typeof(Object) == ObjectType then return false
+		return true
+	end if
+	if failType == "exit" then
+		if not typeof(Object) == ObjectType then exit failStr
+	end if
+	if failType == "print" then
+		if not typeof(Object) == ObjectType then print failStr
+	end if    
 end function
