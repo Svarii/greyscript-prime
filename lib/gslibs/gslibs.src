@@ -107,7 +107,7 @@ program_name = function()
 	return trim(splitVal[0])
 end function
 
-networkDeviceList = function(user = "", pass = "")
+network_device_list = function(user = "", pass = "")
 	networkDevices = split(get_shell(user,pass).host_computer.network_devices, char(10))
 	networkDeviceList = []
 	for device in networkDevices
@@ -123,8 +123,6 @@ is_type = function(Object, ObjectType, failType = "return", failStr = "")
 	end if
 	if failType == "exit" then
 		if not typeof(Object) == ObjectType then exit failStr
+		return true
 	end if
-	if failType == "print" then
-		if not typeof(Object) == ObjectType then print failStr
-	end if    
 end function

@@ -264,6 +264,10 @@
         return slice(self, 0, (self.len - 1))
     end function
 
+    string.remove_char_first = function()
+        return slice(self, 1, (self.len))
+    end function    
+
     //@name remove_bold
         //  *
         //  * @uml
@@ -763,4 +767,13 @@ end function
 list.print = function(seperator = char(10))
     printString = split(self, seperator)
     print printString
+end function
+
+list.is_match = function(searchStr)
+	for device in self
+		if device.is_match(searchStr) then
+			return indexOf(self, device)
+		end if
+	end for
+    return null
 end function
