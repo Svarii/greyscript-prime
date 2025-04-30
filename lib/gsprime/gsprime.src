@@ -11,19 +11,20 @@
         //  * @enduml               
         // ANCHOR string.color 
 
-        //  * **Description:**
-        //  * Color values maybe be #**FFFFFF** or **color** format
-        //  *
-        //  * @param {string} colorValue - The color to apply.
-        //  * @return {string} - The colorized text.
-        //  * @example newString = "Hello"   
-        //  * @example result = newString.color("blue");
-        //  * @example     
-        //  * print(result); // Outputs: <color=blue>Hello</color>
-        //  * @example        
-        //  * @example result = newString.color("#FFFFFF");
-        //  * @example   
-        //  * print(result); // Outputs: <color=#FFFFFF>Hello</color>           
+        //  **Description:**
+        //  Color values maybe be #**FFFFFF** or **color** format
+        //  
+        //  @param {string} colorValue - The color to apply.
+        //  @return {string} - The colorized text.
+        //  @example newString = "Hello"   
+        //  @example 
+        //  @example result = newString.color("blue");
+        //  @example     
+        //  print(result); // Outputs: <color=blue>Hello</color>
+        //  @example        
+        //  @example result = newString.color("#FFFFFF");
+        //  @example   
+        //  print(result); // Outputs: <color=#FFFFFF>Hello</color>           
     string.color = function(colorValue = "red")
         if not typeof(colorValue) == "string" then return null
         return "<color=" + colorValue + ">" + self + "</color>"
@@ -41,14 +42,15 @@
         //  * @enduml        
         // ANCHOR string.bold
 
-        //  * **Description:**  
-        //  * Applies bold to the given text.
-        //  *
-        //  * @return {string}
-        //  * @example newString = "Hello"
-        //  * @example result = newString.bold
-        //  * @example 
-        //  * print(result); // Outputs: <b>Hello</b>       
+        //  **Description:**  
+        //  Applies bold to the given text.
+        //  
+        //  @return {string}
+        //  @example newString = "Hello"
+        //  @example 
+        //  @example result = newString.bold
+        //  @example 
+        //  print(result); // Outputs: <b>Hello</b>       
     string.bold = function()
         return "<b>" + self + "</b>"
     end function
@@ -65,14 +67,15 @@
         //  * @enduml        
         // ANCHOR string.italic
 
-	    //  * **Description:**
-        //  * Applies italic to the given text.
-        //  *
-        //  * @return {string}
-        //  * @example newString = "Hello"
-        //  * @example result = newString.italic        
-        //  * @example        
-        //  * print(result); // Outputs: <i>Hello</i>         
+	    //  **Description:**
+        //  Applies italic to the given text.
+        //  
+        //  @return {string}
+        //  @example newString = "Hello"
+        //  @example 
+        //  @example result = newString.italic        
+        //  @example        
+        //  print(result); // Outputs: <i>Hello</i>         
     string.italic = function()
         return "<i>" + self + "</i>"
     end function 
@@ -89,14 +92,15 @@
         //  * @enduml        
         // ANCHOR string.underline
 
-        //  * **Description:**
-        //  * Applies underline to the given text.
-        //  *
-        //  * @return {string}
-        //  * @example newString = "Hello"
-        //  * @example result = newString.underline
-        //  * @example        
-        //  * print(result); // Outputs: <u>Hello</u>
+        //  **Description:**
+        //  Applies underline to the given text.
+        //  
+        //  @return {string}
+        //  @example newString = "Hello"
+        //  @example 
+        //  @example result = newString.underline
+        //  @example        
+        //  print(result); // Outputs: <u>Hello</u>
     string.underline = function()
         return "<u>" + self + "</u>"
     end function
@@ -115,14 +119,15 @@
         //  * @enduml        
         // ANCHOR string.strike
 
-        //  * **Description:**
-        //  * Applies strikethrough to the given text.
-        //  *
-        //  * @return {string}
-        //  * @example newString = "Hello"
-        //  * @example result = newString.strike
-        //  * @example 
-        //  * print(result); // Outputs: <s>Hello</s>
+        //  **Description:**
+        //  Applies strikethrough to the given text.
+        //  
+        //  @return {string}
+        //  @example newString = "Hello"
+        //  @example 
+        //  @example result = newString.strike
+        //  @example 
+        //  print(result); // Outputs: <s>Hello</s>
     string.strike = function()
         return "<s>" + self + "</s>"
     end function
@@ -141,14 +146,15 @@
         //  * @enduml        
         // ANCHOR string.mark
 
-        //  * **Description:**
-        //  * Applies mark to the given text.
-        //  *
-        //  * @return {string}
-        //  * @example newString = "Hello"
-        //  * @example result = newString.mark
-        //  * @example
-        //  * print(result); // Outputs: <mark>Hello</mark>
+        //  **Description:**
+        //  Applies mark to the given text.
+        //  
+        //  @return {string}
+        //  @example newString = "Hello"
+        //  @example 
+        //  @example result = newString.mark
+        //  @example
+        //  print(result); // Outputs: <mark>Hello</mark>
     string.mark = function()
         return "<mark>" + self + "</mark>"
     end function
@@ -167,14 +173,14 @@
         //  * @enduml        
         // ANCHOR string.sub   
 
-        //  * **Description:**
-        //  * Applies subscript to the given text.
-        //  *
-        //  * @return {string}
-        //  * @example newString = "Hello"     
-        //  * @example result = newString.sub
-        //  * @example        
-        //  * print(result); // Outputs: <sub>Hello</sub>
+        //  **Description:**
+        //  Applies subscript to the given text.
+        //   
+        //  @return {string}
+        //  @example newString = "Hello"     
+        //  @example result = newString.sub
+        //  @example        
+        //  print(result); // Outputs: <sub>Hello</sub>
     string.sub = function()
         return "<sub>" + self + "</sub>"    
     end function
@@ -193,18 +199,19 @@
         //  * @enduml        
         // ANCHOR string.sup  
 
-        //  * **Description:**
-        //  * Applies superscript to the given text.
-        //  *
-        //  * @return {string}
-        //  * @example newString = "Hello"
-        //  * @example result = newString.sup       
-        //  * @example
-        //  * print(result); // Outputs: <sup>Hello</sup>
+        //  **Description:**
+        //  Applies superscript to the given text.
+        //  
+        //  @return {string}
+        //  @example newString = "Hello"
+        //  @example 
+        //  @example result = newString.sup       
+        //  @example
+        //  print(result); // Outputs: <sup>Hello</sup>
     string.sup = function()
         return "<sup>" + self + "</sup>"    
     end function
-
+print 
     //@name remove_char_last
         //  *
         //  * @uml
@@ -219,14 +226,15 @@
         //  * @enduml        
         // ANCHOR string.remove_char_last  
 
-        //  * **Description:**
-        //  * Remove the last character of the given text.
-        //  *
-        //  * @return {string}
-        //  * @example newString = "Hello"      
-        //  * @example result = newString.remove_char_last
-        //  * @example          
-        //  * print(result); // Outputs: Hell
+        //  **Description:**
+        //  Remove the last character of the given text.
+        //  
+        //  @return {string}
+        //  @example newString = "Hello"
+        //  @example             
+        //  @example result = newString.remove_char_last
+        //  @example          
+        //  print(result); // Outputs: Hell
    string.remove_char_last = function()
         return slice(self, 0, (self.len - 1))
     end function
@@ -245,14 +253,14 @@
         //  * @enduml        
         // ANCHOR string.remove_char_first
 
-        //  * **Description:**
-        //  * Remove the first character of the given text.
-        //  *
-        //  * @return {string}
-        //  * @example newString = "Hello"      
-        //  * @example result = newString.remove_char_first
-        //  * @example          
-        //  * print(result); // Outputs: ello
+        //  **Description:**
+        //  Remove the first character of the given text.
+        //  @return {string}
+        //  @example newString = "Hello"
+        //  @example    
+        //  @example result = newString.remove_char_first
+        //  @example          
+        //  print(result); // Outputs: ello
     string.remove_char_first = function()
         return slice(self, 1, (self.len))
     end function
@@ -273,14 +281,14 @@
         //  * @enduml        
         // ANCHOR string.remove_bold
 
-        //  * **Description:**
-        //  * Remove the bold tag of the given text.
-        //  *
-        //  * @return {string}
-        //  * @example newString = "<b>Hello</b>"        
-        //  * @example result = newString.remove_bold
-        //  * @example
-        //  * print(result); // Outputs: Hello 
+        //  **Description:**
+        //  Remove the bold tag of the given text.
+        //  @return {string}
+        //  @example newString = "<b>Hello</b>"
+        //  @example        
+        //  @example result = newString.remove_bold
+        //  @example
+        //  print(result); // Outputs: Hello 
     string.remove_bold = function()
         newString = self.remove("<b>")
         return newString.remove("</b>")
@@ -302,14 +310,14 @@
         //  * @enduml            
         // ANCHOR string.remove_italic   
 
-        //  * **Description:**
-        //  * Remove the italic tag of the given text.
-        //  *
-        //  * @return {string}
-        //  * @example newString = "<i>Hello</i>"  
-        //  * @example result = newString.remove_italic
-        //  * @example        
-        //  * print(result); // Outputs: Hello
+        //  **Description:**
+        //  Remove the italic tag of the given text.
+        //  @example 
+        //  @return {string}
+        //  @example newString = "<i>Hello</i>"  
+        //  @example result = newString.remove_italic
+        //  @example        
+        //  print(result); // Outputs: Hello
     string.remove_italic = function()
         newString = self.remove("<i>")
         return newString.remove("</i>")
@@ -331,14 +339,15 @@
         //  * @enduml        
         // ANCHOR string.remove_underline
 
-        //  * **Description:**
-        //  * Remove the underline tag of the given text.
-        //  *
-        //  * @return {string}
-        //  * @example newString = "<u>Hello</u>"       
-        //  * @example result = newString.remove_underline
-        //  * @example        
-        //  * print(result); // Outputs: Hello
+        //  **Description:**
+        //  Remove the underline tag of the given text.
+        //  
+        //  @return {string}
+        //  @example newString = "<u>Hello</u>"
+        //  @example        
+        //  @example result = newString.remove_underline
+        //  @example        
+        //  print(result); // Outputs: Hello
     string.remove_underline = function()
         newString = self.remove("<u>")
         return newString.remove("</u>")
@@ -359,14 +368,15 @@
         //  * @enduml        
         // ANCHOR string.remove_strike  
 
-        //  * **Description:**
-        //  * Remove the strikethrough tag of the given text.
-        //  *
-        //  * @return {string}
-        //  * @example newString = "<s>Hello</s>"
-        //  * @example result = newString.remove_strike
-        //  * @example         
-        //  * print(result); // Outputs: Hello
+        //  **Description:**
+        //  Remove the strikethrough tag of the given text.
+        //  
+        //  @return {string}
+        //  @example newString = "<s>Hello</s>"
+        //  @example 
+        //  @example result = newString.remove_strike
+        //  @example         
+        //  print(result); // Outputs: Hello
     string.remove_strike = function()
         newString = self.remove("<s>")
         return newString.remove("</s>")
@@ -389,14 +399,14 @@
         //  * @enduml        
         // ANCHOR string.remove_mark  
 
-        //  * **Description:**
-        //  * Remove the mark tag of the given text.
-        //  *
-        //  * @return {string}
-        //  * @example newString = "<mark>Hello</mark>"
-        //  * @example result = newString.remove_mark
-        //  * @example
-        //  * print(result); // Outputs: Hello
+        //  **Description:**
+        //  Remove the mark tag of the given text.
+        //  @return {string}
+        //  @example newString = "<mark>Hello</mark>"
+        //  @example 
+        //  @example result = newString.remove_mark
+        //  @example
+        //  print(result); // Outputs: Hello
     string.remove_mark = function()
         newString = self.remove("<mark>")
         return newString.remove("</mark>")
@@ -420,14 +430,14 @@
         //  * @enduml        
         // ANCHOR string.remove_sub  
 
-        //  * **Description:**
-        //  * Remove the sub tag of the given text.
-        //  *
-        //  * @return {string}
-        //  * @example newString = "<sub>Hello</sub>"     
-        //  * @example result = newString.remove_sub
-        //  * @example                
-        //  * print(result); // Outputs: Hello
+        //  **Description:**
+        //  Remove the sub tag of the given text.
+        //  @return {string}
+        //  @example newString = "<sub>Hello</sub>"     
+        //  @example 
+        //  @example result = newString.remove_sub
+        //  @example                
+        //  print(result); // Outputs: Hello
     string.remove_sub = function()
         newString = self.remove("<sub>")
         return newString.remove("</sub>")
@@ -450,13 +460,14 @@
         //  * @enduml        
         // ANCHOR string.remove_sup   
 
-        //  * **Description:**
-        //  * Remove the sup tag of the given text.
-        //  * @return {string}
-        //  * @example newString = "<sup>Hello</sup>"
-        //  * @example result = newString.remove_sup        
-        //  * @example
-        //  * print(result); // Outputs: Hello
+        //  **Description:**
+        //  Remove the sup tag of the given text.
+        //  @return {string}
+        //  @example newString = "<sup>Hello</sup>"
+        //  @example 
+        //  @example result = newString.remove_sup        
+        //  @example
+        //  print(result); // Outputs: Hello
     string.remove_sup = function()
         newString = self.remove("<sup>")
         return newString.remove("</sup>")
@@ -477,16 +488,17 @@
         //  * @enduml        
         // ANCHOR string.extract_between
 
-        //  * **Description:**
-        //  * Extract the text between the first found indexies of the given start and end strings        
-        //  * @description **Default:** Extract the text between the first found bold tag if no paramaters provided
-        //  * @param {string} [tagStart = "<b>""]
-        //  * @param {string} [tagEnd = "</b>"]
-        //  * @return {string or null}
-        //  * @example newString = "<b>0x53C737</b>"
-        //  * @example result = newString.extract_between("<b>", "</b>")
-        //  * @example           
-        //  * print(result); // Outputs: 0x53C737   
+        //  **Description:**
+        //  Extract the text between the first found indexies of the given start and end strings        
+        //  @description **Default:** Extract the text between the first found bold tag if no paramaters provided
+        //  @param {string} [tagStart = "<b>""]
+        //  @param {string} [tagEnd = "</b>"]
+        //  @return {string or null}
+        //  @example newString = "<b>0x53C737</b>"
+        //  @example 
+        //  @example result = newString.extract_between("<b>", "</b>")
+        //  @example           
+        //  print(result); // Outputs: 0x53C737   
     string.extract_between = function(tagStart = "<b>", tagEnd = "</b>")
         startIndex = self.indexOf(tagStart) + (tagStart.len)
         endIndex = self.indexOf(tagEnd) - (tagEnd.len - tagStart.len) + 1
@@ -508,18 +520,18 @@
         //  * @enduml        
         // ANCHOR string.format
 
-        //  * **Description:**
-        //  * Allows for string interpolation
-        //  * @contributer dynobytes
-        //  * @param {list<string>} args - List of values for delim
-        //  * @param {string} [delim="%s"]
-        //  * @return {string}
-        //  * @example variableString = "The quick brown %s jumps over the lazy %s"
-        //  * @example animalsList = ["fox", "dog"]      
-        //  * @example sentence = variableString.format(animalsList)
-        //  * @example
-        //  * print(sentence); // Outputs: The quick brown fox jumps over the lazy dog
-        //  *   
+        //  **Description:**
+        //  Allows for string interpolation
+        //  @contributer dynobytes
+        //  @param {list<string>} args - List of values for delim
+        //  @param {string} [delim="%s"]
+        //  @return {string}
+        //  @example variableString = "The quick brown %s jumps over the lazy %s"
+        //  @example animalsList = ["fox", "dog"] 
+        //  @example      
+        //  @example sentence = variableString.format(animalsList)
+        //  @example
+        //  print(sentence); // Outputs: The quick brown fox jumps over the lazy dog
 string.format = function(args, delim="%s")
     locals.splitStr = self.split(delim);
     locals.recompStr = ""
@@ -545,15 +557,16 @@ end function
         //  * @enduml           
         // ANCHOR number.plus
 
-        //  * **Description:**
-        //  * Add 1 to the number or optional amount
-        //  * @description     
-        //  * @param {number} [amount] - The amount to add.
-        //  * @return {number | null} - The result of the addition.
-        //  * @example newNumber = 40
-        //  * @example result = newNumber.plus(2);
-        //  * @example
-        //  * print(result); // Outputs: 42
+        //  **Description:**
+        //  Add 1 to the number or optional amount
+        //  @description     
+        //  @param {number} [amount] - The amount to add.
+        //  @return {number | null} - The result of the addition.
+        //  @example newNumber = 40
+        //  @example 
+        //  @example result = newNumber.plus(2);
+        //  @example
+        //  print(result); // Outputs: 42
     number.plus = function(amount = 1)
         if not typeof(amount) == "number" then return null
             return self + amount
@@ -574,15 +587,16 @@ end function
         //  * @enduml         
         // ANCHOR number.minus  
 
-        //  * **Description:**
-        //  * Subtract 1 from the number or optional amount
-        //  * @description     
-        //  * @param {number} [amount] - The amount to add.
-        //  * @return {number | null} - The result of the subtraction.
-        //  * @example newNumber = 44
-        //  * @example result = newNumber.minus(2);
-        //  * @example        
-        //  * print(result); // Outputs: 42
+        //  **Description:**
+        //  Subtract 1 from the number or optional amount
+        //  @description     
+        //  @param {number} [amount] - The amount to add.
+        //  @return {number | null} - The result of the subtraction.
+        //  @example newNumber = 44
+        //  @example 
+        //  @example result = newNumber.minus(2);
+        //  @example        
+        //  print(result); // Outputs: 42
     number.minus = function(amount = 1)
         if not typeof(amount) == "number" then return null
             return self - amount
@@ -602,15 +616,16 @@ end function
         //  * @enduml   
         // ANCHOR number.diff  
 
-        //  * **Description:**
-        //  * Return difference to number
-        //  * @param {number} amount
-        //  * @return {number | null} - The result of the subtraction.
-        //  * @example newNumber = 44
-        //  * @example newNumber2 = 2         
-        //  * @example result = newNumber.diff(newNumber2)
-        //  * @example
-        //  * print(result); // Outputs: 42          
+        //  **Description:**
+        //  Return difference to number
+        //  @param {number} amount
+        //  @return {number | null} - The result of the subtraction.
+        //  @example newNumber = 44
+        //  @example newNumber2 = 2   
+        //  @example       
+        //  @example result = newNumber.diff(newNumber2)
+        //  @example
+        //  print(result); // Outputs: 42          
     number.diff = function(distanceTo = 0)
         if not typeof(distanceTo) == "number" then return null
             return abs(self - distanceTo)
@@ -630,15 +645,16 @@ end function
         //  * @enduml 
         // ANCHOR number.greater_than    
 
-        //  * **Description:**
-        //  * Check if number is greater than provided number
-        //  * @param {number} isGreater
-        //  * @return {bool number | null} - The result of the subtraction.
-        //  * @example myNumber = 42;
-        //  * @example myNumber2 = 100;
-        //  * @example result = newNumber.greater_than(myNumber2);
-        //  * @example        
-        //  * print(result); // Outputs: 0
+        //  **Description:**
+        //  Check if number is greater than provided number
+        //  @param {number} isGreater
+        //  @return {bool number | null} - The result of the subtraction.
+        //  @example myNumber = 42;
+        //  @example myNumber2 = 100;
+        //  @example 
+        //  @example result = newNumber.greater_than(myNumber2);
+        //  @example        
+        //  print(result); // Outputs: 0
     number.greater_than = function(isGreater)
         if not typeof(isGreater) == "number" then return null
             if isGreater > self then return true
@@ -657,15 +673,16 @@ end function
         //  * @enduml 
         // ANCHOR number.lesser_than  
         
-        //  * **Description:**
-        //  * Check if number is lesser than provided number   
-        //  * @param {number} amount
-        //  * @return {number [0 or 1] | null} - The result of the subtraction.
-        //  * @example myNumber = 42;
-        //  * @example myNumber2 = 100;
-        //  * @example result = newNumber.lesser_than(myNumber2);
-        //  * @example
-        //  * print(result); // Outputs: 1
+        //  **Description:**
+        //  Check if number is lesser than provided number   
+        //  @param {number} amount
+        //  @return {number [0 or 1] | null} - The result of the subtraction.
+        //  @example myNumber = 42;
+        //  @example myNumber2 = 100;
+        //  @example 
+        //  @example result = newNumber.lesser_than(myNumber2);
+        //  @example
+        //  print(result); // Outputs: 1
     number.lesser_than = function(isLesser)
         if not typeof(isLesser) == "number" then return null
             if isLesser < self then return true
@@ -684,14 +701,15 @@ end function
         //  * @enduml        
         // ANCHOR number.random_from
 
-        //  * **Description:**
-        //  * Generate a random number from 0 to number or optional minimum
-        //  * @param {number} [min]
-        //  * @return {number | null} - The result of the subtraction.
-        //  * @example myNumber = 100;
-        //  * @example result = myNumber.random_from(50);
-        //  * @example
-        //  * print(result); // Outputs: {rnd:50-100}
+        //  **Description:**
+        //  Generate a random number from 0 to number or optional minimum
+        //  @param {number} [min]
+        //  @return {number | null} - The result of the subtraction.
+        //  @example myNumber = 100;
+        //  @example 
+        //  @example result = myNumber.random_from(50);
+        //  @example
+        //  print(result); // Outputs: {rnd:50-100}
     number.random_from = function(min = 0)
         if not typeof(min) == "number" then return null
             max = self
@@ -714,13 +732,14 @@ end function
         //  * @enduml        
         // ANCHOR list.trim
 
-        //  * **Description:**
-        //  * Trims a <list>
-        //  * @return {string} 
-        //  * @example myList = ["","","cat","dog",""];
-        //  * @example result = myList.trim
-        //  * @example
-        //  * print(result); // Outputs: ["cat","dog"]
+        //  **Description:**
+        //  Trims a <list>
+        //  @return {string} 
+        //  @example myList = ["","","cat","dog",""];
+        //  @example 
+        //  @example result = myList.trim
+        //  @example
+        //  print(result); // Outputs: ["cat","dog"]
 list.trim = function()
 	while not self[self.len - 1].len > 0
         self.remove(self.len - 1)
@@ -744,15 +763,15 @@ end function
         //  * @enduml        
         // ANCHOR list.print
 
-        //  * **Description:**
-        //  * Prints a list
-        //  * @return {void} 
-        //  * @example myList = ["cat","dog"]
-        //  * @example myList.print
-        //  * @example
-        //  * @example // Outputs:
-        //  * @example      cat
-        //  * @example      dog
+        //  **Description:**
+        //  Prints a list
+        //  @return {void} 
+        //  @example myList = ["cat","dog"]
+        //  @example myList.print
+        //  @example
+        //  @example // Outputs:
+        //  @example      cat
+        //  @example      dog
 list.print = function(seperator = char(10))
     printString = split(self, seperator)
     print printString
