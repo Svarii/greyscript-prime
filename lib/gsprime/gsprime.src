@@ -238,7 +238,7 @@
         //  * entity StringObject
         //  * control ".remove_char_first" as remove_char_first
         //  * StringObject -> remove_char_first : string
-        //  * remove_char_first -> StringObject : strin
+        //  * remove_char_first -> StringObject : tring
         //  * footer
         //  * string.remove_char_first
         //  * endfooter 
