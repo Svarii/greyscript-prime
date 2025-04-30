@@ -87,6 +87,7 @@ print(typeof(portScan))
 - **`.sub`**: Apply subscript to text.
 - **`.sup`**: Apply superscript to text.
 - **`.remove_char_last`**: Remove the last character from text.
+- **`.remove_char_first`**: Remove the first character from text.
 - **`.remove_bold`**: Remove bold formatting from text.
 - **`.remove_italic`**: Remove italic formatting from text.
 - **`.remove_underline`**: Remove underline formatting.

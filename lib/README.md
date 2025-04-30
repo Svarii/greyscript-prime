@@ -21,6 +21,7 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 |                  | [`.sub`](#sub)                   | Apply subscript to text.             |
 |                  | [`.sup`](#sup)                   | Apply superscript to text.           |
 |                  | [`.remove_char_last`](#remove_char_last) | Remove the last character from text. |
+|                  | [`.remove_char_first`](#remove_char_first) | Remove the last character from text. |
 |                  | [`.remove_bold`](#remove_bold)    | Remove bold formatting from text.    |
 |                  | [`.remove_italic`](#remove_italic) | Remove italic formatting from text.  |
 |                  | [`.remove_underline`](#remove_underline) | Remove underline formatting.         |
@@ -143,6 +144,17 @@ The `.remove_char_last` method allows you to remove the last character to the gi
 newString = "Hello"
 
 print(newString.remove_char_last) // Outputs: Hell
+```
+
+### .remove_char_first
+The `.remove_char_first` method allows you to remove the last character to the given text. Example usage:
+
+![image](https://github.com/user-attachments/assets/0a870f9c-382d-41d1-a550-6a403147dbe9) <img src="https://github.com/user-attachments/assets/3a5b8ffd-1122-4811-b7df-ee09228977db" align="right">
+
+```
+newString = "Hello"
+
+print(newString.remove_char_last) // Outputs: ello
 ```
 
 ### .remove_bold
