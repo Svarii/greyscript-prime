@@ -1,37 +1,4 @@
-//GreyScript Plus version 1.0a by Svarii
-//START Extended string object methods
-        // * @startyaml
-        // * string : " [mutate <b>string</b>] "
-        // * .bold: "//<b>//string</b>"
-        // * .italic: "//<i>//string</i>"
-        // * .underline: "//<u>//string</u>"
-        // * .strike: "//<s>//string</s>"
-        // * .sup: "//<sup>//string</sup>"
-        // * .sub: "//<sub>//string</sub>"
-        // * .mark: "//<mark>//string</mark>"
-        // * .remove_character_last: "Removes last character"
-        // * .remove_bold: "<s>//<b>//</s>string<s></b></s>"
-        // * .remove_italic: "<s>//<i>//</s>string<s></i></s>"
-        // * .remove_underline: "<s>//<u>//</s>string<s></u></s>"
-        // * .remove_strike: "<s>//<s>//</s>string<s></s></s>"
-        // * .remove_sup: "<s>//<sup>//</s>string<s></sup></s>"
-        // * .remove_sub: "<s>//<sub>//</s>string<s></sub></s>"
-        // * .remove_mark: "<s>//<mark>//</s>string<s></mark></s>"        
-        // * .extract_between: "Extract String from String"
-        // * .format: "String Interpolation" 
-        // * @endyaml
-//END Extended string object methods
-
-        // * @startyaml
-        // * number : " [calculate <b>number</b>] "
-        // * .plus(x): "adds x=1"
-        // * .minus(x): "subtract x=1"
-        // * .diff(x): "distance to x=0"
-        // * .greater_than: "true / false"
-        // * .lesser_than: "true / false"
-        // * .random_from(min=0): random in range
-        // * @endyaml
-
+//GreyScript Prime version 0.1a by Svarii
     //@name color
         //  * @startuml        
         //  *   entity StringObject
@@ -264,9 +231,31 @@
         return slice(self, 0, (self.len - 1))
     end function
 
+    //@name remove_char_first
+        //  *
+        //  * @uml
+        //  * @startuml
+        //  * entity StringObject
+        //  * control ".remove_char_first" as remove_char_first
+        //  * StringObject -> remove_char_first : string
+        //  * remove_char_first -> StringObject : strin
+        //  * footer
+        //  * string.remove_char_first
+        //  * endfooter 
+        //  * @enduml        
+        // ANCHOR string.remove_char_first
+
+        //  * **Description:**
+        //  * Remove the first character of the given text.
+        //  *
+        //  * @return {string}
+        //  * @example newString = "Hello"      
+        //  * @example result = newString.remove_char_first
+        //  * @example          
+        //  * print(result); // Outputs: ello
     string.remove_char_first = function()
         return slice(self, 1, (self.len))
-    end function    
+    end function
 
     //@name remove_bold
         //  *
@@ -767,13 +756,4 @@ end function
 list.print = function(seperator = char(10))
     printString = split(self, seperator)
     print printString
-end function
-
-list.is_match = function(searchStr)
-	for device in self
-		if device.is_match(searchStr) then
-			return indexOf(self, device)
-		end if
-	end for
-    return null
 end function

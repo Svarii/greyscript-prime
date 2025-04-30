@@ -86,18 +86,40 @@ program_name = function()
 	return trim(splitVal[0])
 end function
 
-is_null = function (testObj, failType = "return", failStr = "")
+
+// * **Description:**
+// Checks if object is null, if null, print / return / exit options
+// @param {number} signalStrength - The name of the library to load.
+// @return {true | false} calcACK
+// @example is_null(testObj, "r")  //If not is_null(testObj) return false else true
+// @example is_null(testObj, "p-r", "error: testObj is null")  //If not is_null(testObj) print error message and return false else true
+// @example is_null(testObj, "e")  //If is_null(testObj) //exits program if testObj is null
+// @example is_null(testObj, "e", "Critical Error.  Terminating Program")  //If is_null(testObj) //exits program if testObj is null with error message
+is_null = function (testObj, failType = "r", failStr = "")
+failOptions = split("failType", "-")
+locals.failPrint = false
+locals.failReturn = false
+locals.failExit = false
+	for option in failOptions
+		if option == "p" then locals.failPrint true
+		if option == "r" then locals.failReturn true
+		if option == "e" then locals.failExit true
+	end for
 	if testObj == null then
-		if failType == "exit" then
-			exit failString		
-		end if
-		if failType == "print" then
+		if failType == "p" then
 			print failString
-		end if
-		if failType == "return" then
+		end if		
+		if failType == "r" then
 			return true
+		end if		
+		if failType == "e" then
+			exit failString		
+		end if		
+		if failType == "r" then
+			return false
+		else
+			return null
 		end if
-    if failType == "return" then return false
 	end if
 end function
 
@@ -116,6 +138,15 @@ network_device_list = function(user = "", pass = "")
 	return networkDeviceList
 end function
 
+
+// * **Description:**
+// Checks Types and specifies on-fail action
+// @param {number} signalStrength - The name of the library to load.
+// @return {number} calcACK
+// @example is_type(myObject, "cryptoLib")  //If not typeof(cryptoLib) return false else true
+// @example is_type(myObject, "metaxploitLib", "exit") //exit the program on failure to match
+// @example is_type(myObject, "aptclientLib", "exit", "Unable to to load aptclientLib.so") //exit with error message
+// @example is_type(myObject, "SystemObject", "print") //print result as string
 is_type = function(Object, ObjectType, failType = "return", failStr = "")
 	if failType == "return" then
 		if not typeof(Object) == ObjectType then return false
@@ -125,4 +156,18 @@ is_type = function(Object, ObjectType, failType = "return", failStr = "")
 		if not typeof(Object) == ObjectType then exit failStr
 		return true
 	end if
+	if failType == "print" then
+		if not typeof(Object) == ObjectType then print "false"; exit
+	end if	
+end function
+
+// * **Description:**
+// Caculates the recommended amount of ACKs to collect
+// @param {number} signalStrength - The name of the library to load.
+// @return {number} calcACK
+// @example reqACK = calcACK(6)
+// @example print(reqACK) // Output: 50000
+calcACK = function(signalStrength = 1)
+    if signalStrength <= 0 or signalStrength > 100 then return null
+    return ceil(300000 / signalStrength)
 end function

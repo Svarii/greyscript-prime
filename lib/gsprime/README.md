@@ -6,9 +6,7 @@ GreyScript Prime is an extension for **Grey Script** that adds additional method
 
 Limited custom formatting of DocBlocks and Plant UML allow for insertion to GreyScript Compiler.
 ***
-# GreyScript Prime ![Static Badge](https://img.shields.io/badge/version-0.1a-red)
-
-# 📄 Methods Overview
+# 📄 GreyScript Prime ![Static Badge](https://img.shields.io/badge/version-0.1a-red)
 
 | Category         | Method                      | Description                          |
 |------------------|-----------------------------|--------------------------------------|
@@ -38,7 +36,7 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 |                  | [`.random_from(number)`](#random_from) | Generate a random number from 0 (or number) to number.            |
 | **List**         | [`.trim`](#trim)             | Removes empty list items from list ends             |
 |                  | [`.print`](#print)             | Loops through a list and prints each item             |
-
+---
 ## stringMethods ![Static Badge](https://img.shields.io/badge/method-string-green)
   
 ### .color
