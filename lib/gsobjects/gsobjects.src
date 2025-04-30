@@ -12,13 +12,14 @@
 	//  * }
 	//  * @endum  
 
-	//  * **Description:**
-	//  * Generates an object that contains a shell and computer object
-	//  * @return {SystemObject} - System Object {.shell and .computer}
-	//  * @example terminal = get_system_object
-	//  * @example print typeof(terminal)  //Outputs: SystemObject
-    //  * @example	print terminal.computer.get_name  //Outputs: The name of the computer
-    //  * @example print terminal.shell.launch("ls")  //Outputs: launches ls	
+	//  **Description:**
+	//  Generates an object that contains a shell and computer object
+	//  @return {SystemObject} - System Object {.shell and .computer}
+	//  @example terminal = get_system_object
+	//  @example print typeof(terminal)  //Outputs: SystemObject
+	//  @example 
+    //  @example	print terminal.computer.get_name  //Outputs: The name of the computer
+    //  @example print terminal.shell.launch("ls")  //Outputs: launches ls	
 	get_system_object = function(user = "", password = "")
 		System = {"shell":null, "computer":null}
 			terminal = new System
@@ -201,15 +202,14 @@
 //
 // @enduml
 
-//  * **Description:**
-//  * Generates an object that contains slots for ports to carry info.
-//  *
-//  * @return {PortMemory} - System Object {.shell and .computer}
-//  * @example
-//  * portScan = get_memory_portscan
-//  * @example
-//  * print typeof(portScan)  //Outputs: PortMemory      
-//  *
+//  **Description:**
+//  Generates an object that contains slots for ports to carry info.
+//  @return {PortMemory} - System Object {.shell and .computer}
+//  @example
+//  portScan = get_memory_portscan
+//  @example 
+//  @example
+//  print typeof(portScan)  //Outputs: PortMemory
 get_memory_portscan = function()
     activeUsers = {"admin": null, "user": null}
     extendedPortInfo = {"port_forwards": null, "registered_users": null, "gateways_connected": null, "active_users": null}

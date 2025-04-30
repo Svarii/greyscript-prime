@@ -61,11 +61,7 @@ load_lib = function(libName = "metaxploit.so", libDir = "/lib", libType ="")
         end if
 end function
 
-
-// * **Description:**
-// Loads a library from the lib directory, a specified directory, optionally verify type
-
-// * **Description:**
+// **Description:**
 // Specifies Usage Information and number of required paramters.
 // 
 // @param {string} usage - The name of the library to load.
@@ -80,12 +76,17 @@ force_params = function(usage, numReqParams)
     if params.len > numReqParams then exit usage + "{Too many paramters}"
 end function
 
-program_name = function()
+// **Description:**
+// Gets name of program *{self}*
+// @example
+// @return {void}
+// @example
+// force_params("myApp [ipAddress] [port#]", 2)
+app_name = function()
 	splitVal = program_path.split("/")
 	splitVal.reverse
 	return trim(splitVal[0])
 end function
-
 
 // * **Description:**
 // Checks if object is null, if null, print / return / exit options
@@ -123,12 +124,8 @@ locals.failExit = false
 	end if
 end function
 
-program_name = function()
-	splitVal = program_path.split("/")
-	splitVal.reverse
-	return trim(splitVal[0])
-end function
-
+// * **Description**
+// Returns Network devices in a list
 network_device_list = function(user = "", pass = "")
 	networkDevices = split(get_shell(user,pass).host_computer.network_devices, char(10))
 	networkDeviceList = []
@@ -166,6 +163,7 @@ end function
 // @param {number} signalStrength - The name of the library to load.
 // @return {number} calcACK
 // @example reqACK = calcACK(6)
+// @example
 // @example print(reqACK) // Output: 50000
 calcACK = function(signalStrength = 1)
     if signalStrength <= 0 or signalStrength > 100 then return null
