@@ -146,15 +146,16 @@ newString = "Hello"
 print(newString.remove_char_last) // Outputs: Hell
 ```
 
+
 ### .remove_char_first
 The `.remove_char_first` method allows you to remove the last character to the given text. Example usage:
 
-![image](https://github.com/user-attachments/assets/0a870f9c-382d-41d1-a550-6a403147dbe9) <img src="https://github.com/user-attachments/assets/3a5b8ffd-1122-4811-b7df-ee09228977db" align="right">
+![image](https://github.com/user-attachments/assets/5eeaf542-d9bf-4426-a506-5dd3a748a9ac) <img src="https://github.com/user-attachments/assets/fa766c6c-9d2f-4d65-8c02-afd8ee1b914f" align="right">
 
 ```
 newString = "Hello"
 
-print(newString.remove_char_last) // Outputs: ello
+print(newString.remove_char_first) // Outputs: ello
 ```
 
 ### .remove_bold
