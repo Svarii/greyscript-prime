@@ -379,6 +379,15 @@ lib = load_lib("metaxploit.so", "/lib", "MetatxploitLib");
 ![image](https://github.com/user-attachments/assets/99db6c6a-6a90-415e-9c64-a55e6c6840d5)
 
 
+#Additional Functions
+######TODO: Detailed Documentation
+- **`force_params(usage, numReqParams)`**: Force paramater usage and add help 
+- **`app_name()`**: Gets name of program {self}
+- **`is_null()`**: Checks if object is null; if null, print / return / exit options
+- **`is_type()`**: Checks Types and specifies on-fail action
+- **`network_device_list()`**: Returns Network devices in a list
+- **`calcACK()`**: Caculates the recommended amount of ACKs to collect
+
 ---
 # 📄 Class Overview
 ## SystemObject

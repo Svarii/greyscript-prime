@@ -78,10 +78,9 @@ end function
 
 // **Description:**
 // Gets name of program *{self}*
-// @example
 // @return {void}
 // @example
-// force_params("myApp [ipAddress] [port#]", 2)
+// programName = app_name
 app_name = function()
 	splitVal = program_path.split("/")
 	splitVal.reverse
@@ -89,7 +88,7 @@ app_name = function()
 end function
 
 // * **Description:**
-// Checks if object is null, if null, print / return / exit options
+// Checks if object is null; if null, print / return / exit options
 // @param {number} signalStrength - The name of the library to load.
 // @return {true | false} calcACK
 // @example is_null(testObj, "r")  //If not is_null(testObj) return false else true
@@ -134,7 +133,6 @@ network_device_list = function(user = "", pass = "")
 	end for
 	return networkDeviceList
 end function
-
 
 // * **Description:**
 // Checks Types and specifies on-fail action
