@@ -18,7 +18,7 @@
 ### Key Features
 
 - **Extended String Manipulation**: Apply formatting like color, bold, italic, underline, and more directly to your strings.
-- **Advanced Number Operations**: Perform mathematical computations with ease using methods like `.plus`, `.minus`, `.diff`, etc.
+- **Advanced Number Operations**: Perform mathematical computations with ease using methods like `.plus`, `.minus`, `.diff`, `.multiply`, etc.
 - **List Utilities**: Trim lists, print contents, and manipulate list items efficiently.
 - **Custom Classes**: Access SystemObject and PortMemory objects.
 - **Enhanced Documentation**: Extensive documentation with custom formatting (to allow insertion into compiler) of DocBlocks and Plant UML to enchance coding environment.
