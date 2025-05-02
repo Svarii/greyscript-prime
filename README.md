@@ -124,6 +124,7 @@ print(typeof(portScan))
 - **`is_type()`**: Checks Types and specifies on-fail action
 - **`network_device_list()`**: Returns Network devices in a list
 - **`calcACK()`**: Caculates the recommended amount of ACKs to collect
+- **`boolToText()`**: Return string true or false representing boolean
 
 ### Object Methods
 
