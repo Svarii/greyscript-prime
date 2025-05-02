@@ -106,7 +106,7 @@
     end function
 
     //@name strike
-            //  *
+        //  *
         //  * @uml
         //  * @startuml
         //  * entity StringObject
@@ -211,7 +211,7 @@
     string.sup = function()
         return "<sup>" + self + "</sup>"    
     end function
-print 
+
     //@name remove_char_last
         //  *
         //  * @uml
@@ -532,16 +532,18 @@ print
         //  @example sentence = variableString.format(animalsList)
         //  @example
         //  print(sentence); // Outputs: The quick brown fox jumps over the lazy dog
-string.format = function(args, delim="%s")
-    locals.splitStr = self.split(delim);
-    locals.recompStr = ""
-    for i in range(0, args.len()-1)
-	    locals.recompStr = locals.recompStr + locals.splitStr[i] + args[i]  
-    end for
-        locals.recompStr = locals.recompStr + locals.splitStr[locals.splitStr.len()-1]
-    return locals.recompStr
-end function
+    string.format = function(args, delim="%s")
+        locals.splitStr = self.split(delim);
+        locals.recompStr = ""
+        for i in range(0, args.len()-1)
+            locals.recompStr = locals.recompStr + locals.splitStr[i] + args[i]  
+        end for
+            locals.recompStr = locals.recompStr + locals.splitStr[locals.splitStr.len()-1]
+        return locals.recompStr
+    end function
+
 //Extended number object methods
+    //@name plus
         //  *
         //  * @uml
         //  * @startuml
@@ -594,13 +596,79 @@ end function
         //  @return {number | null} - The result of the subtraction.
         //  @example newNumber = 44
         //  @example 
-        //  @example result = newNumber.minus(2);
+        //  @example result = newNumber.minus(2)
         //  @example        
         //  print(result); // Outputs: 42
     number.minus = function(amount = 1)
         if not typeof(amount) == "number" then return null
             return self - amount
     end function
+
+    //@name multiply
+        //  *
+        //  * @uml
+        //  * @startuml
+        //  * entity NumberObject
+        //  * control ".multiply" as multiply
+        //  * NumberObject -> multiply : number
+        //  * multiply -> NumberObject : (number * 2)
+        //  * NumberObject -> multiply : number(6)
+        //  * multiply -> NumberObject : (number * 6)        
+        //  * footer
+        //  * number.multiply
+        //  * endfooter         
+        //  * @enduml         
+        // ANCHOR number.multiply  
+
+        //  **Description:**
+        //  Multiply 2 from the number or optional amount
+        //  @description     
+        //  @param {number} [amount] - The amount to multiply by.
+        //  @return {number | null} - The result of the multiplication.
+        //  @example newNumber = 22
+        //  @example 
+        //  @example result = newNumber.multiply
+        //  @example        
+        //  print(result); // Outputs: 42
+        //  @example result2 = newNumber.multiply(3)
+        //  @example        
+        //  print(result2); // Outputs: 66        
+    number.multiply = function(amount = 2)
+        if not typeof(amount) == "number" then return null
+            return self * amount
+    end function
+
+    //@name divide
+        //  *
+        //  * @uml
+        //  * @startuml
+        //  * entity NumberObject
+        //  * control ".divide" as divide
+        //  * NumberObject -> divide : number
+        //  * divide -> NumberObject : (number * 2)
+        //  * NumberObject -> divide : number(6)
+        //  * divide -> NumberObject : (number * 6)        
+        //  * footer
+        //  * number.divide
+        //  * endfooter         
+        //  * @enduml         
+        // ANCHOR number.divide  
+
+        //  **Description:**
+        //  Divide 2 from the number or optional amount
+        //  @description     
+        //  @param {number} [amount] - The amount to divide by.
+        //  @return {number | null} - The result of the division.
+        //  @example newNumber = 84
+        //  @example 
+        //  @example result = newNumber.divide
+        //  @example        
+        //  print(result); // Outputs: 42       
+    number.divide = function(amount = 2)
+        if not amount == 0 then return null
+        if not typeof(amount) == "number" then return null
+            return self * amount
+    end function    
 
     //@name diff
         //  *
@@ -717,9 +785,6 @@ end function
     end function
 
 //LIST FUNCTIONS
-//.trim removes zero length list items at start and end
-
-
     //@name trim
         //  * @startuml
         //  * entity ListObject
@@ -740,15 +805,15 @@ end function
         //  @example result = myList.trim
         //  @example
         //  print(result); // Outputs: ["cat","dog"]
-list.trim = function()
-	while not self[self.len - 1].len > 0
-        self.remove(self.len - 1)
-    end while
-	while not self[0].len > 0
-        self.remove(0)
-    end while
-	return self
-end function
+    list.trim = function()
+        while not self[self.len - 1].len > 0
+            self.remove(self.len - 1)
+        end while
+        while not self[0].len > 0
+            self.remove(0)
+        end while
+        return self
+    end function
 
     //@name print
         //  * @startuml
@@ -772,7 +837,7 @@ end function
         //  @example // Outputs:
         //  @example      cat
         //  @example      dog
-list.print = function(seperator = char(10))
-    printString = split(self, seperator)
-    print printString
-end function
+    list.print = function(seperator = char(10))
+        printString = split(self, seperator)
+        print printString
+    end function
