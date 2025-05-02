@@ -167,3 +167,20 @@ calcACK = function(signalStrength = 1)
     if signalStrength <= 0 or signalStrength > 100 then return null
     return ceil(300000 / signalStrength)
 end function
+
+// **Description:**
+// converts a boolean value into a text "true" or "false"
+// @param {number} boolValue - The name of the library to load.
+// @return {string} treu / false
+// @example trueOrFalse = boolToText(0)
+// @example print(trueOrFalse) // Output: false
+// @example
+// @example trueOrFalse = boolToText(1)
+// @example print(trueOrFalse) // Output: true
+boolToText = function(boolVal)
+	if boolVal < 0 then return null
+	if boolVal > 1 then return null
+	if boolVal == 1 then return "true"
+	if boolVal == 0 then return "false"
+return null
+end function
