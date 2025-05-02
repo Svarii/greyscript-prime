@@ -109,6 +109,8 @@ print(typeof(portScan))
 - **`.greater_than(number)`**: Check if number is greater.
 - **`.lesser_than(number)`**: Check if number is lesser.
 - **`.random_from(number)`**: Generate a random number from 0 (or number) to number.
+- **`.multiply(number)`**: Calculate the multiple.
+- **`.divide(number)`**: divide by number.
 
 ### List Methods
 
