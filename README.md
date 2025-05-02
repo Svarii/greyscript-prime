@@ -48,7 +48,6 @@ To install GreyScript Prime, follow these steps:
 2. Install the recommended VSCode extensions:
 
    - [Greybel VS](https://marketplace.visualstudio.com/items?itemName=ayecue.greybel-vs)
-   - [PHP Doc Extended](https://marketplace.visualstudio.com/items?itemName=neilbrayfield.php-docblocker)
    - [Markdown Preview Enhanced with litvis](https://marketplace.visualstudio.com/items?itemName=gicentre.markdown-preview-enhanced-with-litvis)
    - [Plant UML](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml)
    - [Comment Anchors](https://marketplace.visualstudio.com/items?itemName=ExodiusStudios.comment-anchors)
@@ -60,7 +59,7 @@ To install GreyScript Prime, follow these steps:
 Import GreyScript Prime into your GreyScript projects to start using the extended methods. Here's a quick example:
 
 ```greyscript
-import_code("/lib/gsplus.so")";
+import_code("/lib/gsprime.so")";
 import_code("/lib/gslibs.so")";
 import_code("/lib/gsobjects.so")";
 
