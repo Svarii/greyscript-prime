@@ -1,6 +1,6 @@
 
 //v1.0 by Svarii
-//@description
+//@name SystemObject
 	//  * @startuml
 	//  * class SystemObject {
 	//  * **terminal**
@@ -20,213 +20,214 @@
 	//  @example 
     //  @example	print terminal.computer.get_name  //Outputs: The name of the computer
     //  @example print terminal.shell.launch("ls")  //Outputs: launches ls	
-	get_system_object = function(user = "", password = "")
-		System = {"shell":null, "computer":null}
-			terminal = new System
-			if not user == "" then
-				terminal.shell = get_shell(user, password)
-			else
-				terminal.shell = get_shell
-			end if
-			if not terminal.shell == null then
-				terminal.computer = terminal.shell.host_computer
-				terminal.classID = "SystemObject"
-				return terminal
-			end if
-			return null
-	end function
+get_system_object = function(user = "", password = "")
+	System = {"shell":null, "computer":null}
+		terminal = new System
+		if not user == "" then
+			terminal.shell = get_shell(user, password)
+		else
+			terminal.shell = get_shell
+		end if
+		if not terminal.shell == null then
+			terminal.computer = terminal.shell.host_computer
+			terminal.classID = "SystemObject"
+			return terminal
+		end if
+		return null
+end function
 
-// @startuml
-// !define FILE <&file>
-// !define FOLDER <&folder>
-// !define WARN <&warning>
-// !define PLUS <&plus>
-// !define MINUS <&minus>
-// !define CLOUD <&cloud>
-// !define MOBILE <&phone>
-// !define INFO <&info>
-// !define STAR <&star>
-// !define DOCUMENT <&document>
-// !define CALENDAR <&calendar>
-// !define MAP <&map>
-// !define LIST <&list>
-//
-// legend top
-// # LIST: list			MAP: map				STAR: common port
-// # INFO: variable		PLUS: uncommon port		WARN: special port
-// end legend
-//
-// class ActiveUsers {
-//   |_ INFO admin [number] INFO
-//   |_ INFO users [number] INFO
-// }
-//
-// class ExtendedPortInfo {
-//   |_ INFO port_forwards INFO
-//   |_ INFO registered_users INFO
-//   |_ INFO gateways_connected INFO
-//   |_ MAP active_users
-// }
-//
-// class PortInfo {
-//   |_ INFO status [<color:red>x</color> / <color:green>✓</color>] INFO
-//   |_ INFO service_name INFO
-//   |_ INFO service_version INFO
-//   |_ INFO lan_ip INFO
-//   |_ MAP leak
-// }
-//
-// entity other_ports{
-// <-( **list** [**string**]
-//   LIST additional ports LIST
-// }
-// entity status{
-// <-( **string**
-//   -open
-//   -closed
-// }
-// entity port_forwards{
-// 	<-( **number**
-// 	#number
-// 	}	
-// entity registered_users{
-// 	<-( **number**
-// 	#number
-// }
-// entity gateways_connected{
-// 	<-( **number**
-// 	#number
-// 	}	
-// entity service_name{
-//   <-( **string**
-//   -name
-// }
-// entity service_version{
-//   <-( **string**
-//   -version
-// }
-// entity admin{
-//   <-( **number**
-//   #number
-// }
-// entity users{
-//   <-( **number**
-//   #number
-// }
-// entity lan_ip{
-//   <-( **string**
-//   -string
-// }
-// class PortScanner {
-//   |_ WARN 0
-//   	|_ MAP info
-//   |_ STAR 21
-//   	|_ MAP info
-//   |_ STAR 22
-//   	|_ MAP info
-//   |_ PLUS 23
-//   	|_ MAP info
-//   |_ STAR 25
-//   	|_ MAP info
-//   |_ STAR 80
-//   	|_ MAP info
-//   |_ PLUS 110
-//   	|_ MAP info
-//   |_ PLUS 141
-//   	|_ MAP info
-//   |_ PLUS 443
-//   	|_ MAP info
-//   |_ PLUS 6667
-//   	|_ MAP info
-//   |_ STAR 8080
-//   	|_ MAP info
-//   |_ PLUS 1222
-//   	|_ MAP info
-//   |_ PLUS 1337
-//   	|_ MAP info
-//   |_ STAR 1542
-//   	|_ MAP info
-//   |_ STAR 3306
-//   	|_ MAP info
-//   |_ STAR 3307
-//   	|_ MAP info
-//   |_ PLUS 33007
-//   	|_ MAP info
-//   |_ PLUS 37777
-//   	|_ MAP info
-//   |_ PLUS 8443
-//   	|_ MAP info
-//   |_ PLUS 31337
-//   	|_ MAP info
-//   |_ LIST other_ports INFO
-// }
-//
-// PortInfo::extended o-> ExtendedPortInfo::activeUsers : .leak
-// ExtendedPortInfo::activeUsers o-> ActiveUsers : .active_users
-// PortInfo::status o--> status : .status
-// PortInfo::service_name o--> service_name : .service_name
-// PortInfo::service_version o--> service_version : .service_version
-// PortInfo::lan_ip o--> lan_ip : .lan_ip
-// PortScanner::other_ports o---> other_ports : .other_ports
-// ExtendedPortInfo::port_forwards o---> port_forwards : .port_forwards
-// ExtendedPortInfo::registered_users o---> registered_users : .registered_usered
-// ExtendedPortInfo::gateways_connected o---> gateways_connected : .gateways_connected
-// ActiveUsers::admin o--> admin : .admin
-// ActiveUsers::users o--> users : .users
-//
-// PortScanner::0-PortInfo:["0"].info
-// PortScanner::21-PortInfo:["21"].info
-// PortScanner::22-PortInfo:["22"].info
-// PortScanner::23-PortInfo:["23"].info
-// PortScanner::25-PortInfo:["25"].info
-// PortScanner::80-PortInfo:["80"].info
-// PortScanner::110-PortInfo:["110"].info
-// PortScanner::141-PortInfo:["141"].info
-// PortScanner::443-PortInfo:["443"].info
-// PortScanner::6667-PortInfo:["6667"].info
-// PortScanner::8080-PortInfo:["8080"].info
-// PortScanner::1222-PortInfo:["1222"].info
-// PortScanner::1337-PortInfo:["1337"].info
-// PortScanner::1542-PortInfo:["1542"].info
-// PortScanner::3306-PortInfo:["3306"].info
-// PortScanner::3307-PortInfo:["3307"].info
-// PortScanner::333007-PortInfo:["333007"].info
-// PortScanner::37777-PortInfo:["37777"].info
-// PortScanner::8443-PortInfo:["8443"].info
-// PortScanner::31337-PortInfo:["31337"].info
-//
-// note right of ExtendedPortInfo
-// metaxploit.so required
-// end note
-//
-//
-// @enduml
+//@name PortObject
+	// @startuml
+	// !define FILE <&file>
+	// !define FOLDER <&folder>
+	// !define WARN <&warning>
+	// !define PLUS <&plus>
+	// !define MINUS <&minus>
+	// !define CLOUD <&cloud>
+	// !define MOBILE <&phone>
+	// !define INFO <&info>
+	// !define STAR <&star>
+	// !define DOCUMENT <&document>
+	// !define CALENDAR <&calendar>
+	// !define MAP <&map>
+	// !define LIST <&list>
+	//
+	// legend top
+	// # LIST: list			MAP: map				STAR: common port
+	// # INFO: variable		PLUS: uncommon port		WARN: special port
+	// end legend
+	//
+	// class ActiveUsers {
+	//   |_ INFO admin [number] INFO
+	//   |_ INFO users [number] INFO
+	// }
+	//
+	// class ExtendedPortInfo {
+	//   |_ INFO port_forwards INFO
+	//   |_ INFO registered_users INFO
+	//   |_ INFO gateways_connected INFO
+	//   |_ MAP active_users
+	// }
+	//
+	// class PortInfo {
+	//   |_ INFO status [<color:red>x</color> / <color:green>✓</color>] INFO
+	//   |_ INFO service_name INFO
+	//   |_ INFO service_version INFO
+	//   |_ INFO lan_ip INFO
+	//   |_ MAP leak
+	// }
+	//
+	// entity other_ports{
+	// <-( **list** [**string**]
+	//   LIST additional ports LIST
+	// }
+	// entity status{
+	// <-( **string**
+	//   -open
+	//   -closed
+	// }
+	// entity port_forwards{
+	// 	<-( **number**
+	// 	#number
+	// 	}	
+	// entity registered_users{
+	// 	<-( **number**
+	// 	#number
+	// }
+	// entity gateways_connected{
+	// 	<-( **number**
+	// 	#number
+	// 	}	
+	// entity service_name{
+	//   <-( **string**
+	//   -name
+	// }
+	// entity service_version{
+	//   <-( **string**
+	//   -version
+	// }
+	// entity admin{
+	//   <-( **number**
+	//   #number
+	// }
+	// entity users{
+	//   <-( **number**
+	//   #number
+	// }
+	// entity lan_ip{
+	//   <-( **string**
+	//   -string
+	// }
+	// class PortScanner {
+	//   |_ WARN 0
+	//   	|_ MAP info
+	//   |_ STAR 21
+	//   	|_ MAP info
+	//   |_ STAR 22
+	//   	|_ MAP info
+	//   |_ PLUS 23
+	//   	|_ MAP info
+	//   |_ STAR 25
+	//   	|_ MAP info
+	//   |_ STAR 80
+	//   	|_ MAP info
+	//   |_ PLUS 110
+	//   	|_ MAP info
+	//   |_ PLUS 141
+	//   	|_ MAP info
+	//   |_ PLUS 443
+	//   	|_ MAP info
+	//   |_ PLUS 6667
+	//   	|_ MAP info
+	//   |_ STAR 8080
+	//   	|_ MAP info
+	//   |_ PLUS 1222
+	//   	|_ MAP info
+	//   |_ PLUS 1337
+	//   	|_ MAP info
+	//   |_ STAR 1542
+	//   	|_ MAP info
+	//   |_ STAR 3306
+	//   	|_ MAP info
+	//   |_ STAR 3307
+	//   	|_ MAP info
+	//   |_ PLUS 33007
+	//   	|_ MAP info
+	//   |_ PLUS 37777
+	//   	|_ MAP info
+	//   |_ PLUS 8443
+	//   	|_ MAP info
+	//   |_ PLUS 31337
+	//   	|_ MAP info
+	//   |_ LIST other_ports INFO
+	// }
+	//
+	// PortInfo::extended o-> ExtendedPortInfo::activeUsers : .leak
+	// ExtendedPortInfo::activeUsers o-> ActiveUsers : .active_users
+	// PortInfo::status o--> status : .status
+	// PortInfo::service_name o--> service_name : .service_name
+	// PortInfo::service_version o--> service_version : .service_version
+	// PortInfo::lan_ip o--> lan_ip : .lan_ip
+	// PortScanner::other_ports o---> other_ports : .other_ports
+	// ExtendedPortInfo::port_forwards o---> port_forwards : .port_forwards
+	// ExtendedPortInfo::registered_users o---> registered_users : .registered_usered
+	// ExtendedPortInfo::gateways_connected o---> gateways_connected : .gateways_connected
+	// ActiveUsers::admin o--> admin : .admin
+	// ActiveUsers::users o--> users : .users
+	//
+	// PortScanner::0-PortInfo:["0"].info
+	// PortScanner::21-PortInfo:["21"].info
+	// PortScanner::22-PortInfo:["22"].info
+	// PortScanner::23-PortInfo:["23"].info
+	// PortScanner::25-PortInfo:["25"].info
+	// PortScanner::80-PortInfo:["80"].info
+	// PortScanner::110-PortInfo:["110"].info
+	// PortScanner::141-PortInfo:["141"].info
+	// PortScanner::443-PortInfo:["443"].info
+	// PortScanner::6667-PortInfo:["6667"].info
+	// PortScanner::8080-PortInfo:["8080"].info
+	// PortScanner::1222-PortInfo:["1222"].info
+	// PortScanner::1337-PortInfo:["1337"].info
+	// PortScanner::1542-PortInfo:["1542"].info
+	// PortScanner::3306-PortInfo:["3306"].info
+	// PortScanner::3307-PortInfo:["3307"].info
+	// PortScanner::333007-PortInfo:["333007"].info
+	// PortScanner::37777-PortInfo:["37777"].info
+	// PortScanner::8443-PortInfo:["8443"].info
+	// PortScanner::31337-PortInfo:["31337"].info
+	//
+	// note right of ExtendedPortInfo
+	// metaxploit.so required
+	// end note
+	//
+	//
+	// @enduml
 
-//  **Description:**
-//  Generates an object that contains slots for ports to carry info.
-//  @return {PortMemory} - System Object {.shell and .computer}
-//  @example
-//  portScan = get_memory_portscan
-//  @example 
-//  @example
-//  print typeof(portScan)  //Outputs: PortMemory
+	//  **Description:**
+	//  Generates an object that contains slots for ports to carry info.
+	//  @return {PortMemory} - System Object {.shell and .computer}
+	//  @example
+	//  portScan = get_memory_portscan
+	//  @example 
+	//  @example
+	//  print typeof(portScan)  //Outputs: PortMemory
 get_memory_portscan = function()
-    activeUsers = {"admin": null, "user": null}
-    extendedPortInfo = {"port_forwards": null, "registered_users": null, "gateways_connected": null, "active_users": null}
-    info = {"status": null, "service": null, "leak": null}
-    standardPorts = {} // Empty map to populate dynamically
+	activeUsers = {"admin": null, "user": null}
+	extendedPortInfo = {"port_forwards": null, "registered_users": null, "gateways_connected": null, "active_users": null}
+	info = {"status": null, "service": null, "leak": null}
+	standardPorts = {} // Empty map to populate dynamically
 	otherPorts = []
-    portScanner = {"standardPorts": null, "other_ports": otherPorts, "classID": "PortMemory"}
+	portScanner = {"standardPorts": null, "other_ports": otherPorts, "classID": "PortMemory"}
 	ports = ["0", "21", "22", "23", "25", "80", "110", "141", "443", "6667", "8080", "1222", "1542", "3306", "3307", "37777", "8443", "31337"]
-    for port in ports
-        ActiveUsers = new activeUsers
-        ExtendedPortInfo = new extendedPortInfo
-        ExtendedPortInfo.active_users = ActiveUsers
-        PortInfo = new info
-        PortInfo.leak = ExtendedPortInfo
-        // Nest portInfo under each port
-        standardPorts[port] = {"info": new PortInfo}
-    end for
-    portScanner.ports = standardPorts
-    return portScanner
+	for port in ports
+		ActiveUsers = new activeUsers
+		ExtendedPortInfo = new extendedPortInfo
+		ExtendedPortInfo.active_users = ActiveUsers
+		PortInfo = new info
+		PortInfo.leak = ExtendedPortInfo
+		// Nest portInfo under each port
+		standardPorts[port] = {"info": new PortInfo}
+	end for
+	portScanner.ports = standardPorts
+	return portScanner
 end function
