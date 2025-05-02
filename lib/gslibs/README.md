@@ -24,3 +24,4 @@ lib = load_lib("metaxploit.so", "/lib", "MetatxploitLib");
 - **`is_type()`**: Checks Types and specifies on-fail action
 - **`network_device_list()`**: Returns Network devices in a list
 - **`calcACK()`**: Caculates the recommended amount of ACKs to collect
+- **`boolToText()`** Convert integer boolean to text boolean

@@ -11,6 +11,10 @@
 
 ![image](https://github.com/user-attachments/assets/9436684c-d6a8-48ea-9208-4f5264fa6900)
 
+**Code Tabbed for DocBlocs Collapse**
+
+![image align=left](https://github.com/user-attachments/assets/8f3d3c97-eb65-4a79-8b49-04aa879cc5bd)![image](https://github.com/user-attachments/assets/6335055e-74fe-4154-8c62-cd46b7cd827a)
+
 ### Key Features
 
 - **Extended String Manipulation**: Apply formatting like color, bold, italic, underline, and more directly to your strings.
