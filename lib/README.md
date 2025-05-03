@@ -6,7 +6,7 @@ GreyScript Prime is an extension for **Grey Script** that adds additional method
 
 Limited custom formatting of DocBlocks and Plant UML allow for insertion to GreyScript Compiler.
 ***
-# GreyScript Prime ![Static Badge](https://img.shields.io/badge/version-0.1a-red)
+# GreyScript Prime ![Static Badge](https://img.shields.io/badge/version-0.1.0_alpha.1-red)
 
 # 📄 Methods Overview
 
