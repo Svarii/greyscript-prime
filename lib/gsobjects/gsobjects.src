@@ -36,6 +36,17 @@ get_system_object = function(user = "", password = "")
 		return null
 end function
 
+idSelf = function()
+	localRouter = get_router
+	localComputer = get_shell.host_computer
+	ipInformation = {"local_ip": localComputer.local_ip, "public_ip": localComputer.public_ip, "router_local_ip": localRouter.local_ip, "router_public_ip":localRouter.public_ip, "gateway_ip":localComputer.network_gateway}
+	ipScan = new ipInformation
+	computerInformation = {"name":localComputer.get_name, "home":home_dir, "location":program_path, "path":current_path, "user":active_user, "hasInternet":localComputer.is_network_active}
+	computerInfo = new computerInformation
+	status = {"ipInfo":ipScan, "compInfo":computerInfo}
+	return status
+end function
+
 //@name PortObject
 	// @startuml
 	// !define FILE <&file>
