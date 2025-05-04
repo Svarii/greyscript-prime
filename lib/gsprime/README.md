@@ -31,8 +31,8 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 | **Number**       | [`.plus(number)`](#plus)             | Add 1 or value to a number.             |
 |                  | [`.minus(number)`](#minus)           | Subtract 1 or a value from a number.      |
 |                  | [`.diff(number)`](#diff)             | Calculate the absolute difference.   |
-|                  | [`.divide(number)`](#divide)             | Calculate the absolute difference.   |
 |                  | [`.multiply(number)`](#multiply)             | Calculate the absolute difference.   |
+|                  | [`.divide(number)`](#divide)             | Calculate the absolute difference.   |
 |                  | [`.greater_than(number)`](#greater_than) | Check if number is greater.          |
 |                  | [`.lesser_than(number)`](#lesser_than) | Check if number is lesser.           |
 |                  | [`.random_from(number)`](#random_from) | Generate a random number from 0 (or number) to number.            |
@@ -275,6 +275,19 @@ newNumber = 44
 newNumber2 = 2
 
 result = newNumber.diff(newNumber2)
+print(result) // Outputs: 42
+```
+
+### .multiply
+The `.multiply` method multiplies the current number the given number (or 2).
+
+![image](https://github.com/user-attachments/assets/3fbe19e9-9e14-4ff7-ba69-4aeffab46735) <img src="https://github.com/user-attachments/assets/937c5ba4-d76d-4b21-9abd-882c41f7c4c2" align="right">
+
+```greyscript
+newNumber = 22
+newNumber2 = 2
+
+result = newNumber.multiply(newNumber2)
 print(result) // Outputs: 42
 ```
 
