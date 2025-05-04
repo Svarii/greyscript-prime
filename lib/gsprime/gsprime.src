@@ -645,9 +645,9 @@
         //  * entity NumberObject
         //  * control ".divide" as divide
         //  * NumberObject -> divide : number
-        //  * divide -> NumberObject : (number * 2)
-        //  * NumberObject -> divide : number(6)
-        //  * divide -> NumberObject : (number * 6)        
+        //  * divide -> NumberObject : (number / 2)
+        //  * NumberObject -> divide : number(4)
+        //  * divide -> NumberObject : (number / 4)        
         //  * footer
         //  * number.divide
         //  * endfooter         
@@ -837,6 +837,12 @@
         //  @example // Outputs:
         //  @example      cat
         //  @example      dog
+        //  @example 
+        //  @example myList = ["cat","dog"]
+        //  @example myList.print(",")
+        //  @example
+        //  @example // Outputs:
+        //  @example      cat,dog    
     list.print = function(seperator = char(10))
         printString = split(self, seperator)
         print printString
