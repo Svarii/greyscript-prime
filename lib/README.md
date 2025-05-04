@@ -298,6 +298,31 @@ result = newNumber.diff(newNumber2)
 print(result) // Outputs: 42
 ```
 
+### .multiply
+The `.multiply` method multiplies the current number the given number (or 2).
+
+![image](https://github.com/user-attachments/assets/3fbe19e9-9e14-4ff7-ba69-4aeffab46735) <img src="https://github.com/user-attachments/assets/937c5ba4-d76d-4b21-9abd-882c41f7c4c2" align="right">
+
+```greyscript
+newNumber = 22
+newNumber2 = 2
+
+result = newNumber.multiply(newNumber2)
+print(result) // Outputs: 42
+```
+
+### .divide
+The `.divide` method divides the current number by another number.  Zero division will result in null
+![image](https://github.com/user-attachments/assets/06360ef6-d285-4118-a5f3-ec8ce64730e0) <img src="https://github.com/user-attachments/assets/dd7092d6-d7d7-40af-8612-556327e7df49" align="right">
+
+```greyscript
+newNumber = 84
+newNumber2 = 2
+
+result = newNumber.divide(newNumber2)
+print(result) // Outputs: 42
+```
+
 ### .greater_than
 The `.greater_than` method checks if the current number is greater than a provided number. Returns `true` if greater, `false` otherwise.
 ![image](https://github.com/user-attachments/assets/3b71c3f3-abcd-40b9-ba6a-4f7b215e9d58) <img src="https://github.com/user-attachments/assets/b966ac53-3e88-4b53-81c4-008e45aa54ca" align="right">
