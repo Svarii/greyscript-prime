@@ -24,3 +24,21 @@ print typeof(portScan)  //Outputs: PortMemory
 ![image](https://github.com/user-attachments/assets/84f36c7e-f435-4713-9aec-151e80f58c45)
 
 
+
+
+# Local Environment Object
+<img src="https://github.com/user-attachments/assets/1cbd60c4-839a-4a6d-985e-2e63618dfc7a" align="left">
+
+```greyscript
+iScan = new idSelf
+print typeof(iScan)  //Outputs: idSelf
+	  
+print iScan.name  //Outputs: The name of the computer
+print iScan.hasInternet  //Outputs: boolean 1 or 0
+```
+
+![image](https://github.com/user-attachments/assets/f8c768e5-72f5-4d6a-b84d-9d9b035ab720)
+
+
+
+
