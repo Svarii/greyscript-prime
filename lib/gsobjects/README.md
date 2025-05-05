@@ -38,7 +38,8 @@ print iScan.name  //Outputs: The name of the computer
 print iScan.hasInternet  //Outputs: boolean 1 or 0
 ```
 
-![image](https://github.com/user-attachments/assets/f8c768e5-72f5-4d6a-b84d-9d9b035ab720)
+![image](https://github.com/user-attachments/assets/2c127c89-388b-4ba9-ba63-af96366af63a)
+
 
 
 
