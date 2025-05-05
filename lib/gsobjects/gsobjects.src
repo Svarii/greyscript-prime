@@ -48,8 +48,9 @@ end function
 	//  * 	|_ user
 	//  * 	|_ hasInternet
 	//  * |_ ipInfo
-	//  * 	|_ local_ip
-	//  * 	|_ public_ip
+	//  * 	|_ local
+	//  * 	|_ public
+	//  * 	|_ gateway
 	//  * --
 	//  //* pulls basic information on immediate enviroment
 	// //and loads into ComputerInformation Object
@@ -73,7 +74,7 @@ idSelf = function()
 	computerInfo = new ComputerInformation
 	Status = {"ipInfo":ipScan, "compInfo":computerInfo}
 	Status.classID = "idSelf"
-	return status
+	return Status
 end function
 
 //@name PortObject
