@@ -36,14 +36,43 @@ get_system_object = function(user = "", password = "")
 		return null
 end function
 
+//@name idSelf
+	//  * @startuml
+	//  * class ComputerInformation {
+	//  * **status**
+	//  * |_ compInfo
+	//  * 	|_ name
+	//  * 	|_ home
+	//  * 	|_ location
+	//  * 	|_ path
+	//  * 	|_ user
+	//  * 	|_ hasInternet
+	//  * |_ ipInfo
+	//  * 	|_ local_ip
+	//  * 	|_ public_ip
+	//  * --
+	//  //* pulls basic information on immediate enviroment
+	// //and loads into ComputerInformation Object
+	//  * }
+	//  * @endum  
+
+	//  **Description:**
+	//  Generates an object that contains basic environment information
+	//  @return {idSelf} - System Object {.shell and .computer}
+	//  @example iScan = new idSelf
+	//  @example print typeof(iScan)  //Outputs: idSelf
+	//  @example 
+    //  @example	print iScan.name  //Outputs: The name of the computer
+	//  @example	print iScan.hasInternet  //Outputs: boolean 1 or 0
 idSelf = function()
 	localRouter = get_router
 	localComputer = get_shell.host_computer
 	ipInformation = {"local_ip": localComputer.local_ip, "public_ip": localComputer.public_ip, "gateway_ip":localComputer.network_gateway}
 	ipScan = new ipInformation
-	computerInformation = {"name":localComputer.get_name, "home":home_dir, "location":program_path, "path":current_path, "user":active_user, "hasInternet":localComputer.is_network_active}
-	computerInfo = new computerInformation
-	status = {"ipInfo":ipScan, "compInfo":computerInfo}
+	ComputerInformation = {"name":localComputer.get_name, "home":home_dir, "location":program_path, "path":current_path, "user":active_user, "hasInternet":localComputer.is_network_active}
+	computerInfo = new ComputerInformation
+	Status = {"ipInfo":ipScan, "compInfo":computerInfo}
+	Status.classID = "idSelf"
 	return status
 end function
 
