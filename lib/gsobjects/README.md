@@ -27,7 +27,8 @@ print typeof(portScan)  //Outputs: PortMemory
 
 
 # Local Environment Object
-<img src="https://github.com/user-attachments/assets/1cbd60c4-839a-4a6d-985e-2e63618dfc7a" align="left">
+
+<img src="https://github.com/user-attachments/assets/8db4f6b6-7563-4821-acc5-0e26914aefba" align="left">
 
 ```greyscript
 iScan = new idSelf
