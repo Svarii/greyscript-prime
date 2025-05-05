@@ -184,3 +184,10 @@ boolToText = function(boolVal)
 	if boolVal == 0 then return "false"
 return null
 end function
+
+
+extractMailHash = function(mailPassFile)
+	accountList = split(mailPassFile, char(10))
+	firstAccountPassHash = trim(split(accountList[0], ":")[1])
+	return firstAccountPassHash
+end function
