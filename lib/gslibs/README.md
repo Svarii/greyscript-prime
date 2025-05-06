@@ -17,11 +17,10 @@ lib = load_lib("metaxploit.so", "/lib", "MetatxploitLib");
 
 ### Additional Function Methods
 
-- **`load_lib(libName, libDir, typeExpected)`**: Load a library from `/lib`.
 - **`force_params(usage, numReqParams)`**: Force paramater usage and add help 
 - **`app_name()`**: Gets name of program {self}
 - **`is_null()`**: Checks if object is null; if null, print / return / exit options
 - **`is_type()`**: Checks Types and specifies on-fail action
 - **`network_device_list()`**: Returns Network devices in a list
-- **`calcACK()`**: Caculates the recommended amount of ACKs to collect
-- **`boolToText()`** Convert integer boolean to text boolean
+- **`calc_ack()`**: Caculates the recommended amount of ACKs to collect
+- **`bool_text()`** Convert integer boolean to text boolean
