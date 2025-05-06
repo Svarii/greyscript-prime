@@ -125,8 +125,8 @@ print(typeof(portScan))
 - **`is_null()`**: Checks if object is null; if null, print / return / exit options
 - **`is_type()`**: Checks Types and specifies on-fail action
 - **`network_device_list()`**: Returns Network devices in a list
-- **`calcACK()`**: Caculates the recommended amount of ACKs to collect
-- **`boolToText()`**: Return string true or false representing boolean
+- **`calc_ack()`**: Caculates the recommended amount of ACKs to collect
+- **`bool_text()`**: Return string true or false representing boolean
 
 ### Object Methods
 
