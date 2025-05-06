@@ -37,3 +37,4 @@ force_params("myApp [ipAddress] [port#]", 2)
 - **`network_device_list()`**: Returns Network devices in a list
 - **`calc_ack()`**: Caculates the recommended amount of ACKs to collect
 - **`bool_text()`** Convert integer boolean to text boolean
+- - **`extract_mail_hash()`** Extract the mail hash from the provided mail pass file
