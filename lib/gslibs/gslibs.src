@@ -87,7 +87,7 @@ app_name = function()
 	return trim(splitVal[0])
 end function
 
-// * **Description:**
+// **Description:**
 // Checks if object is null; if null, print / return / exit options
 // @param {number} signalStrength - The name of the library to load.
 // @return {true | false} calcACK
@@ -123,7 +123,7 @@ locals.failExit = false
 	end if
 end function
 
-// * **Description**
+// **Description**
 // Returns Network devices in a list
 network_device_list = function(user = "", pass = "")
 	networkDevices = split(get_shell(user,pass).host_computer.network_devices, char(10))
@@ -134,7 +134,7 @@ network_device_list = function(user = "", pass = "")
 	return networkDeviceList
 end function
 
-// * **Description:**
+// **Description:**
 // Checks Types and specifies on-fail action
 // @param {number} signalStrength - The name of the library to load.
 // @return {number} calcACK
@@ -156,14 +156,14 @@ is_type = function(Object, ObjectType, failType = "return", failStr = "")
 	end if	
 end function
 
-// * **Description:**
+// **Description:**
 // Caculates the recommended amount of ACKs to collect
 // @param {number} signalStrength - The name of the library to load.
 // @return {number} calcACK
 // @example reqACK = calcACK(6)
 // @example
 // @example print(reqACK) // Output: 50000
-calcACK = function(signalStrength = 1)
+calc_ack = function(signalStrength = 1)
     if signalStrength <= 0 or signalStrength > 100 then return null
     return ceil(300000 / signalStrength)
 end function
@@ -177,7 +177,7 @@ end function
 // @example
 // @example trueOrFalse = boolToText(1)
 // @example print(trueOrFalse) // Output: true
-boolToText = function(boolVal)
+bool_text = function(boolVal)
 	if boolVal < 0 then return null
 	if boolVal > 1 then return null
 	if boolVal == 1 then return "true"
@@ -186,7 +186,7 @@ return null
 end function
 
 
-extractMailHash = function(mailPassFile)
+extract_mail_hash = function(mailPassFile)
 	accountList = split(mailPassFile, char(10))
 	firstAccountPassHash = trim(split(accountList[0], ":")[1])
 	return firstAccountPassHash
