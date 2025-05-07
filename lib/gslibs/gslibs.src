@@ -86,15 +86,15 @@ end function
 // Specifies Usage Information and number of required paramters.
 // 
 // @param {string} usage - The name of the library to load.
-// @param {number} numReqParams - The directory where the library is located.
+// @param {number} minReqParams - The directory where the library is located.
 // @return {void}
 // @example
 // force_params("myApp [ipAddress] [port#]", 2)
-force_params = function(usage, numReqParams)
+force_params = function(usage, minReqParams)
 	if params.len < 1 then exit usage
 	if params[0] == "-h" or params[0] == "--help" then exit usage
-	if params.len < numReqParams then exit usage
-    if params.len > numReqParams then exit usage + "{Too many paramters}"
+	if params.len < minReqParams then exit usage
+    //if params.len > minReqParams then exit usage + "{Too many paramters}"
 end function
 
 // **Description:**
