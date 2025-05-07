@@ -61,6 +61,27 @@ load_lib = function(libName = "metaxploit.so", libDir = "/lib", libType ="")
         end if
 end function
 
+// @startuml
+// !define FILE <&file>
+// !define FOLDER <&folder>
+// !define WARN <&warning>
+// !define PLUS <&plus>
+// !define MINUS <&minus>
+// !define CLOUD <&cloud>
+// !define MOBILE <&phone>
+// !define INFO <&info>
+// !define STAR <&star>
+// !define DOCUMENT <&document>
+// !define CALENDAR <&calendar>
+// !define MAP <&map>
+// !define LIST <&list>
+// entity force_params {
+//   -string [usage = "myprogram [ipAddress] [port]"]
+//   -string [numReqParams = 2]
+// }
+// force_params : force_params(usage, numReqParams)
+// @enduml
+
 // **Description:**
 // Specifies Usage Information and number of required paramters.
 // 
@@ -156,6 +177,26 @@ is_type = function(Object, ObjectType, failType = "return", failStr = "")
 	end if	
 end function
 
+// @startuml
+// !define FILE <&file>
+// !define FOLDER <&folder>
+// !define WARN <&warning>
+// !define PLUS <&plus>
+// !define MINUS <&minus>
+// !define CLOUD <&cloud>
+// !define MOBILE <&phone>
+// !define INFO <&info>
+// !define STAR <&star>
+// !define DOCUMENT <&document>
+// !define CALENDAR <&calendar>
+// !define MAP <&map>
+// !define LIST <&list>
+// entity calc_ack {
+//   -number [signalStrength]
+// }
+// calc_ack : calc_ack(signalStrength)
+// @enduml
+
 // **Description:**
 // Caculates the recommended amount of ACKs to collect
 // @param {number} signalStrength - The name of the library to load.
@@ -185,9 +226,12 @@ bool_text = function(boolVal)
 return null
 end function
 
-
 extract_mail_hash = function(mailPassFile)
 	accountList = split(mailPassFile, char(10))
 	firstAccountPassHash = trim(split(accountList[0], ":")[1])
 	return firstAccountPassHash
+end function
+
+parse_exploits = function(scanResults)
+
 end function
