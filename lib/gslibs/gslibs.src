@@ -98,8 +98,8 @@ force_params = function(usage, minReqParams)
 end function
 
 appendCSV = function(savePath, saveFile, newText)
-fileContent = ""
 	//********************************************
+	fileContent = ""
 	fileLocation = savePath + "/" + saveFile
 	//********************************************	
 	hostComputer = get_shell.host_computer
