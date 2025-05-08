@@ -97,6 +97,38 @@ force_params = function(usage, numReqParams)
     if params.len > numReqParams then exit usage + "{Too many paramters}"
 end function
 
+appendCSV = function(savePath, saveFile, newText)
+fileContent = ""
+	//********************************************
+	fileLocation = savePath + "/" + saveFile
+	//********************************************	
+	hostComputer = get_shell.host_computer
+	fileObj = hostComputer.File(fileLocation)
+	if not fileObj then
+		hostComputer.touch(savePath, saveFile)
+		fileObj = hostComputer.File(fileLocation)
+		fileObj.set_content(newText)
+		fileContent = fileObj.get_content
+		exit		
+	end if
+	//********************************************
+	//********************************************		
+	if fileObj.has_permission("r") then
+		if fileObj.has_permission("w") then
+			fileContent = fileObj.get_content
+			if fileContent == null then
+				fileObj.set_content(newText)
+			else
+				fileObj.set_content(fileContent + newText)
+			end if
+		else
+		print("Permission Error Saving CSV to: " + saveFile + " [No Write Permission]")
+		end if
+	else
+		print("Permission Error Saving CSV to: " + saveFile + " [No Read Permission]")
+	end if
+end function
+
 // **Description:**
 // Gets name of program *{self}*
 // @return {void}
