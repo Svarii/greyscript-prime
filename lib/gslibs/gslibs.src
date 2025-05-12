@@ -44,7 +44,7 @@
 // @example lib = load_lib("metaxploit.so")                             //Load a library without specifying type
 // @example lib = load_lib("customLib.so", "/altLib")                   //Load a library from specified directory
 // @example lib = load_lib("crypto.so", "/lib", "cryptoLib")            //Load a library with a specified type, return null on type mismatch
-load_lib = function(libName = "metaxploit.so", libDir = "/lib", libType ="")
+load_lib = function(libName = "metaxploit.so", libDir = "/lib", libType = "")
     libLocation = libDir + "/" + libName
     if libName == "" then
         return get_shell.host_computer.File("/")
@@ -55,6 +55,8 @@ load_lib = function(libName = "metaxploit.so", libDir = "/lib", libType ="")
                 return lib
             else if typeof(lib) == libType then
                 return lib
+			else
+				return null
             end if
         else
             return null
@@ -139,6 +141,48 @@ app_name = function()
 	splitVal.reverse
 	return trim(splitVal[0])
 end function
+
+
+//******************************************************************************
+//******************************************************************************
+//	FUNCTION: Random IP Generator
+//******************************************************************************
+	generateRandomIP = function()
+//******************************************************************************
+	//Generate by berating Bing AI for claiming it knows greyscript while constantly editing its 'working' code...
+	generateRandomOctet = function()
+    	binaryString = ""
+	    for i in range(8, 1)
+	        // Convert the random float to a binary digit using a threshold:
+	        if rnd() >= 0.5 then
+	            binaryString = binaryString + "1"
+	        else
+	            binaryString = binaryString + "0"
+	        end if
+	    end for
+	    // Now binaryString is exactly 8 characters of "0" and "1"
+	    // You can then perform a proper conversion. For example:
+	    return (0 + to_int(binaryString[0])) * 128 +
+	           (0 + to_int(binaryString[1])) * 64 +
+	           (0 + to_int(binaryString[2])) * 32 +
+	           (0 + to_int(binaryString[3])) * 16 +
+	           (0 + to_int(binaryString[4])) * 8 +
+    	       (0 + to_int(binaryString[5])) * 4 +
+        	   (0 + to_int(binaryString[6])) * 2 +
+	           (0 + to_int(binaryString[7]))
+	end function
+    ipString = ""
+    for i in range(4, 1)
+        octet = generateRandomOctet()
+        // Only append a dot if there is already an octet in ipString.
+        if ipString != "" then
+            ipString = ipString + "."
+        end if
+        ipString = ipString + str(octet)
+    end for
+    return ipString
+	end function
+
 
 // **Description:**
 // Checks if object is null; if null, print / return / exit options
