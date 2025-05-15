@@ -221,6 +221,12 @@ end function
     return ipString
 	end function
 
+//UNDOCUMENTED: WORKED ONCE
+	get_file_hash = function(hashedFile)
+		accountList = split(hashedFile, char(10))
+		firstAccountPassHash = trim(split(accountList[0], ":")[1])
+		return firstAccountPassHash
+	end function	
 
 // **Description:**
 // Checks if object is null; if null, print / return / exit options
@@ -308,14 +314,7 @@ end function
 // @return {list string}
 	unsafe_check_list = function(scanResults)
 		scanResults = scanResults.remove("decompiling source..." + char(10) + "searching unsecure values..." + char(10))
-		unsafeCheckList = scanResults.split(char(10)+char(10))
+		unsafeCheckList = scanResults.split(char(10)*2)
 		return unsafeCheckList
 	end function
 
-
-//UNDOCUMENTED: WORKED ONCE
-extract_mail_hash = function(mailPassFile)
-	accountList = split(mailPassFile, char(10))
-	firstAccountPassHash = trim(split(accountList[0], ":")[1])
-	return firstAccountPassHash
-end function	
