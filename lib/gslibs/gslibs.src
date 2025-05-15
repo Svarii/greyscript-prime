@@ -64,25 +64,18 @@ load_lib = function(libName = "metaxploit.so", libDir = "/lib", libType = "")
 end function
 
 // @startuml
-// !define FILE <&file>
-// !define FOLDER <&folder>
-// !define WARN <&warning>
-// !define PLUS <&plus>
-// !define MINUS <&minus>
-// !define CLOUD <&cloud>
-// !define MOBILE <&phone>
-// !define INFO <&info>
-// !define STAR <&star>
-// !define DOCUMENT <&document>
-// !define CALENDAR <&calendar>
-// !define MAP <&map>
-// !define LIST <&list>
-// entity force_params {
-//   -string [usage = "myprogram [ipAddress] [port]"]
-//   -string [numReqParams = 2]
+// title Function Signature Representation
+// 
+// class MyProgram {
+//   + myprogram(ipAddress: string, port: int) : list<string>
 // }
-// force_params : force_params(usage, numReqParams)
-// @enduml
+// 
+// note right of MyProgram::myprogram
+//   usage = "myprogram [ipAddress] [port]"
+//   numReqParams = 2
+// end note
+
+//  @enduml
 
 // **Description:**
 // Specifies Usage Information and number of required paramters.
@@ -99,159 +92,63 @@ force_params = function(usage, minReqParams)
     //if params.len > minReqParams then exit usage + "{Too many paramters}"
 end function
 
-appendCSV = function(savePath, saveFile, newText)
-	//********************************************
-	fileContent = ""
-	fileLocation = savePath + "/" + saveFile
-	//********************************************	
-	hostComputer = get_shell.host_computer
-	fileObj = hostComputer.File(fileLocation)
-	if not fileObj then
-		hostComputer.touch(savePath, saveFile)
+// **Description:**
+// Appends Data to a file (creates new if does not exist)
+// 
+// @param {string} savePath - The name of the library to load.
+// @param {string} saveFile - The directory where the library is located.
+// @return {void}
+// @example textToAdd = "New Line of Text to Add to File" + char(10) + "second line to add"
+// @example
+// append_file("/home/user/Database", "databasefile.db", textToAdd)
+	append_file = function(savePath, saveFile, newText)
+		//********************************************
+		fileContent = ""
+		fileLocation = savePath + "/" + saveFile
+		//********************************************	
+		hostComputer = get_shell.host_computer
 		fileObj = hostComputer.File(fileLocation)
-		fileObj.set_content(newText)
-		fileContent = fileObj.get_content
-		exit		
-	end if
-	//********************************************
-	//********************************************		
-	if fileObj.has_permission("r") then
-		if fileObj.has_permission("w") then
+		if not fileObj then
+			hostComputer.touch(savePath, saveFile)
+			fileObj = hostComputer.File(fileLocation)
+			fileObj.set_content(newText)
 			fileContent = fileObj.get_content
-			if fileContent == null then
-				fileObj.set_content(newText)
+			exit		
+		end if
+		//********************************************
+		//********************************************		
+		if fileObj.has_permission("r") then
+			if fileObj.has_permission("w") then
+				fileContent = fileObj.get_content
+				if fileContent == null then
+					fileObj.set_content(newText)
+				else
+					fileObj.set_content(fileContent + newText)
+				end if
 			else
-				fileObj.set_content(fileContent + newText)
+			print("Permission Error Saving Data to: " + saveFile + " [No Write Permission]")
 			end if
 		else
-		print("Permission Error Saving CSV to: " + saveFile + " [No Write Permission]")
+			print("Permission Error Saving Data to: " + saveFile + " [No Read Permission]")
 		end if
-	else
-		print("Permission Error Saving CSV to: " + saveFile + " [No Read Permission]")
-	end if
-end function
+	end function
 
 // **Description:**
-// Gets name of program *{self}*
-// @return {void}
+// converts a boolean value into a text "true" or "false"
+// @param {number} boolValue - The name of the library to load.
+// @return {string} true / false
+// @example trueOrFalse = boolToText(0)
+// @example print(trueOrFalse) // Output: false
 // @example
-// programName = app_name
-app_name = function()
-	splitVal = program_path.split("/")
-	splitVal.reverse
-	return trim(splitVal[0])
-end function
-
-
-//******************************************************************************
-//******************************************************************************
-//	FUNCTION: Random IP Generator
-//******************************************************************************
-	generateRandomIP = function()
-//******************************************************************************
-	//Generate by berating Bing AI for claiming it knows greyscript while constantly editing its 'working' code...
-	generateRandomOctet = function()
-    	binaryString = ""
-	    for i in range(8, 1)
-	        // Convert the random float to a binary digit using a threshold:
-	        if rnd() >= 0.5 then
-	            binaryString = binaryString + "1"
-	        else
-	            binaryString = binaryString + "0"
-	        end if
-	    end for
-	    // Now binaryString is exactly 8 characters of "0" and "1"
-	    // You can then perform a proper conversion. For example:
-	    return (0 + to_int(binaryString[0])) * 128 +
-	           (0 + to_int(binaryString[1])) * 64 +
-	           (0 + to_int(binaryString[2])) * 32 +
-	           (0 + to_int(binaryString[3])) * 16 +
-	           (0 + to_int(binaryString[4])) * 8 +
-    	       (0 + to_int(binaryString[5])) * 4 +
-        	   (0 + to_int(binaryString[6])) * 2 +
-	           (0 + to_int(binaryString[7]))
+// @example trueOrFalse = boolToText(1)
+// @example print(trueOrFalse) // Output: true
+	bool_text = function(boolVal, withColor = false)
+		if boolVal < 0 then return null
+		if boolVal > 1 then return null
+		if boolVal == 1 then return "true"
+		if boolVal == 0 then return "false"
+	return null
 	end function
-    ipString = ""
-    for i in range(4, 1)
-        octet = generateRandomOctet()
-        // Only append a dot if there is already an octet in ipString.
-        if ipString != "" then
-            ipString = ipString + "."
-        end if
-        ipString = ipString + str(octet)
-    end for
-    return ipString
-	end function
-
-
-// **Description:**
-// Checks if object is null; if null, print / return / exit options
-// @param {number} signalStrength - The name of the library to load.
-// @return {true | false} calcACK
-// @example is_null(testObj, "r")  //If not is_null(testObj) return false else true
-// @example is_null(testObj, "p-r", "error: testObj is null")  //If not is_null(testObj) print error message and return false else true
-// @example is_null(testObj, "e")  //If is_null(testObj) //exits program if testObj is null
-// @example is_null(testObj, "e", "Critical Error.  Terminating Program")  //If is_null(testObj) //exits program if testObj is null with error message
-is_null = function (testObj, failType = "r", failStr = "")
-failOptions = split("failType", "-")
-locals.failPrint = false
-locals.failReturn = false
-locals.failExit = false
-	for option in failOptions
-		if option == "p" then locals.failPrint true
-		if option == "r" then locals.failReturn true
-		if option == "e" then locals.failExit true
-	end for
-	if testObj == null then
-		if failType == "p" then
-			print failString
-		end if		
-		if failType == "r" then
-			return true
-		end if		
-		if failType == "e" then
-			exit failString		
-		end if		
-		if failType == "r" then
-			return false
-		else
-			return null
-		end if
-	end if
-end function
-
-// **Description**
-// Returns Network devices in a list
-network_device_list = function(user = "", pass = "")
-	networkDevices = split(get_shell(user,pass).host_computer.network_devices, char(10))
-	networkDeviceList = []
-	for device in networkDevices
-		if device then networkDeviceList.push(split(device, " "))
-	end for
-	return networkDeviceList
-end function
-
-// **Description:**
-// Checks Types and specifies on-fail action
-// @param {number} signalStrength - The name of the library to load.
-// @return {number} calcACK
-// @example is_type(myObject, "cryptoLib")  //If not typeof(cryptoLib) return false else true
-// @example is_type(myObject, "metaxploitLib", "exit") //exit the program on failure to match
-// @example is_type(myObject, "aptclientLib", "exit", "Unable to to load aptclientLib.so") //exit with error message
-// @example is_type(myObject, "SystemObject", "print") //print result as string
-is_type = function(Object, ObjectType, failType = "return", failStr = "")
-	if failType == "return" then
-		if not typeof(Object) == ObjectType then return false
-		return true
-	end if
-	if failType == "exit" then
-		if not typeof(Object) == ObjectType then exit failStr
-		return true
-	end if
-	if failType == "print" then
-		if not typeof(Object) == ObjectType then print "false"; exit
-	end if	
-end function
 
 // @startuml
 // !define FILE <&file>
@@ -280,34 +177,145 @@ end function
 // @example reqACK = calcACK(6)
 // @example
 // @example print(reqACK) // Output: 50000
-calc_ack = function(signalStrength = 1)
-    if signalStrength <= 0 or signalStrength > 100 then return null
-    return ceil(300000 / signalStrength)
-end function
+	calc_ack = function(signalStrength = 1)
+		if signalStrength <= 0 or signalStrength > 100 then return null
+		return ceil(300000 / signalStrength)
+	end function
 
 // **Description:**
-// converts a boolean value into a text "true" or "false"
-// @param {number} boolValue - The name of the library to load.
-// @return {string} treu / false
-// @example trueOrFalse = boolToText(0)
-// @example print(trueOrFalse) // Output: false
-// @example
-// @example trueOrFalse = boolToText(1)
-// @example print(trueOrFalse) // Output: true
-bool_text = function(boolVal)
-	if boolVal < 0 then return null
-	if boolVal > 1 then return null
-	if boolVal == 1 then return "true"
-	if boolVal == 0 then return "false"
-return null
-end function
+// generates a random ip address
+// @return {string} ipAddress {xxx.xxx.xxx.xxx}
+// @example ipAddress = generateRandomIP
+// @example print(ipAddress) // Output: ###.###.###.###
+	generateRandomIP = function()
+	local.generateRandomOctet = function()
+    	binaryString = ""
+	    for i in range(8, 1)
+	        // Convert the random float to a binary digit using a threshold:
+	        if rnd() >= 0.5 then
+	            binaryString = binaryString + "1"
+	        else
+	            binaryString = binaryString + "0"
+	        end if
+	    end for
+	    // Now binaryString is exactly 8 characters of "0" and "1"
+	    // You can then perform a proper conversion. For example:
+	    return (0 + to_int(binaryString[0])) * 128 +
+	           (0 + to_int(binaryString[1])) * 64 +
+	           (0 + to_int(binaryString[2])) * 32 +
+	           (0 + to_int(binaryString[3])) * 16 +
+	           (0 + to_int(binaryString[4])) * 8 +
+    	       (0 + to_int(binaryString[5])) * 4 +
+        	   (0 + to_int(binaryString[6])) * 2 +
+	           (0 + to_int(binaryString[7]))
+	end function
+    ipString = ""
+    for i in range(4, 1)
+        octet = local.generateRandomOctet()
+        // Only append a dot if there is already an octet in ipString.
+        if ipString != "" then
+            ipString = ipString + "."
+        end if
+        ipString = ipString + str(octet)
+    end for
+    return ipString
+	end function
 
+
+// **Description:**
+// Checks if object is null; if null, print / return / exit options
+// @param {number} signalStrength - The name of the library to load.
+// @return {true | false} calcACK
+// @example is_null(testObj, "r")  //If not is_null(testObj) return false else true
+// @example is_null(testObj, "p-r", "error: testObj is null")  //If not is_null(testObj) print error message and return false else true
+// @example is_null(testObj, "e")  //If is_null(testObj) //exits program if testObj is null
+// @example is_null(testObj, "e", "Critical Error.  Terminating Program")  //If is_null(testObj) //exits program if testObj is null with error message
+	is_null = function (testObj, failType = "r", failStr = "")
+	failOptions = split("failType", "-")
+	locals.failPrint = false
+	locals.failReturn = false
+	locals.failExit = false
+		for option in failOptions
+			if option == "p" then locals.failPrint true
+			if option == "r" then locals.failReturn true
+			if option == "e" then locals.failExit true
+		end for
+		if testObj == null then
+			if failType == "p" then
+				print failString
+			end if		
+			if failType == "r" then
+				return true
+			end if		
+			if failType == "e" then
+				exit failString		
+			end if		
+			if failType == "r" then
+				return false
+			else
+				return null
+			end if
+		end if
+	end function
+
+// **Description:**
+// Checks Types and specifies on-fail action
+// @param {number} signalStrength - The name of the library to load.
+// @return {number} calcACK
+// @example is_type(myObject, "cryptoLib")  //If not typeof(cryptoLib) return false else true
+// @example is_type(myObject, "metaxploitLib", "exit") //exit the program on failure to match
+// @example is_type(myObject, "aptclientLib", "exit", "Unable to to load aptclientLib.so") //exit with error message
+// @example is_type(myObject, "SystemObject", "print") //print result as string
+	is_type = function(Object, ObjectType, failType = "return", failStr = "")
+		if failType == "return" then
+			if not typeof(Object) == ObjectType then return false
+			return true
+		end if
+		if failType == "exit" then
+			if not typeof(Object) == ObjectType then exit failStr
+			return true
+		end if
+		if failType == "print" then
+			if not typeof(Object) == ObjectType then print "false"; exit
+		end if	
+	end function
+
+// **Description**
+// Returns Network devices in a list
+	network_device_list = function(user = "", pass = "")
+		networkDevices = split(get_shell(user,pass).host_computer.network_devices, char(10))
+		networkDeviceList = []
+		for device in networkDevices
+			if device then networkDeviceList.push(split(device, " "))
+		end for
+		return networkDeviceList
+	end function
+
+// **Description:**
+// Gets name of program *{self}*
+// @return {void}
+// @example
+// programName = app_name
+	program_name = function()
+		splitVal = program_path.split("/")
+		splitVal.reverse
+		return trim(splitVal[0])
+	end function
+
+// **Description:**
+//	Split Unsafe Check Results into Individual Exploit Results and return list of UnsafeCheck strings
+// @param {string} scanResults - The name of the library to load.
+// @return {list string}
+	unsafe_check_list = function(scanResults)
+		scanResults = scanResults.remove("decompiling source..." + char(10) + "searching unsecure values..." + char(10))
+		unsafeCheckList = scanResults.split(char(10)+char(10))
+		return unsafeCheckList
+	end function
+
+
+//UNDOCUMENTED: WORKED ONCE
 extract_mail_hash = function(mailPassFile)
 	accountList = split(mailPassFile, char(10))
 	firstAccountPassHash = trim(split(accountList[0], ":")[1])
 	return firstAccountPassHash
-end function
-
-parse_exploits = function(scanResults)
-
-end function
+end function	
