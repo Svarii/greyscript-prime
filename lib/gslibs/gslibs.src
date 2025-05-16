@@ -111,8 +111,6 @@ end function
 		if not fileObj then
 			hostComputer.touch(savePath, saveFile)
 			fileObj = hostComputer.File(fileLocation)
-			fileObj.set_content(newText)
-			fileContent = fileObj.get_content
 		end if
 		//********************************************
 		//********************************************		
