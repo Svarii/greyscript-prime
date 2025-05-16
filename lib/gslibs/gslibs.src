@@ -184,7 +184,7 @@ end function
 // @return {string} ipAddress {xxx.xxx.xxx.xxx}
 // @example ipAddress = generateRandomIP
 // @example print(ipAddress) // Output: ###.###.###.###
-	generateRandomIP = function()
+	generate_ranom_ip = function()
 	local.generateRandomOctet = function()
     	binaryString = ""
 	    for i in range(8, 1)
