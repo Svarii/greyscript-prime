@@ -22,15 +22,12 @@
 // @enduml
 
 // * **Description:**
-// Loads a library from the lib directory, a specified directory, optionally verify type
+// Loads a library from the lib directory, optional specified directory, optionally verify type
 
 // * **Description:**
-// Loads a library from the lib directory, a specified directory, optionally verify type
+// Loads a library from the lib directory, optional specified directory, optionally verify type
 // 
-// @param {string} [libName] - The name of the library to load.
-// @param {string} [libDir] - The directory where the library is located.
-// @param {string} [libType] - The expected type of the library.
-// @param {string} [libName] - The name of the library to load.
+// @param {string} libName - The name of the library to load.
 // @param {string} [libDir] - The directory where the library is located.
 // @param {string} [libType] - The expected type of the library.
 // 
@@ -40,10 +37,6 @@
 // @example lib = load_lib("customLib.so", "/altLib")                   //Load a library from specified directory
 // @example lib = load_lib("crypto.so", "/lib", "cryptoLib")            //Load a library with a specified type, return null on type mismatch
 //  * @return {objectLib | null}
-// @example lib = load_lib                                              //Load metaxploit.so from /lib directory
-// @example lib = load_lib("metaxploit.so")                             //Load a library without specifying type
-// @example lib = load_lib("customLib.so", "/altLib")                   //Load a library from specified directory
-// @example lib = load_lib("crypto.so", "/lib", "cryptoLib")            //Load a library with a specified type, return null on type mismatch
 load_lib = function(libName = "metaxploit.so", libDir = "/lib", libType = "")
     libLocation = libDir + "/" + libName
     if libName == "" then
@@ -89,7 +82,6 @@ force_params = function(usage, minReqParams)
 	if params.len < 1 then exit usage
 	if params[0] == "-h" or params[0] == "--help" then exit usage
 	if params.len < minReqParams then exit usage
-    //if params.len > minReqParams then exit usage + "{Too many paramters}"
 end function
 
 // **Description:**
@@ -139,7 +131,7 @@ end function
 // @example
 // @example trueOrFalse = boolToText(1)
 // @example print(trueOrFalse) // Output: true
-	bool_text = function(boolVal, withColor = false)
+	bool_text = function(boolVal)
 		if boolVal < 0 then return null
 		if boolVal > 1 then return null
 		if boolVal == 1 then return "true"
@@ -227,8 +219,10 @@ end function
 
 // **Description:**
 // Checks if object is null; if null, print / return / exit options
-// @param {number} signalStrength - The name of the library to load.
-// @return {true | false} calcACK
+// @param {any} testObj - The name of the library to load.
+// @param {string} failType - The name of the library to load.
+// @param {string} failStr - The name of the library to load.
+// @return {true | false}
 // @example is_null(testObj, "r")  //If not is_null(testObj) return false else true
 // @example is_null(testObj, "p-r", "error: testObj is null")  //If not is_null(testObj) print error message and return false else true
 // @example is_null(testObj, "e")  //If is_null(testObj) //exits program if testObj is null
@@ -258,13 +252,17 @@ end function
 			else
 				return null
 			end if
+		else return false
 		end if
 	end function
 
 // **Description:**
 // Checks Types and specifies on-fail action
-// @param {number} signalStrength - The name of the library to load.
-// @return {number} calcACK
+// @param {any} Object - The name of the library to load.
+// @param {string} ObjectType - The type expected
+// @param {string} [failType] - The action to take on type check fail
+// @param {string} [ObjectType] - The string to return on fail action
+// @return {true | false}
 // @example is_type(myObject, "cryptoLib")  //If not typeof(cryptoLib) return false else true
 // @example is_type(myObject, "metaxploitLib", "exit") //exit the program on failure to match
 // @example is_type(myObject, "aptclientLib", "exit", "Unable to to load aptclientLib.so") //exit with error message
@@ -275,16 +273,19 @@ end function
 			return true
 		end if
 		if failType == "exit" then
-			if not typeof(Object) == ObjectType then exit failStr
+			if not typeof(Object) == ObjectType then return failStr
 			return true
 		end if
 		if failType == "print" then
-			if not typeof(Object) == ObjectType then print "false"; exit
+			if not typeof(Object) == ObjectType then print "false"; return
 		end if	
 	end function
 
 // **Description**
 // Returns Network devices in a list
+// @param {string} user
+// @param {string} pass
+// @return {list<string>}
 	network_device_list = function(user = "", pass = "")
 		networkDevices = split(get_shell(user,pass).host_computer.network_devices, char(10))
 		networkDeviceList = []
@@ -308,7 +309,7 @@ end function
 // **Description:**
 //	Split Unsafe Check Results into Individual Exploit Results and return list of UnsafeCheck strings
 // @param {string} scanResults - The name of the library to load.
-// @return {list string}
+// @return {list <string>}
 	unsafe_check_list = function(scanResults)
 		scanResults = scanResults.remove("decompiling source..." + char(10) + "searching unsecure values..." + char(10))
 		unsafeCheckList = scanResults.split(char(10)*2)
