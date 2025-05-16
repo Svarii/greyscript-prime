@@ -36,7 +36,7 @@
 // @example lib = load_lib("metaxploit.so")                             //Load a library without specifying type
 // @example lib = load_lib("customLib.so", "/altLib")                   //Load a library from specified directory
 // @example lib = load_lib("crypto.so", "/lib", "cryptoLib")            //Load a library with a specified type, return null on type mismatch
-//  * @return {objectLib | null}
+// @return {objectLib | null}
 load_lib = function(libName = "metaxploit.so", libDir = "/lib", libType = "")
     libLocation = libDir + "/" + libName
     if libName == "" then
@@ -78,11 +78,11 @@ end function
 // @return {void}
 // @example
 // force_params("myApp [ipAddress] [port#]", 2)
-force_params = function(usage, minReqParams)
-	if params.len < 1 then exit usage
-	if params[0] == "-h" or params[0] == "--help" then exit usage
-	if params.len < minReqParams then exit usage
-end function
+	force_params = function(usage, minReqParams)
+		if params.len < 1 then exit usage
+		if params[0] == "-h" or params[0] == "--help" then exit usage
+		if params.len < minReqParams then exit usage
+	end function
 
 // **Description:**
 // Appends Data to a file (creates new if does not exist)
@@ -140,19 +140,6 @@ end function
 	end function
 
 // @startuml
-// !define FILE <&file>
-// !define FOLDER <&folder>
-// !define WARN <&warning>
-// !define PLUS <&plus>
-// !define MINUS <&minus>
-// !define CLOUD <&cloud>
-// !define MOBILE <&phone>
-// !define INFO <&info>
-// !define STAR <&star>
-// !define DOCUMENT <&document>
-// !define CALENDAR <&calendar>
-// !define MAP <&map>
-// !define LIST <&list>
 // entity calc_ack {
 //   -number [signalStrength]
 // }
@@ -162,11 +149,12 @@ end function
 // **Description:**
 // Caculates the recommended amount of ACKs to collect
 // @param {number} signalStrength - The name of the library to load.
-// @return {number} calcACK
-// @example reqACK = calcACK(6)
+// @return {number | null} calculate_acks
+// @example reqACK = calculate_acks(6)
 // @example
 // @example print(reqACK) // Output: 50000
-	calc_ack = function(signalStrength = 1)
+	calculate_acks = function(signalStrength = 1)
+		if not typeof(signalStrength) == "number" then return null
 		if signalStrength <= 0 or signalStrength > 100 then return null
 		return ceil(300000 / signalStrength)
 	end function
@@ -176,7 +164,7 @@ end function
 // @return {string} ipAddress {xxx.xxx.xxx.xxx}
 // @example ipAddress = generateRandomIP
 // @example print(ipAddress) // Output: ###.###.###.###
-	generate_ranom_ip = function()
+	generate_random_ip = function()
 	local.generateRandomOctet = function()
     	binaryString = ""
 	    for i in range(8, 1)
@@ -220,8 +208,8 @@ end function
 // **Description:**
 // Checks if object is null; if null, print / return / exit options
 // @param {any} testObj - The name of the library to load.
-// @param {string} failType - The name of the library to load.
-// @param {string} failStr - The name of the library to load.
+// @param {string} [failType] - The name of the library to load.
+// @param {string} [failStr] - The name of the library to load.
 // @return {true | false}
 // @example is_null(testObj, "r")  //If not is_null(testObj) return false else true
 // @example is_null(testObj, "p-r", "error: testObj is null")  //If not is_null(testObj) print error message and return false else true
@@ -283,8 +271,8 @@ end function
 
 // **Description**
 // Returns Network devices in a list
-// @param {string} user
-// @param {string} pass
+// @param {string} [user]
+// @param {string} [pass]
 // @return {list<string>}
 	network_device_list = function(user = "", pass = "")
 		networkDevices = split(get_shell(user,pass).host_computer.network_devices, char(10))
