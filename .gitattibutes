@@ -1,1 +1,1 @@
-*.src linguist-language=GreyScript
+*.{src,gs} linguist-language=GreyScript
