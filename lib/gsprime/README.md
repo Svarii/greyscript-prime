@@ -40,17 +40,6 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 |                  | [`.print`](#print)             | Loops through a list and prints each item             |
 ---
 ## stringMethods ![Static Badge](https://img.shields.io/badge/method-string-green)
-  
-### .color
-The `.color` method allows you to apply a color to the given text.
-
-![image](https://github.com/user-attachments/assets/c2530db7-fee4-4454-be1d-65d7e995268b) <img src="https://github.com/user-attachments/assets/b61e6ae5-97ca-4213-9f63-5689232a3ac8" align="right">
-
-```
-newString = "Hello"
-
-print(newString.color("blue")) // Outputs: <color=blue>Hello</color>
-```
 
 ### .bold
 The `.bold` method allows you to apply bold to the given text.
@@ -62,7 +51,17 @@ newString = "Hello"
 
 print(newString.bold) // Outputs: <b>Hello</b>
 ```
+  
+### .color
+The `.color` method allows you to apply a color to the given text.
 
+![image](https://github.com/user-attachments/assets/c2530db7-fee4-4454-be1d-65d7e995268b) <img src="https://github.com/user-attachments/assets/b61e6ae5-97ca-4213-9f63-5689232a3ac8" align="right">
+
+```
+newString = "Hello"
+
+print(newString.color("blue")) // Outputs: <color=blue>Hello</color>
+```
 ### .italic
 The `.italic` method allows you to apply italic to the given text.
 
@@ -244,28 +243,6 @@ print(sentence); // Outputs: The quick brown fox jumps over the lazy dog
 ---
 ## numberMethods ![Static Badge](https://img.shields.io/badge/method-number-green)
 
-### .plus
-The `.plus` method allows you to add a specified amount to a number. If no amount is provided, it defaults to `1`.
-![image](https://github.com/user-attachments/assets/43a689b8-e9ae-43eb-a2ee-829337d19bf3) <img src="https://github.com/user-attachments/assets/e886e55f-b95d-439f-8d0d-44c84a030180" align="right">
-
-```greyscript
-newNumber = 40
-
-result = newNumber.plus(2)
-print(result) // Outputs: 42
-```
-
-### .minus
-The `.minus` method allows you to subtract a specified amount from a number. If no amount is provided, it defaults to `1`. 
-![image](https://github.com/user-attachments/assets/aca2249d-bf43-4031-abff-130f4a853d76) <img src="https://github.com/user-attachments/assets/edd9ae50-b11d-4870-82da-ea7957713eea" align="right">
-
-```greyscript
-newNumber = 44
-
-result = newNumber.minus(2)
-print(result) // Outputs: 42
-```
-
 ### .diff
 The `.diff` method calculates the absolute difference between the current number and another number.
 ![image](https://github.com/user-attachments/assets/65152391-7c48-4fa9-ac05-b9ba26e947f4) <img src="https://github.com/user-attachments/assets/49276e79-10dd-4bd3-901f-794d078de8f2" align="right">
@@ -275,19 +252,6 @@ newNumber = 44
 newNumber2 = 2
 
 result = newNumber.diff(newNumber2)
-print(result) // Outputs: 42
-```
-
-### .multiply
-The `.multiply` method multiplies the current number the given number (or 2).
-
-![image](https://github.com/user-attachments/assets/3fbe19e9-9e14-4ff7-ba69-4aeffab46735) <img src="https://github.com/user-attachments/assets/937c5ba4-d76d-4b21-9abd-882c41f7c4c2" align="right">
-
-```greyscript
-newNumber = 22
-newNumber2 = 2
-
-result = newNumber.multiply(newNumber2)
 print(result) // Outputs: 42
 ```
 
@@ -303,8 +267,8 @@ result = newNumber.divide(newNumber2)
 print(result) // Outputs: 42
 ```
 
-### .greater_than
-The `.greater_than` method checks if the current number is greater than a provided number. Returns `true` if greater, `false` otherwise.
+### .is_more
+The `.is_more` method checks if the current number is greater than a provided number. Returns `true` if greater, `false` otherwise.
 ![image](https://github.com/user-attachments/assets/3b71c3f3-abcd-40b9-ba6a-4f7b215e9d58) <img src="https://github.com/user-attachments/assets/b966ac53-3e88-4b53-81c4-008e45aa54ca" align="right">
 
 ```greyscript
@@ -315,8 +279,8 @@ result = myNumber.greater_than(myNumber2)
 print(result) // Outputs: 0 (false)
 ```
 
-### .lesser_than
-The `.lesser_than` method checks if the current number is less than a provided number. Returns `true` if lesser, `false` otherwise.
+### .is_less
+The `.is_less` method checks if the current number is less than a provided number. Returns `true` if lesser, `false` otherwise.
 ![image](https://github.com/user-attachments/assets/d13a7320-012f-4c69-92de-524133c64405) <img src="https://github.com/user-attachments/assets/c0cf05b3-bf72-4237-84c6-864cf907c7dd" align="right">
 
 ```greyscript
@@ -325,6 +289,39 @@ myNumber2 = 100
 
 result = myNumber.lesser_than(myNumber2)
 print(result) // Outputs: 1 (true)
+```
+### .minus
+The `.minus` method allows you to subtract a specified amount from a number. If no amount is provided, it defaults to `1`. 
+![image](https://github.com/user-attachments/assets/aca2249d-bf43-4031-abff-130f4a853d76) <img src="https://github.com/user-attachments/assets/edd9ae50-b11d-4870-82da-ea7957713eea" align="right">
+
+```greyscript
+newNumber = 44
+
+result = newNumber.minus(2)
+print(result) // Outputs: 42
+```
+
+### .multiply
+The `.multiply` method multiplies the current number the given number (or 2).
+
+![image](https://github.com/user-attachments/assets/3fbe19e9-9e14-4ff7-ba69-4aeffab46735) <img src="https://github.com/user-attachments/assets/937c5ba4-d76d-4b21-9abd-882c41f7c4c2" align="right">
+
+```greyscript
+newNumber = 22
+newNumber2 = 2
+
+result = newNumber.multiply(newNumber2)
+print(result) // Outputs: 42
+```
+### .plus
+The `.plus` method allows you to add a specified amount to a number. If no amount is provided, it defaults to `1`.
+![image](https://github.com/user-attachments/assets/43a689b8-e9ae-43eb-a2ee-829337d19bf3) <img src="https://github.com/user-attachments/assets/e886e55f-b95d-439f-8d0d-44c84a030180" align="right">
+
+```greyscript
+newNumber = 40
+
+result = newNumber.plus(2)
+print(result) // Outputs: 42
 ```
 
 ### .random_from
@@ -342,19 +339,6 @@ print(result) // Outputs: 1 (true)
 ---
 ## listMethods ![Static Badge](https://img.shields.io/badge/method-list-green)
 
-### .trim
-The `.trim` method Returns a new list stripped of any spacing at the beginning and ending. If any value gets passed that is not a list this method will return null.
-
-![image](https://github.com/user-attachments/assets/f7dcfc4e-81f7-46cc-b44f-96a3da4d8e97) <img src="https://github.com/user-attachments/assets/d796f888-204f-47e4-9c76-bb8593c33d98" align="right">
-
-```greyscript
-myList = ["", "string", "string", "", ""]
-
-result = myList.trim
-print(result) // Outputs: ["string", "string"]
-```
-
----
 ### .print
 The `.print` method loops through a list and prints each item
 
@@ -370,6 +354,17 @@ string
 string
 ```
 
+### .trim
+The `.trim` method Returns a new list stripped of any spacing at the beginning and ending. If any value gets passed that is not a list this method will return null.
+
+![image](https://github.com/user-attachments/assets/f7dcfc4e-81f7-46cc-b44f-96a3da4d8e97) <img src="https://github.com/user-attachments/assets/d796f888-204f-47e4-9c76-bb8593c33d98" align="right">
+
+```greyscript
+myList = ["", "string", "string", "", ""]
+
+result = myList.trim
+print(result) // Outputs: ["string", "string"]
+```
 ***
 # Example
 Screen Shot of vsCode with Grey Script Prime and recommended plugins.

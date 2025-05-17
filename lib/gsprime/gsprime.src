@@ -870,7 +870,7 @@
             return abs(self - distanceTo)
     end function
 
-    //@name greater_than   
+    //@name is_more   
         //  *
         //  * @uml
         //  * @startuml
@@ -886,21 +886,21 @@
 
         //  **Description:**
         //  Check if number is greater than provided number
-        //  @param {number} isGreater
+        //  @param {number} is_more
         //  @return {bool number | null} - The result of the subtraction.
         //  @example myNumber = 42;
         //  @example myNumber2 = 100;
         //  @example 
-        //  @example result = newNumber.greater_than(myNumber2);
+        //  @example result = newNumber.is_more(myNumber2);
         //  @example        
-        //  print(result); // Outputs: 0
-    number.greater_than = function(isGreater)
-        if not typeof(isGreater) == "number" then return null
-            if isGreater > self then return true
+        //  print(result); // Outputs: false
+    number.is_more = function(is_more)
+        if not typeof(is_more) == "number" then return null
+            if is_more > self then return true
             return false
     end function
 
-    //@name lesser_than   
+    //@name is_less   
         //  * @startuml
         //  * entity NumberObject
         //  * control ".lesser_than" as lesser_than
@@ -919,12 +919,12 @@
         //  @example myNumber = 42;
         //  @example myNumber2 = 100;
         //  @example 
-        //  @example result = newNumber.lesser_than(myNumber2);
+        //  @example result = newNumber.is_less(myNumber2);
         //  @example
-        //  print(result); // Outputs: 1
-    number.lesser_than = function(isLesser)
-        if not typeof(isLesser) == "number" then return null
-            if isLesser < self then return true
+        //  print(result); // Outputs: false
+    number.is_less = function(is_less)
+        if not typeof(is_less) == "number" then return null
+            if is_less < self then return true
             return false
     end function
 
