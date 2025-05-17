@@ -240,7 +240,8 @@ end function
 			else
 				return null
 			end if
-		else return false
+		else
+			return false
 		end if
 	end function
 
