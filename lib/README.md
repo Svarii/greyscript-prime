@@ -36,12 +36,20 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 |                  | [`.diff(number)`](#diff)             | Calculate the absolute difference.   |
 |                  | [`.multiply(number)`](#multiply)             | Multiple the number by.   |
 |                  | [`.divide(number)`](#divide)             | Divide number by.   |
-|                  | [`.greater_than(number)`](#greater_than) | Check if number is greater.          |
-|                  | [`.lesser_than(number)`](#lesser_than) | Check if number is lesser.           |
+|                  | [`.is_more(number)`](#is_more) | Check if number is greater.          |
+|                  | [`.is_less(number)`](#is_less) | Check if number is lesser.           |
 |                  | [`.random_from(number)`](#random_from) | Generate a random number from 0 (or number) to number.            |
 | **List**         | [`.trim`](#trim)             | Removes empty list items from list ends  
 |                  | [`.print`](#print)             | Loops through a list and prints each item             |
 | **Function**         | [`load_lib(libName)`](#load_lib)             | load a lib from /lib opt:[ , libDir, typeExpected]             |
+|                  | [`collect_whois`](#collect_whois)             | Returns object containing whois info
+|                  | [`force_params`](#force_params)             | used to require paramters and display help information
+|                  | [`generate_random_ip`](#generate_random_ip)             | used to generate random ip addresses
+|                  | [`is_null`](#is_null)             | used to for null error checking
+|                  | [`is_type`](#is_type)             | used to for type error handling
+|                  | [`network_device_list`](#network_device_list)             | returns newtwork devices as list
+|                  | [`program_name`](#program_name)             | Returns name of self
+|                  | [`unsafe_check_list`](#unsafe_check_list)             | Split Unsafe Check Results into Individual Exploit Results and return list of UnsafeCheck strings
 | **Object**       | [`SystemObject`](#SystemObject)             | Returns object type SystemObject
 |                  | [`PortMemory`](#PortMemory)             | Returns object type PortMemory  
 
