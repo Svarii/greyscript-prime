@@ -84,11 +84,21 @@ print(typeof(portScan))
 - **`.color("#color")`**: Apply a color to text.
 - **`.bold`**: Make the text bold.
 - **`.italic`**: Make the text italic.
+- **`.indent`**: Add indent.
+- **`.line-indent`**: Add line-indent.
+- **`.margin`**: Add margin.
+- **`.mspace`**: Add mspace.
+- **`.nobr`**: add nobr tag.
+- **`.noparse`**: add noparse tag.
+- **`.pos`**: add pos tag.
+- **`.rotate`**: Rotate characters.
 - **`.underline`**: Underline the text.
 - **`.strike`**: Apply strikethrough to text.
 - **`.mark`**: Highlight the text.
 - **`.sub`**: Apply subscript to text.
 - **`.sup`**: Apply superscript to text.
+- **`.voffset`**: Add voffset tag.
+- **`.width`**: Add width tag.
 - **`.remove_char_last`**: Remove the last character from text.
 - **`.remove_char_first`**: Remove the first character from text.
 - **`.remove_bold`**: Remove bold formatting from text.
