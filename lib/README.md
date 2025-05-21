@@ -36,8 +36,8 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 |                  | [`.diff(number)`](#diff)             | Calculate the absolute difference.   |
 |                  | [`.multiply(number)`](#multiply)             | Multiple the number by.   |
 |                  | [`.divide(number)`](#divide)             | Divide number by.   |
-|                  | [`.greater_than(number)`](#greater_than) | Check if number is greater.          |
-|                  | [`.lesser_than(number)`](#lesser_than) | Check if number is lesser.           |
+|                  | [`.is_more(number)`](#is_more) | Check if number is greater.          |
+|                  | [`.is_less(number)`](#is_less) | Check if number is lesser.           |
 |                  | [`.random_from(number)`](#random_from) | Generate a random number from 0 (or number) to number.            |
 | **List**         | [`.trim`](#trim)             | Removes empty list items from list ends  
 |                  | [`.print`](#print)             | Loops through a list and prints each item             |
