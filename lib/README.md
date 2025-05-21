@@ -51,7 +51,7 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 |                  | [`.is_more(number)`](#is_more) | Check if number is greater.          |
 |                  | [`.is_less(number)`](#is_less) | Check if number is lesser.           |
 |                  | [`.random_from(number)`](#random_from) | Generate a random number from 0 (or number) to number.            |
-|                  | [`.clamp`](#clamp)           | restricts a value within a specified range, ensuring it stays between a minimum and maximum limit.      |
+|                  | [`.clamp(min, max)`](#clamp)           | restricts a value within a specified range, ensuring it stays between a minimum and maximum limit.      |
 | **List**         | [`.trim`](#trim)             | Removes empty list items from list ends  
 |                  | [`.print`](#print)             | Loops through a list and prints each item             |
 | **Function**         | [`load_lib(libName)`](#load_lib)             | load a lib from /lib opt:[ , libDir, typeExpected]             |
