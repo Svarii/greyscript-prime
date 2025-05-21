@@ -217,13 +217,6 @@ end function
     return ipString
 	end function
 
-//UNDOCUMENTED: WORKED ONCE
-	get_file_hash = function(hashedFile)
-		accountList = split(hashedFile, char(10))
-		firstAccountPassHash = trim(split(accountList[0], ":")[1])
-		return firstAccountPassHash
-	end function	
-
 // **Description:**
 // Checks if object is null; if null, print / return / exit options
 // @param {any} testObj - The name of the library to load.
