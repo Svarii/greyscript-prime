@@ -12,12 +12,21 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 
 | Category         | Method                      | Description                          |
 |------------------|-----------------------------|--------------------------------------|
-| **String**       | [`.color("#color")`](#color) | Apply a color to text.               |
+| **String**       | [`.align("center")`](#align) | Align text.               |
+|                  | [`.color("#color")`](#color) | Apply a color to text.               |
 |                  | [`.bold`](#bold)               | Make the text bold.                  |
+|                  | [`.cspace("1em")`](#cspace) | Apply cspace to text.               |
+|                  | [`.indent("15%")`](#indent) | Apply indent to text.               |
 |                  | [`.italic`](#italic)             | Make the text italic.                |
+|                  | [`.line-indent("15%")`](#line-indent) | Apply line-indent to text.               |
 |                  | [`.underline`](#underline)       | Underline the text.                  |
 |                  | [`.strike`](#strike)             | Apply strikethrough to text.         |
 |                  | [`.mark`](#mark)                 | Highlight the text.                  |
+|                  | [`.margin("5em")`](#margin) | Apply margin to text.               |
+|                  | [`.mspace("2.75em")`](#mspace) | Apply monospace to text.               |
+|                  | [`.nobr`](#nobr)                 | Apply no-break to the text.                  |
+|                  | [`.noparse`](#noparse)                 | Apply no-parse to the text.                  |
+|                  | [`.pos("50%")`](#sub)                   | Apply pos to text.             |
 |                  | [`.sub`](#sub)                   | Apply subscript to text.             |
 |                  | [`.sup`](#sup)                   | Apply superscript to text.           |
 |                  | [`.remove_char_last`](#remove_char_last) | Remove the last character from text. |
@@ -29,6 +38,9 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 |                  | [`.remove_mark`](#remove_mark)    | Remove highlight from text.          |
 |                  | [`.remove_sub`](#remove_sub)      | Remove subscript from text.          |
 |                  | [`.remove_sup`](#remove_sup)      | Remove superscript from text.        |
+|                  | [`.rotate`](#rotate)      | Rotates the text.        |
+|                  | [`.voffset`](#voffset)      | Add voffset tag.        |
+|                  | [`.width`](#width)      | Add width tag.        |
 |                  | [`.extract_between`](#extract_between)                   | Extract the text between the given values.           |
 |                  | [`.format`](#format)                   | Allows for string interpolation.           |
 | **Number**       | [`.plus(number)`](#plus)             | Add 1 or value to a number.             |
@@ -52,6 +64,7 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 |                  | [`unsafe_check_list`](#unsafe_check_list)             | Split Unsafe Check Results into Individual Exploit Results and return list of UnsafeCheck strings
 | **Object**       | [`SystemObject`](#SystemObject)             | Returns object type SystemObject
 |                  | [`PortMemory`](#PortMemory)             | Returns object type PortMemory  
+|                  | [`idSelf`](#idSelf)             | Returns local env info
 
 ## stringMethods
 ![Static Badge](https://img.shields.io/badge/method-string-green)
