@@ -12,12 +12,21 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 
 | Category         | Method                      | Description                          |
 |------------------|-----------------------------|--------------------------------------|
-| **String**       | [`.color("#color")`](#color) | Apply a color to text.               |
+| **String**       | [`.align("center")`](#align) | Align text.               |
+|                  | [`.color("#color")`](#color) | Apply a color to text.               |
 |                  | [`.bold`](#bold)               | Make the text bold.                  |
+|                  | [`.cspace("1em")`](#cspace) | Apply cspace to text.               |
+|                  | [`.indent("15%")`](#indent) | Apply indent to text.               |
 |                  | [`.italic`](#italic)             | Make the text italic.                |
+|                  | [`.line-indent("15%")`](#line-indent) | Apply line-indent to text.               |
 |                  | [`.underline`](#underline)       | Underline the text.                  |
 |                  | [`.strike`](#strike)             | Apply strikethrough to text.         |
 |                  | [`.mark`](#mark)                 | Highlight the text.                  |
+|                  | [`.margin("5em")`](#margin) | Apply margin to text.               |
+|                  | [`.mspace("2.75em")`](#mspace) | Apply monospace to text.               |
+|                  | [`.nobr`](#nobr)                 | Apply no-break to the text.                  |
+|                  | [`.noparse`](#noparse)                 | Apply no-parse to the text.                  |
+|                  | [`.pos("50%")`](#sub)                   | Apply pos to text.             |
 |                  | [`.sub`](#sub)                   | Apply subscript to text.             |
 |                  | [`.sup`](#sup)                   | Apply superscript to text.           |
 |                  | [`.remove_char_last`](#remove_char_last) | Remove the last character from text. |
@@ -29,6 +38,9 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 |                  | [`.remove_mark`](#remove_mark)    | Remove highlight from text.          |
 |                  | [`.remove_sub`](#remove_sub)      | Remove subscript from text.          |
 |                  | [`.remove_sup`](#remove_sup)      | Remove superscript from text.        |
+|                  | [`.rotate`](#rotate)      | Rotates the text.        |
+|                  | [`.voffset("1em")`](#voffset)      | Add voffset tag.        |
+|                  | [`.width`](#width)      | Add width tag.        |
 |                  | [`.extract_between`](#extract_between)                   | Extract the text between the given values.           |
 |                  | [`.format`](#format)                   | Allows for string interpolation.           |
 | **Number**       | [`.plus(number)`](#plus)             | Add 1 or value to a number.             |
@@ -39,9 +51,13 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 |                  | [`.is_more(number)`](#is_more) | Check if number is greater.          |
 |                  | [`.is_less(number)`](#is_less) | Check if number is lesser.           |
 |                  | [`.random_from(number)`](#random_from) | Generate a random number from 0 (or number) to number.            |
+|                  | [`.clamp(min, max)`](#clamp)           | restricts a value within a specified range, ensuring it stays between a minimum and maximum limit.      |
 | **List**         | [`.trim`](#trim)             | Removes empty list items from list ends  
 |                  | [`.print`](#print)             | Loops through a list and prints each item             |
 | **Function**         | [`load_lib(libName)`](#load_lib)             | load a lib from /lib opt:[ , libDir, typeExpected]             |
+|                  | [`append_file`](#append_file)             | Used to append, or a create new file, data to a file.
+|                  | [`bool_text`](#bool_text)             | Returns a string containing either "true" or "false"
+|                  | [`calculate_acks(signalStrength as number)`](#calculate_acks)             | Returns recommneded ACKs as number
 |                  | [`collect_whois`](#collect_whois)             | Returns object containing whois info
 |                  | [`force_params`](#force_params)             | used to require paramters and display help information
 |                  | [`generate_random_ip`](#generate_random_ip)             | used to generate random ip addresses
@@ -52,6 +68,7 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 |                  | [`unsafe_check_list`](#unsafe_check_list)             | Split Unsafe Check Results into Individual Exploit Results and return list of UnsafeCheck strings
 | **Object**       | [`SystemObject`](#SystemObject)             | Returns object type SystemObject
 |                  | [`PortMemory`](#PortMemory)             | Returns object type PortMemory  
+|                  | [`idSelf`](#idSelf)             | Returns local env info
 
 ## stringMethods
 ![Static Badge](https://img.shields.io/badge/method-string-green)
