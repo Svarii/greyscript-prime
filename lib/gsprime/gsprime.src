@@ -1,4 +1,107 @@
 //GreyScript Prime version 0.1a by Svarii
+
+
+    //@name align
+        //  * @startuml
+        //  * entity StringObject
+        //  * control ".align" as align
+        //  *   StringObject -> align : string
+        //  *   align -> StringObject : //<align="center">//string//</align>//
+        //  * footer
+        //  *   string.align("center")
+        //  * endfooter           
+        //  * @enduml        
+        // ANCHOR string.align
+
+        //  **Description:**  
+        //  Applies align tag to the given text.
+        //  @param {string} alignment
+        //  
+        //  @return {string}
+        //  @example newString = "Hello"
+        //  @example 
+        //  @example result = newString.align("center")
+        //  @example 
+        //  print(result); // Outputs: <align="center">Hello</align>       
+    string.align = function(alignment = "center")
+        return "<align=" + char(34) + alignment + char(34) + ">" + self + "</align>"
+    end function
+
+    //@name alpha
+        //  * @startuml
+        //  * entity StringObject
+        //  * control ".alpha" as alpha
+        //  *   StringObject -> alpha : string
+        //  *   alpha -> StringObject : //<alpha=#4C>//string
+        //  * footer
+        //  *   string.alpha("#4C")
+        //  * endfooter           
+        //  * @enduml        
+        // ANCHOR string.alpha
+
+        //  **Description:**  
+        //  Applies alpha to the given text.
+        //  
+        //  @return {string}
+        //  @example newString = "Hello"
+        //  @example 
+        //  @example result = newString.alpha("#4C")
+        //  @example 
+        //  print(result); // Outputs: <alpha=#4C>Hello       
+    string.alpha = function(hexOpactiy = "#4C")
+        return "<alpha=" + hexOpactiy + ">" + self
+    end function
+ 
+    //@name bold
+        //  * @startuml
+        //  * entity StringObject
+        //  * control ".bold" as bold
+        //  *   StringObject -> bold : string
+        //  *   bold -> StringObject : //<b>//string//</b>//
+        //  * footer
+        //  *   string.bold
+        //  * endfooter           
+        //  * @enduml        
+        // ANCHOR string.bold
+
+        //  **Description:**  
+        //  Applies bold to the given text.
+        //  
+        //  @return {string}
+        //  @example newString = "Hello"
+        //  @example 
+        //  @example result = newString.bold
+        //  @example 
+        //  print(result); // Outputs: <b>Hello</b>       
+    string.bold = function()
+        return "<b>" + self + "</b>"
+    end function
+
+    //@name cspace
+        //  * @startuml
+        //  * entity StringObject
+        //  * control ".cspace" as cspace
+        //  *   StringObject -> cspace : string
+        //  *   cspace -> StringObject : //<cspace=1em>//string//</cspace>//
+        //  * footer
+        //  *   string.cspace("1em")
+        //  * endfooter           
+        //  * @enduml        
+        // ANCHOR string.cspace
+
+        //  **Description:**  
+        //  Applies cspace to the given text.
+        //  
+        //  @return {string}
+        //  @example newString = "Hello"
+        //  @example 
+        //  @example result = newString.cspace
+        //  @example 
+        //  print(result); // Outputs: <cspace=1em>Hello</cspace>
+    string.cspace = function(charSpacing = "1em")
+        return "<cspace=" + charSpacing + ">" + self + "</cspace>"
+    end function
+
     //@name color
         //  * @startuml        
         //  *   entity StringObject
@@ -201,30 +304,31 @@
         return "<color=" + colorValue + ">" + self + "</color>"
     end function
 
-    //@name bold
+    //@name indent
         //  * @startuml
         //  * entity StringObject
-        //  * control ".bold" as bold
-        //  *   StringObject -> bold : string
-        //  *   bold -> StringObject : //<b>//string//</b>//
+        //  * control ".indent" as indent
+        //  *   StringObject -> indent : string
+        //  *   indent -> StringObject : //<indent=15%>//string
         //  * footer
-        //  *   string.bold
-        //  * endfooter           
+        //  *   string.indent("15%")
+        //  * endfooter         
         //  * @enduml        
-        // ANCHOR string.bold
+        // ANCHOR string.indent
 
-        //  **Description:**  
-        //  Applies bold to the given text.
+	    //  **Description:**
+        //  Applies indent to the given text.
         //  
         //  @return {string}
         //  @example newString = "Hello"
         //  @example 
-        //  @example result = newString.bold
-        //  @example 
-        //  print(result); // Outputs: <b>Hello</b>       
-    string.bold = function()
-        return "<b>" + self + "</b>"
-    end function
+        //  @example result = newString.indent        
+        //  @example        
+        //  print(result); // Outputs: <indent=15%>Hello        
+    string.indent = function(indentPercent="15%")
+        return "<indent=" + indentPercent+ ">" + self
+    end function 
+
 
     //@name italic
         //  * @startuml
@@ -250,6 +354,22 @@
     string.italic = function()
         return "<i>" + self + "</i>"
     end function 
+
+    //@name line-indent
+        // ANCHOR string.line-indent
+
+        //  **Description:**  
+        //  Applies line-indent tag to the given text.
+        //  
+        //  @return {string}
+        //  @example newString = "Hello"
+        //  @example 
+        //  @example result = newString.line_indent("50%")
+        //  @example 
+        //  print(result); // Outputs: <line-indent=50%>Hello       
+    string.line_indent = function(lineIndent = "15%")
+        return "<line-indent=" + lineIndent + ">" + self
+    end function    
 
     //@name underline 
         //  * @startuml
@@ -303,6 +423,31 @@
         return "<s>" + self + "</s>"
     end function
 
+    //@name margin
+        //  * @startuml
+        //  * entity StringObject
+        //  * control ".margin" as margin
+        //  *   StringObject -> margin : string
+        //  *   margin -> StringObject : //<margin=5em>//string//</margin>//
+        //  * footer
+        //  *   string.margin("5em")
+        //  * endfooter           
+        //  * @enduml        
+        // ANCHOR string.margin
+
+        //  **Description:**  
+        //  Applies margin tag to the given text.
+        //  
+        //  @return {string}
+        //  @example newString = "Hello"
+        //  @example 
+        //  @example result = newString.margin("5em")
+        //  @example 
+        //  print(result); // Outputs: <margin=5em>Hello</margin>   
+    string.margin = function(marginSpace = "5em")
+        return "<margin=" + marginSpace + ">" + self + "</margin>"
+    end function    
+
     //@name mark
         //  *
         //  * @uml
@@ -329,6 +474,131 @@
     string.mark = function()
         return "<mark>" + self + "</mark>"
     end function
+
+    //@name mspace
+        //  * @startuml
+        //  * entity StringObject
+        //  * control ".mspace" as mspace
+        //  *   StringObject -> mspace : string
+        //  *   mspace -> StringObject : //<mspace=2.75em>//string//</mspace>//
+        //  * footer
+        //  *   string.mspace("2.75em")
+        //  * endfooter           
+        //  * @enduml        
+        // ANCHOR string.mspace
+
+        //  **Description:**  
+        //  Applies mspace tag to the given text.
+        //  
+        //  @return {string}
+        //  @example newString = "Hello"
+        //  @example 
+        //  @example result = newString.mspace("2.75em")
+        //  @example 
+        //  print(result); // Outputs: <mspace=2.75em>Hello</mspace>     
+    string.mspace = function(monospace = "2.75em")
+        return "<mspace=" + monospace + ">" + self + "</mspace>"
+    end function    
+
+    //@name nobr
+        //  * @startuml
+        //  * entity StringObject
+        //  * control ".nobr" as nobr
+        //  *   StringObject -> nobr : string
+        //  *   nobr -> StringObject : //**<nobr>**//string//**</nobr>**//
+        //  * footer
+        //  *   string.nobr
+        //  * endfooter           
+        //  * @enduml        
+        // ANCHOR string.nobr
+
+        //  **Description:**  
+        //  Applies nobr tag to the given text.
+        //  
+        //  @return {string}
+        //  @example newString = "Hello"
+        //  @example 
+        //  @example result = newString.nobr
+        //  @example 
+        //  print(result); // Outputs: <nobr>Hello</nobr>     
+    string.nobr = function()
+        return "<nobr>" + self + "</nobr>"
+    end function  
+
+    //@name noparse
+        //  * @startuml
+        //  * entity StringObject
+        //  * control ".noparse" as noparse
+        //  *   StringObject -> noparse : string
+        //  *   noparse -> StringObject : //**<noparse>**//string//**</noparse>**//
+        //  * footer
+        //  *   string.noparse
+        //  * endfooter           
+        //  * @enduml        
+        // ANCHOR string.noparse
+
+        //  **Description:**  
+        //  Applies noparse tag to the given text.
+        //  
+        //  @return {string}
+        //  @example newString = "Hello"
+        //  @example 
+        //  @example result = newString.noparse
+        //  @example 
+        //  print(result); // Outputs: <noparse>Hello</noparse>     
+    string.noparse = function()
+        return "<noparse>" + self + "</noparse>"
+    end function  
+
+    //@name pos
+        //  * @startuml
+        //  * entity StringObject
+        //  * control ".pos" as pos
+        //  *   StringObject -> pos : string
+        //  *   pos -> StringObject : //<pos=50%>//string
+        //  * footer
+        //  *   string.pos
+        //  * endfooter           
+        //  * @enduml        
+        // ANCHOR string.pos
+
+        //  **Description:**  
+        //  Applies pos tag to the given text.
+        //  
+        //  @return {string}
+        //  @example newString = "Hello"
+        //  @example 
+        //  @example result = newString.pos("50%")
+        //  @example 
+        //  print(result); // Outputs: <pos=50%>Hello       
+    string.pos = function(posPercent = "50%")
+        return "<pos=" + posPercent + ">" + self
+    end function       
+
+    //@name rotate
+        //  * @startuml
+        //  * entity StringObject
+        //  * control ".rotate" as rotate
+        //  *   StringObject -> rotate : string
+        //  *   rotate -> StringObject : //**<rotate="45">**//string//**</rotate>**//
+        //  * footer
+        //  *   string.rotate("45")
+        //  * endfooter           
+        //  * @enduml        
+        // ANCHOR string.rotate
+
+        //  **Description:**  
+        //  Applies rotate tag to the given text.
+        //  
+        //  @return {string}
+        //  @example newString = "Hello"
+        //  @example 
+        //  @example result = newString.rotate
+        //  @example 
+        //  print(result); // Outputs: <rotate="45">Hello</rotate>     
+    string.rotate = function(degreesRotation = "45")
+        return "<rotate=" + char(34) + degreesRotation + char(34) + ">" + self + "</rotate>"
+    end function      
 
     //@name sub
         //  *
@@ -644,7 +914,7 @@
         return newString.remove("</sup>")
     end function
 
-    //@name extract_between
+    //@name extract
         //  *
         //  * @uml
         //  * @startuml
@@ -670,7 +940,7 @@
         //  @example result = newString.extract_between("<b>", "</b>")
         //  @example           
         //  print(result); // Outputs: 0x53C737   
-    string.extract_between = function(tagStart = "<b>", tagEnd = "</b>")
+    string.extract = function(tagStart = "<b>", tagEnd = "</b>")
         startIndex = self.indexOf(tagStart) + (tagStart.len)
         endIndex = self.indexOf(tagEnd) - (tagEnd.len - tagStart.len) + 1
         return slice(self, startIndex, endIndex)
@@ -713,7 +983,119 @@
         return locals.recompStr
     end function
 
+    //@name uppercase
+        //  * @startuml
+        //  * entity StringObject
+        //  * control ".uppercase" as uppercase
+        //  *   StringObject -> uppercase : string
+        //  *   uppercase -> StringObject : //<uppercase>//string//</uppercase>//
+        //  * footer
+        //  *   string.uppercase
+        //  * endfooter           
+        //  * @enduml        
+        // ANCHOR string.uppercase
+
+        //  **Description:**  
+        //  Applies capitalization to all characters of a string
+        //  
+        //  @return {string}
+        //  @example newString = "Hello"
+        //  @example 
+        //  @example result = newString.uppercase("center")
+        //  @example 
+        //  print(result); // Outputs: <uppercase>Hello</uppercase>       
+    string.uppercase = function(alignment = "left")
+        return "<align=" + alignment + ">" + self + "</align>"
+    end function
+
+
+    //@name voffset
+        //  * @startuml
+        //  * entity StringObject
+        //  * control ".voffset" as voffset
+        //  *   StringObject -> voffset : string
+        //  *   voffset -> StringObject : //**<voffset=1em>**//string//**</voffset>**//
+        //  * footer
+        //  *   string.voffset("1em")
+        //  * endfooter           
+        //  * @enduml        
+        // ANCHOR string.voffset
+
+        //  **Description:**  
+        //  Applies voffset tag to the given text.
+        //  
+        //  @return {string}
+        //  @example newString = "Hello"
+        //  @example 
+        //  @example result = newString.voffset
+        //  @example 
+        //  print(result); // Outputs: <voffset=1em>Hello</voffset>     
+    string.voffset = function(verticalOffset = "1em")
+        return "<voffset=" + verticalOffset + ">" + self + "</voffset>"
+    end function   
+    
+   //@name width
+        //  * @startuml
+        //  * entity StringObject
+        //  * control ".width" as width
+        //  *   StringObject -> width : string
+        //  *   width -> StringObject : //**<width=50%>**//string//**</width>**//
+        //  * footer
+        //  *   string.width
+        //  * endfooter           
+        //  * @enduml        
+        // ANCHOR string.width
+
+        //  **Description:**  
+        //  Applies width tag to the given text.
+        //  
+        //  @return {string}
+        //  @example newString = "Hello"
+        //  @example 
+        //  @example result = newString.width
+        //  @example 
+        //  print(result); // Outputs: <width=50%>Hello</width>     
+    string.width = function(hSize = "50%")
+        return "<width=" + hSize + ">" + self + "</width>"
+    end function      
+
+
 //Extended number object methods
+    //@name plus
+        //  *
+        //  * @uml
+        //  * @startuml
+        //  * entity NumberObject
+        //  * control ".plus" as plus
+        //  * NumberObject -> plus : number
+        //  * plus -> NumberObject : (number + 1)
+        //  * NumberObject -> plus : number(7)
+        //  * plus -> NumberObject : (number + 7)        
+        //  * footer
+        //  * number.plus
+        //  * endfooter         
+        //  * @enduml           
+        // ANCHOR number.plus
+
+        //  **Description:**
+        //  Add 1 to the number or optional amount
+        //  @description     
+        //  @param {number} min - The mix threshold.
+        //  @param {number} max - The max threshold.
+        //  @return {number | null} - The result of the addition.
+        //  @example newNumber = 40
+        //  @example 
+        //  @example result = newNumber.plus(2);
+        //  @example
+        //  print(result); // Outputs: 42
+    number.clamp = function(min, max)
+        if not typeof(min) == "number" then return null
+        if not typeof(max) == "number" then return null
+            if self < min then return min
+            if self > max then return max
+            return self
+    end function
+
     //@name plus
         //  *
         //  * @uml
@@ -744,6 +1126,7 @@
         if not typeof(amount) == "number" then return null
             return self + amount
     end function
+
     //@name minus
         //  *
         //  * @uml
