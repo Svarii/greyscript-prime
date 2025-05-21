@@ -55,6 +55,9 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 | **List**         | [`.trim`](#trim)             | Removes empty list items from list ends  
 |                  | [`.print`](#print)             | Loops through a list and prints each item             |
 | **Function**         | [`load_lib(libName)`](#load_lib)             | load a lib from /lib opt:[ , libDir, typeExpected]             |
+|                  | [`append_file`](#append_file)             | Used to append, or a create new file, data to a file.
+|                  | [`bool_text`](#bool_text)             | Returns a string containing either "true" or "false"
+|                  | [`calculate_acks(signalStrength as number)`](#calculate_acks)             | Returns recommneded ACKs as number
 |                  | [`collect_whois`](#collect_whois)             | Returns object containing whois info
 |                  | [`force_params`](#force_params)             | used to require paramters and display help information
 |                  | [`generate_random_ip`](#generate_random_ip)             | used to generate random ip addresses
