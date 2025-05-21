@@ -39,7 +39,7 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 |                  | [`.remove_sub`](#remove_sub)      | Remove subscript from text.          |
 |                  | [`.remove_sup`](#remove_sup)      | Remove superscript from text.        |
 |                  | [`.rotate`](#rotate)      | Rotates the text.        |
-|                  | [`.voffset`](#voffset)      | Add voffset tag.        |
+|                  | [`.voffset("1em")`](#voffset)      | Add voffset tag.        |
 |                  | [`.width`](#width)      | Add width tag.        |
 |                  | [`.extract_between`](#extract_between)                   | Extract the text between the given values.           |
 |                  | [`.format`](#format)                   | Allows for string interpolation.           |
