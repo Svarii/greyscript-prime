@@ -1401,13 +1401,11 @@
         printString = split(self, seperator)
         print printString
     end function
-    
+
 //Prints list as string
     list.string = function(spaceWith = " ")
         newString = ""
         for charList in self
-			print __charList_idx
-			print charList
             newString = newString + spaceWith + charList
         end for
         return newString
