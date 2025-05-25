@@ -234,7 +234,7 @@
 		if colorValue == "CadetBlue" then colorValue = "#5F9EA0"
 		if colorValue == "SteelBlue" then colorValue = "#4682B4"                           					
         if colorValue == "LightSteelBlue" then colorValue = "#B0C4DE"
-		if colorValue == "PowerdBlue" then colorValue = "#B0E0E6"
+		if colorValue == "PoweredBlue" then colorValue = "#B0E0E6"
 		if colorValue == "LightBlue" then colorValue = "#ADD8E6"
 		if colorValue == "SkyBlue" then colorValue = "#87CEEB"
 		if colorValue == "LightSkyBlue" then colorValue = "#87CEFA"
