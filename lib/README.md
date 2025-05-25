@@ -53,7 +53,8 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 |                  | [`.random_from(number)`](#random_from) | Generate a random number from 0 (or number) to number.            |
 |                  | [`.clamp(min, max)`](#clamp)           | restricts a value within a specified range, ensuring it stays between a minimum and maximum limit.      |
 | **List**         | [`.trim`](#trim)             | Removes empty list items from list ends  
-|                  | [`.print`](#print)             | Loops through a list and prints each item             |
+|                  | [`.print`](#print)             | Loops through a list and prints each item    
+|                  | [`.string`](#string)             | combine list into a single string    |
 | **Function**         | [`load_lib(libName)`](#load_lib)             | load a lib from /lib opt:[ , libDir, typeExpected]             |
 |                  | [`append_file`](#append_file)             | Used to append, or a create new file, data to a file.
 |                  | [`bool_text`](#bool_text)             | Returns a string containing either "true" or "false"

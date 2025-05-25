@@ -6,39 +6,6 @@
 
 **GreyScript Prime** is an extension for **GreyScript** that adds powerful methods for object manipulation. Combined with tools like `Greybel VS`, `Plant UML`, `Comment Anchors`, and `Markdown Preview Enhanced with litvis`, GreyScript Prime is designed to boost your coding efficiency and make your development experience in **VSCode** seamless and productive.
 
-**Navigate Documentation in Preview Windows**
-![image](https://github.com/user-attachments/assets/887ffec7-44a8-4cca-a05d-47d21e8d03b9)
-
-![image](https://github.com/user-attachments/assets/9436684c-d6a8-48ea-9208-4f5264fa6900)
-
-**Code Tabbed for DocBlocs Collapse**
-
-![image align=left](https://github.com/user-attachments/assets/8f3d3c97-eb65-4a79-8b49-04aa879cc5bd)![image](https://github.com/user-attachments/assets/6335055e-74fe-4154-8c62-cd46b7cd827a)
-
-### Key Features
-
-- **Extended String Manipulation**: Apply formatting like color, bold, italic, underline, and more directly to your strings.
-- **Advanced Number Operations**: Perform mathematical computations with ease using methods like `.plus`, `.minus`, `.diff`, `.multiply`, etc.
-- **List Utilities**: Trim lists, print contents, and manipulate list items efficiently.
-- **Custom Classes**: Access SystemObject and PortMemory objects.
-- **Enhanced Documentation**: Extensive documentation with custom formatting (to allow insertion into compiler) of DocBlocks and Plant UML to enchance coding environment.
-
-## Table of Contents
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Methods Overview](#methods-overview)
-  - [String Methods](#string-methods)
-  - [Number Methods](#number-methods)
-  - [List Methods](#list-methods)
-  - [Function Methods](#function-methods)
-  - [Object Methods](#object-methods)
-- [Classes Overview](#classes-overview)
-  - [SystemObject](#systemobject)
-  - [PortMemory](#portmemory)
-- [Example](#example)
-- [License](#license)
-
 ## Installation
 
 To install GreyScript Prime, follow these steps:

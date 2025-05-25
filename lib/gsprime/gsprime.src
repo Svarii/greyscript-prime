@@ -226,7 +226,7 @@
 		if colorValue == "Aqua" then colorValue = "#00FFFF"
 		if colorValue == "Cyan" then colorValue = "#00FFFF"
 		if colorValue == "LightCyan" then colorValue = "#E0FFFF"
-		if colorValue == "PalTurquoise" then colorValue = "#AFEEEE"
+		if colorValue == "PaleTurquoise" then colorValue = "#AFEEEE"
         if colorValue == "Aquamarine" then colorValue = "#7FFFD4"        
 		if colorValue == "Turquoise" then colorValue = "#40E0D0"
 		if colorValue == "MediumTurquoise" then colorValue = "#48D1CC"
