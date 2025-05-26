@@ -10,69 +10,70 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 
 # 📄 Methods Overview
 
-| Category         | Method                      | Description                          |
-|------------------|-----------------------------|--------------------------------------|
-| **String**       | [`.align(string)`](#align) | Align text.               |
-|                  | [`.alpha(string)`](#alpha) | Set alpha.               |
-|                  | [`.bold`](#bold)               | Make the text bold.                  |
-|                  | [`.color(string)`](#color) | Apply a color to text.               |
-|                  | [`.cspace(string)`](#cspace) | Apply cspace to text.               |
-|                  | [`.indent(string)`](#indent) | Apply indent to text.               |
-|                  | [`.italic`](#italic)             | Make the text italic.                |
-|                  | [`.line-indent(string)`](#line-indent) | Apply line-indent to text.               |
-|                  | [`.lowercase`](#lowercase)       | Underline the text.                  |
-|                  | [`.margin(string)`](#margin) | Apply margin to text.               |
-|                  | [`.mark`](#mark)                 | Highlight the text.                  |
-|                  | [`.mspace(string)`](#mspace) | Apply monospace to text.               |
-|                  | [`.nobr`](#nobr)                 | Apply no-break to the text.                  |
-|                  | [`.noparse`](#noparse)                 | Apply no-parse to the text.                  |
-|                  | [`.pos(string)`](#sub)                   | Apply pos to text.             
-|                  | [`.strike`](#strike)             | Apply strikethrough to text.         ||
-|                  | [`.sub`](#sub)                   | Apply subscript to text.             |
-|                  | [`.sup`](#sup)                   | Apply superscript to text.           |
-|                  | [`.uppercase`](#uppercase)                   | Apply underline to text.           |
-|                  | [`.underline`](#underline)                   | Apply underline to text.           |
-|                  | [`.rotate`](#rotate)      | Rotates the text.        |
-|                  | [`.voffset(string)`](#voffset)      | Add voffset tag.        |
-|                  | [`.width`](#width)      | Add width tag.        |
-|                  | [`.extract`](#extract)                   | Extract the text between the given values.           |
-|                  | [`.format`](#format)                   | Allows for string interpolation.           |
-|                  | [`.remove_char_last`](#remove_char_last) | Remove the last character from text. |
-|                  | [`.remove_char_first`](#remove_char_first) | Remove the last character from text. |
-|                  | [`.remove_bold`](#remove_bold)    | Remove bold formatting from text.    |
-|                  | [`.remove_italic`](#remove_italic) | Remove italic formatting from text.  |
-|                  | [`.remove_underline`](#remove_underline) | Remove underline formatting.         |
-|                  | [`.remove_strike`](#remove_strike) | Remove strikethrough formatting.     |
-|                  | [`.remove_mark`](#remove_mark)    | Remove highlight from text.          |
-|                  | [`.remove_sub`](#remove_sub)      | Remove subscript from text.          |
-|                  | [`.remove_sup`](#remove_sup)      | Remove superscript from text.        |
-| **Number**       | [`.plus(number)`](#plus)             | Add 1 or value to a number.             |
-|                  | [`.minus(number)`](#minus)           | Subtract 1 or a value from a number.      |
-|                  | [`.diff(number)`](#diff)             | Calculate the absolute difference.   |
-|                  | [`.multiply(number)`](#multiply)             | Multiple the number by.   |
-|                  | [`.divide(number)`](#divide)             | Divide number by.   |
-|                  | [`.is_more(number)`](#is_more) | Check if number is greater.          |
-|                  | [`.is_less(number)`](#is_less) | Check if number is lesser.           |
-|                  | [`.random_from(number)`](#random_from) | Generate a random number from 0 (or number) to number.            |
-|                  | [`.clamp(number, number)`](#clamp)           | restricts a value within a specified range, ensuring it stays between a minimum and maximum limit.      |
-| **List**         | [`.trim`](#trim)             | Removes empty list items from list ends  
-|                  | [`.print`](#print)             | Loops through a list and prints each item    
-|                  | [`.join`](#join)             | combine list into a single string    |
-| **Function**         | [`load_lib(libName)`](#load_lib)             | load a lib from /lib opt:[ , libDir, typeExpected]             |
-|                  | [`append_file`](#append_file)             | Used to append, or a create new file, data to a file.
-|                  | [`bool_text`](#bool_text)             | Returns a string containing either "true" or "false"
-|                  | [`calculate_acks(signalStrength as number)`](#calculate_acks)             | Returns recommneded ACKs as number
-|                  | [`collect_whois`](#collect_whois)             | Returns object containing whois info
-|                  | [`force_params`](#force_params)             | used to require paramters and display help information
-|                  | [`generate_random_ip`](#generate_random_ip)             | used to generate random ip addresses
-|                  | [`is_null`](#is_null)             | used to for null error checking
-|                  | [`is_type`](#is_type)             | used to for type error handling
-|                  | [`network_device_list`](#network_device_list)             | returns newtwork devices as list
-|                  | [`program_name`](#program_name)             | Returns name of self
-|                  | [`unsafe_check_list`](#unsafe_check_list)             | Split Unsafe Check Results into Individual Exploit Results and return list of UnsafeCheck strings
-| **Object**       | [`SystemObject`](#SystemObject)             | Returns object type SystemObject
-|                  | [`PortMemory`](#PortMemory)             | Returns object type PortMemory  
-|                  | [`idSelf`](#idSelf)             | Returns local env info
+| Category   | Method                                                  | Description                                                                                   |
+|------------|---------------------------------------------------------|-----------------------------------------------------------------------------------------------|
+| **String** | [`.align(string)`](#align)                               | Align text.                                                                                   |
+|            | [`.alpha(string)`](#alpha)                               | Set alpha.                                                                                    |
+|            | [`.bold`](#bold)                                        | Make the text bold.                                                                           |
+|            | [`.color(string)`](#color)                               | Apply a color to text.                                                                        |
+|            | [`.cspace(string)`](#cspace)                             | Apply cspace to text.                                                                         |
+|            | [`.indent(string)`](#indent)                             | Apply indent to text.                                                                         |
+|            | [`.italic`](#italic)                                    | Make the text italic.                                                                         |
+|            | [`.line-indent(string)`](#line-indent)                   | Apply line-indent to text.                                                                    |
+|            | [`.lowercase`](#lowercase)                               | Convert text to lowercase.                                                                    |
+|            | [`.margin(string)`](#margin)                             | Apply margin to text.                                                                         |
+|            | [`.mark`](#mark)                                        | Highlight the text.                                                                           |
+|            | [`.mspace(string)`](#mspace)                             | Apply monospace formatting.                                                                   |
+|            | [`.nobr`](#nobr)                                        | Apply no-break to the text.                                                                   |
+|            | [`.noparse`](#noparse)                                  | Apply no-parse to the text.                                                                   |
+|            | [`.pos(string)`](#sub)                                  | Apply pos to text.                                                                            |
+|            | [`.strike`](#strike)                                    | Apply strikethrough to text.                                                                  |
+|            | [`.sub`](#sub)                                          | Apply subscript to text.                                                                      |
+|            | [`.sup`](#sup)                                          | Apply superscript to text.                                                                    |
+|            | [`.uppercase`](#uppercase)                              | Convert text to uppercase.                                                                    |
+|            | [`.underline`](#underline)                              | Apply underline to text.                                                                      |
+|            | [`.rotate`](#rotate)                                    | Rotates the text.                                                                             |
+|            | [`.voffset(string)`](#voffset)                           | Add voffset tag.                                                                              |
+|            | [`.width`](#width)                                      | Add width tag.                                                                                |
+|            | [`.extract`](#extract)                                  | Extract the text between the given values.                                                  |
+|            | [`.format`](#format)                                    | Allows for string interpolation.                                                            |
+|            | [`.remove_char_last`](#remove_char_last)                | Remove the last character from text.                                                        |
+|            | [`.remove_char_first`](#remove_char_first)              | Remove the first character from text.                                                       |
+|            | [`.remove_bold`](#remove_bold)                          | Remove bold formatting from text.                                                           |
+|            | [`.remove_italic`](#remove_italic)                      | Remove italic formatting from text.                                                         |
+|            | [`.remove_underline`](#remove_underline)                | Remove underline formatting.                                                                  |
+|            | [`.remove_strike`](#remove_strike)                      | Remove strikethrough formatting.                                                              |
+|            | [`.remove_mark`](#remove_mark)                          | Remove highlight from text.                                                                   |
+|            | [`.remove_sub`](#remove_sub)                            | Remove subscript from text.                                                                   |
+|            | [`.remove_sup`](#remove_sup)                            | Remove superscript from text.                                                                 |
+| **Number** | [`.diff(number)`](#diff)                                | Calculate the absolute difference.                                                          |
+|            | [`.divide(number)`](#divide)                            | Divide number by a given divisor.                                                             |
+|            | [`.is_more(number)`](#is_more)                          | Check if one number is greater than another.                                                  |
+|            | [`.is_less(number)`](#is_less)                          | Check if one number is lesser than another.                                                   |
+|            | [`.lerp(number, number, number)`](#lerp)                | Linearly interpolate between two numbers.                                                    |
+|            | [`.minus(number)`](#minus)                              | Subtract a value from a number.                                                               |
+|            | [`.multiply(number)`](#multiply)                        | Multiply the number by a value.                                                               |
+|            | [`.plus(number)`](#plus)                                | Add a value to a number.                                                                      |
+|            | [`.random_from(number)`](#random_from)                  | Generate a random number from 0 (or given start) to the specified number.                     |
+|            | [`.clamp(number, number)`](#clamp)                      | Restrict a value within a specified range (minimum to maximum).                               |
+| **List**   | [`.join`](#join)                                        | Combine list into a single string.                                                            |
+|            | [`.print`](#print)                                      | Loop through a list and print each item.                                                      |
+|            | [`.trim`](#trim)                                        | Remove empty list items from the list ends.                                                   |
+| **Function** | [`load_lib(libName)`](#load_lib)                     | Load a library from /lib. Optional parameters: libDir, typeExpected.                          |
+|            | [`append_file`](#append_file)                           | Append data to a file or create a new file if it doesn’t exist.                                |
+|            | [`bool_text`](#bool_text)                               | Return a string containing either "true" or "false".                                          |
+|            | [`calculate_acks(signalStrength as number)`](#calculate_acks) | Return recommended ACKs as a number.                                                         |
+|            | [`collect_whois`](#collect_whois)                       | Return an object containing whois information.                                                |
+|            | [`force_params`](#force_params)                         | Require parameters and display help information.                                              |
+|            | [`generate_random_ip`](#generate_random_ip)             | Generate random IP addresses.                                                                 |
+|            | [`is_null`](#is_null)                                   | Perform null error checking.                                                                  |
+|            | [`is_type`](#is_type)                                   | Perform type error handling.                                                                  |
+|            | [`network_device_list`](#network_device_list)           | Return network devices as a list.                                                             |
+|            | [`program_name`](#program_name)                         | Return the name of the program itself.                                                        |
+|            | [`unsafe_check_list`](#unsafe_check_list)               | Split unsafe check results into individual exploit results and return a list of unsafe check strings. |
+| **Object** | [`SystemObject`](#SystemObject)                         | Return an object of type SystemObject.                                                        |
+|            | [`PortMemory`](#PortMemory)                             | Return an object of type PortMemory.                                                          |
+|            | [`idSelf`](#idSelf)                                     | Return local environment information.                                                        |
 
 ## stringMethods
 ![Static Badge](https://img.shields.io/badge/method-string-green)
