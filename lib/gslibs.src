@@ -67,14 +67,14 @@
 // @example reqACK = calculate_acks(6)
 // @example
 // @example print(reqACK) // Output: 50000
-	calculate_acks = function(signalStrength = 1)
+	get_acks = function(signalStrength = 1)
 		if not typeof(signalStrength) == "number" then return null
 		if signalStrength <= 0 or signalStrength > 100 then return null
 		return ceil(300000 / signalStrength)
 	end function
 
 //Collection whois information
-	collect_whois = function(routerPublicIPAddress)
+	fetch_whois = function(routerPublicIPAddress)
 		if not is_lan_ip(routerPublicIPAddress) == true then
 			whoisInformation = {"domain":"", "admin":"", "email":"", "phone":"", "network":""}
 			what = split(whois(routerPublicIPAddress), "\n")
@@ -158,9 +158,9 @@
 // **Description:**
 // generates a random ip address
 // @return {string} ipAddress {xxx.xxx.xxx.xxx}
-// @example ipAddress = generateRandomIP
+// @example ipAddress = get_random_ip
 // @example print(ipAddress) // Output: ###.###.###.###
-	generate_random_ip = function()
+	get_random_ip = function()
 	local.generateRandomOctet = function()
     	binaryString = ""
 	    for i in range(8, 1)

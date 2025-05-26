@@ -59,13 +59,15 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 | **List**   | [`.join`](#join)                                        | Combine list into a single string.                                                            |
 |            | [`.print`](#print)                                      | Loop through a list and print each item.                                                      |
 |            | [`.trim`](#trim)                                        | Remove empty list items from the list ends.                                                   |
-| **Function** | [`load_lib(libName)`](#load_lib)                     | Load a library from /lib. Optional parameters: libDir, typeExpected.                          |
-|            | [`append_file`](#append_file)                           | Append data to a file or create a new file if it doesn’t exist.                                |
+| **Function** | [`load_lib(libName)`](#load_lib)                     | Load a library from /lib. Optional parameters: libDir, typeExpected.
+|            | [`get_acks(number)`](#calculate_acks) | Return recommended ACKs as a number.                                                         |
+|            | [`fetch_whois`](#fetch_whois)                       | Return an object containing whois information.                                                |
+|            | [`file_append`](#file_append)                           | Append data to a existing file or create a new file if it doesn’t exist.                                
+|            | [`file_delete`](#file_delete)                           | Delete file if it exist.                                
+|            | [`file_exists`](#file_exists)                           | Check if file exists.                                |
 |            | [`bool_text`](#bool_text)                               | Return a string containing either "true" or "false".                                          |
-|            | [`calculate_acks(signalStrength as number)`](#calculate_acks) | Return recommended ACKs as a number.                                                         |
-|            | [`collect_whois`](#collect_whois)                       | Return an object containing whois information.                                                |
 |            | [`force_params`](#force_params)                         | Require parameters and display help information.                                              |
-|            | [`generate_random_ip`](#generate_random_ip)             | Generate random IP addresses.                                                                 |
+|            | [`get_random_ip`](#get_random_ip)             | Generate random IP addresses.                                                                 |
 |            | [`is_null`](#is_null)                                   | Perform null error checking.                                                                  |
 |            | [`is_type`](#is_type)                                   | Perform type error handling.                                                                  |
 |            | [`network_device_list`](#network_device_list)           | Return network devices as a list.                                                             |
@@ -494,14 +496,14 @@ string
 ---
 # 📄 Functions Overview
 ## bool_text
-## calculate_acks
-## collect_whois
+## fetch_whois
 ## file_new
 ## file_append
 ## file_delete
 ## file_exists
 ## force_params
-## generate_random_ip
+## get_acks
+## get_random_ip
 ## is_null
 ## is_type
 ## load_lib
