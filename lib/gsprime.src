@@ -14,11 +14,10 @@
         // ANCHOR string.align
 
         //  **Description:**  
-        //  Applies align tag to the given text.
+        //  Applies align tag to the given text. | [tmp \<align> docs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextAlignment.html)
         //  @param {string} alignment
         //  @param {boolean} [closeTag]
         //  
-        //  @link https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextAlignment.html TextMeshPro
         //  @return {string}
         //  @example newString = "Hello"
         //  @example 
@@ -47,7 +46,8 @@
         // ANCHOR string.alpha
 
         //  **Description:**  
-        //  Applies alpha to the given text.
+        //  Applies alpha to the given text. | [tmp \<alpha> docs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextOpacity.html)
+        //  @param {string} hexOpacity
         //  
         //  @return {string}
         //  @example newString = "Hello"
@@ -55,7 +55,7 @@
         //  @example result = newString.alpha("#4C")
         //  @example 
         //  print(result); // Outputs: <alpha=#4C>Hello       
-    string.alpha = function(hexOpactiy = "#4C")
+    string.alpha = function(hexOpactiy)
         return "<alpha=" + hexOpactiy + ">" + self
     end function
  
@@ -72,7 +72,7 @@
         // ANCHOR string.bold
 
         //  **Description:**  
-        //  Applies bold to the given text.
+        //  Applies bold to the given text.  | [tmp \<bold> docs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextBoldItalic.html)
         //  
         //  @return {string}
         //  @example newString = "Hello"
@@ -97,7 +97,9 @@
         // ANCHOR string.cspace
 
         //  **Description:**  
-        //  Applies cspace to the given text.
+        //  Applies cspace to the given text.  | [tmp \<cspace> docs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextCharacterSpacing.html)
+        //  @param {string} charSpacing
+        //  @param {boolean} [closeTag]
         //  
         //  @return {string}
         //  @example newString = "Hello"
@@ -105,8 +107,13 @@
         //  @example result = newString.cspace
         //  @example 
         //  print(result); // Outputs: <cspace=1em>Hello</cspace>
-    string.cspace = function(charSpacing = "1em")
-        return "<cspace=" + charSpacing + ">" + self + "</cspace>"
+    string.cspace = function(charSpacing = "1em", closeTag = true)
+        if closeTag == true then
+            return "<cspace=" + charSpacing + ">" + self + "</cspace>"
+        end if
+        if closeTag == false then
+            return "<cspace=" + charSpacing + ">" + self
+        end if        
     end function
 
     //@name color
@@ -135,7 +142,11 @@
         //  @example        
         //  @example result = newString.color("#FFFFFF");
         //  @example   
-        //  print(result); // Outputs: <color=#FFFFFF>Hello</color>           
+        //  print(result); // Outputs: <color=#FFFFFF>Hello</color>
+        //  @example        
+        //  @example result = newString.color("Aquamarine");
+        //  @example   
+        //  print(result); // Outputs: <color=#7FFFD4>Hello</color>                 
     string.color = function(colorValue = "red")
         if not typeof(colorValue) == "string" then return null
 		//*****************************************************
@@ -307,7 +318,8 @@
 		if colorValue == "LightSlateGray" then colorValue = "#778899"
 		if colorValue == "SlateGrey" then colorValue = "#708090"
 		if colorValue == "DarkSlateGrey" then colorValue = "#2F4F4F"
-		if colorValue == "Black" then colorValue = "#000000"                                					   	
+		if colorValue == "Black" then colorValue = "#000000"
+        //*****************************************************	                                       					   	
         return "<color=" + colorValue + ">" + self + "</color>"
     end function
 
@@ -1085,7 +1097,7 @@
         // ANCHOR number.plus
 
         //  **Description:**
-        //  Add 1 to the number or optional amount
+        //  Keeps a number within a specified range
         //  @description     
         //  @param {number} min - The mix threshold.
         //  @param {number} max - The max threshold.

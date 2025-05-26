@@ -14,22 +14,29 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 |------------------|-----------------------------|--------------------------------------|
 | **String**       | [`.align("center")`](#align) | Align text.               |
 |                  | [`.alpha("#FF")`](#alpha) | Set alpha.               |
-|                  | [`.color("#color")`](#color) | Apply a color to text.               |
 |                  | [`.bold`](#bold)               | Make the text bold.                  |
+|                  | [`.color("#color")`](#color) | Apply a color to text.               |
 |                  | [`.cspace("1em")`](#cspace) | Apply cspace to text.               |
 |                  | [`.indent("15%")`](#indent) | Apply indent to text.               |
 |                  | [`.italic`](#italic)             | Make the text italic.                |
 |                  | [`.line-indent("15%")`](#line-indent) | Apply line-indent to text.               |
-|                  | [`.underline`](#underline)       | Underline the text.                  |
-|                  | [`.strike`](#strike)             | Apply strikethrough to text.         |
+|                  | [`.lowercase`](#lowercase)       | Underline the text.                  |
 |                  | [`.mark`](#mark)                 | Highlight the text.                  |
 |                  | [`.margin("5em")`](#margin) | Apply margin to text.               |
 |                  | [`.mspace("2.75em")`](#mspace) | Apply monospace to text.               |
 |                  | [`.nobr`](#nobr)                 | Apply no-break to the text.                  |
 |                  | [`.noparse`](#noparse)                 | Apply no-parse to the text.                  |
-|                  | [`.pos("50%")`](#sub)                   | Apply pos to text.             |
+|                  | [`.pos("50%")`](#sub)                   | Apply pos to text.             
+|                  | [`.strike`](#strike)             | Apply strikethrough to text.         ||
 |                  | [`.sub`](#sub)                   | Apply subscript to text.             |
 |                  | [`.sup`](#sup)                   | Apply superscript to text.           |
+|                  | [`.uppercase`](#uppercase)                   | Apply underline to text.           |
+|                  | [`.underline`](#underline)                   | Apply underline to text.           |
+|                  | [`.rotate`](#rotate)      | Rotates the text.        |
+|                  | [`.voffset("1em")`](#voffset)      | Add voffset tag.        |
+|                  | [`.width`](#width)      | Add width tag.        |
+|                  | [`.extract_between`](#extract_between)                   | Extract the text between the given values.           |
+|                  | [`.format`](#format)                   | Allows for string interpolation.           |
 |                  | [`.remove_char_last`](#remove_char_last) | Remove the last character from text. |
 |                  | [`.remove_char_first`](#remove_char_first) | Remove the last character from text. |
 |                  | [`.remove_bold`](#remove_bold)    | Remove bold formatting from text.    |
@@ -39,11 +46,6 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 |                  | [`.remove_mark`](#remove_mark)    | Remove highlight from text.          |
 |                  | [`.remove_sub`](#remove_sub)      | Remove subscript from text.          |
 |                  | [`.remove_sup`](#remove_sup)      | Remove superscript from text.        |
-|                  | [`.rotate`](#rotate)      | Rotates the text.        |
-|                  | [`.voffset("1em")`](#voffset)      | Add voffset tag.        |
-|                  | [`.width`](#width)      | Add width tag.        |
-|                  | [`.extract_between`](#extract_between)                   | Extract the text between the given values.           |
-|                  | [`.format`](#format)                   | Allows for string interpolation.           |
 | **Number**       | [`.plus(number)`](#plus)             | Add 1 or value to a number.             |
 |                  | [`.minus(number)`](#minus)           | Subtract 1 or a value from a number.      |
 |                  | [`.diff(number)`](#diff)             | Calculate the absolute difference.   |
@@ -74,26 +76,20 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 
 ## stringMethods
 ![Static Badge](https://img.shields.io/badge/method-string-green)
-
-### .align *[tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextAlignment.html)*
+### TextMeshPro
+#### .align
+*[align-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextAlignment.html)*
 The .align method allows you to apply the align tag to the give text.
 Accepted values are: left, right, center, justified, and flush
 
-### .alpha *[tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextOpacity.html)*
-The .alpha method sets the opacity of using a 2 digits hex value #FF: 100% Opague, #00: 100% Transparent
+#### .alpha
+*[alpha-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextOpacity.html)*
+The .alpha method sets the opacity of using a 2 digits hex value
+\#FF: 100% Opague
+\#00: 100% Transparent
   
-### .color *[tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextColor.html)*
-The `.color` method allows you to apply a color to the given text.
-
-![image](https://github.com/user-attachments/assets/c2530db7-fee4-4454-be1d-65d7e995268b) <img src="https://github.com/user-attachments/assets/b61e6ae5-97ca-4213-9f63-5689232a3ac8" align="right">
-
-```
-newString = "Hello"
-
-print(newString.color("blue")) // Outputs: <color=blue>Hello</color>
-```
-
-### .bold *[tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextBoldItalic.html)*
+#### .bold
+*[bold-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextBoldItalic.html)*
 The `.bold` method allows you to apply bold to the given text.
 
 ![image](https://github.com/user-attachments/assets/3c6412aa-381a-4408-ba15-06ab0d0e3cfd) <img src="https://github.com/user-attachments/assets/4999242a-5c31-403b-a499-10049c4ba2f2" align="right">
@@ -104,7 +100,27 @@ newString = "Hello"
 print(newString.bold) // Outputs: <b>Hello</b>
 ```
 
-### .italic *[tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextBoldItalic.html)*
+#### .color
+*[color-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextColor.html)*
+*[color-names-extended](https://htmlcolorcodes.com/color-names/)*
+The `.color` method allows you to apply a color to the given text.
+
+![image](https://github.com/user-attachments/assets/c2530db7-fee4-4454-be1d-65d7e995268b) <img src="https://github.com/user-attachments/assets/b61e6ae5-97ca-4213-9f63-5689232a3ac8" align="right">
+
+```
+newString = "Hello"
+
+print(newString.color("blue")) // Outputs: <color=blue>Hello</color>
+```
+
+#### .cspace
+The .cspace method allows you to adjust character spacing, either absolute or relative to the original font Asset. You can use pixels or font units.
+
+#### .indent
+The .indent method controls the horizontal caret position the same way the <pos> tag does, but the effect persists across lines.
+
+#### .italic
+*[italic-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextBoldItalic.html)*
 The `.italic` method allows you to apply italic to the given text.
 
 ![image](https://github.com/user-attachments/assets/8adc9cf4-c067-47a4-885f-e192105d169e) <img src="https://github.com/user-attachments/assets/e1d059ba-0849-41f4-9230-713eaf975a98" align
@@ -116,29 +132,21 @@ newString = "Hello"
 print(newString.italic) // Outputs: <i>Hello</i>
 ```
 
-### .underline *[tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextStrikethroughUnderline.html)*
-The `.underline` method allows you to apply underline to the given text.
+#### .line-indent
+The .line-indent method inserts horizontal space directly after it, and before the start of each new line. It only affects manual line breaks (including line breaks created with the \<br> tag, not word-wrapped lines.
 
-![image](https://github.com/user-attachments/assets/54683595-7cf9-481e-9ea9-14531fe8cb60) <img src="https://github.com/user-attachments/assets/07a4e6a9-c487-4a77-a0c5-e66f1c41fdd4" align="right">
+You can specify the indentation in pixels, font units, or percentages.
 
-```
-newString = "Hello"
+#### .lowercase
+The .lowercase method alters the capitalization of your text before rendering. The text in the Text field remains as you entered it.
 
-print(newString.underline) // Outputs: <u>Hello</u>
-```
+#### .margin
+You can increase the horizontal margins of the text with the .margin method.
+You can specify the margins in pixels, font units, and percentages.
+Negative values have no effect.
 
-### .strike *[tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextStrikethroughUnderline.html)*
-The `.strike` method allows you to apply strikethrough to the given text.
-
-![image](https://github.com/user-attachments/assets/f1238124-aa01-42c3-8171-b6af0d925b4a) <img src="https://github.com/user-attachments/assets/55fb0584-10d3-45db-8b12-c1f92f818d52" align="right">
-
-```
-newString = "Hello"
-
-print(newString.strike) // Outputs: <s>Hello</s>
-```
-
-### .mark *[tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextMark.html)*
+#### .mark
+*[mark-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextMark.html)*
 The `.mark` method allows you to apply highlight to the given text.
 
 ![image](https://github.com/user-attachments/assets/61838003-c880-4504-a12b-94b19c29ea4b) <img src="https://github.com/user-attachments/assets/e2e0d85c-782d-4bf1-a09b-877e77ea5972" align="right">
@@ -149,7 +157,30 @@ newString = "Hello"
 print(newString.mark) // Outputs: <mark>Hello</mark>
 ```
 
-### .sub *[tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextSubSuper.html)*
+#### .margin
+
+#### .mspace
+
+#### .nobr
+
+#### .noparse
+
+#### .pos
+
+#### .strike
+*[strike-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextStrikethroughUnderline.html)*
+The `.strike` method allows you to apply strikethrough to the given text.
+
+![image](https://github.com/user-attachments/assets/f1238124-aa01-42c3-8171-b6af0d925b4a) <img src="https://github.com/user-attachments/assets/55fb0584-10d3-45db-8b12-c1f92f818d52" align="right">
+
+```
+newString = "Hello"
+
+print(newString.strike) // Outputs: <s>Hello</s>
+```
+
+#### .sub
+*[sub-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextSubSuper.html)*
 The `.sub` method allows you to apply subscript to the given text. Example usage:
 
 ![image](https://github.com/user-attachments/assets/3fb3f69f-071f-4068-8a6f-9964c3f84e86) <img src="https://github.com/user-attachments/assets/44ccb9af-ba61-4678-9b1a-109b616ed059" align="right">
@@ -160,7 +191,8 @@ newString = "Hello"
 print(newString.tiny) // Outputs: <sub>Hello</sub>
 ```
 
-### .sup *[tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextSubSuper.html)*
+#### .sup
+*[sup-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextSubSuper.html)*
 The `.sup` method allows you to apply superscript to the given text. Example usage:
 
 ![image](https://github.com/user-attachments/assets/a94caa5a-6a99-4c90-8022-4c0b8ecd9531) <img src="https://github.com/user-attachments/assets/1d4607bb-62df-4c92-88a7-244ac5ae008a" align="right">
@@ -171,7 +203,43 @@ newString = "Hello"
 print(newString.sup) // Outputs: <sup>Hello</sup>
 ```
 
-### .remove_char_last 
+#### .underline
+*[underline-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextStrikethroughUnderline.html)*
+The `.underline` method allows you to apply underline to the given text.
+
+![image](https://github.com/user-attachments/assets/54683595-7cf9-481e-9ea9-14531fe8cb60) <img src="https://github.com/user-attachments/assets/07a4e6a9-c487-4a77-a0c5-e66f1c41fdd4" align="right">
+
+```
+newString = "Hello"
+
+print(newString.underline) // Outputs: <u>Hello</u>
+```
+### Logic Methods
+#### .extract
+The `.extract` method allows you to extract the text between the provided values
+
+![image](https://github.com/user-attachments/assets/2fc96f61-81a7-46a1-a922-ba15c8399937) <img src="https://github.com/user-attachments/assets/bb057877-5cdb-4152-9bbd-78dd0e7140ec" align="right">
+
+```
+newString = "<b>0x53C737</b>"
+
+print(newString.extract_between("<b>", "</b>")) // Outputs: 0x53C737
+
+```
+#### .format
+The `.format` method allows for string interpolation
+
+![image](https://github.com/user-attachments/assets/b0661d5b-fdb9-400c-8181-7c7cfb5f3269) <img src="https://github.com/user-attachments/assets/68c231a4-f293-4569-a714-638feb61367d" align="right">
+
+```greyscript
+// Modification of implimentation by dynobytes.
+variableString = "The quick brown %s jumps over the lazy %s"
+animalsList = ["fox", "dog"]      
+sentence = variableString.format(animalsList)
+print(sentence); // Outputs: The quick brown fox jumps over the lazy dog
+```
+### Removal Methods
+#### .remove_char_last 
 The `.remove_char_last` method allows you to remove the last character to the given text. Example usage:
 
 ![image](https://github.com/user-attachments/assets/0a870f9c-382d-41d1-a550-6a403147dbe9) <img src="https://github.com/user-attachments/assets/3a5b8ffd-1122-4811-b7df-ee09228977db" align="right">
@@ -183,7 +251,7 @@ print(newString.remove_char_last) // Outputs: Hell
 ```
 
 
-### .remove_char_first
+#### .remove_char_first
 The `.remove_char_first` method allows you to remove the last character to the given text. Example usage:
 
 ![image](https://github.com/user-attachments/assets/5eeaf542-d9bf-4426-a506-5dd3a748a9ac) <img src="https://github.com/user-attachments/assets/fa766c6c-9d2f-4d65-8c02-afd8ee1b914f" align="right">
@@ -194,7 +262,7 @@ newString = "Hello"
 print(newString.remove_char_first) // Outputs: ello
 ```
 
-### .remove_bold
+#### .remove_bold
 The `.remove_bold` method allows you to remove bold tags from the given text. Example usage:
 
 ![image](https://github.com/user-attachments/assets/b9163072-533f-4614-b418-630d2d3c6749) <img src="https://github.com/user-attachments/assets/f4c50d5b-8d28-4c7b-9bd0-71bb88c28b02" align="right">
@@ -205,7 +273,7 @@ newString = "<b>Hello</b>"
 print(newString.remove_bold) // Outputs: Hello
 ```
 
-### .remove_italic
+#### .remove_italic
 The `.remove_italic` method allows you to remove italic tags from the given text. Example usage:
 
 ![image](https://github.com/user-attachments/assets/aeaada4d-8aaf-44ed-8935-e49de4d6f864) <img src="https://github.com/user-attachments/assets/2c544f95-31be-4c8f-a458-3df2a7da9e60" align="right">
@@ -216,7 +284,7 @@ newString = "<i>Hello</i>"
 print(newString.remove_italic) // Outputs: Hello
 ```
 
-### .remove_underline
+#### .remove_underline
 The `.remove_underline` method allows you to remove underline tags from the given text. Example usage:
 
 ![image](https://github.com/user-attachments/assets/768e7493-ead8-4a7f-b156-af9f8761815a) <img src="https://github.com/user-attachments/assets/f7f5b909-d70d-41e7-9e50-bedc24218dbe" align="right">
@@ -227,7 +295,7 @@ newString = "<u>Hello</u>"
 print(newString.remove_underline) // Outputs: Hello
 ```
 
-### .remove_strike
+#### .remove_strike
 The `.remove_strike` method allows you to remove strikethrough tags from the given text. Example usage:
 
 ![image](https://github.com/user-attachments/assets/1aeed45f-4ab5-4343-8dba-949faec6c0af) <img src="https://github.com/user-attachments/assets/067854d8-e9d3-49ce-a992-2d30bd516517" align="right">
@@ -238,7 +306,7 @@ newString = "<s>Hello</s>"
 print(newString.remove_strike) // Outputs: Hello
 ```
 
-### .remove_mark
+#### .remove_mark
 The `.remove_mark` method allows you to remove mark tags from the given text. Example usage:
 
 ![image](https://github.com/user-attachments/assets/e8c5bdbe-e881-4ad2-996b-ef8eff80fcbe) <img src="https://github.com/user-attachments/assets/6002997b-ace8-4972-a2c2-8e38215a0fcc" align="right">
@@ -249,7 +317,7 @@ newString = "<mark>Hello</mark>"
 print(newString.remove_mark) // Outputs: Hello
 ```
 
-### .remove_sub
+#### .remove_sub
 The `.remove_sub` method allows you to remove sub tags from the given text. Example usage:
 
 ![image](https://github.com/user-attachments/assets/db99e8ca-62dc-494b-867a-8ab204fdf366) <img src="https://github.com/user-attachments/assets/09d958b7-2fe7-488d-be54-fd8db4e31544" align="right">
@@ -260,7 +328,7 @@ newString = "<sub>Hello</sub>"
 print(newString.remove_sub) // Outputs: Hello
 ```
 
-### .remove_sup
+#### .remove_sup
 The `.remove_sup` method allows you to remove superscript tags from the given text. Example usage:
 
 ![image](https://github.com/user-attachments/assets/14996b4a-aa3c-4b02-a06c-2303cde34328) <img src="https://github.com/user-attachments/assets/46ea574e-1c99-4d5b-b0e9-0f4f889dc27b" align="right">
@@ -271,54 +339,12 @@ newString = "<sup>Hello</sup>"
 print(newString.remove_sup) // Outputs: Hello
 
 ```
-### .extract_between
-The `.extract_between` method allows you to extract the text between the provided values
 
-![image](https://github.com/user-attachments/assets/2fc96f61-81a7-46a1-a922-ba15c8399937) <img src="https://github.com/user-attachments/assets/bb057877-5cdb-4152-9bbd-78dd0e7140ec" align="right">
-
-```
-newString = "<b>0x53C737</b>"
-
-print(newString.extract_between("<b>", "</b>")) // Outputs: 0x53C737
-
-```
-### .format
-The `.format` method allows for string interpolation
-
-![image](https://github.com/user-attachments/assets/b0661d5b-fdb9-400c-8181-7c7cfb5f3269) <img src="https://github.com/user-attachments/assets/68c231a4-f293-4569-a714-638feb61367d" align="right">
-
-```greyscript
-variableString = "The quick brown %s jumps over the lazy %s"
-animalsList = ["fox", "dog"]      
-sentence = variableString.format(animalsList)
-print(sentence); // Outputs: The quick brown fox jumps over the lazy dog
-```
-##### Modification of implimentation by dynobytes.
----
 ## numberMethods
 ![Static Badge](https://img.shields.io/badge/method-number-green)
 
-### .plus
-The `.plus` method allows you to add a specified amount to a number. If no amount is provided, it defaults to `1`.
-![image](https://github.com/user-attachments/assets/43a689b8-e9ae-43eb-a2ee-829337d19bf3) <img src="https://github.com/user-attachments/assets/e886e55f-b95d-439f-8d0d-44c84a030180" align="right">
-
-```greyscript
-newNumber = 40
-
-result = newNumber.plus(2)
-print(result) // Outputs: 42
-```
-
-### .minus
-The `.minus` method allows you to subtract a specified amount from a number. If no amount is provided, it defaults to `1`. 
-![image](https://github.com/user-attachments/assets/aca2249d-bf43-4031-abff-130f4a853d76) <img src="https://github.com/user-attachments/assets/edd9ae50-b11d-4870-82da-ea7957713eea" align="right">
-
-```greyscript
-newNumber = 44
-
-result = newNumber.minus(2)
-print(result) // Outputs: 42
-```
+### .clamp
+The `.clamp` method allows a number to be clamped within a specified range
 
 ### .diff
 The `.diff` method calculates the absolute difference between the current number and another number.
@@ -332,18 +358,6 @@ result = newNumber.diff(newNumber2)
 print(result) // Outputs: 42
 ```
 
-### .multiply
-The `.multiply` method multiplies the current number the given number (or 2).
-
-![image](https://github.com/user-attachments/assets/3fbe19e9-9e14-4ff7-ba69-4aeffab46735) <img src="https://github.com/user-attachments/assets/937c5ba4-d76d-4b21-9abd-882c41f7c4c2" align="right">
-
-```greyscript
-newNumber = 22
-newNumber2 = 2
-
-result = newNumber.multiply(newNumber2)
-print(result) // Outputs: 42
-```
 
 ### .divide
 The `.divide` method divides the current number by another number.  Zero division will result in null
@@ -379,6 +393,41 @@ myNumber2 = 100
 
 result = myNumber.lesser_than(myNumber2)
 print(result) // Outputs: 1 (true)
+```
+
+### .minus
+The `.minus` method allows you to subtract a specified amount from a number. If no amount is provided, it defaults to `1`. 
+![image](https://github.com/user-attachments/assets/aca2249d-bf43-4031-abff-130f4a853d76) <img src="https://github.com/user-attachments/assets/edd9ae50-b11d-4870-82da-ea7957713eea" align="right">
+
+```greyscript
+newNumber = 44
+
+result = newNumber.minus(2)
+print(result) // Outputs: 42
+```
+
+### .multiply
+The `.multiply` method multiplies the current number the given number (or 2).
+
+![image](https://github.com/user-attachments/assets/3fbe19e9-9e14-4ff7-ba69-4aeffab46735) <img src="https://github.com/user-attachments/assets/937c5ba4-d76d-4b21-9abd-882c41f7c4c2" align="right">
+
+```greyscript
+newNumber = 22
+newNumber2 = 2
+
+result = newNumber.multiply(newNumber2)
+print(result) // Outputs: 42
+```
+
+### .plus
+The `.plus` method allows you to add a specified amount to a number. If no amount is provided, it defaults to `1`.
+![image](https://github.com/user-attachments/assets/43a689b8-e9ae-43eb-a2ee-829337d19bf3) <img src="https://github.com/user-attachments/assets/e886e55f-b95d-439f-8d0d-44c84a030180" align="right">
+
+```greyscript
+newNumber = 40
+
+result = newNumber.plus(2)
+print(result) // Outputs: 42
 ```
 
 ### .random_from
@@ -432,6 +481,10 @@ string
 ## file_append
 ## file_delete
 ## file_exists
+## force_params
+## generate_random_ip
+## is_null
+## is_type
 ## load_lib
 <img src="https://github.com/user-attachments/assets/123d920a-ac65-4524-9cbe-dc149418f334" align="left">
 
@@ -444,27 +497,11 @@ lib = load_lib("metaxploit.so", "/lib", "MetatxploitLib");
 ```
 
 ![image](https://github.com/user-attachments/assets/99db6c6a-6a90-415e-9c64-a55e6c6840d5)
-## force_params
-## generate_random_ip
-## is_null
-## is_type
+
+
 ## network_device_list
 ## program_name
 ## unsafe_check_list
-
-
-
-
-
-
-#Additional Functions
-######TODO: Detailed Documentation
-- **`force_params(usage, numReqParams)`**: Force paramater usage and add help 
-- **`app_name()`**: Gets name of program {self}
-- **`is_null()`**: Checks if object is null; if null, print / return / exit options
-- **`is_type()`**: Checks Types and specifies on-fail action
-- **`network_device_list()`**: Returns Network devices in a list
-- **`calcACK()`**: Caculates the recommended amount of ACKs to collect
 
 ---
 # 📄 Class Overview
