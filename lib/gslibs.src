@@ -93,19 +93,19 @@
 	end function
 
 	file_delete = function(filePath, fileName)
-		local.hostComputer = get_shell.host_computer
-		local.fileLocation = filePath + "/" + fileName
-		local.fileObj = local.hostComputer.File(local.fileLocation)
-		if local.fileObj.has_permission("w") then
-			local.hostComputer.File.delete
+		locals.hostComputer = get_shell.host_computer
+		locals.fileLocation = filePath + "/" + fileName
+		locals.fileObj = locals.hostComputer.File(locals.fileLocation)
+		if locals.fileObj.has_permission("w") then
+			locals.hostComputer.File.delete
 		end if
 	end function
 		
 	file_exists = function(filePath, fileName)
-		local.hostComputer = get_shell.host_computer
-		local.fileLocation = filePath + "/" + fileName
-		local.fileObj = local.hostComputer.File(local.fileLocation)
-		if not local.fileObj then
+		locals.hostComputer = get_shell.host_computer
+		locals.fileLocation = filePath + "/" + fileName
+		locals.fileObj = locals.hostComputer.File(locals.fileLocation)
+		if not locals.fileObj then
 			return false
 		else
 			return true
@@ -113,14 +113,14 @@
 	end function
 
 	file_new = function(filePath, fileName)
-		local.hostComputer = get_shell.host_computer
-		local.fileLocation = filePath + "/" + fileName
-		local.fileObj = local.hostComputer.File(local.fileLocation)
-		if not local.fileObj then
-			local.hostComputer.touch(filePath, fileName)
-			local.fileObj = local.hostComputer.File(local.fileLocation)
+		locals.hostComputer = get_shell.host_computer
+		locals.fileLocation = filePath + "/" + fileName
+		locals.fileObj = locals.hostComputer.File(locals.fileLocation)
+		if not locals.fileObj then
+			locals.hostComputer.touch(filePath, fileName)
+			locals.fileObj = locals.hostComputer.File(locals.fileLocation)
 		end if
-		if local.fileObj then
+		if locals.fileObj then
 			return true
 		else
 			return false
@@ -161,7 +161,7 @@
 // @example ipAddress = get_random_ip
 // @example print(ipAddress) // Output: ###.###.###.###
 	get_random_ip = function()
-	local.generateRandomOctet = function()
+	locals.generateRandomOctet = function()
     	binaryString = ""
 	    for i in range(8, 1)
 	        // Convert the random float to a binary digit using a threshold:
@@ -184,7 +184,7 @@
 	end function
     ipString = ""
     for i in range(4, 1)
-        octet = local.generateRandomOctet()
+        octet = locals.generateRandomOctet()
         // Only append a dot if there is already an octet in ipString.
         if ipString != "" then
             ipString = ipString + "."
