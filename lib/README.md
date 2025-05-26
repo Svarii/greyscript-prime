@@ -35,7 +35,7 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 |                  | [`.rotate`](#rotate)      | Rotates the text.        |
 |                  | [`.voffset("1em")`](#voffset)      | Add voffset tag.        |
 |                  | [`.width`](#width)      | Add width tag.        |
-|                  | [`.extract_between`](#extract_between)                   | Extract the text between the given values.           |
+|                  | [`.extract`](#extract)                   | Extract the text between the given values.           |
 |                  | [`.format`](#format)                   | Allows for string interpolation.           |
 |                  | [`.remove_char_last`](#remove_char_last) | Remove the last character from text. |
 |                  | [`.remove_char_first`](#remove_char_first) | Remove the last character from text. |
