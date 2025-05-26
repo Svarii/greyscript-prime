@@ -21,9 +21,14 @@
         //  @return {string}
         //  @example newString = "Hello"
         //  @example 
-        //  @example result = newString.align("center") //options: left, right, center, justified, flush
+        //  @example //options: left, right, center, justified, flush
+        //  @example result = newString.align("center")
         //  @example 
-        //  print(result); // Outputs: <align="center">Hello</align>       
+        //  print(result); // Outputs: <align="center">Hello</align>
+        //  @example         
+        //  @example result = newString.align("center", false)
+        //  @example 
+        //  print(result); // Outputs: <align="center">Hello         
     string.align = function(alignment = "center", closeTag = true)
         if closeTag == true then
             return "<align=" + char(34) + alignment + char(34) + ">" + self + "</align>"
@@ -1113,6 +1118,14 @@
             if self < min then return min
             if self > max then return max
             return self
+    end function
+
+    number.lerp = function(min, max, offset)
+        if offset > 1 then offset = 1
+        if offset < 0 then offset = 0
+        difference = max - min
+        scaled_difference = offset * difference
+        return min + scaled_difference
     end function
 
     //@name plus

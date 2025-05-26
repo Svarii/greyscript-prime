@@ -77,13 +77,13 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 ## stringMethods
 ![Static Badge](https://img.shields.io/badge/method-string-green)
 ### TextMeshPro
----
+
 #### .align
+##### *[align-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextAlignment.html)*
 The .align method allows you to apply the align tag to the given text.
 Accepted values are: left, right, center, justified, and flush
 
 ![image](https://github.com/user-attachments/assets/0b079e33-ba42-4804-9526-f639d7b03980) <img src="https://github.com/user-attachments/assets/3a139ace-494e-4cdd-a0a5-ee411c4be34e" align="right"> 
-*[align-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextAlignment.html)*
 ```
 newString = "Hello"
 
@@ -91,16 +91,16 @@ print(newString.align) // Outputs: <align="center">Hello</align>
 ```
 
 #### .alpha
+##### *[alpha-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextOpacity.html)*
 The .alpha method sets the opacity of using a 2 digits hex value
 ![image](https://github.com/user-attachments/assets/50c670d2-6102-4308-8f7e-7c46a600a710) <img src="https://github.com/user-attachments/assets/6d4486f4-3577-4a5f-9b8c-9dd3c2997422" align="right">
 
-*[alpha-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextOpacity.html)*
 
 \#FF: 100% Opague
 \#00: 100% Transparent
 
-*[bold-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextBoldItalic.html)*
 #### .bold
+##### *[bold-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextBoldItalic.html)*
 The `.bold` method allows you to apply bold to the given text.
 
 ![image](https://github.com/user-attachments/assets/3c6412aa-381a-4408-ba15-06ab0d0e3cfd) <img src="https://github.com/user-attachments/assets/4999242a-5c31-403b-a499-10049c4ba2f2" align="right">
@@ -111,8 +111,9 @@ newString = "Hello"
 print(newString.bold) // Outputs: <b>Hello</b>
 ```
 
-*[color-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextColor.html)* *[color-names-extended](https://htmlcolorcodes.com/color-names/)*
 #### .color
+##### *[color-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextColor.html)*
+##### *[color-names-extended](https://htmlcolorcodes.com/color-names/)*
 The `.color` method allows you to apply a color to the given text.
 
 ![image](https://github.com/user-attachments/assets/c2530db7-fee4-4454-be1d-65d7e995268b) <img src="https://github.com/user-attachments/assets/b61e6ae5-97ca-4213-9f63-5689232a3ac8" align="right">
@@ -124,12 +125,15 @@ print(newString.color("blue")) // Outputs: <color=blue>Hello</color>
 ```
 
 #### .cspace
+##### *[cspace-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextCharacterSpacing.html)*
 The .cspace method allows you to adjust character spacing, either absolute or relative to the original font Asset. You can use pixels or font units.
 
 #### .indent
+##### *[indent-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextIndentation.html)*
 The .indent method controls the horizontal caret position the same way the <pos> tag does, but the effect persists across lines.
 
-#### .italic *[italic-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextBoldItalic.html)*
+#### .italic
+##### *[italic-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextBoldItalic.html)*
 The `.italic` method allows you to apply italic to the given text.
 
 ![image](https://github.com/user-attachments/assets/8adc9cf4-c067-47a4-885f-e192105d169e) <img src="https://github.com/user-attachments/assets/e1d059ba-0849-41f4-9230-713eaf975a98" align
@@ -142,19 +146,23 @@ print(newString.italic) // Outputs: <i>Hello</i>
 ```
 
 #### .line-indent
+##### *[line-indent-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextLineIndentation.html)*
 The .line-indent method inserts horizontal space directly after it, and before the start of each new line. It only affects manual line breaks (including line breaks created with the \<br> tag, not word-wrapped lines.
 
 You can specify the indentation in pixels, font units, or percentages.
 
 #### .lowercase
+##### *[lowercase-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextLetterCase.html)*
 The .lowercase method alters the capitalization of your text before rendering. The text in the Text field remains as you entered it.
 
 #### .margin
+##### *[margin-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextMargins.html)*
 You can increase the horizontal margins of the text with the .margin method.
 You can specify the margins in pixels, font units, and percentages.
 Negative values have no effect.
 
-#### .mark *[mark-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextMark.html)*
+#### .mark
+##### *[mark-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextMark.html)*
 The `.mark` method allows you to apply highlight to the given text.
 
 ![image](https://github.com/user-attachments/assets/61838003-c880-4504-a12b-94b19c29ea4b) <img src="https://github.com/user-attachments/assets/e2e0d85c-782d-4bf1-a09b-877e77ea5972" align="right">
@@ -165,17 +173,20 @@ newString = "Hello"
 print(newString.mark) // Outputs: <mark>Hello</mark>
 ```
 
-#### .margin
-
 #### .mspace
+##### *[mspace-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextMonospace.html)*
 
 #### .nobr
+##### *[nobreak-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextNoBreak.html)*
 
 #### .noparse
+##### *[noparse-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextNoParse.html)*
 
 #### .pos
+##### *[pos-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextPos.html)*
 
-#### .strike *[strike-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextStrikethroughUnderline.html)*
+#### .strike
+##### *[strike-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextStrikethroughUnderline.html)*
 The `.strike` method allows you to apply strikethrough to the given text.
 
 ![image](https://github.com/user-attachments/assets/f1238124-aa01-42c3-8171-b6af0d925b4a) <img src="https://github.com/user-attachments/assets/55fb0584-10d3-45db-8b12-c1f92f818d52" align="right">
@@ -186,7 +197,8 @@ newString = "Hello"
 print(newString.strike) // Outputs: <s>Hello</s>
 ```
 
-#### .sub *[sub-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextSubSuper.html)*
+#### .sub
+##### *[sub-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextSubSuper.html)*
 The `.sub` method allows you to apply subscript to the given text. Example usage:
 
 ![image](https://github.com/user-attachments/assets/3fb3f69f-071f-4068-8a6f-9964c3f84e86) <img src="https://github.com/user-attachments/assets/44ccb9af-ba61-4678-9b1a-109b616ed059" align="right">
@@ -197,7 +209,8 @@ newString = "Hello"
 print(newString.tiny) // Outputs: <sub>Hello</sub>
 ```
 
-#### .sup *[sup-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextSubSuper.html)*
+#### .sup
+##### *[sup-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextSubSuper.html)*
 The `.sup` method allows you to apply superscript to the given text. Example usage:
 
 ![image](https://github.com/user-attachments/assets/a94caa5a-6a99-4c90-8022-4c0b8ecd9531) <img src="https://github.com/user-attachments/assets/1d4607bb-62df-4c92-88a7-244ac5ae008a" align="right">
@@ -208,7 +221,8 @@ newString = "Hello"
 print(newString.sup) // Outputs: <sup>Hello</sup>
 ```
 
-#### .underline *[underline-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextStrikethroughUnderline.html)*
+#### .underline
+##### *[underline-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextStrikethroughUnderline.html)*
 The `.underline` method allows you to apply underline to the given text.
 
 ![image](https://github.com/user-attachments/assets/54683595-7cf9-481e-9ea9-14531fe8cb60) <img src="https://github.com/user-attachments/assets/07a4e6a9-c487-4a77-a0c5-e66f1c41fdd4" align="right">
