@@ -57,7 +57,7 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 |                  | [`.clamp(min, max)`](#clamp)           | restricts a value within a specified range, ensuring it stays between a minimum and maximum limit.      |
 | **List**         | [`.trim`](#trim)             | Removes empty list items from list ends  
 |                  | [`.print`](#print)             | Loops through a list and prints each item    
-|                  | [`.string`](#string)             | combine list into a single string    |
+|                  | [`.join`](#join)             | combine list into a single string    |
 | **Function**         | [`load_lib(libName)`](#load_lib)             | load a lib from /lib opt:[ , libDir, typeExpected]             |
 |                  | [`append_file`](#append_file)             | Used to append, or a create new file, data to a file.
 |                  | [`bool_text`](#bool_text)             | Returns a string containing either "true" or "false"
@@ -77,10 +77,12 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 ## stringMethods
 ![Static Badge](https://img.shields.io/badge/method-string-green)
 ### TextMeshPro
-#### .align
-*[align-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextAlignment.html)*
+#### .align *[align-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextAlignment.html)*
 The .align method allows you to apply the align tag to the give text.
 Accepted values are: left, right, center, justified, and flush
+![image](https://github.com/user-attachments/assets/fed944d1-0cee-4158-8466-ea9c2b1ce2f2)
+<img src="https://github.com/user-attachments/assets/3a139ace-494e-4cdd-a0a5-ee411c4be34e" align="right">
+
 
 #### .alpha
 *[alpha-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextOpacity.html)*
