@@ -109,6 +109,15 @@ end function
 			return false
 		end if
 	end function
+
+	file_delete = function(filePath, fileName)
+		local.hostComputer = get_shell.host_computer
+		local.fileLocation = filePath + "/" + fileName
+		local.fileObj = local.hostComputer.File(local.fileLocation)
+		if local.fileObj.has_permission("w") then
+			local.hostComputer.File.delete
+		end if
+	end function
 // **Description:**
 // Appends Data to a file (creates new if does not exist)
 // 

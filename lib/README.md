@@ -415,7 +415,6 @@ myList.print
 string
 string
 ```
-
 ---
 # 📄 Functions Overview
 ## load_lib
