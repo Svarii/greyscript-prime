@@ -146,3 +146,5 @@ GreyScript Prime is released under the MIT License. See [LICENSE](LICENSE) for m
 *Enhance your GreyScript development experience today with GreyScript Prime!*
 
 ---
+Refrence file screenshot
+![image](https://github.com/user-attachments/assets/05965984-8b6a-4094-8f9b-39ab96eb3107)
