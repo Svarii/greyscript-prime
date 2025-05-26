@@ -16,15 +16,22 @@
         //  **Description:**  
         //  Applies align tag to the given text.
         //  @param {string} alignment
+        //  @param {boolean} [closeTag]
         //  
+        //  @link https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextAlignment.html TextMeshPro
         //  @return {string}
         //  @example newString = "Hello"
         //  @example 
-        //  @example result = newString.align("center")
+        //  @example result = newString.align("center") //options: left, right, center, justified, flush
         //  @example 
         //  print(result); // Outputs: <align="center">Hello</align>       
-    string.align = function(alignment = "center")
-        return "<align=" + char(34) + alignment + char(34) + ">" + self + "</align>"
+    string.align = function(alignment = "center", closeTag = true)
+        if closeTag == true then
+            return "<align=" + char(34) + alignment + char(34) + ">" + self + "</align>"
+        end if
+        if closeTag == false then
+            return "<align=" + char(34) + alignment + char(34) + ">" + self
+        end if        
     end function
 
     //@name alpha
@@ -471,7 +478,7 @@
         //  @example result = newString.mark
         //  @example
         //  print(result); // Outputs: <mark>Hello</mark>
-    string.mark = function()
+    string.mark = function(color="FFFF00AA")
         return "<mark>" + self + "</mark>"
     end function
 
@@ -1343,8 +1350,8 @@
         //  * @startuml
         //  * entity ListObject
         //  * control ".trim" as trim
-        //  *   ListObject -> trim : list
-        //  *   trim -> ListObject : list (no empties on ends)     
+        //  *   ListObject -> trim : [//""//,//""//,"item1", "item2", //""//]
+        //  *   trim -> ListObject : ["item1", "item2"]
         //  * footer
         //  *   list.trim
         //  * endfooter         
@@ -1393,20 +1400,11 @@
         //  @example      dog
         //  @example 
         //  @example myList = ["cat","dog"]
-        //  @example myList.print(",")
+        //  @example myList.print(", ")
         //  @example
         //  @example // Outputs:
-        //  @example      cat,dog    
+        //  @example      cat, dog    
     list.print = function(seperator = char(10))
         printString = split(self, seperator)
         print printString
-    end function
-
-//Prints list as string
-    list.string = function(spaceWith = " ")
-        newString = ""
-        for charList in self
-            newString = newString + spaceWith + charList
-        end for
-        return newString
     end function

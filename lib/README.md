@@ -13,6 +13,7 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 | Category         | Method                      | Description                          |
 |------------------|-----------------------------|--------------------------------------|
 | **String**       | [`.align("center")`](#align) | Align text.               |
+|                  | [`.alpha("#FF")`](#alpha) | Set alpha.               |
 |                  | [`.color("#color")`](#color) | Apply a color to text.               |
 |                  | [`.bold`](#bold)               | Make the text bold.                  |
 |                  | [`.cspace("1em")`](#cspace) | Apply cspace to text.               |
@@ -73,8 +74,15 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 
 ## stringMethods
 ![Static Badge](https://img.shields.io/badge/method-string-green)
+
+### .align *[tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextAlignment.html)*
+The .align method allows you to apply the align tag to the give text.
+Accepted values are: left, right, center, justified, and flush
+
+### .alpha *[tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextOpacity.html)*
+The .alpha method sets the opacity of using a 2 digits hex value #FF: 100% Opague, #00: 100% Transparent
   
-### .color
+### .color *[tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextColor.html)*
 The `.color` method allows you to apply a color to the given text.
 
 ![image](https://github.com/user-attachments/assets/c2530db7-fee4-4454-be1d-65d7e995268b) <img src="https://github.com/user-attachments/assets/b61e6ae5-97ca-4213-9f63-5689232a3ac8" align="right">
@@ -85,7 +93,7 @@ newString = "Hello"
 print(newString.color("blue")) // Outputs: <color=blue>Hello</color>
 ```
 
-### .bold
+### .bold *[tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextBoldItalic.html)*
 The `.bold` method allows you to apply bold to the given text.
 
 ![image](https://github.com/user-attachments/assets/3c6412aa-381a-4408-ba15-06ab0d0e3cfd) <img src="https://github.com/user-attachments/assets/4999242a-5c31-403b-a499-10049c4ba2f2" align="right">
@@ -96,7 +104,7 @@ newString = "Hello"
 print(newString.bold) // Outputs: <b>Hello</b>
 ```
 
-### .italic
+### .italic *[tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextBoldItalic.html)*
 The `.italic` method allows you to apply italic to the given text.
 
 ![image](https://github.com/user-attachments/assets/8adc9cf4-c067-47a4-885f-e192105d169e) <img src="https://github.com/user-attachments/assets/e1d059ba-0849-41f4-9230-713eaf975a98" align
@@ -108,7 +116,7 @@ newString = "Hello"
 print(newString.italic) // Outputs: <i>Hello</i>
 ```
 
-### .underline
+### .underline *[tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextStrikethroughUnderline.html)*
 The `.underline` method allows you to apply underline to the given text.
 
 ![image](https://github.com/user-attachments/assets/54683595-7cf9-481e-9ea9-14531fe8cb60) <img src="https://github.com/user-attachments/assets/07a4e6a9-c487-4a77-a0c5-e66f1c41fdd4" align="right">
@@ -119,7 +127,7 @@ newString = "Hello"
 print(newString.underline) // Outputs: <u>Hello</u>
 ```
 
-### .strike
+### .strike *[tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextStrikethroughUnderline.html)*
 The `.strike` method allows you to apply strikethrough to the given text.
 
 ![image](https://github.com/user-attachments/assets/f1238124-aa01-42c3-8171-b6af0d925b4a) <img src="https://github.com/user-attachments/assets/55fb0584-10d3-45db-8b12-c1f92f818d52" align="right">
@@ -130,7 +138,7 @@ newString = "Hello"
 print(newString.strike) // Outputs: <s>Hello</s>
 ```
 
-### .mark
+### .mark *[tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextMark.html)*
 The `.mark` method allows you to apply highlight to the given text.
 
 ![image](https://github.com/user-attachments/assets/61838003-c880-4504-a12b-94b19c29ea4b) <img src="https://github.com/user-attachments/assets/e2e0d85c-782d-4bf1-a09b-877e77ea5972" align="right">
@@ -141,7 +149,7 @@ newString = "Hello"
 print(newString.mark) // Outputs: <mark>Hello</mark>
 ```
 
-### .sub
+### .sub *[tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextSubSuper.html)*
 The `.sub` method allows you to apply subscript to the given text. Example usage:
 
 ![image](https://github.com/user-attachments/assets/3fb3f69f-071f-4068-8a6f-9964c3f84e86) <img src="https://github.com/user-attachments/assets/44ccb9af-ba61-4678-9b1a-109b616ed059" align="right">
@@ -152,7 +160,7 @@ newString = "Hello"
 print(newString.tiny) // Outputs: <sub>Hello</sub>
 ```
 
-### .sup
+### .sup *[tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextSubSuper.html)*
 The `.sup` method allows you to apply superscript to the given text. Example usage:
 
 ![image](https://github.com/user-attachments/assets/a94caa5a-6a99-4c90-8022-4c0b8ecd9531) <img src="https://github.com/user-attachments/assets/1d4607bb-62df-4c92-88a7-244ac5ae008a" align="right">
@@ -163,7 +171,7 @@ newString = "Hello"
 print(newString.sup) // Outputs: <sup>Hello</sup>
 ```
 
-### .remove_char_last
+### .remove_char_last 
 The `.remove_char_last` method allows you to remove the last character to the given text. Example usage:
 
 ![image](https://github.com/user-attachments/assets/0a870f9c-382d-41d1-a550-6a403147dbe9) <img src="https://github.com/user-attachments/assets/3a5b8ffd-1122-4811-b7df-ee09228977db" align="right">
@@ -349,7 +357,7 @@ result = newNumber.divide(newNumber2)
 print(result) // Outputs: 42
 ```
 
-### .greater_than
+### .is_more
 The `.greater_than` method checks if the current number is greater than a provided number. Returns `true` if greater, `false` otherwise.
 ![image](https://github.com/user-attachments/assets/3b71c3f3-abcd-40b9-ba6a-4f7b215e9d58) <img src="https://github.com/user-attachments/assets/b966ac53-3e88-4b53-81c4-008e45aa54ca" align="right">
 
@@ -361,7 +369,7 @@ result = myNumber.greater_than(myNumber2)
 print(result) // Outputs: 0 (false)
 ```
 
-### .lesser_than
+### .is_less
 The `.lesser_than` method checks if the current number is less than a provided number. Returns `true` if lesser, `false` otherwise.
 ![image](https://github.com/user-attachments/assets/d13a7320-012f-4c69-92de-524133c64405) <img src="https://github.com/user-attachments/assets/c0cf05b3-bf72-4237-84c6-864cf907c7dd" align="right">
 
@@ -417,8 +425,14 @@ string
 ```
 ---
 # 📄 Functions Overview
+## bool_text
+## calculate_acks
+## collect_whois
+## file_new
+## file_append
+## file_delete
+## file_exists
 ## load_lib
-
 <img src="https://github.com/user-attachments/assets/123d920a-ac65-4524-9cbe-dc149418f334" align="left">
 
 ```greyscript
@@ -430,6 +444,17 @@ lib = load_lib("metaxploit.so", "/lib", "MetatxploitLib");
 ```
 
 ![image](https://github.com/user-attachments/assets/99db6c6a-6a90-415e-9c64-a55e6c6840d5)
+## force_params
+## generate_random_ip
+## is_null
+## is_type
+## network_device_list
+## program_name
+## unsafe_check_list
+
+
+
+
 
 
 #Additional Functions
