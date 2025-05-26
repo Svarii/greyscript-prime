@@ -12,28 +12,28 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 
 | Category         | Method                      | Description                          |
 |------------------|-----------------------------|--------------------------------------|
-| **String**       | [`.align("center")`](#align) | Align text.               |
-|                  | [`.alpha("#FF")`](#alpha) | Set alpha.               |
+| **String**       | [`.align(string)`](#align) | Align text.               |
+|                  | [`.alpha(string)`](#alpha) | Set alpha.               |
 |                  | [`.bold`](#bold)               | Make the text bold.                  |
-|                  | [`.color("#color")`](#color) | Apply a color to text.               |
-|                  | [`.cspace("1em")`](#cspace) | Apply cspace to text.               |
-|                  | [`.indent("15%")`](#indent) | Apply indent to text.               |
+|                  | [`.color(string)`](#color) | Apply a color to text.               |
+|                  | [`.cspace(string)`](#cspace) | Apply cspace to text.               |
+|                  | [`.indent(string)`](#indent) | Apply indent to text.               |
 |                  | [`.italic`](#italic)             | Make the text italic.                |
-|                  | [`.line-indent("15%")`](#line-indent) | Apply line-indent to text.               |
+|                  | [`.line-indent(string)`](#line-indent) | Apply line-indent to text.               |
 |                  | [`.lowercase`](#lowercase)       | Underline the text.                  |
+|                  | [`.margin(string)`](#margin) | Apply margin to text.               |
 |                  | [`.mark`](#mark)                 | Highlight the text.                  |
-|                  | [`.margin("5em")`](#margin) | Apply margin to text.               |
-|                  | [`.mspace("2.75em")`](#mspace) | Apply monospace to text.               |
+|                  | [`.mspace(string)`](#mspace) | Apply monospace to text.               |
 |                  | [`.nobr`](#nobr)                 | Apply no-break to the text.                  |
 |                  | [`.noparse`](#noparse)                 | Apply no-parse to the text.                  |
-|                  | [`.pos("50%")`](#sub)                   | Apply pos to text.             
+|                  | [`.pos(string)`](#sub)                   | Apply pos to text.             
 |                  | [`.strike`](#strike)             | Apply strikethrough to text.         ||
 |                  | [`.sub`](#sub)                   | Apply subscript to text.             |
 |                  | [`.sup`](#sup)                   | Apply superscript to text.           |
 |                  | [`.uppercase`](#uppercase)                   | Apply underline to text.           |
 |                  | [`.underline`](#underline)                   | Apply underline to text.           |
 |                  | [`.rotate`](#rotate)      | Rotates the text.        |
-|                  | [`.voffset("1em")`](#voffset)      | Add voffset tag.        |
+|                  | [`.voffset(string)`](#voffset)      | Add voffset tag.        |
 |                  | [`.width`](#width)      | Add width tag.        |
 |                  | [`.extract`](#extract)                   | Extract the text between the given values.           |
 |                  | [`.format`](#format)                   | Allows for string interpolation.           |
@@ -54,7 +54,7 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 |                  | [`.is_more(number)`](#is_more) | Check if number is greater.          |
 |                  | [`.is_less(number)`](#is_less) | Check if number is lesser.           |
 |                  | [`.random_from(number)`](#random_from) | Generate a random number from 0 (or number) to number.            |
-|                  | [`.clamp(min, max)`](#clamp)           | restricts a value within a specified range, ensuring it stays between a minimum and maximum limit.      |
+|                  | [`.clamp(number, number)`](#clamp)           | restricts a value within a specified range, ensuring it stays between a minimum and maximum limit.      |
 | **List**         | [`.trim`](#trim)             | Removes empty list items from list ends  
 |                  | [`.print`](#print)             | Loops through a list and prints each item    
 |                  | [`.join`](#join)             | combine list into a single string    |
@@ -77,6 +77,7 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 ## stringMethods
 ![Static Badge](https://img.shields.io/badge/method-string-green)
 ### TextMeshPro
+
 #### .align *[align-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextAlignment.html)*
 The .align method allows you to apply the align tag to the give text.
 Accepted values are: left, right, center, justified, and flush
