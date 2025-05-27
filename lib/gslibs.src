@@ -1,8 +1,8 @@
 find_exploitable_addresses = function(libLocation, metaxLocation = "/lib/metaxploit.so", lineNumber = null)
 	error_message = ""
-	if not typeof(locals.libLocation) == "string" then error_message = "<color=red>Type Mismatch <u>find_exploitable_addresses</u> param[0]: Got " + typeof(libLocation) + ", expecting string</color>"
-	if not typeof(locals.metaxLocation) == "string" then error_message "Type Mismatch find_exploitable_addresses param[1]: Got " + typeof(metaxLocation) + ", expecting string"
-	if not typeof(get_shell.host_computer.File(metaxLocation)) == "file" then error_message = "Unable to load lib file at " + metaxLocation
+	if is_type(locals.libLocation, "string") == false then error_message = "<color=red>Type Mismatch <u>find_exploitable_addresses</u> param[0]: Got " + typeof(libLocation) + ", expecting string</color>"
+	if is_type(locals.metaxLocation, "string") == false then error_message "Type Mismatch find_exploitable_addresses param[1]: Got " + typeof(metaxLocation) + ", expecting string"
+	if is_type(get_shell.host_computer.File(metaxLocation), "file") == false then error_message = "Unable to load lib file at " + metaxLocation
 	if error_message.len > 0 then 
 		error_message = error_message + "<color=red> on line " + lineNumber + "</color>"
 		return error_message
