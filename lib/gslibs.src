@@ -1,10 +1,8 @@
 find_exploitable_addresses = function(libLocation, metaxLocation = "/lib/metaxploit.so")
-    if not locals.libLocation then return null
-	if not typeof(locals.libLocation) == "string" then return "library location must be string"
-	if not typeof(locals.metaxLocation) == "string" then return "metax location must be string"
-	if not typeof(get_shell.host_computer.File(metaxLocation)) == "file" then return "unable to load lib at " + metaxLocation
-    locals.metax = include_lib(locals.metaxLocation)
-    if not typeof(locals.metax) == "MetaxploitLib" then return "Metaxploit.so not found in /lib folder"
+	if not typeof(locals.libLocation) == "string" then return "<color=red>Type Mismatch <u>find_exploitable_addresses</u> param[0]: Got " + typeof(libLocation) + ", expecting string</color>"
+	if not typeof(locals.metaxLocation) == "string" then return "Type Mismatch find_exploitable_addresses param[1]: Got " + typeof(metaxLocation) + ", expecting string"
+	if not typeof(get_shell.host_computer.File(metaxLocation)) == "file" then return "Unable to load lib file at " + metaxLocation
+    locals.metax = load_lib("metaxploit.so", "/lib", "MetaxploitLib")
         locals.metaLib = locals.metax.load(locals.libLocation)
 		locals.libScanResult = locals.metax.scan(locals.metaLib)
         return locals.libScanResult
