@@ -22,6 +22,7 @@ fetch_exploit_requirements = function(addressList, libLocation)
     for address in addressList
         locals.scanResults = locals.metax.scan_address(locals.metaLib, address)
         locals.unsafeCheckLists = (unsafe_check_list(locals.scanResults)).trim
+//print locals.unsafeCheckLists
         for unsafeCheck in locals.unsafeCheckLists
                 locals.exploits = {"address": address, "variable": locals.unsafeCheck.extract, "cra": false, "cga": false, "cua": false, "rur": 0, "rpf": 0}
                 if not locals.unsafeCheck.indexOf("Checking root active") then
@@ -41,6 +42,7 @@ fetch_exploit_requirements = function(addressList, libLocation)
                 end if
 					unsafeCheckItems = split(locals.unsafeCheck, char(10))
 					for unsafeItem in unsafeCheckItems
+						//print "EXTRACT FROM: " + unsafeItem
 						if not locals.unsafeItem.indexOf("to ", ".") == null then
 							if not locals.unsafeItem.indexOf("registered users") == null then
 			                    locals.exploits.rur = to_int((unsafeItem.extract("to ", ".")).remove_char_last)
