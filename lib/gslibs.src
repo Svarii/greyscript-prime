@@ -24,26 +24,33 @@ fetch_exploit_requirements = function(addressList, libLocation)
         locals.unsafeCheckLists = (unsafe_check_list(locals.scanResults)).trim
         for unsafeCheck in locals.unsafeCheckLists
                 locals.exploits = {"address": address, "variable": locals.unsafeCheck.extract, "cra": false, "cga": false, "cua": false, "rur": 0, "rpf": 0}
-                if not unsafeCheck.indexOf("Checking root active") then
+                if not locals.unsafeCheck.indexOf("Checking root active") then
                     locals.exploits.cra = false
                 else
                     locals.exploits.cra = true
                 end if
-                if not unsafeCheck.indexOf("Checking an active user") then
+                if not locals.unsafeCheck.indexOf("Checking an active user") then
                     locals.exploits.cua = false
                 else
                     locals.exploits.cua = true
                 end if
-                if not unsafeCheck.indexOf("Checking guest active") then
+                if not locals.unsafeCheck.indexOf("Checking guest active") then
                     locals.exploits.cga = false
                 else
                     locals.exploits.cga = true
                 end if
-                if not unsafeCheck.indexOf("Checking registered users") then
-                    locals.exploits.rur = false
-                else
-                    locals.exploits.rur = to_int(unsafeCheck.extract("registered users equal to ", "."))
-                end if
+					unsafeCheckItems = split(locals.unsafeCheck, char(10))
+					for unsafeItem in unsafeCheckItems
+						if not locals.unsafeItem.indexOf("to ", ".") == null then
+							if not locals.unsafeItem.indexOf("registered users") == null then
+			                    locals.exploits.rur = to_int((unsafeItem.extract("to ", ".")).remove_char_last)
+							end if
+							if not locals.unsafeItem.indexOf("port forwarding") == null then
+								portForwards = unsafeItem.remove(" port forwarding configured from router to the target computer.")
+			                    locals.exploits.rpf = to_int(((unsafeItem.remove(" port forwarding configured from router to the target computer.")).remove("* ")))
+							end if						
+						end if
+					end for
                 locals.allExploitData.push(locals.exploits)
             end for
     end for
