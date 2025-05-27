@@ -29,6 +29,10 @@ To install GreyScript Prime, follow these steps:
 
 Import GreyScript Prime into your GreyScript projects to start using the extended methods. Here's a quick example:
 
+Paste each .src from the lib folder (seperatly) into the Code Editor and save the file with a .so extension in the /lib directory with the allow import box checked.
+![image](https://github.com/user-attachments/assets/b821fc24-d106-40f2-b09b-63d311258271)
+
+
 ```greyscript
 import_code("/lib/gsprime.so")";
 import_code("/lib/gslibs.so")";
