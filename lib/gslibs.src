@@ -1,3 +1,5 @@
+__classID = "gslibs"
+
 find_exploitable_addresses = function(libLocation, metaxLocation = "/lib/metaxploit.so", lineNumber = null)
 	error_message = ""
 	if is_type(locals.libLocation, "string") == false then error_message = "<color=red>Type Mismatch <u>find_exploitable_addresses</u> param[0]: Got " + typeof(libLocation) + ", expecting string</color>"
@@ -11,6 +13,41 @@ find_exploitable_addresses = function(libLocation, metaxLocation = "/lib/metaxpl
         locals.metaLib = locals.metax.load(locals.libLocation)
 		locals.libScanResult = locals.metax.scan(locals.metaLib)
         return locals.libScanResult
+end function
+
+fetch_exploit_requirements = function(addressList, libLocation)
+    locals.metax = load_lib("metaxploit.so", "/lib", "MetaxploitLib")
+    locals.metaLib = locals.metax.load(libLocation)
+    locals.allExploitData = []
+    for address in addressList
+        locals.scanResults = locals.metax.scan_address(locals.metaLib, address)
+        locals.unsafeCheckLists = (unsafe_check_list(locals.scanResults)).trim
+        for unsafeCheck in locals.unsafeCheckLists
+                locals.exploits = {"address": address, "variable": locals.unsafeCheck.extract, "cra": false, "cga": false, "cua": false, "rur": 0, "rpf": 0}
+                if not unsafeCheck.indexOf("Checking root active") then
+                    locals.exploits.cra = false
+                else
+                    locals.exploits.cra = true
+                end if
+                if not unsafeCheck.indexOf("Checking an active user") then
+                    locals.exploits.cua = false
+                else
+                    locals.exploits.cua = true
+                end if
+                if not unsafeCheck.indexOf("Checking guest active") then
+                    locals.exploits.cga = false
+                else
+                    locals.exploits.cga = true
+                end if
+                if not unsafeCheck.indexOf("Checking registered users") then
+                    locals.exploits.rur = false
+                else
+                    locals.exploits.rur = to_int(unsafeCheck.extract("registered users equal to ", "."))
+                end if
+                locals.allExploitData.push(locals.exploits)
+            end for
+    end for
+    return locals.allExploitData
 end function
 
 // **Description:**
