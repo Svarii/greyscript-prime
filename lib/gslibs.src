@@ -1,4 +1,29 @@
-find_exploitable_addresses = function(libLocation, metaxLocation = "/lib/metaxploit.so", lineNumber = null)
+
+gate = function(testObject, objectType = "null", error_string = "")
+    if locals.objectType == typeof(locals.testObject) then return typeof(locals.testObject)
+    if not locals.objectType == typeof(locals.testObject) then return locals.error_string
+	return null
+end function
+
+    //create object to store file data variables
+	file_ident = function()
+		locals.fileObj = {"classID":"fileID", "fileExt": "", "fileName": "", "databaseDir": "", "filePath": "", "fileLocation": ""}
+		return locals.fileObj
+	end function
+
+	//create object from file string to construct identifier
+file_ident_construct__ = function(absoluteLocation)
+        locals.ext = slice(absoluteLocation, (absoluteLocation.lastIndexOf(".") + 1), absoluteLocation.len)
+        locals.name = slice(absoluteLocation, absoluteLocation.lastIndexOf("/") + 1, absoluteLocation.lastIndexOf("."))
+		locals.filename = locals.name + "." + locals.ext
+        locals.dir = slice(absoluteLocation, absoluteLocation.indexOf("/"), absoluteLocation.lastIndexOf("/"))
+        locals.folder = slice(locals.dir, locals.dir.lastIndexOf("/") + 1)
+        locals.location = locals.dir + "/" + locals.name + "." + locals.ext
+        locals.construct = {"ext": locals.ext, "name": locals.name, "folder": locals.folder, "dir": locals.dir, "location": locals.location, "filename": locals.filename}
+        return locals.construct
+end function
+
+find_exploitable_addresses = function(libLocation, metaxLocation = "/lib/metaxploit.so", remoteTarget = false, targetPort = 0)
 	error_message = ""
 	if is_type(locals.libLocation, "string") == false then error_message = "<color=red>Type Mismatch <u>find_exploitable_addresses</u> param[0]: Got " + typeof(libLocation) + ", expecting string</color>"
 	if is_type(locals.metaxLocation, "string") == false then error_message "Type Mismatch find_exploitable_addresses param[1]: Got " + typeof(metaxLocation) + ", expecting string"
@@ -8,20 +33,28 @@ find_exploitable_addresses = function(libLocation, metaxLocation = "/lib/metaxpl
 		return error_message
 	end if
     locals.metax = load_lib("metaxploit.so", "/lib", "MetaxploitLib")
-        locals.metaLib = locals.metax.load(locals.libLocation)
+		if remoteTarget == false then
+        	locals.metaLib = locals.metax.load(locals.libLocation)
+		else
+			locals.metaLib = locals.metax.net_use(libLocation, to_int(targetPort))
+		end if
 		locals.libScanResult = locals.metax.scan(locals.metaLib)
         return locals.libScanResult
 end function
 
-fetch_exploit_requirements = function(addressList, libLocation)
+fetch_exploit_requirements = function(addressList, libLocation, remoteTarget = false, targetPort = 0)
     locals.metax = load_lib("metaxploit.so", "/lib", "MetaxploitLib")
-    locals.metaLib = locals.metax.load(libLocation)
+    if remoteTarget == false then
+		locals.metaLib = locals.metax.load(libLocation)
+	else
+		locals.metalLib = locals.metax.net_use(libLocation, targetPort)
+	end if
     locals.allExploitData = []
     for address in addressList
         locals.scanResults = locals.metax.scan_address(locals.metaLib, address)
         locals.unsafeCheckLists = (unsafe_check_list(locals.scanResults)).trim
         for unsafeCheck in locals.unsafeCheckLists
-                locals.exploits = {"address": address, "variable": locals.unsafeCheck.extract, "cra": false, "cga": false, "cua": false, "rur": 0, "rpf": 0}
+                locals.exploits = {"version":version,"is_patched":locals.metaLib.is_patched ,"address": address, "variable": locals.unsafeCheck.extract, "cra": false, "cga": false, "cua": false, "rur": 0, "rpf": 0}
                 if not locals.unsafeCheck.indexOf("Checking root active") then
                     locals.exploits.cra = false
                 else
@@ -49,6 +82,7 @@ fetch_exploit_requirements = function(addressList, libLocation)
 							end if						
 						end if
 					end for
+				locals.exploits.version = locals.metaLib.version
                 locals.allExploitData.push(locals.exploits)
             end for
     end for
@@ -94,19 +128,38 @@ end function
 	end function
 
 // **Description:**
-// converts a boolean value into a text "true" or "false"
-// @param {number} boolValue - The name of the library to load.
-// @return {string} true / false
+// converts a boolean value into a text "true" or "false" with optional color
+// @link Extended Color Names: https://htmlcolorcodes.com/color-names/
+// @param {number} boolValue - The value to check, true or false
+// @param {bool} [useColor] - Colorize the output
+// @param {bool} [flipColor] - Reverse Positive and Negative color Scheme
+// @param {string} [useFailColor] - Change the default Negative color: Support color, ColorName, #RGB, #RGBA, #RRGGBB, and #RRGGBBAA
+// @param {string} [useColor] - Colorize the output
+// @return {string}
 // @example trueOrFalse = boolToText(0)
 // @example print(trueOrFalse) // Output: false
 // @example
 // @example trueOrFalse = boolToText(1)
 // @example print(trueOrFalse) // Output: true
-	bool_text = function(boolVal)
+	bool_text = function(boolVal, useColor = false, flipColor = false, failColor = "Red", passColor = "Lime")
+		if flipColor == false then 
+			positiveColor = passColor
+			negativeColor = failColor
+		end if
+		if flipColor == true then
+			positiveColor = failColor
+			negativeColor = passColor
+		end if
 		if boolVal < 0 then return null
 		if boolVal > 1 then return null
-		if boolVal == 1 then return "true"
-		if boolVal == 0 then return "false"
+		if boolVal == 1 then 
+            if useColor == false then return "true"
+            if useColor == true then return "true".color(positiveColor)
+        end if
+		if boolVal == 0 then 
+            if useColor == false then return "false"
+            if useColor == true then return "false".color(negativeColor)
+        end if
 	return null
 	end function
 

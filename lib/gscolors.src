@@ -29,8 +29,8 @@
         //  @example result = newString.color("Aquamarine");
         //  @example   
         //  print(result); // Outputs: <color=#7FFFD4>Hello</color>                 
-    string.color = function(colorValue = "red")
-        if not typeof(colorValue) == "string" then return null
+    string.color = function(colorValue)
+        if not typeof(colorValue) == "string" then return self
 		//*****************************************************
 		// Red HEX Codes
 		//*****************************************************	
@@ -201,6 +201,8 @@
 		if colorValue == "SlateGrey" then colorValue = "#708090"
 		if colorValue == "DarkSlateGrey" then colorValue = "#2F4F4F"
 		if colorValue == "Black" then colorValue = "#000000"
-        //*****************************************************	                                       					   	
+        //*****************************************************
+		
+		if not colorValue.indexOf("#") == 0 then return self	                                       					   	
         return "<color=" + colorValue + ">" + self + "</color>"
     end function

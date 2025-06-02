@@ -1,6 +1,91 @@
-//GreyScript Prime version 0.2a by Svarii
+//GreyScript Prime by Svarii
+//LIST METHODS
+    //@name print
+        //  * @startuml
+        //  * entity ListObject
+        //  * interface ScreenOutput
+        //  * control ".print" as print
+        //  *   ListObject -> print : list
+        //  *   print -> ScreenOutput : print()
+        //  * footer
+        //  *   list.print
+        //  * endfooter         
+        //  * @enduml        
+        // ANCHOR list.print
 
+        //  **Description:**
+        //  Prints a list
+        //  @param {string} seperator
+        //  @return {void} 
+        //  @example myList = ["cat","dog"]
+        //  @example myList.print
+        //  @example
+        //  @example // Output:
+        //  @example      cat
+        //  @example      dog
+        //  @example 
+        //  @example myList = ["cat","dog"]
+        //  @example myList.print(", ")
+        //  @example
+        //  @example // Output:
+        //  @example      cat, dog    
+    list.print = function(seperator = char(10))
+        locals.printString = split(self, locals.seperator)
+        print locals.printString
+    end function
 
+    //@name trim
+        //  * @startuml
+        //  * entity ListObject
+        //  * control ".trim" as trim
+        //  *   ListObject -> trim : [//""//,//""//,"item1", "item2", //""//]
+        //  *   trim -> ListObject : ["item1", "item2"]
+        //  * footer
+        //  *   list.trim
+        //  * endfooter         
+        //  * @enduml        
+        // ANCHOR list.trim
+
+        //  **Description:**
+        //  Trims a <list>
+        //  @return {list<string>}
+        //  @example myList = ["","","cat","dog",""];
+        //  @example 
+        //  @example result = myList.trim
+        //  @example
+        //  print(result); // Outputs: ["cat","dog"]
+    list.trim = function()
+        while not self[self.len - 1].len > 0
+            self.remove(self.len - 1)
+        end while
+        while not self[0].len > 0
+            self.remove(0)
+        end while
+        return self
+    end function
+
+//MAP METHODS
+    //@name get_attributes      
+        // ANCHOR map.attributes
+
+        //  **Description:**
+        //  Returns a list of attributes names pulled from the object isa
+        //  @return {list<string>}
+        //  @example myObject = new {"classID": "myObjName", "name": "myName", "date": "myDate"}
+        //  @example objAttribs = myObject.get_attributes
+        //  @example print objAttribs
+        //  @example
+        //  @example // Output:
+        //  @example // ["classID", "myObjName", "myName", "myDate"]
+	map.get_attributes = function()
+		locals.attributeList = []
+		for param in self["__isa"]
+			locals.attributeList.push(locals.param.key)
+		end for	
+		return locals.attributeList
+	end function
+
+//STRING METHODS
     //@name align
         //  * @startuml
         //  * entity StringObject
@@ -30,11 +115,11 @@
         //  @example 
         //  print(result); // Outputs: <align="center">Hello         
     string.align = function(alignment = "center", closeTag = true)
-        if closeTag == true then
-            return "<align=" + char(34) + alignment + char(34) + ">" + self + "</align>"
+        if locals.closeTag == true then
+            return "<align=" + char(34) + locals.alignment + char(34) + ">" + self + "</align>"
         end if
-        if closeTag == false then
-            return "<align=" + char(34) + alignment + char(34) + ">" + self
+        if locals.closeTag == false then
+            return "<align=" + char(34) + locals.alignment + char(34) + ">" + self
         end if        
     end function
 
@@ -61,7 +146,7 @@
         //  @example 
         //  print(result); // Outputs: <alpha=#4C>Hello       
     string.alpha = function(hexOpactiy)
-        return "<alpha=" + hexOpactiy + ">" + self
+        return "<alpha=" + locals.hexOpactiy + ">" + self
     end function
  
     //@name bold
@@ -113,11 +198,11 @@
         //  @example 
         //  print(result); // Outputs: <cspace=1em>Hello</cspace>
     string.cspace = function(charSpacing = "1em", closeTag = true)
-        if closeTag == true then
-            return "<cspace=" + charSpacing + ">" + self + "</cspace>"
+        if locals.closeTag == true then
+            return "<cspace=" + locals.charSpacing + ">" + self + "</cspace>"
         end if
-        if closeTag == false then
-            return "<cspace=" + charSpacing + ">" + self
+        if locals.closeTag == false then
+            return "<cspace=" + locals.charSpacing + ">" + self
         end if        
     end function
 
@@ -143,7 +228,7 @@
         //  @example        
         //  print(result); // Outputs: <indent=15%>Hello        
     string.indent = function(indentPercent="15%")
-        return "<indent=" + indentPercent+ ">" + self
+        return "<indent=" + locals.indentPercent+ ">" + self
     end function 
 
 
@@ -185,7 +270,7 @@
         //  @example 
         //  print(result); // Outputs: <line-indent=50%>Hello       
     string.line_indent = function(lineIndent = "15%")
-        return "<line-indent=" + lineIndent + ">" + self
+        return "<line-indent=" + locals.lineIndent + ">" + self
     end function    
 
     //@name underline 
@@ -262,7 +347,7 @@
         //  @example 
         //  print(result); // Outputs: <margin=5em>Hello</margin>   
     string.margin = function(marginSpace = "5em")
-        return "<margin=" + marginSpace + ">" + self + "</margin>"
+        return "<margin=" + locals.marginSpace + ">" + self + "</margin>"
     end function    
 
     //@name mark
@@ -289,7 +374,7 @@
         //  @example
         //  print(result); // Outputs: <mark>Hello</mark>
     string.mark = function(color="FFFF00AA")
-        return "<mark>" + self + "</mark>"
+        return "<mark=#" + locals.color + ">" + self + "</mark>"
     end function
 
     //@name mspace
@@ -314,7 +399,7 @@
         //  @example 
         //  print(result); // Outputs: <mspace=2.75em>Hello</mspace>     
     string.mspace = function(monospace = "2.75em")
-        return "<mspace=" + monospace + ">" + self + "</mspace>"
+        return "<mspace=" + locals.monospace + ">" + self + "</mspace>"
     end function    
 
     //@name nobr
@@ -389,7 +474,7 @@
         //  @example 
         //  print(result); // Outputs: <pos=50%>Hello       
     string.pos = function(posPercent = "50%")
-        return "<pos=" + posPercent + ">" + self
+        return "<pos=" + locals.posPercent + ">" + self
     end function       
 
     //@name rotate
@@ -414,7 +499,7 @@
         //  @example 
         //  print(result); // Outputs: <rotate="45">Hello</rotate>     
     string.rotate = function(degreesRotation = "45")
-        return "<rotate=" + char(34) + degreesRotation + char(34) + ">" + self + "</rotate>"
+        return "<rotate=" + char(34) + locals.degreesRotation + char(34) + ">" + self + "</rotate>"
     end function      
 
     //@name sub
@@ -548,8 +633,8 @@
         //  @example
         //  print(result); // Outputs: Hello 
     string.remove_bold = function()
-        newString = self.remove("<b>")
-        return newString.remove("</b>")
+        locals.newString = self.remove("<b>")
+        return locals.newString.remove("</b>")
     end function
 
     //@name remove_italic 
@@ -577,8 +662,8 @@
         //  @example        
         //  print(result); // Outputs: Hello
     string.remove_italic = function()
-        newString = self.remove("<i>")
-        return newString.remove("</i>")
+        locals.newString = self.remove("<i>")
+        return locals.newString.remove("</i>")
     end function
 
     //@name remove_underline
@@ -607,8 +692,8 @@
         //  @example        
         //  print(result); // Outputs: Hello
     string.remove_underline = function()
-        newString = self.remove("<u>")
-        return newString.remove("</u>")
+        locals.newString = self.remove("<u>")
+        return locals.newString.remove("</u>")
     end function
 
     //@name remove_strike    
@@ -636,8 +721,8 @@
         //  @example         
         //  print(result); // Outputs: Hello
     string.remove_strike = function()
-        newString = self.remove("<s>")
-        return newString.remove("</s>")
+        locals.newString = self.remove("<s>")
+        return locals.newString.remove("</s>")
     end function
 
     //@name remove_mark    
@@ -666,8 +751,8 @@
         //  @example
         //  print(result); // Outputs: Hello
     string.remove_mark = function()
-        newString = self.remove("<mark>")
-        return newString.remove("</mark>")
+        locals.newString = self.remove("<mark>")
+        return locals.newString.remove("</mark>")
     end function
 
     //@name remove_sub    
@@ -697,8 +782,8 @@
         //  @example                
         //  print(result); // Outputs: Hello
     string.remove_sub = function()
-        newString = self.remove("<sub>")
-        return newString.remove("</sub>")
+        locals.newString = self.remove("<sub>")
+        return locals.newString.remove("</sub>")
     end function
 
     //@name remove_sup
@@ -727,8 +812,8 @@
         //  @example
         //  print(result); // Outputs: Hello
     string.remove_sup = function()
-        newString = self.remove("<sup>")
-        return newString.remove("</sup>")
+        locals.newString = self.remove("<sup>")
+        return locals.newString.remove("</sup>")
     end function
 
     //@name extract
@@ -758,9 +843,9 @@
         //  @example           
         //  print(result); // Outputs: 0x53C737   
     string.extract = function(tagStart = "<b>", tagEnd = "</b>")
-        startIndex = self.indexOf(tagStart) + (tagStart.len)
-        endIndex = self.indexOf(tagEnd) - (tagEnd.len - tagStart.len) + 1
-        return slice(self, startIndex, endIndex)
+        locals.startIndex = self.indexOf(locals.tagStart) + (locals.tagStart.len)
+        locals.endIndex = self.indexOf(locals.tagEnd) - (locals.tagEnd.len - locals.tagStart.len)
+        return slice(self, locals.startIndex, locals.endIndex)
     end function
  
     //@name format
@@ -791,10 +876,10 @@
         //  @example
         //  print(sentence); // Outputs: The quick brown fox jumps over the lazy dog
     string.format = function(args, delim="%s")
-        locals.splitStr = self.split(delim);
+        locals.splitStr = self.split(locals.delim);
         locals.recompStr = ""
-        for i in range(0, args.len()-1)
-            locals.recompStr = locals.recompStr + locals.splitStr[i] + args[i]  
+        for i in range(0, locals.args.len()-1)
+            locals.recompStr = locals.recompStr + locals.splitStr[locals.i] + locals.args[locals.i]  
         end for
             locals.recompStr = locals.recompStr + locals.splitStr[locals.splitStr.len()-1]
         return locals.recompStr
@@ -822,7 +907,7 @@
         //  @example 
         //  print(result); // Outputs: <uppercase>Hello</uppercase>       
     string.uppercase = function(alignment = "left")
-        return "<align=" + alignment + ">" + self + "</align>"
+        return "<align=" + locals.alignment + ">" + self + "</align>"
     end function
 
 
@@ -848,7 +933,7 @@
         //  @example 
         //  print(result); // Outputs: <voffset=1em>Hello</voffset>     
     string.voffset = function(verticalOffset = "1em")
-        return "<voffset=" + verticalOffset + ">" + self + "</voffset>"
+        return "<voffset=" + locals.verticalOffset + ">" + self + "</voffset>"
     end function   
     
    //@name width
@@ -873,52 +958,51 @@
         //  @example 
         //  print(result); // Outputs: <width=50%>Hello</width>     
     string.width = function(hSize = "50%")
-        return "<width=" + hSize + ">" + self + "</width>"
+        return "<width=" + locals.hSize + ">" + self + "</width>"
     end function      
 
-
-//Extended number object methods
-    //@name plus
+//NUMBER METHODS
+    //@name clamp
         //  *
         //  * @uml
         //  * @startuml
         //  * entity NumberObject
-        //  * control ".plus" as plus
-        //  * NumberObject -> plus : number
-        //  * plus -> NumberObject : (number + 1)
-        //  * NumberObject -> plus : number(7)
-        //  * plus -> NumberObject : (number + 7)        
+        //  * control ".clamp" as clamp
+        //  * NumberObject -> clamp : number
+        //  * clamp -> NumberObject : (min, max)
+        //  * NumberObject -> clamp : 7.clamp(2,6)
+        //  * clamp -> NumberObject : 6
+        //  * NumberObject -> clamp : 1.clamp(2,6)
+        //  * clamp -> NumberObject : 2        
         //  * footer
-        //  * number.plus
+        //  * number.clamp
         //  * endfooter         
         //  * @enduml           
-        // ANCHOR number.plus
+        // ANCHOR number.clamp
 
         //  **Description:**
         //  Keeps a number within a specified range
         //  @description     
         //  @param {number} min - The mix threshold.
         //  @param {number} max - The max threshold.
-        //  @return {number | null} - The result of the addition.
+        //  @return {number} - The result of the addition.
         //  @example newNumber = 40
         //  @example 
-        //  @example result = newNumber.plus(2);
+        //  @example result = newNumber.clamp(2);
         //  @example
         //  print(result); // Outputs: 42
     number.clamp = function(min, max)
-        if not typeof(min) == "number" then return null
-        if not typeof(max) == "number" then return null
-            if self < min then return min
-            if self > max then return max
+            if self < locals.min then return locals.min
+            if self > locals.max then return locals.max
             return self
     end function
 
     number.lerp = function(min, max, offset)
-        if offset > 1 then offset = 1
-        if offset < 0 then offset = 0
-        difference = max - min
-        scaled_difference = offset * difference
-        return min + scaled_difference
+        if locals.offset > 1 then locals.offset = 1
+        if locals.offset < 0 then locals.offset = 0
+        locals.difference = locals.max - locals.min
+        locals.scaled_difference = locals.offset * locals.difference
+        return locals.min + locals.scaled_difference
     end function
 
     //@name plus
@@ -948,10 +1032,8 @@
         //  @example
         //  print(result); // Outputs: 42
     number.plus = function(amount = 1)
-        if not typeof(amount) == "number" then return null
-            return self + amount
+            return self + locals.amount
     end function
-
     //@name minus
         //  *
         //  * @uml
@@ -972,15 +1054,14 @@
         //  Subtract 1 from the number or optional amount
         //  @description     
         //  @param {number} [amount] - The amount to add.
-        //  @return {number | null} - The result of the subtraction.
+        //  @return {number} - The result of the subtraction.
         //  @example newNumber = 44
         //  @example 
         //  @example result = newNumber.minus(2)
         //  @example        
-        //  print(result); // Outputs: 42
+        //  print(result); // Output: 42
     number.minus = function(amount = 1)
-        if not typeof(amount) == "number" then return null
-            return self - amount
+            return self - locals.amount
     end function
 
     //@name multiply
@@ -1003,7 +1084,7 @@
         //  Multiply 2 from the number or optional amount
         //  @description     
         //  @param {number} [amount] - The amount to multiply by.
-        //  @return {number | null} - The result of the multiplication.
+        //  @return {number} - The result of the multiplication.
         //  @example newNumber = 22
         //  @example 
         //  @example result = newNumber.multiply
@@ -1013,8 +1094,7 @@
         //  @example        
         //  print(result2); // Outputs: 66        
     number.multiply = function(amount = 2)
-        if not typeof(amount) == "number" then return null
-            return self * amount
+            return self * locals.amount
     end function
 
     //@name divide
@@ -1037,16 +1117,17 @@
         //  Divide 2 from the number or optional amount
         //  @description     
         //  @param {number} [amount] - The amount to divide by.
-        //  @return {number | null} - The result of the division.
+        //  @return {number} - The result of the division.
         //  @example newNumber = 84
         //  @example 
         //  @example result = newNumber.divide
         //  @example        
         //  print(result); // Outputs: 42       
     number.divide = function(amount = 2)
-        if not amount == 0 then return null
-        if not typeof(amount) == "number" then return null
-            return self * amount
+        if typeof(locals.amount) == "number" then
+            if locals.amount == 0 then return 0
+        end if
+            return self / locals.amount
     end function    
 
     //@name diff
@@ -1066,7 +1147,7 @@
         //  **Description:**
         //  Return difference to number
         //  @param {number} amount
-        //  @return {number | null} - The result of the subtraction.
+        //  @return {number} - The result of the subtraction.
         //  @example newNumber = 44
         //  @example newNumber2 = 2   
         //  @example       
@@ -1074,8 +1155,7 @@
         //  @example
         //  print(result); // Outputs: 42          
     number.diff = function(distanceTo = 0)
-        if not typeof(distanceTo) == "number" then return null
-            return abs(self - distanceTo)
+            return abs(self - locals.distanceTo)
     end function
 
     //@name is_more   
@@ -1095,7 +1175,7 @@
         //  **Description:**
         //  Check if number is greater than provided number
         //  @param {number} is_more
-        //  @return {bool number | null} - The result of the subtraction.
+        //  @return {true<bool> | false<bool>} - The result of the subtraction.
         //  @example myNumber = 42;
         //  @example myNumber2 = 100;
         //  @example 
@@ -1103,8 +1183,7 @@
         //  @example        
         //  print(result); // Outputs: false
     number.is_more = function(is_more)
-        if not typeof(is_more) == "number" then return null
-            if is_more > self then return true
+            if locals.is_more > self then return true
             return false
     end function
 
@@ -1123,7 +1202,7 @@
         //  **Description:**
         //  Check if number is lesser than provided number   
         //  @param {number} amount
-        //  @return {number [0 or 1] | null} - The result of the subtraction.
+        //  @return {true<bool> | false<bool>} - The result of the subtraction.
         //  @example myNumber = 42;
         //  @example myNumber2 = 100;
         //  @example 
@@ -1131,8 +1210,7 @@
         //  @example
         //  print(result); // Outputs: false
     number.is_less = function(is_less)
-        if not typeof(is_less) == "number" then return null
-            if is_less < self then return true
+            if locals.is_less < self then return true
             return false
     end function
 
@@ -1151,16 +1229,15 @@
         //  **Description:**
         //  Generate a random number from 0 to number or optional minimum
         //  @param {number} [min]
-        //  @return {number | null} - The result of the subtraction.
+        //  @return {number} - The result of the subtraction.
         //  @example myNumber = 100;
         //  @example 
         //  @example result = myNumber.random_from(50);
         //  @example
         //  print(result); // Outputs: {rnd:50-100}
     number.random_from = function(min = 0)
-        if not typeof(min) == "number" then return null
-            max = self
-            return floor((rnd * (max - min + 1)) + min)  
+            locals.max = self
+            return floor((rnd * (locals.max - locals.min + 1)) + locals.min)  
     end function
 
     //@name saturate  
@@ -1185,72 +1262,9 @@
         //  @example
         //  print(result); // Outputs: false    
     number.saturate = function()
-        x = self
-        if x > 1 then x = 1
-        if x < 0 then x = 0
-        return x
+        locals.x = self
+        if locals.x > 1 then locals.x = 1
+        if locals.x < 0 then locals.x = 0
+        return locals.x
     end function
-
-//LIST FUNCTIONS
-    //@name trim
-        //  * @startuml
-        //  * entity ListObject
-        //  * control ".trim" as trim
-        //  *   ListObject -> trim : [//""//,//""//,"item1", "item2", //""//]
-        //  *   trim -> ListObject : ["item1", "item2"]
-        //  * footer
-        //  *   list.trim
-        //  * endfooter         
-        //  * @enduml        
-        // ANCHOR list.trim
-
-        //  **Description:**
-        //  Trims a <list>
-        //  @return {string} 
-        //  @example myList = ["","","cat","dog",""];
-        //  @example 
-        //  @example result = myList.trim
-        //  @example
-        //  print(result); // Outputs: ["cat","dog"]
-    list.trim = function()
-        while not self[self.len - 1].len > 0
-            self.remove(self.len - 1)
-        end while
-        while not self[0].len > 0
-            self.remove(0)
-        end while
-        return self
-    end function
-
-    //@name print
-        //  * @startuml
-        //  * entity ListObject
-        //  * interface ScreenOutput
-        //  * control ".print" as print
-        //  *   ListObject -> print : list
-        //  *   print -> ScreenOutput : print()
-        //  * footer
-        //  *   list.print
-        //  * endfooter         
-        //  * @enduml        
-        // ANCHOR list.print
-
-        //  **Description:**
-        //  Prints a list
-        //  @return {void} 
-        //  @example myList = ["cat","dog"]
-        //  @example myList.print
-        //  @example
-        //  @example // Outputs:
-        //  @example      cat
-        //  @example      dog
-        //  @example 
-        //  @example myList = ["cat","dog"]
-        //  @example myList.print(", ")
-        //  @example
-        //  @example // Outputs:
-        //  @example      cat, dog    
-    list.print = function(seperator = char(10))
-        printString = split(self, seperator)
-        print printString
-    end function
+	
