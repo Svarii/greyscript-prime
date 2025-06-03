@@ -86,7 +86,10 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 The .align method allows you to apply the align tag to the given text.
 Accepted values are: left, right, center, justified, and flush
 
-![image](https://github.com/user-attachments/assets/0b079e33-ba42-4804-9526-f639d7b03980)
+![image](https://github.com/user-attachments/assets/acccc750-a4b4-4ceb-91ec-2b9f0c239eb5)
+
+
+
 ```
 newString = "Hello"
 
@@ -97,7 +100,8 @@ print(newString.align) // Outputs: <align="center">Hello</align>
 ##### *[alpha-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextOpacity.html)*
 The `.alpha` method sets the opacity of using a 2 digits hex value
 
-![image](https://github.com/user-attachments/assets/50c670d2-6102-4308-8f7e-7c46a600a710)
+![image](https://github.com/user-attachments/assets/d40089a1-e291-4068-b093-72b120b0f876)
+
 
 \#FF: 100% Opague
 \#00: 100% Transparent
@@ -537,9 +541,7 @@ string
 
 ## mapMethods
 ### .get_attributes
-![image](https://github.com/user-attachments/assets/0b0825bf-dffc-4c31-8573-cefaec595d98)
-
-
+![image](https://github.com/user-attachments/assets/0168765b-4220-4176-88d1-257209da67b8)
 
 ---
 # 📄 Functions Overview
