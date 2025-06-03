@@ -100,7 +100,7 @@ print(newString.align) // Outputs: <align="center">Hello</align>
 ##### *[alpha-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextOpacity.html)*
 The `.alpha` method sets the opacity of using a 2 digits hex value
 
-![image](https://github.com/user-attachments/assets/d40089a1-e291-4068-b093-72b120b0f876)
+![image](https://github.com/user-attachments/assets/86fcb985-f71e-4920-b583-cff0aac22b9a)
 
 
 \#FF: 100% Opague
@@ -110,7 +110,7 @@ The `.alpha` method sets the opacity of using a 2 digits hex value
 ##### *[bold-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextBoldItalic.html)*
 The `.bold` method allows you to apply bold to the given text.
 
-![image](https://github.com/user-attachments/assets/3c6412aa-381a-4408-ba15-06ab0d0e3cfd)
+![image](https://github.com/user-attachments/assets/09245164-651a-4e03-af3a-d69ec04898be)
 
 ```
 newString = "Hello"
