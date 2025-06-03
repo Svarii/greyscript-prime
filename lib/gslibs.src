@@ -42,6 +42,33 @@ find_exploitable_addresses = function(libLocation, metaxLocation = "/lib/metaxpl
         return locals.libScanResult
 end function
 
+//  **Description:**
+//  Retrieves exploit requirement data for a list of memory addresses using the Metaxploit library.
+//  @description
+//  This function loads the "metaxploit.so" library and then, based on whether the target is remote, loads the appropriate 
+//  module (either locally via `.load` or remotely via `.net_use`). For each address in the provided list, it scans for vulnerabilities 
+//  using `scan_address` and processes the resulting `unsafe_check_strings` (after trimming) to build an object containing exploit data.
+//  @description
+//  @description exploit object includes details such as:
+//  @description    - version: the version of the target library
+//  @description    - is_patched: indicates if the target is patched
+//  @description    - address: the target IP address
+//  @description    - variable: bulnerable variable
+//  @description    - cra: a flag for "Checking root active" bool
+//  @description    - cga: a flag for "Checking guest active" bool
+//  @description    - cua: check user active #
+//  @description    - rur: required registered users #
+//  @description    - rpf: required port forwards #
+//  @description
+//  The function assembles these objects into a list and returns it.
+//  @param {list<string>} addressList - A list of target IP addresses to scan.
+//  @param {string} libLocation - The library location identifier used for loading the target library.
+//  @param {boolean} [remoteTarget=false] - Optional flag indicating whether the target is remote; defaults to false.
+//  @param {number} [targetPort=0] - Optional target port for remote scanning; defaults to 0.
+//  @return {list<object>} - A list of exploit data objects, one for each scanned address.
+//  @example
+//     results = fetch_exploit_requirements(["192.168.1.1", "10.0.0.2"], "/modules/exploits", true, 8080);
+//     print(results);
 fetch_exploit_requirements = function(addressList, libLocation, remoteTarget = false, targetPort = 0)
     locals.metax = load_lib("metaxploit.so", "/lib", "MetaxploitLib")
     if remoteTarget == false then
@@ -183,7 +210,19 @@ end function
 		return ceil(300000 / signalStrength)
 	end function
 
-//Collection whois information
+//  **Description:**
+//  Retrieves WHOIS information for a router's public IP address.
+//  @description
+//  If the given IP is not a LAN address, the function calls the WHOIS service to obtain details and then
+//  parses the resulting string to fill in a whoisInformation object containing the domain, admin, email,
+//  phone, and network information. If the IP is a LAN IP, no lookup is performed.
+//  @param {string} routerPublicIPAddress - The public IP address of the router.
+//  @return {whoisInformation} - An object containing WHOIS details such as domain, admin, email, phone, and network.
+//           If the IP is a LAN address, the function may return undefined or an unmodified object.
+//  @example
+//      info = fetch_whois("203.0.113.42")
+//  @example
+//      print(info.domain) // Might print the retrieved domain name.
 	fetch_whois = function(routerPublicIPAddress)
 		if not is_lan_ip(routerPublicIPAddress) == true then
 			whoisInformation = {"domain":"", "admin":"", "email":"", "phone":"", "network":""}
@@ -222,6 +261,15 @@ end function
 		end if		
 	end function
 
+//  **Description:**
+//  Creates a new file at the specified path if it does not already exist.
+//  @description
+//  This function retrieves the host computer from the shell and constructs a full file location from the given
+//  file path and file name. It then checks if a file object exists at that location. If not, it attempts to create
+//  the file using the `touch` mechanism, and finally verifies if the file now exists.
+//  @param {string} filePath - The directory path where the file should be created.
+//  @param {string} fileName - The name of the file to be created.
+//  @return {true | false} - Returns true if the file exists (either originally or after creation) and false otherwise.
 	file_new = function(filePath, fileName)
 		locals.hostComputer = get_shell.host_computer
 		locals.fileLocation = filePath + "/" + fileName
