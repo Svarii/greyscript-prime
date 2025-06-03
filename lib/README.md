@@ -487,6 +487,18 @@ The `.saturate` Clamps a number to the normalized range [0, 1].
 
 
 ---
+### .crop
+The `.trim` method Returns a new list stripped of any spacing at the beginning and ending. If any value gets passed that is not a list this method will return null.
+
+![image](https://github.com/user-attachments/assets/7c9495cc-6f78-4d64-8361-e0cac50cc89f)
+
+```greyscript
+myList = ["", "string", "string", "", ""]
+
+result = myList.trim
+print(result) // Outputs: ["string", "string"]
+```
+
 ### .print
 The `.print` method loops through a list and prints each item
 
@@ -501,17 +513,6 @@ string
 string
 ```
 
-### .trim
-The `.trim` method Returns a new list stripped of any spacing at the beginning and ending. If any value gets passed that is not a list this method will return null.
-
-![image](https://github.com/user-attachments/assets/f7dcfc4e-81f7-46cc-b44f-96a3da4d8e97)
-
-```greyscript
-myList = ["", "string", "string", "", ""]
-
-result = myList.trim
-print(result) // Outputs: ["string", "string"]
-```
 ---
 
 ## mapMethods
