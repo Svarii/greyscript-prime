@@ -47,8 +47,8 @@
         // ANCHOR list.trim
 
         //  **Description:**
-        //  Trims a <list>
-        //  @return {list<string>}
+        //  Trims a list
+        //  @return {list}
         //  @example myList = ["","","cat","dog",""];
         //  @example 
         //  @example result = myList.trim
@@ -975,7 +975,7 @@
         //  * NumberObject -> clamp : 1.clamp(2,6)
         //  * clamp -> NumberObject : 2        
         //  * footer
-        //  * number.clamp
+        //  * number.clamp(min, max)
         //  * endfooter         
         //  * @enduml           
         // ANCHOR number.clamp
@@ -986,17 +986,31 @@
         //  @param {number} min - The mix threshold.
         //  @param {number} max - The max threshold.
         //  @return {number} - The result of the addition.
-        //  @example newNumber = 40
+        //  @example newNumber = 43
+        //  @example result = newNumber.clamp(41, 42);
+        //  @example print(result); // Output: 42
         //  @example 
-        //  @example result = newNumber.clamp(2);
-        //  @example
-        //  print(result); // Outputs: 42
+        //  @example newNumber = 40
+        //  @example result = newNumber.clamp(42, 43);        
+        //  @example print(result); // Output: 42
     number.clamp = function(min, max)
             if self < locals.min then return locals.min
             if self > locals.max then return locals.max
             return self
     end function
 
+    //  **Description:**
+//  Computes the linear interpolation (lerp) between two numbers.
+//  @description Calculates an intermediate value between a start and an end number based on a provided interpolation factor.
+//  @param {number} min - The starting value.
+//  @param {number} max - The ending value.
+//  @param {number} offset - The interpolation factor where 0 returns start, 1 returns end, and values in between yield a proportional blend.
+//  @return {number} - The interpolated value.
+//  @example min = 10
+//  @example max = 20
+//  @example offset = 0.5
+//  @example result = lerp(min, max, offset);
+//  @example print(result); // Output: 15
     number.lerp = function(min, max, offset)
         if locals.offset > 1 then locals.offset = 1
         if locals.offset < 0 then locals.offset = 0
@@ -1005,7 +1019,7 @@
         return locals.min + locals.scaled_difference
     end function
 
-    //@name plus
+    //@name plus 
         //  *
         //  * @uml
         //  * @startuml
@@ -1025,7 +1039,7 @@
         //  Add 1 to the number or optional amount
         //  @description     
         //  @param {number} [amount] - The amount to add.
-        //  @return {number | null} - The result of the addition.
+        //  @return {number} - The result of the addition.
         //  @example newNumber = 40
         //  @example 
         //  @example result = newNumber.plus(2);
@@ -1085,14 +1099,14 @@
         //  @description     
         //  @param {number} [amount] - The amount to multiply by.
         //  @return {number} - The result of the multiplication.
-        //  @example newNumber = 22
+        //  @example newNumber = 21
         //  @example 
         //  @example result = newNumber.multiply
         //  @example        
         //  print(result); // Outputs: 42
         //  @example result2 = newNumber.multiply(3)
         //  @example        
-        //  print(result2); // Outputs: 66        
+        //  print(result2); // Outputs: 63      
     number.multiply = function(amount = 2)
             return self * locals.amount
     end function
@@ -1227,14 +1241,14 @@
         // ANCHOR number.random_from
 
         //  **Description:**
-        //  Generate a random number from 0 to number or optional minimum
+        //  Generate a random number from 0 to number, or from optional minimum to number
         //  @param {number} [min]
         //  @return {number} - The result of the subtraction.
         //  @example myNumber = 100;
         //  @example 
         //  @example result = myNumber.random_from(50);
         //  @example
-        //  print(result); // Outputs: {rnd:50-100}
+        //  print(result); // Output: A random number between 50 and 100
     number.random_from = function(min = 0)
             locals.max = self
             return floor((rnd * (locals.max - locals.min + 1)) + locals.min)  
@@ -1252,15 +1266,23 @@
         //  * @enduml 
         // ANCHOR number.saturate  
         
-        //  **Description:**
-        //  Check if number is lesser than provided number   
-        //  @param {number} x
-        //  @return {number} - The result of the subtraction.
-        //  @example myNumber = 42;
-        //  @example 
-        //  @example result = newNumber.saturate(myNumber2);
-        //  @example
-        //  print(result); // Outputs: false    
+//  **Description:**
+//  Clamps a number to the normalized range [0, 1].
+//  @description
+//  If the number exceeds 1, it returns 1; if it is lower than 0, it returns 0; otherwise, it returns the number as-is.
+//  @return {number} - The saturated number.
+//  @example
+//      input = 1.2;
+//      result = input.saturate();
+//      print(result); // Output: 1
+//  @example
+//      input = -0.5;
+//      result = input.saturate();
+//      print(result); // Output: 0
+//  @example
+//      input = 0.7;
+//      result = input.saturate();
+//      print(result); // Output: 0.7 
     number.saturate = function()
         locals.x = self
         if locals.x > 1 then locals.x = 1
