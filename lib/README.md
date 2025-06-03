@@ -522,7 +522,7 @@ print(result) // Outputs: ["string", "string"]
 ### .print
 The `.print` method loops through a list and prints each item
 
-![image](https://github.com/user-attachments/assets/f4e44cba-b76d-49d9-b6da-33460f931851)
+![image](![alt text](image.png))
 
 ```greyscript
 myList = ["string", "string"]
