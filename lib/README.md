@@ -512,7 +512,6 @@ The `.crop` method Returns a new list stripped of any spacing at the beginning a
 
 ![image](https://github.com/user-attachments/assets/c4a534f2-b5e0-47b2-a7b0-ccf5e21df680)
 
-
 ```greyscript
 myList = ["", "string", "string", "", ""]
 
@@ -523,8 +522,7 @@ print(result) // Outputs: ["string", "string"]
 ### .print
 The `.print` method loops through a list and prints each item
 
-![image](https://github.com/user-attachments/assets/8e4ef1ee-1509-4053-bd80-425da124d2df)
-
+![image](https://github.com/user-attachments/assets/51a0f05d-e9c0-4786-a53c-c32ccf4d722c)
 
 ```greyscript
 myList = ["string", "string"]
@@ -540,6 +538,7 @@ string
 ## mapMethods
 ### .get_attributes
 ![image](https://github.com/user-attachments/assets/0b0825bf-dffc-4c31-8573-cefaec595d98)
+
 
 
 ---
