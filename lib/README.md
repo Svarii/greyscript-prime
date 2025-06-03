@@ -508,7 +508,7 @@ The `.saturate` Clamps a number to the normalized range [0, 1].
 
 ---
 ### .crop
-The `.trim` method Returns a new list stripped of any spacing at the beginning and ending. If any value gets passed that is not a list this method will return null.
+The `.crop` method Returns a new list stripped of any spacing at the beginning and ending. If any value gets passed that is not a list this method will return null.
 
 ![image](https://github.com/user-attachments/assets/7c9495cc-6f78-4d64-8361-e0cac50cc89f)
 
