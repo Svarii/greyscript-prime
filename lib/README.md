@@ -539,8 +539,7 @@ string
 
 ## mapMethods
 ### .get_attributes
-![image](https://github.com/user-attachments/assets/7dfc7a3e-389b-4f4e-8406-c44787928405)
-
+![image](https://github.com/user-attachments/assets/0b0825bf-dffc-4c31-8573-cefaec595d98)
 
 
 ---
