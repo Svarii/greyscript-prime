@@ -86,7 +86,10 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 The .align method allows you to apply the align tag to the given text.
 Accepted values are: left, right, center, justified, and flush
 
-![image](https://github.com/user-attachments/assets/0b079e33-ba42-4804-9526-f639d7b03980)
+![image](https://github.com/user-attachments/assets/acccc750-a4b4-4ceb-91ec-2b9f0c239eb5)
+
+
+
 ```
 newString = "Hello"
 
@@ -537,9 +540,7 @@ string
 
 ## mapMethods
 ### .get_attributes
-![image](https://github.com/user-attachments/assets/0b0825bf-dffc-4c31-8573-cefaec595d98)
-
-
+![image](https://github.com/user-attachments/assets/0168765b-4220-4176-88d1-257209da67b8)
 
 ---
 # 📄 Functions Overview
