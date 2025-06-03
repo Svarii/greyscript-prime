@@ -34,27 +34,27 @@
         print locals.printString
     end function
 
-    //@name trim
+    //@name crop
         //  * @startuml
         //  * entity ListObject
-        //  * control ".trim" as trim
-        //  *   ListObject -> trim : [//""//,//""//,"item1", "item2", //""//]
-        //  *   trim -> ListObject : ["item1", "item2"]
+        //  * control ".crop" as crop
+        //  *   ListObject -> crop : [//""//,//""//,"item1", "item2", //""//]
+        //  *   crop -> ListObject : ["item1", "item2"]
         //  * footer
-        //  *   list.trim
+        //  *   list.crop
         //  * endfooter         
         //  * @enduml        
-        // ANCHOR list.trim
+        // ANCHOR list.crop
 
         //  **Description:**
-        //  Trims a list
+        //  Crops a list
         //  @return {list}
         //  @example myList = ["","","cat","dog",""];
         //  @example 
-        //  @example result = myList.trim
+        //  @example result = myList.crop
         //  @example
         //  print(result); // Outputs: ["cat","dog"]
-    list.trim = function()
+    list.crop = function()
         while not self[self.len - 1].len > 0
             self.remove(self.len - 1)
         end while
@@ -839,9 +839,9 @@
         //  @return {string or null}
         //  @example newString = "<b>0x53C737</b>"
         //  @example 
-        //  @example result = newString.extract_between("<b>", "</b>")
+        //  @example result = newString.extract("<b>", "</b>")
         //  @example           
-        //  print(result); // Outputs: 0x53C737   
+        //  print(result); // Output: 0x53C737   
     string.extract = function(tagStart = "<b>", tagEnd = "</b>")
         locals.startIndex = self.indexOf(locals.tagStart) + (locals.tagStart.len)
         locals.endIndex = self.indexOf(locals.tagEnd) - (locals.tagEnd.len - locals.tagStart.len)
@@ -874,7 +874,7 @@
         //  @example      
         //  @example sentence = variableString.format(animalsList)
         //  @example
-        //  print(sentence); // Outputs: The quick brown fox jumps over the lazy dog
+        //  print(sentence); // Output: The quick brown fox jumps over the lazy dog
     string.format = function(args, delim="%s")
         locals.splitStr = self.split(locals.delim);
         locals.recompStr = ""
