@@ -34,6 +34,9 @@ report_string_construct__ = function()
 	locals.status.info.mission_contract = "Mission Contract"
 	locals.status.fail.has_lib_dir = "lib directory not found"
 	locals.status.pass.has_lib_dir = "lib directory Found"
-	locals.status.action.has_lib_dir = "Checking for lib directory..."	
+	locals.status.action.has_lib_dir = "Checking for lib directory..."
+	locals.status.fail.has_metaxploit = "metaxploit not found"
+	locals.status.pass.has_metaxploit = "metaxploit found"
+	locals.status.action.has_metaxploit = "Checking for metaxploit.so..."	
 	return locals.status
 end function

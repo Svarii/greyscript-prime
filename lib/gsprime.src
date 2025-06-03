@@ -1,3 +1,26 @@
+// ===================================================================
+// @module MyAwesomeLibrary
+//
+// @description **Overview:**
+//   This library provides advanced functions for data manipulation
+//   within Greyscript.
+//
+// @description **Dependencies:**
+//   - core_utils
+//   - data_parser
+//
+// @description **Usage Example:**
+//   myLib = include_lib("MyAwesomeLibrary")
+//   myLib.doSomethingCool()
+//
+// @description **Author:** Svarii
+// ===================================================================
+//
+// Dummy function for documentation popup
+moduleInfo = function() 
+    // no-op: this function exists only to trigger the docblock popup
+end function
+
 //GreyScript Prime by Svarii
 //LIST METHODS
     //@name print
@@ -19,7 +42,7 @@
 // @description ---
 //
 // @description **Parameters:**
-// @param {string} seperator
+// @param {string} [seperator]
 // @description `seperator: <string>` The character to use to seperate the list items in the new string.
 // @description ---
 //
@@ -29,6 +52,7 @@
 // @description ---
 //
 // @description **Author:** Svarii
+// @description **Version:** 0.0.1
 // @description ---
 //
 // @example myList = ["cat","dog"]
@@ -60,15 +84,15 @@
 // @description ---
 //
 // @description **Parameters:**
-// @param {string} seperator
 // @description - none
 //
-// @description **Returns:**
+// @description **Return:**
 // @return {list}
 // @description `list` The same list with empty items purged from ends
 // @description ---
 //
 // @description **Author:** Svarii
+// @description **Version:** 0.0.1
 // @description ---
 //
 // @example myList = ["","","cat","dog",""];
@@ -89,16 +113,32 @@
 //MAP METHODS
     //@name get_attributes      
         // ANCHOR map.attributes
-
-        //  **Description:**
-        //  Returns a list of attributes names pulled from the object isa
-        //  @return {list<string>}
-        //  @example myObject = new {"classID": "myObjName", "name": "myName", "date": "myDate"}
-        //  @example objAttribs = myObject.get_attributes
-        //  @example print objAttribs
-        //  @example
-        //  @example // Output:
-        //  @example // ["classID", "myObjName", "myName", "myDate"]
+       
+// Extracts list of top-level attributes from object
+// @description **Description:**
+// @description Iterate though the __isa of a list and create a list of key names
+// @description ---
+//
+// @description **Parameters:**
+// @description - none
+//
+// @description **Return:**
+// @return {list<string>}
+// @description `list<string>` List attributes for the object
+// @description ---
+//
+// @description **Author:** Svarii
+// @description **Version:** 0.0.1
+// @description ---
+//
+// @example myObject = {"classID":"myObject","myVar":"some Value"};
+// @example result = myObject.get_attributes
+// @example
+// print(result); // Output: ["myObject":"myVar", "myVar":"some Value"]
+// @description ---       
+// @description ***footnotes***   
+// @description This method only returns top-level attributes   
+// @description ---          
 	map.get_attributes = function()
 		locals.attributeList = []
 		for param in self["__isa"]
@@ -126,16 +166,52 @@
         //  @param {boolean} [closeTag]
         //  
         //  @return {string}
-        //  @example newString = "Hello"
-        //  @example 
-        //  @example //options: left, right, center, justified, flush
-        //  @example result = newString.align("center")
-        //  @example 
-        //  print(result); // Outputs: <align="center">Hello</align>
-        //  @example         
-        //  @example result = newString.align("center", false)
-        //  @example 
-        //  print(result); // Outputs: <align="center">Hello         
+
+        
+// Applies align tag to the string
+// @description **Description:**
+// @description Modifies a text string to wrap it in the align tag
+// @description ---
+//
+// @description **Parameters:**
+// @param {string} [alignment]
+// @description - `alignment` Accepted values: `left`, `center`, `right`, `justified`, and `flush`
+// @param {boolean} [closeTag]
+// @description - `closeTag` Accepted values: `true` or `false`
+//
+// @description **Parameter Defaults:**
+// @description - `alignment`:`center`
+// @description - `closeTag`:`true`
+//
+// @description **Return:**
+// @return {string}
+// @description `string` the string value embedded in (or preceded by) the `<align>` tag
+// @description ---
+//
+// @description **Author:** Svarii
+// @description **Version:** 0.0.1
+// @description ---
+//
+// @example newString = "Hello"
+// @example 
+// @example result = newString.align("center")
+// @example 
+// print result // Output: <align="center">Hello</align>
+// @example         
+// @example result = newString.align("center", false)
+// @example 
+// print result // Output: <align="center">Hello
+// @description ---        
+// @description **Links:**
+// @description [Text Mesh Pro: Rich Text Alignment](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextAlignment.html)
+// @description ---       
+// @description ***footnotes***   
+// @description Parameters are not checked for validity   
+// @description - `alignment` will not reject invalid values | **Return**: `string<withParseIssues>`
+// @description - `closeTag` will not reject invalid values | **Return**: `null`
+// @description
+// @description If all paramaters passed are invalid | **Return**: `null`
+// @description ---       
     string.align = function(alignment = "center", closeTag = true)
         if locals.closeTag == true then
             return "<align=" + char(34) + locals.alignment + char(34) + ">" + self + "</align>"
@@ -144,31 +220,49 @@
             return "<align=" + char(34) + locals.alignment + char(34) + ">" + self
         end if        
     end function
-
-    //@name alpha
-        //  * @startuml
-        //  * entity StringObject
-        //  * control ".alpha" as alpha
-        //  *   StringObject -> alpha : string
-        //  *   alpha -> StringObject : //<alpha=#4C>//string
-        //  * footer
-        //  *   string.alpha("#4C")
-        //  * endfooter           
-        //  * @enduml        
-        // ANCHOR string.alpha
-
-        //  **Description:**  
-        //  Applies alpha to the given text. | [tmp \<alpha> docs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextOpacity.html)
-        //  @param {string} hexOpacity
-        //  
-        //  @return {string}
-        //  @example newString = "Hello"
-        //  @example 
-        //  @example result = newString.alpha("#4C")
-        //  @example 
-        //  print(result); // Outputs: <alpha=#4C>Hello       
-    string.alpha = function(hexOpactiy)
-        return "<alpha=" + locals.hexOpactiy + ">" + self
+      
+// Applies alpha tag to the string
+// @description **Description:**
+// @description Modifies a text string and preced it with the alpha tag
+// @description ---
+//
+// @description **Parameters:**
+// @param {string} [hexOpacity]
+// @description - `hexOpacity` Accepted values: 2 digit HEX value preceded by #
+//
+// @description **Parameter Defaults:**
+// @description - `hexOpacity`:`#FF`
+//
+// @description **Return:**
+// @return {string}
+// @description `string` the string value embedded in the `<alpha>` tag
+// @description ---
+//
+// @description **Author:** Svarii
+// @description **Version:** 0.0.1
+// @description ---
+//
+// @example newString = "Hello"
+// @example 
+// @example result = newString.alpha("#4C")
+// @example 
+// print(result); // Output: <alpha=#4C>Hello
+// @example 
+// @example result = newString.alpha
+// @example 
+// print(result); // Output: <alpha=#FF>Hello 
+// @description ---        
+// @description **Links:**
+// @description [Text Mesh Pro: Rich Text Opacity](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextOpacity.html)
+// @description ---       
+// @description ***footnotes***   
+// @description Parameters are not checked for validity   
+// @description - `hexOpacity` will not reject invalid values | **Return**: `string<withParseIssues>`
+// @description - does not apply a closing tag and affects all text that follows
+// @description - will apply transparancy (default) #FF if no paramaters are passed
+// @description ---           
+    string.alpha = function(hexOpacity = "#FF")
+        return "<alpha=" + locals.hexOpacity + ">" + self
     end function
  
     //@name bold

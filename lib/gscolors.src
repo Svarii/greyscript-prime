@@ -203,6 +203,6 @@
 		if colorValue == "Black" then colorValue = "#000000"
         //*****************************************************
 		
-		if not colorValue.indexOf("#") == 0 then return self	                                       					   	
+		//if not colorValue.indexOf("#") == 0 then return self	                                       					   	
         return "<color=" + colorValue + ">" + self + "</color>"
     end function

@@ -479,9 +479,9 @@ end function
 
 // **Description:**
 // Gets name of program *{self}*
-// @return {void}
+// @return {string}
 // @example
-// programName = app_name
+// programName = program_name
 	program_name = function()
 		splitVal = program_path.split("/")
 		splitVal.reverse
