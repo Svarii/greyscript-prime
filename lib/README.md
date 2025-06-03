@@ -510,7 +510,8 @@ The `.saturate` Clamps a number to the normalized range [0, 1].
 ### .crop
 The `.crop` method Returns a new list stripped of any spacing at the beginning and ending. If any value gets passed that is not a list this method will return null.
 
-![image](https://github.com/user-attachments/assets/7c9495cc-6f78-4d64-8361-e0cac50cc89f)
+![image](https://github.com/user-attachments/assets/c4a534f2-b5e0-47b2-a7b0-ccf5e21df680)
+
 
 ```greyscript
 myList = ["", "string", "string", "", ""]
