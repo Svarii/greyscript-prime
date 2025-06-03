@@ -234,6 +234,9 @@ newString = "Hello"
 
 print(newString.underline) // Outputs: <u>Hello</u>
 ```
+### Map Methods
+#### .get_attributes
+
 ### Logic Methods
 #### .extract
 The `.extract` method allows you to extract the text between the provided values
@@ -478,17 +481,6 @@ The `.saturate` Clamps a number to the normalized range [0, 1].
 ## listMethods
 ![Static Badge](https://img.shields.io/badge/method-list-green)
 
-### .trim
-The `.trim` method Returns a new list stripped of any spacing at the beginning and ending. If any value gets passed that is not a list this method will return null.
-
-![image](https://github.com/user-attachments/assets/f7dcfc4e-81f7-46cc-b44f-96a3da4d8e97)
-
-```greyscript
-myList = ["", "string", "string", "", ""]
-
-result = myList.trim
-print(result) // Outputs: ["string", "string"]
-```
 
 ---
 ### .print
@@ -504,13 +496,24 @@ myList.print
 string
 string
 ```
+
+### .trim
+The `.trim` method Returns a new list stripped of any spacing at the beginning and ending. If any value gets passed that is not a list this method will return null.
+
+![image](https://github.com/user-attachments/assets/f7dcfc4e-81f7-46cc-b44f-96a3da4d8e97)
+
+```greyscript
+myList = ["", "string", "string", "", ""]
+
+result = myList.trim
+print(result) // Outputs: ["string", "string"]
+```
 ---
 
 ## mapMethods
 ### .get_attributes
 ![image](https://github.com/user-attachments/assets/91d8dfa7-3346-483b-bd16-3da9c52913e2)
 
----
 
 ---
 # 📄 Functions Overview
@@ -543,10 +546,6 @@ lib = load_lib("metaxploit.so", "/lib", "MetatxploitLib");
 ## program_name
 ## unsafe_check_list
 
----
-# map methods
-
----
 # 📄 Class Overview
 ## SystemObject
 
