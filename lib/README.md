@@ -100,7 +100,8 @@ print(newString.align) // Outputs: <align="center">Hello</align>
 ##### *[alpha-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextOpacity.html)*
 The `.alpha` method sets the opacity of using a 2 digits hex value
 
-![image](https://github.com/user-attachments/assets/50c670d2-6102-4308-8f7e-7c46a600a710)
+![image](https://github.com/user-attachments/assets/d40089a1-e291-4068-b093-72b120b0f876)
+
 
 \#FF: 100% Opague
 \#00: 100% Transparent
