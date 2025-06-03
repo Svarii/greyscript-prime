@@ -58,7 +58,7 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 |            | [`.clamp(number, number)`](#clamp)                      | Restrict a value within a specified range (minimum to maximum).                               |
 | **List**   | [`.join`](#join)                                        | Combine list into a single string.                                                            |
 |            | [`.print`](#print)                                      | Loop through a list and print each item.                                                      |
-|            | [`.trim`](#trim)                                        | Remove empty list items from the list ends.                                                   |
+|            | [`.crop`](#crop)                                        | Remove empty list items from the list ends.                                                   |
 | **Function** | [`load_lib(libName)`](#load_lib)                     | Load a library from /lib. Optional parameters: libDir, typeExpected.
 |            | [`get_acks(number)`](#calculate_acks) | Return recommended ACKs as a number.                                                         |
 |            | [`fetch_whois`](#fetch_whois)                       | Return an object containing whois information.                                                |
