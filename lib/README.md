@@ -128,12 +128,16 @@ print(newString.color("blue")) // Outputs: <color=blue>Hello</color>
 
 #### .cspace
 ##### *[cspace-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextCharacterSpacing.html)*
-![image](https://github.com/user-attachments/assets/46bcd46a-a89f-4242-b1af-3011f622027b)
 The `.cspace` method allows you to adjust character spacing, either absolute or relative to the original font Asset. You can use pixels or font units.
+
+![image](https://github.com/user-attachments/assets/46bcd46a-a89f-4242-b1af-3011f622027b)
 
 #### .indent
 ##### *[indent-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextIndentation.html)*
-The .indent method controls the horizontal caret position the same way the <pos> tag does, but the effect persists across lines.
+The `.indent` method controls the horizontal caret position the same way the <pos> tag does, but the effect persists across lines.
+
+![image](https://github.com/user-attachments/assets/f4f3eeee-1a69-4389-aecc-5c857b196fd1)
+
 
 #### .italic
 ##### *[italic-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextBoldItalic.html)*
