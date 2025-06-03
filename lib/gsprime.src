@@ -28,7 +28,23 @@
         //  @example myList.print(", ")
         //  @example
         //  @example // Output:
-        //  @example      cat, dog    
+        //  @example      cat, dog
+
+// Print all elements of a list to the screen
+// @description **Description:**
+// @description Iterates through a list and construct a string using the provided seperator, or char(10) if no speerator is specified.
+//
+// @description **Parameters:**
+// @param {string} seperator
+// @description `seperator: <string>` The character to use to seperate the list items in the new string.
+//
+// @description **Returns:**
+// @return {void}
+// @description `void` The newly constructed string is printed to the screen.
+//
+//  @example myList = ["cat","dog"]
+//  @example myList.print         // Output: "cat" + char(10) + "dog"
+//  @example myList.print(", ")     // Output: "cat, dog"
     list.print = function(seperator = char(10))
         locals.printString = split(self, locals.seperator)
         print locals.printString
