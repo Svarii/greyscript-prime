@@ -249,7 +249,7 @@ print(newString.extract_between("<b>", "</b>")) // Outputs: 0x53C737
 #### .format
 The `.format` method allows for string interpolation
 
-![image](https://github.com/user-attachments/assets/b0661d5b-fdb9-400c-8181-7c7cfb5f3269)
+![image](https://github.com/user-attachments/assets/c2b8b59c-8ee7-4acd-a840-2fb16060ef4a)
 
 ```greyscript
 // Modification of implimentation by dynobytes.
