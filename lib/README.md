@@ -579,7 +579,8 @@ lib = load_lib("metaxploit.so", "/lib", "MetatxploitLib");
 ## network_device_list
 ![image](https://github.com/user-attachments/assets/2bc52a9d-381f-4314-a95c-c6ed4788f96d)
 ## program_name
-![image](https://github.com/user-attachments/assets/b1a89597-d3b0-4a77-9ed2-74fbb29b1b8c)
+![image](https://github.com/user-attachments/assets/600abc08-9cdd-42b9-9f5f-c590cb718091)
+
 ## unsafe_check_list
 ![image](https://github.com/user-attachments/assets/9ee095f2-82d7-42b1-ad84-11043361ae24)
 
