@@ -155,17 +155,25 @@ print(newString.italic) // Outputs: <i>Hello</i>
 ##### *[line-indent-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextLineIndentation.html)*
 The .line-indent method inserts horizontal space directly after it, and before the start of each new line. It only affects manual line breaks (including line breaks created with the \<br> tag, not word-wrapped lines.
 
+![image](https://github.com/user-attachments/assets/9dfb64e0-59cf-4181-ab38-c883fe9b1410)
+
+
 You can specify the indentation in pixels, font units, or percentages.
 
 #### .lowercase
 ##### *[lowercase-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextLetterCase.html)*
 The .lowercase method alters the capitalization of your text before rendering. The text in the Text field remains as you entered it.
 
+![image](https://github.com/user-attachments/assets/ee73d21c-5f7d-4f48-8b6a-7262babbec1f)
+
 #### .margin
 ##### *[margin-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextMargins.html)*
 You can increase the horizontal margins of the text with the .margin method.
 You can specify the margins in pixels, font units, and percentages.
 Negative values have no effect.
+
+![image](https://github.com/user-attachments/assets/4a9ec009-5f4d-4585-b3ab-991ba10128fe)
+
 
 #### .mark
 ##### *[mark-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextMark.html)*
@@ -182,14 +190,26 @@ print(newString.mark) // Outputs: <mark>Hello</mark>
 #### .mspace
 ##### *[mspace-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextMonospace.html)*
 
+![image](https://github.com/user-attachments/assets/902134e5-ccda-492f-97c1-521d2003fc32)
+
+
 #### .nobr
 ##### *[nobreak-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextNoBreak.html)*
+
+![image](https://github.com/user-attachments/assets/68f252ff-2d60-4f2d-a32f-bf9c56b7954b)
+
 
 #### .noparse
 ##### *[noparse-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextNoParse.html)*
 
+![image](https://github.com/user-attachments/assets/415fb0cf-8bd6-4ea1-9193-9cd34885752b)
+
+
 #### .pos
 ##### *[pos-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextPos.html)*
+
+![image](https://github.com/user-attachments/assets/dcd1154f-73b2-4431-9d5d-574e885bfcb9)
+
 
 #### .strike
 ##### *[strike-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextStrikethroughUnderline.html)*
@@ -517,7 +537,8 @@ string
 
 ## mapMethods
 ### .get_attributes
-![image](https://github.com/user-attachments/assets/91d8dfa7-3346-483b-bd16-3da9c52913e2)
+![image](https://github.com/user-attachments/assets/7dfc7a3e-389b-4f4e-8406-c44787928405)
+
 
 
 ---
