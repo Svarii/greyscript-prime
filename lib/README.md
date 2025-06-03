@@ -544,16 +544,25 @@ string
 ---
 # 📄 Functions Overview
 ## bool_text
+![image](https://github.com/user-attachments/assets/d68784a5-db61-426b-bedf-2f1ad6927b14)
 ## fetch_whois
+![image](https://github.com/user-attachments/assets/f1aa81d0-e525-4106-b790-dadd85095b0c)
 ## file_new
+![image](https://github.com/user-attachments/assets/df3f8704-3322-42b4-828c-befdd7964e57)
 ## file_append
+![image](https://github.com/user-attachments/assets/0bbcfc50-b61b-4377-abd1-f709b299b67f)
 ## file_delete
 ## file_exists
 ## force_params
+![image](https://github.com/user-attachments/assets/de8ff88b-07f9-44f0-8c30-c7b6df62d856)
 ## get_acks
+![image](https://github.com/user-attachments/assets/d9dec4bd-a566-496b-b5ab-c44d9be660d4)
 ## get_random_ip
+![image](https://github.com/user-attachments/assets/8148ce40-384a-49be-a060-c104b9238337)
 ## is_null
+![image](https://github.com/user-attachments/assets/64ec05d6-2795-43db-b40c-b055c111c1ce)
 ## is_type
+![image](https://github.com/user-attachments/assets/84912676-131c-4689-b27e-bac18dccdc9f)
 ## load_lib
 <img src="https://github.com/user-attachments/assets/123d920a-ac65-4524-9cbe-dc149418f334" align="left">
 
@@ -567,10 +576,12 @@ lib = load_lib("metaxploit.so", "/lib", "MetatxploitLib");
 
 ![image](https://github.com/user-attachments/assets/99db6c6a-6a90-415e-9c64-a55e6c6840d5)
 
-
 ## network_device_list
+![image](https://github.com/user-attachments/assets/2bc52a9d-381f-4314-a95c-c6ed4788f96d)
 ## program_name
+![image](https://github.com/user-attachments/assets/b1a89597-d3b0-4a77-9ed2-74fbb29b1b8c)
 ## unsafe_check_list
+![image](https://github.com/user-attachments/assets/9ee095f2-82d7-42b1-ad84-11043361ae24)
 
 # 📄 Class Overview
 ## SystemObject
