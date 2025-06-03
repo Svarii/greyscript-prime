@@ -273,6 +273,57 @@
         return "<line-indent=" + locals.lineIndent + ">" + self
     end function    
 
+    //@name lowercase 
+        //  * @startuml
+        //  * entity StringObject
+        //  * control ".lowercase" as lowercase
+        //  *   StringObject -> lowercase : string
+        //  *   lowercase -> StringObject : //<u>//string//</u>//
+        //  * footer
+        //  *   string.lowercase
+        //  * endfooter          
+        //  * @enduml        
+        // ANCHOR string.lowercase
+
+        //  **Description:**
+        //  Applies lowercase to the given text.
+        //  
+        //  @return {string}
+        //  @example newString = "Hello"
+        //  @example 
+        //  @example result = newString.lowercase
+        //  @example        
+        //  print(result); // Outputs: <lowercase>hello</lowercase>
+    string.lowercase = function()
+        return "<lowercase>" + self + "</lowercase>"
+    end function
+
+        //@name uppercase 
+        //  * @startuml
+        //  * entity StringObject
+        //  * control ".uppercase" as uppercase
+        //  *   StringObject -> uppercase : string
+        //  *   uppercase -> StringObject : //<u>//string//</u>//
+        //  * footer
+        //  *   string.uppercase
+        //  * endfooter          
+        //  * @enduml        
+        // ANCHOR string.uppercase
+
+        //  **Description:**
+        //  Applies uppercase to the given text.
+        //  
+        //  @return {string}
+        //  @example newString = "Hello"
+        //  @example 
+        //  @example result = newString.uppercase
+        //  @example        
+        //  print(result); // Outputs: <uppercase>HELLO</uppercase>
+    string.uppercase = function()
+        return "<uppercase>" + self + "</uppercase>"
+    end function
+    
+
     //@name underline 
         //  * @startuml
         //  * entity StringObject
