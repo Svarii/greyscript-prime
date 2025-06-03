@@ -128,7 +128,8 @@ print(newString.color("blue")) // Outputs: <color=blue>Hello</color>
 
 #### .cspace
 ##### *[cspace-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextCharacterSpacing.html)*
-The .cspace method allows you to adjust character spacing, either absolute or relative to the original font Asset. You can use pixels or font units.
+![image](https://github.com/user-attachments/assets/46bcd46a-a89f-4242-b1af-3011f622027b)
+The `.cspace` method allows you to adjust character spacing, either absolute or relative to the original font Asset. You can use pixels or font units.
 
 #### .indent
 ##### *[indent-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextIndentation.html)*
@@ -237,7 +238,7 @@ print(newString.underline) // Outputs: <u>Hello</u>
 #### .extract
 The `.extract` method allows you to extract the text between the provided values
 
-![image](https://github.com/user-attachments/assets/2fc96f61-81a7-46a1-a922-ba15c8399937)
+![image](https://github.com/user-attachments/assets/c8df8d03-c595-48e2-9ba2-6757f675dd7b)
 
 ```
 newString = "<b>0x53C737</b>"
