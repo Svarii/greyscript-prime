@@ -113,7 +113,6 @@ newString = "Hello"
 
 print(newString.bold) // Outputs: <b>Hello</b>
 ```
-
 #### .color
 ##### *[color-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextColor.html)*
 ##### *[color-names-extended](https://htmlcolorcodes.com/color-names/)*
@@ -366,10 +365,13 @@ print(newString.remove_sup) // Outputs: Hello
 
 ### .clamp
 The `.clamp` method allows a number to be clamped within a specified range
+![image](https://github.com/user-attachments/assets/53351c78-1259-4796-8a14-466e39fb5768)  <img src="https://github.com/user-attachments/assets/fb256f5e-4242-44ad-b550-e8407981e23c" align="right">
+
+
 
 ### .diff
 The `.diff` method calculates the absolute difference between the current number and another number.
-![image](https://github.com/user-attachments/assets/65152391-7c48-4fa9-ac05-b9ba26e947f4) <img src="https://github.com/user-attachments/assets/49276e79-10dd-4bd3-901f-794d078de8f2" align="right">
+![image](https://github.com/user-attachments/assets/f78cf4ce-805a-4d04-9e20-0f6b6a6bf8b6) <img src="https://github.com/user-attachments/assets/49276e79-10dd-4bd3-901f-794d078de8f2" align="right">
 
 ```greyscript
 newNumber = 44
@@ -382,7 +384,7 @@ print(result) // Outputs: 42
 
 ### .divide
 The `.divide` method divides the current number by another number.  Zero division will result in null
-![image](https://github.com/user-attachments/assets/06360ef6-d285-4118-a5f3-ec8ce64730e0) <img src="https://github.com/user-attachments/assets/dd7092d6-d7d7-40af-8612-556327e7df49" align="right">
+![image](https://github.com/user-attachments/assets/8fe1a4f2-f56c-4b11-87c6-26e4bb3fd694) <img src="https://github.com/user-attachments/assets/dd7092d6-d7d7-40af-8612-556327e7df49" align="right">
 
 ```greyscript
 newNumber = 84
@@ -394,7 +396,7 @@ print(result) // Outputs: 42
 
 ### .is_more
 The `.is_more` method checks if the current number is greater than a provided number. Returns `true` if greater, `false` otherwise.
-![image](https://github.com/user-attachments/assets/3b71c3f3-abcd-40b9-ba6a-4f7b215e9d58) <img src="https://github.com/user-attachments/assets/b966ac53-3e88-4b53-81c4-008e45aa54ca" align="right">
+![image](https://github.com/user-attachments/assets/6f61825e-f52c-4400-912c-c24a2b4f90a8) <img src="https://github.com/user-attachments/assets/b966ac53-3e88-4b53-81c4-008e45aa54ca" align="right">
 
 ```greyscript
 myNumber = 42
@@ -406,7 +408,7 @@ print(result) // Outputs: 0 (false)
 
 ### .is_less
 The `.is_less` method checks if the current number is less than a provided number. Returns `true` if lesser, `false` otherwise.
-![image](https://github.com/user-attachments/assets/d13a7320-012f-4c69-92de-524133c64405) <img src="https://github.com/user-attachments/assets/c0cf05b3-bf72-4237-84c6-864cf907c7dd" align="right">
+![image](https://github.com/user-attachments/assets/b6147f1f-2b63-4a3e-947e-b11f99b9feec) <img src="https://github.com/user-attachments/assets/c0cf05b3-bf72-4237-84c6-864cf907c7dd" align="right">
 
 ```greyscript
 myNumber = 42
@@ -416,9 +418,14 @@ result = myNumber.lesser_than(myNumber2)
 print(result) // Outputs: 1 (true)
 ```
 
+### .lerp
+The `.lerp` method computes the linear interpolation (lerp) between two numbers.
+![image](https://github.com/user-attachments/assets/944bfcc8-88f9-4f3f-b96f-d1de17baf0eb)
+
+
 ### .minus
 The `.minus` method allows you to subtract a specified amount from a number. If no amount is provided, it defaults to `1`. 
-![image](https://github.com/user-attachments/assets/aca2249d-bf43-4031-abff-130f4a853d76) <img src="https://github.com/user-attachments/assets/edd9ae50-b11d-4870-82da-ea7957713eea" align="right">
+![image](https://github.com/user-attachments/assets/61390f03-12e2-4e69-b79b-d7069d01775e) <img src="https://github.com/user-attachments/assets/edd9ae50-b11d-4870-82da-ea7957713eea" align="right">
 
 ```greyscript
 newNumber = 44
@@ -429,11 +436,10 @@ print(result) // Outputs: 42
 
 ### .multiply
 The `.multiply` method multiplies the current number the given number (or 2).
-
-![image](https://github.com/user-attachments/assets/3fbe19e9-9e14-4ff7-ba69-4aeffab46735) <img src="https://github.com/user-attachments/assets/937c5ba4-d76d-4b21-9abd-882c41f7c4c2" align="right">
+![image](https://github.com/user-attachments/assets/db319138-bfbb-4a5d-bc62-d4a0d813b17a) <img src="https://github.com/user-attachments/assets/937c5ba4-d76d-4b21-9abd-882c41f7c4c2" align="right">
 
 ```greyscript
-newNumber = 22
+newNumber = 21
 newNumber2 = 2
 
 result = newNumber.multiply(newNumber2)
@@ -442,7 +448,7 @@ print(result) // Outputs: 42
 
 ### .plus
 The `.plus` method allows you to add a specified amount to a number. If no amount is provided, it defaults to `1`.
-![image](https://github.com/user-attachments/assets/43a689b8-e9ae-43eb-a2ee-829337d19bf3) <img src="https://github.com/user-attachments/assets/e886e55f-b95d-439f-8d0d-44c84a030180" align="right">
+![image](https://github.com/user-attachments/assets/ff7250d7-3a92-48b7-850a-271776e80b64) <img src="https://github.com/user-attachments/assets/e886e55f-b95d-439f-8d0d-44c84a030180" align="right">
 
 ```greyscript
 newNumber = 40
@@ -453,7 +459,7 @@ print(result) // Outputs: 42
 
 ### .random_from
 The `.random_from` method generates a random number in the range of 1 (or optional parameter) to number.
-![image](https://github.com/user-attachments/assets/4d6c9b64-73ea-4fc4-9b3f-e10509a2d8a5) <img src="https://github.com/user-attachments/assets/3a5680f0-064f-4950-acea-0e451ecad8b1" align="right">
+![image](https://github.com/user-attachments/assets/d55b4868-35e4-4b5d-ac96-9cafd4a6af9a) <img src="https://github.com/user-attachments/assets/3a5680f0-064f-4950-acea-0e451ecad8b1" align="right">
 
 ```greyscript
 myNumber = 42
@@ -462,6 +468,11 @@ myNumber2 = 100
 result = myNumber.lesser_than(myNumber2)
 print(result) // Outputs: 1 (true)
 ```
+
+### .saturate
+The `.saturate` Clamps a number to the normalized range [0, 1].
+![image](https://github.com/user-attachments/assets/17967389-54fb-4ec7-ba30-e50f986794a5)
+
 
 ---
 ## listMethods
@@ -494,6 +505,14 @@ string
 string
 ```
 ---
+
+## mapMethods
+### .get_attributes
+![image](https://github.com/user-attachments/assets/91d8dfa7-3346-483b-bd16-3da9c52913e2)
+
+---
+
+---
 # 📄 Functions Overview
 ## bool_text
 ## fetch_whois
@@ -523,6 +542,9 @@ lib = load_lib("metaxploit.so", "/lib", "MetatxploitLib");
 ## network_device_list
 ## program_name
 ## unsafe_check_list
+
+---
+# map methods
 
 ---
 # 📄 Class Overview
