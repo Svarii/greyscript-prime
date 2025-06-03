@@ -58,14 +58,31 @@
         //  * @enduml        
         // ANCHOR list.crop
 
-        //  **Description:**
-        //  Crops a list
-        //  @return {list}
-        //  @example myList = ["","","cat","dog",""];
-        //  @example 
-        //  @example result = myList.crop
-        //  @example
-        //  print(result); // Outputs: ["cat","dog"]
+// Crops off empty elements from the start and end of a list
+// @description **Description:**
+// @description Iterates through a list and checks for empty items, if found, `.remove` is used on list item
+// @description ---
+//
+// @description **Parameters:**
+// @param {string} seperator
+// @description - none
+//
+// @description **Returns:**
+// @return {list}
+// @description `list` The same list with empty items purged from ends
+// @description ---
+//
+// @description **Author:** Svarii
+// @description ---
+//
+// @example myList = ["","","cat","dog",""];
+// @example result = myList.crop
+// @example
+// print(result); // Output: ["cat","dog"]
+// @description ***footnotes***
+// @description
+// - None
+// @description ---        
     list.crop = function()
         while not self[self.len - 1].len > 0
             self.remove(self.len - 1)
