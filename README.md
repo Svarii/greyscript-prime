@@ -25,35 +25,17 @@ To install GreyScript Prime, follow these steps:
 
 3. Open the project in VSCode and start coding!
 
-## Usage
-
-Import GreyScript Prime into your GreyScript projects to start using the extended methods. Here's a quick example:
-
-Paste each .src from the lib folder (seperatly) into the Code Editor and save the file with a .so extension in the /lib directory with the allow import box checked.
-![image](https://github.com/user-attachments/assets/b821fc24-d106-40f2-b09b-63d311258271)
-
-
-```greyscript
-import_code("/lib/gsprime.so")";
-import_code("/lib/gslibs.so")";
-import_code("/lib/gsobjects.so")";
-
-newString = "Hello World";
-print(newString.bold.color("blue"));
-
-metax = load_lib("metaxploit.so")
-print(typeof(metax))
-
-portScan = get_memory_portscanner
-print(typeof(portScan))
-```
-
 ## Methods Overview
 
 ### String Methods
 
 - **`.color("#color")`**: Apply a color to text.
+- **`.align`**: Align the text
+- **`.alpha`**: Set the alpha value of the text
+- **`.cspace`**: Set the character spacing of the text
 - **`.bold`**: Make the text bold.
+- **`.lowercase`**: Make the text lowercase.
+- **`.uppercase`**: Make the text uppercase.
 - **`.italic`**: Make the text italic.
 - **`.indent`**: Add indent.
 - **`.line-indent`**: Add line-indent.
@@ -84,6 +66,8 @@ print(typeof(portScan))
 
 ### Number Methods
 
+- **`.clamp(min, max)`**: clamps a number in range.
+- **`.lerp(min, max)`**: computes linear interpolation
 - **`.plus(number)`**: Add 1 or value to a number.
 - **`.minus(number)`**: Subtract 1 or a value from a number.
 - **`.diff(number)`**: Calculate the absolute difference.
@@ -91,64 +75,44 @@ print(typeof(portScan))
 - **`.lesser_than(number)`**: Check if number is lesser.
 - **`.random_from(number)`**: Generate a random number from 0 (or number) to number.
 - **`.multiply(number)`**: Calculate the multiple.
-- **`.divide(number)`**: divide by number.
+- **`.div(number)`**: divide by number.
+- **`.is_integer(number)`**: check if is round integer
+- **`.is_float(number)`**: check if is float
+- **`.is_negative(number)`**: check if number is negative
+- **`.is_positive(number)`**: check if number is positive
+- **`.is_zero(number)`**: check if number is zero
 
 ### List Methods
 
-- **`.trim`**: Removes empty list items from list ends.
-- **`.print`**: Loops through a list and prints each item.
+- **`.crop`**: Removes empty list items from list ends.
+- **`.string`**: Loops through a list and prints each item.
 
 ### Function Methods
 
 - **`load_lib(libName, libDir, typeExpected)`**: Load a library from `/lib`.
 - **`force_params(usage, numReqParams)`**: Force paramater usage and add help 
-- **`app_name()`**: Gets name of program {self}
+- **`program_name()`**: Gets name of program {self}
 - **`is_null()`**: Checks if object is null; if null, print / return / exit options
 - **`is_type()`**: Checks Types and specifies on-fail action
 - **`network_device_list()`**: Returns Network devices in a list
 - **`calc_ack()`**: Caculates the recommended amount of ACKs to collect
 - **`bool_text()`**: Return string true or false representing boolean
+- **`extract_ip()`**
+- **`file_append()`**
+- **`find_exploitable_addressess`**
+- **`get_inbox()`**
+- **`get_random_ip()`**
+- **`parse_inbox()`**
+- **`unsafe_check_list()`**
 
-### Object Methods
 
-- **`SystemObject`**: Returns object type SystemObject.
-- **`PortMemory`**: Returns object type PortMemory.
+### Constructs
 
-## Classes Overview
+- **`fetch_explot_requirments`**: 
+- **`fetch_whois`**: 
+- **`file_locaiton_ident`**: 
+- **`id_self`**: 
 
-### SystemObject
-
-Access system-level functionalities directly from your code.
-
-```greyscript
-terminal = get_system_object;
-print(typeof(terminal)); // Outputs: SystemObject
-print(terminal.computer.get_name); // Outputs: The name of the computer
-terminal.shell.launch("ls"); // Executes the 'ls' command
-```
-
-### PortMemory
-
-Interact with collected port information with ease.
-
-```greyscript
-portScan = get_memory_portscan;
-print(typeof(portScan)); // Outputs: PortMemory
-```
-
-## Example
-
-Here's a short video showcasing GreyScript Prime in within VSCode:
-<a href="https://www.youtube.com/watch?v=Jt-PkKpnxj8">GreyScript Prime</a>
-
+---
 ## License
-
 GreyScript Prime is released under the MIT License. See [LICENSE](LICENSE) for more details.
-
----
-
-*Enhance your GreyScript development experience today with GreyScript Prime!*
-
----
-Refrence file screenshot
-![image](https://github.com/user-attachments/assets/05965984-8b6a-4094-8f9b-39ab96eb3107)
