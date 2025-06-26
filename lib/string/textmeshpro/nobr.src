@@ -1,0 +1,29 @@
+// Applies nobr tag to the string
+    // @description **Description:**
+    // @description Modifies a text string by wraping it within the nobr tag
+    // @description ---
+    //
+    // @description **Parameters:**
+    // @description * `none`
+    //
+    // @description **Return:**
+    // @return {string}
+    // @description `string` The string value wrapped within the `<nobr>` tag
+    // @description ---
+    //
+    // @description **Links:**
+    // @description [Text Mesh Pro: Rich Text No Break](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextNoBreak.html)	
+    // @description ---	
+    //
+    // @description **Author:** Svarii
+    // @description **Version:** 0.0.1
+    // @description ---
+    //
+    //  @example newString = "Hello"
+    //  @example 
+    //  @example result = newString.nobr
+    //  @example 
+    //  print(result); // Output: <nobr>Hello</nobr>     
+string.nobr = function()
+    return "<nobr>" + self + "</nobr>"
+end function 

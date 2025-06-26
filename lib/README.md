@@ -10,73 +10,6 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 
 # 📄 Methods Overview
 
-| Category   | Method                                                  | Description                                                                                   |
-|------------|---------------------------------------------------------|-----------------------------------------------------------------------------------------------|
-| **String** | [`.align(string)`](#align)                               | Align text.                                                                                   |
-|            | [`.alpha(string)`](#alpha)                               | Set alpha.                                                                                    |
-|            | [`.bold`](#bold)                                        | Make the text bold.                                                                           |
-|            | [`.color(string)`](#color)                               | Apply a color to text.                                                                        |
-|            | [`.cspace(string)`](#cspace)                             | Apply cspace to text.                                                                         |
-|            | [`.indent(string)`](#indent)                             | Apply indent to text.                                                                         |
-|            | [`.italic`](#italic)                                    | Make the text italic.                                                                         |
-|            | [`.line-indent(string)`](#line-indent)                   | Apply line-indent to text.                                                                    |
-|            | [`.lowercase`](#lowercase)                               | Convert text to lowercase.                                                                    |
-|            | [`.margin(string)`](#margin)                             | Apply margin to text.                                                                         |
-|            | [`.mark`](#mark)                                        | Highlight the text.                                                                           |
-|            | [`.mspace(string)`](#mspace)                             | Apply monospace formatting.                                                                   |
-|            | [`.nobr`](#nobr)                                        | Apply no-break to the text.                                                                   |
-|            | [`.noparse`](#noparse)                                  | Apply no-parse to the text.                                                                   |
-|            | [`.pos(string)`](#sub)                                  | Apply pos to text.                                                                            |
-|            | [`.strike`](#strike)                                    | Apply strikethrough to text.                                                                  |
-|            | [`.sub`](#sub)                                          | Apply subscript to text.                                                                      |
-|            | [`.sup`](#sup)                                          | Apply superscript to text.                                                                    |
-|            | [`.uppercase`](#uppercase)                              | Convert text to uppercase.                                                                    |
-|            | [`.underline`](#underline)                              | Apply underline to text.                                                                      |
-|            | [`.rotate`](#rotate)                                    | Rotates the text.                                                                             |
-|            | [`.voffset(string)`](#voffset)                           | Add voffset tag.                                                                              |
-|            | [`.width`](#width)                                      | Add width tag.                                                                                |
-|            | [`.extract`](#extract)                                  | Extract the text between the given values.                                                  |
-|            | [`.format`](#format)                                    | Allows for string interpolation.                                                            |
-|            | [`.remove_char_last`](#remove_char_last)                | Remove the last character from text.                                                        |
-|            | [`.remove_char_first`](#remove_char_first)              | Remove the first character from text.                                                       |
-|            | [`.remove_bold`](#remove_bold)                          | Remove bold formatting from text.                                                           |
-|            | [`.remove_italic`](#remove_italic)                      | Remove italic formatting from text.                                                         |
-|            | [`.remove_underline`](#remove_underline)                | Remove underline formatting.                                                                  |
-|            | [`.remove_strike`](#remove_strike)                      | Remove strikethrough formatting.                                                              |
-|            | [`.remove_mark`](#remove_mark)                          | Remove highlight from text.                                                                   |
-|            | [`.remove_sub`](#remove_sub)                            | Remove subscript from text.                                                                   |
-|            | [`.remove_sup`](#remove_sup)                            | Remove superscript from text.                                                                 |
-| **Number** | [`.diff(number)`](#diff)                                | Calculate the absolute difference.                                                          |
-|            | [`.divide(number)`](#divide)                            | Divide number by a given divisor.                                                             |
-|            | [`.is_more(number)`](#is_more)                          | Check if one number is greater than another.                                                  |
-|            | [`.is_less(number)`](#is_less)                          | Check if one number is lesser than another.                                                   |
-|            | [`.lerp(number, number, number)`](#lerp)                | Linearly interpolate between two numbers.                                                    |
-|            | [`.minus(number)`](#minus)                              | Subtract a value from a number.                                                               |
-|            | [`.multiply(number)`](#multiply)                        | Multiply the number by a value.                                                               |
-|            | [`.plus(number)`](#plus)                                | Add a value to a number.                                                                      |
-|            | [`.random_from(number)`](#random_from)                  | Generate a random number from 0 (or given start) to the specified number.                     |
-|            | [`.clamp(number, number)`](#clamp)                      | Restrict a value within a specified range (minimum to maximum).                               |
-| **List**   | [`.join`](#join)                                        | Combine list into a single string.                                                            |
-|            | [`.print`](#print)                                      | Loop through a list and print each item.                                                      |
-|            | [`.crop`](#crop)                                        | Remove empty list items from the list ends.                                                   |
-| **Function** | [`load_lib(libName)`](#load_lib)                     | Load a library from /lib. Optional parameters: libDir, typeExpected.
-|            | [`get_acks(number)`](#calculate_acks) | Return recommended ACKs as a number.                                                         |
-|            | [`fetch_whois`](#fetch_whois)                       | Return an object containing whois information.                                                |
-|            | [`file_append`](#file_append)                           | Append data to a existing file or create a new file if it doesn’t exist.                                
-|            | [`file_delete`](#file_delete)                           | Delete file if it exist.                                
-|            | [`file_exists`](#file_exists)                           | Check if file exists.                                |
-|            | [`bool_text`](#bool_text)                               | Return a string containing either "true" or "false".                                          |
-|            | [`force_params`](#force_params)                         | Require parameters and display help information.                                              |
-|            | [`get_random_ip`](#get_random_ip)             | Generate random IP addresses.                                                                 |
-|            | [`is_null`](#is_null)                                   | Perform null error checking.                                                                  |
-|            | [`is_type`](#is_type)                                   | Perform type error handling.                                                                  |
-|            | [`network_device_list`](#network_device_list)           | Return network devices as a list.                                                             |
-|            | [`program_name`](#program_name)                         | Return the name of the program itself.                                                        |
-|            | [`unsafe_check_list`](#unsafe_check_list)               | Split unsafe check results into individual exploit results and return a list of unsafe check strings. |
-| **Object** | [`SystemObject`](#SystemObject)                         | Return an object of type SystemObject.                                                        |
-|            | [`PortMemory`](#PortMemory)                             | Return an object of type PortMemory.                                                          |
-|            | [`idSelf`](#idSelf)                                     | Return local environment information.                                                        |
-
 ## stringMethods
 ![Static Badge](https://img.shields.io/badge/method-string-green)
 ### TextMeshPro
@@ -84,9 +17,9 @@ Limited custom formatting of DocBlocks and Plant UML allow for insertion to Grey
 #### .align
 ##### *[align-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextAlignment.html)*
 The .align method allows you to apply the align tag to the given text.
-Accepted values are: left, right, center, justified, and flush
+Accepted values: `left`, `right`, `center`, `justified`, and `flush`
 
-![image](https://github.com/user-attachments/assets/acccc750-a4b4-4ceb-91ec-2b9f0c239eb5)
+![align](../images/docblocks/string/align.png)
 
 
 
@@ -100,7 +33,7 @@ print(newString.align) // Outputs: <align="center">Hello</align>
 ##### *[alpha-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextOpacity.html)*
 The `.alpha` method sets the opacity of using a 2 digits hex value
 
-![image](https://github.com/user-attachments/assets/86fcb985-f71e-4920-b583-cff0aac22b9a)
+![alpha](../images/docblocks/string/alpha.png)
 
 
 \#FF: 100% Opague
@@ -110,7 +43,7 @@ The `.alpha` method sets the opacity of using a 2 digits hex value
 ##### *[bold-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextBoldItalic.html)*
 The `.bold` method allows you to apply bold to the given text.
 
-![image](https://github.com/user-attachments/assets/09245164-651a-4e03-af3a-d69ec04898be)
+![bold](../images/docblocks/string/bold.png)
 
 ```
 newString = "Hello"
@@ -122,7 +55,7 @@ print(newString.bold) // Outputs: <b>Hello</b>
 ##### *[color-names-extended](https://htmlcolorcodes.com/color-names/)*
 The `.color` method allows you to apply a color to the given text.
 
-![image](https://github.com/user-attachments/assets/c2530db7-fee4-4454-be1d-65d7e995268b)
+![bold](../images/docblocks/string/bold.png)
 
 ```
 newString = "Hello"
@@ -134,20 +67,20 @@ print(newString.color("blue")) // Outputs: <color=blue>Hello</color>
 ##### *[cspace-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextCharacterSpacing.html)*
 The `.cspace` method allows you to adjust character spacing, either absolute or relative to the original font Asset. You can use pixels or font units.
 
-![image](https://github.com/user-attachments/assets/46bcd46a-a89f-4242-b1af-3011f622027b)
+![bold](../images/docblocks/string/cspace.png)
 
 #### .indent
 ##### *[indent-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextIndentation.html)*
 The `.indent` method controls the horizontal caret position the same way the <pos> tag does, but the effect persists across lines.
 
-![image](https://github.com/user-attachments/assets/f4f3eeee-1a69-4389-aecc-5c857b196fd1)
+![image](../images/docblocks/string/indent.png)
 
 
 #### .italic
 ##### *[italic-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextBoldItalic.html)*
 The `.italic` method allows you to apply italic to the given text.
 
-![image](https://github.com/user-attachments/assets/8adc9cf4-c067-47a4-885f-e192105d169e)
+![image](../images/docblocks/string/italic.png)
 
 ```
 newString = "Hello"
@@ -159,7 +92,7 @@ print(newString.italic) // Outputs: <i>Hello</i>
 ##### *[line-indent-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextLineIndentation.html)*
 The .line-indent method inserts horizontal space directly after it, and before the start of each new line. It only affects manual line breaks (including line breaks created with the \<br> tag, not word-wrapped lines.
 
-![image](https://github.com/user-attachments/assets/9dfb64e0-59cf-4181-ab38-c883fe9b1410)
+![image](../images/docblocks/string/line-indent.png)
 
 
 You can specify the indentation in pixels, font units, or percentages.
@@ -168,7 +101,7 @@ You can specify the indentation in pixels, font units, or percentages.
 ##### *[lowercase-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextLetterCase.html)*
 The .lowercase method alters the capitalization of your text before rendering. The text in the Text field remains as you entered it.
 
-![image](https://github.com/user-attachments/assets/ee73d21c-5f7d-4f48-8b6a-7262babbec1f)
+![image](../images/docblocks/string/lowercase.png)
 
 #### .margin
 ##### *[margin-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextMargins.html)*
@@ -176,14 +109,14 @@ You can increase the horizontal margins of the text with the .margin method.
 You can specify the margins in pixels, font units, and percentages.
 Negative values have no effect.
 
-![image](https://github.com/user-attachments/assets/4a9ec009-5f4d-4585-b3ab-991ba10128fe)
+![image](../images/docblocks/string/margin.png)
 
 
 #### .mark
 ##### *[mark-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextMark.html)*
 The `.mark` method allows you to apply highlight to the given text.
 
-![image](https://github.com/user-attachments/assets/61838003-c880-4504-a12b-94b19c29ea4b)
+![image](../images/docblocks/string/mark.png)
 
 ```
 newString = "Hello"
@@ -194,32 +127,47 @@ print(newString.mark) // Outputs: <mark>Hello</mark>
 #### .mspace
 ##### *[mspace-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextMonospace.html)*
 
-![image](https://github.com/user-attachments/assets/902134e5-ccda-492f-97c1-521d2003fc32)
+![image](../images/docblocks/string/mspace.png)
 
 
 #### .nobr
 ##### *[nobreak-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextNoBreak.html)*
 
-![image](https://github.com/user-attachments/assets/68f252ff-2d60-4f2d-a32f-bf9c56b7954b)
+![image](../images/docblocks/string/nobr.png)
 
 
 #### .noparse
 ##### *[noparse-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextNoParse.html)*
 
-![image](https://github.com/user-attachments/assets/415fb0cf-8bd6-4ea1-9193-9cd34885752b)
+![image](../images/docblocks/string/noparse.png)
+
+
+#### .page
+##### *[page-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextPageBreak.html)*
+
+![image](../images/docblocks/string/page.png)
 
 
 #### .pos
-##### *[pos-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextPos.html)*
+##### *[pos-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextPage.html)*
 
-![image](https://github.com/user-attachments/assets/dcd1154f-73b2-4431-9d5d-574e885bfcb9)
+![image](../images/docblocks/string/pos.png)
 
+#### .rotate
+##### *[rotate-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextRotate.html)*
+
+![image](../images/docblocks/string/rotate.png)
+
+#### .size
+##### *[size-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextSize.html)*
+
+![image](../images/docblocks/string/size.png)
 
 #### .strike
 ##### *[strike-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextStrikethroughUnderline.html)*
 The `.strike` method allows you to apply strikethrough to the given text.
 
-![image](https://github.com/user-attachments/assets/f1238124-aa01-42c3-8171-b6af0d925b4a)
+![image](../images/docblocks/string/strike.png)
 
 ```
 newString = "Hello"
@@ -231,7 +179,7 @@ print(newString.strike) // Outputs: <s>Hello</s>
 ##### *[sub-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextSubSuper.html)*
 The `.sub` method allows you to apply subscript to the given text. Example usage:
 
-![image](https://github.com/user-attachments/assets/3fb3f69f-071f-4068-8a6f-9964c3f84e86)
+![image](../images/docblocks/string/sub.png)
 
 ```
 newString = "Hello"
@@ -243,7 +191,7 @@ print(newString.tiny) // Outputs: <sub>Hello</sub>
 ##### *[sup-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextSubSuper.html)*
 The `.sup` method allows you to apply superscript to the given text. Example usage:
 
-![image](https://github.com/user-attachments/assets/a94caa5a-6a99-4c90-8022-4c0b8ecd9531)
+![image](../images/docblocks/string/sup.png)
 
 ```
 newString = "Hello"
@@ -255,7 +203,27 @@ print(newString.sup) // Outputs: <sup>Hello</sup>
 ##### *[underline-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextStrikethroughUnderline.html)*
 The `.underline` method allows you to apply underline to the given text.
 
-![image](https://github.com/user-attachments/assets/54683595-7cf9-481e-9ea9-14531fe8cb60)
+![image](../images/docblocks/string/underline.png)
+
+#### .uppercase
+##### *[uppercase-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextLetterCase.html)*
+The `.uppercase` method allows you to apply uppercase to the given text.
+
+![image](../images/docblocks/string/uppercase.png)
+
+#### .voffset
+##### *[voffset-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextVOffset.html)*
+The `.voffset` method allows you to apply voffset to the given text.
+
+![image](../images/docblocks/string/voffset.png)
+
+
+#### .width
+##### *[width-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextWidth.html)*
+The `.width` method allows you to apply width to the given text.
+
+![image](../images/docblocks/string/width.png)
+
 
 ```
 newString = "Hello"
@@ -264,12 +232,13 @@ print(newString.underline) // Outputs: <u>Hello</u>
 ```
 ### Map Methods
 #### .get_attributes
+![image](../images/docblocks/map/get_attributes.png)
 
 ### Logic Methods
 #### .extract
 The `.extract` method allows you to extract the text between the provided values
 
-![image](https://github.com/user-attachments/assets/c8df8d03-c595-48e2-9ba2-6757f675dd7b)
+![image](../images/docblocks/string/extract.png)
 
 ```
 newString = "<b>0x53C737</b>"
@@ -280,7 +249,7 @@ print(newString.extract_between("<b>", "</b>")) // Outputs: 0x53C737
 #### .format
 The `.format` method allows for string interpolation
 
-![image](https://github.com/user-attachments/assets/c2b8b59c-8ee7-4acd-a840-2fb16060ef4a)
+![image](../images/docblocks/string/format.png)
 
 ```greyscript
 // Modification of implimentation by dynobytes.
@@ -293,7 +262,7 @@ print(sentence); // Outputs: The quick brown fox jumps over the lazy dog
 #### .remove_char_last 
 The `.remove_char_last` method allows you to remove the last character to the given text. Example usage:
 
-![image](https://github.com/user-attachments/assets/0a870f9c-382d-41d1-a550-6a403147dbe9)
+![image](../images/docblocks/string/remove_char_last.png)
 
 ```
 newString = "Hello"
@@ -305,7 +274,7 @@ print(newString.remove_char_last) // Outputs: Hell
 #### .remove_char_first
 The `.remove_char_first` method allows you to remove the last character to the given text. Example usage:
 
-![image](https://github.com/user-attachments/assets/5eeaf542-d9bf-4426-a506-5dd3a748a9ac)
+![image](../images/docblocks/string/remove_char_first.png)
 
 ```
 newString = "Hello"
@@ -556,7 +525,7 @@ string
 ## file_delete
 ## file_exists
 ## force_params
-![image](https://github.com/user-attachments/assets/de8ff88b-07f9-44f0-8c30-c7b6df62d856)
+![image](..\images\docblocks\function\force_params.png)
 ## get_acks
 ![image](https://github.com/user-attachments/assets/d9dec4bd-a566-496b-b5ab-c44d9be660d4)
 ## get_random_ip
@@ -585,39 +554,10 @@ lib = load_lib("metaxploit.so", "/lib", "MetatxploitLib");
 ## unsafe_check_list
 ![image](https://github.com/user-attachments/assets/9ee095f2-82d7-42b1-ad84-11043361ae24)
 
-# 📄 Class Overview
-## SystemObject
+# 📄 Construct Overview
+## id_self
 
-<img src="https://github.com/user-attachments/assets/27f290d4-4544-4912-bfc5-74d68102cd41" align="left">
-
-![image](https://github.com/user-attachments/assets/be2cf4f9-2b85-42b9-a527-379c5ea6cefa)
-
-```greyscript
-terminal = get_system_object
-print typeof(terminal)  //Outputs: SystemObject      
-print terminal.computer.get_name  //Outputs: The name of the computer       
-print terminal.shell.launch("ls")  //Outputs: launches ls
-```
-
----
-
-## Port Memory Object
-<img src="https://github.com/user-attachments/assets/c83516d7-c441-4ff8-ac05-6420022a51d8" align="left">
-
-```greyscript
-portScan = get_memory_portscan
-print typeof(portScan)  //Outputs: PortMemory      
-```
-
-![image](https://github.com/user-attachments/assets/84f36c7e-f435-4713-9aec-151e80f58c45)
-
-
-***
-# Example
-Screen Shot of vsCode with Grey Script Prime and recommended plugins.
-![image](https://github.com/user-attachments/assets/54074b16-ca53-4f37-89cf-9462cb49f372)
-
-![image](https://github.com/user-attachments/assets/aa003db6-90e6-441b-b468-519e893e77b3)
+![image](../images/docblocks/construct/id_self.png)
 
 
 

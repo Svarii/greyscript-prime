@@ -1,0 +1,89 @@
+// Pull whosis information from a public ip address
+	// @description **Description:**
+	// Return map with whois information
+	// @description ---
+	//
+	// @description **Parameters:**
+	// @param {string} routerPublicIPAddress
+	// @description - `routerPublicIPAddress`:`<string>`
+	//
+	// @description **Parameter Defaults:**
+	// @description - `none`
+	//
+	// @description **Return:**
+	// @return {map<string,string>}
+	// @description `map`:`whoisInfo`
+	// @description - `.admin`:`<string>` The administrative contacts' name
+	// @description - `.domain`:`<string>` The domain name of the ip address
+	// @description - `.email`:`<string>` The email address for the administrative contact
+	// @description - `.network`:`<string>` The network identifier (if any)
+	// @description - `.phone`:`<string>` The phone number for the administrative contract
+	// @description ---	
+	// @description - - `.error`:`<string>` {on error} will return obect with only this property
+	// @description ---
+	//    
+	// @description **Author:** Svarii
+	// @description **Version:** 0.0.1
+	// @description ---
+	// 
+	// @example whoisInfo = fetch_whois(params[0])
+	// @example
+	// print whoisInfo.domain
+	// @example
+	// print whoisInfo.admin
+	// @example
+	// print whoisInfo.email
+	// @example
+	// print whoisInfo.phone
+	// @example
+	// print whoisInfo.network
+fetch_whois = function(routerPublicIPAddress)
+	if not is_lan_ip(locals.routerPublicIPAddress) == true then
+		if is_valid_ip(routerPublicIPAddress) then
+			locals.whoisInfo = {"classID":"whoisInfo", "admin":"", "domain":"", "email":"", "network":"", "phone":""}
+			locals.what = split(whois(locals.routerPublicIPAddress), "\n")
+			locals.whoisInfo.domain = str(split(locals.what[0], ":")[1]).trim
+			locals.whoisInfo.admin = str(split(locals.what[1], ":")[1]).trim
+			locals.whoisInfo.email = str(split(locals.what[2], ":")[1]).trim
+			locals.whoisInfo.phone = str(split(locals.what[3], ":")[1]).trim
+			if locals.what.len >= 5 then
+				locals.whoisInfo.network = str(split(locals.what[4], ":")[0]).trim
+			else
+				locals.whoisInfo.network = "[ UNKNOWN ]"
+			end if
+		else 
+			locals.whoisInfo = {"classID":"whoisInfo", "error":"Invalid Public IP Address Provided."}	
+		end if
+	else
+		locals.whoisInfo = {"classID":"whoisInfo", "error":"Needs Public IP, Provided Local IP."}
+	end if
+	return locals.whoisInfo
+end function
+// @startyaml
+// <style>
+// yamlDiagram {
+//    highlight {
+//      BackGroundColor red
+//      FontColor white
+//      FontStyle bold
+//    }
+// }
+// </style>
+// #highlight "whoisInfo" / "error"
+//
+// # whoisInfo Class Diagram
+//
+// whoisInfo:
+//     domain: "string"      # Domain value from WHOIS lookup
+//     admin: "string"       # Administrator info
+//     email: "string"       # Contact email
+//     phone: "string"       # Contact phone number
+//     network: "string"     # Network info (or "[ UNKNOWN ]")
+//     error: "string"       # Used to store errors on fail)
+//
+// # Note:
+// # WHOIS lookup parser.
+// # Parses domain, admin, email,
+// # phone & network info.
+//
+// @endyaml

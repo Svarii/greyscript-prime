@@ -1,0 +1,34 @@
+// **Description:**
+// Get name of program *{self}*
+// @description **Description**
+// @description Split Unsafe Check Results into Individual Exploit Results and return list of UnsafeCheck strings
+// @description ---
+//
+// @description **Parameters:**
+// @param {string} scanResults - The name of the library to load.
+// @description - `scanResults` : `string` result from `fetch_exploit_requirements()`
+//
+// @description **Default Parameters:**
+// @description - none
+// @description ---
+//
+// @return {list <string>}
+// @description **Return**
+// `list`:`string`
+// @description ---    
+// 
+// @description **Author:** Svarii
+// @description **Version:** 0.0.1
+// @description ---    
+//   
+// @example libLocation = "/lib/aptclient.so"
+// @example metax = include_lib("/lib/metaxploit.so")
+// @example metaLib = metax.load(locals.libLocation)
+// @example exploitMem = find_exploitable_addresses(libLocation, metaxploitObject), libLocation, metaxploitObject)
+// @example
+// unsafeCheckList = unsafe_check_list(fetch_exploit_requirments(exploitMem)
+	unsafe_check_list = function(scanResults)
+		locals.scanResults = locals.scanResults.remove("decompiling source..." + char(10) + "searching unsecure values..." + char(10))
+		locals.unsafeCheckList = locals.scanResults.split(char(10)*2)
+		return locals.unsafeCheckList
+	end function

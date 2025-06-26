@@ -1,0 +1,28 @@
+// Applies lowercase tag to the string
+    // @description **Description:**
+    // @description Modifies a text string by wraping it within the lowercase tag
+    // @description ---
+    //
+    // @description **Parameters:** `none`
+    //
+    // @description **Return:**
+    // @return {string}
+    // @description `string` The string value wrapped within the `<lowercase>` tag
+    // @description ---
+    //
+    // @description **Links:**
+    // @description - [Text Mesh Pro: Rich Text Lowercase](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextLetterCase.html)	
+    // @description ---	
+    //
+    // @description **Author:** Svarii
+    // @description **Version:** 0.0.1
+    // @description ---
+    //
+    //  @example newString = "Hello"
+    //  @example 
+    //  @example result = newString.lowercase
+    //  @example 
+    //  print(result); // Outputs: <lowercase>Hello</lowercase>          
+string.lowercase = function()
+    return "<lowercase>" + self + "</lowercase>"
+end function    

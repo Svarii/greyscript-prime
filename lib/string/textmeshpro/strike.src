@@ -1,0 +1,29 @@
+// Applies strike tag to the string
+    // @description **Description:**
+    // @description Modifies a text string by wrapping it within the strike tag
+    // @description ---
+    //
+    // @description **Parameters:**
+    // @description * `none`
+    //
+    // @description **Return:**
+    // @return {string}
+    // @description `string` The string wrapped within the `<s>` tag
+    // @description ---
+    //
+    // @description **Links:**
+    // @description - [Text Mesh Pro: Strikethrough](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextStrikethroughUnderline.html)	
+    // @description ---	
+    //
+    // @description **Author:** Svarii
+    // @description **Version:** 0.0.1
+    // @description ---
+    //
+    //  @example newString = "Hello"
+    //  @example 
+    //  @example result = newString.strike
+    //  @example 
+    //  print(result); // Output: <s>Hello</s>
+    string.strike = function()
+        return "<s>" + self + "</s>"
+    end function

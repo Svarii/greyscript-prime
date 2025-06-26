@@ -1,0 +1,31 @@
+       
+
+
+        //  **Description:**
+        //  Remove the italic tag of the given text.
+        //  @example 
+        //  @return {string}
+        //  @example newString = "<i>Hello</i>"  
+        //  @example result = newString.remove_italic
+        //  @example        
+        //  print(result); // Outputs: Hello
+    string.remove_italic = function()
+        locals.newString = self.remove("<i>")
+        return locals.newString.remove("</i>")
+    end function
+
+
+    //@name remove_italic 
+        //  *
+        //  * @uml
+        //  * @startuml
+        //  * entity StringObject
+        //  * control ".remove_italic" as remove_italic
+        //  *   StringObject -> remove_italic : //<i>//string//</i>//
+        //  *   remove_italic -> StringObject : string
+        //  *   StringObject -> remove_italic : //<i>//string//</i>// //<i>//string//</i>//
+        //  *   remove_italic -> StringObject : string string
+        //  * footer
+        //  *   string.remove_italic
+        //  * endfooter           
+        //  * @enduml         

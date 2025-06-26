@@ -1,0 +1,24 @@
+//  Remove the bold tag of the given text.
+    //  @return {string}
+    //  @example newString = "<b>Hello</b>"
+    //  @example        
+    //  @example result = newString.remove_bold
+    //  @example
+    //  print(result); // Outputs: Hello 
+string.remove_bold = function()
+    locals.newString = self.remove("<b>")
+    return locals.newString.remove("</b>")
+end function
+//@name remove_bold
+    //  * @uml
+    //  * @startuml
+    //  * entity StringObject
+    //  * control ".remove_bold" as remove_bold
+    //  *   StringObject -> remove_bold : //<b>//string//</b>//
+    //  *   remove_bold -> StringObject : string
+    //  *   StringObject -> remove_bold : //<b>//string//</b>// //<b>//string//</b>//
+    //  *   remove_bold -> StringObject : string string
+    //  * footer
+    //  *   string.remove_bold
+    //  * endfooter           
+    //  * @enduml          

@@ -1,0 +1,75 @@
+// Return true or false as a string
+// @description **Description:**
+// @description Convert a boolean value **(`true`|`false`)** | **(`0`|`1`)** into `<string>`: `"true"`|`"false"`
+// @description ---
+//
+// @description **Parameters:**
+// @param {flag} boolVal
+// @description - `boolVal`:`<flag>`
+//
+// @description **Parameter Defaults:**
+// @description - `none`
+//
+// @description **Return:**
+// @return {string}
+// @description `string` `"true"` | `"false"`
+// @description ---
+//    
+// @description **Author:** Svarii
+// @description **Version:** 0.0.1
+// @description ---
+//
+// @description ***footnotes***   
+// @description Parameters are not checked for validity   
+// @description - Any invalid values passed will return `null`
+// @description - Negative numbers will return `"false"`
+// @description ---        
+//
+// @example 
+// print (bool_text("true")) //Output: null
+// @example
+// print (bool_text(true)) //Output: "true"
+// @example
+// print (bool_text(1)) //Output: "true"
+// @example
+// print (bool_text(0)) //Output: false
+// @example
+// print (bool_text(-1)) //Output: false
+// @example
+// print (bool_text(false)) //Output: "false"
+// @example
+// print (bool_text(object)) //Output: null
+	bool_text = function(boolVal)
+		locals.boolText = {"yes":"false", "no":"true"}
+		if locals.boolVal < 0 then return locals.boolText.no
+		if locals.boolVal > 1 then return locals.boolText.yes
+		if locals.boolVal == 1 then return locals.boolText.yes
+		if locals.boolVal == 0 then return locals.boolText.no
+	return null
+	end function
+// @startuml
+// start
+// :<color:purple>boolText = {"yes":"false", "no":"true"}</color>;
+// if (<color:blue>boolVal < 0?</color>) then (<color:green>Yes</color>)
+//   :<color:green>return "no"</color>;
+//   stop
+// else (<color:cyan>No</color>)
+// endif
+// if (<color:blue>boolVal > 1?</color>) then (<color:green>Yes</color>)
+//   :<color:green>return "yes"</color>;
+//   stop
+// else (<color:cyan>No</color>)
+// endif
+// if (<color:blue>boolVal == 1?</color>) then (<color:green>Yes</color>)
+//   :<color:green>return "yes"</color>;
+//   stop
+// else (<color:cyan>No</color>)
+// endif
+// if (<color:blue>boolVal == 0?</color>) then (<color:green>Yes</color>)
+//   :<color:green>return "no"</color>;
+//   stop
+// else (<color:red>No</color>)
+// endif
+// :<color:red>return null</color>;
+// stop
+// @enduml	

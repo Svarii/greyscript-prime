@@ -1,0 +1,30 @@
+
+
+    //@name plus 
+        //  *
+        //  * @uml
+        //  * @startuml
+        //  * entity NumberObject
+        //  * control ".plus" as plus
+        //  * NumberObject -> plus : number
+        //  * plus -> NumberObject : (number + 1)
+        //  * NumberObject -> plus : number(7)
+        //  * plus -> NumberObject : (number + 7)        
+        //  * footer
+        //  * number.plus
+        //  * endfooter         
+        //  * @enduml           
+
+        //  **Description:**
+        //  Add 1 to the number or optional amount
+        //  @description     
+        //  @param {number} [amount] - The amount to add.
+        //  @return {number} - The result of the addition.
+        //  @example newNumber = 40
+        //  @example 
+        //  @example result = newNumber.plus(2);
+        //  @example
+        //  print(result); // Outputs: 42
+    number.plus = function(amount = 1)
+            return self + locals.amount
+    end function

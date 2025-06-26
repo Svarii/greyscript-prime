@@ -1,0 +1,79 @@
+// Generate a random IP address
+// @description **Description:**
+// Generate a single random ip address
+// @description ---
+//
+// @description **Parameters:**
+// @description - none 
+// @description ---
+//
+// @description **Return:**
+// @return {string}
+// @description `number` Randomly generated IP Address
+// @description ---   
+//    
+// @description **Author:** Svarii
+// @description **Version:** 0.0.1
+// @description ---    
+//
+// @example randomIP = get_random_ip
+// @example
+// print(randomIP) // Output: ###.###.###.###
+	get_random_ip = function()
+	locals.generateRandomOctet = function()
+    	locals.binaryString = ""
+	    for i in range(8, 1)
+	        // Convert the random float to a binary digit using a threshold:
+	        if rnd() >= 0.5 then
+	            locals.binaryString = locals.binaryString + "1"
+	        else
+	            locals.binaryString = locals.binaryString + "0"
+	        end if
+	    end for
+	    return (0 + to_int(locals.binaryString[0])) * 128 +
+	           (0 + to_int(locals.binaryString[1])) * 64 +
+	           (0 + to_int(locals.binaryString[2])) * 32 +
+	           (0 + to_int(locals.binaryString[3])) * 16 +
+	           (0 + to_int(locals.binaryString[4])) * 8 +
+    	       (0 + to_int(locals.binaryString[5])) * 4 +
+        	   (0 + to_int(locals.binaryString[6])) * 2 +
+	           (0 + to_int(locals.binaryString[7]))
+	end function
+    locals.ipString = ""
+    for i in range(4, 1)
+        locals.octet = locals.generateRandomOctet()
+        // Only append a dot if there is already an octet in ipString.
+        if locals.ipString != "" then
+            locals.ipString = locals.ipString + "."
+        end if
+        locals.ipString = locals.ipString + str(locals.octet)
+    end for
+    return locals.ipString
+	end function
+// @startuml
+// start
+// :<color:purple>Define generateRandomOctet function</color>;
+// :<color:purple>binaryString = ""</color>;
+// :<color:blue>For i = 1 to 8</color>;
+// repeat
+//   if (<color:blue>rnd() >= 0.5?</color>) then (<color:green>Yes</color>)
+//     :<color:purple>binaryString = binaryString + "1"</color>;
+//   else (<color:red>No</color>)
+//     :<color:purple>binaryString = binaryString + "0"</color>;
+//   endif
+// repeat while (next bit)
+// :<color:purple>Calculate octet = (bit0 * 128) + (bit1 * 64) + (bit2 * 32) + (bit3 * 16) + (bit4 * 8) + (bit5 * 4) + (bit6 * 2) + (bit7)</color>;
+// :<color:green>return octet</color>;
+//
+// :<color:purple>Initialize ipString = ""</color>;
+// :<color:blue>For i = 1 to 4</color>;
+// repeat
+//   :<color:purple>octet = generateRandomOctet()</color>;
+//   if (<color:blue>ipString != ""?</color>) then (<color:green>Yes</color>)
+//     :<color:purple>ipString = ipString + "."</color>;
+//   endif
+//   :<color:purple>ipString = ipString + str(octet)</color>;
+// repeat while (next octet)
+// :<color:green>return ipString</color>;
+// stop
+// @enduml	

@@ -1,0 +1,84 @@
+// Append to file
+// @description **Description:**
+// @description Appends data to an existing file, or creates a new file if file does not exist
+// @description ---
+//
+// @description **Parameters:**
+// @param {string} savePath
+// @description - `savePath`:`<string>`
+// @param {string} `saveFile`:`<string>`
+// @description - `saveFile`:`<string>`
+// @param {string} `newText`:`<string>`
+// @description - `newText`:`<string>`
+//
+// @description **Parameter Defaults:**
+// @description - `none`
+//
+// @description **Return:**
+// @return {void}
+// @description `void`
+// @description ---
+//    
+// @description **Author:** Svarii
+// @description **Version:** 0.0.1
+// @description ---
+//
+// @description ***footnotes***   
+// @description Parameters are not checked for validity   
+// @description ---        
+//
+// @example 
+// @example dataString = "0xFC45B2XR9:missspeling"
+// @example
+// file_append("/DatabaseDir", "addressData.db", dataString) //Appends dataString to file
+// @description ---  
+	file_append = function(savePath, saveFile, newText)
+		//********************************************
+		locals.fileContent = ""
+		locals.fileLocation = locals.savePath + "/" + locals.saveFile
+		//********************************************	
+		locals.hostComputer = get_shell.host_computer
+		locals.fileObj = locals.hostComputer.File(locals.fileLocation)
+		if not locals.fileObj then
+			locals.hostComputer.touch(locals.savePath, locals.saveFile)
+			locals.fileObj = locals.hostComputer.File(locals.fileLocation)
+		end if
+		//********************************************
+		//********************************************		
+		if locals.fileObj.has_permission("r") then
+			if locals.fileObj.has_permission("w") then
+				locals.fileContent = locals.fileObj.get_content
+				if locals.fileContent == null then
+					locals.fileObj.set_content(locals.newText)
+				else
+					locals.fileObj.set_content(locals.fileContent + locals.newText)
+				end if
+			else
+			print("Permission Error Saving Data to: " + locals.saveFile + " [No Write Permission]")
+			end if
+		else
+			print("Permission Error Saving Data to: " + locals.saveFile + " [No Read Permission]")
+		end if
+	end function
+// @startuml
+// start
+// :<color:purple>fileContent = ""</color>;
+// :<color:purple>fileLocation = savePath + "/" + saveFile</color>;
+// :<color:purple>hostComputer = get_shell.host_computer</color>;
+// :<color:purple>fileObj = hostComputer.File(fileLocation)</color>;
+// if (<color:blue>fileObj does not exist?</color>) then (<color:red>Yes</color>)
+//   :<color:purple>Create file: touch(savePath, saveFile)</color>;
+//   :<color:purple>fileObj = hostComputer.File(fileLocation)</color>;
+// endif
+// if (<color:blue>fileObj has both read and write permission?</color>) then (<color:green>Yes</color>)
+//   :<color:purple>fileContent = fileObj.get_content</color>;
+//   if (<color:blue>fileContent is null?</color>) then (<color:red>Yes</color>)
+//     :<color:purple>Set file content to newText</color>;
+//   else (<color:green>No</color>)
+//     :<color:purple>Append newText to existing content</color>;
+//   endif
+// else (<color:red>No Read/Write Permission</color>)
+//   :<color:red>Print permission error</color>;
+// endif
+// stop
+// @enduml

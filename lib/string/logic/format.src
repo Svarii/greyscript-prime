@@ -1,0 +1,33 @@
+    //  **Description:**
+    //  Allows for string interpolation
+    //  @contributer dynobytes
+    //  @param {list<string>} args - List of values for delim
+    //  @param {string} [delim="%s"]
+    //  @return {string}
+    //  @example variableString = "The quick brown %s jumps over the lazy %s"
+    //  @example animalsList = ["fox", "dog"] 
+    //  @example      
+    //  @example sentence = variableString.format(animalsList)
+    //  @example
+    //  print(sentence); // Output: The quick brown fox jumps over the lazy dog
+string.format = function(args, delim="%s")
+    locals.splitStr = self.split(locals.delim);
+    locals.recompStr = ""
+    for i in range(0, locals.args.len()-1)
+        locals.recompStr = locals.recompStr + locals.splitStr[locals.i] + locals.args[locals.i]  
+    end for
+        locals.recompStr = locals.recompStr + locals.splitStr[locals.splitStr.len()-1]
+    return locals.recompStr
+end function
+    // @startuml
+    // start
+    // :<color:purple>splitStr = self.split(delim)</color>;
+    // :<color:purple>recompStr = ""</color>;
+    // :<color:blue>For i = 0 to args.len()-1</color>;
+    // repeat
+    //   :<color:purple>recompStr = recompStr + splitStr[i] + args[i]</color>;
+    // repeat while (next i exists)
+    // :<color:purple>recompStr = recompStr + splitStr[splitStr.len()-1]</color>;
+    // :<color:green>return recompStr</color>;
+    // stop
+    // @enduml

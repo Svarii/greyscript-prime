@@ -1,0 +1,31 @@
+   
+
+        //  **Description:**
+        //  Remove the sup tag of the given text.
+        //  @return {string}
+        //  @example newString = "<sup>Hello</sup>"
+        //  @example 
+        //  @example result = newString.remove_sup        
+        //  @example
+        //  print(result); // Outputs: Hello
+    string.remove_sup = function()
+        locals.newString = self.remove("<sup>")
+        return locals.newString.remove("</sup>")
+    end function
+
+
+    //@name remove_sup
+        //  *
+        //  * @uml
+        //  * @startuml
+        //  * entity StringObject
+        //  * control ".remove_sup" as remove_sup
+        //  *   StringObject -> remove_sup : //<sup>//string//</sup>//
+        //  *   header string.remove_sup
+        //  *   remove_sup -> StringObject : string
+        //  *   StringObject -> remove_sup : //<sup>//string//</sup>// //<sup>//string//</sup>//
+        //  *   remove_sup -> StringObject : string string  
+        //  * footer
+        //  *   string.remove_sup
+        //  * endfooter          
+        //  * @enduml         

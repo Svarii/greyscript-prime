@@ -1,0 +1,25 @@
+// Extract the text between the first found indexies of the given start and end strings        
+    // @description **Description:** Extract the text between the first found bold tag if no paramaters provided
+    // @description ---
+    // @description **Parameters:**
+    // @param {string} [tagStart = "<b>""]
+    // @description `tagStart`:`string`
+    // @param {string} [tagEnd = "</b>"]
+    // @description `tagEnd`:`string`
+    // @description ---
+    // @return {string or null}
+    // @example newString = "<b>0x53C737</b>"
+    // @example result = newString.extract("<b>", "</b>")
+    // @example print(result); // Output: 0x53C737   
+string.extract = function(tagStart = "<b>", tagEnd = "</b>")
+    locals.startIndex = self.indexOf(locals.tagStart) + (locals.tagStart.len)
+    locals.endIndex = (self.indexOf(locals.tagEnd) - (locals.tagEnd.len - locals.tagStart.len)) + 1
+    return slice(self, locals.startIndex, locals.endIndex)
+end function
+// @startuml
+    // start
+    // :<color:purple>startIndex = tagStart</color>;
+    // :<color:purple>endIndex = tagEnd</color>;
+    // :<color:green>return slice(self, startIndex, endIndex)</color>;
+    // stop
+    // @enduml        

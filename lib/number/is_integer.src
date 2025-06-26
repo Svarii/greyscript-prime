@@ -1,0 +1,6 @@
+//TESTED
+
+number.is_integer = function()
+	if not self == round(self) then return false
+    return true
+end function

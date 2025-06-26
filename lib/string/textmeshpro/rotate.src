@@ -1,0 +1,32 @@
+// Applies pos arse tag to the string
+    // @description **Description:**
+    // @description Modifies a text string by wrapping it within the rotate tag
+    // @description ---
+    //
+    // @description **Parameters:**
+    // @description * `degreesRotation`:`string`
+    //
+    // @description **Default Parameters:**
+    // @description * `degreesRotation`:`"45"`
+    //
+    // @description **Return:**
+    // @return {string}
+    // @description `string` The string rotated with the `<rotate>` tag
+    // @description ---
+    //
+    // @description **Links:**
+    // @description - [Text Mesh Pro: Rotate](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextRotate.html)	
+    // @description ---	
+    //
+    // @description **Author:** Svarii
+    // @description **Version:** 0.0.1
+    // @description ---
+    //
+    //  @example newString = "Hello"
+    //  @example 
+    //  @example result = newString.rotate
+    //  @example 
+    //  print(result); // Output: <rotate="45">Hello </rotate>
+string.rotate = function(degreesRotation = "45")
+    return "<rotate=" + char(34) + locals.degreesRotation + char(34) + ">" + self + "</rotate>"
+end function  

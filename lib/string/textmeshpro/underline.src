@@ -1,0 +1,29 @@
+// Applies underline tag to the string
+    // @description **Description:**
+    // @description Modifies a text string by wrapping it within the underline tag
+    // @description ---
+    //
+    // @description **Parameters:**
+    // @description * `none`
+    //
+    // @description **Return:**
+    // @return {string}
+    // @description `string` The string wrapped within the `<u>` tag
+    // @description ---
+    //
+    // @description **Links:**
+    // @description - [Text Mesh Pro: Underline](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextStrikethroughUnderline.html)	
+    // @description ---	
+    //
+    // @description **Author:** Svarii
+    // @description **Version:** 0.0.1
+    // @description ---
+    //
+    //  @example newString = "Hello"
+    //  @example 
+    //  @example result = newString.underline
+    //  @example 
+    //  print(result); // Output: <u>Hello</u>
+string.underline = function()
+    return "<u>" + self + "</u>"
+end function

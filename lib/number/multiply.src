@@ -1,0 +1,35 @@
+        
+
+        //  **Description:**
+        //  Multiply 2 from the number or optional amount
+        //  @description     
+        //  @param {number} [amount] - The amount to multiply by.
+        //  @return {number} - The result of the multiplication.
+        //  @example newNumber = 21
+        //  @example 
+        //  @example result = newNumber.multiply
+        //  @example        
+        //  print(result); // Outputs: 42
+        //  @example result2 = newNumber.multiply(3)
+        //  @example        
+        //  print(result2); // Outputs: 63      
+    number.multiply = function(amount = 2)
+            return self * locals.amount
+    end function
+
+
+
+    //@name multiply
+        //  *
+        //  * @uml
+        //  * @startuml
+        //  * entity NumberObject
+        //  * control ".multiply" as multiply
+        //  * NumberObject -> multiply : number
+        //  * multiply -> NumberObject : (number * 2)
+        //  * NumberObject -> multiply : number(6)
+        //  * multiply -> NumberObject : (number * 6)        
+        //  * footer
+        //  * number.multiply
+        //  * endfooter         
+        //  * @enduml     

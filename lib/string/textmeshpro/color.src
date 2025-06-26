@@ -1,0 +1,215 @@
+// Applies color tag to the string
+	// @description **Description:**
+	// @description Modifies a text string by wraping it within the color tag
+	// @description ---
+	//
+	// @description **Parameters:**
+	// @param {string} colorValue
+	// @description - `colorValue`
+	//
+	// @description **Return:**
+	// @return {string}
+	// @description `string` the string value embedded in the `<color>` tag
+	// @description ---
+	//
+	// @description **Links:**
+	// @description - [Text Mesh Pro: Rich Color Text](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextColor.html)	
+	// @description - [HTML Color Names: Supported Name List](https://htmlcolorcodes.com/color-names/)
+	// @description ---	
+	//
+	// @description **Author:** Svarii
+	// @description **Version:** 0.0.1
+	// @description ---
+	//
+	// @description ***footnotes***
+	// @description Color names are case sensitive
+	// @description ---
+	//
+	// @example newString = "Hello"   
+	// @example 
+	// @example result = newString.color("blue");
+	// @example     
+	// print(result); // Outputs: <color=blue>Hello</color>
+	// @example        
+	// @example result = newString.color("#FFFFFF");
+	// @example   
+	// print(result); // Outputs: <color=#FFFFFF>Hello</color>
+	// @example        
+	// @example result = newString.color("Aquamarine");
+	// @example   
+	// print(result); // Outputs: <color=#7FFFD4>Hello</color>        
+string.color = function(colorValue)
+	if not typeof(colorValue) == "string" then return self
+	//*****************************************************
+	// Red HEX Codes
+	//*****************************************************	
+	if colorValue == "IndianRed" then colorValue = "#CD5C5C"
+	if colorValue == "LightCoral" then colorValue = "#F08080"
+	if colorValue == "Salmon" then colorValue = "#FA8072"
+	if colorValue == "DarkSalmon" then colorValue = "#E9967A"
+	if colorValue == "LightSalmon" then colorValue = "#FFA07A"			
+	if colorValue == "Crimson" then colorValue = "#DC143C"
+	if colorValue == "Red" then colorValue = "#FF0000"
+	if colorValue == "FireBrick" then colorValue = "#B22222"
+	if colorValue == "DarkRed" then colorValue = "#8B0000"
+	//*****************************************************
+	// Pink HEX Codes
+	//*****************************************************		
+	if colorValue == "Pink" then colorValue = "#FFC0CB"
+	if colorValue == "LightPink" then colorValue = "#FFB6C1"		
+	if colorValue == "HotPink" then colorValue = "#FF69B4"		
+	if colorValue == "DeepPink" then colorValue = "#FF1493"		
+	if colorValue == "MediumVioletRed" then colorValue = "#C71585"				
+	if colorValue == "PaleVioletRed" then colorValue = "#DB7093"				
+	//*****************************************************
+	// Orange HEX Codes
+	//*****************************************************					
+	if colorValue == "Coral" then colorValue = "#FF7F50"						
+	if colorValue == "Tomato" then colorValue = "#FF6347"				
+	if colorValue == "OrangeRed" then colorValue = "#FF4500"						
+	if colorValue == "DarkOrange" then colorValue = "#FF8C00"				
+	if colorValue == "Orange" then colorValue = "#FFA500"						
+	//*****************************************************
+	// Yellow HEX Codes
+	//*****************************************************
+	if colorValue == "Gold" then colorValue = "#FFD700"
+	if colorValue == "Yellow" then colorValue = "#FFFF00"
+	if colorValue == "LightYellow" then colorValue = "#FFFFE0"
+	if colorValue == "LemonChiffon" then colorValue = "#FFFACD"
+	if colorValue == "LightGoldenrodYellow" then colorValue = "#FAFAD2"        
+	if colorValue == "PapayaWhip" then colorValue = "#FFEFD5"
+	if colorValue == "Moccasin" then colorValue = "#FFE4B5"
+	if colorValue == "PeachPuff" then colorValue = "#FFDAB9"
+	if colorValue == "PaleGoldenrod" then colorValue = "#EEE8AA"
+	if colorValue == "Khaki" then colorValue = "#F0E68C"                                					
+	if colorValue == "DarkKhaki" then colorValue = "#BDB76B"                                					        
+	//*****************************************************
+	// Purple HEX Codes
+	//*****************************************************
+	if colorValue == "Lavender" then colorValue = "#E6E6FA"
+	if colorValue == "Thistle" then colorValue = "#D8BFD8"
+	if colorValue == "Plum" then colorValue = "#DDA0DD"
+	if colorValue == "Violet" then colorValue = "#EE82EE"
+	if colorValue == "Orchid" then colorValue = "#DA70D6"        
+	if colorValue == "Fuchsia" then colorValue = "#FF00FF"
+	if colorValue == "Magenta" then colorValue = "#FF00FF"
+	if colorValue == "MediumOrchid" then colorValue = "#BA55D3"
+	if colorValue == "MediumPurple" then colorValue = "#9370DB"
+	if colorValue == "RebeccaPurple" then colorValue = "#663399"                                					
+	if colorValue == "BlueViolet" then colorValue = "#8A2BE2"
+	if colorValue == "DarkViolet" then colorValue = "#9400D3"
+	if colorValue == "DarkOrchid" then colorValue = "#9932CC"
+	if colorValue == "DarkMagenta" then colorValue = "#8B008B"
+	if colorValue == "Purple" then colorValue = "#800080"
+	if colorValue == "Indigo" then colorValue = "#4B0082"        
+	if colorValue == "SlateBlue" then colorValue = "#6A5ACD"
+	if colorValue == "DarkSlateBlue" then colorValue = "#483D8B"
+	if colorValue == "MediumSlateBlue" then colorValue = "#7B68EE" 
+	//*****************************************************
+	// Green HEX Codes
+	//*****************************************************
+	if colorValue == "GreenYellow" then colorValue = "#ADFF2F"
+	if colorValue == "Chartreuse" then colorValue = "#7FFF00"
+	if colorValue == "LawnGreen" then colorValue = "#7CFC00"
+	if colorValue == "Lime" then colorValue = "#00FF00"
+	if colorValue == "LimeGreen" then colorValue = "#32CD32"        
+	if colorValue == "PaleGreen" then colorValue = "#98FB98"
+	if colorValue == "LightGreen" then colorValue = "#90EE90"
+	if colorValue == "MediumSpringGreen" then colorValue = "#00FA9A"
+	if colorValue == "SeaGreen" then colorValue = "#2E8B57"
+	if colorValue == "ForestGreen" then colorValue = "#228B22"                                					
+	if colorValue == "Green" then colorValue = "#008000"
+	if colorValue == "DarkGreen" then colorValue = "#006400"
+	if colorValue == "YellowGreen" then colorValue = "#9ACD32"
+	if colorValue == "OliveDrab" then colorValue = "#6B8E23"
+	if colorValue == "Olive" then colorValue = "#808000"
+	if colorValue == "DarkOliveGreen" then colorValue = "#556B2F"        
+	if colorValue == "MediumAquamarine" then colorValue = "#66CDAA"
+	if colorValue == "DarkSeaGreen" then colorValue = "#8FBC8B"
+	if colorValue == "LightSeaGreen" then colorValue = "#20B2AA" 
+	if colorValue == "DarkCyan" then colorValue = "#008B8B"        
+	if colorValue == "Teal" then colorValue = "#008080"
+	//*****************************************************
+	// Blue HEX Codes
+	//*****************************************************	
+	if colorValue == "Aqua" then colorValue = "#00FFFF"
+	if colorValue == "Cyan" then colorValue = "#00FFFF"
+	if colorValue == "LightCyan" then colorValue = "#E0FFFF"
+	if colorValue == "PaleTurquoise" then colorValue = "#AFEEEE"
+	if colorValue == "Aquamarine" then colorValue = "#7FFFD4"        
+	if colorValue == "Turquoise" then colorValue = "#40E0D0"
+	if colorValue == "MediumTurquoise" then colorValue = "#48D1CC"
+	if colorValue == "DarkTurquoise" then colorValue = "#00CED1"
+	if colorValue == "CadetBlue" then colorValue = "#5F9EA0"
+	if colorValue == "SteelBlue" then colorValue = "#4682B4"                           					
+	if colorValue == "LightSteelBlue" then colorValue = "#B0C4DE"
+	if colorValue == "PoweredBlue" then colorValue = "#B0E0E6"
+	if colorValue == "LightBlue" then colorValue = "#ADD8E6"
+	if colorValue == "SkyBlue" then colorValue = "#87CEEB"
+	if colorValue == "LightSkyBlue" then colorValue = "#87CEFA"
+	if colorValue == "DeepSkyBlue" then colorValue = "#00BFFF"        
+	if colorValue == "DodgerBlue" then colorValue = "#1E90FF"
+	if colorValue == "CornflowerBlue" then colorValue = "#6495ED"
+	if colorValue == "MediumSlateBlue" then colorValue = "#7B68EE"
+	if colorValue == "RoyalBlue" then colorValue = "#4169E1"
+	if colorValue == "Blue" then colorValue = "#0000FF"
+	if colorValue == "MediumBlue" then colorValue = "#0000CD"
+	if colorValue == "DarkBlue" then colorValue = "#00008B"  
+	if colorValue == "Navy" then colorValue = "#000080"
+	if colorValue == "MidnightBlue" then colorValue = "#191970"                        
+	//*****************************************************
+	// Brown HEX Codes
+	//*****************************************************	
+	if colorValue == "Cornsilk" then colorValue = "#FFF8DC"
+	if colorValue == "BlanchedAlmond" then colorValue = "#FFEBCD"
+	if colorValue == "Bisque" then colorValue = "#FFE4C4"
+	if colorValue == "NavajoWhite" then colorValue = "#FFDEAD"
+	if colorValue == "Wheat" then colorValue = "#F5DEB3"        
+	if colorValue == "BurlyWood" then colorValue = "#D#B887"
+	if colorValue == "Tan" then colorValue = "#D2B48C"
+	if colorValue == "RosyBrown" then colorValue = "#BC8F8F"
+	if colorValue == "SandyBrown" then colorValue = "#F4A460"
+	if colorValue == "Goldenrod" then colorValue = "#DAA520"                                					
+	if colorValue == "DarkGoldenrod" then colorValue = "#B8860B"
+	if colorValue == "Peru" then colorValue = "#CD853F"
+	if colorValue == "Chocolate" then colorValue = "#D2691E"
+	if colorValue == "SaddleBrown" then colorValue = "#8B4513"
+	if colorValue == "Sienna" then colorValue = "#A0522D"
+	if colorValue == "Brown" then colorValue = "#A52A2A"        
+	if colorValue == "Maroon" then colorValue = "#800000"          			
+	//*****************************************************
+	// White HEX Codes
+	//*****************************************************	
+	if colorValue == "White" then colorValue = "#FFFFFF"
+	if colorValue == "Snow" then colorValue = "#FFFAFA"
+	if colorValue == "HoneyDew" then colorValue = "#F0FFF0"
+	if colorValue == "MintCream" then colorValue = "#F5FFFA"
+	if colorValue == "Azure" then colorValue = "#F0F8FF"        
+	if colorValue == "AliceBlue" then colorValue = "#F0F8FF"
+	if colorValue == "GhostWhite" then colorValue = "#F8F8FF"
+	if colorValue == "WhiteSmoke" then colorValue = "#F5F5F5"
+	if colorValue == "SeaShell" then colorValue = "#FFF5EE"
+	if colorValue == "Beige" then colorValue = "#F5F5DC"                                					
+	if colorValue == "OldLace" then colorValue = "#FDF5E6"
+	if colorValue == "FloralWhite" then colorValue = "#FFFAF0"
+	if colorValue == "Ivory" then colorValue = "#FFFFF0"
+	if colorValue == "AntiqueWhite" then colorValue = "#FAEBD7"
+	if colorValue == "Linen" then colorValue = "#FAF0E6"
+	if colorValue == "LavenderBlush" then colorValue = "#FFF0F5"        
+	if colorValue == "MistyRose" then colorValue = "#FFE4E1"
+	//*****************************************************
+	// Grey HEX Codes
+	//*****************************************************	
+	if colorValue == "Gainsboro" then colorValue = "#DCDCDC"
+	if colorValue == "LightGrey" then colorValue = "#D3D3D3"
+	if colorValue == "Silver" then colorValue = "#C0C0C0"
+	if colorValue == "DarkGrey" then colorValue = "#A9A9A9"
+	if colorValue == "Grey" then colorValue = "#808080"        
+	if colorValue == "DimGrey" then colorValue = "#696969"
+	if colorValue == "LightSlateGray" then colorValue = "#778899"
+	if colorValue == "SlateGrey" then colorValue = "#708090"
+	if colorValue == "DarkSlateGrey" then colorValue = "#2F4F4F"
+	if colorValue == "Black" then colorValue = "#000000"
+	//*****************************************************                                      					   	
+	return "<color=" + colorValue + ">" + self + "</color>"
+end function

@@ -1,0 +1,53 @@
+// Require user to pass parameters
+// @description **Description:**
+// @description Specifies Usage Information and number of required paramters.
+// @description ---
+//
+// @description **Parameters:**
+// @param {string} usage - The name of the library to load.
+// @description - `usage`:`<string>`
+// @param {number} minReqParams - The directory where the library is located.
+// @description - `minReqParams`:`<number>`
+//
+// @description **Parameter Defaults:**
+// @description - `none`
+//
+// @description **Return:**
+// @return {void}
+// @example
+// force_params("myApp [ipAddress] [port#]", 2)
+// @description ---
+//    
+// @description **Author:** Svarii
+// @description **Version:** 0.0.1
+// @description ---    
+//
+// @example
+// file_new("/DatabaseDir", "addressData.db") //Creates a file at the specified location
+// @description ---  	
+	force_params = function(usage, minReqParams)
+		if locals.params.len < 1 then exit locals.usage
+		if locals.params[0] == "-h" or locals.params[0] == "--help" then exit locals.usage
+		if locals.params.len < locals.minReqParams then exit locals.usage
+	end function
+// @startuml
+// start
+// if (<color:blue>params.len < 1?</color>) then (<color:red>Yes</color>)
+//   :<color:purple>exit / print usage</color>;
+//   stop
+// else (<color:green>No</color>)
+// endif
+// if (<color:blue>params[0] == "-h" or params[0] == "--help"?</color>) then (<color:red>Yes</color>)
+//   :<color:purple>exit usage</color>;
+//   stop
+// else (<color:green>No</color>)
+// endif
+// if (<color:blue>params.len &lt; minReqParams?</color>) then (<color:red>Yes</color>)
+//   :<color:purple>exit usage</color>;
+//   stop
+// else (<color:green>No</color>)
+// endif
+// stop
+// @enduml
+
+grapi

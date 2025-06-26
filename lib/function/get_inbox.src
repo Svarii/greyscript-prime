@@ -1,0 +1,4 @@
+    get_inbox = function(mailAddress = user_mail_address, mailPass = "mailpass")
+        locals.metaMail = mail_login(locals.mailAddress, locals.mailPass)
+		return metaMail.fetch
+    end function

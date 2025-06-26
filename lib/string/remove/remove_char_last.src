@@ -1,0 +1,23 @@
+//  Remove the last character of the given text.
+    //  
+    //  @return {string}
+    //  @example newString = "Hello"
+    //  @example             
+    //  @example result = newString.remove_char_last
+    //  @example          
+    //  print(result); // Outputs: Hell
+string.remove_char_last = function()
+    return slice(self, 0, (self.len - 1))
+end function
+    //@name remove_char_last
+        //  *
+        //  * @uml
+        //  * @startuml
+        //  * entity StringObject
+        //  * control ".remove_char_last" as remove_char_last
+        //  * StringObject -> remove_char_last : string
+        //  * remove_char_last -> StringObject : strin
+        //  * footer
+        //  * string.remove_char_last
+        //  * endfooter 
+        //  * @enduml        

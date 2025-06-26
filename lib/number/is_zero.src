@@ -1,0 +1,4 @@
+number.is_zero = function()
+    if self == 0 then return true
+    return false
+end function

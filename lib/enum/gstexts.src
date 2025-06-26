@@ -5,8 +5,8 @@ report_string_construct__ = function()
 	locals.info = new {"classID": "infoStrings"}
 	locals.email = new {"classID": "emailString"}
 	locals.status = {"classID": "gstexts", "fail": locals.fail, "pass": locals.pass, "action": locals.action, "info": locals.info, "email": locals.email}
-	locals.status.fail.network_devices_found = "No network devices found  ".bold + "Internet connection required".underline
-	locals.status.pass.network_devices_found = "Network device(s) found  ".bold
+	locals.status.fail.network_devices_found = "No network devices found"
+	locals.status.pass.network_devices_found = "Network device(s) found  "
 	locals.status.fail.lib_found = "Library not found"
 	locals.status.pass.lib_found = "Library found"
 	locals.status.fail.file_found = "File not found"
@@ -40,3 +40,55 @@ report_string_construct__ = function()
 	locals.status.action.has_metaxploit = "Checking for metaxploit.so..."	
 	return locals.status
 end function
+	// @startyaml
+	//
+	// # ReportStringConstruct Diagram
+	// #highlight "gstexts" / "status"
+	//
+	// gstexts:
+	//   classID: "gstexts"
+	//   fail:
+	//     classID: "errorStrings"
+	//     network_devices_found: "No network devices found"
+	//     lib_found: "Library not found"
+	//     file_found: "File not found"
+	//     dir_found: "Directory not found"
+	//     user_found: "User not found"
+	//     default: "FAIL"
+	//     check_user_email: "eMail not found"
+	//     check_user_bank: "bank account not found"
+	//     has_internet: "No Internet Connection"
+	//     has_lib_dir: "lib directory not found"
+	//     has_metaxploit: "metaxploit not found"
+	//   pass:
+	//     classID: "passStrings"
+	//     network_devices_found: "Network device(s) found  "
+	//     lib_found: "Library found"
+	//     file_found: "File found"
+	//     dir_found: "Directory found"
+	//     user_found: "User found"
+	//     default: "PASS"
+	//     check_user_email: "eMail Found"
+	//     check_user_bank: "bank account Found"
+	//     has_internet: "Internet Connection Found"
+	//     has_lib_dir: "lib directory Found"
+	//     has_metaxploit: "metaxploit found"
+	//   action:
+	//     classID: "actionStrings"
+	//     check_network_devices: "Checking Network Devices..."
+	//     check_user_email: "Checking for email account..."
+	//     check_user_bank: "Checking for bank account..."
+	//     check_active_net_card: "Checking for active net card..."
+	//     has_internet: "Checking Internet Connection..."
+	//     has_lib_dir: "Checking for lib directory..."
+	//     has_metaxploit: "Checking for metaxploit.so..."
+	//   info:
+	//     classID: "infoStrings"
+	//     active_card_wifi: "Connected to WIFI"
+	//     active_card_ethernet: "Connected to Ethernet"
+	//     mission_contract: "Mission Contract"
+	//   email:
+	//     classID: "emailString"
+	//     mission_contract: "Mission Contract"
+	//
+	// @endyaml

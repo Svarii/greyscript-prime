@@ -1,0 +1,45 @@
+// Applies line-indent tag to the string
+    // @description **Description:**
+    // @description Modifies a text string to wrap it in the line-indent tag
+    // @description ---
+    //
+    // @description **Parameters:**
+    // @param {string} [alignment]
+    // @description - `alignment` Accepted values: `left`, `center`, `right`, `justified`, and `flush`
+    // @param {boolean} [closeTag]
+    // @description - `closeTag` Accepted values: `true` or `false`
+    //
+    // @description **Parameter Defaults:**
+    // @description - `alignment`:`center`
+    // @description - `closeTag`:`true`
+    //
+    // @description **Return:**
+    // @return {string}
+    // @description `string` the string value embedded in (or preceded by) the `<align>` tag
+    // @description ---
+    //
+    // @description **Author:** Svarii
+    // @description **Version:** 0.0.1
+    // @description ---
+    //
+    // @description ---        
+    // @description **Links:**
+    // @description [Text Mesh Pro: Rich Text Line Indentation](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextLineIndentation.html)
+    // @description ---       
+    // @description ***footnotes***   
+    // @description Parameters are not checked for validity   
+    // @description - `alignment` will not reject invalid values | **Return**: `string<withParseIssues>`
+    // @description - `closeTag` will not reject invalid values | **Return**: `null`
+    // @description
+    // @description If all paramaters passed are invalid | **Return**: `null`
+    // @description ---          
+    //
+    // @return {string}
+    // @example newString = "Hello"
+    // @example 
+    // @example result = newString.line_indent("50%")
+    // @example 
+    // print(result); // Outputs: <line-indent=50%>Hello      
+string.line_indent = function(lineIndent = "15%")
+    return "<line-indent=" + locals.lineIndent + ">" + self
+end function    

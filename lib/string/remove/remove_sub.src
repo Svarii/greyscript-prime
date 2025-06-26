@@ -1,0 +1,32 @@
+     
+
+        //  **Description:**
+        //  Remove the sub tag of the given text.
+        //  @return {string}
+        //  @example newString = "<sub>Hello</sub>"     
+        //  @example 
+        //  @example result = newString.remove_sub
+        //  @example                
+        //  print(result); // Outputs: Hello
+    string.remove_sub = function()
+        locals.newString = self.remove("<sub>")
+        return locals.newString.remove("</sub>")
+    end function
+
+
+    //@name remove_sub    
+        //  * **Description:**
+        //  *
+        //  * @uml
+        //  * @startuml
+        //  * entity StringObject
+        //  * control ".remove_sub" as remove_sub
+        //  *   StringObject -> remove_sub : //<sub>//string//</sub>//
+        //  *   header string.remove_sub
+        //  *   remove_sub -> StringObject : string
+        //  *   StringObject -> remove_sub : //<sub>//string//</sub>// //<sub>//string//</sub>//
+        //  *   remove_sub -> StringObject : string string  
+        //  * footer
+        //  *   string.remove_sub
+        //  * endfooter          
+        //  * @enduml       

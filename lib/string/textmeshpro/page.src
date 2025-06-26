@@ -1,0 +1,29 @@
+ // Applies page tag to the string
+    // @description **Description:**
+    // @description Modifies a text string by wraping it within the page tag
+    // @description ---
+    //
+    // @description **Parameters:**
+    // @description * `none`
+    //
+    // @description **Return:**
+    // @return {string}
+    // @description `string` The string value with the `<page>` tag appended to the end
+    // @description ---
+    //
+    // @description **Links:**
+    // @description - [Text Mesh Pro: Page Break](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextPageBreak.html)	
+    // @description ---	
+    //
+    // @description **Author:** Svarii
+    // @description **Version:** 0.0.1
+    // @description ---
+    //
+    //  @example newString = "Hello"
+    //  @example 
+    //  @example result = newString.page
+    //  @example 
+    //  print(result); // Output: Hello<page>   
+    string.page = function()
+        return self + "<page>"
+    end function 

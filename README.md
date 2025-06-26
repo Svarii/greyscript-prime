@@ -22,7 +22,6 @@ To install GreyScript Prime, follow these steps:
    - [Greybel VS](https://marketplace.visualstudio.com/items?itemName=ayecue.greybel-vs)
    - [Markdown Preview Enhanced with litvis](https://marketplace.visualstudio.com/items?itemName=gicentre.markdown-preview-enhanced-with-litvis)
    - [Plant UML](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml)
-   - [Comment Anchors](https://marketplace.visualstudio.com/items?itemName=ExodiusStudios.comment-anchors)
 
 3. Open the project in VSCode and start coding!
 

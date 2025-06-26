@@ -1,0 +1,31 @@
+    
+
+        //  **Description:**
+        //  Remove the underline tag of the given text.
+        //  
+        //  @return {string}
+        //  @example newString = "<u>Hello</u>"
+        //  @example        
+        //  @example result = newString.remove_underline
+        //  @example        
+        //  print(result); // Outputs: Hello
+    string.remove_underline = function()
+        locals.newString = self.remove("<u>")
+        return locals.newString.remove("</u>")
+    end function
+
+
+    //@name remove_underline
+        //  *
+        //  * @uml
+        //  * @startuml
+        //  * entity StringObject
+        //  * control ".remove_underline" as remove_underline
+        //  *   StringObject -> remove_underline : //<u>//string//</u>//
+        //  *   remove_underline -> StringObject : string
+        //  *   StringObject -> remove_underline : //<u>//string//</u>// //<u>//string//</u>//
+        //  *   remove_underline -> StringObject : string string 
+        //  * footer
+        //  *   string.remove_underline
+        //  * endfooter           
+        //  * @enduml        

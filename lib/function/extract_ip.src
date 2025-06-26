@@ -1,0 +1,10 @@
+extractIP = function(inputString)
+    locals.ipPattern = "\b(?:(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)\\.){3}(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)\b"
+    
+    locals.matchResult = inputString.matches(locals.ipPattern)
+    if locals.matchResult.values.len > 0 then
+        return locals.matchResult.values[0]
+    else
+        return null
+    end if
+end function

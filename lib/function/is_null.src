@@ -1,0 +1,46 @@
+// Test if a object is null
+// @description **Description:**
+// Return `true` if item is null, `false` otherwise
+// @description ---
+//
+// @description **Parameters:**
+// @param {any} testObject
+// @description - `testObject` The item to check
+// @description ---
+//
+// @description **Default Parameters:**
+// @description - none
+//
+// @description ---
+//
+// @description **Return:** `boolean`:`true`|`false`
+// @return {boolean} 
+// @description ---   
+//    
+// @description **Author:** Svarii
+// @description **Version:** 0.0.1
+// @description ---    
+//
+// @example nullItem = null
+// @example notNull = "A string"
+// @example
+// print is_null(nullItem) // Output: 1
+// @example
+// print is_null(notNull) // Output: 0
+is_null = function(testObject)
+    if locals.testObject == null then
+        return true
+    else
+        return false
+    end if
+end function
+// @startuml
+// start
+// if (<color:blue>testObject == null?</color>) then (<color:green>Yes</color>)
+//   :<color:purple>return true</color>;
+//   stop
+// else (<color:blue>No</color>)
+//   :<color:purple>return false</color>;
+//   stop
+// endif
+// @enduml

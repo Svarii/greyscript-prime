@@ -1,0 +1,33 @@
+// Applies width tag to the string
+    // @description **Description:**
+    // @description Modifies a text string by wraping it within the width tag
+    // @description ---
+    //
+    // @description **Parameters:**
+    // @param {string} [width]
+    // @description - `width`:`string` | `Accepted values`: `em`, `px`, `%`
+    //
+    // @description **Parameter Defaults:**
+    // @description - `width`:`"50%"`
+    //
+    // @description **Return:**
+    // @return {string}
+    // @description `string` The string value wrapped within the `<width>` tag
+    // @description ---
+    //
+    // @description **Links:**
+    // @description - [Text Mesh Pro: Rich Text Width](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextMargins.html)	
+    // @description ---	
+    //
+    // @description **Author:** Svarii
+    // @description **Version:** 0.0.1
+    // @description ---
+    //
+    //  @example newString = "Hello"
+    //  @example 
+    //  @example result = newString.width
+    //  @example 
+    //  print(result); // Outputs: <width=50%>Hello</width>       
+    string.width = function(hSize = "50%")
+        return "<width=" + locals.hSize + ">" + self + "</width>"
+    end function

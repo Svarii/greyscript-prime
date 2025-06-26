@@ -1,0 +1,44 @@
+// Applies alpha tag to the string
+    // @description **Description:**
+    // @description Modifies a text string and preced it with the alpha tag
+    // @description ---
+    //
+    // @description **Parameters:**
+    // @param {string} [hexOpacity]
+    // @description - `hexOpacity` Accepted values: 2 digit HEX value preceded by #
+    //
+    // @description **Parameter Defaults:**
+    // @description - `hexOpacity`:`#FF`
+    //
+    // @description **Return:**
+    // @return {string}
+    // @description `string` the string value preceded by the `<alpha>` tag
+    // @description ---
+    //
+    // @description **Links:**
+    // @description [Text Mesh Pro: Rich Text Opacity](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextOpacity.html)
+    // @description ---
+    //    
+    // @description **Author:** Svarii
+    // @description **Version:** 0.0.1
+    // @description ---
+    //
+    // @description ***footnotes***   
+    // @description Parameters are not checked for validity   
+    // @description - `hexOpacity` will not reject invalid values | **Return**: `string<withParseIssues>`
+    // @description - does not apply a closing tag and affects all text that follows
+    // @description - will apply transparancy (default) #FF if no paramaters are passed
+    // @description ---        
+    //
+    // @example newString = "Hello"
+    // @example 
+    // @example result = newString.alpha("#4C")
+    // @example 
+    // print(result); // Output: <alpha=#4C>Hello
+    // @example 
+    // @example result = newString.alpha
+    // @example 
+    // print(result); // Output: <alpha=#FF>Hello    
+string.alpha = function(hexOpacity = "#FF")
+    return "<alpha=" + locals.hexOpacity + ">" + self
+end function

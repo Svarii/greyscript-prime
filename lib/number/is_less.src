@@ -1,0 +1,29 @@
+
+        
+        //  **Description:**
+        //  Check if number is lesser than provided number   
+        //  @param {number} amount
+        //  @return {true<bool> | false<bool>} - The result of the subtraction.
+        //  @example myNumber = 42;
+        //  @example myNumber2 = 100;
+        //  @example 
+        //  @example result = newNumber.is_less(myNumber2);
+        //  @example
+        //  print(result); // Outputs: false
+    number.is_less = function(is_less)
+            if locals.is_less < self then return true
+            return false
+    end function
+
+    
+
+    //@name is_less   
+        //  * @startuml
+        //  * entity NumberObject
+        //  * control ".lesser_than" as lesser_than
+        //  *   NumberObject -> lesser_than : number
+        //  *   lesser_than -> NumberObject : [true / false]     
+        //  * footer
+        //  *   number.lesser_than
+        //  * endfooter         
+        //  * @enduml 

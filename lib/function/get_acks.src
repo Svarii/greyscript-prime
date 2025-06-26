@@ -1,0 +1,48 @@
+// **Description:**
+// Caculates the recommended amount of ACKs to collect
+// @param {number} signalStrength - `signlaStrength`:`number`
+// @description ---
+//
+// @description **Parameters:**
+// @param {string} signalStrength - The name of the library to load.
+// @description - `signalStrength`:`number`
+// @description ---
+//
+// @description **Parameter Defaults:**
+// @description - `signalStrength`:`1`
+// @description ---   
+//
+// @description **Return:**
+// @return {number}
+// @description `number` Recommended number of ACKs to collect
+// @description ---   
+//    
+// @description **Author:** Svarii
+// @description **Version:** 0.0.1
+// @description ---    
+//
+// @example reqACK = calculate_acks(6) // Signal Strength 6%
+// @example
+// print(reqACK) // Output: 14286
+	get_acks = function(signalStrength = 1)
+		if not typeof(locals.signalStrength) == "number" then return null
+		if locals.signalStrength <= 0 or locals.signalStrength > 100 then return null
+		return ceil(300000 / (locals.signalStrength + 15))
+	end function
+// @startuml
+// start
+// :<color:purple>signalStrength = 1 (default)</color>;
+// if (<color:blue>is signalStrength a number?</color>) then (<color:red>No</color>)
+//   :<color:red>return <b>null</b></color>;
+//   stop
+// else (<color:green>Yes</color>)
+// endif
+// if (<color:blue>is signalStrength > 0 and <= 100?</color>) then (<color:red>No</color>)
+//   :<color:red>return <b>null</b></color>;
+//   stop
+// else (<color:green>Yes</color>)
+// endif
+// :<color:purple>numofACK = ceil(300000 / signalStrength)</color>;
+// :<color:green>return <b>numofACK</b></color>;
+// stop
+// @enduml

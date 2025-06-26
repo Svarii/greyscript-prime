@@ -1,0 +1,25 @@
+   
+
+        //  **Description:**
+        //  Generate a random number from 0 to number, or from optional minimum to number
+        //  @param {number} [min]
+        //  @return {number} - The result of the subtraction.
+        //  @example myNumber = 100;
+        //  @example 
+        //  @example result = myNumber.random_from(50);
+        //  @example
+        //  print(result); // Output: A random number between 50 and 100
+    number.random_from = function(min = 0)
+            locals.max = self
+            return floor((rnd * (locals.max - locals.min + 1)) + locals.min)  
+    end function
+    //@name random_from
+        //  * @startuml
+        //  * entity NumberObject
+        //  * control ".random_from" as random_from
+        //  *   NumberObject -> random_from : number
+        //  *   random_from -> NumberObject : [random number in range]     
+        //  * footer
+        //  *   number.random_from([opt:min])
+        //  * endfooter         
+        //  * @enduml         

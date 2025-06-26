@@ -1,0 +1,52 @@
+// Return difference to number
+        // @description **Description:**
+	// @description The difference between number and provided number
+	// @description ---
+	//
+	// @description **Parameters:**
+        // @param {number} distanceTo - The value to compare
+        // @description - `distanceTo` The value to compare
+        //
+	// @description **Parameter Defaults:**
+        // @description - `distanceTo`:`0`
+        // @description ---
+        //
+	// @description **Return:**
+	// @return {number} the difference between the numbers
+	// @description `number` difference between numbers
+	// @description ---
+	//
+	// @description **Author:** Svarii
+	// @description **Version:** 0.0.1
+	// @description ---
+	//
+	// @example myNumber = 42
+        // @example
+        // print myNumber.diff(42, 100) // Return 57
+        // @example
+        // print myNumber.diff(75, 100) // Return 25
+        // @example
+        // print myNumber.diff(0, 40) // Return 40
+	// @description ---
+    number.diff = function(distanceTo = 0)
+            return abs(self - locals.distanceTo)
+    end function
+    //@name diff
+// @startuml
+// title <color:purple>number.diff Method Diagram</color>
+// 
+// class number {
+//   + value : number
+//   + diff(number) : number
+// }
+// 
+// note right of number
+//   The diff method subtracts the provided value from the current number.
+//   For example: 44.diff(2) returns 42.
+// end note
+// 
+// footer
+// Method: number.diff(subtrahend)
+// endfooter
+// 
+// @enduml

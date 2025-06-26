@@ -1,0 +1,28 @@
+// Applies italic tag to the string
+    // @description **Description:**
+    // @description Modifies a text string by wraping it within the italic tag
+    // @description ---
+    //
+    // @description **Parameters:** `none`
+    //
+    // @description **Return:**
+    // @return {string}
+    // @description `string` The string value wrapped within the `<i>` tag
+    // @description ---
+    //
+    // @description **Links:**
+    // @description - [Text Mesh Pro: Rich Text Italic](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextBoldItalic.html)	
+    // @description ---	
+    //
+    // @description **Author:** Svarii
+    // @description **Version:** 0.0.1
+    // @description ---
+    //
+    //  @example newString = "Hello"
+    //  @example 
+    //  @example result = newString.italic
+    //  @example 
+    //  print(result); // Outputs: <i>Hello</i>         
+string.italic = function()
+    return "<i>" + self + "</i>"
+end function    

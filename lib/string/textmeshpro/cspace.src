@@ -1,0 +1,42 @@
+// Applies cspace tag to the string
+    // @description **Description:**
+    // @description Modifies a text string by wraping it within the cspace tag
+    // @description ---
+    //
+    // @description **Parameters:**
+    // @param {string} charSpacing
+    // @param {boolean} closeTag
+    // @description - `charSpacing`
+    // @description - `closeTag`
+    //
+    // @description **Return:**
+    // @return {string}
+    // @description `string` The string value wrapped within `<cspace>` tag
+    // @description ---
+    //
+    // @description **Links:**
+    // @description - [Text Mesh Pro: Rich Text Character Spaceing](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextCharacterSpacing.html)	
+    // @description ---	
+    //
+    // @description **Author:** Svarii
+    // @description **Version:** 0.0.1
+    // @description ---
+    //
+    // @description ***footnotes***
+    // @description Accepts pixels or font unit
+    // @description ---
+    //
+    //  @example newString = "Hello"
+    //  @example 
+    //  @example result = newString.cspace
+    //  @example 
+    //  print(result); // Outputs: <cspace=1em>Hello</cspace> 
+string.cspace = function(charSpacing = "1em", closeTag = true)
+    if locals.closeTag == true then
+        return "<cspace=" + locals.charSpacing + ">" + self + "</cspace>"
+    end if
+    if locals.closeTag == false then
+        return "<cspace=" + locals.charSpacing + ">" + self
+    end if        
+end function 
+

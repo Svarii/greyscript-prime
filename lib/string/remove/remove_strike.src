@@ -1,0 +1,31 @@
+     
+
+        //  **Description:**
+        //  Remove the strikethrough tag of the given text.
+        //  
+        //  @return {string}
+        //  @example newString = "<s>Hello</s>"
+        //  @example 
+        //  @example result = newString.remove_strike
+        //  @example         
+        //  print(result); // Outputs: Hello
+    string.remove_strike = function()
+        locals.newString = self.remove("<s>")
+        return locals.newString.remove("</s>")
+    end function
+
+
+
+    //@name remove_strike    
+        //  * @uml
+        //  * @startuml
+        //  * entity StringObject
+        //  * control ".remove_strike" as remove_strike
+        //  *   StringObject -> remove_strike : //<s>//string//</s>//
+        //  *   remove_strike -> StringObject : string
+        //  *   StringObject -> remove_strike : //<s>//string//</s>// //<s>//string//</s>//
+        //  *   remove_strike -> StringObject : string string
+        //  * footer
+        //  *   string.remove_strike
+        //  * endfooter             
+        //  * @enduml       

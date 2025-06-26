@@ -1,0 +1,31 @@
+
+
+        //  **Description:**
+        //  Remove the mark tag of the given text.
+        //  @return {string}
+        //  @example newString = "<mark>Hello</mark>"
+        //  @example 
+        //  @example result = newString.remove_mark
+        //  @example
+        //  print(result); // Outputs: Hello
+    string.remove_mark = function()
+        locals.newString = self.remove("<mark>")
+        return locals.newString.remove("</mark>")
+    end function
+
+
+    //@name remove_mark    
+        //  * **Description:**
+        //  *
+        //  * @uml
+        //  * @startuml
+        //  * entity StringObject
+        //  * control ".remove_mark" as remove_mark
+        //  *   StringObject -> remove_mark : //<mark>//string//</mark>//
+        //  *   remove_mark -> StringObject : string
+        //  *   StringObject -> remove_mark : //<mark>//string//</mark>// //<mark>//string//</mark>//
+        //  *   remove_mark -> StringObject : string string   
+        //  * footer
+        //  *   string.remove_mark
+        //  * endfooter               
+        //  * @enduml            

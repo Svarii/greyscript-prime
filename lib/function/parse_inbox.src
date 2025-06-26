@@ -1,0 +1,17 @@
+    parse_inbox = function(mailIDList)
+		locals.mailObjects = []
+		locals.bodyText = ""
+        for mailList in locals.mailIDList
+			locals.mail = new{"id":"", "from":"", "subject":"", "summary":"", "body":""}
+			locals.rawMail = globals.metaMail.read(locals.mailList)
+			locals.segments = (locals.rawMail.split(char(10))).crop
+            locals.mail.from = locals.segments[0][6:]
+            locals.mail.subject = locals.segments[1][9:]
+            locals.segments.remove(0) // remove from
+            locals.segments.remove(0) // remove subject
+			locals.mail.id = locals.mailList
+            locals.mail.body = locals.segments.string 
+			locals.mailObjects.push(locals.mail)
+        end for
+        return locals.mailObjects
+    end function

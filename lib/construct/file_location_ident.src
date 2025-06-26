@@ -1,0 +1,72 @@
+// Returns an file identifier construct
+    // @description **Description:**
+    // @description Creats an object construct and populates it with file identification attributes
+    // @description ---
+    //
+    // @description **Parameters:**
+    // @param {string} absoluteLocation
+    // @description - `absoluteLocation`:`<string>`
+    //
+    // @description **Parameter Defaults:**
+    // @description - `none`
+    //
+    // @description **Return:**
+    // @return {map<string,string>}
+    // @description `map`:`fileID` populated with file identifer information
+    // @description - `.ext`
+    // @description - `.name`
+    // @description - `.filename`
+    // @description - `.dir`
+    // @description - `.parentdir`
+    // @description - `.location`
+    // @description ---
+    //    
+    // @description **Author:** Svarii
+    // @description **Version:** 0.0.1
+    // @description ---
+    //
+    // @description ***footnotes***   
+    // @description Parameters are not checked for validity   
+    // @description - `absoluteLocation`:`<number>` will result in "Runtime Error: Key Not Found: 'lastIndexOf' not found in map "
+    // @description - `absoluteLocation`:`<map>` will result in "Runtime Error: Key Not Found: 'lastIndexOf' not found in map "
+    // @description ---        
+    //
+    // @example aptClientID = file_location_ident("/lib/aptclient.so")
+    // @example
+    // print(aptClientID.filename); // Output: aptclient.so
+    // @example
+    // print(aptClientID.location); // Output: /lib/aptclient.so
+    // @example
+    // print(aptClientID.ext); // Output: so
+    // @example
+    // print(aptClientID.name); // Output: aptclient
+file_location_ident = function(absoluteLocation)
+        locals.ext = slice(locals.absoluteLocation, (locals.absoluteLocation.lastIndexOf(".") + 1), locals.absoluteLocation.len)
+        locals.name = slice(locals.absoluteLocation, locals.absoluteLocation.lastIndexOf("/") + 1, locals.absoluteLocation.lastIndexOf("."))
+		locals.filename = locals.name + "." + locals.ext
+        locals.dir = slice(locals.absoluteLocation, locals.absoluteLocation.indexOf("/"), locals.absoluteLocation.lastIndexOf("/"))
+        locals.folder = slice(locals.dir, locals.dir.lastIndexOf("/") + 1)
+        locals.location = locals.dir + "/" + locals.name + "." + locals.ext
+        locals.construct = {"classID":"fileID", "ext": locals.ext, "name": locals.name, "parentdir": locals.folder, "dir": locals.dir, "location": locals.location, "filename": locals.filename}
+        return locals.construct
+end function
+// @startyaml
+//
+// # File Identifier Class Diagram
+// #highlight "fileID" / "File Info"
+//
+// fileID:
+//   File Info:
+//     ext: "string"      # File extension
+//     name: "string"     # Base name of the file
+//     filename: "string" # Full file name
+//   Path Info:
+//     dir: "string"      # Directory path
+//     parentdir: "string" # Parent directory
+//     location: "string"  # Absolute file path
+//
+// # Note:
+// # Extracts and assembles file properties
+// # from an absolute location.
+//
+// @endyaml

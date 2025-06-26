@@ -1,0 +1,29 @@
+// Applies sub tag to the string
+    // @description **Description:**
+    // @description Modifies a text string by wrapping it within the sub tag
+    // @description ---
+    //
+    // @description **Parameters:**
+    // @description * `none`
+    //
+    // @description **Return:**
+    // @return {string}
+    // @description `string` The string wrapped within the `<sub>` tag
+    // @description ---
+    //
+    // @description **Links:**
+    // @description - [Text Mesh Pro: Subscript](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextSubSuper.html)	
+    // @description ---	
+    //
+    // @description **Author:** Svarii
+    // @description **Version:** 0.0.1
+    // @description ---
+    //
+    //  @example newString = "Hello"
+    //  @example 
+    //  @example result = newString.sub
+    //  @example 
+    //  print(result); // Output: <sub>Hello</sub>    
+    string.sub = function()
+        return "<sub>" + self + "</sub>"    
+    end function  

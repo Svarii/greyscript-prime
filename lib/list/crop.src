@@ -1,0 +1,41 @@
+// Crops off empty elements from the start and end of a list
+// @description **Description:**
+// @description Iterates through a list end and checks for empty items, if found, `.remove` is used on list item
+// @description ---
+//
+// @description **Parameters:**
+// @description - none
+//
+// @description **Return:**
+// @return {list}
+// @description `list` The same list with empty items purged from ends
+// @description ---
+//
+// @description **Author:** Svarii
+// @description **Version:** 0.0.1
+// @description ---
+//
+// @example myList = ["","","cat","dog",""];
+// @example result = myList.crop
+// @example
+// print(result); // Output: ["cat","dog"]
+// @description ---        
+    list.crop = function()
+        while not self[self.len - 1].len > 0
+            self.remove(self.len - 1)
+        end while
+        while not self[0].len > 0
+            self.remove(0)
+        end while
+        return self
+    end function
+//@name crop
+    //  * @startuml
+    //  * entity ListObject
+    //  * control ".crop" as crop
+    //  *   ListObject -> crop : [//""//,//""//,"item1", "item2", //""//]
+    //  *   crop -> ListObject : ["item1", "item2"]
+    //  * footer
+    //  *   list.crop
+    //  * endfooter         
+    //  * @enduml         

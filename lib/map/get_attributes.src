@@ -1,0 +1,33 @@
+// Extracts list of top-level attributes from object
+	// @description **Description:**
+	// @description Iterate though the __isa of a list and create a list of key names
+	// @description ---
+	//
+	// @description **Parameters:**
+	// @description - none
+	//
+	// @description **Return:**
+	// @return {list<string>}
+	// @description `list<string>` List attributes for the object
+	// @description ---
+	//
+	// @description **Author:** Svarii
+	// @description **Version:** 0.0.1
+	// @description ---
+	//     
+	// @description ***footnotes***   
+	// @description This method only returns top-level attributes   
+	// @description ---
+	//
+	// @example myObject = {"classID":"myObject","myVar":"some Value"};
+	// @example result = myObject.get_attributes
+	// @example
+	// print(result); // Output: ["myObject":"myVar", "myVar":"some Value"]
+	// @description ---
+map.get_attributes = function()
+	locals.attributeList = []
+	for param in self["__isa"]
+		locals.attributeList.push(locals.param.key)
+	end for	
+	return locals.attributeList
+end function

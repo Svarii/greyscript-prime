@@ -1,0 +1,31 @@
+// Get name of program *{self}*
+// @description **Description**
+// @description Return a string with the name of the file that is running this script
+// @description ---
+//
+// @description **Parameters:**
+// @param {string} [user]]
+// @param {string} [pass]
+// @description - `user` (**string**, *optional*): The username to use for access
+// @description - `pass` (**string**, *optional*): The password to use for access
+//
+// @description **Default Parameters:**
+// @description - none
+// @description ---
+//
+// @return {list<list<string>>}
+// @description **Return**
+// `list[list[string, string, string]]`:`[adaptor, model, monitor_enabled]`
+// @description ---    
+//    
+// @example
+// programName = program_name
+//
+// @description **Author:** Svarii
+// @description **Version:** 0.0.1
+// @description ---    
+	program_name = function()
+		locals.splitVal = program_path.split("/")
+		locals.splitVal.reverse
+		return trim(locals.splitVal[0])
+	end function

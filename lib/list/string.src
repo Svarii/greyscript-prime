@@ -1,0 +1,42 @@
+// Return string constructed from all elements of a list
+    // @description **Description:**
+    // @description Iterates through a list and construct a string using the provided seperator, or char(10) if no seperator is specified.
+    // @description ---
+    //
+    // @description **Parameters:**
+    // @param {string} [seperator]
+    // @description - `seperator`:`<string>` The character to use to seperate the list items in the new string.
+    //
+    // @description **Parameter Defaults:**
+    // @description - `seperator`:`char(10)` The character(s) to use to seperate the list items in the new string.
+    //
+    // @description **Return:**
+    // @return {string}
+    // @description `string` The newly constructed string.
+    // @description ---
+    //
+    // @description **Author:** Svarii
+    // @description **Version:** 0.0.1
+    // @description ---
+    //
+    // @example myList = ["cat","dog"]
+    // @example
+    // myList.string           // Output: "cat" + char(10) + "dog"
+    // @example
+    // myList.string(", ")     // Output: "cat, dog"
+    // @description ---
+list.string = function(seperator = char(10))
+    locals.printString = split(self, locals.seperator)
+    return locals.printString
+end function
+    //@name string
+        //  * @startuml
+        //  * entity ListObject
+        //  * interface ScreenOutput
+        //  * control ".string" as string
+        //  *   ListObject -> string : list
+        //  *   string -> ScreenOutput : string()
+        //  * footer
+        //  *   list.string
+        //  * endfooter         
+        //  * @enduml           

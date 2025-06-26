@@ -1,0 +1,44 @@
+// Return Network Devices in a list
+// @description **Description**
+// @description Pull network devices from host computer and return a list of network device information as lists
+// @description ---
+//
+// @description **Parameters:**
+// @param {string} [user]]
+// @param {string} [pass]
+// @description - `user` (**string**, *optional*): The username to use for access
+// @description - `pass` (**string**, *optional*): The password to use for access
+// @description ---
+//
+// @description **Default Parameters:**
+// @description - none
+//
+// @return {list<list<string>>}
+// @description **Return**
+// `list[list[string, string, string]]`:`[adaptor, model, monitor_enabled]`
+// @description ---    
+//    
+// @description **Author:** Svarii
+// @description **Version:** 0.0.1
+// @description ---    
+	network_device_list = function(user = "", pass = "")
+		locals.networkDevices = split(get_shell(locals.user, locals.pass).host_computer.network_devices, char(10))
+		locals.networkDeviceList = []
+		for device in locals.networkDevices
+			if locals.device then locals.networkDeviceList.push(split(locals.device, " "))
+		end for
+		return locals.networkDeviceList
+	end function
+// @startuml
+// start
+// :<color:purple>networkDevices = split(get_shell(user, pass).host_computer.network_devices, char(10))</color>;
+// :<color:purple>networkDeviceList = []</color>;
+// :<color:blue>For each device in networkDevices</color>;
+// repeat
+//   if (<color:blue>device exists?</color>) then (<color:green>Yes</color>)
+//     :<color:purple>Push split(device, " ") into networkDeviceList</color>;
+//   endif
+// repeat while (another device exists)
+// :<color:green>return networkDeviceList</color>;
+// stop
+// @enduml

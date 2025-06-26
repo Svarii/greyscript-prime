@@ -1,0 +1,41 @@
+// Delete a file
+// @description **Description:**
+// @description Delete a specified file if it has write permissions
+// @description ---
+//
+// @description **Parameters:**
+// @param {string} filePath
+// @description - `filePath`:`<string>`
+// @param {string} `fileName`:`<string>`
+// @description - `fileName`:`<string>`
+//
+// @description **Parameter Defaults:**
+// @description - `none`
+//
+// @description **Return:**
+// @return {boolean}
+// @description `boolean` `true`|`false` This indicates whether write permission could be found, this does not verify delete.
+// @description ---
+//    
+// @description **Author:** Svarii
+// @description **Version:** 0.0.1
+// @description ---
+//
+// @description ***footnotes***   
+// @description Only checks for write permission, does not verify file exists, or delete was sucessful  
+// @description Parameters are not checked for validity   
+// @description ---        
+//
+// @example
+// file_delete("/DatabaseDir", "addressData.db") //Deletes a file if write permission exists
+// @description ---  
+	file_delete = function(filePath, fileName)
+		locals.hostComputer = get_shell.host_computer
+		locals.fileLocation = locals.filePath + "/" + locals.fileName
+		locals.fileObj = locals.hostComputer.File(locals.fileLocation)
+		if locals.fileObj.has_permission("w") then
+			locals.hostComputer.File.delete
+			return true
+		end if
+		return false
+	end function

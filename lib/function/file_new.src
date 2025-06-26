@@ -1,0 +1,62 @@
+// Create a new file
+// @description **Description:**
+// @description Create a new file at the specified path if it does not already exist
+// @description ---
+//
+// @description **Parameters:**
+// @param {string} filePath
+// @description - `filePath`:`<string>`
+// @param {string} `fileName`:`<string>`
+// @description - `fileName`:`<string>`
+//
+// @description **Parameter Defaults:**
+// @description - `none`
+//
+// @description **Return:**
+// @return {void}
+// @description `void`
+// @description ---
+//    
+// @description **Author:** Svarii
+// @description **Version:** 0.0.1
+// @description ---
+//
+// @description ***footnotes***   
+// @description file permissions are not checked
+// @description Parameters are not checked for validity   
+// @description ---        
+//
+// @example
+// file_new("/DatabaseDir", "addressData.db") //Creates a file at the specified location
+// @description ---  	
+	file_new = function(filePath, fileName)
+		locals.hostComputer = get_shell.host_computer
+		locals.fileLocation = locals.filePath + "/" + locals.fileName
+		locals.fileObj = locals.hostComputer.File(locals.fileLocation)
+		if not locals.fileObj then
+			locals.hostComputer.touch(locals.filePath, locals.fileName)
+			locals.fileObj = locals.hostComputer.File(locals.fileLocation)
+		end if
+		if locals.fileObj then
+			return true
+		else
+			return false
+		end if
+	end function
+// @startuml
+// start
+// :<color:purple>hostComputer = get_shell.host_computer</color>;
+// :<color:purple>fileLocation = filePath + "/" + fileName</color>;
+// :<color:purple>fileObj = hostComputer.File(fileLocation)</color>;
+// if (<color:blue>fileObj does not exist?</color>) then (<color:red>Yes</color>)
+//   :<color:purple>hostComputer.touch(filePath, fileName)</color>;
+//   :<color:purple>fileObj = hostComputer.File(fileLocation)</color>;
+// endif
+// if (<color:blue>fileObj exists?</color>) then (<color:green>Yes</color>)
+//   :<color:purple>return true</color>;
+//   stop
+// else (<color:green>No</color>)
+//   :<color:purple>return false</color>;
+//   stop
+// endif
+// @enduml	

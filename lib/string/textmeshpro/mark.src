@@ -1,0 +1,33 @@
+// Applies mark tag to the string
+    // @description **Description:**
+    // @description Modifies a text string by wraping it within the mark tag
+    // @description ---
+    //
+    // @description **Parameters:**
+    // @param {string} [color]
+    // @description - `color`:`string` | #RRGGBBAA [ HEXA ] 
+    //
+    // @description **Parameter Defaults:**
+    // @description - `color`:`#FFFF00AA`
+    //
+    // @description **Return:**
+    // @return {string}
+    // @description `string` The string value wrapped within the `<mark>` tag
+    // @description ---
+    //
+    // @description **Links:**
+    // @description - [Text Mesh Pro: Rich Text mark](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextMark.html  )	
+    // @description ---	
+    //
+    // @description **Author:** Svarii
+    // @description **Version:** 0.0.1
+    // @description ---
+    //
+    //  @example newString = "Hello"
+    //  @example 
+    //  @example result = newString.mark
+    //  @example 
+    //  print(result); // Outputs: <mark="#FFFF00AA">Hello</mark>   
+string.mark = function(color="#FFFF00AA")
+    return "<mark=" + locals.color + ">" + self + "</mark>"
+end function 

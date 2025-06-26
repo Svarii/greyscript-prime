@@ -1,0 +1,33 @@
+// Applies voffset tag to the string
+    // @description **Description:**
+    // @description Modifies a text string by wraping it within the voffset tag
+    // @description ---
+    //
+    // @description **Parameters:**
+    // @param {string} [verticalOffset]
+    // @description - `verticalOffset`:`string` | `Accepted values`: `em`, `px`, `%`
+    //
+    // @description **Parameter Defaults:**
+    // @description - `verticalOffset`:`1em`
+    //
+    // @description **Return:**
+    // @return {string}
+    // @description `string` The string value wrapped within the `<voffset>` tag
+    // @description ---
+    //
+    // @description **Links:**
+    // @description - [Text Mesh Pro: Rich Text Vertical Offset](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextVOffset.html)	
+    // @description ---	
+    //
+    // @description **Author:** Svarii
+    // @description **Version:** 0.0.1
+    // @description ---
+    //
+    //  @example newString = "Hello"
+    //  @example 
+    //  @example result = newString.voffset
+    //  @example 
+    //  print(result); // Outputs: <voffset=1em>Hello</voffset>        
+    string.voffset = function(verticalOffset = "1em")
+        return "<voffset=" + locals.verticalOffset + ">" + self + "</voffset>"
+    end function         

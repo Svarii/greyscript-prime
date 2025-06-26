@@ -1,0 +1,4 @@
+number.is_positive = function()
+    if str(self).indexOf("-") == 0 then return false
+    return true
+end function

@@ -1,0 +1,28 @@
+
+
+        //  **Description:**
+        //  Check if number is greater than provided number
+        //  @param {number} is_more
+        //  @return {true<bool> | false<bool>} - The result of the subtraction.
+        //  @example myNumber = 42;
+        //  @example myNumber2 = 100;
+        //  @example 
+        //  @example result = newNumber.is_more(myNumber2);
+        //  @example        
+        //  print(result); // Outputs: false
+    number.is_more = function(is_more)
+            if locals.is_more > self then return true
+            return false
+    end function
+    //@name is_more   
+        //  *
+        //  * @uml
+        //  * @startuml
+        //  * entity NumberObject
+        //  * control ".greater_than" as greater_than
+        //  * NumberObject -> greater_than : number
+        //  * greater_than -> NumberObject : [true / false]     
+        //  * footer
+        //  * number.greater_than
+        //  * endfooter         
+        //  * @enduml     

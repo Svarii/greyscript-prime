@@ -1,0 +1,32 @@
+// Applies size tag to the string
+    // @description **Description:**
+    // @description Modifies a text string by wrapping it within the size tag
+    // @description ---
+    //
+    // @description **Parameters:**
+    // @description * `textSize`:`string`
+    //
+    // @description **Default Parameters:**
+    // @description * `textSize`:`"5em"`
+    //
+    // @description **Return:**
+    // @return {string}
+    // @description `string` The string wrapped within the `<size>` tag
+    // @description ---
+    //
+    // @description **Links:**
+    // @description - [Text Mesh Pro: Font Size](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextSize.html)	
+    // @description ---	
+    //
+    // @description **Author:** Svarii
+    // @description **Version:** 0.0.1
+    // @description ---
+    //
+    //  @example newString = "Hello"
+    //  @example 
+    //  @example result = newString.size
+    //  @example 
+    //  print(result); // Output: <size="5em">Hello </size>
+string.size = function(textSize = "5em")
+    return "<size=" + locals.textSize + ">" + self + "</size>"
+end function

@@ -1,0 +1,21 @@
+
+
+    //  **Description:**
+//  Computes the linear interpolation (lerp) between two numbers.
+//  @description Calculates an intermediate value between a start and an end number based on a provided interpolation factor.
+//  @param {number} min - The starting value.
+//  @param {number} max - The ending value.
+//  @param {number} offset - The interpolation factor where 0 returns start, 1 returns end, and values in between yield a proportional blend.
+//  @return {number} - The interpolated value.
+//  @example min = 10
+//  @example max = 20
+//  @example offset = 0.5
+//  @example result = lerp(min, max, offset);
+//  @example print(result); // Output: 15
+    number.lerp = function(min, max, offset)
+        if locals.offset > 1 then locals.offset = 1
+        if locals.offset < 0 then locals.offset = 0
+        locals.difference = locals.max - locals.min
+        locals.scaled_difference = locals.offset * locals.difference
+        return locals.min + locals.scaled_difference
+    end function

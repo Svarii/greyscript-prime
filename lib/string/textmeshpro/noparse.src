@@ -1,0 +1,29 @@
+// Applies noparse tag to the string
+    // @description **Description:**
+    // @description Modifies a text string by wraping it within the noparse tag
+    // @description ---
+    //
+    // @description **Parameters:**
+    // @description * `none`
+    //
+    // @description **Return:**
+    // @return {string}
+    // @description `string` The string value wrapped within the `<noparse>` tag
+    // @description ---
+    //
+    // @description **Links:**
+    // @description - [Text Mesh Pro: Rich Text Noparse](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextNoParse.html)	
+    // @description ---	
+    //
+    // @description **Author:** Svarii
+    // @description **Version:** 0.0.1
+    // @description ---
+    //
+    //  @example newString = "Hello"
+    //  @example 
+    //  @example result = newString.noparse
+    //  @example 
+    //  print(result); // Output: <noparse>Hello</noparse>     
+string.noparse = function()
+    return "<noparse>" + self + "</noparse>"
+end function  

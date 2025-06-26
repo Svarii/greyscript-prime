@@ -1,0 +1,40 @@
+// Look for a file
+// @description **Description:**
+// @description Check to see if the specified file exists
+// @description ---
+//
+// @description **Parameters:**
+// @param {string} filePath
+// @description - `filePath`:`<string>`
+// @param {string} `fileName`:`<string>`
+// @description - `fileName`:`<string>`
+//
+// @description **Parameter Defaults:**
+// @description - `none`
+//
+// @description **Return:**
+// @return {boolean}
+// @description `boolean`:`true`|`false`
+// @description ---
+//    
+// @description **Author:** Svarii
+// @description **Version:** 0.0.1
+// @description ---
+//
+// @description ***footnotes***   
+// @description Parameters are not checked for validity   
+// @description ---        
+//
+// @example
+// file_exists("/DatabaseDir", "addressData.db") // return true if found, otherwise false
+// @description ---  		
+	file_exists = function(filePath, fileName)
+		locals.hostComputer = get_shell.host_computer
+		locals.fileLocation = locals.filePath + "/" + locals.fileName
+		locals.fileObj = locals.hostComputer.File(locals.fileLocation)
+		if not locals.fileObj then
+			return false
+		else
+			return true
+		end if		
+	end function

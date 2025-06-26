@@ -1,0 +1,28 @@
+     
+
+
+        //  **Description:**
+        //  Remove the first character of the given text.
+        //  @return {string}
+        //  @example newString = "Hello"
+        //  @example    
+        //  @example result = newString.remove_char_first
+        //  @example          
+        //  print(result); // Outputs: ello
+    string.remove_char_first = function()
+        return slice(self, 1, (self.len))
+    end function
+
+
+    //@name remove_char_first
+        //  *
+        //  * @uml
+        //  * @startuml
+        //  * entity StringObject
+        //  * control ".remove_char_first" as remove_char_first
+        //  * StringObject -> remove_char_first : string
+        //  * remove_char_first -> StringObject : tring
+        //  * footer
+        //  * string.remove_char_first
+        //  * endfooter 
+        //  * @enduml       

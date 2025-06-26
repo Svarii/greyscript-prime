@@ -1,0 +1,33 @@
+// Applies mark tag to the string
+    // @description **Description:**
+    // @description Modifies a text string by wraping it within the mspace tag
+    // @description ---
+    //
+    // @description **Parameters:**
+    // @param {string} [color]
+    // @description - `monospace`:`string` | `Accepted values`: `em`, `px`, `%`
+    //
+    // @description **Parameter Defaults:**
+    // @description - `monospace`:`2.75em`
+    //
+    // @description **Return:**
+    // @return {string}
+    // @description `string` The string value wrapped within the `<mspace>` tag
+    // @description ---
+    //
+    // @description **Links:**
+    // @description - [Text Mesh Pro: Rich Text mark](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextMonospace.html)	
+    // @description ---	
+    //
+    // @description **Author:** Svarii
+    // @description **Version:** 0.0.1
+    // @description ---
+    //
+    //  @example newString = "Hello"
+    //  @example 
+    //  @example result = newString.mspace
+    //  @example 
+    //  print(result); // Outputs: <mspace="2.75em">Hello</mspace>     
+string.mspace = function(monospace = "2.75em")
+    return "<mspace=" + locals.monospace + ">" + self + "</mspace>"
+end function   

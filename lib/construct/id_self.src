@@ -1,0 +1,65 @@
+// Generate idSelf Object
+	// @description **Description:**
+	// Generate an object that contains basic environment information
+	// @description ---
+	//
+	// @description **Parameters:**
+	// @description - none 
+	// @description ---
+	//
+	// @description **Return:**
+	// @return {map<string,maps>} - System Object {.shell and .computer}
+	// @description `computerStatus`:`<maps><string>` computerStatus Object
+	// @description - `.compInfo` - computerInformation Object
+	// @description - - `.name`
+	// @description - - `.home`
+	// @description - - `.gateway`
+	// @description - - `.has_internet`
+	// @description - `.ipInfo` - ipInformation Object
+	// @description - - `.local`
+	// @description - - `.public`
+	// @description ---   
+	//    
+	//  @example iScan = new idSelf
+	//  @example print typeof(iScan)  //Output: idSelf
+	//  @example 
+	//  @example	print iScan.name  //Output: The name of the computer
+	//  @example	print iScan.has_internet  //Outputs: boolean 1 or 0
+id_self = function()
+	locals.localRouter = get_router
+        if not typeof(locals.localRouter) == "router" then return "Failed to fetch local router object."
+	locals.localComputer = get_shell.host_computer
+        if not typeof(locals.localComputer) == "computer" then return "Failed to fetch local computer object."
+	locals.ipInformation = {"classID": "ipInformation", "local": locals.localComputer.local_ip, "public": locals.localComputer.public_ip, "gateway":locals.localComputer.network_gateway}
+	locals.ipScan = locals.ipInformation
+	locals.ComputerInformation = {"classID": "computerInformation","name":locals.localComputer.get_name, "home":home_dir, "location":program_path, "path":current_path, "user":active_user, "has_internet":locals.localComputer.is_network_active}
+	locals.computerInfo = locals.ComputerInformation
+	locals.currentStatus = {"classID":"currentStatus", "ipInfo":locals.ipScan, "compInfo":locals.computerInfo}
+	locals.currentStatus.classID = "currentStatus"
+	return locals.currentStatus
+end function
+	// @startuml
+	// title <color:purple>currentStatus Class Diagram</color>
+	// 
+	// class currentStatus {
+	//   .. <color:blue>.compInfo</color> ..
+	//   + .name : string
+	//   + .home : string
+	//   + .location : string
+	//   + .path : string
+	//   + .user : string
+	//   + .has_internet : boolean
+	// 
+	//   .. <color:blue>.ipInfo</color> ..
+	//   + local : string
+	//   + public : string
+	//   + gateway : string
+	// }
+	// 
+	// note right of currentStatus
+	//   * Pulls basic information
+	//      on the immediate environment
+	//   * Populates currentStatus Object
+	// end note
+	// 
+	// @enduml

@@ -1,0 +1,51 @@
+
+
+
+// Check if object matches specified type
+// @description **Description:**
+// @description Check if the object passed is of the specified type and return a boolean answer
+// @description ---
+//
+// @description **Parameters:**
+// @param {any} object - The name of the library to load.
+// @description `object`:`any`
+// @param {string} objectType - The type expected
+// @description `objectType`:`string`
+// @description ---
+//
+// @description **Default Parameters:**
+// @description - none
+// @description ---
+//
+// @description **Links:**
+// @description [typeof Documentation](https://documentation.greyscript.org/#GENERAL_TYPEOF) List of standard object types
+// @description ---
+//
+// @description **Return:**
+// @return {boolean} 
+// @description `boolean`:`true`|`false` Whether or not the testObject was null
+// @description ---   
+//    
+// @description **Author:** Svarii
+// @description **Version:** 0.0.1
+// @description ---    
+//
+// @example
+// print is_typeof(cryptoLibObject, "cryptoLib")  //Output: true
+// @example
+// print is_typeof(metaxploitLibObject, "metaxploitLib") //Output: true
+// @example
+// print is_typeof(metaxploitLibObject, "cryptoLib") //Output: false
+	is_typeof = function(object, objectType)
+			if not typeof(locals.object) == locals.objectType then return false
+	end function
+// @startuml
+// start
+// if (<color:blue>is typeof(object) not equal to objectType?</color>) then (<color:red>Yes</color>)
+//   :<color:purple>return false</color>;
+//   stop
+// else (<color:green>No</color>)
+//   :<color:purple>return true</color>;
+//   stop
+// endif
+// @enduml	
