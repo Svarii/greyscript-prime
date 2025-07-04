@@ -20,7 +20,7 @@
 	// @description - - `.public`
 	// @description ---   
 	//    
-	//  @example iScan = new idSelf
+	//  @example iScan = new id_self
 	//  @example print typeof(iScan)  //Output: idSelf
 	//  @example 
 	//  @example	print iScan.name  //Output: The name of the computer
