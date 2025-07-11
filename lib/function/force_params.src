@@ -21,10 +21,6 @@
 // @description **Author:** Svarii
 // @description **Version:** 0.0.1
 // @description ---    
-//
-// @example
-// file_new("/DatabaseDir", "addressData.db") //Creates a file at the specified location
-// @description ---  	
 	force_params = function(usage, minReqParams)
 		if locals.params.len < 1 then exit locals.usage
 		if locals.params[0] == "-h" or locals.params[0] == "--help" then exit locals.usage
@@ -49,5 +45,3 @@
 // endif
 // stop
 // @enduml
-
-grapi
