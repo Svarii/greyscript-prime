@@ -2283,8 +2283,8 @@ Logs into the mail account and fetches inbox messages.
 
 | Parameter     | Default             |
 |---------------|---------------------|
-| `mailPass`    | `null`              |
-| `mailAddress` | `user_mail_address` |
+| `mailAddress` | _(Optional)_ `user_mail_address` |
+| `mailPass`    | _(Optional)_ `null`              |
 
 
 ### 🔁 Return  

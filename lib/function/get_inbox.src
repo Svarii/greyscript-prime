@@ -23,9 +23,9 @@
 // @description ---
 //
 // @example
-// inbox = get_inbox("mypassword","user@example.com")
+// inbox = get_inbox("user@example.com", "mypassword",)
 // print(inbox)
-    get_inbox = function(mailPass = null, mailAddress = user_mail_address)
+    get_inbox = function(mailAddress = user_mail_address, mailPass = null)
         if mailPass == null then return null
         locals.metaMail = mail_login(locals.mailAddress, locals.mailPass)
 		return metaMail.fetch
