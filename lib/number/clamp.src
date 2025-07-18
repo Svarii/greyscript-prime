@@ -35,19 +35,19 @@ number.clamp = function(min, max)
             if self > locals.max then return locals.max
             return self
 end function
-	// @startuml
-	// title <color:purple>number.clamp Method Diagram</color>
-	// 
-	// class NumberObject {
-	//   + value : number
-	//   + clamp(min: number, max: number) : number
-	// }
-	// 
-	// note right of NumberObject
-	//   The clamp method limits the value to a given range.
-	//   For example:
-	//     • 7.clamp(2,6) returns 6 (upper bound enforced)
-	//     • 1.clamp(2,6) returns 2 (lower bound enforced)
-	// end note
-	// 
-	// @enduml
+// @startuml
+// title <color:purple>number.clamp Method Diagram</color>
+//
+// class NumberObject {
+//   + value : number
+//   + clamp(min: number, max: number) : number
+// }
+//
+// note bottom of NumberObject
+//   Limits the object's value within the specified range.
+//   Usage examples:
+//     • 7.clamp(2, 6) → 6  (value exceeds max; clamped to 6)
+//     • 1.clamp(2, 6) → 2  (value below min; clamped to 2)
+// end note
+//
+// @enduml

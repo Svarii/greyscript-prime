@@ -39,53 +39,55 @@ Modifies a text string to wrap it in the `<align>` tag.
 |-------------|----------|-----------------------------------------------------------------------------|
 | `alignment` | string   | Accepted values: `left`, `center`, `right`, `justified`, `flush`            |
 | `closeTag`  | boolean  | Whether to close the tag with a matching `</align>`; accepted: `true/false` |
----
-### 🧷 Default Values
+
+#### ⚙️ Defaults
 | Parameter   | Default Value |
 |-------------|----------------|
 | `alignment` | `"center"`     |
 | `closeTag`  | `true`         |
----
+
 ### 🔁 Return
 `string` — the string value embedded in (or preceded by) the `<align>` tag.
 
 ---
 
 <details>
-<summary>📃 Author & Version</summary>
-| Author  | Version |
-|---------|---------|
-| Svarii  | 0.0.1   |
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1  
+
 </details>
 
 ---
 
-### 💡 Example
+### 💡 Examples
 ```greyscript
 newString = "Hello"
+    result = newString.align("center")
+    print result 
 
-result = newString.align("center")
-print result 
 // Output: <align="center">Hello</align>
+```
+```greyscript
+newString = "Hello"
+    result = newString.align("center", false)
+    print result 
 
-result = newString.align("center", false)
-print result 
 // Output: <align="center">Hello
 ```
+
 ---
-
-
-
 
 #### 🔗 Links
-[Text Mesh Pro: Rich Text Alignment](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextAlignment.html)
----
-#### 📝 Footnotes
+* [Text Mesh Pro: Rich Text Alignment](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextAlignment.html)
 
-- Parameters are **not validated**.
-  - `alignment` will not reject invalid values → **Return**: `string<withParseIssues>`
-  - `closeTag` will not reject invalid values → **Return**: `null`
-- If all parameters are invalid → **Return**: `null`
+#### 🧠 Notes
+
+- ⚠️ Parameters are **not validated**.
+  - ⚠️ `alignment` will not reject invalid values → **Return**: `string<withParseIssues>`
+  - ⚠️ `closeTag` will not reject invalid values → **Return**: `null`
+- 🛈 If all parameters are invalid → **Return**: `null`
 ---
 
 ## alpha
@@ -100,41 +102,50 @@ Modifies a text string and prepends it with the `<alpha>` tag.
 |--------------|--------|------------------------------------------------------------------|
 | `hexOpacity` | string | Accepted values: 2-digit HEX value preceded by `#` (e.g., `#4C`) |
 
-### 🧷 Default Values
+#### ⚙️ Defaults
 | Parameter    | Default Value |
 |--------------|----------------|
 | `hexOpacity` | `#FF`          |
----
+
 ### 🔁 Return
 `string` — the string value preceded by the `<alpha>` tag.
+
 ---
-### ✍️ Author
-**Svarii**
+
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1  
+
+</details>
+
 ---
-### 📦 Version
-`0.0.1`
----
+
 ### 💡 Example
 ```greyscript
 newString = "Hello"
+    result = newString.alpha("#4C")
+    print(result)
 
-result = newString.alpha("#4C")
-print(result)
 // Output: <alpha=#4C>Hello
+```
+```greyscript
+newString = "Hello"
+    result = newString.alpha
+    print(result)
 
-result = newString.alpha
-print(result)
 // Output: <alpha=#FF>Hello
 ```
 #### 🔗 Links
-[Text Mesh Pro: Rich Text Opacity](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextOpacity.html)
+* [Text Mesh Pro: Rich Text Opacity](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextOpacity.html)
 
-#### 📝 Footnotes
+#### 🧠 Notes
 
-- Parameters are **not validated**.
-  - `hexOpacity` will not reject invalid values → **Return**: `string<withParseIssues>`
-- This tag does **not** apply a closing tag; it affects **all text that follows**
-- If no parameter is passed, it applies default opacity `#FF` (fully opaque)
+- ⚠️Parameters are **not validated**.
+  - ⚠️`hexOpacity` will not reject invalid values → **Return**: `string<withParseIssues>`
+- 🛈 This tag does **not** apply a closing tag; it affects **all text that follows**
+- 🛈 If no parameter is passed, it applies default opacity `#FF` (fully opaque)
 
 ---
 
@@ -142,19 +153,30 @@ print(result)
 ### 📝 Description
 Modifies a text string and wraps it within the `<b>` tag.  
 Used to apply bold styling in Text Mesh Pro.
+
 ---
-### 🧮 Parameters
-- None
----
+
+### ➖ Parameters  
+| Parameter | Default Value |
+|-----------|---------------|
+| *(None)*  | *(None)*      |
+
+
 ### 🔁 Return
 `string` — the string value embedded in the `<b>` tag.
+
 ---
-### ✍️ Author
-**Svarii**
+
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1  
+
+</details>
+
 ---
-### 📦 Version
-`0.0.1`
----
+
 ### 💡 Example
 ```greyscript
 newString = "Hello"
@@ -164,7 +186,7 @@ print(result)
 // Output: <b>Hello</b>
 ```
 #### 🔗 Links
-[Text Mesh Pro: Rich Text Bold](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextBoldItalic.html)
+* [Text Mesh Pro: Rich Text Bold](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextBoldItalic.html)
 
 ---
 
@@ -181,6 +203,11 @@ Used to apply a specified color to the string, supporting both hex formats and s
 | Name         | Type   | Description                                                                 |
 |--------------|--------|-----------------------------------------------------------------------------|
 | `colorValue` | string | The desired color in hex format: `#RRGGBB`, `#RRGGBBAA`, or standard HTML color name (e.g., `"blue"`, `"Aquamarine"`) |
+#### 🚫 Defaults
+
+| Parameter | Default Value |
+|-----------|---------------|
+| *colorValue*  | *(None)*      |
 
 ---
 
@@ -190,14 +217,13 @@ Used to apply a specified color to the string, supporting both hex formats and s
 ---
 
 <details>
-<summary><strong>About</strong></summary>
+<summary>📃 About</summary>
 
-### ✍️ Author
-**Svarii**
+- **Author:** Svarii  
+- **Version:** 0.0.1  
 
-### 📦 Version
-`0.0.1`
 </details>
+
 ---
 
 ### 💡 Example
@@ -245,21 +271,24 @@ Used to control character spacing in text renderers such as Text Mesh Pro.
 | `charSpacing`| string  | The amount of spacing to apply, e.g. `"1em"` or `"5px"`                             |
 | `closeTag`   | boolean | Whether to close the tag with `</cspace>` — accepted values: `true` or `false`      |
 
----
-
+#### ⚙️ Defaults
+| Parameter    | Default Value |
+|--------------|----------------|
+| `charSpacing` | `1em`          |
+| `closeTag` | `true`          |
 
 ### 🔁 Return
 `string` — The string value wrapped within the `<cspace>` tag.
 
 ---
 
-### ✍️ Author
-**Svarii**
+<details>
+<summary>📃 About</summary>
 
----
+- **Author:** Svarii  
+- **Version:** 0.0.1  
 
-### 📦 Version
-`0.0.1`
+</details>
 
 ---
 
@@ -275,9 +304,8 @@ print result
 #### 🔗 Links
 - [Text Mesh Pro: Rich Text Character Spacing](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextCharacterSpacing.html)
 
-#### 🦶 Footnotes
-- Accepts pixel or font unit values (e.g., `px`, `em`)
-- Tag will not be closed if `closeTag = false`
+#### 🧠 Notes
+- Accepts pixel font unit  or percentage values (e.g., `px`, `em`, `%`)
 
 ---
 
@@ -297,8 +325,6 @@ Modifies a text string to wrap it in the `<indent>` tag for use with supported r
 | `indentPercent` | string   | Optional. Accepted input: `em`, `px`, or `%` units.                         |
 | `closeTag`     | boolean  | Optional. Whether to append a closing `</indent>` tag. Accepted: `true` or `false`. |
 
----
-
 #### ⚙️ Defaults
 
 | Parameter       | Default |
@@ -306,48 +332,48 @@ Modifies a text string to wrap it in the `<indent>` tag for use with supported r
 | `indentPercent` | `15%`   |
 | `closeTag`      | `true`  |
 
----
-
 ### 🔁 Return
 `string` — the string value embedded in (or appended to) the `<indent>` tag.
 
 ---
 
-### ✍️ Author
-**Svarii**
+<details>
+<summary>📃 About</summary>
 
----
+- **Author:** Svarii  
+- **Version:** 0.0.1  
 
-### 📦 Version
-`0.0.1`
+</details>
 
 ---
 
 ### 💡 Example
 ```greyscript
 newString = "Hello"
+    result = newString.indent
+    print(result)
 
-result = newString.indent
-print(result)
 // Outputs: <indent=15%>Hello</indent>
+```
+```greyscript
+newString = "Hello"
+    result = newString.indent("3em")
+    print(result)
 
-result = newString.indent("3em")
-print(result)
 // Outputs: <indent=3em>Hello</indent>
+```
+```greyscript
+newString = "Hello"
+    result = newString.indent("25px", false)
+    print(result)
 
-result = newString.indent("25px", false)
-print(result)
 // Outputs: <indent=25px>Hello
 ```
 
----
-
-### 🔗 Links
+#### 🔗 Links
 - [Text Mesh Pro: Rich Text Indentation](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextIndentation.html)
 
----
-
-### 🦶 Footnotes
+#### 🧠 Notes
 - Parameters are not checked for validity.
 - `indentPercent` will not reject invalid values → **Return:** `string<withParseIssues>`
 - `closeTag` will not reject invalid values → **Return:** `null`
@@ -362,25 +388,23 @@ Modifies a text string by wrapping it within the `<i>` tag.
 
 ---
 
-### 🧮 Parameters
-
-| `none` |
-|--------|
-
----
+### ➖ Parameters  
+| Parameter | Default Value |
+|-----------|---------------|
+| *(None)*  | *(None)*      |
 
 ### 🔁 Return
 `string` — The string value wrapped within the `<i>` tag.
 
 ---
 
-### ✍️ Author
+<details>
+<summary>📃 About</summary>
 
-| **`Svarii`** |
-|--------|
-### 📦 Version
-| `0.0.1` |
-|--------|
+- **Author:** Svarii  
+- **Version:** 0.0.1  
+
+</details>
 
 ---
 
@@ -411,8 +435,6 @@ Modifies a text string to wrap it in the `<line-indent>` tag.
 | `indentPercent` | string   | Optional. Accepted input: `em`, `px`, or `%`.       |
 | `closeTag`     | boolean  | Optional. Whether to append a closing `</line-indent>` tag. Accepted: `true` or `false`. |
 
----
-
 #### ⚙️ Defaults
 
 | Parameter       | Default |
@@ -420,39 +442,41 @@ Modifies a text string to wrap it in the `<line-indent>` tag.
 | `indentPercent` | `15%`   |
 | `closeTag`      | `true`  |
 
----
-
 ### 🔁 Return
 `string` — The string value embedded in (or appended to) the `<line-indent>` tag.
 
 ---
 
-### ✍️ Author
+<details>
+<summary>📃 About</summary>
 
-| **`Svarii`** |
-|--------------|
+- **Author:** Svarii  
+- **Version:** 0.0.1  
 
-### 📦 Version
-
-| `0.0.1` |
-|---------|
+</details>
 
 ---
 
 ### 💡 Example
 ```greyscript
 newString = "Hello"
+    result = newString.line-indent
+    print(result)
 
-result = newString.line-indent
-print(result)
 // Outputs: <line-indent=15%>Hello</line-indent>
+```
+```greyscript
+newString = "Hello"
+    result = newString.line-indent("3em")
+    print(result)
 
-result = newString.line-indent("3em")
-print(result)
 // Outputs: <line-indent=3em>Hello</line-indent>
+```
+```greyscript
+newString = "Hello"
+    result = newString.line-indent("25px", false)
+    print(result)
 
-result = newString.line-indent("25px", false)
-print(result)
 // Outputs: <line-indent=25px>Hello
 ```
 
@@ -463,10 +487,10 @@ Modifies a text string by wrapping it within the `<lowercase>` tag.
 
 ---
 
-### 🧮 Parameters
-
-| `none` |
-|--------|
+### ➖ Parameters  
+| Parameter | Default Value |
+|-----------|---------------|
+| *(None)*  | *(None)*      |
 
 ---
 
@@ -475,15 +499,13 @@ Modifies a text string by wrapping it within the `<lowercase>` tag.
 
 ---
 
-### ✍️ Author
+<details>
+<summary>📃 About</summary>
 
-| **`Svarii`** |
-|--------------|
+- **Author:** Svarii  
+- **Version:** 0.0.1  
 
-### 📦 Version
-
-| `0.0.1` |
-|---------|
+</details>
 
 ---
 
@@ -531,15 +553,13 @@ Modifies a text string by wrapping it within the `<margin>` tag.
 
 ---
 
-### ✍️ Author
+<details>
+<summary>📃 About</summary>
 
-| **`Svarii`** |
-|--------------|
+- **Author:** Svarii  
+- **Version:** 0.0.1  
 
-### 📦 Version
-
-| `0.0.1` |
-|---------|
+</details>
 
 ---
 
@@ -584,15 +604,13 @@ Modifies a text string by wrapping it within the `<mark>` tag.
 
 ---
 
-### ✍️ Author
+<details>
+<summary>📃 About</summary>
 
-| **`Svarii`** |
-|--------------|
+- **Author:** Svarii  
+- **Version:** 0.0.1  
 
-### 📦 Version
-
-| `0.0.1` |
-|---------|
+</details>
 
 ---
 
@@ -638,15 +656,13 @@ Modifies a text string by wrapping it within the `<mspace>` tag.
 
 ---
 
-### ✍️ Author
+<details>
+<summary>📃 About</summary>
 
-| **`Svarii`** |
-|--------------|
+- **Author:** Svarii  
+- **Version:** 0.0.1  
 
-### 📦 Version
-
-| `0.0.1` |
-|---------|
+</details>
 
 ---
 
@@ -672,10 +688,10 @@ Modifies a text string by wrapping it within the `<nobr>` tag.
 
 ---
 
-### 🧮 Parameters
-
-| `none` |
-|--------|
+### ➖ Parameters  
+| Parameter | Default Value |
+|-----------|---------------|
+| *(None)*  | *(None)*      |
 
 ---
 
@@ -684,15 +700,13 @@ Modifies a text string by wrapping it within the `<nobr>` tag.
 
 ---
 
-### ✍️ Author
+<details>
+<summary>📃 About</summary>
 
-| **`Svarii`** |
-|--------------|
+- **Author:** Svarii  
+- **Version:** 0.0.1  
 
-### 📦 Version
-
-| `0.0.1` |
-|---------|
+</details>
 
 ---
 
@@ -716,10 +730,10 @@ Modifies a text string by wrapping it within the `<noparse>` tag.
 
 ---
 
-### 🧮 Parameters
-
-| `none` |
-|--------|
+### ➖ Parameters  
+| Parameter | Default Value |
+|-----------|---------------|
+| *(None)*  | *(None)*      |
 
 ---
 
@@ -728,15 +742,13 @@ Modifies a text string by wrapping it within the `<noparse>` tag.
 
 ---
 
-### ✍️ Author
+<details>
+<summary>📃 About</summary>
 
-| **`Svarii`** |
-|--------------|
+- **Author:** Svarii  
+- **Version:** 0.0.1  
 
-### 📦 Version
-
-| `0.0.1` |
-|---------|
+</details>
 
 ---
 
@@ -761,10 +773,10 @@ Modifies a text string by appending the `<page>` tag to the end.
 
 ---
 
-### 🧮 Parameters
-
-| `none` |
-|--------|
+### ➖ Parameters  
+| Parameter | Default Value |
+|-----------|---------------|
+| *(None)*  | *(None)*      |
 
 ---
 
@@ -773,15 +785,13 @@ Modifies a text string by appending the `<page>` tag to the end.
 
 ---
 
-### ✍️ Author
+<details>
+<summary>📃 About</summary>
 
-| **`Svarii`** |
-|--------------|
+- **Author:** Svarii  
+- **Version:** 0.0.1  
 
-### 📦 Version
-
-| `0.0.1` |
-|---------|
+</details>
 
 ---
 
@@ -813,7 +823,7 @@ Modifies a text string by prepending it with the `<pos>` tag.
 
 ---
 
-### ⚙️ Defaults
+#### ⚙️ Defaults
 
 | Parameter  | Default |
 |------------|---------|
@@ -826,15 +836,13 @@ Modifies a text string by prepending it with the `<pos>` tag.
 
 ---
 
-### ✍️ Author
+<details>
+<summary>📃 About</summary>
 
-| **`Svarii`** |
-|--------------|
+- **Author:** Svarii  
+- **Version:** 0.0.1  
 
-### 📦 Version
-
-| `0.0.1` |
-|---------|
+</details>
 
 ---
 
@@ -863,7 +871,7 @@ Modifies a text string by wrapping it within the `<rotate>` tag.
 
 ---
 
-### ⚙️ Defaults
+#### ⚙️ Defaults
 
 | Parameter         | Default |
 |-------------------|---------|
@@ -876,15 +884,13 @@ Modifies a text string by wrapping it within the `<rotate>` tag.
 
 ---
 
-### ✍️ Author
+<details>
+<summary>📃 About</summary>
 
-| **`Svarii`** |
-|--------------|
+- **Author:** Svarii  
+- **Version:** 0.0.1  
 
-### 📦 Version
-
-| `0.0.1` |
-|---------|
+</details>
 
 ---
 
@@ -916,7 +922,7 @@ Modifies a text string by wrapping it within the `<size>` tag.
 
 ---
 
-### ⚙️ Defaults
+#### ⚙️ Defaults
 
 | Parameter  | Default |
 |------------|---------|
@@ -929,15 +935,13 @@ Modifies a text string by wrapping it within the `<size>` tag.
 
 ---
 
-### ✍️ Author
+<details>
+<summary>📃 About</summary>
 
-| **`Svarii`** |
-|--------------|
+- **Author:** Svarii  
+- **Version:** 0.0.1  
 
-### 📦 Version
-
-| `0.0.1` |
-|---------|
+</details>
 
 ---
 
@@ -961,10 +965,10 @@ Modifies a text string by wrapping it within the `<s>` tag.
 
 ---
 
-### 🧮 Parameters
-
-| `none` |
-|--------|
+### ➖ Parameters  
+| Parameter | Default Value |
+|-----------|---------------|
+| *(None)*  | *(None)*      |
 
 ---
 
@@ -973,15 +977,13 @@ Modifies a text string by wrapping it within the `<s>` tag.
 
 ---
 
-### ✍️ Author
+<details>
+<summary>📃 About</summary>
 
-| **`Svarii`** |
-|--------------|
+- **Author:** Svarii  
+- **Version:** 0.0.1  
 
-### 📦 Version
-
-| `0.0.1` |
-|---------|
+</details>
 
 ---
 
@@ -1006,11 +1008,10 @@ Modifies a text string by wrapping it within the `<sub>` tag.
 
 ---
 
-### 🧮 Parameters
-
-| `none` |
-|--------|
-
+### ➖ Parameters  
+| Parameter | Default Value |
+|-----------|---------------|
+| *(None)*  | *(None)*      |
 ---
 
 ### 🔁 Return
@@ -1018,15 +1019,13 @@ Modifies a text string by wrapping it within the `<sub>` tag.
 
 ---
 
-### ✍️ Author
+<details>
+<summary>📃 About</summary>
 
-| **`Svarii`** |
-|--------------|
+- **Author:** Svarii  
+- **Version:** 0.0.1  
 
-### 📦 Version
-
-| `0.0.1` |
-|---------|
+</details>
 
 ---
 
@@ -1051,10 +1050,10 @@ Modifies a text string by wrapping it within the `<sup>` tag.
 
 ---
 
-### 🧮 Parameters
-
-| `none` |
-|--------|
+### ➖ Parameters  
+| Parameter | Default Value |
+|-----------|---------------|
+| *(None)*  | *(None)*      |
 
 ---
 
@@ -1063,15 +1062,13 @@ Modifies a text string by wrapping it within the `<sup>` tag.
 
 ---
 
-### ✍️ Author
+<details>
+<summary>📃 About</summary>
 
-| **`Svarii`** |
-|--------------|
+- **Author:** Svarii  
+- **Version:** 0.0.1  
 
-### 📦 Version
-
-| `0.0.1` |
-|---------|
+</details>
 
 ---
 
@@ -1096,10 +1093,10 @@ Modifies a text string by wrapping it within the `<u>` tag.
 
 ---
 
-### 🧮 Parameters
-
-| `none` |
-|--------|
+### ➖ Parameters  
+| Parameter | Default Value |
+|-----------|---------------|
+| *(None)*  | *(None)*      |
 
 ---
 
@@ -1108,15 +1105,13 @@ Modifies a text string by wrapping it within the `<u>` tag.
 
 ---
 
-### ✍️ Author
+<details>
+<summary>📃 About</summary>
 
-| **`Svarii`** |
-|--------------|
+- **Author:** Svarii  
+- **Version:** 0.0.1  
 
-### 📦 Version
-
-| `0.0.1` |
-|---------|
+</details>
 
 ---
 
@@ -1141,10 +1136,10 @@ Modifies a text string by wrapping it within the `<uppercase>` tag.
 
 ---
 
-### 🧮 Parameters
-
-| `none` |
-|--------|
+### ➖ Parameters  
+| Parameter | Default Value |
+|-----------|---------------|
+| *(None)*  | *(None)*      |
 
 ---
 
@@ -1153,15 +1148,13 @@ Modifies a text string by wrapping it within the `<uppercase>` tag.
 
 ---
 
-### ✍️ Author
+<details>
+<summary>📃 About</summary>
 
-| **`Svarii`** |
-|--------------|
+- **Author:** Svarii  
+- **Version:** 0.0.1  
 
-### 📦 Version
-
-| `0.0.1` |
-|---------|
+</details>
 
 ---
 
@@ -1205,15 +1198,13 @@ Modifies a text string by wrapping it within the `<voffset>` tag.
 
 ---
 
-### ✍️ Author
+<details>
+<summary>📃 About</summary>
 
-| **`Svarii`** |
-|--------------|
+- **Author:** Svarii  
+- **Version:** 0.0.1  
 
-### 📦 Version
-
-| `0.0.1` |
-|---------|
+</details>
 
 ---
 
@@ -1255,15 +1246,13 @@ Modifies a text string by wrapping it within the `<width>` tag.
 
 ---
 
-### ✍️ Author
+<details>
+<summary>📃 About</summary>
 
-| **`Svarii`** |
-|--------------|
+- **Author:** Svarii  
+- **Version:** 0.0.1  
 
-### 📦 Version
-
-| `0.0.1` |
-|---------|
+</details>
 
 ---
 
@@ -1574,13 +1563,10 @@ Converts a boolean-like value (`true`, `false`, `1`, `0`) into a string: `"true"
 |-----------|--------|-------------------|
 | `boolVal` | flag   | A boolean or number (0 or 1) to be converted to a string. |
 
----
-
-#### ⚙️ Defaults
-
-_None_
-
----
+#### 🚫 Defaults
+| Parameter | Default Value |
+|-----------|---------------|
+| *colorValue*  | *(None)*  |
 
 ### 🔁 Return  
 `string` — Returns `"true"` or `"false"` if the value is valid. Returns `null` for invalid input.
@@ -1595,15 +1581,13 @@ _None_
 
 ---
 
-### ✍️ Author
+<details>
+<summary>📃 About</summary>
 
-| **`Svarii`** |
-|--------------|
+- **Author:** Svarii  
+- **Version:** 0.0.1  
 
-### 📦 Version
-
-| `0.0.1` |
-|---------|
+</details>
 
 ---
 
@@ -1647,15 +1631,12 @@ Returns `null` if no valid IP address is found.
 |---------------|--------|-------------------------------------|
 | `inputString` | string | The text string to search for an IP address. |
 
----
 
-#### ⚙️ Defaults
+#### 🚫 Defaults
+| Parameter | Default Value |
+|-----------|---------------|
+| *colorValue*  | *(None)*  |
 
-| Parameter     | Default |
-|---------------|---------|
-| _None_        |         |
-
----
 
 ### 🔁 Return  
 `string | null` — The first matching IPv4 address, or `null` if none is found.
@@ -1668,15 +1649,13 @@ Returns `null` if no valid IP address is found.
 
 ---
 
-### ✍️ Author
+<details>
+<summary>📃 About</summary>
 
-| **`Svarii`** |
-|--------------|
+- **Author:** Svarii  
+- **Version:** 0.0.1  
 
-### 📦 Version
-
-| `0.0.1` |
-|---------|
+</details>
 
 ---
 
@@ -1709,15 +1688,12 @@ Appends data to an existing file, or creates a new file if the file does not exi
 | `saveFile`  | string | Name of the file to append to. |
 | `newText`   | string | Text to append into the file.  |
 
----
 
-#### ⚙️ Defaults
+#### 🚫 Defaults
+| Parameter | Default Value |
+|-----------|---------------|
+| *colorValue*  | *(None)*  |
 
-| Parameter | Default |
-|-----------|---------|
-| _None_    |         |
-
----
 
 ### 🔁 Return  
 `void` — No return value.
@@ -1730,15 +1706,13 @@ Appends data to an existing file, or creates a new file if the file does not exi
 
 ---
 
-### ✍️ Author
+<details>
+<summary>📃 About</summary>
 
-| **`Svarii`** |
-|--------------|
+- **Author:** Svarii  
+- **Version:** 0.0.1  
 
-### 📦 Version
-
-| `0.0.1` |
-|---------|
+</details>
 
 ---
 
@@ -1765,15 +1739,12 @@ Delete a specified file if it has write permissions.
 | `filePath`  | string | Path to the directory containing the file. |
 | `fileName`  | string | Name of the file to delete.        |
 
----
 
-#### ⚙️ Defaults
+#### 🚫 Defaults
+| Parameter | Default Value |
+|-----------|---------------|
+| *colorValue*  | *(None)*  |
 
-| Parameter | Default |
-|-----------|---------|
-| _None_    |         |
-
----
 
 ### 🔁 Return  
 `boolean` — `true` if the file has write permission; `false` if not.  
@@ -1788,15 +1759,13 @@ Delete a specified file if it has write permissions.
 
 ---
 
-### ✍️ Author
+<details>
+<summary>📃 About</summary>
 
-| **`Svarii`** |
-|--------------|
+- **Author:** Svarii  
+- **Version:** 0.0.1  
 
-### 📦 Version
-
-| `0.0.1` |
-|---------|
+</details>
 
 ---
 
@@ -1822,15 +1791,12 @@ Check to see if the specified file exists.
 | `filePath`  | string | Path to the directory to search.   |
 | `fileName`  | string | Name of the file to check for.     |
 
----
 
-#### ⚙️ Defaults
+#### 🚫 Defaults
+| Parameter | Default Value |
+|-----------|---------------|
+| *colorValue*  | *(None)*  |
 
-| Parameter | Default |
-|-----------|---------|
-| _None_    |         |
-
----
 
 ### 🔁 Return  
 `boolean` — `true` if the file is found, otherwise `false`.
@@ -1842,15 +1808,13 @@ Check to see if the specified file exists.
 
 ---
 
-### ✍️ Author
+<details>
+<summary>📃 About</summary>
 
-| **`Svarii`** |
-|--------------|
+- **Author:** Svarii  
+- **Version:** 0.0.1  
 
-### 📦 Version
-
-| `0.0.1` |
-|---------|
+</details>
 
 ---
 
@@ -1876,15 +1840,11 @@ Create a new file at the specified path if it does not already exist.
 | `filePath`  | string | Path to the directory.          |
 | `fileName`  | string | Name of the new file to create. |
 
----
+#### 🚫 Defaults
+| Parameter | Default Value |
+|-----------|---------------|
+| *colorValue*  | *(None)*  |
 
-#### ⚙️ Defaults
-
-| Parameter | Default |
-|-----------|---------|
-| _None_    |         |
-
----
 
 ### 🔁 Return  
 `void` — This function does not return any value.
@@ -1897,15 +1857,13 @@ Create a new file at the specified path if it does not already exist.
 
 ---
 
-### ✍️ Author
+<details>
+<summary>📃 About</summary>
 
-| **`Svarii`** |
-|--------------|
+- **Author:** Svarii  
+- **Version:** 0.0.1  
 
-### 📦 Version
-
-| `0.0.1` |
-|---------|
+</details>
 
 ---
 
@@ -1930,15 +1888,12 @@ Specifies usage information and checks if the required number of parameters have
 | `usage`         | string | The usage string to display if validation fails. |
 | `minReqParams`  | number | Minimum number of required parameters.           |
 
----
 
-### ⚙️ Default Values
+#### 🚫 Defaults
+| Parameter | Default Value |
+|-----------|---------------|
+| *colorValue*  | *(None)*  |
 
-| Parameter       | Default |
-|-----------------|---------|
-| *(None)*        | *(None)*|
-
----
 
 ### 🔁 Return  
 `void` — This function does not return any value.  
@@ -1947,13 +1902,10 @@ Specifies usage information and checks if the required number of parameters have
 ---
 
 <details>
-<summary>📃 Author & Version</summary>
+<summary>📃 About</summary>
 
-#### ✍️ Author  
-**Svarii**
-
-#### 📦 Version  
-`0.0.1`
+- **Author:** Svarii  
+- **Version:** 0.0.1  
 
 </details>
 
@@ -1982,27 +1934,23 @@ Scan a library for vulnerable addresses.
 | `targetPort`       | number (optional)    | Optional target port number. Default: `0`. |
 
 
-#### ⚙️ Defaults
+#### 🚫 Defaults
+| Parameter | Default Value |
+|-----------|---------------|
+| *colorValue*  | *(None)*  |
 
-| Parameter      | Default |
-|----------------|---------|
-| `remoteTarget` | `false` |
-| `targetPort`   | `0`     |
-
----
 
 ### 🔁 Return  
 `list<string>` — List of vulnerable addresses found.
 
 ---
 
-
-
 <details>
-<summary>📃 Author & Version</summary>
-| Author  | Version |
-|---------|---------|
-| Svarii  | 0.0.1   |
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1  
+
 </details>
 
 ---
@@ -2030,7 +1978,6 @@ Calculates the recommended number of ACKs to collect based on signal strength.
 |-----------------|--------|----------------------------------|
 | `signalStrength` | number | Signal strength value (default is 1). |
 
----
 
 #### ⚙️ Defaults
 
@@ -2038,18 +1985,17 @@ Calculates the recommended number of ACKs to collect based on signal strength.
 |-----------------|---------|
 | `signalStrength` | `1`     |
 
----
 
 ### 🔁 Return  
 `number` — Recommended number of ACKs to collect.
 
 ---
 
-### ✍️ Author & 📦 Version  
-<details><summary>Click to expand</summary>
+<details>
+<summary>📃 About</summary>
 
-| **`Svarii`** | `0.0.1` |
-|--------------|---------|
+- **Author:** Svarii  
+- **Version:** 0.0.1  
 
 </details>
 
@@ -2074,19 +2020,17 @@ Logs into the mail account and fetches inbox messages.
 
 | Name         | Type   | Description                                                                 |
 |--------------|--------|-----------------------------------------------------------------------------|
-| `mailPass`   | string | **Required.** Password for the email account. If `null`, the function exits. |
+| `mailPass`   | string | *(Optional)* Password for the email account. |
 | `mailAddress`| string | *(Optional)* Email address to log in with. Defaults to `user_mail_address`. |
 
----
 
-### ⚙️ Default Values
+#### ⚙️ Defaults
 
 | Parameter     | Default             |
 |---------------|---------------------|
-| `mailAddress` | `user_mail_address` |
 | `mailPass`    | `null`              |
+| `mailAddress` | `user_mail_address` |
 
----
 
 ### 🔁 Return  
 `object` — Inbox messages fetched from the mail server.  
@@ -2095,13 +2039,10 @@ Logs into the mail account and fetches inbox messages.
 ---
 
 <details>
-<summary>📃 Author & Version</summary>
+<summary>📃 About</summary>
 
-#### ✍️ Author  
-**Svarii**
-
-#### 📦 Version  
-`0.0.1`
+- **Author:** Svarii  
+- **Version:** 0.0.1  
 
 </details>
 
@@ -2122,12 +2063,10 @@ print(inbox)
 ### 📝 Description  
 Generate a single random IP address.
 
----
 
 ### 🧮 Parameters  
 _None_
 
----
 
 ### 🔁 Return  
 `string` — Randomly generated IP Address.
@@ -2135,11 +2074,10 @@ _None_
 ---
 
 <details>
-<summary>📃 Author & Version</summary>
+<summary>📃 About</summary>
 
-| **Author** | **Version** |
-|------------|-------------|
-| `Svarii`   | `0.0.1`     |
+- **Author:** Svarii  
+- **Version:** 0.0.1  
 
 </details>
 
@@ -2166,12 +2104,10 @@ Return `true` if item is null, `false` otherwise.
 |-------------|------|-----------------------|
 | `testObject`| any  | The item to check     |
 
----
 
 #### ⚙️ Default Parameters  
 _None_
 
----
 
 ### 🔁 Return  
 `boolean` — `true` if null, otherwise `false`.
@@ -2179,11 +2115,10 @@ _None_
 ---
 
 <details>
-<summary>📃 Author & Version</summary>
+<summary>📃 About</summary>
 
-| **Author** | **Version** |
-|------------|-------------|
-| `Svarii`   | `0.0.1`     |
+- **Author:** Svarii  
+- **Version:** 0.0.1  
 
 </details>
 
@@ -2214,29 +2149,23 @@ Check if the object passed is of the specified type and return a boolean answer.
 | `testObject`| any    | The object to test     |
 | `objectType`| string | The expected identifier|
 
----
 
 #### ⚙️ Default Parameters  
 _None_
 
----
 
-### 🔗 Links  
-[typeof Documentation](https://documentation.greyscript.org/#GENERAL_TYPEOF) — List of standard object types.
-
----
 
 ### 🔁 Return  
 `boolean` — `true` if the object is of the specified type, otherwise `false`.
 
+
 ---
 
 <details>
-<summary>📃 Author & Version</summary>
+<summary>📃 About</summary>
 
-| **Author** | **Version** |
-|------------|-------------|
-| `Svarii`   | `0.0.1`     |
+- **Author:** Svarii  
+- **Version:** 0.0.1  
 
 </details>
 
@@ -2249,17 +2178,15 @@ print is_typeof(metaxploitLibObject, "MetaxploitLib") // Output: true
 print is_typeof(metaxploitLibObject, "cryptoLib")     // Output: false
 ```
 
+### 🔗 Links  
+* [typeof Documentation](https://documentation.greyscript.org/#GENERAL_TYPEOF) — List of standard object types.
+
 ---
 
 ## load_lib
 
 ### 📝 Description  
 Loads a library from the lib directory, optionally specifying directory and verifying type.
-
----
-
-### 🔗 Links  
-[Default type list](https://documentation.greyscript.org/#GENERAL_TYPEOF)
 
 ---
 
@@ -2271,26 +2198,25 @@ Loads a library from the lib directory, optionally specifying directory and veri
 | `libDir`  | string | *(optional)* Directory where the library is located (should not have trailing slash).       |
 | `libType` | string | *(optional)* Expected type of the library (case sensitive).                                |
 
----
+#### ⚙️ Defaults
+
+| Parameter | Default | Details |
+|-----------|---------|---------|
+| `libName` | `"metaxploit.so"`    | `libName` must be full filename including extension  |
+| `libDir`  | `"/lib"`    | `libDir` should not have trailing slash |
+| `libType` | `""`    | `libType` is case sensitive  |
+
 
 ### 🔁 Return  
 `objectLibrary` | `null` — Returns the loaded library object or `null` if not found or type mismatched.
 
 ---
 
-### 🧠 Notes  
-- `libName` must be full filename including extension  
-- `libDir` should not have trailing slash  
-- `libType` is case sensitive  
-
----
-
 <details>
-<summary>📃 Author & Version</summary>
+<summary>📃 About</summary>
 
-| **Author** | **Version** |
-|------------|-------------|
-| `Svarii`   | `0.0.1`     |
+- **Author:** Svarii  
+- **Version:** 0.0.1  
 
 </details>
 
@@ -2298,19 +2224,21 @@ Loads a library from the lib directory, optionally specifying directory and veri
 
 ### 💡 Examples
 ```greyscript
-lib = load_lib  
 // Loads "metaxploit.so" from "/lib" directory
-
-lib = load_lib("metaxploit.so")  
-// Loads a library without specifying type
-
-lib = load_lib("customLib.so", "/altLib")  
-// Loads a library from specified directory
-
-lib = load_lib("crypto.so", "/lib", "cryptoLib")  
-// Loads a library with specified type (returns null on type mismatch)
+lib = load_lib  
 ```
-
+```greyscript
+// Loads a library without specifying type
+lib = load_lib("metaxploit.so")  
+```
+```greyscript
+// Loads a library from specified directory
+lib = load_lib("customLib.so", "/altLib")  
+```
+```greyscript
+// Loads a library with specified type (returns null on type mismatch)
+lib = load_lib("crypto.so", "/lib", "cryptoLib")  
+```
 ---
 
 ## network_device_list
@@ -2327,16 +2255,14 @@ Pulls network device data from the host computer and returns a list of network d
 | `user`   | string | *(Optional)* Username for access.      |
 | `pass`   | string | *(Optional)* Password for access.      |
 
----
 
-### ⚙️ Default Values
+#### ⚙️ Defaults
 
 | Parameter | Default |
 |-----------|---------|
 | `user`    | `""`    |
 | `pass`    | `""`    |
 
----
 
 ### 🔁 Return  
 `list<list<string>>` — A list of network device entries.  
@@ -2349,13 +2275,10 @@ Each sublist contains:
 ---
 
 <details>
-<summary>📃 Author & Version</summary>
+<summary>📃 About</summary>
 
-#### ✍️ Author  
-**Svarii**
-
-#### 📦 Version  
-`0.0.1`
+- **Author:** Svarii  
+- **Version:** 0.0.1  
 
 </details>
 
@@ -2386,15 +2309,12 @@ Each parsed message includes: `id`, `from`, `subject`, `body`.
 |--------------|---------------|----------------------------------|
 | `mailIDList` | list<string>  | A list of message IDs to parse.  |
 
----
-
-### 🧷 Default Values
+#### ➖ Defaults
 
 | Parameter | Default Value |
 |-----------|---------------|
 | *(None)*  | *(None)*      |
 
----
 
 ### 🔁 Return
 
@@ -2408,7 +2328,7 @@ Each parsed message includes: `id`, `from`, `subject`, `body`.
 ---
 
 <details>
-<summary>📃 Author & Version</summary>
+<summary>📃 About</summary>
 
 - **Author:** Svarii  
 - **Version:** 0.0.1  
@@ -2435,22 +2355,11 @@ Return a string with the name of the file that is running this script.
 
 ---
 
-### 🧮 Parameters
-
-| Name | Type   | Description                                         |
-|------|--------|-----------------------------------------------------|
-| `user` | string (optional) | The username to use for access                  |
-| `pass` | string (optional) | The password to use for access                  |
-
----
-
-### 🧷 Default Values
-
+### ➖ Parameters  
 | Parameter | Default Value |
 |-----------|---------------|
 | *(None)*  | *(None)*      |
 
----
 
 ### 🔁 Return
 
@@ -2459,7 +2368,7 @@ Return a string with the name of the file that is running this script.
 ---
 
 <details>
-<summary>📃 Author & Version</summary>
+<summary>📃 About</summary>
 
 - **Author:** Svarii  
 - **Version:** 0.0.1  
@@ -2490,15 +2399,13 @@ Split Unsafe Check Results into individual exploit result strings and return a l
 |---------------|--------|----------------------------------------------------------|
 | `scanResults` | string | Result from `fetch_exploit_requirements()` function.     |
 
----
 
-### 🧷 Default Values
+#### ➖ Defaults
 
 | Parameter | Default Value |
 |-----------|---------------|
 | *(None)*  | *(None)*      |
 
----
 
 ### 🔁 Return
 
@@ -2507,7 +2414,7 @@ Split Unsafe Check Results into individual exploit result strings and return a l
 ---
 
 <details>
-<summary>📃 Author & Version</summary>
+<summary>📃 About</summary>
 
 - **Author:** Svarii  
 - **Version:** 0.0.1  
@@ -2531,14 +2438,17 @@ unsafeCheckList = unsafe_check_list(fetch_exploit_requirements(exploitMem))
 ## report_string_construct__
 
 ### 📝 Description  
-Constructs and returns an object containing categorized status strings used for reporting various checks and statuses such as network devices, libraries, files, users, internet connection, and more.
+
+Constructs and returns an object containing categorized status strings
+
 
 ---
 
-### 🧮 Parameters  
-_None_
+### ➖ Parameters  
+| Parameter | Default Value |
+|-----------|---------------|
+| *(None)*  | *(None)*      |
 
----
 
 ### 🔁 Return  
 `object` — An object (`gstexts`) containing categorized status messages grouped by `fail`, `pass`, `action`, `info`, and `email` categories.
@@ -2547,7 +2457,7 @@ _None_
 
 
 
-### ⚙️ Structure Overview
+### 📝 Structure Overview
 
 | Category | Description                                |
 |----------|--------------------------------------------|
@@ -2559,32 +2469,26 @@ _None_
 
 ---
 
-### ✍️ Author
+<details>
+<summary>📃 About</summary>
 
-| **`Svarii`** |
-|--------------|
+- **Author:** Svarii  
+- **Version:** 0.0.1  
 
-### 📦 Version
-
-| `0.0.1` |
-|---------|
+</details>
 
 ---
 
-### 💡 Example  
+### 💡 Examples
 ```greyscript
-statusMessages = report_string_construct__()
-
-print(statusMessages.fail.network_devices_found)
-// Output: "No network devices found"
-
-print(statusMessages.pass.lib_found)
+statusMessage = report_string_construct__()
+print(statusMessage.pass.lib_found)
 // Output: "Library found"
-
-print(statusMessages.action.check_user_email)
+```
+```greyscript
+statusMessage = report_string_construct__()
+print(statusMessage.action.check_user_email)
 // Output: "Checking for email account..."
 ```
+
 ---
-
-
-

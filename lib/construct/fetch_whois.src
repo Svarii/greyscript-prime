@@ -40,7 +40,7 @@
 fetch_whois = function(routerPublicIPAddress)
 	if not is_lan_ip(locals.routerPublicIPAddress) == true then
 		if is_valid_ip(routerPublicIPAddress) then
-			locals.whoisInfo = {"classID":"whoisInfo", "admin":"", "domain":"", "email":"", "network":"", "phone":""}
+			locals.whoisInfo = {"classID":"whoisInfo", "admin":"", "domain":"", "email":"", "network":"", "phone":"", "error":null}
 			locals.what = split(whois(locals.routerPublicIPAddress), "\n")
 			locals.whoisInfo.domain = str(split(locals.what[0], ":")[1]).trim
 			locals.whoisInfo.admin = str(split(locals.what[1], ":")[1]).trim
@@ -57,33 +57,46 @@ fetch_whois = function(routerPublicIPAddress)
 	else
 		locals.whoisInfo = {"classID":"whoisInfo", "error":"Needs Public IP, Provided Local IP."}
 	end if
+	locals.whoisInfo.error = false
 	return locals.whoisInfo
 end function
-// @startyaml
-// <style>
-// yamlDiagram {
-//    highlight {
-//      BackGroundColor red
-//      FontColor white
-//      FontStyle bold
-//    }
+// @startuml
+// title <color:purple>fetch_whois Function Overview</color>
+//
+// class fetch_whois {
+//   .. <color:blue>Input</color> ..
+//   + routerPublicIPAddress : string
+//
+//   .. <color:blue>Return</color> ..
+//   + returns : whoisInfo
 // }
-// </style>
-// #highlight "whoisInfo" / "error"
 //
-// # whoisInfo Class Diagram
+// class whoisInfo {
+//   .. <color:blue>Standard Whois Fields</color> ..
+//   + admin : string
+//   + domain : string
+//   + email : string
+//   + phone : string
+//   + network : string
 //
-// whoisInfo:
-//     domain: "string"      # Domain value from WHOIS lookup
-//     admin: "string"       # Administrator info
-//     email: "string"       # Contact email
-//     phone: "string"       # Contact phone number
-//     network: "string"     # Network info (or "[ UNKNOWN ]")
-//     error: "string"       # Used to store errors on fail)
+//   .. <color:blue>Error Handling</color> ..
+//   + error : string
+// }
 //
-// # Note:
-// # WHOIS lookup parser.
-// # Parses domain, admin, email,
-// # phone & network info.
+// fetch_whois -right-> whoisInfo : creates instance of
 //
-// @endyaml
+// note bottom of whoisInfo
+//   * Contains IP registration and contact metadata
+//   * Fields populated from WHOIS lookup
+//   * On error, only `.error` is set
+// end note
+//
+// note bottom of fetch_whois
+//   * Validates that IP is public and well-formed
+//   * Rejects LAN addresses and malformed input
+//   * Uses `whois()` to extract structured details
+// end note
+//
+// @enduml
+
+
