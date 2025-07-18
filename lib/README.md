@@ -26,10 +26,12 @@ GreyScript Prime is an extension for **Grey Script** that adds additional method
 # stringMethods
 ![Static Badge](https://img.shields.io/badge/method-string-green)
 
+---
+
 ## align
 ### 📝 Description
 Modifies a text string to wrap it in the `<align>` tag.
-Used to visually align text using supported values for alignment. Useful for rendering formatted text in UI systems such as Text Mesh Pro.
+
 ---
 ### 🧮 Parameters
 
@@ -46,13 +48,18 @@ Used to visually align text using supported values for alignment. Useful for ren
 ---
 ### 🔁 Return
 `string` — the string value embedded in (or preceded by) the `<align>` tag.
+
 ---
-### ✍️ Author
-**Svarii**
+
+<details>
+<summary>📃 Author & Version</summary>
+| Author  | Version |
+|---------|---------|
+| Svarii  | 0.0.1   |
+</details>
+
 ---
-### 📦 Version
-`0.0.1`
----
+
 ### 💡 Example
 ```greyscript
 newString = "Hello"
@@ -83,15 +90,16 @@ print result
 
 ## alpha
 ### 📝 Description
-Modifies a text string and prepends it with the `<alpha>` tag.  
-Used to apply opacity using HEX-based transparency levels. Useful for controlling visual emphasis or layering in Text Mesh Pro rendering.
+Modifies a text string and prepends it with the `<alpha>` tag.
+
 ---
+
 ### 🧮 Parameters
 
 | Name         | Type   | Description                                                      |
 |--------------|--------|------------------------------------------------------------------|
 | `hexOpacity` | string | Accepted values: 2-digit HEX value preceded by `#` (e.g., `#4C`) |
----
+
 ### 🧷 Default Values
 | Parameter    | Default Value |
 |--------------|----------------|
@@ -1908,106 +1916,6 @@ file_new("/DatabaseDir", "addressData.db")
 ```
 ---
 
-## find_exploitable_addresses
-
-### 📝 Description  
-Scan a library for vulnerable addresses.
-
----
-
-### 🧮 Parameters
-
-| Name               | Type                 | Description                                |
-|--------------------|----------------------|--------------------------------------------|
-| `libLocation`      | string               | Remote IP address or local absolute file location. |
-| `metaxploitObject` | map<string, function> | Metaxploit library object.                  |
-| `remoteTarget`     | flag (optional)      | Optional flag indicating if the target is remote. Default: `false`. |
-| `targetPort`       | number (optional)    | Optional target port number. Default: `0`. |
-
-
-#### ⚙️ Defaults
-
-| Parameter      | Default |
-|----------------|---------|
-| `remoteTarget` | `false` |
-| `targetPort`   | `0`     |
-
----
-
-### 🔁 Return  
-`list<string>` — List of vulnerable addresses found.
-
----
-
-### 📃 Author & Version
-
-<details>
-<summary>Show Author & Version</summary>
-
-| Author  | Version |
-|---------|---------|
-| Svarii  | 0.0.1   |
-
-</details>
-
----
-
-### 💡 Example
-```greyscript
-libLocation = params[0]
-metax = include_lib("/lib/metaxploit.so")
-
-print find_exploitable_addresses(libLocation, metax)
-```
-
----
-
-## require_params
-
-### 📝 Description  
-Specifies usage information and the number of required parameters.
-
----
-
-### 🧮 Parameters
-
-| Name           | Type   | Description                       |
-|----------------|--------|---------------------------------|
-| `usage`        | string | The name or usage pattern of the library to load. |
-| `minReqParams` | number | The minimum number of required parameters.          |
-
----
-
-#### ⚙️ Defaults
-
-| Parameter | Default |
-|-----------|---------|
-| _None_    |         |
-
----
-
-### 🔁 Return  
-`void` — No return value.
-
----
-
-### ✍️ Author & 📦 Version  
-<details><summary>Click to expand</summary>
-
-| **`Svarii`** | `0.0.1` |
-|--------------|---------|
-
-</details>
-
----
-
-### 💡 Example
-```greyscript
-force_params("myApp [ipAddress] [port#]", 2)
-```
-
----
-
 ## force_params
 
 ### 📝 Description  
@@ -2057,6 +1965,57 @@ force_params("myApp [ipAddress] [port#]", 2)
 ```
 ---
 
+## get_exploit_address_list
+
+### 📝 Description  
+Scan a library for vulnerable addresses.
+
+---
+
+### 🧮 Parameters
+
+| Name               | Type                 | Description                                |
+|--------------------|----------------------|--------------------------------------------|
+| `libLocation`      | string               | Remote IP address or local absolute file location. |
+| `metaxploitObject` | map<string, function> | Metaxploit library object.                  |
+| `remoteTarget`     | flag (optional)      | Optional flag indicating if the target is remote. Default: `false`. |
+| `targetPort`       | number (optional)    | Optional target port number. Default: `0`. |
+
+
+#### ⚙️ Defaults
+
+| Parameter      | Default |
+|----------------|---------|
+| `remoteTarget` | `false` |
+| `targetPort`   | `0`     |
+
+---
+
+### 🔁 Return  
+`list<string>` — List of vulnerable addresses found.
+
+---
+
+
+
+<details>
+<summary>📃 Author & Version</summary>
+| Author  | Version |
+|---------|---------|
+| Svarii  | 0.0.1   |
+</details>
+
+---
+
+### 💡 Example
+```greyscript
+libLocation = params[0]
+metax = include_lib("/lib/metaxploit.so")
+
+print find_exploitable_addresses(libLocation, metax)
+```
+
+---
 
 ## get_acks
 
