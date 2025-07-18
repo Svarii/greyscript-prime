@@ -55,7 +55,8 @@ Modifies a text string to wrap it in the `<align>` tag.
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
 
 </details>
 
@@ -116,8 +117,8 @@ Modifies a text string and prepends it with the `<alpha>` tag.
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
-
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete
 </details>
 
 ---
@@ -171,7 +172,8 @@ Used to apply bold styling in Text Mesh Pro.
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
 
 </details>
 
@@ -220,7 +222,8 @@ Used to apply a specified color to the string, supporting both hex formats and s
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
 
 </details>
 
@@ -286,7 +289,8 @@ Used to control character spacing in text renderers such as Text Mesh Pro.
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
 
 </details>
 
@@ -341,7 +345,8 @@ Modifies a text string to wrap it in the `<indent>` tag for use with supported r
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
 
 </details>
 
@@ -402,7 +407,8 @@ Modifies a text string by wrapping it within the `<i>` tag.
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
 
 </details>
 
@@ -451,7 +457,8 @@ Modifies a text string to wrap it in the `<line-indent>` tag.
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
 
 </details>
 
@@ -503,7 +510,8 @@ Modifies a text string by wrapping it within the `<lowercase>` tag.
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
 
 </details>
 
@@ -557,7 +565,8 @@ Modifies a text string by wrapping it within the `<margin>` tag.
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
 
 </details>
 
@@ -608,7 +617,8 @@ Modifies a text string by wrapping it within the `<mark>` tag.
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
 
 </details>
 
@@ -660,7 +670,8 @@ Modifies a text string by wrapping it within the `<mspace>` tag.
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
 
 </details>
 
@@ -704,7 +715,8 @@ Modifies a text string by wrapping it within the `<nobr>` tag.
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
 
 </details>
 
@@ -746,7 +758,8 @@ Modifies a text string by wrapping it within the `<noparse>` tag.
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
 
 </details>
 
@@ -789,7 +802,8 @@ Modifies a text string by appending the `<page>` tag to the end.
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
 
 </details>
 
@@ -840,7 +854,8 @@ Modifies a text string by prepending it with the `<pos>` tag.
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
 
 </details>
 
@@ -888,7 +903,8 @@ Modifies a text string by wrapping it within the `<rotate>` tag.
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
 
 </details>
 
@@ -939,7 +955,8 @@ Modifies a text string by wrapping it within the `<size>` tag.
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
 
 </details>
 
@@ -981,7 +998,8 @@ Modifies a text string by wrapping it within the `<s>` tag.
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
 
 </details>
 
@@ -1023,7 +1041,8 @@ Modifies a text string by wrapping it within the `<sub>` tag.
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
 
 </details>
 
@@ -1066,7 +1085,8 @@ Modifies a text string by wrapping it within the `<sup>` tag.
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
 
 </details>
 
@@ -1109,7 +1129,8 @@ Modifies a text string by wrapping it within the `<u>` tag.
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
 
 </details>
 
@@ -1152,7 +1173,8 @@ Modifies a text string by wrapping it within the `<uppercase>` tag.
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
 
 </details>
 
@@ -1202,7 +1224,8 @@ Modifies a text string by wrapping it within the `<voffset>` tag.
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
 
 </details>
 
@@ -1250,7 +1273,8 @@ Modifies a text string by wrapping it within the `<width>` tag.
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
 
 </details>
 
@@ -1585,7 +1609,8 @@ Converts a boolean-like value (`true`, `false`, `1`, `0`) into a string: `"true"
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
 
 </details>
 
@@ -1653,7 +1678,8 @@ Returns `null` if no valid IP address is found.
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
 
 </details>
 
@@ -1710,7 +1736,8 @@ Appends data to an existing file, or creates a new file if the file does not exi
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
 
 </details>
 
@@ -1763,7 +1790,8 @@ Delete a specified file if it has write permissions.
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
 
 </details>
 
@@ -1812,7 +1840,8 @@ Check to see if the specified file exists.
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
 
 </details>
 
@@ -1861,7 +1890,8 @@ Create a new file at the specified path if it does not already exist.
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
 
 </details>
 
@@ -1905,7 +1935,8 @@ Specifies usage information and checks if the required number of parameters have
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
 
 </details>
 
@@ -1949,7 +1980,8 @@ Scan a library for vulnerable addresses.
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
 
 </details>
 
@@ -1995,7 +2027,8 @@ Calculates the recommended number of ACKs to collect based on signal strength.
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
 
 </details>
 
@@ -2042,7 +2075,8 @@ Logs into the mail account and fetches inbox messages.
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
 
 </details>
 
@@ -2077,7 +2111,8 @@ _None_
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
 
 </details>
 
@@ -2118,7 +2153,8 @@ _None_
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
 
 </details>
 
@@ -2165,7 +2201,8 @@ _None_
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
 
 </details>
 
@@ -2216,7 +2253,8 @@ Loads a library from the lib directory, optionally specifying directory and veri
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
 
 </details>
 
@@ -2278,7 +2316,8 @@ Each sublist contains:
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
 
 </details>
 
@@ -2331,7 +2370,8 @@ Each parsed message includes: `id`, `from`, `subject`, `body`.
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
 
 </details>
 
@@ -2371,7 +2411,8 @@ Return a string with the name of the file that is running this script.
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
 
 </details>
 
@@ -2417,7 +2458,8 @@ Split Unsafe Check Results into individual exploit result strings and return a l
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
 
 </details>
 
@@ -2473,7 +2515,8 @@ Constructs and returns an object containing categorized status strings
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
 
 </details>
 
