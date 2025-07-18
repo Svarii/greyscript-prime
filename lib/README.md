@@ -311,7 +311,7 @@ print result
 - [Text Mesh Pro: Rich Color Text](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextColor.html)  
 - [HTML Color Names: Supported Name List](https://htmlcolorcodes.com/color-names/)
 
-#### 🦶 Footnotes
+#### 🧠 Notes
 - Color names are case sensitive
 - Blue and blue, green and Green, are different colors
 
@@ -2050,6 +2050,75 @@ print find_exploitable_addresses(libLocation, metax)
 ```
 
 ---
+
+## fetch_whois
+
+### 📝 Description
+Pulls WHOIS information for a **public IP address** and returns a structured map of related metadata including administrative contact, domain, and network info.
+
+---
+
+### 🧮 Parameters
+
+| Name                   | Type     | Description                                                 |
+|------------------------|----------|-------------------------------------------------------------|
+| `routerPublicIPAddress`| `string` | The public-facing IP address to be queried via WHOIS lookup |
+
+#### 🚫 Defaults
+
+| Parameter              | Default Value |
+|------------------------|---------------|
+| *routerPublicIPAddress*| *(None)*      |
+
+---
+
+### 🔁 Return
+`map<string, string>` — a structured map of WHOIS attributes or an error object.
+
+#### 🗺️ Map Keys
+
+| Key         | Type     | Description                                                   |
+|-------------|----------|---------------------------------------------------------------|
+| `.admin`    | `string` | The administrative contact's name                             |
+| `.domain`   | `string` | The domain name associated with the IP                        |
+| `.email`    | `string` | Email of the administrative contact                           |
+| `.phone`    | `string` | Phone number for the administrative contact                   |
+| `.network`  | `string` | The network name or ID (if found)                             |
+| `.error`    | `string` | **Returned instead of above** if an error occurs              |
+
+---
+
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1  
+- **Unit Testing:** ❌ Not yet implemented  
+
+</details>
+
+---
+
+### 💡 Example
+```greyscript
+whoisInfo = fetch_whois(params[0])
+
+print whoisInfo.domain
+print whoisInfo.admin
+print whoisInfo.email
+print whoisInfo.phone
+print whoisInfo.network
+```
+
+---
+
+#### 🧠 Notes
+- If the IP address is local (`LAN`), the function returns an error object.
+- If the IP is not valid, a validation error is returned instead.
+- The returned `network` field will show `[ UNKNOWN ]` if fewer than 5 WHOIS lines exist.
+
+---
+
 
 ## get_acks
 
