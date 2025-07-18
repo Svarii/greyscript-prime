@@ -1273,8 +1273,8 @@ print(result)
 - [Text Mesh Pro: Horizontal Position](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextPos.html)
 
 
-### Logic Methods
-#### .extract
+## Logic Methods
+### .extract
 The `.extract` method allows you to extract the text between the provided values
 
 ![image](../images/docblocks/string/extract.png)
@@ -1285,7 +1285,7 @@ newString = "<b>0x53C737</b>"
 print(newString.extract_between("<b>", "</b>")) // Outputs: 0x53C737
 
 ```
-#### .format
+### .format
 The `.format` method allows for string interpolation
 
 ![image](../images/docblocks/string/format.png)
@@ -1297,8 +1297,8 @@ animalsList = ["fox", "dog"]
 sentence = variableString.format(animalsList)
 print(sentence); // Outputs: The quick brown fox jumps over the lazy dog
 ```
-### Removal Methods
-#### .remove_char_last 
+## Removal Methods
+### .remove_char_last 
 The `.remove_char_last` method allows you to remove the last character to the given text. Example usage:
 
 ![image](../images/docblocks/string/remove_char_last.png)
@@ -1310,7 +1310,7 @@ print(newString.remove_char_last) // Outputs: Hell
 ```
 
 
-#### .remove_char_first
+### .remove_char_first
 The `.remove_char_first` method allows you to remove the last character to the given text. Example usage:
 
 ![image](../images/docblocks/string/remove_char_first.png)
@@ -1321,7 +1321,7 @@ newString = "Hello"
 print(newString.remove_char_first) // Outputs: ello
 ```
 
-#### .remove_bold
+### .remove_bold
 The `.remove_bold` method allows you to remove bold tags from the given text. Example usage:
 
 ![image](https://github.com/user-attachments/assets/b9163072-533f-4614-b418-630d2d3c6749)
@@ -1332,7 +1332,7 @@ newString = "<b>Hello</b>"
 print(newString.remove_bold) // Outputs: Hello
 ```
 
-#### .remove_italic
+### .remove_italic
 The `.remove_italic` method allows you to remove italic tags from the given text. Example usage:
 
 ![image](https://github.com/user-attachments/assets/aeaada4d-8aaf-44ed-8935-e49de4d6f864)
@@ -1343,7 +1343,7 @@ newString = "<i>Hello</i>"
 print(newString.remove_italic) // Outputs: Hello
 ```
 
-#### .remove_underline
+### .remove_underline
 The `.remove_underline` method allows you to remove underline tags from the given text. Example usage:
 
 ![image](https://github.com/user-attachments/assets/768e7493-ead8-4a7f-b156-af9f8761815a)
@@ -1354,7 +1354,7 @@ newString = "<u>Hello</u>"
 print(newString.remove_underline) // Outputs: Hello
 ```
 
-#### .remove_strike
+### .remove_strike
 The `.remove_strike` method allows you to remove strikethrough tags from the given text. Example usage:
 
 ![image](https://github.com/user-attachments/assets/1aeed45f-4ab5-4343-8dba-949faec6c0af)
@@ -1365,7 +1365,7 @@ newString = "<s>Hello</s>"
 print(newString.remove_strike) // Outputs: Hello
 ```
 
-#### .remove_mark
+### .remove_mark
 The `.remove_mark` method allows you to remove mark tags from the given text. Example usage:
 
 ![image](https://github.com/user-attachments/assets/e8c5bdbe-e881-4ad2-996b-ef8eff80fcbe)
@@ -1376,7 +1376,7 @@ newString = "<mark>Hello</mark>"
 print(newString.remove_mark) // Outputs: Hello
 ```
 
-#### .remove_sub
+### .remove_sub
 The `.remove_sub` method allows you to remove sub tags from the given text. Example usage:
 
 ![image](https://github.com/user-attachments/assets/db99e8ca-62dc-494b-867a-8ab204fdf366)
@@ -1387,7 +1387,7 @@ newString = "<sub>Hello</sub>"
 print(newString.remove_sub) // Outputs: Hello
 ```
 
-#### .remove_sup
+### .remove_sup
 The `.remove_sup` method allows you to remove superscript tags from the given text. Example usage:
 
 ![image](https://github.com/user-attachments/assets/14996b4a-aa3c-4b02-a06c-2303cde34328)
@@ -1399,16 +1399,16 @@ print(newString.remove_sup) // Outputs: Hello
 
 ```
 
-## numberMethods
+# numberMethods
 ![Static Badge](https://img.shields.io/badge/method-number-green)
 
-### .clamp
+## .clamp
 The `.clamp` method allows a number to be clamped within a specified range
 ![image](https://github.com/user-attachments/assets/53351c78-1259-4796-8a14-466e39fb5768)
 
 
 
-### .diff
+## .diff
 The `.diff` method calculates the absolute difference between the current number and another number.
 ![image](https://github.com/user-attachments/assets/f78cf4ce-805a-4d04-9e20-0f6b6a6bf8b6)
 
@@ -1421,7 +1421,7 @@ print(result) // Outputs: 42
 ```
 
 
-### .divide
+## .divide
 The `.divide` method divides the current number by another number.  Zero division will result in null
 ![image](https://github.com/user-attachments/assets/8fe1a4f2-f56c-4b11-87c6-26e4bb3fd694)
 
@@ -1433,7 +1433,7 @@ result = newNumber.divide(newNumber2)
 print(result) // Outputs: 42
 ```
 
-### .is_more
+## .is_more
 The `.is_more` method checks if the current number is greater than a provided number. Returns `true` if greater, `false` otherwise.
 ![image](https://github.com/user-attachments/assets/6f61825e-f52c-4400-912c-c24a2b4f90a8)
 
@@ -1445,7 +1445,7 @@ result = myNumber.greater_than(myNumber2)
 print(result) // Outputs: 0 (false)
 ```
 
-### .is_less
+## .is_less
 The `.is_less` method checks if the current number is less than a provided number. Returns `true` if lesser, `false` otherwise.
 ![image](https://github.com/user-attachments/assets/b6147f1f-2b63-4a3e-947e-b11f99b9feec)
 
@@ -1457,12 +1457,12 @@ result = myNumber.lesser_than(myNumber2)
 print(result) // Outputs: 1 (true)
 ```
 
-### .lerp
+## .lerp
 The `.lerp` method computes the linear interpolation (lerp) between two numbers.
 ![image](https://github.com/user-attachments/assets/944bfcc8-88f9-4f3f-b96f-d1de17baf0eb)
 
 
-### .minus
+## .minus
 The `.minus` method allows you to subtract a specified amount from a number. If no amount is provided, it defaults to `1`. 
 ![image](https://github.com/user-attachments/assets/61390f03-12e2-4e69-b79b-d7069d01775e)
 
@@ -1473,7 +1473,7 @@ result = newNumber.minus(2)
 print(result) // Outputs: 42
 ```
 
-### .multiply
+## .multiply
 The `.multiply` method multiplies the current number the given number (or 2).
 ![image](https://github.com/user-attachments/assets/db319138-bfbb-4a5d-bc62-d4a0d813b17a)
 
@@ -1485,7 +1485,7 @@ result = newNumber.multiply(newNumber2)
 print(result) // Outputs: 42
 ```
 
-### .plus
+## .plus
 The `.plus` method allows you to add a specified amount to a number. If no amount is provided, it defaults to `1`.
 ![image](https://github.com/user-attachments/assets/ff7250d7-3a92-48b7-850a-271776e80b64)
 
@@ -1496,7 +1496,7 @@ result = newNumber.plus(2)
 print(result) // Outputs: 42
 ```
 
-### .random_from
+## .random_from
 The `.random_from` method generates a random number in the range of 1 (or optional parameter) to number.
 ![image](https://github.com/user-attachments/assets/d55b4868-35e4-4b5d-ac96-9cafd4a6af9a)
 
@@ -1508,7 +1508,7 @@ result = myNumber.lesser_than(myNumber2)
 print(result) // Outputs: 1 (true)
 ```
 
-### .saturate
+## .saturate
 The `.saturate` Clamps a number to the normalized range [0, 1].
 ![image](https://github.com/user-attachments/assets/17967389-54fb-4ec7-ba30-e50f986794a5)
 
@@ -1519,7 +1519,7 @@ The `.saturate` Clamps a number to the normalized range [0, 1].
 
 
 ---
-### .crop
+## .crop
 The `.crop` method Returns a new list stripped of any spacing at the beginning and ending. If any value gets passed that is not a list this method will return null.
 
 ![image](https://github.com/user-attachments/assets/c4a534f2-b5e0-47b2-a7b0-ccf5e21df680)
@@ -1531,7 +1531,7 @@ result = myList.trim
 print(result) // Outputs: ["string", "string"]
 ```
 
-### .print
+## .print
 The `.print` method loops through a list and prints each item
 
 ![image](https://github.com/user-attachments/assets/51a0f05d-e9c0-4786-a53c-c32ccf4d722c)
@@ -1547,8 +1547,8 @@ string
 
 ---
 
-## mapMethods
-### .get_attributes
+# mapMethods
+## .get_attributes
 ![image](https://github.com/user-attachments/assets/0168765b-4220-4176-88d1-257209da67b8)
 
 ---
@@ -2008,64 +2008,6 @@ force_params("myApp [ipAddress] [port#]", 2)
 
 ---
 
-## usafe_check_list
-
-### 📝 Description
-
-Split unsafe check results into individual exploit results and return a list of `UnsafeCheck` strings.
-
----
-
-### 🧮 Parameters
-
-| Name          | Type    | Description                                                     |
-|---------------|---------|-----------------------------------------------------------------|
-| `scanResults` | string  | The result from `fetch_exploit_requirements()`, typically the name of the library to load |
-
----
-
-### 🧷 Default Parameters
-
-_None_
-
----
-
-### 🔁 Return
-
-`list<string>` — A list of unsafe check strings derived from `scanResults`.
-
----
-
-### ✍️ Author
-
-**Svarii**
-
----
-
-### 📦 Version
-
-`0.0.1`
-
----
-
-### 💡 Example
-
-```greyscript
-
-metax = include_lib("/lib/metaxploit.so")
-metaLib = metax.load(locals.libLocation)
-
-libLocation = params[0]
-    if not libLocation then libLocation = "/lib/aptclient.so"
-
-metax = include_lib("/lib/metaxploit.so")
-exploitMem = find_exploitable_addresses(libLocation, metaxploitObject)
-unsafeCheckList = unsafe_check_list(fetch_exploit_requirements(exploitMem))
-    print find_exploitable_addresses(libLocation, metax)
-```
-
----
-
 ## force_params
 
 ### 📝 Description  
@@ -2467,61 +2409,7 @@ for net in netList
     print(net[0] + " - " + net[1] + " [" + net[2] + "]")
 
 ```
----
 
-`parse_inbox`
-
-#### 📝 Description
-
-Parses a list of mail IDs using a global `metaMail` object and extracts structured message data.  
-Each parsed message includes: `id`, `from`, `subject`, `body`.
-
----
-
-#### 🧮 Parameters
-
-| Name         | Type          | Description                        |
-|--------------|---------------|----------------------------------|
-| `mailIDList` | list<string>  | A list of message IDs to parse.  |
-
----
-
-#### 🧷 Default Values
-
-| Parameter | Default Value |
-|-----------|---------------|
-| *(None)*  | *(None)*      |
-
----
-
-#### 🔁 Return
-
-`list<object>` — A list of parsed mail objects with the following structure:
-
-- `id`: Message ID  
-- `from`: Sender  
-- `subject`: Subject line  
-- `body`: Full body text of the email  
-
----
-
-<details>
-<summary>📃 Author & Version</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1  
-
-</details>
-
----
-
-#### 💡 Example
-
-```greyscript
-mailIDs = ["msgid-001", "msgid-002"]
-parsed = parse_inbox(mailIDs)
-print(parsed[0].subject)  // Output: "Subject line here"
-```
 ---
 
 ## parse_inbox
