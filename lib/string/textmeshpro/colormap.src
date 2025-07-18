@@ -1,43 +1,6 @@
-// Applies color tag to the string
-	// @description **Description:**
-	// @description Modifies a text string by wrapping it within the color tag
-	// @description ---
-	//
-	// @description **Parameters:**
-	// @param {string} colorValue 
-	// @description - `colorValue` The desired color in `#RRGGBB` / `#RRGGBBAA` / `#HEXA` format
-	//
-	// @description **Return:**
-	// @return {string}
-	// @description `string` the string value embedded in the `<color>` tag
-	// @description ---
-	//
-	// @description **Links:**
-	// @description - [Text Mesh Pro: Rich Color Text](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextColor.html)	
-	// @description - [HTML Color Names: Supported Name List](https://htmlcolorcodes.com/color-names/)
-	// @description ---	
-	//
-	// @description **Author:** Svarii
-	// @description **Version:** 0.0.1
-	// @description ---
-	//
-	// @description ***footnotes***
-	// @description Color names are case sensitive
-	// @description ---
-	//
-	// @example newString = "Hello"   
-	// @example 
-	// @example result = newString.color("blue")
-	// @example     
-	// print(result); // Outputs: <color=blue>Hello</color>
-	// @example        
-	// @example result = newString.color("#FFFFFF")
-	// @example   
-	// print(result); // Outputs: <color=#FFFFFF>Hello</color>
-	// @example        
-	// @example result = newString.color("Aquamarine")
-	// @example   
-	// print(result); // Outputs: <color=#7FFFD4>Hello</color>        
+
+color = {"IndianRed": "#CD5C5C", "LightCoral": "#F08080", "Salmon": "#FA8072"}
+
 string.color = function(colorValue)
 	if not typeof(colorValue) == "string" then return self
 	//*****************************************************
@@ -104,6 +67,7 @@ string.color = function(colorValue)
 	if colorValue == "Indigo" then colorValue = "#4B0082"        
 	if colorValue == "SlateBlue" then colorValue = "#6A5ACD"
 	if colorValue == "DarkSlateBlue" then colorValue = "#483D8B"
+	if colorValue == "MediumSlateBlue" then colorValue = "#7B68EE" 
 	//*****************************************************
 	// Green HEX Codes
 	//*****************************************************

@@ -2,237 +2,1276 @@
 
 GreyScript Prime is an extension for **Grey Script** that adds additional methods for object manipulation. With the combination of `Greybel VS`, `Plant UML`, and `Markdown Preview Enhanced with litvis`, this tool is designed to enhance your coding efficiency in **VSCode**.
 
-[`Example Screenshot`](#example) 
+> # Table of Contents
+> 
+> - 📖 [Introduction](#introduction)
+> - 🚀 [Getting Started](#getting-started)
+> 
+> <details>
+> <summary>⚙️ File Management Functions</summary>
+> 
+> - [file_append](#file_append)
+> - [file_delete](#file_delete)
+> - [file_exists](#file_exists)
+> - [file_new](#file_new)
+> 
+> </details>
+> 
+> - 🏷️ [Other Functions](#other-functions)
+> - 🧰 [Utilities](#utilities)
+> - ❓ [FAQ](#faq)
 
-Limited custom formatting of DocBlocks and Plant UML allow for insertion to GreyScript Compiler.
-***
-# GreyScript Prime ![Static Badge](https://img.shields.io/badge/version-0.1.3_alpha-red)
 
-# 📄 Methods Overview
 
-## stringMethods
+# stringMethods
 ![Static Badge](https://img.shields.io/badge/method-string-green)
-### TextMeshPro
 
-#### .align
-##### *[align-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextAlignment.html)*
-The .align method allows you to apply the align tag to the given text.
-Accepted values: `left`, `right`, `center`, `justified`, and `flush`
+## align
+### 📝 Description
+Modifies a text string to wrap it in the `<align>` tag.
+Used to visually align text using supported values for alignment. Useful for rendering formatted text in UI systems such as Text Mesh Pro.
+---
+### 🧮 Parameters
 
-![align](../images/docblocks/string/align.png)
-
-
-
-```
+| Name        | Type     | Description                                                                 |
+|-------------|----------|-----------------------------------------------------------------------------|
+| `alignment` | string   | Accepted values: `left`, `center`, `right`, `justified`, `flush`            |
+| `closeTag`  | boolean  | Whether to close the tag with a matching `</align>`; accepted: `true/false` |
+---
+### 🧷 Default Values
+| Parameter   | Default Value |
+|-------------|----------------|
+| `alignment` | `"center"`     |
+| `closeTag`  | `true`         |
+---
+### 🔁 Return
+`string` — the string value embedded in (or preceded by) the `<align>` tag.
+---
+### ✍️ Author
+**Svarii**
+---
+### 📦 Version
+`0.0.1`
+---
+### 💡 Example
+```greyscript
 newString = "Hello"
 
-print(newString.align) // Outputs: <align="center">Hello</align>
+result = newString.align("center")
+print result 
+// Output: <align="center">Hello</align>
+
+result = newString.align("center", false)
+print result 
+// Output: <align="center">Hello
 ```
-
-#### .alpha
-##### *[alpha-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextOpacity.html)*
-The `.alpha` method sets the opacity of using a 2 digits hex value
-
-![alpha](../images/docblocks/string/alpha.png)
+---
 
 
-\#FF: 100% Opague
-\#00: 100% Transparent
 
-#### .bold
-##### *[bold-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextBoldItalic.html)*
-The `.bold` method allows you to apply bold to the given text.
 
-![bold](../images/docblocks/string/bold.png)
+#### 🔗 Links
+[Text Mesh Pro: Rich Text Alignment](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextAlignment.html)
+---
+#### 📝 Footnotes
 
-```
+- Parameters are **not validated**.
+  - `alignment` will not reject invalid values → **Return**: `string<withParseIssues>`
+  - `closeTag` will not reject invalid values → **Return**: `null`
+- If all parameters are invalid → **Return**: `null`
+---
+
+## alpha
+### 📝 Description
+Modifies a text string and prepends it with the `<alpha>` tag.  
+Used to apply opacity using HEX-based transparency levels. Useful for controlling visual emphasis or layering in Text Mesh Pro rendering.
+---
+### 🧮 Parameters
+
+| Name         | Type   | Description                                                      |
+|--------------|--------|------------------------------------------------------------------|
+| `hexOpacity` | string | Accepted values: 2-digit HEX value preceded by `#` (e.g., `#4C`) |
+---
+### 🧷 Default Values
+| Parameter    | Default Value |
+|--------------|----------------|
+| `hexOpacity` | `#FF`          |
+---
+### 🔁 Return
+`string` — the string value preceded by the `<alpha>` tag.
+---
+### ✍️ Author
+**Svarii**
+---
+### 📦 Version
+`0.0.1`
+---
+### 💡 Example
+```greyscript
 newString = "Hello"
 
-print(newString.bold) // Outputs: <b>Hello</b>
-```
-#### .color
-##### *[color-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextColor.html)*
-##### *[color-names-extended](https://htmlcolorcodes.com/color-names/)*
-The `.color` method allows you to apply a color to the given text.
+result = newString.alpha("#4C")
+print(result)
+// Output: <alpha=#4C>Hello
 
-![bold](../images/docblocks/string/bold.png)
-
+result = newString.alpha
+print(result)
+// Output: <alpha=#FF>Hello
 ```
+#### 🔗 Links
+[Text Mesh Pro: Rich Text Opacity](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextOpacity.html)
+
+#### 📝 Footnotes
+
+- Parameters are **not validated**.
+  - `hexOpacity` will not reject invalid values → **Return**: `string<withParseIssues>`
+- This tag does **not** apply a closing tag; it affects **all text that follows**
+- If no parameter is passed, it applies default opacity `#FF` (fully opaque)
+
+---
+
+## bold
+### 📝 Description
+Modifies a text string and wraps it within the `<b>` tag.  
+Used to apply bold styling in Text Mesh Pro.
+---
+### 🧮 Parameters
+- None
+---
+### 🔁 Return
+`string` — the string value embedded in the `<b>` tag.
+---
+### ✍️ Author
+**Svarii**
+---
+### 📦 Version
+`0.0.1`
+---
+### 💡 Example
+```greyscript
 newString = "Hello"
 
-print(newString.color("blue")) // Outputs: <color=blue>Hello</color>
+result = newString.bold
+print(result)
+// Output: <b>Hello</b>
 ```
+#### 🔗 Links
+[Text Mesh Pro: Rich Text Bold](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextBoldItalic.html)
 
-#### .cspace
-##### *[cspace-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextCharacterSpacing.html)*
-The `.cspace` method allows you to adjust character spacing, either absolute or relative to the original font Asset. You can use pixels or font units.
+---
 
-![bold](../images/docblocks/string/cspace.png)
+## color
 
-#### .indent
-##### *[indent-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextIndentation.html)*
-The `.indent` method controls the horizontal caret position the same way the <pos> tag does, but the effect persists across lines.
+### 📝 Description
+Modifies a text string by wrapping it within the `<color>` tag.  
+Used to apply a specified color to the string, supporting both hex formats and standard HTML color names.
 
-![image](../images/docblocks/string/indent.png)
+---
 
+### 🧮 Parameters
 
-#### .italic
-##### *[italic-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextBoldItalic.html)*
-The `.italic` method allows you to apply italic to the given text.
+| Name         | Type   | Description                                                                 |
+|--------------|--------|-----------------------------------------------------------------------------|
+| `colorValue` | string | The desired color in hex format: `#RRGGBB`, `#RRGGBBAA`, or standard HTML color name (e.g., `"blue"`, `"Aquamarine"`) |
 
-![image](../images/docblocks/string/italic.png)
+---
 
-```
+### 🔁 Return
+`string` — the string value embedded in the `<color>` tag.
+
+---
+
+<details>
+<summary><strong>About</strong></summary>
+
+### ✍️ Author
+**Svarii**
+
+### 📦 Version
+`0.0.1`
+</details>
+---
+
+### 💡 Example
+```greyscript
 newString = "Hello"
 
-print(newString.italic) // Outputs: <i>Hello</i>
+result = newString.color("blue")
+print result
+// Output: <color=blue>Hello</color>
+
+result = newString.color("#FFFFFF")
+print result
+// Output: <color=#FFFFFF>Hello</color>
+
+result = newString.color("Aquamarine")
+print result
+// Output: <color=#7FFFD4>Hello</color>
 ```
 
-#### .line-indent
-##### *[line-indent-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextLineIndentation.html)*
-The .line-indent method inserts horizontal space directly after it, and before the start of each new line. It only affects manual line breaks (including line breaks created with the \<br> tag, not word-wrapped lines.
-
-![image](../images/docblocks/string/line-indent.png)
 
 
-You can specify the indentation in pixels, font units, or percentages.
+#### 🔗 Links
+- [Text Mesh Pro: Rich Color Text](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextColor.html)  
+- [HTML Color Names: Supported Name List](https://htmlcolorcodes.com/color-names/)
 
-#### .lowercase
-##### *[lowercase-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextLetterCase.html)*
-The .lowercase method alters the capitalization of your text before rendering. The text in the Text field remains as you entered it.
+#### 🦶 Footnotes
+- Color names are case sensitive
+- Blue and blue, green and Green, are different colors
 
-![image](../images/docblocks/string/lowercase.png)
-
-#### .margin
-##### *[margin-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextMargins.html)*
-You can increase the horizontal margins of the text with the .margin method.
-You can specify the margins in pixels, font units, and percentages.
-Negative values have no effect.
-
-![image](../images/docblocks/string/margin.png)
+---
 
 
-#### .mark
-##### *[mark-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextMark.html)*
-The `.mark` method allows you to apply highlight to the given text.
+## cspace
 
-![image](../images/docblocks/string/mark.png)
+### 📝 Description
+Modifies a text string by wrapping it within the `<cspace>` tag.  
+Used to control character spacing in text renderers such as Text Mesh Pro.
 
-```
+---
+
+### 🧮 Parameters
+
+| Name         | Type    | Description                                                                          |
+|--------------|---------|--------------------------------------------------------------------------------------|
+| `charSpacing`| string  | The amount of spacing to apply, e.g. `"1em"` or `"5px"`                             |
+| `closeTag`   | boolean | Whether to close the tag with `</cspace>` — accepted values: `true` or `false`      |
+
+---
+
+
+### 🔁 Return
+`string` — The string value wrapped within the `<cspace>` tag.
+
+---
+
+### ✍️ Author
+**Svarii**
+
+---
+
+### 📦 Version
+`0.0.1`
+
+---
+
+### 💡 Example
+```greyscript
 newString = "Hello"
 
-print(newString.mark) // Outputs: <mark>Hello</mark>
+result = newString.cspace
+print result
+// Output: <cspace=1em>Hello</cspace>
 ```
 
-#### .mspace
-##### *[mspace-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextMonospace.html)*
+#### 🔗 Links
+- [Text Mesh Pro: Rich Text Character Spacing](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextCharacterSpacing.html)
 
-![image](../images/docblocks/string/mspace.png)
+#### 🦶 Footnotes
+- Accepts pixel or font unit values (e.g., `px`, `em`)
+- Tag will not be closed if `closeTag = false`
 
-
-#### .nobr
-##### *[nobreak-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextNoBreak.html)*
-
-![image](../images/docblocks/string/nobr.png)
+---
 
 
-#### .noparse
-##### *[noparse-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextNoParse.html)*
 
-![image](../images/docblocks/string/noparse.png)
+## indent
 
+### 📝 Description
+Modifies a text string to wrap it in the `<indent>` tag for use with supported rich text renderers (e.g., Text Mesh Pro).
 
-#### .page
-##### *[page-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextPageBreak.html)*
+---
 
-![image](../images/docblocks/string/page.png)
+### 🧮 Parameters
 
+| Name           | Type     | Description                                                                 |
+|----------------|----------|-----------------------------------------------------------------------------|
+| `indentPercent` | string   | Optional. Accepted input: `em`, `px`, or `%` units.                         |
+| `closeTag`     | boolean  | Optional. Whether to append a closing `</indent>` tag. Accepted: `true` or `false`. |
 
-#### .pos
-##### *[pos-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextPage.html)*
+---
 
-![image](../images/docblocks/string/pos.png)
+#### ⚙️ Defaults
 
-#### .rotate
-##### *[rotate-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextRotate.html)*
+| Parameter       | Default |
+|-----------------|---------|
+| `indentPercent` | `15%`   |
+| `closeTag`      | `true`  |
 
-![image](../images/docblocks/string/rotate.png)
+---
 
-#### .size
-##### *[size-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextSize.html)*
+### 🔁 Return
+`string` — the string value embedded in (or appended to) the `<indent>` tag.
 
-![image](../images/docblocks/string/size.png)
+---
 
-#### .strike
-##### *[strike-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextStrikethroughUnderline.html)*
-The `.strike` method allows you to apply strikethrough to the given text.
+### ✍️ Author
+**Svarii**
 
-![image](../images/docblocks/string/strike.png)
+---
 
-```
+### 📦 Version
+`0.0.1`
+
+---
+
+### 💡 Example
+```greyscript
 newString = "Hello"
 
-print(newString.strike) // Outputs: <s>Hello</s>
+result = newString.indent
+print(result)
+// Outputs: <indent=15%>Hello</indent>
+
+result = newString.indent("3em")
+print(result)
+// Outputs: <indent=3em>Hello</indent>
+
+result = newString.indent("25px", false)
+print(result)
+// Outputs: <indent=25px>Hello
 ```
 
-#### .sub
-##### *[sub-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextSubSuper.html)*
-The `.sub` method allows you to apply subscript to the given text. Example usage:
+---
 
-![image](../images/docblocks/string/sub.png)
+### 🔗 Links
+- [Text Mesh Pro: Rich Text Indentation](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextIndentation.html)
 
-```
+---
+
+### 🦶 Footnotes
+- Parameters are not checked for validity.
+- `indentPercent` will not reject invalid values → **Return:** `string<withParseIssues>`
+- `closeTag` will not reject invalid values → **Return:** `null`
+- If all parameters are invalid → **Return:** `null`
+
+---
+
+## italic
+
+### 📝 Description
+Modifies a text string by wrapping it within the `<i>` tag.
+
+---
+
+### 🧮 Parameters
+
+| `none` |
+|--------|
+
+---
+
+### 🔁 Return
+`string` — The string value wrapped within the `<i>` tag.
+
+---
+
+### ✍️ Author
+
+| **`Svarii`** |
+|--------|
+### 📦 Version
+| `0.0.1` |
+|--------|
+
+---
+
+### 💡 Example
+```greyscript
 newString = "Hello"
 
-print(newString.tiny) // Outputs: <sub>Hello</sub>
+result = newString.italic
+print(result)
+// Outputs: <i>Hello</i>
 ```
+#### 🔗 Links
+- [Text Mesh Pro: Rich Text Indentation](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextIndentation.html)
+---
 
-#### .sup
-##### *[sup-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextSubSuper.html)*
-The `.sup` method allows you to apply superscript to the given text. Example usage:
 
-![image](../images/docblocks/string/sup.png)
+## line-indent
 
-```
+### 📝 Description
+Modifies a text string to wrap it in the `<line-indent>` tag.
+
+---
+
+### 🧮 Parameters
+
+| Name           | Type     | Description                                           |
+|----------------|----------|-----------------------------------------------------|
+| `indentPercent` | string   | Optional. Accepted input: `em`, `px`, or `%`.       |
+| `closeTag`     | boolean  | Optional. Whether to append a closing `</line-indent>` tag. Accepted: `true` or `false`. |
+
+---
+
+#### ⚙️ Defaults
+
+| Parameter       | Default |
+|-----------------|---------|
+| `indentPercent` | `15%`   |
+| `closeTag`      | `true`  |
+
+---
+
+### 🔁 Return
+`string` — The string value embedded in (or appended to) the `<line-indent>` tag.
+
+---
+
+### ✍️ Author
+
+| **`Svarii`** |
+|--------------|
+
+### 📦 Version
+
+| `0.0.1` |
+|---------|
+
+---
+
+### 💡 Example
+```greyscript
 newString = "Hello"
 
-print(newString.sup) // Outputs: <sup>Hello</sup>
+result = newString.line-indent
+print(result)
+// Outputs: <line-indent=15%>Hello</line-indent>
+
+result = newString.line-indent("3em")
+print(result)
+// Outputs: <line-indent=3em>Hello</line-indent>
+
+result = newString.line-indent("25px", false)
+print(result)
+// Outputs: <line-indent=25px>Hello
 ```
 
-#### .underline
-##### *[underline-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextStrikethroughUnderline.html)*
-The `.underline` method allows you to apply underline to the given text.
+## lowercase
 
-![image](../images/docblocks/string/underline.png)
+### 📝 Description
+Modifies a text string by wrapping it within the `<lowercase>` tag.
 
-#### .uppercase
-##### *[uppercase-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextLetterCase.html)*
-The `.uppercase` method allows you to apply uppercase to the given text.
+---
 
-![image](../images/docblocks/string/uppercase.png)
+### 🧮 Parameters
 
-#### .voffset
-##### *[voffset-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextVOffset.html)*
-The `.voffset` method allows you to apply voffset to the given text.
+| `none` |
+|--------|
 
-![image](../images/docblocks/string/voffset.png)
+---
 
+### 🔁 Return
+`string` — The string value wrapped within the `<lowercase>` tag.
 
-#### .width
-##### *[width-tmpdocs](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextWidth.html)*
-The `.width` method allows you to apply width to the given text.
+---
 
-![image](../images/docblocks/string/width.png)
+### ✍️ Author
 
+| **`Svarii`** |
+|--------------|
 
-```
+### 📦 Version
+
+| `0.0.1` |
+|---------|
+
+---
+
+### 💡 Example
+```greyscript
 newString = "Hello"
 
-print(newString.underline) // Outputs: <u>Hello</u>
+result = newString.lowercase
+print(result)
+// Outputs: <lowercase>Hello</lowercase>
 ```
-### Map Methods
-#### .get_attributes
-![image](../images/docblocks/map/get_attributes.png)
+---
+
+#### 🔗 Links
+- [Text Mesh Pro: Rich Text Lowercase](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextLetterCase.html)
+
+---
+
+
+## margin
+
+### 📝 Description
+Modifies a text string by wrapping it within the `<margin>` tag.
+
+---
+
+### 🧮 Parameters
+
+| Name     | Type   | Description                                      |
+|----------|--------|--------------------------------------------------|
+| `margin` | string | Optional. Accepted values: `em`, `px`, or `%`.   |
+
+---
+
+#### ⚙️ Defaults
+
+| Parameter | Default |
+|-----------|---------|
+| `margin`  | `5em`   |
+
+---
+
+### 🔁 Return
+`string` — The string value wrapped within the `<margin>` tag.
+
+---
+
+### ✍️ Author
+
+| **`Svarii`** |
+|--------------|
+
+### 📦 Version
+
+| `0.0.1` |
+|---------|
+
+---
+
+### 💡 Example
+```greyscript
+newString = "Hello"
+
+result = newString.margin
+print(result)
+// Outputs: <margin=5em>Hello</margin>
+```
+---
+
+#### 🔗 Links
+- [Text Mesh Pro: Rich Text Margin](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextMargins.html)
+
+
+## mark
+### 📝 Description
+Modifies a text string by wrapping it within the `<mark>` tag.
+
+---
+
+### 🧮 Parameters
+
+| Name    | Type   | Description                                 |
+|---------|--------|---------------------------------------------|
+| `color` | string | Optional. HEXA color value (`#RRGGBBAA`).   |
+
+---
+
+#### ⚙️ Defaults
+
+| Parameter | Default     |
+|-----------|-------------|
+| `color`   | `#FFFF00AA` |
+
+---
+
+### 🔁 Return
+`string` — The string value wrapped within the `<mark>` tag.
+
+---
+
+### ✍️ Author
+
+| **`Svarii`** |
+|--------------|
+
+### 📦 Version
+
+| `0.0.1` |
+|---------|
+
+---
+
+### 💡 Example
+```greyscript
+newString = "Hello"
+
+result = newString.mark
+print(result)
+// Outputs: <mark="#FFFF00AA">Hello</mark>
+```
+---
+
+#### 🔗 Links
+- [Text Mesh Pro: Rich Text mark](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextMark.html)
+
+
+## mspace
+
+### 📝 Description
+Modifies a text string by wrapping it within the `<mspace>` tag.
+
+---
+
+### 🧮 Parameters
+
+| Name        | Type   | Description                                     |
+|-------------|--------|-------------------------------------------------|
+| `monospace` | string | Optional. Accepted values: `em`, `px`, or `%`. |
+
+---
+
+#### ⚙️ Defaults
+
+| Parameter   | Default   |
+|-------------|-----------|
+| `monospace` | `2.75em`  |
+
+---
+
+### 🔁 Return
+`string` — The string value wrapped within the `<mspace>` tag.
+
+---
+
+### ✍️ Author
+
+| **`Svarii`** |
+|--------------|
+
+### 📦 Version
+
+| `0.0.1` |
+|---------|
+
+---
+
+### 💡 Example
+```greyscript
+newString = "Hello"
+
+result = newString.mspace
+print(result)
+// Outputs: <mspace="2.75em">Hello</mspace>
+```
+---
+
+#### 🔗 Links
+- [Text Mesh Pro: Rich Text Monospacing](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextMonospace.html)
+
+
+
+## nobr
+
+### 📝 Description
+Modifies a text string by wrapping it within the `<nobr>` tag.
+
+---
+
+### 🧮 Parameters
+
+| `none` |
+|--------|
+
+---
+
+### 🔁 Return
+`string` — The string value wrapped within the `<nobr>` tag.
+
+---
+
+### ✍️ Author
+
+| **`Svarii`** |
+|--------------|
+
+### 📦 Version
+
+| `0.0.1` |
+|---------|
+
+---
+
+### 💡 Example
+```greyscript
+newString = "Hello"
+
+result = newString.nobr
+print(result)
+// Outputs: <nobr>Hello</nobr>
+```
+---
+
+#### 🔗 Links
+- [Text Mesh Pro: Rich Text No Break](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextNoBreak.html)
+
+## noparse
+
+### 📝 Description
+Modifies a text string by wrapping it within the `<noparse>` tag.
+
+---
+
+### 🧮 Parameters
+
+| `none` |
+|--------|
+
+---
+
+### 🔁 Return
+`string` — The string value wrapped within the `<noparse>` tag.
+
+---
+
+### ✍️ Author
+
+| **`Svarii`** |
+|--------------|
+
+### 📦 Version
+
+| `0.0.1` |
+|---------|
+
+---
+
+### 💡 Example
+```greyscript
+newString = "Hello"
+
+result = newString.noparse
+print(result)
+// Outputs: <noparse>Hello</noparse>
+```
+---
+
+#### 🔗 Links
+- [Text Mesh Pro: Rich Text Noparse](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextNoParse.html)
+
+
+## page
+
+### 📝 Description
+Modifies a text string by appending the `<page>` tag to the end.
+
+---
+
+### 🧮 Parameters
+
+| `none` |
+|--------|
+
+---
+
+### 🔁 Return
+`string` — The string value with the `<page>` tag appended to the end.
+
+---
+
+### ✍️ Author
+
+| **`Svarii`** |
+|--------------|
+
+### 📦 Version
+
+| `0.0.1` |
+|---------|
+
+---
+
+### 💡 Example
+```greyscript
+newString = "Hello"
+
+result = newString.page
+print(result)
+// Output: Hello<page>
+```
+---
+
+#### 🔗 Links
+- [Text Mesh Pro: Page Break](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextPageBreak.html)
+
+## pos
+
+### 📝 Description
+Modifies a text string by prepending it with the `<pos>` tag.
+
+---
+
+### 🧮 Parameters
+
+| Name      | Type   | Description            |
+|-----------|--------|------------------------|
+| `position` | string | Optional. Default: `"50%"` |
+
+---
+
+### ⚙️ Defaults
+
+| Parameter  | Default |
+|------------|---------|
+| `position` | `"50%"` |
+
+---
+
+### 🔁 Return
+`string` — The string prepended with the `<pos>` tag.
+
+---
+
+### ✍️ Author
+
+| **`Svarii`** |
+|--------------|
+
+### 📦 Version
+
+| `0.0.1` |
+|---------|
+
+---
+
+### 💡 Example
+```greyscript
+newString = "Hello"
+
+result = newString.pos
+print(result)
+// Output: <pos=50%>Hello
+```
+---
+
+## rotate
+
+### 📝 Description
+Modifies a text string by wrapping it within the `<rotate>` tag.
+
+---
+
+### 🧮 Parameters
+
+| Name             | Type   | Description            |
+|------------------|--------|------------------------|
+| `degreesRotation` | string | Optional. Default: `"45"` |
+
+---
+
+### ⚙️ Defaults
+
+| Parameter         | Default |
+|-------------------|---------|
+| `degreesRotation` | `"45"`  |
+
+---
+
+### 🔁 Return
+`string` — The string rotated with the `<rotate>` tag.
+
+---
+
+### ✍️ Author
+
+| **`Svarii`** |
+|--------------|
+
+### 📦 Version
+
+| `0.0.1` |
+|---------|
+
+---
+
+### 💡 Example
+```greyscript
+newString = "Hello"
+
+result = newString.rotate
+print(result)
+// Output: <rotate="45">Hello </rotate>
+```
+---
+
+#### 🔗 Links
+- [Text Mesh Pro: Rotate](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextRotate.html)
+
+## size
+
+### 📝 Description
+Modifies a text string by wrapping it within the `<size>` tag.
+
+---
+
+### 🧮 Parameters
+
+| Name      | Type   | Description          |
+|-----------|--------|----------------------|
+| `textSize`| string | Optional. Default: `"5em"` |
+
+---
+
+### ⚙️ Defaults
+
+| Parameter  | Default |
+|------------|---------|
+| `textSize` | `"5em"` |
+
+---
+
+### 🔁 Return
+`string` — The string wrapped within the `<size>` tag.
+
+---
+
+### ✍️ Author
+
+| **`Svarii`** |
+|--------------|
+
+### 📦 Version
+
+| `0.0.1` |
+|---------|
+
+---
+
+### 💡 Example
+```greyscript
+newString = "Hello"
+
+result = newString.size
+print(result)
+// Output: <size="5em">Hello </size>
+```
+---
+
+#### 🔗 Links
+- [Text Mesh Pro: Font Size](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextSize.html)
+
+## strike
+
+### 📝 Description
+Modifies a text string by wrapping it within the `<s>` tag.
+
+---
+
+### 🧮 Parameters
+
+| `none` |
+|--------|
+
+---
+
+### 🔁 Return
+`string` — The string wrapped within the `<s>` tag.
+
+---
+
+### ✍️ Author
+
+| **`Svarii`** |
+|--------------|
+
+### 📦 Version
+
+| `0.0.1` |
+|---------|
+
+---
+
+### 💡 Example
+```greyscript
+newString = "Hello"
+
+result = newString.strike
+print(result)
+// Output: <s>Hello</s>
+```
+
+---
+
+### 🔗 Links
+- [Text Mesh Pro: Strikethrough](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextStrikethroughUnderline.html)
+
+## sub
+
+### 📝 Description
+Modifies a text string by wrapping it within the `<sub>` tag.
+
+---
+
+### 🧮 Parameters
+
+| `none` |
+|--------|
+
+---
+
+### 🔁 Return
+`string` — The string wrapped within the `<sub>` tag.
+
+---
+
+### ✍️ Author
+
+| **`Svarii`** |
+|--------------|
+
+### 📦 Version
+
+| `0.0.1` |
+|---------|
+
+---
+
+### 💡 Example
+```greyscript
+newString = "Hello"
+
+result = newString.sub
+print(result)
+// Output: <sub>Hello</sub>
+```
+
+---
+
+### 🔗 Links
+- [Text Mesh Pro: Subscript](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextSubSuper.html)
+
+## sup
+
+### 📝 Description
+Modifies a text string by wrapping it within the `<sup>` tag.
+
+---
+
+### 🧮 Parameters
+
+| `none` |
+|--------|
+
+---
+
+### 🔁 Return
+`string` — The string wrapped within the `<sup>` tag.
+
+---
+
+### ✍️ Author
+
+| **`Svarii`** |
+|--------------|
+
+### 📦 Version
+
+| `0.0.1` |
+|---------|
+
+---
+
+### 💡 Example
+```greyscript
+newString = "Hello"
+
+result = newString.sup
+print(result)
+// Output: <sup>Hello</sup>
+```
+
+---
+
+### 🔗 Links
+- [Text Mesh Pro: Superscript](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextSubSuper.html)
+
+## underline
+
+### 📝 Description
+Modifies a text string by wrapping it within the `<u>` tag.
+
+---
+
+### 🧮 Parameters
+
+| `none` |
+|--------|
+
+---
+
+### 🔁 Return
+`string` — The string wrapped within the `<u>` tag.
+
+---
+
+### ✍️ Author
+
+| **`Svarii`** |
+|--------------|
+
+### 📦 Version
+
+| `0.0.1` |
+|---------|
+
+---
+
+### 💡 Example
+```greyscript
+newString = "Hello"
+
+result = newString.underline
+print(result)
+// Output: <u>Hello</u>
+```
+
+---
+
+### 🔗 Links
+- [Text Mesh Pro: Underline](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextStrikethroughUnderline.html)
+
+## uppercase
+
+### 📝 Description
+Modifies a text string by wrapping it within the `<uppercase>` tag.
+
+---
+
+### 🧮 Parameters
+
+| `none` |
+|--------|
+
+---
+
+### 🔁 Return
+`string` — The string wrapped within the `<uppercase>` tag.
+
+---
+
+### ✍️ Author
+
+| **`Svarii`** |
+|--------------|
+
+### 📦 Version
+
+| `0.0.1` |
+|---------|
+
+---
+
+### 💡 Example
+```greyscript
+newString = "Hello"
+
+result = newString.uppercase
+print(result)
+// Output: <uppercase>Hello</uppercase>
+```
+
+---
+
+### 🔗 Links
+- [Text Mesh Pro: Uppercase](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextLetterCase.html)
+
+## voffset
+
+### 📝 Description  
+Modifies a text string by wrapping it within the `<voffset>` tag.
+
+---
+
+### 🧮 Parameters
+
+| Name           | Type     | Description                          |
+|----------------|----------|------------------------------------|
+| `verticalOffset` | string   | Optional. Accepted input: `em`, `px`, or `%`. |
+
+
+#### ⚙️ Defaults
+
+| Parameter       | Default |
+|-----------------|---------|
+| `verticalOffset` | `1em`   |
+
+
+### 🔁 Return  
+`string` — The string value wrapped within the `<voffset>` tag.
+
+---
+
+### ✍️ Author
+
+| **`Svarii`** |
+|--------------|
+
+### 📦 Version
+
+| `0.0.1` |
+|---------|
+
+---
+
+### 💡 Example  
+```greyscript
+newString = "Hello"
+
+result = newString.voffset
+print(result)
+// Outputs: <voffset=1em>Hello</voffset>
+```
+---
+
+## width
+
+### 📝 Description  
+Modifies a text string by wrapping it within the `<width>` tag.
+
+---
+
+### 🧮 Parameters
+
+| Name    | Type   | Description                         |
+|---------|--------|-----------------------------------|
+| `width` | string | Optional. Accepted input: `em`, `px`, or `%`. |
+
+---
+
+#### ⚙️ Defaults
+
+| Parameter | Default |
+|-----------|---------|
+| `width`   | `"50%"` |
+
+---
+
+### 🔁 Return  
+`string` — The string value wrapped within the `<width>` tag.
+
+---
+
+### ✍️ Author
+
+| **`Svarii`** |
+|--------------|
+
+### 📦 Version
+
+| `0.0.1` |
+|---------|
+
+---
+
+### 💡 Example  
+```greyscript
+newString = "Hello"
+
+result = newString.width
+print(result)
+// Outputs: <width=50%>Hello</width>
+```
+
+
+#### 🔗 Links
+- [Text Mesh Pro: Horizontal Position](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextPos.html)
+
 
 ### Logic Methods
 #### .extract
@@ -515,52 +1554,1190 @@ string
 ---
 # 📄 Functions Overview
 ## bool_text
-![image](https://github.com/user-attachments/assets/d68784a5-db61-426b-bedf-2f1ad6927b14)
-## fetch_whois
-![image](https://github.com/user-attachments/assets/f1aa81d0-e525-4106-b790-dadd85095b0c)
-## file_new
-![image](https://github.com/user-attachments/assets/df3f8704-3322-42b4-828c-befdd7964e57)
-## file_append
-![image](https://github.com/user-attachments/assets/0bbcfc50-b61b-4377-abd1-f709b299b67f)
-## file_delete
-## file_exists
-## force_params
-![image](..\images\docblocks\function\force_params.png)
-## get_acks
-![image](https://github.com/user-attachments/assets/d9dec4bd-a566-496b-b5ab-c44d9be660d4)
-## get_random_ip
-![image](https://github.com/user-attachments/assets/8148ce40-384a-49be-a060-c104b9238337)
-## is_null
-![image](https://github.com/user-attachments/assets/64ec05d6-2795-43db-b40c-b055c111c1ce)
-## is_type
-![image](https://github.com/user-attachments/assets/84912676-131c-4689-b27e-bac18dccdc9f)
-## load_lib
-<img src="https://github.com/user-attachments/assets/123d920a-ac65-4524-9cbe-dc149418f334" align="left">
 
+### 📝 Description  
+Converts a boolean-like value (`true`, `false`, `1`, `0`) into a string: `"true"` or `"false"`.
+
+---
+
+### 🧮 Parameters
+
+| Name      | Type   | Description       |
+|-----------|--------|-------------------|
+| `boolVal` | flag   | A boolean or number (0 or 1) to be converted to a string. |
+
+---
+
+#### ⚙️ Defaults
+
+_None_
+
+---
+
+### 🔁 Return  
+`string` — Returns `"true"` or `"false"` if the value is valid. Returns `null` for invalid input.
+
+---
+
+### 📎 Footnotes
+
+- Parameters are not checked for validity.
+- Invalid input (including strings or objects) returns `null`.
+- Negative numbers return `"false"`.
+
+---
+
+### ✍️ Author
+
+| **`Svarii`** |
+|--------------|
+
+### 📦 Version
+
+| `0.0.1` |
+|---------|
+
+---
+
+### 💡 Example
 ```greyscript
-lib = load_lib;
-lib = load_lib("metaxploit.so");
-lib = load_lib("metaxploit.so", "/lib");
-lib = load_lib("metaxploit.so", "/lib", "MetatxploitLib");
-// All Output: typeof(lib) == "MetaxploitLib"
+print(bool_text("true"))
+// Output: null
+
+print(bool_text(true))
+// Output: "true"
+
+print(bool_text(1))
+// Output: "true"
+
+print(bool_text(0))
+// Output: "false"
+
+print(bool_text(-1))
+// Output: "false"
+
+print(bool_text(false))
+// Output: "false"
+
+print(bool_text(object))
+// Output: null
 ```
 
-![image](https://github.com/user-attachments/assets/99db6c6a-6a90-415e-9c64-a55e6c6840d5)
+---
+
+## extractIP
+
+### 📝 Description  
+Scans a string for a valid IPv4 address and returns the first match.  
+Returns `null` if no valid IP address is found.
+
+---
+
+### 🧮 Parameters
+
+| Name          | Type   | Description                         |
+|---------------|--------|-------------------------------------|
+| `inputString` | string | The text string to search for an IP address. |
+
+---
+
+#### ⚙️ Defaults
+
+| Parameter     | Default |
+|---------------|---------|
+| _None_        |         |
+
+---
+
+### 🔁 Return  
+`string | null` — The first matching IPv4 address, or `null` if none is found.
+
+---
+
+### 🧠 Notes
+- Uses a regular expression to identify IPv4 patterns.
+- Only the **first** valid match is returned.
+
+---
+
+### ✍️ Author
+
+| **`Svarii`** |
+|--------------|
+
+### 📦 Version
+
+| `0.0.1` |
+|---------|
+
+---
+
+### 💡 Example
+```greyscript
+print(extractIP("My IP is 192.168.1.5"))
+// Output: 192.168.1.5
+
+print(extractIP("No IP here"))
+// Output: null
+
+print(extractIP("IPs: 10.0.0.1, 172.16.0.1"))
+// Output: 10.0.0.1
+```
+---
+
+
+## file_append
+
+### 📝 Description  
+Appends data to an existing file, or creates a new file if the file does not exist.
+
+---
+
+### 🧮 Parameters
+
+| Name        | Type   | Description                    |
+|-------------|--------|--------------------------------|
+| `savePath`  | string | Directory path to the file.    |
+| `saveFile`  | string | Name of the file to append to. |
+| `newText`   | string | Text to append into the file.  |
+
+---
+
+#### ⚙️ Defaults
+
+| Parameter | Default |
+|-----------|---------|
+| _None_    |         |
+
+---
+
+### 🔁 Return  
+`void` — No return value.
+
+---
+
+### 🧠 Notes
+- Parameters are not validated.
+- If the file does not exist, it will be created.
+
+---
+
+### ✍️ Author
+
+| **`Svarii`** |
+|--------------|
+
+### 📦 Version
+
+| `0.0.1` |
+|---------|
+
+---
+
+### 💡 Example
+```greyscript
+dataString = "0xFC45B2XR9:missspeling"
+
+file_append("/DatabaseDir", "addressData.db", dataString)
+// Appends dataString to addressData.db in /DatabaseDir
+```
+---
+
+## file_delete
+
+### 📝 Description  
+Delete a specified file if it has write permissions.
+
+---
+
+### 🧮 Parameters
+
+| Name        | Type   | Description                        |
+|-------------|--------|------------------------------------|
+| `filePath`  | string | Path to the directory containing the file. |
+| `fileName`  | string | Name of the file to delete.        |
+
+---
+
+#### ⚙️ Defaults
+
+| Parameter | Default |
+|-----------|---------|
+| _None_    |         |
+
+---
+
+### 🔁 Return  
+`boolean` — `true` if the file has write permission; `false` if not.  
+🛈 *This does not verify that the file exists or was successfully deleted.*
+
+---
+
+### 🧠 Notes
+- Only checks for write permission.
+- Does not confirm file existence or successful deletion.
+- Parameters are not validated.
+
+---
+
+### ✍️ Author
+
+| **`Svarii`** |
+|--------------|
+
+### 📦 Version
+
+| `0.0.1` |
+|---------|
+
+---
+
+### 💡 Example
+```greyscript
+file_delete("/DatabaseDir", "addressData.db")
+// Deletes the file if write permission exists
+```
+
+---
+
+## file_exists
+
+### 📝 Description  
+Check to see if the specified file exists.
+
+---
+
+### 🧮 Parameters
+
+| Name        | Type   | Description                        |
+|-------------|--------|------------------------------------|
+| `filePath`  | string | Path to the directory to search.   |
+| `fileName`  | string | Name of the file to check for.     |
+
+---
+
+#### ⚙️ Defaults
+
+| Parameter | Default |
+|-----------|---------|
+| _None_    |         |
+
+---
+
+### 🔁 Return  
+`boolean` — `true` if the file is found, otherwise `false`.
+
+---
+
+### 🧠 Notes
+- Parameters are not validated.
+
+---
+
+### ✍️ Author
+
+| **`Svarii`** |
+|--------------|
+
+### 📦 Version
+
+| `0.0.1` |
+|---------|
+
+---
+
+### 💡 Example
+```greyscript
+file_exists("/DatabaseDir", "addressData.db")
+// return true if found, otherwise false
+```
+
+---
+
+## file_new
+
+### 📝 Description  
+Create a new file at the specified path if it does not already exist.
+
+---
+
+### 🧮 Parameters
+
+| Name        | Type   | Description                     |
+|-------------|--------|---------------------------------|
+| `filePath`  | string | Path to the directory.          |
+| `fileName`  | string | Name of the new file to create. |
+
+---
+
+#### ⚙️ Defaults
+
+| Parameter | Default |
+|-----------|---------|
+| _None_    |         |
+
+---
+
+### 🔁 Return  
+`void` — This function does not return any value.
+
+---
+
+### 🧠 Notes
+- File permissions are **not checked**.  
+- Parameters are **not validated**.
+
+---
+
+### ✍️ Author
+
+| **`Svarii`** |
+|--------------|
+
+### 📦 Version
+
+| `0.0.1` |
+|---------|
+
+---
+
+### 💡 Example
+```greyscript
+file_new("/DatabaseDir", "addressData.db")
+// Creates a file at the specified location
+```
+---
+
+## find_exploitable_addresses
+
+### 📝 Description  
+Scan a library for vulnerable addresses.
+
+---
+
+### 🧮 Parameters
+
+| Name               | Type                 | Description                                |
+|--------------------|----------------------|--------------------------------------------|
+| `libLocation`      | string               | Remote IP address or local absolute file location. |
+| `metaxploitObject` | map<string, function> | Metaxploit library object.                  |
+| `remoteTarget`     | flag (optional)      | Optional flag indicating if the target is remote. Default: `false`. |
+| `targetPort`       | number (optional)    | Optional target port number. Default: `0`. |
+
+
+#### ⚙️ Defaults
+
+| Parameter      | Default |
+|----------------|---------|
+| `remoteTarget` | `false` |
+| `targetPort`   | `0`     |
+
+---
+
+### 🔁 Return  
+`list<string>` — List of vulnerable addresses found.
+
+---
+
+### 📃 Author & Version
+
+<details>
+<summary>Show Author & Version</summary>
+
+| Author  | Version |
+|---------|---------|
+| Svarii  | 0.0.1   |
+
+</details>
+
+---
+
+### 💡 Example
+```greyscript
+libLocation = params[0]
+metax = include_lib("/lib/metaxploit.so")
+
+print find_exploitable_addresses(libLocation, metax)
+```
+
+---
+
+## require_params
+
+### 📝 Description  
+Specifies usage information and the number of required parameters.
+
+---
+
+### 🧮 Parameters
+
+| Name           | Type   | Description                       |
+|----------------|--------|---------------------------------|
+| `usage`        | string | The name or usage pattern of the library to load. |
+| `minReqParams` | number | The minimum number of required parameters.          |
+
+---
+
+#### ⚙️ Defaults
+
+| Parameter | Default |
+|-----------|---------|
+| _None_    |         |
+
+---
+
+### 🔁 Return  
+`void` — No return value.
+
+---
+
+### ✍️ Author & 📦 Version  
+<details><summary>Click to expand</summary>
+
+| **`Svarii`** | `0.0.1` |
+|--------------|---------|
+
+</details>
+
+---
+
+### 💡 Example
+```greyscript
+force_params("myApp [ipAddress] [port#]", 2)
+```
+
+---
+
+## usafe_check_list
+
+### 📝 Description
+
+Split unsafe check results into individual exploit results and return a list of `UnsafeCheck` strings.
+
+---
+
+### 🧮 Parameters
+
+| Name          | Type    | Description                                                     |
+|---------------|---------|-----------------------------------------------------------------|
+| `scanResults` | string  | The result from `fetch_exploit_requirements()`, typically the name of the library to load |
+
+---
+
+### 🧷 Default Parameters
+
+_None_
+
+---
+
+### 🔁 Return
+
+`list<string>` — A list of unsafe check strings derived from `scanResults`.
+
+---
+
+### ✍️ Author
+
+**Svarii**
+
+---
+
+### 📦 Version
+
+`0.0.1`
+
+---
+
+### 💡 Example
+
+```greyscript
+
+metax = include_lib("/lib/metaxploit.so")
+metaLib = metax.load(locals.libLocation)
+
+libLocation = params[0]
+    if not libLocation then libLocation = "/lib/aptclient.so"
+
+metax = include_lib("/lib/metaxploit.so")
+exploitMem = find_exploitable_addresses(libLocation, metaxploitObject)
+unsafeCheckList = unsafe_check_list(fetch_exploit_requirements(exploitMem))
+    print find_exploitable_addresses(libLocation, metax)
+```
+
+---
+
+## force_params
+
+### 📝 Description  
+Specifies usage information and checks if the required number of parameters have been passed. If not, the script exits and displays the usage message.
+
+---
+
+### 🧮 Parameters
+
+| Name            | Type   | Description                                       |
+|-----------------|--------|---------------------------------------------------|
+| `usage`         | string | The usage string to display if validation fails. |
+| `minReqParams`  | number | Minimum number of required parameters.           |
+
+---
+
+### ⚙️ Default Values
+
+| Parameter       | Default |
+|-----------------|---------|
+| *(None)*        | *(None)*|
+
+---
+
+### 🔁 Return  
+`void` — This function does not return any value.  
+🛈 Terminates the script early if the parameters do not meet requirements.
+
+---
+
+<details>
+<summary>📃 Author & Version</summary>
+
+#### ✍️ Author  
+**Svarii**
+
+#### 📦 Version  
+`0.0.1`
+
+</details>
+
+---
+
+### 💡 Example
+```greyscript
+force_params("myApp [ipAddress] [port#]", 2)
+```
+---
+
+
+## get_acks
+
+### 📝 Description  
+Calculates the recommended number of ACKs to collect based on signal strength.
+
+---
+
+### 🧮 Parameters
+
+| Name            | Type   | Description                        |
+|-----------------|--------|----------------------------------|
+| `signalStrength` | number | Signal strength value (default is 1). |
+
+---
+
+#### ⚙️ Defaults
+
+| Parameter       | Default |
+|-----------------|---------|
+| `signalStrength` | `1`     |
+
+---
+
+### 🔁 Return  
+`number` — Recommended number of ACKs to collect.
+
+---
+
+### ✍️ Author & 📦 Version  
+<details><summary>Click to expand</summary>
+
+| **`Svarii`** | `0.0.1` |
+|--------------|---------|
+
+</details>
+
+---
+
+### 💡 Example
+```greyscript
+reqACK = get_acks(6) // Signal Strength 6%
+print(reqACK) // Output: 14286
+```
+
+---
+
+## get_inbox
+
+### 📝 Description  
+Logs into the mail account and fetches inbox messages.
+
+---
+
+### 🧮 Parameters
+
+| Name         | Type   | Description                                                                 |
+|--------------|--------|-----------------------------------------------------------------------------|
+| `mailPass`   | string | **Required.** Password for the email account. If `null`, the function exits. |
+| `mailAddress`| string | *(Optional)* Email address to log in with. Defaults to `user_mail_address`. |
+
+---
+
+### ⚙️ Default Values
+
+| Parameter     | Default             |
+|---------------|---------------------|
+| `mailAddress` | `user_mail_address` |
+| `mailPass`    | `null`              |
+
+---
+
+### 🔁 Return  
+`object` — Inbox messages fetched from the mail server.  
+🛈 Returns `null` if `mailPass` is not provided.
+
+---
+
+<details>
+<summary>📃 Author & Version</summary>
+
+#### ✍️ Author  
+**Svarii**
+
+#### 📦 Version  
+`0.0.1`
+
+</details>
+
+---
+
+### 💡 Example
+```greyscript
+inbox = get_inbox("mypassword", "user@example.com")
+print(inbox)
+```
+---
+
+
+---
+
+## get_random_ip
+
+### 📝 Description  
+Generate a single random IP address.
+
+---
+
+### 🧮 Parameters  
+_None_
+
+---
+
+### 🔁 Return  
+`string` — Randomly generated IP Address.
+
+---
+
+<details>
+<summary>📃 Author & Version</summary>
+
+| **Author** | **Version** |
+|------------|-------------|
+| `Svarii`   | `0.0.1`     |
+
+</details>
+
+---
+
+### 💡 Example
+```greyscript
+randomIP = get_random_ip
+print(randomIP) // Output: ###.###.###.###
+```
+
+---
+
+## is_null
+
+### 📝 Description  
+Return `true` if item is null, `false` otherwise.
+
+---
+
+### 🧮 Parameters
+
+| Name        | Type | Description           |
+|-------------|------|-----------------------|
+| `testObject`| any  | The item to check     |
+
+---
+
+#### ⚙️ Default Parameters  
+_None_
+
+---
+
+### 🔁 Return  
+`boolean` — `true` if null, otherwise `false`.
+
+---
+
+<details>
+<summary>📃 Author & Version</summary>
+
+| **Author** | **Version** |
+|------------|-------------|
+| `Svarii`   | `0.0.1`     |
+
+</details>
+
+---
+
+### 💡 Example
+```greyscript
+nullItem = null
+notNull = "A string"
+
+print is_null(nullItem)  // Output: 1
+print is_null(notNull)   // Output: 0
+```
+
+---
+
+## is_typeof
+
+### 📝 Description  
+Check if the object passed is of the specified type and return a boolean answer.
+
+---
+
+### 🧮 Parameters
+
+| Name        | Type   | Description            |
+|-------------|--------|------------------------|
+| `testObject`| any    | The object to test     |
+| `objectType`| string | The expected identifier|
+
+---
+
+#### ⚙️ Default Parameters  
+_None_
+
+---
+
+### 🔗 Links  
+[typeof Documentation](https://documentation.greyscript.org/#GENERAL_TYPEOF) — List of standard object types.
+
+---
+
+### 🔁 Return  
+`boolean` — `true` if the object is of the specified type, otherwise `false`.
+
+---
+
+<details>
+<summary>📃 Author & Version</summary>
+
+| **Author** | **Version** |
+|------------|-------------|
+| `Svarii`   | `0.0.1`     |
+
+</details>
+
+---
+
+### 💡 Example
+```greyscript
+print is_typeof(cryptoLibObject, "cryptoLib")       // Output: true
+print is_typeof(metaxploitLibObject, "MetaxploitLib") // Output: true
+print is_typeof(metaxploitLibObject, "cryptoLib")     // Output: false
+```
+
+---
+
+## load_lib
+
+### 📝 Description  
+Loads a library from the lib directory, optionally specifying directory and verifying type.
+
+---
+
+### 🔗 Links  
+[Default type list](https://documentation.greyscript.org/#GENERAL_TYPEOF)
+
+---
+
+### 🧮 Parameters
+
+| Name      | Type   | Description                                                                                  |
+|-----------|--------|----------------------------------------------------------------------------------------------|
+| `libName` | string | The file name of the library to load (must include extension).                              |
+| `libDir`  | string | *(optional)* Directory where the library is located (should not have trailing slash).       |
+| `libType` | string | *(optional)* Expected type of the library (case sensitive).                                |
+
+---
+
+### 🔁 Return  
+`objectLibrary` | `null` — Returns the loaded library object or `null` if not found or type mismatched.
+
+---
+
+### 🧠 Notes  
+- `libName` must be full filename including extension  
+- `libDir` should not have trailing slash  
+- `libType` is case sensitive  
+
+---
+
+<details>
+<summary>📃 Author & Version</summary>
+
+| **Author** | **Version** |
+|------------|-------------|
+| `Svarii`   | `0.0.1`     |
+
+</details>
+
+---
+
+### 💡 Examples
+```greyscript
+lib = load_lib  
+// Loads "metaxploit.so" from "/lib" directory
+
+lib = load_lib("metaxploit.so")  
+// Loads a library without specifying type
+
+lib = load_lib("customLib.so", "/altLib")  
+// Loads a library from specified directory
+
+lib = load_lib("crypto.so", "/lib", "cryptoLib")  
+// Loads a library with specified type (returns null on type mismatch)
+```
+
+---
 
 ## network_device_list
-![image](https://github.com/user-attachments/assets/2bc52a9d-381f-4314-a95c-c6ed4788f96d)
+
+### 📝 Description  
+Pulls network device data from the host computer and returns a list of network device information. Each item is a list representing a network adaptor, its model, and monitoring status.
+
+---
+
+### 🧮 Parameters
+
+| Name     | Type   | Description                            |
+|----------|--------|----------------------------------------|
+| `user`   | string | *(Optional)* Username for access.      |
+| `pass`   | string | *(Optional)* Password for access.      |
+
+---
+
+### ⚙️ Default Values
+
+| Parameter | Default |
+|-----------|---------|
+| `user`    | `""`    |
+| `pass`    | `""`    |
+
+---
+
+### 🔁 Return  
+`list<list<string>>` — A list of network device entries.  
+Each sublist contains:
+
+```text
+[ adapter, model, monitor_enabled ]
+```
+
+---
+
+<details>
+<summary>📃 Author & Version</summary>
+
+#### ✍️ Author  
+**Svarii**
+
+#### 📦 Version  
+`0.0.1`
+
+</details>
+
+---
+
+### 💡 Example
+```greyscript
+netList = network_device_list()
+for net in netList
+    print(net[0] + " - " + net[1] + " [" + net[2] + "]")
+
+```
+---
+
+`parse_inbox`
+
+#### 📝 Description
+
+Parses a list of mail IDs using a global `metaMail` object and extracts structured message data.  
+Each parsed message includes: `id`, `from`, `subject`, `body`.
+
+---
+
+#### 🧮 Parameters
+
+| Name         | Type          | Description                        |
+|--------------|---------------|----------------------------------|
+| `mailIDList` | list<string>  | A list of message IDs to parse.  |
+
+---
+
+#### 🧷 Default Values
+
+| Parameter | Default Value |
+|-----------|---------------|
+| *(None)*  | *(None)*      |
+
+---
+
+#### 🔁 Return
+
+`list<object>` — A list of parsed mail objects with the following structure:
+
+- `id`: Message ID  
+- `from`: Sender  
+- `subject`: Subject line  
+- `body`: Full body text of the email  
+
+---
+
+<details>
+<summary>📃 Author & Version</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1  
+
+</details>
+
+---
+
+#### 💡 Example
+
+```greyscript
+mailIDs = ["msgid-001", "msgid-002"]
+parsed = parse_inbox(mailIDs)
+print(parsed[0].subject)  // Output: "Subject line here"
+```
+---
+
+## parse_inbox
+
+### 📝 Description
+
+Parses a list of mail IDs using a global `metaMail` object and extracts structured message data.  
+Each parsed message includes: `id`, `from`, `subject`, `body`.
+
+---
+
+### 🧮 Parameters
+
+| Name         | Type          | Description                        |
+|--------------|---------------|----------------------------------|
+| `mailIDList` | list<string>  | A list of message IDs to parse.  |
+
+---
+
+### 🧷 Default Values
+
+| Parameter | Default Value |
+|-----------|---------------|
+| *(None)*  | *(None)*      |
+
+---
+
+### 🔁 Return
+
+`list<object>` — A list of parsed mail objects with the following structure:
+
+- `id`: Message ID  
+- `from`: Sender  
+- `subject`: Subject line  
+- `body`: Full body text of the email  
+
+---
+
+<details>
+<summary>📃 Author & Version</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1  
+
+</details>
+
+---
+
+### 💡 Example
+
+```greyscript
+mailIDs = ["msgid-001", "msgid-002"]
+parsed = parse_inbox(mailIDs)
+print(parsed[0].subject)  // Output: "Subject line here"
+```
+
+---
+
 ## program_name
-![image](https://github.com/user-attachments/assets/b47339d1-5008-4704-872b-3f5ffb6635e7)
+
+### 📝 Description
+
+Return a string with the name of the file that is running this script.
+
+---
+
+### 🧮 Parameters
+
+| Name | Type   | Description                                         |
+|------|--------|-----------------------------------------------------|
+| `user` | string (optional) | The username to use for access                  |
+| `pass` | string (optional) | The password to use for access                  |
+
+---
+
+### 🧷 Default Values
+
+| Parameter | Default Value |
+|-----------|---------------|
+| *(None)*  | *(None)*      |
+
+---
+
+### 🔁 Return
+
+`string` — The name of the running program file.
+
+---
+
+<details>
+<summary>📃 Author & Version</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1  
+
+</details>
+
+---
+
+### 💡 Example
+
+```greyscript
+programName = program_name
+```
+
+---
+
 ## unsafe_check_list
-![image](https://github.com/user-attachments/assets/9ee095f2-82d7-42b1-ad84-11043361ae24)
+
+### 📝 Description
+
+Split Unsafe Check Results into individual exploit result strings and return a list of UnsafeCheck strings.
+
+---
+
+### 🧮 Parameters
+
+| Name          | Type   | Description                                              |
+|---------------|--------|----------------------------------------------------------|
+| `scanResults` | string | Result from `fetch_exploit_requirements()` function.     |
+
+---
+
+### 🧷 Default Values
+
+| Parameter | Default Value |
+|-----------|---------------|
+| *(None)*  | *(None)*      |
+
+---
+
+### 🔁 Return
+
+`list<string>` — List of individual unsafe check strings.
+
+---
+
+<details>
+<summary>📃 Author & Version</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1  
+
+</details>
+
+---
+
+### 💡 Example
+
+```greyscript
+libLocation = "/lib/aptclient.so"
+metax = include_lib("/lib/metaxploit.so")
+metaLib = metax.load(locals.libLocation)
+exploitMem = find_exploitable_addresses(libLocation, metaxploitObject)
+unsafeCheckList = unsafe_check_list(fetch_exploit_requirements(exploitMem))
+```
+---
 
 # 📄 Construct Overview
-## id_self
+## report_string_construct__
 
-![image](../images/docblocks/construct/id_self.png)
+### 📝 Description  
+Constructs and returns an object containing categorized status strings used for reporting various checks and statuses such as network devices, libraries, files, users, internet connection, and more.
+
+---
+
+### 🧮 Parameters  
+_None_
+
+---
+
+### 🔁 Return  
+`object` — An object (`gstexts`) containing categorized status messages grouped by `fail`, `pass`, `action`, `info`, and `email` categories.
+
+---
 
 
 
+### ⚙️ Structure Overview
+
+| Category | Description                                |
+|----------|--------------------------------------------|
+| `fail`   | Contains failure status messages           |
+| `pass`   | Contains success status messages           |
+| `action` | Contains messages indicating ongoing checks|
+| `info`   | Contains informational messages            |
+| `email`  | Contains email-related messages             |
+
+---
+
+### ✍️ Author
+
+| **`Svarii`** |
+|--------------|
+
+### 📦 Version
+
+| `0.0.1` |
+|---------|
+
+---
+
+### 💡 Example  
+```greyscript
+statusMessages = report_string_construct__()
+
+print(statusMessages.fail.network_devices_found)
+// Output: "No network devices found"
+
+print(statusMessages.pass.lib_found)
+// Output: "Library found"
+
+print(statusMessages.action.check_user_email)
+// Output: "Checking for email account..."
+```
+---
 
 
 

@@ -1,6 +1,6 @@
 // Applies margin tag to the string
     // @description **Description:**
-    // @description Modifies a text string by wraping it within the margin tag
+    // @description Modifies a text string by wrapping it within the margin tag
     // @description ---
     //
     // @description **Parameters:**
@@ -30,4 +30,39 @@
     //  print(result); // Outputs: <margin=5em>Hello</margin>           
 string.margin = function(marginSpace = "5em")
     return "<margin=" + locals.marginSpace + ">" + self + "</margin>"
+end function 
+
+
+// Applies <margin-left> tag to the string
+    // @description **Description:**
+    // @description Modifies a text string by wraping it within the <margin-left> tag
+    // @description ---
+    //
+    // @description **Parameters:**
+    // @param {string} [<margin-left]
+    // @description - `<margin-left`:`string` | `Accepted values`: `em`, `px`, `%`
+    //
+    // @description **Parameter Defaults:**
+    // @description - `<margin-left`:`5em`
+    //
+    // @description **Return:**
+    // @return {string}
+    // @description `string` The string value wrapped within the `<margin-left>` tag
+    // @description ---
+    //
+    // @description **Links:**
+    // @description - [Text Mesh Pro: Rich Text Margin-Left](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextMargins.html)	
+    // @description ---	
+    //
+    // @description **Author:** Svarii
+    // @description **Version:** 0.0.1
+    // @description ---
+    //
+    //  @example newString = "Hello"
+    //  @example 
+    //  @example result = newString.margin-left
+    //  @example 
+    //  print(result); // Outputs: <margin-left=5em>Hello</margin-left>           
+string.margin_left = function(marginSpace = "5em")
+    return "<margin-left=" + locals.marginSpace + ">" + self + "</margin-left>"
 end function 

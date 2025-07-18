@@ -1,6 +1,6 @@
 // Applies alpha tag to the string
     // @description **Description:**
-    // @description Modifies a text string and preced it with the alpha tag
+    // @description Modifies a text string and prepends it with the alpha tag
     // @description ---
     //
     // @description **Parameters:**

@@ -1,4 +1,34 @@
-    parse_inbox = function(mailIDList)
+// Parse Inbox Messages
+// @description **Description:**
+// @description Parses a list of mail IDs using a global `metaMail` object and extracts structured message data.
+// @description Each parsed message includes: `id`, `from`, `subject`, `body`
+// @description ---
+//
+// @description **Parameters:**
+// @param {list<string>} mailIDList
+// @description - `mailIDList`:`<list<string>>` A list of message IDs to parse.
+//
+// @description **Parameter Defaults:**
+// @description - `none`
+//
+// @description **Return:**
+// @return {list<object>}
+// @description `list<object>` A list of parsed mail objects with the structure:
+// @description - `id`: Message ID
+// @description - `from`: Sender
+// @description - `subject`: Subject line
+// @description - `body`: Full body text of the email
+// @description ---
+//
+// @description **Author:** Svarii
+// @description **Version:** 0.0.1
+// @description ---
+//
+// @example
+// mailIDs = ["msgid-001", "msgid-002"]
+// parsed = parse_inbox(mailIDs)
+// print(parsed[0].subject)  // Output: "Subject line here"
+parse_inbox = function(mailIDList)
 		locals.mailObjects = []
 		locals.bodyText = ""
         for mailList in locals.mailIDList

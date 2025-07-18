@@ -1,21 +1,21 @@
 // Applies indent tag to the string
     // @description **Description:**
-    // @description Modifies a text string to wrap it in the indent tag
+    // @description Modifies a text string to wrap it in the `<indent>` tag
     // @description ---
     //
     // @description **Parameters:**
-    // @param {string} [alignment]
-    // @description - `alignment` Accepted values: `left`, `center`, `right`, `justified`, and `flush`
+    // @param {string} [indentPercent]
+    // @description - `indentPercent` Accepted Input: `em`, `px`, and `%`
     // @param {boolean} [closeTag]
     // @description - `closeTag` Accepted values: `true` or `false`
     //
     // @description **Parameter Defaults:**
-    // @description - `alignment`:`center`
+    // @description - `indentPercent`:`15%`
     // @description - `closeTag`:`true`
     //
     // @description **Return:**
     // @return {string}
-    // @description `string` the string value embedded in (or preceded by) the `<align>` tag
+    // @description `string` the string value embedded in (or appended to) the `<indent>` tag
     // @description ---
     //
     // @description **Author:** Svarii
@@ -28,10 +28,10 @@
     // @description ---       
     // @description ***footnotes***   
     // @description Parameters are not checked for validity   
-    // @description - `alignment` will not reject invalid values | **Return**: `string<withParseIssues>`
+    // @description - `indentPercent` will not reject invalid values | **Return**: `string<withParseIssues>`
     // @description - `closeTag` will not reject invalid values | **Return**: `null`
     // @description
-    // @description If all paramaters passed are invalid | **Return**: `null`
+    // @description If all parameters passed are invalid | **Return**: `null`
     // @description ---          
     //
     // @return {string}
@@ -39,7 +39,20 @@
     // @example 
     // @example result = newString.indent        
     // @example        
-    // print(result); // Outputs: <indent=15%>Hello
-string.indent = function(indentPercent="15%")
-    return "<indent=" + locals.indentPercent+ ">" + self
+    // print(result); // Outputs: <indent=15%>Hello</indent>
+    // @example            
+    // @example result = newString.indent("3em")
+    // @example        
+    // print(result); // Outputs: <indent=3em>Hello</indent>
+    // @example            
+    // @example result = newString.indent("25px", false)
+    // @example        
+    // print(result); // Outputs: <indent=25px>Hello        
+string.indent = function(indentPercent="15%", closeTag = true)
+    if locals.closeTag == false then
+        return "<indent=" + locals.indentPercent + ">" + self
+    else
+        return "<indent=" + locals.indentPercent + ">" + self + "</indent>"
+    end if
+    return null
 end function 

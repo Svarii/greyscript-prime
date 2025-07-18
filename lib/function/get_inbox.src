@@ -1,4 +1,32 @@
-    get_inbox = function(mailAddress = user_mail_address, mailPass = "mailpass")
+// Get Inbox Messages
+// @description **Description:**
+// @description Logs into the mail account and fetches inbox messages.
+// @description ---
+//
+// @description **Parameters:**
+// @param {string} [mailAddress]
+// @description - `mailAddress`:`string` | Optional. Defaults to `user_mail_address`
+// @param {string} [mailPass]
+// @description - `mailPass`:`string` | Optional. Defaults to `"mailpass"`
+//
+// @description **Parameter Defaults:**
+// @description - `mailAddress`:`user_mail_address`
+// @description - `mailPass`:`"mailpass"`
+//
+// @description **Return:**
+// @return {object}
+// @description `object` Inbox messages fetched from the mail server.
+// @description ---
+//
+// @description **Author:** Svarii
+// @description **Version:** 0.0.1
+// @description ---
+//
+// @example
+// inbox = get_inbox("mypassword","user@example.com")
+// print(inbox)
+    get_inbox = function(mailPass = null, mailAddress = user_mail_address)
+        if mailPass == null then return null
         locals.metaMail = mail_login(locals.mailAddress, locals.mailPass)
 		return metaMail.fetch
     end function

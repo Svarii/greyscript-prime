@@ -1,6 +1,6 @@
 // Applies size tag to the string
     // @description **Description:**
-    // @description Modifies a text string by wrapping it within the size tag
+    // @description Modifies a text string by wrapping it within the `<size>` tag
     // @description ---
     //
     // @description **Parameters:**

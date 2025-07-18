@@ -37,9 +37,9 @@
 load_lib = function(libName = "metaxploit.so", libDir = "/lib", libType = "")
     locals.libLocation = locals.libDir + "/" + locals.libName
     if locals.libName == "" then
-        return get_shell.host_computer.File("/")
+        return null
     end if
-    yield; locals.lib = include_lib(locals.libLocation)
+    locals.lib = include_lib(locals.libLocation)
         if not typeof(locals.lib) == null then
             if locals.libType == "" then
                 return locals.lib

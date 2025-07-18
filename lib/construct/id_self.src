@@ -1,4 +1,4 @@
-// Generate idSelf Object
+// Generate currentStatus Object
 	// @description **Description:**
 	// Generate an object that contains basic environment information
 	// @description ---
@@ -9,22 +9,26 @@
 	//
 	// @description **Return:**
 	// @return {map<string,maps>} - System Object {.shell and .computer}
-	// @description `computerStatus`:`<maps><string>` computerStatus Object
+	// @description `computerStatus`:`<maps><string>` currentStatus Object
 	// @description - `.compInfo` - computerInformation Object
 	// @description - - `.name`
 	// @description - - `.home`
-	// @description - - `.gateway`
+	// @description - - `.location`
+	// @description - - `.path`	
+	// @description - - `.user`	
 	// @description - - `.has_internet`
 	// @description - `.ipInfo` - ipInformation Object
 	// @description - - `.local`
 	// @description - - `.public`
+	// @description - - `.gateway`	
 	// @description ---   
 	//    
 	//  @example iScan = new id_self
-	//  @example print typeof(iScan)  //Output: idSelf
+	//  @example print typeof(iScan)  //Output: currentStatus
 	//  @example 
-	//  @example	print iScan.name  //Output: The name of the computer
-	//  @example	print iScan.has_internet  //Outputs: boolean 1 or 0
+	//  @example	print iScan.compInfo.name  //Output: The name of the computer
+	//  @example	print iScan.compInfo.has_internet  //Output: boolean 1 or 0
+	//  @example	print iScan.ipInfo.public  //Output: public ip of computer
 id_self = function()
 	locals.localRouter = get_router
         if not typeof(locals.localRouter) == "router" then return "Failed to fetch local router object."

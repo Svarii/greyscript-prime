@@ -1,5 +1,3 @@
-   
-
         //  **Description:**
         //  Generate a random number from 0 to number, or from optional minimum to number
         //  @param {number} [min]

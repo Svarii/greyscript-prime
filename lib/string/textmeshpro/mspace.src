@@ -1,10 +1,10 @@
 // Applies mark tag to the string
     // @description **Description:**
-    // @description Modifies a text string by wraping it within the mspace tag
+    // @description Modifies a text string by wrapping it within the mspace tag
     // @description ---
     //
     // @description **Parameters:**
-    // @param {string} [color]
+    // @param {string} [monospace]
     // @description - `monospace`:`string` | `Accepted values`: `em`, `px`, `%`
     //
     // @description **Parameter Defaults:**
@@ -16,7 +16,7 @@
     // @description ---
     //
     // @description **Links:**
-    // @description - [Text Mesh Pro: Rich Text mark](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextMonospace.html)	
+    // @description - [Text Mesh Pro: Rich Text Monospacing](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextMonospace.html)	
     // @description ---	
     //
     // @description **Author:** Svarii
