@@ -4,29 +4,86 @@ GreyScript Prime is an extension for **Grey Script** that adds additional method
 
 > # Table of Contents
 > 
-> - 📖 [Introduction](#introduction)
-> - 🚀 [Getting Started](#getting-started)
-> 
 > <details>
-> <summary>⚙️ File Management Functions</summary>
+> <summary>🅰️  Text Mesh Pro Methods</summary>
+>
+> - string.[align](#align)
+> - string.[alpha](#alpha)
+> - string.[bold](#bold)
+> - string.[color](#color)
+> - string.[cspace](#cspace)
+> - string.[indent](#indent)
+> - string.[italic](#italic)
+> - string.[line-indent](#line-indent)
+> - string.[lowercase](#lowercase)
+> - string.[margin](#margin)
+> - string.[mark](#mark)
+> - string.[mspace](#mspace)
+> - string.[nobr](#nobr)
+> - string.[noparse](#noparse)
+> - string.[page](#page)
+> - string.[pos](#pos)
+> - string.[rotate](#rotate)
+> - string.[size](#size)
+> - string.[strike](#strike)
+> - string.[sub](#sub)
+> - string.[sup](#sup)
+> - string.[sub](#sub)
+> - string.[underline](#underline)
+> - string.[uppercase](#uppercase)
+> - string.[voffset](#voffset)
+> - string.[width](#width)
+> </details>
+>
+> <details>
+> <summary>🔢 Number Methods</summary>
+>
+> - number.[clamp](#clamp)
+> - number.[diff](#diff)
+> - number.[divide](#divide)
+> - number.[is_more](#is_more)
+> - number.[is_less](#is_less)
+> - number.[lerp](#lerp)
+> - number.[minus](#minus)
+> - number.[multiply](#multiply)
+> - number.[plus](#plus)
+> - number.[random_from](#random_from)
+> - number.[saturate](#saturate)
+> </details>
+> <details>
+> <summary>📋 List Methods</summary>
+>
+> - list.[crop](#crop)
+> - list.[string](#string)
+> </details>
+>
+> <details>
+> <summary>🗂️ Map Methods</summary>
+>
+> - map.[get_atrributes](#get_atrributes)
+> </details>
+>
+> <details>
+> <summary>📁 File Management Functions</summary>
 > 
 > - [file_append](#file_append)
 > - [file_delete](#file_delete)
 > - [file_exists](#file_exists)
 > - [file_new](#file_new)
-> 
 > </details>
+>
+> <details>
+> <summary>⚙️ Task Functions</summary>
 > 
-> - 🏷️ [Other Functions](#other-functions)
-> - 🧰 [Utilities](#utilities)
-> - ❓ [FAQ](#faq)
-
-
-
-# stringMethods
-![Static Badge](https://img.shields.io/badge/method-string-green)
+> - [file_append](#file_append)
+> - [file_delete](#file_delete)
+> - [file_exists](#file_exists)
+> - [file_new](#file_new)
+> </details>
 
 ---
+
+# 🅰️ ![Static Badge](https://img.shields.io/badge/string-methods-darkorange)
 
 ## align
 ### 📝 Description
@@ -784,14 +841,12 @@ print(result)
 ### 📝 Description
 Modifies a text string by appending the `<page>` tag to the end.
 
----
 
 ### ➖ Parameters  
 | Parameter | Default Value |
 |-----------|---------------|
 | *(None)*  | *(None)*      |
 
----
 
 ### 🔁 Return
 `string` — The string value with the `<page>` tag appended to the end.
@@ -817,10 +872,11 @@ result = newString.page
 print(result)
 // Output: Hello<page>
 ```
----
 
 #### 🔗 Links
 - [Text Mesh Pro: Page Break](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextPageBreak.html)
+
+---
 
 ## pos
 
@@ -835,7 +891,6 @@ Modifies a text string by prepending it with the `<pos>` tag.
 |-----------|--------|------------------------|
 | `position` | string | Optional. Default: `"50%"` |
 
----
 
 #### ⚙️ Defaults
 
@@ -843,7 +898,6 @@ Modifies a text string by prepending it with the `<pos>` tag.
 |------------|---------|
 | `position` | `"50%"` |
 
----
 
 ### 🔁 Return
 `string` — The string prepended with the `<pos>` tag.
@@ -892,12 +946,10 @@ Modifies a text string by wrapping it within the `<rotate>` tag.
 |-------------------|---------|
 | `degreesRotation` | `"45"`  |
 
----
 
 ### 🔁 Return
 `string` — The string rotated with the `<rotate>` tag.
 
----
 
 <details>
 <summary>📃 About</summary>
@@ -923,6 +975,8 @@ print(result)
 #### 🔗 Links
 - [Text Mesh Pro: Rotate](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextRotate.html)
 
+---
+
 ## size
 
 ### 📝 Description
@@ -936,7 +990,6 @@ Modifies a text string by wrapping it within the `<size>` tag.
 |-----------|--------|----------------------|
 | `textSize`| string | Optional. Default: `"5em"` |
 
----
 
 #### ⚙️ Defaults
 
@@ -944,7 +997,6 @@ Modifies a text string by wrapping it within the `<size>` tag.
 |------------|---------|
 | `textSize` | `"5em"` |
 
----
 
 ### 🔁 Return
 `string` — The string wrapped within the `<size>` tag.
@@ -970,10 +1022,11 @@ result = newString.size
 print(result)
 // Output: <size="5em">Hello </size>
 ```
----
 
 #### 🔗 Links
 - [Text Mesh Pro: Font Size](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextSize.html)
+
+---
 
 ## strike
 
@@ -987,7 +1040,6 @@ Modifies a text string by wrapping it within the `<s>` tag.
 |-----------|---------------|
 | *(None)*  | *(None)*      |
 
----
 
 ### 🔁 Return
 `string` — The string wrapped within the `<s>` tag.
@@ -1014,10 +1066,10 @@ print(result)
 // Output: <s>Hello</s>
 ```
 
----
-
 ### 🔗 Links
 - [Text Mesh Pro: Strikethrough](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextStrikethroughUnderline.html)
+
+---
 
 ## sub
 
@@ -1030,7 +1082,7 @@ Modifies a text string by wrapping it within the `<sub>` tag.
 | Parameter | Default Value |
 |-----------|---------------|
 | *(None)*  | *(None)*      |
----
+
 
 ### 🔁 Return
 `string` — The string wrapped within the `<sub>` tag.
@@ -1057,10 +1109,10 @@ print(result)
 // Output: <sub>Hello</sub>
 ```
 
----
-
 ### 🔗 Links
 - [Text Mesh Pro: Subscript](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextSubSuper.html)
+
+---
 
 ## sup
 
@@ -1073,8 +1125,6 @@ Modifies a text string by wrapping it within the `<sup>` tag.
 | Parameter | Default Value |
 |-----------|---------------|
 | *(None)*  | *(None)*      |
-
----
 
 ### 🔁 Return
 `string` — The string wrapped within the `<sup>` tag.
@@ -1101,10 +1151,10 @@ print(result)
 // Output: <sup>Hello</sup>
 ```
 
----
-
 ### 🔗 Links
 - [Text Mesh Pro: Superscript](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextSubSuper.html)
+
+---
 
 ## underline
 
@@ -1117,8 +1167,6 @@ Modifies a text string by wrapping it within the `<u>` tag.
 | Parameter | Default Value |
 |-----------|---------------|
 | *(None)*  | *(None)*      |
-
----
 
 ### 🔁 Return
 `string` — The string wrapped within the `<u>` tag.
@@ -1145,10 +1193,10 @@ print(result)
 // Output: <u>Hello</u>
 ```
 
----
-
 ### 🔗 Links
 - [Text Mesh Pro: Underline](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextStrikethroughUnderline.html)
+
+---
 
 ## uppercase
 
@@ -1162,7 +1210,6 @@ Modifies a text string by wrapping it within the `<uppercase>` tag.
 |-----------|---------------|
 | *(None)*  | *(None)*      |
 
----
 
 ### 🔁 Return
 `string` — The string wrapped within the `<uppercase>` tag.
@@ -1189,10 +1236,10 @@ print(result)
 // Output: <uppercase>Hello</uppercase>
 ```
 
----
-
 ### 🔗 Links
 - [Text Mesh Pro: Uppercase](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextLetterCase.html)
+
+---
 
 ## voffset
 
@@ -1239,6 +1286,10 @@ result = newString.voffset
 print(result)
 // Outputs: <voffset=1em>Hello</voffset>
 ```
+
+### 🔗 Links
+- [Text Mesh Pro: Vertical Offset](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextVOffset.html)
+
 ---
 
 ## width
@@ -1254,7 +1305,6 @@ Modifies a text string by wrapping it within the `<width>` tag.
 |---------|--------|-----------------------------------|
 | `width` | string | Optional. Accepted input: `em`, `px`, or `%`. |
 
----
 
 #### ⚙️ Defaults
 
@@ -1262,7 +1312,6 @@ Modifies a text string by wrapping it within the `<width>` tag.
 |-----------|---------|
 | `width`   | `"50%"` |
 
----
 
 ### 🔁 Return  
 `string` — The string value wrapped within the `<width>` tag.
@@ -1293,6 +1342,7 @@ print(result)
 #### 🔗 Links
 - [Text Mesh Pro: Horizontal Position](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextPos.html)
 
+---
 
 ## Logic Methods
 ### .extract
@@ -1420,7 +1470,8 @@ print(newString.remove_sup) // Outputs: Hello
 
 ```
 
-# numberMethods
+# 🔢 ![Static Badge](https://img.shields.io/badge/number-methods-lightcyan)
+
 ![Static Badge](https://img.shields.io/badge/method-number-green)
 
 ## .clamp
@@ -1535,8 +1586,7 @@ The `.saturate` Clamps a number to the normalized range [0, 1].
 
 
 ---
-## listMethods
-![Static Badge](https://img.shields.io/badge/method-list-green)
+# 📋 ![Static Badge](https://img.shields.io/badge/list-methods-lightblue)
 
 
 ---
@@ -1568,7 +1618,8 @@ string
 
 ---
 
-# mapMethods
+# 🗂️ ![Static Badge](https://img.shields.io/badge/map-methods-lightforestgreen)
+
 ## .get_attributes
 ![image](https://github.com/user-attachments/assets/0168765b-4220-4176-88d1-257209da67b8)
 
