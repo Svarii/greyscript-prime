@@ -25,93 +25,85 @@ To install GreyScript Prime, follow these steps:
 
 3. Open the project in VSCode and start coding!
 
-## Methods Overview
+> # API Overview
+> 
+> <details>
+> <summary>🅰️  Text Mesh Pro Methods</summary>
+>
+> - string.[align](#align)
+> - string.[alpha](#alpha)
+> - string.[bold](#bold)
+> - string.[color](#color)
+> - string.[cspace](#cspace)
+> - string.[indent](#indent)
+> - string.[italic](#italic)
+> - string.[line-indent](#line-indent)
+> - string.[lowercase](#lowercase)
+> - string.[margin](#margin)
+> - string.[mark](#mark)
+> - string.[mspace](#mspace)
+> - string.[nobr](#nobr)
+> - string.[noparse](#noparse)
+> - string.[page](#page)
+> - string.[pos](#pos)
+> - string.[rotate](#rotate)
+> - string.[size](#size)
+> - string.[strike](#strike)
+> - string.[sub](#sub)
+> - string.[sup](#sup)
+> - string.[sub](#sub)
+> - string.[underline](#underline)
+> - string.[uppercase](#uppercase)
+> - string.[voffset](#voffset)
+> - string.[width](#width)
+> </details>
+>
+> <details>
+> <summary>🔢 Number Methods</summary>
+>
+> - number.[clamp](#clamp)
+> - number.[diff](#diff)
+> - number.[divide](#divide)
+> - number.[is_more](#is_more)
+> - number.[is_less](#is_less)
+> - number.[lerp](#lerp)
+> - number.[minus](#minus)
+> - number.[multiply](#multiply)
+> - number.[plus](#plus)
+> - number.[random_from](#random_from)
+> - number.[saturate](#saturate)
+> </details>
+> <details>
+> <summary>📋 List Methods</summary>
+>
+> - list.[crop](#crop)
+> - list.[string](#string)
+> </details>
+>
+> <details>
+> <summary>🗂️ Map Methods</summary>
+>
+> - map.[get_atrributes](#get_atrributes)
+> </details>
+>
+> <details>
+> <summary>📁 File Management Functions</summary>
+> 
+> - [file_append](#file_append)
+> - [file_delete](#file_delete)
+> - [file_exists](#file_exists)
+> - [file_new](#file_new)
+> </details>
+>
+> <details>
+> <summary>⚙️ Task Functions</summary>
+> 
+> - [file_append](#file_append)
+> - [file_delete](#file_delete)
+> - [file_exists](#file_exists)
+> - [file_new](#file_new)
+> </details>
 
-### String Methods
-
-- **`.color("#color")`**: Apply a color to text.
-- **`.align`**: Align the text
-- **`.alpha`**: Set the alpha value of the text
-- **`.cspace`**: Set the character spacing of the text
-- **`.bold`**: Make the text bold.
-- **`.lowercase`**: Make the text lowercase.
-- **`.uppercase`**: Make the text uppercase.
-- **`.italic`**: Make the text italic.
-- **`.indent`**: Add indent.
-- **`.line-indent`**: Add line-indent.
-- **`.margin`**: Add margin.
-- **`.mspace`**: Add mspace.
-- **`.nobr`**: add nobr tag.
-- **`.noparse`**: add noparse tag.
-- **`.pos`**: add pos tag.
-- **`.rotate`**: Rotate characters.
-- **`.underline`**: Underline the text.
-- **`.strike`**: Apply strikethrough to text.
-- **`.mark`**: Highlight the text.
-- **`.sub`**: Apply subscript to text.
-- **`.sup`**: Apply superscript to text.
-- **`.voffset`**: Add voffset tag.
-- **`.width`**: Add width tag.
-- **`.remove_char_last`**: Remove the last character from text.
-- **`.remove_char_first`**: Remove the first character from text.
-- **`.remove_bold`**: Remove bold formatting from text.
-- **`.remove_italic`**: Remove italic formatting from text.
-- **`.remove_underline`**: Remove underline formatting.
-- **`.remove_strike`**: Remove strikethrough formatting.
-- **`.remove_mark`**: Remove highlight from text.
-- **`.remove_sub`**: Remove subscript from text.
-- **`.remove_sup`**: Remove superscript from text.
-- **`.extract_between`**: Extract the text between the given values.
-- **`.format`**: Allows for string interpolation.
-
-### Number Methods
-
-- **`.clamp(min, max)`**: clamps a number in range.
-- **`.lerp(min, max)`**: computes linear interpolation
-- **`.plus(number)`**: Add 1 or value to a number.
-- **`.minus(number)`**: Subtract 1 or a value from a number.
-- **`.diff(number)`**: Calculate the absolute difference.
-- **`.greater_than(number)`**: Check if number is greater.
-- **`.lesser_than(number)`**: Check if number is lesser.
-- **`.random_from(number)`**: Generate a random number from 0 (or number) to number.
-- **`.multiply(number)`**: Calculate the multiple.
-- **`.div(number)`**: divide by number.
-- **`.is_integer(number)`**: check if is round integer
-- **`.is_float(number)`**: check if is float
-- **`.is_negative(number)`**: check if number is negative
-- **`.is_positive(number)`**: check if number is positive
-- **`.is_zero(number)`**: check if number is zero
-
-### List Methods
-
-- **`.crop`**: Removes empty list items from list ends.
-- **`.string`**: Loops through a list and prints each item.
-
-### Function Methods
-
-- **`load_lib(libName, libDir, typeExpected)`**: Load a library from `/lib`.
-- **`force_params(usage, numReqParams)`**: Force paramater usage and add help 
-- **`program_name()`**: Gets name of program {self}
-- **`is_null()`**: Checks if object is null; if null, print / return / exit options
-- **`is_type()`**: Checks Types and specifies on-fail action
-- **`network_device_list()`**: Returns Network devices in a list
-- **`calc_ack()`**: Caculates the recommended amount of ACKs to collect
-- **`bool_text()`**: Return string true or false representing boolean
-- **`extract_ip()`**
-- **`file_append()`**
-- **`find_exploitable_addressess`**
-- **`get_inbox()`**
-- **`get_random_ip()`**
-- **`parse_inbox()`**
-- **`unsafe_check_list()`**
-
-
-### Constructs
-
-- **`fetch_explot_requirments`**: 
-- **`fetch_whois`**: 
-- **`file_locaiton_ident`**: 
-- **`id_self`**: 
 
 ---
 ## License
