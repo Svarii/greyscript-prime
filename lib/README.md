@@ -1810,6 +1810,73 @@ file_exists("/DatabaseDir", "addressData.db")
 
 ---
 
+## 🗃️ file_location_ident
+
+### 📝 Description
+Creates and returns a structured object containing file identification attributes derived from a provided absolute file path.
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1  
+- **Unit Testing:** ❌ Not yet implemented  
+
+</details>
+
+---
+
+### 🧮 Parameters
+
+| Name              | Type     | Description                                |
+|-------------------|----------|--------------------------------------------|
+| `absoluteLocation`| `string` | Full absolute file path to the target file |
+
+#### 🚫 Defaults
+
+| Parameter         | Default Value |
+|-------------------|---------------|
+| *absoluteLocation*| *(None)*      |
+
+---
+
+### 🔁 Return  
+📦 `map<string, string>` — a map object containing file identifier attributes.
+
+#### 🗺️ Map Keys
+
+| Key           | Type     | Description                              |
+|---------------|----------|------------------------------------------|
+| `.ext`        | `string` | File extension (e.g., `so`, `txt`)        |
+| `.name`       | `string` | Base file name without extension          |
+| `.filename`   | `string` | Complete file name including extension    |
+| `.dir`        | `string` | Full directory path of the file           |
+| `.parentdir`  | `string` | Immediate parent directory name           |
+| `.location`   | `string` | Original absolute location (input value)  |
+
+---
+
+### 💡 Example
+```greyscript
+aptClientID = file_location_ident("/lib/aptclient.so")
+
+print(aptClientID.filename)   // Output: aptclient.so
+print(aptClientID.location)   // Output: /lib/aptclient.so
+print(aptClientID.ext)        // Output: so
+print(aptClientID.name)       // Output: aptclient
+```
+
+#### 🧠 Notes
+
+- ⚠️ Parameters are **not validated for type**. Improper types can cause runtime errors:
+  - Passing a `number`:  
+    `"Runtime Error: Key Not Found: 'lastIndexOf' not found in map"`
+  - Passing a `map`:  
+    `"Runtime Error: Key Not Found: 'lastIndexOf' not found in map"`
+- Always pass a properly formatted **string path**.
+
+---
+
+
 ## file_new
 
 ### 📝 Description  
@@ -1943,6 +2010,84 @@ print find_exploitable_addresses(libLocation, metax)
 
 ---
 
+## fetch_exploit_requirements
+
+### 📝 Description
+Scans a target library using `metaxploit.scan_address` and a list of known vulnerable addresses.  
+Returns a list of structured maps with exploit requirement metadata for each address.
+
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1  
+- **Requires:**  
+  - `function`: `unsafe_check_list()` @ `v0.0.1+`  
+  - `method`: `list.crop()` @ `v0.0.1+`  
+- **Unit Testing:** ❌ Not implemented  
+
+</details>
+
+---
+
+### 🧮 Parameters
+
+| Name              | Type                  | Description                                                                 |
+|-------------------|-----------------------|-----------------------------------------------------------------------------|
+| `addressList`     | `list<string>`        | List of addresses returned by `metaxploit.scan()`                          |
+| `libLocation`     | `string`              | Library location those addresses were found in                             |
+| `metaxploitObject`| `map<metaxploitLib>`  | A Metaxploit object reference                                               |
+| `remoteTarget`    | `flag` *(optional)*   | Whether to scan the library remotely                                       |
+| `targetPort`      | `number` *(optional)* | Port used to access the remote target                                      |
+
+#### 🚫 Defaults
+
+| Parameter     | Default Value |
+|---------------|----------------|
+| `remoteTarget`| `false`         |
+| `targetPort`  | `0`             |
+
+---
+
+### 🔁 Return
+`list<map<string, string>>` — Each item represents an exploit requirement set for an address.
+
+#### 🗺️ Map Keys
+
+| Key           | Type     | Description                                 |
+|----------------|----------|---------------------------------------------|
+| `.address`     | `string` | Memory address being checked                |
+| `.variable`    | `string` | Target variable at the address              |
+| `.cra`         | `string` | Root access required                        |
+| `.cua`         | `string` | User access required                        |
+| `.cga`         | `string` | Guest access required                       |
+| `.rpf`         | `string` | Required port forwards                      |
+| `.rur`         | `string` | Required users registered                   |
+| `.is_patched`  | `string` | `"true"` or `"false"` — if exploit is patched |
+| `.version`     | `string` | Version of the discovered software/lib      |
+
+---
+
+### 💡 Example
+```greyscript
+scanLibLocation = "/lib/aptclient.so"
+metaxLocation = "/lib/metaxploit.so"
+
+metax = include_lib(metaxLocation)
+exploitAddressList = find_exploitable_addresses(scanLibLocation, metax)
+
+exploitReq = fetch_exploit_requirements(exploitAddressList, scanLibLocation, metax)
+
+print exploitReq[0].address + ":" + exploitReq[0].variable
+```
+
+#### 🧠 Notes
+- Parameters are not type-checked — passing a wrong type may lead to runtime errors.
+- Return values are all strings, including booleans like `.is_patched`.
+
+---
+
+
 ## fetch_whois
 
 ### 📝 Description
@@ -2005,6 +2150,70 @@ print whoisInfo.network
 - The returned `network` field will show `[ UNKNOWN ]` if fewer than 5 WHOIS lines exist.
 
 ---
+
+## file_location_ident
+
+### 📝 Description
+Creates a structured map of **file identification attributes** from an absolute file path.
+
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1  
+- **Unit Testing:** ❌ Incomplete  
+
+</details>
+
+---
+
+### 🧮 Parameters
+
+| Name              | Type     | Description                              |
+|-------------------|----------|------------------------------------------|
+| `absoluteLocation`| `string` | Absolute file path to extract info from. |
+
+#### 🚫 Defaults
+
+| Parameter         | Default Value |
+|------------------|----------------|
+| *absoluteLocation* | *(None)*       |
+
+---
+
+### 🔁 Return
+`map<string, string>` — a map object populated with file metadata.
+
+#### 🗂️ Map Keys
+
+| Key           | Type     | Description                        |
+|---------------|----------|------------------------------------|
+| `.ext`        | `string` | File extension                     |
+| `.name`       | `string` | File name without extension        |
+| `.filename`   | `string` | Full file name                     |
+| `.dir`        | `string` | Directory the file is located in   |
+| `.parentdir`  | `string` | Parent directory name              |
+| `.location`   | `string` | Full absolute file path            |
+
+---
+
+### 💡 Example
+```greyscript
+aptClientID = file_location_ident("/lib/aptclient.so")
+
+print(aptClientID.filename)  // Output: aptclient.so
+print(aptClientID.location)  // Output: /lib/aptclient.so
+print(aptClientID.ext)       // Output: so
+print(aptClientID.name)      // Output: aptclient
+```
+
+---
+
+### ⚠️ Footnotes
+
+- Parameters are not validated.
+- Passing an invalid type for `absoluteLocation` will cause runtime errors:
+  - `number`: `"Runtime Error: Key Not
 
 
 ## get_acks
