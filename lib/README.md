@@ -90,7 +90,6 @@
 > </details>
 
 ---
-See figure <sup><a href="#bool_text">1</a></sup>
 
 # 🅰️ ![Static Badge](https://img.shields.io/badge/string-methods-darkorange)
 
