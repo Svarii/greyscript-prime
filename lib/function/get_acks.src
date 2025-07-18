@@ -25,7 +25,14 @@
 // @example
 // print(reqACK) // Output: 14286
 	get_acks = function(signalStrength = 1)
-		if not typeof(locals.signalStrength) == "number" then return null
+		if not typeof(locals.signalStrength) == "number" then
+			locals.removePercent = locals.signalStrength.remove("%") //check for % in number string
+			locals.newNumber = typeof(to_int(locals.removePercent))
+			if not locals.newNumber == "number" then return null 
+			if locals.newNumber < 0 then return null
+			if locals.newNumber > 100 then return null
+			locals.signalStrength = locals.newNumber
+		end if
 		if locals.signalStrength <= 0 or locals.signalStrength > 100 then return null
 		return ceil(300000 / (locals.signalStrength + 15))
 	end function
