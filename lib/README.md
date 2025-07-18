@@ -924,17 +924,16 @@ result = newString.pos
 print(result)
 // Output: <pos=50%>Hello
 ```
----
 
 #### 🔗 Links
 - [Text Mesh Pro: Horizontal Position](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextPos.html)
+
+---
 
 ## rotate
 
 ### 📝 Description
 Modifies a text string by wrapping it within the `<rotate>` tag.
-
----
 
 ### 🧮 Parameters
 
@@ -942,7 +941,6 @@ Modifies a text string by wrapping it within the `<rotate>` tag.
 |------------------|--------|------------------------|
 | `degreesRotation` | string | Optional. Default: `"45"` |
 
----
 
 #### ⚙️ Defaults
 
@@ -974,7 +972,7 @@ result = newString.rotate
 print(result)
 // Output: <rotate="45">Hello </rotate>
 ```
----
+
 
 #### 🔗 Links
 - [Text Mesh Pro: Rotate](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextRotate.html)
@@ -2142,9 +2140,6 @@ Logs into the mail account and fetches inbox messages.
 inbox = get_inbox("mypassword", "user@example.com")
 print(inbox)
 ```
----
-
-
 ---
 
 ## get_random_ip
