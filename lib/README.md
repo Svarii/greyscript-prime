@@ -89,6 +89,14 @@ See figure <sup><a href="#bool_text">1</a></sup>
 ## align
 ### 📝 Description
 Modifies a text string to wrap it in the `<align>` tag.
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
+
+</details>
 
 ---
 ### 🧮 Parameters
@@ -106,17 +114,6 @@ Modifies a text string to wrap it in the `<align>` tag.
 
 ### 🔁 Return
 `string` — the string value embedded in (or preceded by) the `<align>` tag.
-
----
-
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete 
-
-</details>
 
 ---
 
@@ -152,6 +149,13 @@ newString = "Hello"
 ## alpha
 ### 📝 Description
 Modifies a text string and prepends it with the `<alpha>` tag.
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete
+</details>
 
 ---
 
@@ -168,16 +172,6 @@ Modifies a text string and prepends it with the `<alpha>` tag.
 
 ### 🔁 Return
 `string` — the string value preceded by the `<alpha>` tag.
-
----
-
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete
-</details>
 
 ---
 
@@ -212,6 +206,13 @@ newString = "Hello"
 ### 📝 Description
 Modifies a text string and wraps it within the `<b>` tag.  
 Used to apply bold styling in Text Mesh Pro.
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete
+</details>
 
 ---
 
@@ -223,17 +224,6 @@ Used to apply bold styling in Text Mesh Pro.
 
 ### 🔁 Return
 `string` — the string value embedded in the `<b>` tag.
-
----
-
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete 
-
-</details>
 
 ---
 
@@ -255,6 +245,13 @@ print(result)
 ### 📝 Description
 Modifies a text string by wrapping it within the `<color>` tag.  
 Used to apply a specified color to the string, supporting both hex formats and standard HTML color names.
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete
+</details>
 
 ---
 
@@ -270,23 +267,12 @@ Used to apply a specified color to the string, supporting both hex formats and s
 |-----------|---------------|
 | *colorValue*  | *(None)*      |
 
----
 
 ### 🔁 Return
 `string` — the string value embedded in the `<color>` tag.
 
 ---
 
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete 
-
-</details>
-
----
 
 ### 💡 Example
 ```greyscript
@@ -323,6 +309,13 @@ print result
 ### 📝 Description
 Modifies a text string by wrapping it within the `<cspace>` tag.  
 Used to control character spacing in text renderers such as Text Mesh Pro.
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete
+</details>
 
 ---
 
@@ -341,17 +334,6 @@ Used to control character spacing in text renderers such as Text Mesh Pro.
 
 ### 🔁 Return
 `string` — The string value wrapped within the `<cspace>` tag.
-
----
-
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete 
-
-</details>
 
 ---
 
@@ -378,6 +360,13 @@ print result
 
 ### 📝 Description
 Modifies a text string to wrap it in the `<indent>` tag for use with supported rich text renderers (e.g., Text Mesh Pro).
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete
+</details>
 
 ---
 
@@ -397,17 +386,6 @@ Modifies a text string to wrap it in the `<indent>` tag for use with supported r
 
 ### 🔁 Return
 `string` — the string value embedded in (or appended to) the `<indent>` tag.
-
----
-
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete 
-
-</details>
 
 ---
 
@@ -449,6 +427,13 @@ newString = "Hello"
 
 ### 📝 Description
 Modifies a text string by wrapping it within the `<i>` tag.
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete
+</details>
 
 ---
 
@@ -459,17 +444,6 @@ Modifies a text string by wrapping it within the `<i>` tag.
 
 ### 🔁 Return
 `string` — The string value wrapped within the `<i>` tag.
-
----
-
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete 
-
-</details>
 
 ---
 
@@ -490,6 +464,13 @@ print(result)
 
 ### 📝 Description
 Modifies a text string to wrap it in the `<line-indent>` tag.
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete
+</details>
 
 ---
 
@@ -509,17 +490,6 @@ Modifies a text string to wrap it in the `<line-indent>` tag.
 
 ### 🔁 Return
 `string` — The string value embedded in (or appended to) the `<line-indent>` tag.
-
----
-
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete 
-
-</details>
 
 ---
 
@@ -545,11 +515,20 @@ newString = "Hello"
 
 // Outputs: <line-indent=25px>Hello
 ```
+---
 
 ## lowercase
 
 ### 📝 Description
 Modifies a text string by wrapping it within the `<lowercase>` tag.
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete
+</details>
+---
 
 ---
 
@@ -558,21 +537,9 @@ Modifies a text string by wrapping it within the `<lowercase>` tag.
 |-----------|---------------|
 | *(None)*  | *(None)*      |
 
----
 
 ### 🔁 Return
 `string` — The string value wrapped within the `<lowercase>` tag.
-
----
-
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete 
-
-</details>
 
 ---
 
@@ -584,7 +551,6 @@ result = newString.lowercase
 print(result)
 // Outputs: <lowercase>Hello</lowercase>
 ```
----
 
 #### 🔗 Links
 - [Text Mesh Pro: Rich Text Lowercase](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextLetterCase.html)
@@ -596,6 +562,13 @@ print(result)
 
 ### 📝 Description
 Modifies a text string by wrapping it within the `<margin>` tag.
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete
+</details>
 
 ---
 
@@ -605,7 +578,6 @@ Modifies a text string by wrapping it within the `<margin>` tag.
 |----------|--------|--------------------------------------------------|
 | `margin` | string | Optional. Accepted values: `em`, `px`, or `%`.   |
 
----
 
 #### ⚙️ Defaults
 
@@ -613,21 +585,9 @@ Modifies a text string by wrapping it within the `<margin>` tag.
 |-----------|---------|
 | `margin`  | `5em`   |
 
----
 
 ### 🔁 Return
 `string` — The string value wrapped within the `<margin>` tag.
-
----
-
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete 
-
-</details>
 
 ---
 
@@ -639,15 +599,24 @@ result = newString.margin
 print(result)
 // Outputs: <margin=5em>Hello</margin>
 ```
----
+
 
 #### 🔗 Links
 - [Text Mesh Pro: Rich Text Margin](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextMargins.html)
 
+---
 
 ## mark
 ### 📝 Description
 Modifies a text string by wrapping it within the `<mark>` tag.
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete
+</details>
+---
 
 ---
 
@@ -657,7 +626,6 @@ Modifies a text string by wrapping it within the `<mark>` tag.
 |---------|--------|---------------------------------------------|
 | `color` | string | Optional. HEXA color value (`#RRGGBBAA`).   |
 
----
 
 #### ⚙️ Defaults
 
@@ -665,21 +633,9 @@ Modifies a text string by wrapping it within the `<mark>` tag.
 |-----------|-------------|
 | `color`   | `#FFFF00AA` |
 
----
 
 ### 🔁 Return
 `string` — The string value wrapped within the `<mark>` tag.
-
----
-
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete 
-
-</details>
 
 ---
 
@@ -691,16 +647,25 @@ result = newString.mark
 print(result)
 // Outputs: <mark="#FFFF00AA">Hello</mark>
 ```
----
+
 
 #### 🔗 Links
 - [Text Mesh Pro: Rich Text mark](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextMark.html)
 
+---
 
 ## mspace
 
 ### 📝 Description
 Modifies a text string by wrapping it within the `<mspace>` tag.
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
+
+</details>
 
 ---
 
@@ -710,7 +675,6 @@ Modifies a text string by wrapping it within the `<mspace>` tag.
 |-------------|--------|-------------------------------------------------|
 | `monospace` | string | Optional. Accepted values: `em`, `px`, or `%`. |
 
----
 
 #### ⚙️ Defaults
 
@@ -718,21 +682,9 @@ Modifies a text string by wrapping it within the `<mspace>` tag.
 |-------------|-----------|
 | `monospace` | `2.75em`  |
 
----
 
 ### 🔁 Return
 `string` — The string value wrapped within the `<mspace>` tag.
-
----
-
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete 
-
-</details>
 
 ---
 
@@ -744,32 +696,16 @@ result = newString.mspace
 print(result)
 // Outputs: <mspace="2.75em">Hello</mspace>
 ```
----
 
 #### 🔗 Links
 - [Text Mesh Pro: Rich Text Monospacing](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextMonospace.html)
 
-
+---
 
 ## nobr
 
 ### 📝 Description
 Modifies a text string by wrapping it within the `<nobr>` tag.
-
----
-
-### ➖ Parameters  
-| Parameter | Default Value |
-|-----------|---------------|
-| *(None)*  | *(None)*      |
-
----
-
-### 🔁 Return
-`string` — The string value wrapped within the `<nobr>` tag.
-
----
-
 <details>
 <summary>📃 About</summary>
 
@@ -778,6 +714,18 @@ Modifies a text string by wrapping it within the `<nobr>` tag.
 - **Unit Testing:** ❌ Incomplete 
 
 </details>
+
+---
+
+### ➖ Parameters  
+| Parameter | Default Value |
+|-----------|---------------|
+| *(None)*  | *(None)*      |
+
+
+
+### 🔁 Return
+`string` — The string value wrapped within the `<nobr>` tag.
 
 ---
 
@@ -789,30 +737,16 @@ result = newString.nobr
 print(result)
 // Outputs: <nobr>Hello</nobr>
 ```
----
 
 #### 🔗 Links
 - [Text Mesh Pro: Rich Text No Break](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextNoBreak.html)
+
+---
 
 ## noparse
 
 ### 📝 Description
 Modifies a text string by wrapping it within the `<noparse>` tag.
-
----
-
-### ➖ Parameters  
-| Parameter | Default Value |
-|-----------|---------------|
-| *(None)*  | *(None)*      |
-
----
-
-### 🔁 Return
-`string` — The string value wrapped within the `<noparse>` tag.
-
----
-
 <details>
 <summary>📃 About</summary>
 
@@ -821,6 +755,17 @@ Modifies a text string by wrapping it within the `<noparse>` tag.
 - **Unit Testing:** ❌ Incomplete 
 
 </details>
+
+---
+
+### ➖ Parameters  
+| Parameter | Default Value |
+|-----------|---------------|
+| *(None)*  | *(None)*      |
+
+
+### 🔁 Return
+`string` — The string value wrapped within the `<noparse>` tag.
 
 ---
 
@@ -832,17 +777,27 @@ result = newString.noparse
 print(result)
 // Outputs: <noparse>Hello</noparse>
 ```
----
+
 
 #### 🔗 Links
 - [Text Mesh Pro: Rich Text Noparse](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextNoParse.html)
 
+---
 
 ## page
 
 ### 📝 Description
 Modifies a text string by appending the `<page>` tag to the end.
+<details>
+<summary>📃 About</summary>
 
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
+
+</details>
+
+---
 
 ### ➖ Parameters  
 | Parameter | Default Value |
@@ -852,17 +807,6 @@ Modifies a text string by appending the `<page>` tag to the end.
 
 ### 🔁 Return
 `string` — The string value with the `<page>` tag appended to the end.
-
----
-
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete 
-
-</details>
 
 ---
 
@@ -884,6 +828,14 @@ print(result)
 
 ### 📝 Description
 Modifies a text string by prepending it with the `<pos>` tag.
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
+
+</details>
 
 ---
 
@@ -904,16 +856,6 @@ Modifies a text string by prepending it with the `<pos>` tag.
 ### 🔁 Return
 `string` — The string prepended with the `<pos>` tag.
 
----
-
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete 
-
-</details>
 
 ---
 
@@ -935,6 +877,16 @@ print(result)
 
 ### 📝 Description
 Modifies a text string by wrapping it within the `<rotate>` tag.
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
+
+</details>
+
+---
 
 ### 🧮 Parameters
 
@@ -952,16 +904,6 @@ Modifies a text string by wrapping it within the `<rotate>` tag.
 
 ### 🔁 Return
 `string` — The string rotated with the `<rotate>` tag.
-
-
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete 
-
-</details>
 
 ---
 
@@ -984,6 +926,14 @@ print(result)
 
 ### 📝 Description
 Modifies a text string by wrapping it within the `<size>` tag.
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
+
+</details>
 
 ---
 
@@ -1006,17 +956,6 @@ Modifies a text string by wrapping it within the `<size>` tag.
 
 ---
 
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete 
-
-</details>
-
----
-
 ### 💡 Example
 ```greyscript
 newString = "Hello"
@@ -1035,6 +974,14 @@ print(result)
 
 ### 📝 Description
 Modifies a text string by wrapping it within the `<s>` tag.
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
+
+</details>
 
 ---
 
@@ -1046,17 +993,6 @@ Modifies a text string by wrapping it within the `<s>` tag.
 
 ### 🔁 Return
 `string` — The string wrapped within the `<s>` tag.
-
----
-
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete 
-
-</details>
 
 ---
 
@@ -1078,6 +1014,14 @@ print(result)
 
 ### 📝 Description
 Modifies a text string by wrapping it within the `<sub>` tag.
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
+
+</details>
 
 ---
 
@@ -1089,17 +1033,6 @@ Modifies a text string by wrapping it within the `<sub>` tag.
 
 ### 🔁 Return
 `string` — The string wrapped within the `<sub>` tag.
-
----
-
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete 
-
-</details>
 
 ---
 
@@ -1121,6 +1054,14 @@ print(result)
 
 ### 📝 Description
 Modifies a text string by wrapping it within the `<sup>` tag.
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
+
+</details>
 
 ---
 
@@ -1131,17 +1072,6 @@ Modifies a text string by wrapping it within the `<sup>` tag.
 
 ### 🔁 Return
 `string` — The string wrapped within the `<sup>` tag.
-
----
-
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete 
-
-</details>
 
 ---
 
@@ -1163,6 +1093,14 @@ print(result)
 
 ### 📝 Description
 Modifies a text string by wrapping it within the `<u>` tag.
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
+
+</details>
 
 ---
 
@@ -1173,17 +1111,6 @@ Modifies a text string by wrapping it within the `<u>` tag.
 
 ### 🔁 Return
 `string` — The string wrapped within the `<u>` tag.
-
----
-
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete 
-
-</details>
 
 ---
 
@@ -1205,6 +1132,14 @@ print(result)
 
 ### 📝 Description
 Modifies a text string by wrapping it within the `<uppercase>` tag.
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
+
+</details>
 
 ---
 
@@ -1216,17 +1151,6 @@ Modifies a text string by wrapping it within the `<uppercase>` tag.
 
 ### 🔁 Return
 `string` — The string wrapped within the `<uppercase>` tag.
-
----
-
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete 
-
-</details>
 
 ---
 
@@ -1248,6 +1172,14 @@ print(result)
 
 ### 📝 Description  
 Modifies a text string by wrapping it within the `<voffset>` tag.
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
+
+</details>
 
 ---
 
@@ -1270,17 +1202,6 @@ Modifies a text string by wrapping it within the `<voffset>` tag.
 
 ---
 
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete 
-
-</details>
-
----
-
 ### 💡 Example  
 ```greyscript
 newString = "Hello"
@@ -1299,6 +1220,14 @@ print(result)
 
 ### 📝 Description  
 Modifies a text string by wrapping it within the `<width>` tag.
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
+
+</details>
 
 ---
 
@@ -1318,17 +1247,6 @@ Modifies a text string by wrapping it within the `<width>` tag.
 
 ### 🔁 Return  
 `string` — The string value wrapped within the `<width>` tag.
-
----
-
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete 
-
-</details>
 
 ---
 
@@ -1632,6 +1550,14 @@ string
 
 ### 📝 Description  
 Converts a boolean-like value (`true`, `false`, `1`, `0`) into a string: `"true"` or `"false"`.
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
+
+</details>
 
 ---
 
@@ -1651,7 +1577,7 @@ Converts a boolean-like value (`true`, `false`, `1`, `0`) into a string: `"true"
 
 ---
 
-### 📎 Footnotes
+### 🧠 Notes
 
 - Parameters are not checked for validity.
 - Invalid input (including strings or objects) returns `null`.
@@ -1659,16 +1585,6 @@ Converts a boolean-like value (`true`, `false`, `1`, `0`) into a string: `"true"
 
 ---
 
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete 
-
-</details>
-
----
 
 ### 💡 Example
 ```greyscript
@@ -1701,6 +1617,14 @@ print(bool_text(object))
 ### 📝 Description  
 Scans a string for a valid IPv4 address and returns the first match.  
 Returns `null` if no valid IP address is found.
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
+
+</details>
 
 ---
 
@@ -1722,22 +1646,6 @@ Returns `null` if no valid IP address is found.
 
 ---
 
-### 🧠 Notes
-- Uses a regular expression to identify IPv4 patterns.
-- Only the **first** valid match is returned.
-
----
-
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete 
-
-</details>
-
----
 
 ### 💡 Example
 ```greyscript
@@ -1750,13 +1658,25 @@ print(extractIP("No IP here"))
 print(extractIP("IPs: 10.0.0.1, 172.16.0.1"))
 // Output: 10.0.0.1
 ```
----
 
+#### 🧠 Notes
+- Uses a regular expression to identify IPv4 patterns.
+- Only the **first** valid match is returned.
+
+---
 
 ## file_append
 
 ### 📝 Description  
 Appends data to an existing file, or creates a new file if the file does not exist.
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
+
+</details>
 
 ---
 
@@ -1786,17 +1706,6 @@ Appends data to an existing file, or creates a new file if the file does not exi
 
 ---
 
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete 
-
-</details>
-
----
-
 ### 💡 Example
 ```greyscript
 dataString = "0xFC45B2XR9:missspeling"
@@ -1810,6 +1719,14 @@ file_append("/DatabaseDir", "addressData.db", dataString)
 
 ### 📝 Description  
 Delete a specified file if it has write permissions.
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
+
+</details>
 
 ---
 
@@ -1840,17 +1757,6 @@ Delete a specified file if it has write permissions.
 
 ---
 
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete 
-
-</details>
-
----
-
 ### 💡 Example
 ```greyscript
 file_delete("/DatabaseDir", "addressData.db")
@@ -1863,6 +1769,14 @@ file_delete("/DatabaseDir", "addressData.db")
 
 ### 📝 Description  
 Check to see if the specified file exists.
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
+
+</details>
 
 ---
 
@@ -1890,17 +1804,6 @@ Check to see if the specified file exists.
 
 ---
 
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete 
-
-</details>
-
----
-
 ### 💡 Example
 ```greyscript
 file_exists("/DatabaseDir", "addressData.db")
@@ -1913,6 +1816,14 @@ file_exists("/DatabaseDir", "addressData.db")
 
 ### 📝 Description  
 Create a new file at the specified path if it does not already exist.
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
+
+</details>
 
 ---
 
@@ -1940,17 +1851,6 @@ Create a new file at the specified path if it does not already exist.
 
 ---
 
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete 
-
-</details>
-
----
-
 ### 💡 Example
 ```greyscript
 file_new("/DatabaseDir", "addressData.db")
@@ -1962,6 +1862,14 @@ file_new("/DatabaseDir", "addressData.db")
 
 ### 📝 Description  
 Specifies usage information and checks if the required number of parameters have been passed. If not, the script exits and displays the usage message.
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
+
+</details>
 
 ---
 
@@ -1985,17 +1893,6 @@ Specifies usage information and checks if the required number of parameters have
 
 ---
 
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete 
-
-</details>
-
----
-
 ### 💡 Example
 ```greyscript
 force_params("myApp [ipAddress] [port#]", 2)
@@ -2006,6 +1903,14 @@ force_params("myApp [ipAddress] [port#]", 2)
 
 ### 📝 Description  
 Scan a library for vulnerable addresses.
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
+
+</details>
 
 ---
 
@@ -2030,16 +1935,6 @@ Scan a library for vulnerable addresses.
 
 ---
 
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete 
-
-</details>
-
----
 
 ### 💡 Example
 ```greyscript
@@ -2055,6 +1950,14 @@ print find_exploitable_addresses(libLocation, metax)
 
 ### 📝 Description
 Pulls WHOIS information for a **public IP address** and returns a structured map of related metadata including administrative contact, domain, and network info.
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
+
+</details>
 
 ---
 
@@ -2084,18 +1987,7 @@ Pulls WHOIS information for a **public IP address** and returns a structured map
 | `.email`    | `string` | Email of the administrative contact                           |
 | `.phone`    | `string` | Phone number for the administrative contact                   |
 | `.network`  | `string` | The network name or ID (if found)                             |
-| `.error`    | `string` | **Returned instead of above** if an error occurs              |
-
----
-
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1  
-- **Unit Testing:** ❌ Not yet implemented  
-
-</details>
+| `.error`    | `string` | **Return String on Error or false**                           |
 
 ---
 
@@ -2110,8 +2002,6 @@ print whoisInfo.phone
 print whoisInfo.network
 ```
 
----
-
 #### 🧠 Notes
 - If the IP address is local (`LAN`), the function returns an error object.
 - If the IP is not valid, a validation error is returned instead.
@@ -2124,6 +2014,14 @@ print whoisInfo.network
 
 ### 📝 Description  
 Calculates the recommended number of ACKs to collect based on signal strength.
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
+
+</details>
 
 ---
 
@@ -2146,17 +2044,6 @@ Calculates the recommended number of ACKs to collect based on signal strength.
 
 ---
 
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete 
-
-</details>
-
----
-
 ### 💡 Example
 ```greyscript
 reqACK = get_acks(6) // Signal Strength 6%
@@ -2169,6 +2056,14 @@ print(reqACK) // Output: 14286
 
 ### 📝 Description  
 Logs into the mail account and fetches inbox messages.
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
+
+</details>
 
 ---
 
@@ -2194,17 +2089,6 @@ Logs into the mail account and fetches inbox messages.
 
 ---
 
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete 
-
-</details>
-
----
-
 ### 💡 Example
 ```greyscript
 inbox = get_inbox("mypassword", "user@example.com")
@@ -2216,7 +2100,16 @@ print(inbox)
 
 ### 📝 Description  
 Generate a single random IP address.
+<details>
+<summary>📃 About</summary>
 
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
+
+</details>
+
+---
 
 ### ➖ Parameters  
 | Parameter | Default Value |
@@ -2226,17 +2119,6 @@ Generate a single random IP address.
 
 ### 🔁 Return  
 `string` — Randomly generated IP Address.
-
----
-
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete 
-
-</details>
 
 ---
 
@@ -2252,6 +2134,14 @@ print(randomIP) // Output: ###.###.###.###
 
 ### 📝 Description  
 Return `true` if item is null, `false` otherwise.
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
+
+</details>
 
 ---
 
@@ -2274,17 +2164,6 @@ Return `true` if item is null, `false` otherwise.
 
 ---
 
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete 
-
-</details>
-
----
-
 ### 💡 Example
 ```greyscript
 nullItem = null
@@ -2300,6 +2179,14 @@ print is_null(notNull)   // Output: 0
 
 ### 📝 Description  
 Check if the object passed is of the specified type and return a boolean answer.
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
+
+</details>
 
 ---
 
@@ -2325,17 +2212,6 @@ Check if the object passed is of the specified type and return a boolean answer.
 
 ---
 
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete 
-
-</details>
-
----
-
 ### 💡 Example
 ```greyscript
 print is_typeof(cryptoLibObject, "cryptoLib")       // Output: true
@@ -2352,6 +2228,14 @@ print is_typeof(metaxploitLibObject, "cryptoLib")     // Output: false
 
 ### 📝 Description  
 Loads a library from the lib directory, optionally specifying directory and verifying type.
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
+
+</details>
 
 ---
 
@@ -2377,16 +2261,6 @@ Loads a library from the lib directory, optionally specifying directory and veri
 
 ---
 
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete 
-
-</details>
-
----
 
 ### 💡 Examples
 ```greyscript
@@ -2411,6 +2285,14 @@ lib = load_lib("crypto.so", "/lib", "cryptoLib")
 
 ### 📝 Description  
 Pulls network device data from the host computer and returns a list of network device information. Each item is a list representing a network adaptor, its model, and monitoring status.
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
+
+</details>
 
 ---
 
@@ -2440,17 +2322,6 @@ Each sublist contains:
 
 ---
 
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete 
-
-</details>
-
----
-
 ### 💡 Example
 ```greyscript
 netList = network_device_list()
@@ -2467,6 +2338,14 @@ for net in netList
 
 Parses a list of mail IDs using a global `metaMail` object and extracts structured message data.  
 Each parsed message includes: `id`, `from`, `subject`, `body`.
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
+
+</details>
 
 ---
 
@@ -2494,17 +2373,6 @@ Each parsed message includes: `id`, `from`, `subject`, `body`.
 
 ---
 
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete 
-
-</details>
-
----
-
 ### 💡 Example
 
 ```greyscript
@@ -2520,6 +2388,14 @@ print(parsed[0].subject)  // Output: "Subject line here"
 ### 📝 Description
 
 Return a string with the name of the file that is running this script.
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
+
+</details>
 
 ---
 
@@ -2532,17 +2408,6 @@ Return a string with the name of the file that is running this script.
 ### 🔁 Return
 
 `string` — The name of the running program file.
-
----
-
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete 
-
-</details>
 
 ---
 
@@ -2559,6 +2424,14 @@ programName = program_name
 ### 📝 Description
 
 Split Unsafe Check Results into individual exploit result strings and return a list of UnsafeCheck strings.
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
+
+</details>
 
 ---
 
@@ -2582,17 +2455,6 @@ Split Unsafe Check Results into individual exploit result strings and return a l
 
 ---
 
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete 
-
-</details>
-
----
-
 ### 💡 Example
 
 ```greyscript
@@ -2610,7 +2472,14 @@ unsafeCheckList = unsafe_check_list(fetch_exploit_requirements(exploitMem))
 ### 📝 Description  
 
 Constructs and returns an object containing categorized status strings
+<details>
+<summary>📃 About</summary>
 
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
+
+</details>
 
 ---
 
@@ -2639,16 +2508,6 @@ Constructs and returns an object containing categorized status strings
 
 ---
 
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete 
-
-</details>
-
----
 
 ### 💡 Examples
 ```greyscript
