@@ -1577,38 +1577,42 @@ Converts a boolean-like value (`true`, `false`, `1`, `0`) into a string: `"true"
 
 ---
 
-### 🧠 Notes
+
+### 💡 Examples
+```greyscript
+print(bool_text("true"))
+// Output: null
+```
+```greyscript
+print(bool_text(true))
+// Output: "true"
+```
+```greyscript
+print(bool_text(1))
+// Output: "true"
+```
+```greyscript
+print(bool_text(0))
+// Output: "false"
+```
+```greyscript
+print(bool_text(-1))
+// Output: "false"
+```
+```greyscript
+print(bool_text(false))
+// Output: "false"
+```
+```greyscript
+print(bool_text(object))
+// Output: null
+
+```
+#### 🧠 Notes
 
 - Parameters are not checked for validity.
 - Invalid input (including strings or objects) returns `null`.
 - Negative numbers return `"false"`.
-
----
-
-
-### 💡 Example
-```greyscript
-print(bool_text("true"))
-// Output: null
-
-print(bool_text(true))
-// Output: "true"
-
-print(bool_text(1))
-// Output: "true"
-
-print(bool_text(0))
-// Output: "false"
-
-print(bool_text(-1))
-// Output: "false"
-
-print(bool_text(false))
-// Output: "false"
-
-print(bool_text(object))
-// Output: null
-```
 
 ---
 
@@ -1700,12 +1704,6 @@ Appends data to an existing file, or creates a new file if the file does not exi
 
 ---
 
-### 🧠 Notes
-- Parameters are not validated.
-- If the file does not exist, it will be created.
-
----
-
 ### 💡 Example
 ```greyscript
 dataString = "0xFC45B2XR9:missspeling"
@@ -1713,6 +1711,11 @@ dataString = "0xFC45B2XR9:missspeling"
 file_append("/DatabaseDir", "addressData.db", dataString)
 // Appends dataString to addressData.db in /DatabaseDir
 ```
+
+#### 🧠 Notes
+- Parameters are not validated.
+- If the file does not exist, it will be created.
+
 ---
 
 ## file_delete
@@ -1750,18 +1753,16 @@ Delete a specified file if it has write permissions.
 
 ---
 
-### 🧠 Notes
-- Only checks for write permission.
-- Does not confirm file existence or successful deletion.
-- Parameters are not validated.
-
----
-
 ### 💡 Example
 ```greyscript
 file_delete("/DatabaseDir", "addressData.db")
 // Deletes the file if write permission exists
 ```
+
+#### 🧠 Notes
+- Only checks for write permission.
+- Does not confirm file existence or successful deletion.
+- Parameters are not validated.
 
 ---
 
@@ -1799,16 +1800,13 @@ Check to see if the specified file exists.
 
 ---
 
-### 🧠 Notes
-- Parameters are not validated.
-
----
-
 ### 💡 Example
 ```greyscript
 file_exists("/DatabaseDir", "addressData.db")
 // return true if found, otherwise false
 ```
+#### 🧠 Notes
+- Parameters are not validated.
 
 ---
 
@@ -1845,17 +1843,16 @@ Create a new file at the specified path if it does not already exist.
 
 ---
 
-### 🧠 Notes
-- File permissions are **not checked**.  
-- Parameters are **not validated**.
-
----
-
 ### 💡 Example
 ```greyscript
 file_new("/DatabaseDir", "addressData.db")
 // Creates a file at the specified location
 ```
+
+#### 🧠 Notes
+- File permissions are **not checked**.  
+- Parameters are **not validated**.
+
 ---
 
 ## force_params
