@@ -925,6 +925,9 @@ print(result)
 ```
 ---
 
+#### 🔗 Links
+- [Text Mesh Pro: Horizontal Position](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextPos.html)
+
 ## rotate
 
 ### 📝 Description
@@ -1066,7 +1069,7 @@ print(result)
 // Output: <s>Hello</s>
 ```
 
-### 🔗 Links
+#### 🔗 Links
 - [Text Mesh Pro: Strikethrough](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextStrikethroughUnderline.html)
 
 ---
@@ -1109,7 +1112,7 @@ print(result)
 // Output: <sub>Hello</sub>
 ```
 
-### 🔗 Links
+#### 🔗 Links
 - [Text Mesh Pro: Subscript](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextSubSuper.html)
 
 ---
@@ -1151,7 +1154,7 @@ print(result)
 // Output: <sup>Hello</sup>
 ```
 
-### 🔗 Links
+#### 🔗 Links
 - [Text Mesh Pro: Superscript](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextSubSuper.html)
 
 ---
@@ -1193,7 +1196,7 @@ print(result)
 // Output: <u>Hello</u>
 ```
 
-### 🔗 Links
+#### 🔗 Links
 - [Text Mesh Pro: Underline](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextStrikethroughUnderline.html)
 
 ---
@@ -1236,7 +1239,7 @@ print(result)
 // Output: <uppercase>Hello</uppercase>
 ```
 
-### 🔗 Links
+#### 🔗 Links
 - [Text Mesh Pro: Uppercase](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextLetterCase.html)
 
 ---
@@ -1287,7 +1290,7 @@ print(result)
 // Outputs: <voffset=1em>Hello</voffset>
 ```
 
-### 🔗 Links
+#### 🔗 Links
 - [Text Mesh Pro: Vertical Offset](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextVOffset.html)
 
 ---
@@ -2191,7 +2194,7 @@ Return `true` if item is null, `false` otherwise.
 | `testObject`| any  | The item to check     |
 
 
-#### ⚙️ Default Parameters  
+#### ⚙️ Defaults  
 _None_
 
 
@@ -2237,7 +2240,7 @@ Check if the object passed is of the specified type and return a boolean answer.
 | `objectType`| string | The expected identifier|
 
 
-#### ⚙️ Default Parameters  
+#### ⚙️ Defaults  
 _None_
 
 
@@ -2266,7 +2269,7 @@ print is_typeof(metaxploitLibObject, "MetaxploitLib") // Output: true
 print is_typeof(metaxploitLibObject, "cryptoLib")     // Output: false
 ```
 
-### 🔗 Links  
+#### 🔗 Links  
 * [typeof Documentation](https://documentation.greyscript.org/#GENERAL_TYPEOF) — List of standard object types.
 
 ---
