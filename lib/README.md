@@ -262,6 +262,7 @@ Used to apply a specified color to the string, supporting both hex formats and s
 | Name         | Type   | Description                                                                 |
 |--------------|--------|-----------------------------------------------------------------------------|
 | `colorValue` | string | The desired color in hex format: `#RRGGBB`, `#RRGGBBAA`, or standard HTML color name (e.g., `"blue"`, `"Aquamarine"`) |
+
 #### 🚫 Defaults
 
 | Parameter | Default Value |
@@ -2152,8 +2153,10 @@ print(inbox)
 Generate a single random IP address.
 
 
-### 🧮 Parameters  
-_None_
+### ➖ Parameters  
+| Parameter | Default Value |
+|-----------|---------------|
+| *(None)*  | *(None)*      |
 
 
 ### 🔁 Return  
@@ -2194,8 +2197,11 @@ Return `true` if item is null, `false` otherwise.
 | `testObject`| any  | The item to check     |
 
 
-#### ⚙️ Defaults  
-_None_
+#### 🚫 Defaults
+
+| Parameter | Default Value |
+|-----------|---------------|
+| *colorValue*  | *(None)*      |
 
 
 ### 🔁 Return  
@@ -2240,8 +2246,11 @@ Check if the object passed is of the specified type and return a boolean answer.
 | `objectType`| string | The expected identifier|
 
 
-#### ⚙️ Defaults  
-_None_
+#### 🚫 Defaults
+
+| Parameter | Default Value |
+|-----------|---------------|
+| *colorValue*  | *(None)*      |
 
 
 
