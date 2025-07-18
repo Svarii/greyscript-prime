@@ -2047,7 +2047,6 @@ Returns a list of structured maps with exploit requirement metadata for each add
 | `remoteTarget`| `false`         |
 | `targetPort`  | `0`             |
 
----
 
 ### 🔁 Return
 `list<map<string, string>>` — Each item represents an exploit requirement set for an address.
@@ -2115,7 +2114,6 @@ Pulls WHOIS information for a **public IP address** and returns a structured map
 |------------------------|---------------|
 | *routerPublicIPAddress*| *(None)*      |
 
----
 
 ### 🔁 Return
 `map<string, string>` — a structured map of WHOIS attributes or an error object.
@@ -2179,7 +2177,7 @@ Creates a structured map of **file identification attributes** from an absolute 
 |------------------|----------------|
 | *absoluteLocation* | *(None)*       |
 
----
+
 
 ### 🔁 Return
 `map<string, string>` — a map object populated with file metadata.
