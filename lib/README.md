@@ -270,8 +270,6 @@ Used to apply a specified color to the string, supporting both hex formats and s
 ### 🔁 Return
 `string` — the string value embedded in the `<color>` tag.
 
----
-
 
 ### 💡 Example
 ```greyscript
