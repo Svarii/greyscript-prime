@@ -1,15 +1,24 @@
-    //  **Description:**
-    //  Allows for string interpolation
-    //  @contributer dynobytes
-    //  @param {list<string>} args - List of values for delim
-    //  @param {string} [delim="%s"]
-    //  @return {string}
-    //  @example variableString = "The quick brown %s jumps over the lazy %s"
-    //  @example animalsList = ["fox", "dog"] 
-    //  @example      
-    //  @example sentence = variableString.format(animalsList)
-    //  @example
-    //  print(sentence); // Output: The quick brown fox jumps over the lazy dog
+//  **Description:**
+//  Allows for string interpolation using a delimiter (default is "%s").
+//  @contributer dynobytes
+//
+//  @param {list<string>} args - List of values to insert into the string.
+//  @param {string} [delim="%s"] - Delimiter to identify where values should be inserted.
+//
+//  @return {string}
+//  @description `string` — Formatted string with values interpolated at delimiter positions.
+//
+//  @description **Author:** Svarii  
+//  @description **Version:** 0.0.1
+//  @description ---
+//
+//  @example variableString = "The quick brown %s jumps over the lazy %s"
+//  @example animalsList = ["fox", "dog"]
+//  @example
+//  sentence = variableString.format(animalsList)
+//  @example
+//  print(sentence); // Output: The quick brown fox jumps over the lazy dog
+//  @description ---
 string.format = function(args, delim="%s")
     locals.splitStr = self.split(locals.delim);
     locals.recompStr = ""

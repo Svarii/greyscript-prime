@@ -1,10 +1,26 @@
 //  Remove the bold tag of the given text.
-    //  @return {string}
-    //  @example newString = "<b>Hello</b>"
-    //  @example        
-    //  @example result = newString.remove_bold
-    //  @example
-    //  print(result); // Outputs: Hello 
+//  @description **Description:**
+//  @description Removes `<b>` and `</b>` tags from a string.
+//  @description ---
+//
+//  @description **Parameters:**
+//  @description - none
+//
+//  @description **Return:**
+//  @return {string}
+//  @description `string` The string without `<b>` and `</b>` tags.
+//  @description ---
+//
+//  @description **Author:** Svarii
+//  @description **Version:** 0.0.1
+//  @description ---
+//
+//  @example newString = "<b>Hello</b>"
+//  @example
+//  result = newString.remove_bold
+//  @example
+//  print(result); // Outputs: Hello
+//  @description ---
 string.remove_bold = function()
     locals.newString = self.remove("<b>")
     return locals.newString.remove("</b>")

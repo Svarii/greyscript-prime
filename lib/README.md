@@ -93,6 +93,7 @@
 
 # 🅰️ ![Static Badge](https://img.shields.io/badge/string-methods-darkorange)
 
+
 ## align
 ### 📝 Description
 Modifies a text string to wrap it in the `<align>` tag.
@@ -105,7 +106,7 @@ Modifies a text string to wrap it in the `<align>` tag.
 
 </details>
 
----
+
 ### 🧮 Parameters
 
 | Name        | Type     | Description                                                                 |
@@ -122,7 +123,6 @@ Modifies a text string to wrap it in the `<align>` tag.
 ### 🔁 Return
 `string` — the string value embedded in (or preceded by) the `<align>` tag.
 
----
 
 ### 💡 Examples
 ```greyscript
@@ -140,7 +140,6 @@ newString = "Hello"
 // Output: <align="center">Hello
 ```
 
----
 
 #### 🔗 Links
 * [Text Mesh Pro: Rich Text Alignment](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextAlignment.html)
@@ -164,8 +163,6 @@ Modifies a text string and prepends it with the `<alpha>` tag.
 - **Unit Testing:** ❌ Incomplete
 </details>
 
----
-
 ### 🧮 Parameters
 
 | Name         | Type   | Description                                                      |
@@ -180,9 +177,8 @@ Modifies a text string and prepends it with the `<alpha>` tag.
 ### 🔁 Return
 `string` — the string value preceded by the `<alpha>` tag.
 
----
-
 ### 💡 Example
+
 ```greyscript
 newString = "Hello"
     result = newString.alpha("#4C")
@@ -222,8 +218,6 @@ Used to apply bold styling in Text Mesh Pro.
 - **Unit Testing:** ❌ Incomplete
 </details>
 
----
-
 ### ➖ Parameters  
 | Parameter | Default Value |
 |-----------|---------------|
@@ -233,9 +227,8 @@ Used to apply bold styling in Text Mesh Pro.
 ### 🔁 Return
 `string` — the string value embedded in the `<b>` tag.
 
----
-
 ### 💡 Example
+
 ```greyscript
 newString = "Hello"
 
@@ -260,8 +253,6 @@ Used to apply a specified color to the string, supporting both hex formats and s
 - **Version:** 0.0.1 
 - **Unit Testing:** ❌ Incomplete
 </details>
-
----
 
 ### 🧮 Parameters
 
@@ -325,8 +316,6 @@ Used to control character spacing in text renderers such as Text Mesh Pro.
 - **Unit Testing:** ❌ Incomplete
 </details>
 
----
-
 ### 🧮 Parameters
 
 | Name         | Type    | Description                                                                          |
@@ -343,7 +332,6 @@ Used to control character spacing in text renderers such as Text Mesh Pro.
 ### 🔁 Return
 `string` — The string value wrapped within the `<cspace>` tag.
 
----
 
 ### 💡 Example
 ```greyscript
@@ -376,8 +364,6 @@ Modifies a text string to wrap it in the `<indent>` tag for use with supported r
 - **Unit Testing:** ❌ Incomplete
 </details>
 
----
-
 ### 🧮 Parameters
 
 | Name           | Type     | Description                                                                 |
@@ -395,7 +381,6 @@ Modifies a text string to wrap it in the `<indent>` tag for use with supported r
 ### 🔁 Return
 `string` — the string value embedded in (or appended to) the `<indent>` tag.
 
----
 
 ### 💡 Example
 ```greyscript
@@ -443,8 +428,6 @@ Modifies a text string by wrapping it within the `<i>` tag.
 - **Unit Testing:** ❌ Incomplete
 </details>
 
----
-
 ### ➖ Parameters  
 | Parameter | Default Value |
 |-----------|---------------|
@@ -453,9 +436,8 @@ Modifies a text string by wrapping it within the `<i>` tag.
 ### 🔁 Return
 `string` — The string value wrapped within the `<i>` tag.
 
----
-
 ### 💡 Example
+
 ```greyscript
 newString = "Hello"
 
@@ -480,8 +462,6 @@ Modifies a text string to wrap it in the `<line-indent>` tag.
 - **Unit Testing:** ❌ Incomplete
 </details>
 
----
-
 ### 🧮 Parameters
 
 | Name           | Type     | Description                                           |
@@ -499,9 +479,8 @@ Modifies a text string to wrap it in the `<line-indent>` tag.
 ### 🔁 Return
 `string` — The string value embedded in (or appended to) the `<line-indent>` tag.
 
----
-
 ### 💡 Example
+
 ```greyscript
 newString = "Hello"
     result = newString.line-indent
@@ -536,9 +515,6 @@ Modifies a text string by wrapping it within the `<lowercase>` tag.
 - **Version:** 0.0.1 
 - **Unit Testing:** ❌ Incomplete
 </details>
----
-
----
 
 ### ➖ Parameters  
 | Parameter | Default Value |
@@ -549,9 +525,8 @@ Modifies a text string by wrapping it within the `<lowercase>` tag.
 ### 🔁 Return
 `string` — The string value wrapped within the `<lowercase>` tag.
 
----
-
 ### 💡 Example
+
 ```greyscript
 newString = "Hello"
 
@@ -578,8 +553,6 @@ Modifies a text string by wrapping it within the `<margin>` tag.
 - **Unit Testing:** ❌ Incomplete
 </details>
 
----
-
 ### 🧮 Parameters
 
 | Name     | Type   | Description                                      |
@@ -597,9 +570,8 @@ Modifies a text string by wrapping it within the `<margin>` tag.
 ### 🔁 Return
 `string` — The string value wrapped within the `<margin>` tag.
 
----
-
 ### 💡 Example
+
 ```greyscript
 newString = "Hello"
 
@@ -624,9 +596,6 @@ Modifies a text string by wrapping it within the `<mark>` tag.
 - **Version:** 0.0.1 
 - **Unit Testing:** ❌ Incomplete
 </details>
----
-
----
 
 ### 🧮 Parameters
 
@@ -645,9 +614,8 @@ Modifies a text string by wrapping it within the `<mark>` tag.
 ### 🔁 Return
 `string` — The string value wrapped within the `<mark>` tag.
 
----
-
 ### 💡 Example
+
 ```greyscript
 newString = "Hello"
 
@@ -675,8 +643,6 @@ Modifies a text string by wrapping it within the `<mspace>` tag.
 
 </details>
 
----
-
 ### 🧮 Parameters
 
 | Name        | Type   | Description                                     |
@@ -694,9 +660,8 @@ Modifies a text string by wrapping it within the `<mspace>` tag.
 ### 🔁 Return
 `string` — The string value wrapped within the `<mspace>` tag.
 
----
-
 ### 💡 Example
+
 ```greyscript
 newString = "Hello"
 
@@ -723,8 +688,6 @@ Modifies a text string by wrapping it within the `<nobr>` tag.
 
 </details>
 
----
-
 ### ➖ Parameters  
 | Parameter | Default Value |
 |-----------|---------------|
@@ -735,9 +698,8 @@ Modifies a text string by wrapping it within the `<nobr>` tag.
 ### 🔁 Return
 `string` — The string value wrapped within the `<nobr>` tag.
 
----
-
 ### 💡 Example
+
 ```greyscript
 newString = "Hello"
 
@@ -764,8 +726,6 @@ Modifies a text string by wrapping it within the `<noparse>` tag.
 
 </details>
 
----
-
 ### ➖ Parameters  
 | Parameter | Default Value |
 |-----------|---------------|
@@ -775,9 +735,8 @@ Modifies a text string by wrapping it within the `<noparse>` tag.
 ### 🔁 Return
 `string` — The string value wrapped within the `<noparse>` tag.
 
----
-
 ### 💡 Example
+
 ```greyscript
 newString = "Hello"
 
@@ -805,8 +764,6 @@ Modifies a text string by appending the `<page>` tag to the end.
 
 </details>
 
----
-
 ### ➖ Parameters  
 | Parameter | Default Value |
 |-----------|---------------|
@@ -816,9 +773,8 @@ Modifies a text string by appending the `<page>` tag to the end.
 ### 🔁 Return
 `string` — The string value with the `<page>` tag appended to the end.
 
----
-
 ### 💡 Example
+
 ```greyscript
 newString = "Hello"
 
@@ -845,8 +801,6 @@ Modifies a text string by prepending it with the `<pos>` tag.
 
 </details>
 
----
-
 ### 🧮 Parameters
 
 | Name      | Type   | Description            |
@@ -865,9 +819,8 @@ Modifies a text string by prepending it with the `<pos>` tag.
 `string` — The string prepended with the `<pos>` tag.
 
 
----
-
 ### 💡 Example
+
 ```greyscript
 newString = "Hello"
 
@@ -894,8 +847,6 @@ Modifies a text string by wrapping it within the `<rotate>` tag.
 
 </details>
 
----
-
 ### 🧮 Parameters
 
 | Name             | Type   | Description            |
@@ -913,9 +864,8 @@ Modifies a text string by wrapping it within the `<rotate>` tag.
 ### 🔁 Return
 `string` — The string rotated with the `<rotate>` tag.
 
----
-
 ### 💡 Example
+
 ```greyscript
 newString = "Hello"
 
@@ -943,8 +893,6 @@ Modifies a text string by wrapping it within the `<size>` tag.
 
 </details>
 
----
-
 ### 🧮 Parameters
 
 | Name      | Type   | Description          |
@@ -962,9 +910,8 @@ Modifies a text string by wrapping it within the `<size>` tag.
 ### 🔁 Return
 `string` — The string wrapped within the `<size>` tag.
 
----
-
 ### 💡 Example
+
 ```greyscript
 newString = "Hello"
 
@@ -991,8 +938,6 @@ Modifies a text string by wrapping it within the `<s>` tag.
 
 </details>
 
----
-
 ### ➖ Parameters  
 | Parameter | Default Value |
 |-----------|---------------|
@@ -1002,9 +947,8 @@ Modifies a text string by wrapping it within the `<s>` tag.
 ### 🔁 Return
 `string` — The string wrapped within the `<s>` tag.
 
----
-
 ### 💡 Example
+
 ```greyscript
 newString = "Hello"
 
@@ -1031,8 +975,6 @@ Modifies a text string by wrapping it within the `<sub>` tag.
 
 </details>
 
----
-
 ### ➖ Parameters  
 | Parameter | Default Value |
 |-----------|---------------|
@@ -1042,9 +984,8 @@ Modifies a text string by wrapping it within the `<sub>` tag.
 ### 🔁 Return
 `string` — The string wrapped within the `<sub>` tag.
 
----
-
 ### 💡 Example
+
 ```greyscript
 newString = "Hello"
 
@@ -1071,8 +1012,6 @@ Modifies a text string by wrapping it within the `<sup>` tag.
 
 </details>
 
----
-
 ### ➖ Parameters  
 | Parameter | Default Value |
 |-----------|---------------|
@@ -1081,9 +1020,8 @@ Modifies a text string by wrapping it within the `<sup>` tag.
 ### 🔁 Return
 `string` — The string wrapped within the `<sup>` tag.
 
----
-
 ### 💡 Example
+
 ```greyscript
 newString = "Hello"
 
@@ -1110,8 +1048,6 @@ Modifies a text string by wrapping it within the `<u>` tag.
 
 </details>
 
----
-
 ### ➖ Parameters  
 | Parameter | Default Value |
 |-----------|---------------|
@@ -1120,9 +1056,8 @@ Modifies a text string by wrapping it within the `<u>` tag.
 ### 🔁 Return
 `string` — The string wrapped within the `<u>` tag.
 
----
-
 ### 💡 Example
+
 ```greyscript
 newString = "Hello"
 
@@ -1149,8 +1084,6 @@ Modifies a text string by wrapping it within the `<uppercase>` tag.
 
 </details>
 
----
-
 ### ➖ Parameters  
 | Parameter | Default Value |
 |-----------|---------------|
@@ -1160,9 +1093,8 @@ Modifies a text string by wrapping it within the `<uppercase>` tag.
 ### 🔁 Return
 `string` — The string wrapped within the `<uppercase>` tag.
 
----
-
 ### 💡 Example
+
 ```greyscript
 newString = "Hello"
 
@@ -1189,8 +1121,6 @@ Modifies a text string by wrapping it within the `<voffset>` tag.
 
 </details>
 
----
-
 ### 🧮 Parameters
 
 | Name           | Type     | Description                          |
@@ -1208,9 +1138,8 @@ Modifies a text string by wrapping it within the `<voffset>` tag.
 ### 🔁 Return  
 `string` — The string value wrapped within the `<voffset>` tag.
 
----
+### 💡 Example
 
-### 💡 Example  
 ```greyscript
 newString = "Hello"
 
@@ -1237,8 +1166,6 @@ Modifies a text string by wrapping it within the `<width>` tag.
 
 </details>
 
----
-
 ### 🧮 Parameters
 
 | Name    | Type   | Description                         |
@@ -1256,9 +1183,8 @@ Modifies a text string by wrapping it within the `<width>` tag.
 ### 🔁 Return  
 `string` — The string value wrapped within the `<width>` tag.
 
----
+### 💡 Example
 
-### 💡 Example  
 ```greyscript
 newString = "Hello"
 
@@ -1274,30 +1200,148 @@ print(result)
 ---
 
 ## Logic Methods
-### .extract
-The `.extract` method allows you to extract the text between the provided values
 
-![image](../images/docblocks/string/extract.png)
+## remove_bold
 
-```
-newString = "<b>0x53C737</b>"
+### 📝 Description  
+Removes `<b>` and `</b>` tags from a string.
 
-print(newString.extract_between("<b>", "</b>")) // Outputs: 0x53C737
+<details>
+<summary>📃 About</summary>
 
-```
-### .format
-The `.format` method allows for string interpolation
+- **Author:** Svarii  
+- **Version:** 0.0.1  
 
-![image](../images/docblocks/string/format.png)
+</details>
+
+### ➖ Parameters  
+| Parameter | Default Value |
+|-----------|---------------|
+| *(None)*  | *(None)*      |
+
+
+### 🔁 Return  
+`string` — The input string without `<b>` and `</b>` tags.
+
+### 💡 Example
 
 ```greyscript
-// Modification of implimentation by dynobytes.
-variableString = "The quick brown %s jumps over the lazy %s"
-animalsList = ["fox", "dog"]      
-sentence = variableString.format(animalsList)
-print(sentence); // Outputs: The quick brown fox jumps over the lazy dog
+newString = "<b>Hello</b>"
+result = newString.remove_bold
+print(result)  // Outputs: Hello
 ```
+
+---
+
+## format
+
+### 📝 Description  
+Allows for string interpolation by replacing a delimiter (`%s` by default) with values from a list.
+
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Contributor:** dynobytes (original logic)
+- **Version:** 0.0.1  
+
+</details>
+
+### 🧮 Parameters
+
+| Name     | Type         | Description                                  |
+|----------|--------------|----------------------------------------------|
+| `args`   | list<string> | List of values to insert into the string.    |
+| `delim`  | string        | *(Optional)* Delimiter used in string. Default: `"%s"` |
+
+#### ⚙️ Defaults
+
+| Parameter | Default |
+|-----------|---------|
+| `args`   | _(None)_  |
+| `delim`   | `"%s"`  |
+
+
+### 🔁 Return  
+`string` — The formatted string with list values interpolated in place of the delimiter.
+
+### 💡 Example
+
+```greyscript
+variableString = "The quick brown %s jumps over the lazy %s"
+animalsList = ["fox", "dog"]
+sentence = variableString.format(animalsList)
+print(sentence)  // Output: The quick brown fox jumps over the lazy dog
+```
+
+---
+
+
 ## Removal Methods
+
+## remove_bold
+
+### 📝 Description  
+Removes `<b>` and `</b>` tags from a string.
+
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1  
+
+</details>
+
+### ➖ Parameters  
+| Parameter | Default Value |
+|-----------|---------------|
+| *(None)*  | *(None)*      |
+
+### 🔁 Return  
+`string` — The string without `<b>` and `</b>` tags.
+
+### 💡 Example
+
+```greyscript
+newString = "<b>Hello</b>"
+result = newString.remove_bold
+print(result) // Outputs: Hello
+```
+
+---
+
+## remove_char_first
+
+### 📝 Description  
+Removes the first character of the given string.
+
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1  
+
+</details>
+
+
+### ➖ Parameters  
+| Parameter | Default Value |
+|-----------|---------------|
+| *(None)*  | *(None)*      |
+
+### 🔁 Return  
+`string` — The string with the first character removed.
+
+
+### 💡 Example
+```greyscript
+newString = "Hello"
+result = newString.remove_char_first
+print(result) // Outputs: ello
+```
+
+---
+
 ### .remove_char_last 
 The `.remove_char_last` method allows you to remove the last character to the given text. Example usage:
 
@@ -1403,8 +1447,6 @@ print(newString.remove_sup) // Outputs: Hello
 
 # 🔢 ![Static Badge](https://img.shields.io/badge/number-methods-lightcyan)
 
-![Static Badge](https://img.shields.io/badge/method-number-green)
-
 ## clamp
 
 ### 📝 Description  
@@ -1417,8 +1459,6 @@ Ensure a number stays between a minimum and maximum value.
 - **Version:** 0.0.1  
 
 </details>
-
----
 
 ### 🧮 Parameters
 
@@ -1433,14 +1473,12 @@ Ensure a number stays between a minimum and maximum value.
 |-----------|---------------|
 | *(None)*  | *(None)*      |
 
----
 
 ### 🔁 Return  
 `number` — Clamped number between the min and max bounds.
 
----
-
 ### 💡 Example
+
 ```greyscript
 myNumber = 42
 print myNumber.clamp(42, 100) // Return 42
@@ -1471,8 +1509,6 @@ The difference between number and provided number.
 
 </details>
 
----
-
 ### 🧮 Parameters
 
 | Name         | Type   | Description                 |
@@ -1485,14 +1521,11 @@ The difference between number and provided number.
 |--------------|---------|
 | `distanceTo` | `0`     |
 
----
-
 ### 🔁 Return  
 `number` — The difference between the numbers.
 
----
-
 ### 💡 Example
+
 ```greyscript
 myNumber = 42
 print myNumber.diff(42, 100) // Return 57
@@ -1519,8 +1552,6 @@ Divide 2 from the number or optional amount.
 
 </details>
 
----
-
 ### 🧮 Parameters
 
 | Name     | Type   | Description                    |
@@ -1537,9 +1568,8 @@ Divide 2 from the number or optional amount.
 ### 🔁 Return  
 `number` — The result of the division.
 
----
-
 ### 💡 Example
+
 ```greyscript
 myNumber = 42
 print myNumber.div      // Return 21
@@ -1565,8 +1595,6 @@ Checks if the number is a floating-point number (contains a decimal point).
 
 </details>
 
----
-
 ### ➖ Parameters  
 | Parameter | Default Value |
 |-----------|---------------|
@@ -1575,9 +1603,8 @@ Checks if the number is a floating-point number (contains a decimal point).
 ### 🔁 Return  
 `boolean` — Returns `true` if the number contains a decimal point, otherwise `false`.
 
----
-
 ### 💡 Example
+
 ```greyscript
 print (42).is_float()    // false
 print (3.14).is_float()  // true
@@ -1597,8 +1624,6 @@ Checks if the number is an integer.
 
 </details>
 
----
-
 ### ➖ Parameters  
 | Parameter | Default Value |
 |-----------|---------------|
@@ -1607,9 +1632,8 @@ Checks if the number is an integer.
 ### 🔁 Return  
 `boolean` — Returns `true` if the number is an integer, otherwise `false`.
 
----
-
 ### 💡 Example
+
 ```greyscript
 print (420).is_integer()    // true
 print (1.618).is_integer()  // false
@@ -1630,8 +1654,6 @@ Returns `true` if the number is less than the provided amount, otherwise `false`
 
 </details>
 
----
-
 ### ➖ Parameters  
 | Parameter | Default Value |
 |-----------|---------------|
@@ -1640,9 +1662,8 @@ Returns `true` if the number is less than the provided amount, otherwise `false`
 ### 🔁 Return  
 `boolean` — Returns `true` if the number is less than the provided amount, otherwise `false`.
 
----
-
 ### 💡 Example
+
 ```greyscript
 myNumber = 42
 myNumber2 = 100
@@ -1656,8 +1677,6 @@ print(result) // Outputs: true
 
 ### 📝 Description  
 Returns `true` if the number is greater than the provided amount, otherwise `false`.
-
----
 
 <details>
 <summary>📃 About</summary>
@@ -1676,9 +1695,8 @@ Returns `true` if the number is greater than the provided amount, otherwise `fal
 ### 🔁 Return  
 `boolean` — Returns `true` if the number is greater than the provided amount, otherwise `false`.
 
----
-
 ### 💡 Example
+
 ```greyscript
 myNumber = 42
 myNumber2 = 100
@@ -1702,8 +1720,6 @@ Performs linear interpolation between `min` and `max` using `offset`.
 
 </details>
 
----
-
 ### 🧮 Parameters
 
 | Name      | Type   | Description                                        |
@@ -1715,9 +1731,8 @@ Performs linear interpolation between `min` and `max` using `offset`.
 ### 🔁 Return  
 `number` — A value between `min` and `max`, interpolated by `offset`.
 
----
-
 ### 💡 Example
+
 ```greyscript
 print number.lerp(0, 100, 0.5)   // 50
 print number.lerp(10, 20, 0.25)  // 12.5
@@ -1740,8 +1755,6 @@ Subtracts `1` from the number or a specified amount.
 
 </details>
 
----
-
 ### 🧮 Parameters
 
 | Name     | Type   | Description                   |
@@ -1757,9 +1770,8 @@ Subtracts `1` from the number or a specified amount.
 ### 🔁 Return  
 `number` — The result of the subtraction.
 
----
-
 ### 💡 Example
+
 ```greyscript
 newNumber = 44
 
@@ -1781,8 +1793,6 @@ Multiplies the number by 2 or a specified amount.
 
 </details>
 
----
-
 ### 🧮 Parameters
 
 | Name     | Type   | Description                      |
@@ -1798,9 +1808,8 @@ Multiplies the number by 2 or a specified amount.
 ### 🔁 Return  
 `number` — The result of the multiplication.
 
----
-
 ### 💡 Example
+
 ```greyscript
 newNumber = 21
 
@@ -1825,8 +1834,6 @@ Add 1 to the number or optional amount.
 
 </details>
 
----
-
 ### 🧮 Parameters
 
 | Name     | Type   | Description                 |
@@ -1843,9 +1850,8 @@ Add 1 to the number or optional amount.
 ### 🔁 Return  
 `number` — The result of the addition.
 
----
-
 ### 💡 Example
+
 ```greyscript
 newNumber = 40
 result = newNumber.plus(2)
@@ -1867,8 +1873,6 @@ Generate a random number from 0 to number, or from optional minimum to number.
 
 </details>
 
----
-
 ### 🧮 Parameters
 
 | Name  | Type   | Description                      |
@@ -1885,9 +1889,8 @@ Generate a random number from 0 to number, or from optional minimum to number.
 ### 🔁 Return  
 `number` — A random number between `min` and the number itself.
 
----
-
 ### 💡 Example
+
 ```greyscript
 myNumber = 100
 result = myNumber.random_from(50)
@@ -1895,6 +1898,7 @@ print(result)  // Output: A random number between 50 and 100
 ```
 
 ---
+
 # 📋 ![Static Badge](https://img.shields.io/badge/list-methods-lightblue)
 
 
@@ -1911,8 +1915,6 @@ Iterates through a list from both ends and removes empty items, returning the cl
 
 </details>
 
----
-
 ### ➖ Parameters  
 | Parameter | Default Value |
 |-----------|---------------|
@@ -1921,9 +1923,8 @@ Iterates through a list from both ends and removes empty items, returning the cl
 ### 🔁 Return  
 `list` — The same list with empty items purged from the start and end.
 
----
-
 ### 💡 Example
+
 ```greyscript
 myList = ["","","cat","dog",""]
 result = myList.crop
@@ -1946,8 +1947,6 @@ Iterates through a list and constructs a string by joining all elements using th
 
 </details>
 
----
-
 ### 🧮 Parameters
 
 | Name       | Type   | Description                                                        |
@@ -1960,14 +1959,11 @@ Iterates through a list and constructs a string by joining all elements using th
 |-------------|----------|
 | `separator` | `char(10)` |
 
----
-
 ### 🔁 Return  
 `string` — The newly constructed string joining all list elements.
 
----
-
 ### 💡 Example
+
 ```greyscript
 myList = ["cat", "dog"]
 print myList.string()       // Outputs: "cat" + char(10) + "dog"
@@ -1977,6 +1973,7 @@ print myList.string(", ")   // Outputs: "cat, dog"
 ---
 
 # 🗂️ ![Static Badge](https://img.shields.io/badge/map-methods-lightforestgreen)
+
 
 ## get_attributes
 
@@ -1991,26 +1988,19 @@ Iterates through the `__isa` property of an object and returns a list of top-lev
 
 </details>
 
----
-
 ### ➖ Parameters  
 | Parameter | Default Value |
 |-----------|---------------|
 | *(None)*  | *(None)*      |
 
----
-
 ### 🔁 Return  
 `list<string>` — List of top-level attribute names.
-
----
 
 ### 🧠 Notes  
 - Only top-level attributes are returned.
 
----
-
 ### 💡 Example
+
 ```greyscript
 myObject = {"classID":"myObject", "myVar":"some Value"}
 result = myObject.get_attributes()
@@ -2018,7 +2008,10 @@ print(result)  // Outputs: ["classID", "myVar"]
 ```
 
 ---
-# 📄 Functions Overview
+
+# 📄 Functions
+
+
 ## bool_text
 
 ### 📝 Description  
@@ -2031,8 +2024,6 @@ Converts a boolean-like value (`true`, `false`, `1`, `0`) into a string: `"true"
 - **Unit Testing:** ❌ Incomplete 
 
 </details>
-
----
 
 ### 🧮 Parameters
 
@@ -2047,8 +2038,6 @@ Converts a boolean-like value (`true`, `false`, `1`, `0`) into a string: `"true"
 
 ### 🔁 Return  
 `string` — Returns `"true"` or `"false"` if the value is valid. Returns `null` for invalid input.
-
----
 
 
 ### 💡 Examples
@@ -2103,8 +2092,6 @@ Returns `null` if no valid IP address is found.
 
 </details>
 
----
-
 ### 🧮 Parameters
 
 | Name          | Type   | Description                         |
@@ -2120,9 +2107,6 @@ Returns `null` if no valid IP address is found.
 
 ### 🔁 Return  
 `string | null` — The first matching IPv4 address, or `null` if none is found.
-
----
-
 
 ### 💡 Example
 ```greyscript
@@ -2157,8 +2141,6 @@ Appends data to an existing file, or creates a new file if the file does not exi
 
 </details>
 
----
-
 ### 🧮 Parameters
 
 | Name        | Type   | Description                    |
@@ -2177,9 +2159,8 @@ Appends data to an existing file, or creates a new file if the file does not exi
 ### 🔁 Return  
 `void` — No return value.
 
----
-
 ### 💡 Example
+
 ```greyscript
 dataString = "0xFC45B2XR9:missspeling"
 
@@ -2206,8 +2187,6 @@ Delete a specified file if it has write permissions.
 
 </details>
 
----
-
 ### 🧮 Parameters
 
 | Name        | Type   | Description                        |
@@ -2226,9 +2205,8 @@ Delete a specified file if it has write permissions.
 `boolean` — `true` if the file has write permission; `false` if not.  
 🛈 *This does not verify that the file exists or was successfully deleted.*
 
----
-
 ### 💡 Example
+
 ```greyscript
 file_delete("/DatabaseDir", "addressData.db")
 // Deletes the file if write permission exists
@@ -2254,8 +2232,6 @@ Check to see if the specified file exists.
 
 </details>
 
----
-
 ### 🧮 Parameters
 
 | Name        | Type   | Description                        |
@@ -2273,9 +2249,8 @@ Check to see if the specified file exists.
 ### 🔁 Return  
 `boolean` — `true` if the file is found, otherwise `false`.
 
----
-
 ### 💡 Example
+
 ```greyscript
 file_exists("/DatabaseDir", "addressData.db")
 // return true if found, otherwise false
@@ -2298,8 +2273,6 @@ Creates and returns a structured object containing file identification attribute
 
 </details>
 
----
-
 ### 🧮 Parameters
 
 | Name              | Type     | Description                                |
@@ -2311,8 +2284,6 @@ Creates and returns a structured object containing file identification attribute
 | Parameter         | Default Value |
 |-------------------|---------------|
 | *absoluteLocation*| *(None)*      |
-
----
 
 ### 🔁 Return  
 📦 `map<string, string>` — a map object containing file identifier attributes.
@@ -2328,9 +2299,8 @@ Creates and returns a structured object containing file identification attribute
 | `.parentdir`  | `string` | Immediate parent directory name           |
 | `.location`   | `string` | Original absolute location (input value)  |
 
----
-
 ### 💡 Example
+
 ```greyscript
 aptClientID = file_location_ident("/lib/aptclient.so")
 
@@ -2365,8 +2335,6 @@ Create a new file at the specified path if it does not already exist.
 
 </details>
 
----
-
 ### 🧮 Parameters
 
 | Name        | Type   | Description                     |
@@ -2383,9 +2351,8 @@ Create a new file at the specified path if it does not already exist.
 ### 🔁 Return  
 `void` — This function does not return any value.
 
----
-
 ### 💡 Example
+
 ```greyscript
 file_new("/DatabaseDir", "addressData.db")
 // Creates a file at the specified location
@@ -2410,8 +2377,6 @@ Specifies usage information and checks if the required number of parameters have
 
 </details>
 
----
-
 ### 🧮 Parameters
 
 | Name            | Type   | Description                                       |
@@ -2430,9 +2395,8 @@ Specifies usage information and checks if the required number of parameters have
 `void` — This function does not return any value.  
 🛈 Terminates the script early if the parameters do not meet requirements.
 
----
-
 ### 💡 Example
+
 ```greyscript
 force_params("myApp [ipAddress] [port#]", 2)
 ```
@@ -2450,8 +2414,6 @@ Scan a library for vulnerable addresses.
 - **Unit Testing:** ❌ Incomplete 
 
 </details>
-
----
 
 ### 🧮 Parameters
 
@@ -2471,9 +2433,6 @@ Scan a library for vulnerable addresses.
 
 ### 🔁 Return  
 `list<string>` — List of vulnerable addresses found.
-
----
-
 
 ### 💡 Example
 ```greyscript
@@ -2502,8 +2461,6 @@ Returns a list of structured maps with exploit requirement metadata for each add
 - **Unit Testing:** ❌ Not implemented  
 
 </details>
-
----
 
 ### 🧮 Parameters
 
@@ -2540,9 +2497,8 @@ Returns a list of structured maps with exploit requirement metadata for each add
 | `.is_patched`  | `string` | `"true"` or `"false"` — if exploit is patched |
 | `.version`     | `string` | Version of the discovered software/lib      |
 
----
-
 ### 💡 Example
+
 ```greyscript
 scanLibLocation = "/lib/aptclient.so"
 metaxLocation = "/lib/metaxploit.so"
@@ -2575,8 +2531,6 @@ Pulls WHOIS information for a **public IP address** and returns a structured map
 
 </details>
 
----
-
 ### 🧮 Parameters
 
 | Name                   | Type     | Description                                                 |
@@ -2604,9 +2558,8 @@ Pulls WHOIS information for a **public IP address** and returns a structured map
 | `.network`  | `string` | The network name or ID (if found)                             |
 | `.error`    | `string` | **Return String on Error or false**                           |
 
----
-
 ### 💡 Example
+
 ```greyscript
 whoisInfo = fetch_whois(params[0])
 
@@ -2638,8 +2591,6 @@ Creates a structured map of **file identification attributes** from an absolute 
 
 </details>
 
----
-
 ### 🧮 Parameters
 
 | Name              | Type     | Description                              |
@@ -2668,9 +2619,8 @@ Creates a structured map of **file identification attributes** from an absolute 
 | `.parentdir`  | `string` | Parent directory name              |
 | `.location`   | `string` | Full absolute file path            |
 
----
-
 ### 💡 Example
+
 ```greyscript
 aptClientID = file_location_ident("/lib/aptclient.so")
 
@@ -2680,10 +2630,7 @@ print(aptClientID.ext)       // Output: so
 print(aptClientID.name)      // Output: aptclient
 ```
 
----
-
-### ⚠️ Footnotes
-
+### 🧠 Notes
 - Parameters are not validated.
 - Passing an invalid type for `absoluteLocation` will cause runtime errors:
   - `number`: `"Runtime Error: Key Not
@@ -2703,8 +2650,6 @@ Scans a string for a valid IPv4 address and returns the first match.
 
 </details>
 
----
-
 ### 🧮 Parameters
 
 | Name          | Type   | Description                                    |
@@ -2717,14 +2662,11 @@ Scans a string for a valid IPv4 address and returns the first match.
 |---------------|---------|
 | `inputString` | _none_  |
 
----
-
 ### 🔁 Return  
 `string | null` — The first matching IPv4 address, or `null` if none is found.
 
----
-
 ### 💡 Example
+
 ```greyscript
 print(extractIP("My IP is 192.168.1.5"))
 # Output: 192.168.1.5
@@ -2756,8 +2698,6 @@ Calculates the recommended number of ACKs to collect based on signal strength.
 
 </details>
 
----
-
 ### 🧮 Parameters
 
 | Name            | Type   | Description                        |
@@ -2775,9 +2715,8 @@ Calculates the recommended number of ACKs to collect based on signal strength.
 ### 🔁 Return  
 `number` — Recommended number of ACKs to collect.
 
----
-
 ### 💡 Example
+
 ```greyscript
 reqACK = get_acks(6) // Signal Strength 6%
 print(reqACK) // Output: 14286
@@ -2797,8 +2736,6 @@ Logs into the mail account and fetches inbox messages.
 - **Unit Testing:** ❌ Incomplete 
 
 </details>
-
----
 
 ### 🧮 Parameters
 
@@ -2820,9 +2757,8 @@ Logs into the mail account and fetches inbox messages.
 `object` — Inbox messages fetched from the mail server.  
 🛈 Returns `null` if `mailPass` is not provided.
 
----
-
 ### 💡 Example
+
 ```greyscript
 inbox = get_inbox("mypassword", "user@example.com")
 print(inbox)
@@ -2842,8 +2778,6 @@ Generate a single random IP address.
 
 </details>
 
----
-
 ### ➖ Parameters  
 | Parameter | Default Value |
 |-----------|---------------|
@@ -2853,9 +2787,8 @@ Generate a single random IP address.
 ### 🔁 Return  
 `string` — Randomly generated IP Address.
 
----
-
 ### 💡 Example
+
 ```greyscript
 randomIP = get_random_ip
 print(randomIP) // Output: ###.###.###.###
@@ -2876,8 +2809,6 @@ Return `true` if item is null, `false` otherwise.
 
 </details>
 
----
-
 ### 🧮 Parameters
 
 | Name        | Type | Description           |
@@ -2895,9 +2826,8 @@ Return `true` if item is null, `false` otherwise.
 ### 🔁 Return  
 `boolean` — `true` if null, otherwise `false`.
 
----
-
 ### 💡 Example
+
 ```greyscript
 nullItem = null
 notNull = "A string"
@@ -2921,8 +2851,6 @@ Check if the object passed is of the specified type and return a boolean answer.
 
 </details>
 
----
-
 ### 🧮 Parameters
 
 | Name        | Type   | Description            |
@@ -2943,9 +2871,8 @@ Check if the object passed is of the specified type and return a boolean answer.
 `boolean` — `true` if the object is of the specified type, otherwise `false`.
 
 
----
-
 ### 💡 Example
+
 ```greyscript
 print is_typeof(cryptoLibObject, "cryptoLib")       // Output: true
 print is_typeof(metaxploitLibObject, "MetaxploitLib") // Output: true
@@ -2970,8 +2897,6 @@ Loads a library from the lib directory, optionally specifying directory and veri
 
 </details>
 
----
-
 ### 🧮 Parameters
 
 | Name      | Type   | Description                                                                                  |
@@ -2991,8 +2916,6 @@ Loads a library from the lib directory, optionally specifying directory and veri
 
 ### 🔁 Return  
 `objectLibrary` | `null` — Returns the loaded library object or `null` if not found or type mismatched.
-
----
 
 
 ### 💡 Examples
@@ -3027,8 +2950,6 @@ Pulls network device data from the host computer and returns a list of network d
 
 </details>
 
----
-
 ### 🧮 Parameters
 
 | Name     | Type   | Description                            |
@@ -3053,9 +2974,8 @@ Each sublist contains:
 [ adapter, model, monitor_enabled ]
 ```
 
----
-
 ### 💡 Example
+
 ```greyscript
 netList = network_device_list()
 for net in netList
@@ -3080,8 +3000,6 @@ Each parsed message includes: `id`, `from`, `subject`, `body`.
 
 </details>
 
----
-
 ### 🧮 Parameters
 
 | Name         | Type          | Description                        |
@@ -3104,9 +3022,8 @@ Each parsed message includes: `id`, `from`, `subject`, `body`.
 - `subject`: Subject line  
 - `body`: Full body text of the email  
 
----
-
 ### 💡 Example
+
 
 ```greyscript
 mailIDs = ["msgid-001", "msgid-002"]
@@ -3130,8 +3047,6 @@ Return a string with the name of the file that is running this script.
 
 </details>
 
----
-
 ### ➖ Parameters  
 | Parameter | Default Value |
 |-----------|---------------|
@@ -3142,9 +3057,8 @@ Return a string with the name of the file that is running this script.
 
 `string` — The name of the running program file.
 
----
-
 ### 💡 Example
+
 
 ```greyscript
 programName = program_name
@@ -3166,8 +3080,6 @@ Split Unsafe Check Results into individual exploit result strings and return a l
 
 </details>
 
----
-
 ### 🧮 Parameters
 
 | Name          | Type   | Description                                              |
@@ -3186,9 +3098,8 @@ Split Unsafe Check Results into individual exploit result strings and return a l
 
 `list<string>` — List of individual unsafe check strings.
 
----
-
 ### 💡 Example
+
 
 ```greyscript
 libLocation = "/lib/aptclient.so"
@@ -3199,7 +3110,7 @@ unsafeCheckList = unsafe_check_list(fetch_exploit_requirements(exploitMem))
 ```
 ---
 
-# 📄 Construct Overview
+# 📄 Constructs
 ## report_string_construct__
 
 ### 📝 Description  
@@ -3214,8 +3125,6 @@ Constructs and returns an object containing categorized status strings
 
 </details>
 
----
-
 ### ➖ Parameters  
 | Parameter | Default Value |
 |-----------|---------------|
@@ -3224,10 +3133,6 @@ Constructs and returns an object containing categorized status strings
 
 ### 🔁 Return  
 `object` — An object (`gstexts`) containing categorized status messages grouped by `fail`, `pass`, `action`, `info`, and `email` categories.
-
----
-
-
 
 ### 📝 Structure Overview
 
@@ -3238,8 +3143,6 @@ Constructs and returns an object containing categorized status strings
 | `action` | Contains messages indicating ongoing checks|
 | `info`   | Contains informational messages            |
 | `email`  | Contains email-related messages             |
-
----
 
 
 ### 💡 Examples

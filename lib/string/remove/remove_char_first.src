@@ -1,14 +1,27 @@
-     
-
-
-        //  **Description:**
-        //  Remove the first character of the given text.
-        //  @return {string}
-        //  @example newString = "Hello"
-        //  @example    
-        //  @example result = newString.remove_char_first
-        //  @example          
-        //  print(result); // Outputs: ello
+//  **Description:**
+//  Remove the first character of the given text.
+//  @return {string}
+//  @description `string` The string with the first character removed.
+//  @description ---
+//
+//  @description **Parameters:**
+//  @description - none
+//
+//  @description **Return:**
+//  @return {string}
+//  @description `string` The modified string with the first character removed.
+//  @description ---
+//
+//  @description **Author:** Svarii
+//  @description **Version:** 0.0.1
+//  @description ---
+//
+//  @example newString = "Hello"
+//  @example    
+//  result = newString.remove_char_first
+//  @example          
+//  print(result); // Outputs: ello
+//  @description ---
     string.remove_char_first = function()
         return slice(self, 1, (self.len))
     end function
