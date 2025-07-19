@@ -1484,7 +1484,7 @@ print myNumber.clamp(75, 100) // Return 75
 print myNumber.clamp(0, 40)   // Return 40
 ```
 
-### 🧠 Notes  
+#### 🧠 Notes  
 - Ensures `self` is within `[min, max]`.  
 - Returns `min` if `self` is below the range, `max` if above.  
 - Useful for keeping values bounded within a range.
@@ -1531,7 +1531,7 @@ print myNumber.diff(75, 100) // Return 25
 print myNumber.diff(0, 40)   // Return 40
 ```
 
-### 🧠 Notes  
+#### 🧠 Notes  
 - Uses absolute difference: `abs(self - distanceTo)`.  
 - Defaults to comparing against 0 if no parameter is provided.
 
@@ -1994,8 +1994,6 @@ Iterates through the `__isa` property of an object and returns a list of top-lev
 ### 🔁 Return  
 `list<string>` — List of top-level attribute names.
 
-### 🧠 Notes  
-- Only top-level attributes are returned.
 
 ### 💡 Example
 
@@ -2004,6 +2002,8 @@ myObject = {"classID":"myObject", "myVar":"some Value"}
 result = myObject.get_attributes()
 print(result)  // Outputs: ["classID", "myVar"]
 ```
+#### 🧠 Notes  
+- Only top-level attributes are returned.
 
 ---
 
