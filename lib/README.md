@@ -2615,7 +2615,7 @@ Creates a structured map of **file identification attributes** from an absolute 
 ### 🔁 Return
 `map<string, string>` — a map object populated with file metadata.
 
-#### 🗂️ Map Keys
+#### 🗺️ Map Keys
 
 | Key           | Type     | Description                        |
 |---------------|----------|------------------------------------|
