@@ -1898,38 +1898,124 @@ print(result)  // Output: A random number between 50 and 100
 # 📋 ![Static Badge](https://img.shields.io/badge/list-methods-lightblue)
 
 
-## .crop
-The `.crop` method Returns a new list stripped of any spacing at the beginning and ending. If any value gets passed that is not a list this method will return null.
+## crop
 
-![image](https://github.com/user-attachments/assets/c4a534f2-b5e0-47b2-a7b0-ccf5e21df680)
+### 📝 Description  
+Iterates through a list from both ends and removes empty items, returning the cleaned list.
 
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1  
+
+</details>
+
+---
+
+### ➖ Parameters  
+| Parameter | Default Value |
+|-----------|---------------|
+| *(None)*  | *(None)*      |
+
+### 🔁 Return  
+`list` — The same list with empty items purged from the start and end.
+
+---
+
+### 💡 Example
 ```greyscript
-myList = ["", "string", "string", "", ""]
-
-result = myList.trim
-print(result) // Outputs: ["string", "string"]
+myList = ["","","cat","dog",""]
+result = myList.crop
+print(result) // Output: ["cat","dog"]
 ```
 
-## .print
-The `.print` method loops through a list and prints each item
+---
 
-![image](https://github.com/user-attachments/assets/51a0f05d-e9c0-4786-a53c-c32ccf4d722c)
 
+## string
+
+### 📝 Description  
+Iterates through a list and constructs a string by joining all elements using the provided separator, or `char(10)` by default.
+
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1  
+
+</details>
+
+---
+
+### 🧮 Parameters
+
+| Name       | Type   | Description                                                        |
+|------------|--------|--------------------------------------------------------------------|
+| `separator`| string | Optional. The character(s) to use to separate the list items. Default is `char(10)` |
+
+#### ⚙️ Defaults
+
+| Parameter   | Default  |
+|-------------|----------|
+| `separator` | `char(10)` |
+
+---
+
+### 🔁 Return  
+`string` — The newly constructed string joining all list elements.
+
+---
+
+### 💡 Example
 ```greyscript
-myList = ["string", "string"]
-myList.print
-
-// Outputs:
-string
-string
+myList = ["cat", "dog"]
+print myList.string()       // Outputs: "cat" + char(10) + "dog"
+print myList.string(", ")   // Outputs: "cat, dog"
 ```
 
 ---
 
 # 🗂️ ![Static Badge](https://img.shields.io/badge/map-methods-lightforestgreen)
 
-## .get_attributes
-![image](https://github.com/user-attachments/assets/0168765b-4220-4176-88d1-257209da67b8)
+## get_attributes
+
+### 📝 Description  
+Iterates through the `__isa` property of an object and returns a list of top-level attribute names.
+
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1  
+
+</details>
+
+---
+
+### ➖ Parameters  
+| Parameter | Default Value |
+|-----------|---------------|
+| *(None)*  | *(None)*      |
+
+---
+
+### 🔁 Return  
+`list<string>` — List of top-level attribute names.
+
+---
+
+### 🧠 Notes  
+- Only top-level attributes are returned.
+
+---
+
+### 💡 Example
+```greyscript
+myObject = {"classID":"myObject", "myVar":"some Value"}
+result = myObject.get_attributes()
+print(result)  // Outputs: ["classID", "myVar"]
+```
 
 ---
 # 📄 Functions Overview
