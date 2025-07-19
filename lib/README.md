@@ -2262,7 +2262,7 @@ file_exists("/DatabaseDir", "addressData.db")
 
 ---
 
-## 🗃️ file_location_ident
+## file_location_ident
 
 ### 📝 Description
 Creates and returns a structured object containing file identification attributes derived from a provided absolute file path.
