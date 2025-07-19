@@ -1,3 +1,28 @@
+// Checks if the number is a floating-point number (contains a decimal point)
+// @description **Description:**
+// @description Returns `true` if the number contains a decimal point, otherwise `false`.
+// @description
+//
+// @description **Parameters:**
+// @description - None
+//
+// @description **Parameter Defaults:**
+// @description - None
+// @description
+//
+// @description **Return:**
+// @return {boolean}
+// @description `true` if number is float, else `false`.
+// @description
+//
+// @description **Author:** Svarii
+// @description **Version:** 0.0.1
+// @description
+//
+// @example
+// print (42).is_float()    // false
+// @example
+// print (3.14).is_float()  // true
 number.is_float = function()
 	if str(self).indexOf(".") > 0 then return true
     return false

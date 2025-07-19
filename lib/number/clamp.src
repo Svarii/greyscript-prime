@@ -1,7 +1,7 @@
 // Keeps a number within a specified range
 	// @description **Description:**
 	// @description Ensure an number stays between a minimim and maximum value
-	// @description ---
+	// @description
 	//
 	// @description **Parameters:**
     // @param {number} min - The mix threshold.
@@ -11,25 +11,22 @@
     //
 	// @description **Parameter Defaults:**
     // @description - none
-    // @description ---
+    // @description
     //
 	// @description **Return:**
 	// @return {number} he result of the clamp
-	// @description `number` clamped number
-	// @description ---
+	// @description `number`
+	// @description
 	//
 	// @description **Author:** Svarii
 	// @description **Version:** 0.0.1
-	// @description ---
+	// @description
 	//
 	// @example myNumber = 42
-    // @example
+	// @example
     // print myNumber.clamp(42, 100) // Return 42
-    // @example
-    // print myNumber.clamp(75, 100) // Return 75
-    // @example
+	// print myNumber.clamp(75, 100) // Return 75
     // print myNumber.clamp(0, 40) // Return 40
-	// @description ---
 number.clamp = function(min, max)
             if self < locals.min then return locals.min
             if self > locals.max then return locals.max

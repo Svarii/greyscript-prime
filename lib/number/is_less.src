@@ -1,15 +1,26 @@
-
-        
-        //  **Description:**
-        //  Check if number is lesser than provided number   
-        //  @param {number} amount
-        //  @return {true<bool> | false<bool>} - The result of the subtraction.
-        //  @example myNumber = 42;
-        //  @example myNumber2 = 100;
-        //  @example 
-        //  @example result = newNumber.is_less(myNumber2);
-        //  @example
-        //  print(result); // Outputs: false
+// Checks if the number is lesser than the provided number
+// @description **Description:**
+// @description Returns `true` if the number is less than the provided amount, otherwise `false`.
+// @description ---
+//
+// @description **Parameters:**
+// @param {number} amount - The number to compare against.
+// @description
+//
+// @description **Return:**
+// @return {boolean} `true` if the number is less than `amount`, else `false`.
+// @description
+//
+// @description **Author:** Svarii
+// @description **Version:** 0.0.1
+// @description
+//
+// @example myNumber = 42
+// @example myNumber2 = 100
+// @example
+// result = myNumber.is_less(myNumber2)
+// @example
+// print(result) // Outputs: true
     number.is_less = function(is_less)
             if locals.is_less < self then return true
             return false

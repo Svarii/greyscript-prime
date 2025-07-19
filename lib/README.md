@@ -1399,126 +1399,505 @@ print(newString.remove_sup) // Outputs: Hello
 
 ```
 
+---
+
 # 🔢 ![Static Badge](https://img.shields.io/badge/number-methods-lightcyan)
 
 ![Static Badge](https://img.shields.io/badge/method-number-green)
 
-## .clamp
-The `.clamp` method allows a number to be clamped within a specified range
-![image](https://github.com/user-attachments/assets/53351c78-1259-4796-8a14-466e39fb5768)
+## clamp
 
+### 📝 Description  
+Ensure a number stays between a minimum and maximum value.
 
+<details>
+<summary>📃 About</summary>
 
-## .diff
-The `.diff` method calculates the absolute difference between the current number and another number.
-![image](https://github.com/user-attachments/assets/f78cf4ce-805a-4d04-9e20-0f6b6a6bf8b6)
+- **Author:** Svarii  
+- **Version:** 0.0.1  
 
+</details>
+
+---
+
+### 🧮 Parameters
+
+| Name | Type   | Description          |
+|------|--------|----------------------|
+| `min`| number | The min threshold.   |
+| `max`| number | The max threshold.   |
+
+#### ⚙️ Defaults
+
+| Parameter | Default Value |
+|-----------|---------------|
+| *(None)*  | *(None)*      |
+
+---
+
+### 🔁 Return  
+`number` — Clamped number between the min and max bounds.
+
+---
+
+### 💡 Example
 ```greyscript
-newNumber = 44
-newNumber2 = 2
-
-result = newNumber.diff(newNumber2)
-print(result) // Outputs: 42
+myNumber = 42
+print myNumber.clamp(42, 100) // Return 42
+print myNumber.clamp(75, 100) // Return 75
+print myNumber.clamp(0, 40)   // Return 40
 ```
 
+### 🧠 Notes  
+- Ensures `self` is within `[min, max]`.  
+- Returns `min` if `self` is below the range, `max` if above.  
+- Useful for keeping values bounded within a range.
 
-## .divide
-The `.divide` method divides the current number by another number.  Zero division will result in null
-![image](https://github.com/user-attachments/assets/8fe1a4f2-f56c-4b11-87c6-26e4bb3fd694)
+---
 
+
+
+
+## diff
+
+### 📝 Description  
+The difference between number and provided number.
+
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1  
+
+</details>
+
+---
+
+### 🧮 Parameters
+
+| Name         | Type   | Description                 |
+|--------------|--------|-----------------------------|
+| `distanceTo` | number | Optional. Default: `0`      |
+
+#### ⚙️ Defaults
+
+| Parameter    | Default |
+|--------------|---------|
+| `distanceTo` | `0`     |
+
+---
+
+### 🔁 Return  
+`number` — The difference between the numbers.
+
+---
+
+### 💡 Example
 ```greyscript
-newNumber = 84
-newNumber2 = 2
-
-result = newNumber.divide(newNumber2)
-print(result) // Outputs: 42
+myNumber = 42
+print myNumber.diff(42, 100) // Return 57
+print myNumber.diff(75, 100) // Return 25
+print myNumber.diff(0, 40)   // Return 40
 ```
 
-## .is_more
-The `.is_more` method checks if the current number is greater than a provided number. Returns `true` if greater, `false` otherwise.
-![image](https://github.com/user-attachments/assets/6f61825e-f52c-4400-912c-c24a2b4f90a8)
+### 🧠 Notes  
+- Uses absolute difference: `abs(self - distanceTo)`.  
+- Defaults to comparing against 0 if no parameter is provided.
 
+---
+
+## div
+
+### 📝 Description  
+Divide 2 from the number or optional amount.
+
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1  
+
+</details>
+
+---
+
+### 🧮 Parameters
+
+| Name     | Type   | Description                    |
+|----------|--------|-------------------------------|
+| `amount` | number | Optional. The amount to div by |
+
+#### ⚙️ Defaults
+
+| Parameter | Default |
+|-----------|---------|
+| `amount`  | `2`     |
+
+
+### 🔁 Return  
+`number` — The result of the division.
+
+---
+
+### 💡 Example
+```greyscript
+myNumber = 42
+print myNumber.div      // Return 21
+print myNumber.div(21)  // Return 2
+print myNumber.div(0)   // Return 0
+```
+
+#### 🧠 Notes  
+- Returns `0` if the divisor (`amount`) is `0` to avoid division by zero error.
+
+---
+
+## is_float
+
+### 📝 Description  
+Checks if the number is a floating-point number (contains a decimal point).
+
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1  
+
+</details>
+
+---
+
+### ➖ Parameters  
+| Parameter | Default Value |
+|-----------|---------------|
+| *(None)*  | *(None)*      |
+
+### 🔁 Return  
+`boolean` — Returns `true` if the number contains a decimal point, otherwise `false`.
+
+---
+
+### 💡 Example
+```greyscript
+print (42).is_float()    // false
+print (3.14).is_float()  // true
+```
+---
+
+## is_integer
+
+### 📝 Description  
+Checks if the number is an integer.
+
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1  
+
+</details>
+
+---
+
+### ➖ Parameters  
+| Parameter | Default Value |
+|-----------|---------------|
+| *(None)*  | *(None)*      |
+
+### 🔁 Return  
+`boolean` — Returns `true` if the number is an integer, otherwise `false`.
+
+---
+
+### 💡 Example
+```greyscript
+print (420).is_integer()    // true
+print (1.618).is_integer()  // false
+```
+
+---
+
+## is_less
+
+### 📝 Description  
+Returns `true` if the number is less than the provided amount, otherwise `false`.
+
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1  
+
+</details>
+
+---
+
+### ➖ Parameters  
+| Parameter | Default Value |
+|-----------|---------------|
+| *(None)*  | *(None)*      |
+
+### 🔁 Return  
+`boolean` — Returns `true` if the number is less than the provided amount, otherwise `false`.
+
+---
+
+### 💡 Example
 ```greyscript
 myNumber = 42
 myNumber2 = 100
 
-result = myNumber.greater_than(myNumber2)
-print(result) // Outputs: 0 (false)
+result = myNumber.is_less(myNumber2)
+print(result) // Outputs: true
 ```
+---
 
-## .is_less
-The `.is_less` method checks if the current number is less than a provided number. Returns `true` if lesser, `false` otherwise.
-![image](https://github.com/user-attachments/assets/b6147f1f-2b63-4a3e-947e-b11f99b9feec)
+## is_more
 
+### 📝 Description  
+Returns `true` if the number is greater than the provided amount, otherwise `false`.
+
+---
+
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1  
+
+</details>
+
+
+### ➖ Parameters  
+| Parameter | Default Value |
+|-----------|---------------|
+| *(None)*  | *(None)*      |
+
+### 🔁 Return  
+`boolean` — Returns `true` if the number is greater than the provided amount, otherwise `false`.
+
+---
+
+### 💡 Example
 ```greyscript
 myNumber = 42
 myNumber2 = 100
 
-result = myNumber.lesser_than(myNumber2)
-print(result) // Outputs: 1 (true)
+result = myNumber.is_more(myNumber2)
+print(result) // Outputs: false
 ```
-
-## .lerp
-The `.lerp` method computes the linear interpolation (lerp) between two numbers.
-![image](https://github.com/user-attachments/assets/944bfcc8-88f9-4f3f-b96f-d1de17baf0eb)
+---
 
 
-## .minus
-The `.minus` method allows you to subtract a specified amount from a number. If no amount is provided, it defaults to `1`. 
-![image](https://github.com/user-attachments/assets/61390f03-12e2-4e69-b79b-d7069d01775e)
+## lerp
 
+### 📝 Description  
+Performs linear interpolation between `min` and `max` using `offset`.
+
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1  
+
+</details>
+
+---
+
+### 🧮 Parameters
+
+| Name      | Type   | Description                                        |
+|-----------|--------|----------------------------------------------------|
+| `min`     | number | The starting value.                                |
+| `max`     | number | The ending value.                                  |
+| `offset`  | number | A number between `0` and `1` representing progress |
+
+### 🔁 Return  
+`number` — A value between `min` and `max`, interpolated by `offset`.
+
+---
+
+### 💡 Example
+```greyscript
+print number.lerp(0, 100, 0.5)   // 50
+print number.lerp(10, 20, 0.25)  // 12.5
+print number.lerp(100, 200, 1.5) // 200 (clamped)
+```
+---
+
+
+
+## minus
+
+### 📝 Description  
+Subtracts `1` from the number or a specified amount.
+
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1  
+
+</details>
+
+---
+
+### 🧮 Parameters
+
+| Name     | Type   | Description                   |
+|----------|--------|-------------------------------|
+| `amount` | number | Optional. The amount to subtract |
+
+#### ⚙️ Defaults
+
+| Parameter | Default |
+|-----------|---------|
+| `amount`  | `1`     |
+
+### 🔁 Return  
+`number` — The result of the subtraction.
+
+---
+
+### 💡 Example
 ```greyscript
 newNumber = 44
 
 result = newNumber.minus(2)
-print(result) // Outputs: 42
+print(result) // Output: 42
 ```
+---
 
-## .multiply
-The `.multiply` method multiplies the current number the given number (or 2).
-![image](https://github.com/user-attachments/assets/db319138-bfbb-4a5d-bc62-d4a0d813b17a)
+## multiply
 
+### 📝 Description  
+Multiplies the number by 2 or a specified amount.
+
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1  
+
+</details>
+
+---
+
+### 🧮 Parameters
+
+| Name     | Type   | Description                      |
+|----------|--------|----------------------------------|
+| `amount` | number | Optional. The amount to multiply by |
+
+#### ⚙️ Defaults
+
+| Parameter | Default |
+|-----------|---------|
+| `amount`  | `2`     |
+
+### 🔁 Return  
+`number` — The result of the multiplication.
+
+---
+
+### 💡 Example
 ```greyscript
 newNumber = 21
-newNumber2 = 2
 
-result = newNumber.multiply(newNumber2)
+result = newNumber.multiply
 print(result) // Outputs: 42
+
+result2 = newNumber.multiply(3)
+print(result2) // Outputs: 63
 ```
+---
 
-## .plus
-The `.plus` method allows you to add a specified amount to a number. If no amount is provided, it defaults to `1`.
-![image](https://github.com/user-attachments/assets/ff7250d7-3a92-48b7-850a-271776e80b64)
+## plus
 
+### 📝 Description  
+Add 1 to the number or optional amount.
+
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1  
+
+</details>
+
+---
+
+### 🧮 Parameters
+
+| Name     | Type   | Description                 |
+|----------|--------|-----------------------------|
+| `amount` | number | Optional. The amount to add |
+
+#### ⚙️ Defaults
+
+| Parameter | Default |
+|-----------|---------|
+| `amount`  | `1`     |
+
+
+### 🔁 Return  
+`number` — The result of the addition.
+
+---
+
+### 💡 Example
 ```greyscript
 newNumber = 40
-
 result = newNumber.plus(2)
-print(result) // Outputs: 42
+print(result)  // Outputs: 42
 ```
 
-## .random_from
-The `.random_from` method generates a random number in the range of 1 (or optional parameter) to number.
-![image](https://github.com/user-attachments/assets/d55b4868-35e4-4b5d-ac96-9cafd4a6af9a)
+---
 
+## random_from
+
+### 📝 Description  
+Generate a random number from 0 to number, or from optional minimum to number.
+
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1  
+
+</details>
+
+---
+
+### 🧮 Parameters
+
+| Name  | Type   | Description                      |
+|-------|--------|---------------------------------|
+| `min` | number | Optional. The minimum value for the random range |
+
+#### ⚙️ Defaults
+
+| Parameter | Default |
+|-----------|---------|
+| `min`     | `0`     |
+
+
+### 🔁 Return  
+`number` — A random number between `min` and the number itself.
+
+---
+
+### 💡 Example
 ```greyscript
-myNumber = 42
-myNumber2 = 100
-
-result = myNumber.lesser_than(myNumber2)
-print(result) // Outputs: 1 (true)
+myNumber = 100
+result = myNumber.random_from(50)
+print(result)  // Output: A random number between 50 and 100
 ```
-
-## .saturate
-The `.saturate` Clamps a number to the normalized range [0, 1].
-![image](https://github.com/user-attachments/assets/17967389-54fb-4ec7-ba30-e50f986794a5)
-
 
 ---
 # 📋 ![Static Badge](https://img.shields.io/badge/list-methods-lightblue)
 
 
----
 ## .crop
 The `.crop` method Returns a new list stripped of any spacing at the beginning and ending. If any value gets passed that is not a list this method will return null.
 

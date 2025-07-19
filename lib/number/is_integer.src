@@ -1,5 +1,28 @@
-//TESTED
-
+// Checks if the number is an integer
+// @description **Description:**
+// @description Returns `true` if the number is an integer, otherwise `false`.
+// @description
+//
+// @description **Parameters:**
+// @description - None
+//
+// @description **Parameter Defaults:**
+// @description - None
+// @description
+//
+// @description **Return:**
+// @return {boolean}
+// @description `true` if number is integer, else `false`.
+// @description
+//
+// @description **Author:** Svarii
+// @description **Version:** 0.0.1
+// @description
+//
+// @example
+// print (420).is_integer()    // true
+// @example
+// print (1.618).is_integer()  // false
 number.is_integer = function()
 	if not self == round(self) then return false
     return true

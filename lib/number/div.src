@@ -9,7 +9,7 @@
 // Divide a number
     // @description **Description:**
     // @description Divide 2 from the number or optional amount
-	// @description ---
+	// @description
 	//
 	// @description **Parameters:**
     // @param {number} [amount] - The amount to div by
@@ -17,16 +17,16 @@
     //
 	// @description **Parameter Defaults:**
     // @description - `distanceTo`:`0`
-    // @description ---
+    // @description
     //
 	// @description **Return:**
 	// @return {number} - The result of the division
 	// @description `number` The result of the division
-	// @description ---
+	// @description
 	//
 	// @description **Author:** Svarii
 	// @description **Version:** 0.0.1
-	// @description ---
+	// @description
 	//
 	// @example myNumber = 42
     // @example
@@ -35,7 +35,7 @@
     // print myNumber.div(21) // Return 2
     // @example
     // print myNumber.div(0) // Return 0
-	// @description ---        
+	// @description      
 number.div = function(amount = 2)
     if typeof(locals.amount) == "number" then
         if locals.amount == 0 then return 0
