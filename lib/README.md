@@ -2007,7 +2007,7 @@ print(result)  // Outputs: ["classID", "myVar"]
 
 ---
 
-# 📄 Functions
+# ⚙️ Functions
 
 
 ## bool_text
@@ -3108,7 +3108,7 @@ unsafeCheckList = unsafe_check_list(fetch_exploit_requirements(exploitMem))
 ```
 ---
 
-# 📄 Constructs
+# 🧱 Constructs
 ## report_string_construct__
 
 ### 📝 Description  
