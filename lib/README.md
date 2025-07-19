@@ -2702,7 +2702,7 @@ Returns a list of structured maps with exploit requirement metadata for each add
 | `.variable`    | `string` | Target variable at the address              |
 | `.cra`         | `string` | Check root is active                    |
 | `.cua`         | `string` | Check user is active                        |
-| `.cga`         | `string` | Check gues is active                       |
+| `.cga`         | `string` | Check guest is active                       |
 | `.rpf`         | `string` | Required port forwards                      |
 | `.rur`         | `string` | Required users registered                   |
 | `.is_patched`  | `string` | `"true"` or `"false"` — if exploit is patched |
