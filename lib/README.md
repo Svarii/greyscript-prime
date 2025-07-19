@@ -2280,17 +2280,16 @@ print(bool_text(object))  // Output: null
 
 ---
 
-## extractIP
+## extract_ip
 
 ### 📝 Description  
 Scans a string for a valid IPv4 address and returns the first match.  
-Returns `null` if no valid IP address is found.
+
 <details>
 <summary>📃 About</summary>
 
 - **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete 
+- **Version:** 0.0.1  
 
 </details>
 
@@ -2298,7 +2297,7 @@ Returns `null` if no valid IP address is found.
 
 | Name          | Type   | Description                                    |
 |---------------|--------|------------------------------------------------|
-| `inputString` | string | The text string to search for an IP address    |
+| `inputString` | string | The text string to search for an IP address.   |
 
 
 #### 🚫 Defaults
@@ -2311,20 +2310,18 @@ Returns `null` if no valid IP address is found.
 `string | null` — The first matching IPv4 address, or `null` if none is found.
 
 ### 💡 Example
+
 ```greyscript
-print(extractIP("My IP is 192.168.1.5"))
-// Output: 192.168.1.5
-
-print(extractIP("No IP here"))
-// Output: null
-
-print(extractIP("IPs: 10.0.0.1, 172.16.0.1"))
-// Output: 10.0.0.1
+print(extractIP("My IP is 192.168.1.5"))  // Output: 192.168.1.5
 ```
 
-#### 🧠 Notes
-- Uses a regular expression to identify IPv4 patterns.
-- Only the **first** valid match is returned.
+```greyscript
+print(extractIP("No IP here"))  // Output: null
+```
+
+```greyscript
+print(extractIP("IPs: 10.0.0.1, 172.16.0.1"))  // Output: 10.0.0.1
+```
 
 ---
 
@@ -2610,50 +2607,6 @@ force_params("myApp [ipAddress] [port#]", 2)
 ```
 ---
 
-## get_exploit_address_list
-
-### 📝 Description  
-Scan a library for vulnerable addresses.
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1 
-- **Unit Testing:** ❌ Incomplete 
-
-</details>
-
-### 🧮 Parameters
-
-| Name               | Type                 | Description                                |
-|--------------------|----------------------|--------------------------------------------|
-| `libLocation`      | string               | Remote IP address or local absolute file location. |
-| `metaxploitObject` | map<string, function> | Metaxploit library object.                  |
-| `remoteTarget`     | flag (optional)      | Optional flag indicating if the target is remote. Default: `false`. |
-| `targetPort`       | number (optional)    | Optional target port number. Default: `0`. |
-
-
-#### ⚙️ Defaults
-| Parameter | Default Value |
-|-----------|---------------|
-| *libLocation*  | *(None)*  |
-| *metaxploitObject*  | *(None)*  |
-| *remoteTarget*  | *false*  |
-| *targetPort*  | *0*  |
-
-
-### 🔁 Return  
-`list<string>` — List of vulnerable addresses found.
-
-### 💡 Example
-```greyscript
-libLocation = params[0]
-metax = include_lib("/lib/metaxploit.so")
-
-print find_exploitable_addresses(libLocation, metax)
-```
-
----
 
 ## fetch_exploit_requirements
 
@@ -2849,52 +2802,6 @@ print(aptClientID.name)      // Output: aptclient
 ---
 
 
-## extract_ip
-
-### 📝 Description  
-Scans a string for a valid IPv4 address and returns the first match.  
-
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1  
-
-</details>
-
-### 🧮 Parameters
-
-| Name          | Type   | Description                                    |
-|---------------|--------|------------------------------------------------|
-| `inputString` | string | The text string to search for an IP address.   |
-
-
-#### 🚫 Defaults
-| Parameter | Default Value |
-|-----------|---------------|
-| *inputString*  | *(None)*  |
-
-
-### 🔁 Return  
-`string | null` — The first matching IPv4 address, or `null` if none is found.
-
-### 💡 Example
-
-```greyscript
-print(extractIP("My IP is 192.168.1.5"))  // Output: 192.168.1.5
-```
-
-```greyscript
-print(extractIP("No IP here"))  // Output: null
-```
-
-```greyscript
-print(extractIP("IPs: 10.0.0.1, 172.16.0.1"))  // Output: 10.0.0.1
-```
-
----
-
-
 ## get_acks
 
 ### 📝 Description  
@@ -2973,6 +2880,51 @@ Logs into the mail account and fetches inbox messages.
 inbox = get_inbox("mypassword", "user@example.com")
 print(inbox)
 ```
+---
+
+## get_exploit_address_list
+
+### 📝 Description  
+Scan a library for vulnerable addresses.
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
+
+</details>
+
+### 🧮 Parameters
+
+| Name               | Type                 | Description                                |
+|--------------------|----------------------|--------------------------------------------|
+| `libLocation`      | string               | Remote IP address or local absolute file location. |
+| `metaxploitObject` | map<string, function> | Metaxploit library object.                  |
+| `remoteTarget`     | flag (optional)      | Optional flag indicating if the target is remote. Default: `false`. |
+| `targetPort`       | number (optional)    | Optional target port number. Default: `0`. |
+
+
+#### ⚙️ Defaults
+| Parameter | Default Value |
+|-----------|---------------|
+| *libLocation*  | *(None)*  |
+| *metaxploitObject*  | *(None)*  |
+| *remoteTarget*  | *false*  |
+| *targetPort*  | *0*  |
+
+
+### 🔁 Return  
+`list<string>` — List of vulnerable addresses found.
+
+### 💡 Example
+```greyscript
+libLocation = params[0]
+metax = include_lib("/lib/metaxploit.so")
+
+print find_exploitable_addresses(libLocation, metax)
+```
+
 ---
 
 ## get_random_ip
