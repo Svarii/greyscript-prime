@@ -122,7 +122,7 @@ Removes `<b>` and `</b>` tags from a string.
 ```greyscript
 newString = "<b>Hello</b>"
 result = newString.remove_bold
-print(result)  // Outputs: Hello
+print(result)  // Output: Hello
 ```
 
 ---
@@ -198,7 +198,7 @@ Removes `<b>` and `</b>` tags from a string.
 ```greyscript
 newString = "<b>Hello</b>"
 result = newString.remove_bold
-print(result) // Outputs: Hello
+print(result)  // Output: Hello
 ```
 
 ---
@@ -230,7 +230,7 @@ Removes the first character of the given string.
 ```greyscript
 newString = "Hello"
 result = newString.remove_char_first
-print(result) // Outputs: ello
+print(result)  // Output: ello
 ```
 
 ---
@@ -243,31 +243,9 @@ The `.remove_char_last` method allows you to remove the last character to the gi
 ```
 newString = "Hello"
 
-print(newString.remove_char_last) // Outputs: Hell
+print(newString.remove_char_last)  // Output: Hell
 ```
 
-
-### .remove_char_first
-The `.remove_char_first` method allows you to remove the last character to the given text. Example usage:
-
-![image](../images/docblocks/string/remove_char_first.png)
-
-```
-newString = "Hello"
-
-print(newString.remove_char_first) // Outputs: ello
-```
-
-### .remove_bold
-The `.remove_bold` method allows you to remove bold tags from the given text. Example usage:
-
-![image](https://github.com/user-attachments/assets/b9163072-533f-4614-b418-630d2d3c6749)
-
-```
-newString = "<b>Hello</b>"
-
-print(newString.remove_bold) // Outputs: Hello
-```
 
 ### .remove_italic
 The `.remove_italic` method allows you to remove italic tags from the given text. Example usage:
@@ -277,7 +255,7 @@ The `.remove_italic` method allows you to remove italic tags from the given text
 ```
 newString = "<i>Hello</i>"
 
-print(newString.remove_italic) // Outputs: Hello
+print(newString.remove_italic)  // Output: Hello
 ```
 
 ### .remove_underline
@@ -288,7 +266,7 @@ The `.remove_underline` method allows you to remove underline tags from the give
 ```
 newString = "<u>Hello</u>"
 
-print(newString.remove_underline) // Outputs: Hello
+print(newString.remove_underline)  // Output: Hello
 ```
 
 ### .remove_strike
@@ -299,7 +277,7 @@ The `.remove_strike` method allows you to remove strikethrough tags from the giv
 ```
 newString = "<s>Hello</s>"
 
-print(newString.remove_strike) // Outputs: Hello
+print(newString.remove_strike)  // Output: Hello
 ```
 
 ### .remove_mark
@@ -310,7 +288,7 @@ The `.remove_mark` method allows you to remove mark tags from the given text. Ex
 ```
 newString = "<mark>Hello</mark>"
 
-print(newString.remove_mark) // Outputs: Hello
+print(newString.remove_mark)  // Output: Hello
 ```
 
 ### .remove_sub
@@ -321,7 +299,7 @@ The `.remove_sub` method allows you to remove sub tags from the given text. Exam
 ```
 newString = "<sub>Hello</sub>"
 
-print(newString.remove_sub) // Outputs: Hello
+print(newString.remove_sub)  // Output: Hello
 ```
 
 ### .remove_sup
@@ -332,7 +310,7 @@ The `.remove_sup` method allows you to remove superscript tags from the given te
 ```
 newString = "<sup>Hello</sup>"
 
-print(newString.remove_sup) // Outputs: Hello
+print(newString.remove_sup)  // Output: Hello
 
 ```
 
@@ -426,14 +404,14 @@ newString = "Hello"
     result = newString.alpha("#4C")
     print(result)
 
-// Output: <alpha=#4C>Hello
+  // Output: <alpha=#4C>Hello
 ```
 ```greyscript
 newString = "Hello"
     result = newString.alpha
     print(result)
 
-// Output: <alpha=#FF>Hello
+  // Output: <alpha=#FF>Hello
 ```
 #### 🔗 Links
 * [Text Mesh Pro: Rich Text Opacity](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextOpacity.html)
@@ -475,8 +453,7 @@ Used to apply bold styling in Text Mesh Pro.
 newString = "Hello"
 
 result = newString.bold
-print(result)
-// Output: <b>Hello</b>
+print(result)  // Output: <b>Hello</b>
 ```
 #### 🔗 Links
 * [Text Mesh Pro: Rich Text Bold](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextBoldItalic.html)
@@ -518,16 +495,13 @@ Used to apply a specified color to the string, supporting both hex formats and s
 newString = "Hello"
 
 result = newString.color("blue")
-print result
-// Output: <color=blue>Hello</color>
+print result  // Output: <color=blue>Hello</color>
 
 result = newString.color("#FFFFFF")
-print result
-// Output: <color=#FFFFFF>Hello</color>
+print result  // Output: <color=#FFFFFF>Hello</color>
 
 result = newString.color("Aquamarine")
-print result
-// Output: <color=#7FFFD4>Hello</color>
+print result  // Output: <color=#7FFFD4>Hello</color>
 ```
 
 
@@ -578,8 +552,7 @@ Used to control character spacing in text renderers such as Text Mesh Pro.
 newString = "Hello"
 
 result = newString.cspace
-print result
-// Output: <cspace=1em>Hello</cspace>
+print result  // Output: <cspace=1em>Hello</cspace>
 ```
 
 #### 🔗 Links
@@ -628,23 +601,22 @@ newString = "Hello"
     result = newString.indent
     print(result)
 
-// Outputs: <indent=15%>Hello</indent>
+  // Output: <indent=15%>Hello</indent>
 ```
 ```greyscript
 newString = "Hello"
     result = newString.indent("3em")
     print(result)
 
-// Outputs: <indent=3em>Hello</indent>
+  // Output: <indent=3em>Hello</indent>
 ```
 ```greyscript
 newString = "Hello"
     result = newString.indent("25px", false)
     print(result)
 
-// Outputs: <indent=25px>Hello
+  // Output: <indent=25px>Hello
 ```
-
 #### 🔗 Links
 - [Text Mesh Pro: Rich Text Indentation](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextIndentation.html)
 
@@ -682,8 +654,7 @@ Modifies a text string by wrapping it within the `<i>` tag.
 newString = "Hello"
 
 result = newString.italic
-print(result)
-// Outputs: <i>Hello</i>
+print(result)  // Output: <i>Hello</i>
 ```
 #### 🔗 Links
 - [Text Mesh Pro: Rich Text Indentation](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextIndentation.html)
@@ -726,21 +697,21 @@ newString = "Hello"
     result = newString.line-indent
     print(result)
 
-// Outputs: <line-indent=15%>Hello</line-indent>
+  // Output: <line-indent=15%>Hello</line-indent>
 ```
 ```greyscript
 newString = "Hello"
     result = newString.line-indent("3em")
     print(result)
 
-// Outputs: <line-indent=3em>Hello</line-indent>
+  // Output: <line-indent=3em>Hello</line-indent>
 ```
 ```greyscript
 newString = "Hello"
     result = newString.line-indent("25px", false)
     print(result)
 
-// Outputs: <line-indent=25px>Hello
+  // Output: <line-indent=25px>Hello
 ```
 ---
 
@@ -771,8 +742,7 @@ Modifies a text string by wrapping it within the `<lowercase>` tag.
 newString = "Hello"
 
 result = newString.lowercase
-print(result)
-// Outputs: <lowercase>Hello</lowercase>
+print(result)  // Output: <lowercase>Hello</lowercase>
 ```
 
 #### 🔗 Links
@@ -816,8 +786,7 @@ Modifies a text string by wrapping it within the `<margin>` tag.
 newString = "Hello"
 
 result = newString.margin
-print(result)
-// Outputs: <margin=5em>Hello</margin>
+print(result)  // Output: <margin=5em>Hello</margin>
 ```
 
 
@@ -860,8 +829,7 @@ Modifies a text string by wrapping it within the `<mark>` tag.
 newString = "Hello"
 
 result = newString.mark
-print(result)
-// Outputs: <mark="#FFFF00AA">Hello</mark>
+print(result)  // Output: <mark="#FFFF00AA">Hello</mark>
 ```
 
 
@@ -906,8 +874,7 @@ Modifies a text string by wrapping it within the `<mspace>` tag.
 newString = "Hello"
 
 result = newString.mspace
-print(result)
-// Outputs: <mspace="2.75em">Hello</mspace>
+print(result)  // Output: <mspace="2.75em">Hello</mspace>
 ```
 
 #### 🔗 Links
@@ -944,8 +911,7 @@ Modifies a text string by wrapping it within the `<nobr>` tag.
 newString = "Hello"
 
 result = newString.nobr
-print(result)
-// Outputs: <nobr>Hello</nobr>
+print(result)  // Output: <nobr>Hello</nobr>
 ```
 
 #### 🔗 Links
@@ -981,8 +947,7 @@ Modifies a text string by wrapping it within the `<noparse>` tag.
 newString = "Hello"
 
 result = newString.noparse
-print(result)
-// Outputs: <noparse>Hello</noparse>
+print(result)  // Output: <noparse>Hello</noparse>
 ```
 
 
@@ -1019,8 +984,7 @@ Modifies a text string by appending the `<page>` tag to the end.
 newString = "Hello"
 
 result = newString.page
-print(result)
-// Output: Hello<page>
+print(result)  // Output: Hello<page>
 ```
 
 #### 🔗 Links
@@ -1065,8 +1029,7 @@ Modifies a text string by prepending it with the `<pos>` tag.
 newString = "Hello"
 
 result = newString.pos
-print(result)
-// Output: <pos=50%>Hello
+print(result)  // Output: <pos=50%>Hello
 ```
 
 #### 🔗 Links
@@ -1110,8 +1073,7 @@ Modifies a text string by wrapping it within the `<rotate>` tag.
 newString = "Hello"
 
 result = newString.rotate
-print(result)
-// Output: <rotate="45">Hello </rotate>
+print(result)  // Output: <rotate="45">Hello </rotate>
 ```
 
 
@@ -1156,8 +1118,7 @@ Modifies a text string by wrapping it within the `<size>` tag.
 newString = "Hello"
 
 result = newString.size
-print(result)
-// Output: <size="5em">Hello </size>
+print(result)  // Output: <size="5em">Hello </size>
 ```
 
 #### 🔗 Links
@@ -1193,8 +1154,7 @@ Modifies a text string by wrapping it within the `<s>` tag.
 newString = "Hello"
 
 result = newString.strike
-print(result)
-// Output: <s>Hello</s>
+print(result)  // Output: <s>Hello</s>
 ```
 
 #### 🔗 Links
@@ -1230,8 +1190,7 @@ Modifies a text string by wrapping it within the `<sub>` tag.
 newString = "Hello"
 
 result = newString.sub
-print(result)
-// Output: <sub>Hello</sub>
+print(result)  // Output: <sub>Hello</sub>
 ```
 
 #### 🔗 Links
@@ -1266,8 +1225,7 @@ Modifies a text string by wrapping it within the `<sup>` tag.
 newString = "Hello"
 
 result = newString.sup
-print(result)
-// Output: <sup>Hello</sup>
+print(result)  // Output: <sup>Hello</sup>
 ```
 
 #### 🔗 Links
@@ -1302,8 +1260,7 @@ Modifies a text string by wrapping it within the `<u>` tag.
 newString = "Hello"
 
 result = newString.underline
-print(result)
-// Output: <u>Hello</u>
+print(result)  // Output: <u>Hello</u>
 ```
 
 #### 🔗 Links
@@ -1339,8 +1296,7 @@ Modifies a text string by wrapping it within the `<uppercase>` tag.
 newString = "Hello"
 
 result = newString.uppercase
-print(result)
-// Output: <uppercase>Hello</uppercase>
+print(result)  // Output: <uppercase>Hello</uppercase>
 ```
 
 #### 🔗 Links
@@ -1365,7 +1321,7 @@ Modifies a text string by wrapping it within the `<voffset>` tag.
 
 | Name           | Type     | Description                          |
 |----------------|----------|------------------------------------|
-| `verticalOffset` | string   | Optional. Accepted input: `em`, `px`, or `%`. |
+| `verticalOffset` | string   | Optional. Accepted input: `em`, `px`, or `%` |
 
 
 #### ⚙️ Defaults
@@ -1384,8 +1340,7 @@ Modifies a text string by wrapping it within the `<voffset>` tag.
 newString = "Hello"
 
 result = newString.voffset
-print(result)
-// Outputs: <voffset=1em>Hello</voffset>
+print(result)  // Output: <voffset=1em>Hello</voffset>
 ```
 
 #### 🔗 Links
@@ -1429,17 +1384,12 @@ Modifies a text string by wrapping it within the `<width>` tag.
 newString = "Hello"
 
 result = newString.width
-print(result)
-// Outputs: <width=50%>Hello</width>
+print(result)  // Output: <width=50%>Hello</width>
 ```
 
 
 #### 🔗 Links
 - [Text Mesh Pro: Horizontal Position](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextPos.html)
-
----
-
-
 
 ---
 
@@ -1479,9 +1429,9 @@ Ensure a number stays between a minimum and maximum value.
 
 ```greyscript
 myNumber = 42
-print myNumber.clamp(42, 100) // Return 42
-print myNumber.clamp(75, 100) // Return 75
-print myNumber.clamp(0, 40)   // Return 40
+print myNumber.clamp(42, 100)  // Output: 42
+print myNumber.clamp(75, 100)  // Output: 75
+print myNumber.clamp(0, 40)    // Output: 40
 ```
 
 #### 🧠 Notes  
@@ -1526,9 +1476,9 @@ The difference between number and provided number.
 
 ```greyscript
 myNumber = 42
-print myNumber.diff(42, 100) // Return 57
-print myNumber.diff(75, 100) // Return 25
-print myNumber.diff(0, 40)   // Return 40
+print myNumber.diff(42, 100)  // Output: 57
+print myNumber.diff(75, 100)  // Output: 25
+print myNumber.diff(0, 40)    // Output: 40
 ```
 
 #### 🧠 Notes  
@@ -1570,9 +1520,9 @@ Divide 2 from the number or optional amount.
 
 ```greyscript
 myNumber = 42
-print myNumber.div      // Return 21
-print myNumber.div(21)  // Return 2
-print myNumber.div(0)   // Return 0
+print myNumber.div      // Output: 21
+print myNumber.div(21)  // Output: 2
+print myNumber.div(0)   // Output: 0
 ```
 
 #### 🧠 Notes  
@@ -1667,7 +1617,7 @@ myNumber = 42
 myNumber2 = 100
 
 result = myNumber.is_less(myNumber2)
-print(result) // Outputs: true
+print(result)  // Output: true
 ```
 ---
 
@@ -1700,7 +1650,7 @@ myNumber = 42
 myNumber2 = 100
 
 result = myNumber.is_more(myNumber2)
-print(result) // Outputs: false
+print(result)  // Output: false
 ```
 ---
 
@@ -1732,9 +1682,9 @@ Performs linear interpolation between `min` and `max` using `offset`.
 ### 💡 Example
 
 ```greyscript
-print number.lerp(0, 100, 0.5)   // 50
-print number.lerp(10, 20, 0.25)  // 12.5
-print number.lerp(100, 200, 1.5) // 200 (clamped)
+print number.lerp(0, 100, 0.5)   // Output: 50
+print number.lerp(10, 20, 0.25)  // Output: 12.5
+print number.lerp(100, 200, 1.5) // Output: 200 (clamped)
 ```
 ---
 
@@ -1774,7 +1724,7 @@ Subtracts `1` from the number or a specified amount.
 newNumber = 44
 
 result = newNumber.minus(2)
-print(result) // Output: 42
+print(result)  // Output: 42
 ```
 ---
 
@@ -1812,10 +1762,10 @@ Multiplies the number by 2 or a specified amount.
 newNumber = 21
 
 result = newNumber.multiply
-print(result) // Outputs: 42
+print(result)  // Output: 42
 
 result2 = newNumber.multiply(3)
-print(result2) // Outputs: 63
+print(result2)  // Output: 63
 ```
 ---
 
@@ -1853,7 +1803,7 @@ Add 1 to the number or optional amount.
 ```greyscript
 newNumber = 40
 result = newNumber.plus(2)
-print(result)  // Outputs: 42
+print(result)  // Output: 42
 ```
 
 ---
@@ -1926,7 +1876,7 @@ Iterates through a list from both ends and removes empty items, returning the cl
 ```greyscript
 myList = ["","","cat","dog",""]
 result = myList.crop
-print(result) // Output: ["cat","dog"]
+print(result)  // Output: ["cat","dog"]
 ```
 
 ---
@@ -2000,7 +1950,7 @@ Iterates through the `__isa` property of an object and returns a list of top-lev
 ```greyscript
 myObject = {"classID":"myObject", "myVar":"some Value"}
 result = myObject.get_attributes()
-print(result)  // Outputs: ["classID", "myVar"]
+print(result)  // Output: ["classID", "myVar"]
 ```
 #### 🧠 Notes  
 - Only top-level attributes are returned.
@@ -2040,33 +1990,25 @@ Converts a boolean-like value (`true`, `false`, `1`, `0`) into a string: `"true"
 
 ### 💡 Examples
 ```greyscript
-print(bool_text("true"))
-// Output: null
+print(bool_text("true"))  // Output: null
 ```
 ```greyscript
-print(bool_text(true))
-// Output: "true"
+print(bool_text(true))  // Output: "true"
 ```
 ```greyscript
-print(bool_text(1))
-// Output: "true"
+print(bool_text(1))  // Output: "true"
 ```
 ```greyscript
-print(bool_text(0))
-// Output: "false"
+print(bool_text(0))  // Output: "false"
 ```
 ```greyscript
-print(bool_text(-1))
-// Output: "false"
+print(bool_text(-1))  // Output: "false"
 ```
 ```greyscript
-print(bool_text(false))
-// Output: "false"
+print(bool_text(false))  // Output: "false"
 ```
 ```greyscript
-print(bool_text(object))
-// Output: null
-
+print(bool_text(object))  // Output: null
 ```
 #### 🧠 Notes
 
@@ -2675,18 +2617,15 @@ Scans a string for a valid IPv4 address and returns the first match.
 ### 💡 Example
 
 ```greyscript
-print(extractIP("My IP is 192.168.1.5"))
-# Output: 192.168.1.5
+print(extractIP("My IP is 192.168.1.5"))  // Output: 192.168.1.5
 ```
 
 ```greyscript
-print(extractIP("No IP here"))
-# Output: null
+print(extractIP("No IP here"))  // Output: null
 ```
 
 ```greyscript
-print(extractIP("IPs: 10.0.0.1, 172.16.0.1"))
-# Output: 10.0.0.1
+print(extractIP("IPs: 10.0.0.1, 172.16.0.1"))  // Output: 10.0.0.1
 ```
 
 ---
@@ -2798,7 +2737,7 @@ Generate a single random IP address.
 
 ```greyscript
 randomIP = get_random_ip
-print(randomIP) // Output: ###.###.###.###
+print(randomIP)  // Output: ###.###.###.###
 ```
 
 ---
@@ -2916,7 +2855,7 @@ Loads a library from the lib directory, optionally specifying directory and veri
 #### ⚙️ Defaults
 
 | Parameter | Default | Details |
-|-----------|---------|---------|
+|-----------|---------|
 | `libName` | `"metaxploit.so"`    | `libName` must be full filename including extension  |
 | `libDir`  | `"/lib"`    | `libDir` should not have trailing slash |
 | `libType` | `""`    | `libType` is case sensitive  |
