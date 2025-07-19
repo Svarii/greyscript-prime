@@ -1,3 +1,42 @@
+// @startuml
+// title <color:purple>fetch_whois Function Overview</color>
+//
+// class fetch_whois {
+//   .. <color:blue>Input</color> ..
+//   + routerPublicIPAddress : string
+//
+//   .. <color:blue>Return</color> ..
+//   + returns : whoisInfo
+// }
+//
+// class whoisInfo {
+//   .. <color:blue>Standard Whois Fields</color> ..
+//   + admin : string
+//   + domain : string
+//   + email : string
+//   + phone : string
+//   + network : string
+//
+//   .. <color:blue>Error Handling</color> ..
+//   + error : string
+// }
+//
+// fetch_whois -right-> whoisInfo : creates instance of
+//
+// note bottom of whoisInfo
+//   * Contains IP registration and contact metadata
+//   * Fields populated from WHOIS lookup
+//   * On error, only `.error` is set
+// end note
+//
+// note bottom of fetch_whois
+//   * Validates that IP is public and well-formed
+//   * Rejects LAN addresses and malformed input
+//   * Uses `whois()` to extract structured details
+// end note
+//
+// @enduml
+
 // Pull whosis information from a public ip address
 	// @description **Description:**
 	// Return map with whois information
@@ -60,43 +99,5 @@ fetch_whois = function(routerPublicIPAddress)
 	locals.whoisInfo.error = false
 	return locals.whoisInfo
 end function
-// @startuml
-// title <color:purple>fetch_whois Function Overview</color>
-//
-// class fetch_whois {
-//   .. <color:blue>Input</color> ..
-//   + routerPublicIPAddress : string
-//
-//   .. <color:blue>Return</color> ..
-//   + returns : whoisInfo
-// }
-//
-// class whoisInfo {
-//   .. <color:blue>Standard Whois Fields</color> ..
-//   + admin : string
-//   + domain : string
-//   + email : string
-//   + phone : string
-//   + network : string
-//
-//   .. <color:blue>Error Handling</color> ..
-//   + error : string
-// }
-//
-// fetch_whois -right-> whoisInfo : creates instance of
-//
-// note bottom of whoisInfo
-//   * Contains IP registration and contact metadata
-//   * Fields populated from WHOIS lookup
-//   * On error, only `.error` is set
-// end note
-//
-// note bottom of fetch_whois
-//   * Validates that IP is public and well-formed
-//   * Rejects LAN addresses and malformed input
-//   * Uses `whois()` to extract structured details
-// end note
-//
-// @enduml
 
 

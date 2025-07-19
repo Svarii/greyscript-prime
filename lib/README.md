@@ -77,7 +77,7 @@
 > - [extract_ip](#extract_ip)
 > - [force_params](#force_params)
 > - [get_acks](#get_acks)
-> - [get_exploit_address_list](#file_aget_exploit_address_listppend)
+> - [get_exploit_address_list](#get_exploit_address_list)
 > - [get_inbox](#get_inbox)
 > - [get_random_ip](#get_random_ip)
 > - [in_null](#in_null)
@@ -2222,6 +2222,60 @@ print(aptClientID.name)      // Output: aptclient
 - Parameters are not validated.
 - Passing an invalid type for `absoluteLocation` will cause runtime errors:
   - `number`: `"Runtime Error: Key Not
+
+---
+
+## extract_ip
+
+### 📝 Description  
+Scans a string for a valid IPv4 address and returns the first match.  
+
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1  
+
+</details>
+
+---
+
+### 🧮 Parameters
+
+| Name          | Type   | Description                                    |
+|---------------|--------|------------------------------------------------|
+| `inputString` | string | The text string to search for an IP address.   |
+
+#### ⚙️ Defaults
+
+| Parameter     | Default |
+|---------------|---------|
+| `inputString` | _none_  |
+
+---
+
+### 🔁 Return  
+`string | null` — The first matching IPv4 address, or `null` if none is found.
+
+---
+
+### 💡 Example
+```greyscript
+print(extractIP("My IP is 192.168.1.5"))
+# Output: 192.168.1.5
+```
+
+```greyscript
+print(extractIP("No IP here"))
+# Output: null
+```
+
+```greyscript
+print(extractIP("IPs: 10.0.0.1, 172.16.0.1"))
+# Output: 10.0.0.1
+```
+
+---
 
 
 ## get_acks

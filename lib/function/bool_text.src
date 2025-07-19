@@ -1,3 +1,333 @@
+//string functions
+    string.color = function(colorValue = "red")
+        return "<color=" + colorValue + ">" + self + "</color>"
+    end function
+    string.bold = function()
+        return "<b>" + self + "</b>"
+    end function    
+    string.underline = function()
+        return "<u>" + self + "</u>"
+    end function
+    string.italic = function()
+        return "<i>" + self + "</i>"
+    end function       
+//output buffer
+
+merge_lists = function(listOne, listTwo, seperator = "          ")
+	locals.newList = []
+	locals.countList = (locals.listOne).len
+	for counter in range(0, (locals.countList - 1), 1)
+		locals.newList.push(locals.listOne[locals.counter] + locals.seperator + locals.listTwo[locals.counter])
+	end for
+	return locals.newList
+end function
+
+// @startuml
+// start
+// :<color:purple>libLocation = libDir + "/" + libName</color>;
+// if (<color:blue>libName == ""?</color>) then (<color:red>Yes</color>)
+//   :<color:purple>return get_shell.host_computer.File("/")</color>;
+//   stop
+// else (<color:blue>No</color>)
+// endif
+// :<color:purple>yield; lib = include_lib(libLocation)</color>;
+// if (<color:blue>typeof(lib) != null?</color>) then (<color:green>Yes</color>)
+//   if (<color:blue>libType == ""?</color>) then (<color:green>Yes</color>)
+//     :<color:purple>return lib</color>;
+//     stop
+//   else (<color:blue>No</color>)
+//     if (<color:blue>typeof(lib) == libType?</color>) then (<color:green>Yes</color>)
+//       :<color:purple>return lib</color>;
+//       stop
+//     else (<color:red>No</color>)
+//       :<color:purple>return null</color>;
+//       stop
+//     endif
+//   endif
+// else (<color:green>Type is null</color>)
+//   :<color:purple>return null</color>;
+//   stop
+// endif
+// @enduml
+
+// load a library with 
+// @description **Description:**
+// Loads a library from the lib directory, optionally specifiy directory, optionally verify type
+// @description ---
+// 
+// @description **Links:**
+// [Default type list](https://documentation.greyscript.org/#GENERAL_TYPEOF)
+// @description ---
+// 
+// @description **Parameters:**
+// @param {string} libName
+// @param {string} [libDir]
+// @param {string} [libType]
+// @description - `libName` (**string**): The file name of the library to scan.
+// @description - `libDir` (**string**, *optional*): The directory where the library is located.
+// @description - `libType` (**string**, *optional*): The expected type of the library.
+//
+// @description **Return:** `objectLibrary` | `null`
+// @return {objectLibrary | null}
+// @return {objectLibrary} 
+// @description ---   
+// 
+// @description **Author:** Svarii
+// @description **Version:** 0.0.1
+// @description ---    
+//
+// @description *footnotes*
+// @description * `libName` must be full filename including extension
+// @description * `libDir` should not have trailing slash
+// @description * `libType` is case sensitive
+// @description ---
+// 
+// @example lib = load_lib                                              //Load metaxploit.so from /lib directory
+// @example lib = load_lib("metaxploit.so")                             //Load a library without specifying type
+// @example lib = load_lib("customLib.so", "/altLib")                   //Load a library from specified directory
+// @example lib = load_lib("crypto.so", "/lib", "cryptoLib")            //Load a library with a specified type (null on type mismatch)
+load_lib = function(libName = "metaxploit.so", libDir = "/lib", libType = "")
+    locals.libLocation = locals.libDir + "/" + locals.libName
+    if locals.libName == "" then
+        return null
+    end if
+    locals.lib = include_lib(locals.libLocation)
+        if not typeof(locals.lib) == null then
+            if locals.libType == "" then
+                return locals.lib
+            else if typeof(locals.lib) == locals.libType then
+                return locals.lib
+			else
+				return null
+            end if
+        else
+            return null
+        end if
+end function
+// Extract the text between the first found indexies of the given start and end strings        
+    // @description **Description:** Extract the text between the first found bold tag if no paramaters provided
+    // @description ---
+    // @description **Parameters:**
+    // @param {string} [tagStart = "<b>""]
+    // @description `tagStart`:`string`
+    // @param {string} [tagEnd = "</b>"]
+    // @description `tagEnd`:`string`
+    // @description ---
+    // @return {string or null}
+    // @example newString = "<b>0x53C737</b>"
+    // @example result = newString.extract("<b>", "</b>")
+    // @example print(result); // Output: 0x53C737   
+string.extract = function(tagStart = "<b>", tagEnd = "</b>")
+    locals.startIndex = self.indexOf(locals.tagStart) + (locals.tagStart.len)
+    locals.endIndex = (self.indexOf(locals.tagEnd) - (locals.tagEnd.len - locals.tagStart.len)) + 1
+    return slice(self, locals.startIndex, locals.endIndex)
+end function
+
+// @startuml
+// title <color:purple>fetch_whois Function Overview</color>
+//
+// class fetch_whois {
+//   .. <color:blue>Input</color> ..
+//   + routerPublicIPAddress : string
+//
+//   .. <color:blue>Return</color> ..
+//   + returns : whoisInfo
+// }
+//
+// class whoisInfo {
+//   .. <color:blue>Standard Whois Fields</color> ..
+//   + admin : string
+//   + domain : string
+//   + email : string
+//   + phone : string
+//   + network : string
+//
+//   .. <color:blue>Error Handling</color> ..
+//   + error : string
+// }
+//
+// fetch_whois -right-> whoisInfo : creates instance of
+//
+// note bottom of whoisInfo
+//   * Contains IP registration and contact metadata
+//   * Fields populated from WHOIS lookup
+//   * On error, only `.error` is set
+// end note
+//
+// note bottom of fetch_whois
+//   * Validates that IP is public and well-formed
+//   * Rejects LAN addresses and malformed input
+//   * Uses `whois()` to extract structured details
+// end note
+//
+// @enduml
+
+// Pull whosis information from a public ip address
+	// @description **Description:**
+	// Return map with whois information
+	// @description ---
+	//
+	// @description **Parameters:**
+	// @param {string} routerPublicIPAddress
+	// @description - `routerPublicIPAddress`:`<string>`
+	//
+	// @description **Parameter Defaults:**
+	// @description - `none`
+	//
+	// @description **Return:**
+	// @return {map<string,string>}
+	// @description `map`:`whoisInfo`
+	// @description - `.admin`:`<string>` The administrative contacts' name
+	// @description - `.domain`:`<string>` The domain name of the ip address
+	// @description - `.email`:`<string>` The email address for the administrative contact
+	// @description - `.network`:`<string>` The network identifier (if any)
+	// @description - `.phone`:`<string>` The phone number for the administrative contract
+	// @description ---	
+	// @description - - `.error`:`<string>` {on error} will return obect with only this property
+	// @description ---
+	//    
+	// @description **Author:** Svarii
+	// @description **Version:** 0.0.1
+	// @description ---
+	// 
+	// @example whoisInfo = fetch_whois(params[0])
+	// @example
+	// print whoisInfo.domain
+	// @example
+	// print whoisInfo.admin
+	// @example
+	// print whoisInfo.email
+	// @example
+	// print whoisInfo.phone
+	// @example
+	// print whoisInfo.network
+fetch_whois = function(routerPublicIPAddress)
+	if not is_lan_ip(locals.routerPublicIPAddress) == true then
+		if is_valid_ip(routerPublicIPAddress) then
+			locals.whoisInfo = {"classID":"whoisInfo", "admin":"", "domain":"", "email":"", "network":"", "phone":"", "error":null}
+			locals.what = split(whois(locals.routerPublicIPAddress), "\n")
+			locals.whoisInfo.domain = str(split(locals.what[0], ":")[1]).trim
+			locals.whoisInfo.admin = str(split(locals.what[1], ":")[1]).trim
+			locals.whoisInfo.email = str(split(locals.what[2], ":")[1]).trim
+			locals.whoisInfo.phone = str(split(locals.what[3], ":")[1]).trim
+			if locals.what.len >= 5 then
+				locals.whoisInfo.network = str(split(locals.what[4], ":")[0]).trim
+			else
+				locals.whoisInfo.network = "[ UNKNOWN ]"
+			end if
+		else 
+			locals.whoisInfo = {"classID":"whoisInfo", "error":"Invalid Public IP Address Provided."}	
+		end if
+	else
+		locals.whoisInfo = {"classID":"whoisInfo", "error":"Needs Public IP, Provided Local IP."}
+	end if
+	locals.whoisInfo.error = false
+	return locals.whoisInfo
+end function
+
+// @startuml
+// start
+// if (<color:blue>params.len < 1?</color>) then (<color:red>Yes</color>)
+//   :<color:purple>exit / print usage</color>;
+//   stop
+// else (<color:green>No</color>)
+// endif
+// if (<color:blue>params[0] == "-h" or params[0] == "--help"?</color>) then (<color:red>Yes</color>)
+//   :<color:purple>exit usage</color>;
+//   stop
+// else (<color:green>No</color>)
+// endif
+// if (<color:blue>params.len &lt; minReqParams?</color>) then (<color:red>Yes</color>)
+//   :<color:purple>exit usage</color>;
+//   stop
+// else (<color:green>No</color>)
+// endif
+// stop
+// @enduml
+
+// Require user to pass parameters
+// @description **Description:**
+// @description Specifies Usage Information and number of required paramters.
+// @description ---
+//
+// @description **Parameters:**
+// @param {string} usage - The name of the library to load.
+// @description - `usage`:`<string>`
+// @param {number} minReqParams - The directory where the library is located.
+// @description - `minReqParams`:`<number>`
+//
+// @description **Parameter Defaults:**
+// @description - `none`
+//
+// @description **Return:**
+// @return {void}
+// @example
+// force_params("myApp [ipAddress] [port#]", 2)
+// @description ---
+//    
+// @description **Author:** Svarii
+// @description **Version:** 0.0.1
+// @description ---    
+	force_params = function(usage, minReqParams = 1)
+		if params.len < 1 then exit locals.usage
+		if params[0] == "-h" or params[0] == "--help" then exit locals.usage
+		if params.len < locals.minReqParams then exit locals.usage
+	end function
+
+        //@name diff
+// @startuml
+// title <color:purple>number.diff Method Diagram</color>
+// 
+// class number {
+//   + value : number
+//   + diff(number) : number
+// }
+// 
+// note right of number
+//   The diff method subtracts the provided value from the current number.
+//   For example: 44.diff(2) returns 42.
+// end note
+// 
+// footer
+// Method: number.diff(subtrahend)
+// endfooter
+// 
+// @enduml
+
+// Return difference to number
+        // @description **Description:**
+	// @description The difference between number and provided number
+	// @description ---
+	//
+	// @description **Parameters:**
+        // @param {number} distanceTo - The value to compare
+        // @description - `distanceTo` The value to compare
+        //
+	// @description **Parameter Defaults:**
+        // @description - `distanceTo`:`0`
+        // @description ---
+        //
+	// @description **Return:**
+	// @return {number} the difference between the numbers
+	// @description `number` difference between numbers
+	// @description ---
+	//
+	// @description **Author:** Svarii
+	// @description **Version:** 0.0.1
+	// @description ---
+	//
+	// @example myNumber = 42
+        // @example
+        // print myNumber.diff(42, 100) // Return 57
+        // @example
+        // print myNumber.diff(75, 100) // Return 25
+        // @example
+        // print myNumber.diff(0, 40) // Return 40
+	// @description ---
+    number.diff = function(distanceTo = 0)
+            return abs(self - locals.distanceTo)
+    end function
+
 // Return true or false as a string
 // @description **Description:**
 // @description Convert a boolean value **(`true`|`false`)** | **(`0`|`1`)** into `<string>`: `"true"`|`"false"`
@@ -73,3 +403,75 @@
 // :<color:red>return null</color>;
 // stop
 // @enduml	
+
+pad_string = function(listString, prepLength, padding = "*", rightOnly = false)
+	stringLen = locals.listString.len
+		locals.stringLen = listString.len
+		if rightOnly == false then
+			locals.difference = locals.stringLen.diff(locals.prepLength)
+			locals.leftPad = floor(locals.difference / 2)
+			locals.rightPad = (locals.difference - locals.leftPad)
+			locals.finalString = locals.padding*(locals.leftPad) + locals.listString + locals.padding*(locals.rightPad)
+		else
+			locals.finalString = locals.listString + padding*(locals.stringLen)
+		end if
+	return locals.finalString
+end function
+
+///*************************
+///BEGIN PROGRAM CODE HERE
+///*************************
+force_params("Usage: kiwi " + "[ip_address]".bold + " [opt:port]")
+
+outputLeft = []
+outputRight = []
+localTarget = false
+targetIP = params[0]
+myShell = get_shell
+myComputer = myShell.host_computer
+hasInternet = myComputer.is_network_active
+portOutputStrings = []
+if not hasInternet then exit "No Internet Connection"
+if not is_valid_ip(targetIP) then exit "Invalid IP Address"
+clear_screen
+
+
+
+
+ Metax = load_lib("metaxploit.so", "/lib", "MetaxploitLib")
+ if not Metax then
+	outputMessage = "Unable to load MetaxploitLib"
+	//output whois only
+else
+	statusMessage = pad_string("   Metaxploit Succefully Loaded   ", 56, char(32))
+end if
+
+//Construction Output Window
+topBorder = "*"*58
+statusMessage = pad_string("   gR45s   ", 56, char(32))
+
+
+output = merge_lists(outputLeft, outputRight)
+output.insert(0, topBorder)
+output.insert(1, statusMessage)
+output.insert(2, topBorder)
+
+
+targetRouter = get_router(targetIP)
+targetUsedPorts = targetRouter.used_ports
+
+for targetPort in targetUsedPorts
+	targetPortObject = targetRouter.ping_port(targetPort)
+	targetPortInfo = targetRouter.port_info(targetPort)
+	isTargetPortClosed = targetPort.is_closed
+	targetPortLanIP = targetPort.get_lan_ip
+	portOutputStrings.push(targetPortInfo)	
+end for
+
+for item in portOutputStrings
+	print item
+end for
+
+
+
+     

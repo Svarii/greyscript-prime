@@ -1,3 +1,23 @@
+// @startuml
+// start
+// if (<color:blue>params.len < 1?</color>) then (<color:red>Yes</color>)
+//   :<color:purple>exit / print usage</color>;
+//   stop
+// else (<color:green>No</color>)
+// endif
+// if (<color:blue>params[0] == "-h" or params[0] == "--help"?</color>) then (<color:red>Yes</color>)
+//   :<color:purple>exit usage</color>;
+//   stop
+// else (<color:green>No</color>)
+// endif
+// if (<color:blue>params.len &lt; minReqParams?</color>) then (<color:red>Yes</color>)
+//   :<color:purple>exit usage</color>;
+//   stop
+// else (<color:green>No</color>)
+// endif
+// stop
+// @enduml
+
 // Require user to pass parameters
 // @description **Description:**
 // @description Specifies Usage Information and number of required paramters.
@@ -26,22 +46,3 @@
 		if locals.params[0] == "-h" or locals.params[0] == "--help" then exit locals.usage
 		if locals.params.len < locals.minReqParams then exit locals.usage
 	end function
-// @startuml
-// start
-// if (<color:blue>params.len < 1?</color>) then (<color:red>Yes</color>)
-//   :<color:purple>exit / print usage</color>;
-//   stop
-// else (<color:green>No</color>)
-// endif
-// if (<color:blue>params[0] == "-h" or params[0] == "--help"?</color>) then (<color:red>Yes</color>)
-//   :<color:purple>exit usage</color>;
-//   stop
-// else (<color:green>No</color>)
-// endif
-// if (<color:blue>params.len &lt; minReqParams?</color>) then (<color:red>Yes</color>)
-//   :<color:purple>exit usage</color>;
-//   stop
-// else (<color:green>No</color>)
-// endif
-// stop
-// @enduml
