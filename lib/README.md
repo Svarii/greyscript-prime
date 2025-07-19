@@ -93,6 +93,248 @@
 
 # 🅰️ ![Static Badge](https://img.shields.io/badge/string-methods-darkorange)
 
+## Logic
+
+### remove_bold
+
+#### 📝 Description  
+Removes `<b>` and `</b>` tags from a string.
+
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1  
+
+</details>
+
+#### ➖ Parameters  
+| Parameter | Default Value |
+|-----------|---------------|
+| *(None)*  | *(None)*      |
+
+
+#### 🔁 Return  
+`string` — The input string without `<b>` and `</b>` tags.
+
+#### 💡 Example
+
+```greyscript
+newString = "<b>Hello</b>"
+result = newString.remove_bold
+print(result)  // Outputs: Hello
+```
+
+---
+
+### format
+
+#### 📝 Description  
+Allows for string interpolation by replacing a delimiter (`%s` by default) with values from a list.
+
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Contributor:** dynobytes (original logic)
+- **Version:** 0.0.1  
+
+</details>
+
+#### 🧮 Parameters
+
+| Name     | Type         | Description                                  |
+|----------|--------------|----------------------------------------------|
+| `args`   | list<string> | List of values to insert into the string.    |
+| `delim`  | string        | *(Optional)* Delimiter used in string. Default: `"%s"` |
+
+##### ⚙️ Defaults
+
+| Parameter | Default |
+|-----------|---------|
+| `args`   | _(None)_  |
+| `delim`   | `"%s"`  |
+
+
+#### 🔁 Return  
+`string` — The formatted string with list values interpolated in place of the delimiter.
+
+#### 💡 Example
+
+```greyscript
+variableString = "The quick brown %s jumps over the lazy %s"
+animalsList = ["fox", "dog"]
+sentence = variableString.format(animalsList)
+print(sentence)  // Output: The quick brown fox jumps over the lazy dog
+```
+
+---
+
+## Removal
+
+### remove_bold
+
+#### 📝 Description  
+Removes `<b>` and `</b>` tags from a string.
+
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1  
+
+</details>
+
+#### ➖ Parameters  
+| Parameter | Default Value |
+|-----------|---------------|
+| *(None)*  | *(None)*      |
+
+#### 🔁 Return  
+`string` — The string without `<b>` and `</b>` tags.
+
+#### 💡 Example
+
+```greyscript
+newString = "<b>Hello</b>"
+result = newString.remove_bold
+print(result) // Outputs: Hello
+```
+
+---
+
+### remove_char_first
+
+#### 📝 Description  
+Removes the first character of the given string.
+
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1  
+
+</details>
+
+
+#### ➖ Parameters  
+| Parameter | Default Value |
+|-----------|---------------|
+| *(None)*  | *(None)*      |
+
+#### 🔁 Return  
+`string` — The string with the first character removed.
+
+
+#### 💡 Example
+```greyscript
+newString = "Hello"
+result = newString.remove_char_first
+print(result) // Outputs: ello
+```
+
+---
+
+### .remove_char_last 
+The `.remove_char_last` method allows you to remove the last character to the given text. Example usage:
+
+![image](../images/docblocks/string/remove_char_last.png)
+
+```
+newString = "Hello"
+
+print(newString.remove_char_last) // Outputs: Hell
+```
+
+
+### .remove_char_first
+The `.remove_char_first` method allows you to remove the last character to the given text. Example usage:
+
+![image](../images/docblocks/string/remove_char_first.png)
+
+```
+newString = "Hello"
+
+print(newString.remove_char_first) // Outputs: ello
+```
+
+### .remove_bold
+The `.remove_bold` method allows you to remove bold tags from the given text. Example usage:
+
+![image](https://github.com/user-attachments/assets/b9163072-533f-4614-b418-630d2d3c6749)
+
+```
+newString = "<b>Hello</b>"
+
+print(newString.remove_bold) // Outputs: Hello
+```
+
+### .remove_italic
+The `.remove_italic` method allows you to remove italic tags from the given text. Example usage:
+
+![image](https://github.com/user-attachments/assets/aeaada4d-8aaf-44ed-8935-e49de4d6f864)
+
+```
+newString = "<i>Hello</i>"
+
+print(newString.remove_italic) // Outputs: Hello
+```
+
+### .remove_underline
+The `.remove_underline` method allows you to remove underline tags from the given text. Example usage:
+
+![image](https://github.com/user-attachments/assets/768e7493-ead8-4a7f-b156-af9f8761815a)
+
+```
+newString = "<u>Hello</u>"
+
+print(newString.remove_underline) // Outputs: Hello
+```
+
+### .remove_strike
+The `.remove_strike` method allows you to remove strikethrough tags from the given text. Example usage:
+
+![image](https://github.com/user-attachments/assets/1aeed45f-4ab5-4343-8dba-949faec6c0af)
+
+```
+newString = "<s>Hello</s>"
+
+print(newString.remove_strike) // Outputs: Hello
+```
+
+### .remove_mark
+The `.remove_mark` method allows you to remove mark tags from the given text. Example usage:
+
+![image](https://github.com/user-attachments/assets/e8c5bdbe-e881-4ad2-996b-ef8eff80fcbe)
+
+```
+newString = "<mark>Hello</mark>"
+
+print(newString.remove_mark) // Outputs: Hello
+```
+
+### .remove_sub
+The `.remove_sub` method allows you to remove sub tags from the given text. Example usage:
+
+![image](https://github.com/user-attachments/assets/db99e8ca-62dc-494b-867a-8ab204fdf366)
+
+```
+newString = "<sub>Hello</sub>"
+
+print(newString.remove_sub) // Outputs: Hello
+```
+
+### .remove_sup
+The `.remove_sup` method allows you to remove superscript tags from the given text. Example usage:
+
+![image](https://github.com/user-attachments/assets/14996b4a-aa3c-4b02-a06c-2303cde34328)
+
+```
+newString = "<sup>Hello</sup>"
+
+print(newString.remove_sup) // Outputs: Hello
+
+```
 
 ## align
 ### 📝 Description
@@ -1197,249 +1439,7 @@ print(result)
 
 ---
 
-## Logic Methods
 
-## remove_bold
-
-### 📝 Description  
-Removes `<b>` and `</b>` tags from a string.
-
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1  
-
-</details>
-
-### ➖ Parameters  
-| Parameter | Default Value |
-|-----------|---------------|
-| *(None)*  | *(None)*      |
-
-
-### 🔁 Return  
-`string` — The input string without `<b>` and `</b>` tags.
-
-### 💡 Example
-
-```greyscript
-newString = "<b>Hello</b>"
-result = newString.remove_bold
-print(result)  // Outputs: Hello
-```
-
----
-
-## format
-
-### 📝 Description  
-Allows for string interpolation by replacing a delimiter (`%s` by default) with values from a list.
-
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Contributor:** dynobytes (original logic)
-- **Version:** 0.0.1  
-
-</details>
-
-### 🧮 Parameters
-
-| Name     | Type         | Description                                  |
-|----------|--------------|----------------------------------------------|
-| `args`   | list<string> | List of values to insert into the string.    |
-| `delim`  | string        | *(Optional)* Delimiter used in string. Default: `"%s"` |
-
-#### ⚙️ Defaults
-
-| Parameter | Default |
-|-----------|---------|
-| `args`   | _(None)_  |
-| `delim`   | `"%s"`  |
-
-
-### 🔁 Return  
-`string` — The formatted string with list values interpolated in place of the delimiter.
-
-### 💡 Example
-
-```greyscript
-variableString = "The quick brown %s jumps over the lazy %s"
-animalsList = ["fox", "dog"]
-sentence = variableString.format(animalsList)
-print(sentence)  // Output: The quick brown fox jumps over the lazy dog
-```
-
----
-
-
-## Removal Methods
-
-## remove_bold
-
-### 📝 Description  
-Removes `<b>` and `</b>` tags from a string.
-
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1  
-
-</details>
-
-### ➖ Parameters  
-| Parameter | Default Value |
-|-----------|---------------|
-| *(None)*  | *(None)*      |
-
-### 🔁 Return  
-`string` — The string without `<b>` and `</b>` tags.
-
-### 💡 Example
-
-```greyscript
-newString = "<b>Hello</b>"
-result = newString.remove_bold
-print(result) // Outputs: Hello
-```
-
----
-
-## remove_char_first
-
-### 📝 Description  
-Removes the first character of the given string.
-
-<details>
-<summary>📃 About</summary>
-
-- **Author:** Svarii  
-- **Version:** 0.0.1  
-
-</details>
-
-
-### ➖ Parameters  
-| Parameter | Default Value |
-|-----------|---------------|
-| *(None)*  | *(None)*      |
-
-### 🔁 Return  
-`string` — The string with the first character removed.
-
-
-### 💡 Example
-```greyscript
-newString = "Hello"
-result = newString.remove_char_first
-print(result) // Outputs: ello
-```
-
----
-
-### .remove_char_last 
-The `.remove_char_last` method allows you to remove the last character to the given text. Example usage:
-
-![image](../images/docblocks/string/remove_char_last.png)
-
-```
-newString = "Hello"
-
-print(newString.remove_char_last) // Outputs: Hell
-```
-
-
-### .remove_char_first
-The `.remove_char_first` method allows you to remove the last character to the given text. Example usage:
-
-![image](../images/docblocks/string/remove_char_first.png)
-
-```
-newString = "Hello"
-
-print(newString.remove_char_first) // Outputs: ello
-```
-
-### .remove_bold
-The `.remove_bold` method allows you to remove bold tags from the given text. Example usage:
-
-![image](https://github.com/user-attachments/assets/b9163072-533f-4614-b418-630d2d3c6749)
-
-```
-newString = "<b>Hello</b>"
-
-print(newString.remove_bold) // Outputs: Hello
-```
-
-### .remove_italic
-The `.remove_italic` method allows you to remove italic tags from the given text. Example usage:
-
-![image](https://github.com/user-attachments/assets/aeaada4d-8aaf-44ed-8935-e49de4d6f864)
-
-```
-newString = "<i>Hello</i>"
-
-print(newString.remove_italic) // Outputs: Hello
-```
-
-### .remove_underline
-The `.remove_underline` method allows you to remove underline tags from the given text. Example usage:
-
-![image](https://github.com/user-attachments/assets/768e7493-ead8-4a7f-b156-af9f8761815a)
-
-```
-newString = "<u>Hello</u>"
-
-print(newString.remove_underline) // Outputs: Hello
-```
-
-### .remove_strike
-The `.remove_strike` method allows you to remove strikethrough tags from the given text. Example usage:
-
-![image](https://github.com/user-attachments/assets/1aeed45f-4ab5-4343-8dba-949faec6c0af)
-
-```
-newString = "<s>Hello</s>"
-
-print(newString.remove_strike) // Outputs: Hello
-```
-
-### .remove_mark
-The `.remove_mark` method allows you to remove mark tags from the given text. Example usage:
-
-![image](https://github.com/user-attachments/assets/e8c5bdbe-e881-4ad2-996b-ef8eff80fcbe)
-
-```
-newString = "<mark>Hello</mark>"
-
-print(newString.remove_mark) // Outputs: Hello
-```
-
-### .remove_sub
-The `.remove_sub` method allows you to remove sub tags from the given text. Example usage:
-
-![image](https://github.com/user-attachments/assets/db99e8ca-62dc-494b-867a-8ab204fdf366)
-
-```
-newString = "<sub>Hello</sub>"
-
-print(newString.remove_sub) // Outputs: Hello
-```
-
-### .remove_sup
-The `.remove_sup` method allows you to remove superscript tags from the given text. Example usage:
-
-![image](https://github.com/user-attachments/assets/14996b4a-aa3c-4b02-a06c-2303cde34328)
-
-```
-newString = "<sup>Hello</sup>"
-
-print(newString.remove_sup) // Outputs: Hello
-
-```
 
 ---
 
@@ -2032,7 +2032,7 @@ Converts a boolean-like value (`true`, `false`, `1`, `0`) into a string: `"true"
 #### 🚫 Defaults
 | Parameter | Default Value |
 |-----------|---------------|
-| *colorValue*  | *(None)*  |
+| *boolVal*  | *(None)*  |
 
 ### 🔁 Return  
 `string` — Returns `"true"` or `"false"` if the value is valid. Returns `null` for invalid input.
@@ -2100,7 +2100,7 @@ Returns `null` if no valid IP address is found.
 #### 🚫 Defaults
 | Parameter | Default Value |
 |-----------|---------------|
-| *colorValue*  | *(None)*  |
+| *inputString*  | *(None)*  |
 
 
 ### 🔁 Return  
@@ -2151,7 +2151,9 @@ Appends data to an existing file, or creates a new file if the file does not exi
 #### 🚫 Defaults
 | Parameter | Default Value |
 |-----------|---------------|
-| *colorValue*  | *(None)*  |
+| *savePath*  | *(None)*  |
+| *saveFile*  | *(None)*  |
+| *newText*  | *(None)*  |
 
 
 ### 🔁 Return  
@@ -2196,7 +2198,8 @@ Delete a specified file if it has write permissions.
 #### 🚫 Defaults
 | Parameter | Default Value |
 |-----------|---------------|
-| *colorValue*  | *(None)*  |
+| *filePath*  | *(None)*  |
+| *fileName*  | *(None)*  |
 
 
 ### 🔁 Return  
@@ -2241,7 +2244,8 @@ Check to see if the specified file exists.
 #### 🚫 Defaults
 | Parameter | Default Value |
 |-----------|---------------|
-| *colorValue*  | *(None)*  |
+| *filePath*  | *(None)*  |
+| *fileName*  | *(None)*  |
 
 
 ### 🔁 Return  
@@ -2343,7 +2347,8 @@ Create a new file at the specified path if it does not already exist.
 #### 🚫 Defaults
 | Parameter | Default Value |
 |-----------|---------------|
-| *colorValue*  | *(None)*  |
+| *filePath*  | *(None)*  |
+| *fileName*  | *(None)*  |
 
 
 ### 🔁 Return  
@@ -2386,7 +2391,8 @@ Specifies usage information and checks if the required number of parameters have
 #### 🚫 Defaults
 | Parameter | Default Value |
 |-----------|---------------|
-| *colorValue*  | *(None)*  |
+| *usage*  | *(None)*  |
+| *mineReqParams*  | *(None)*  |
 
 
 ### 🔁 Return  
@@ -2423,10 +2429,13 @@ Scan a library for vulnerable addresses.
 | `targetPort`       | number (optional)    | Optional target port number. Default: `0`. |
 
 
-#### 🚫 Defaults
+#### ⚙️ Defaults
 | Parameter | Default Value |
 |-----------|---------------|
-| *colorValue*  | *(None)*  |
+| *libLocation*  | *(None)*  |
+| *metaxploitObject*  | *(None)*  |
+| *remoteTarget*  | *false*  |
+| *targetPort*  | *0*  |
 
 
 ### 🔁 Return  
@@ -2818,7 +2827,7 @@ Return `true` if item is null, `false` otherwise.
 
 | Parameter | Default Value |
 |-----------|---------------|
-| *colorValue*  | *(None)*      |
+| *testObject*  | *(None)*      |
 
 
 ### 🔁 Return  
@@ -2861,7 +2870,8 @@ Check if the object passed is of the specified type and return a boolean answer.
 
 | Parameter | Default Value |
 |-----------|---------------|
-| *colorValue*  | *(None)*      |
+| *testObject*  | *(None)*      |
+| *objectType*  | *(None)*      |
 
 
 
