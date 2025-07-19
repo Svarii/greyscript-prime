@@ -1,13 +1,26 @@
-     
-
-        //  **Description:**
-        //  Remove the sub tag of the given text.
-        //  @return {string}
-        //  @example newString = "<sub>Hello</sub>"     
-        //  @example 
-        //  @example result = newString.remove_sub
-        //  @example                
-        //  print(result); // Outputs: Hello
+//  **Description:**
+//  Remove the sub tag of the given text.
+//
+//  @description ---
+//
+//  @description **Parameters:**
+//  @description - none
+//
+//  @description **Return:**
+//  @return {string}
+//  @description `string` The string without `<sub>` and `</sub>` tags.
+//  @description ---
+//
+//  @description **Author:** Svarii
+//  @description **Version:** 0.0.1
+//  @description ---
+//
+//  @example newString = "<sub>Hello</sub>"
+//  @example 
+//  @example result = newString.remove_sub
+//  @example                
+//  print(result); // Outputs: Hello
+//  @description ---
     string.remove_sub = function()
         locals.newString = self.remove("<sub>")
         return locals.newString.remove("</sub>")

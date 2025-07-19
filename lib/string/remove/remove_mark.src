@@ -1,13 +1,26 @@
-
-
-        //  **Description:**
-        //  Remove the mark tag of the given text.
-        //  @return {string}
-        //  @example newString = "<mark>Hello</mark>"
-        //  @example 
-        //  @example result = newString.remove_mark
-        //  @example
-        //  print(result); // Outputs: Hello
+//  **Description:**
+//  Remove the mark tag of the given text.
+//
+//  @description ---
+//
+//  @description **Parameters:**
+//  @description - none
+//
+//  @description **Return:**
+//  @return {string}
+//  @description `string` The string without `<mark>` and `</mark>` tags.
+//  @description ---
+//
+//  @description **Author:** Svarii
+//  @description **Version:** 0.0.1
+//  @description ---
+//
+//  @example newString = "<mark>Hello</mark>"
+//  @example 
+//  @example result = newString.remove_mark
+//  @example
+//  print(result); // Outputs: Hello
+//  @description ---
     string.remove_mark = function()
         locals.newString = self.remove("<mark>")
         return locals.newString.remove("</mark>")

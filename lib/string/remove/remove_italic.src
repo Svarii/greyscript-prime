@@ -1,14 +1,25 @@
-       
-
-
-        //  **Description:**
-        //  Remove the italic tag of the given text.
-        //  @example 
-        //  @return {string}
-        //  @example newString = "<i>Hello</i>"  
-        //  @example result = newString.remove_italic
-        //  @example        
-        //  print(result); // Outputs: Hello
+//  **Description:**
+//  Remove the italic tag of the given text.
+//
+//  @description ---
+//
+//  @description **Parameters:**
+//  @description - none
+//
+//  @description **Return:**
+//  @return {string}
+//  @description `string` The string without `<i>` and `</i>` tags.
+//  @description ---
+//
+//  @description **Author:** Svarii
+//  @description **Version:** 0.0.1
+//  @description ---
+//
+//  @example newString = "<i>Hello</i>"  
+//  @example result = newString.remove_italic
+//  @example        
+//  print(result); // Outputs: Hello
+//  @description ---
     string.remove_italic = function()
         locals.newString = self.remove("<i>")
         return locals.newString.remove("</i>")

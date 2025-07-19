@@ -2,6 +2,10 @@
 
 > # Table of Contents
 > 
+# ![GreyScript](https://img.shields.io/badge/GreyScript-Prime-black?labelColor=blue&style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAC+ElEQVQ4T22T+0tTYRjHv+/u05h4KxsqW1qiiRmZEQZpCUsUJIWMJCL7IUsiCvqlftkP/gcZQr+EeClETCyk6KI/GJWSihdS58LrNnVTNy/b3M45Pe9sy6AHznue57zP+znP7WXYJ5IEGYZxBhKqSSukd3pom2GG1j6yW3ES3xmDGD7Gwoo0ilgIqKetGgnQCIIcQoBBIFelUoSCHnL20fICCjxhOVjfY5OEDgfRRqopGJCziYGjmJ82wOdVYcrhgEoTQM6JZRQVO6BWi8THe4Jc4xD2J+wG+lhLOhvpz4JXfQsZpnKotFFYcfuw43FjsKsFSewVSsqXwOSUDEMjcnGPSUM4S+Zn+qDZ9SvQ1VKK1awKMKUCVZWlcK5vobnlJQS/H9qx13h0YwRao8Bj5+lcYNIwGghQx1Nxuw6gu70E80eK4A/uwmg4DLvdAat1Diq5ErEzfbhfNopDBi+gDxXgGQeME+A4BywvxKO3swDplyqQWVKO1bUNLLs8SIiNw0BnM8bedaDGZEG6fhOIoQN6TPAUfKSqOWB2So+vPaeILIMqKhqQK0JFDOz64dveomqLqDo/i9y0UAMAHfwcQPFAw+2pYSOG+rLDzaEWivhpt0Ok6oalLH8BBdmrYTPAAeNkhVIY/ZKBiYGMiPP/AIU5DpjybHs+DJNM+kFFZKjjPxn8lAPrmCEC4OM2abMhSJGE5fQxJy4XzIOmkUtjpI18+vrf5GHRqodMIUdM4kGoo6OxZLHAvbMDh9sdAmWmbuD6xV8cwNtYvDdII3gqCezOh/YC5rLHIT45GVE6HURBgG16GhI5ebxezLpcSEncRm3ZtCSTSc/phtyNjLLgk7f1NBWafP44lmQ0UiNk/wB4IWdWVqBVbUsPKic+KqOlq+wK1iKXae5tTOy3jnP1So3uZkJqqpbxK7cvAh7FrNPl8wa8TbdLrY9THnrW9uq4T8xmsyzfs5ivS0yoppoUiYKYZrNY5JIkWMmx17mx2erq7v1qxt/r/BtM3mB6tGkzRAAAAABJRU5ErkJggg==&logoColor=white)
+
+> # Table of Contents
+> 
 > <details>
 > <summary>🅰️  Text Mesh Pro Methods</summary>
 >
@@ -21,12 +25,20 @@
 > - string.[noparse](#noparse)
 > - string.[page](#page)
 > - string.[pos](#pos)
+> - string.[remove_bold](#remove_bold)
+> - string.[remove_char_first](#remove_char_first)
+> - string.[remove_char_last](#remove_char_last)
+> - string.[remove_italic](#remove_italic)
+> - string.[remove_mark](#remove_mark)
+> - string.[remove_strike](#remove_strike)
+> - string.[remove_sub](#remove_sub)
+> - string.[remove_sup](#remove_sup)
+> - string.[remove_underline](#remove_underline)
 > - string.[rotate](#rotate)
 > - string.[size](#size)
 > - string.[strike](#strike)
 > - string.[sub](#sub)
 > - string.[sup](#sup)
-> - string.[sub](#sub)
 > - string.[underline](#underline)
 > - string.[uppercase](#uppercase)
 > - string.[voffset](#voffset)
@@ -38,7 +50,9 @@
 >
 > - number.[clamp](#clamp)
 > - number.[diff](#diff)
-> - number.[divide](#divide)
+> - number.[div](#div)
+> - number.[is_float](#is_float)
+> - number.[is_integer](#is_integer)
 > - number.[is_more](#is_more)
 > - number.[is_less](#is_less)
 > - number.[lerp](#lerp)
@@ -46,7 +60,6 @@
 > - number.[multiply](#multiply)
 > - number.[plus](#plus)
 > - number.[random_from](#random_from)
-> - number.[saturate](#saturate)
 > </details>
 > <details>
 > <summary>📋 List Methods</summary>
@@ -58,7 +71,7 @@
 > <details>
 > <summary>🗂️ Map Methods</summary>
 >
-> - map.[get_atrributes](#get_atrributes)
+> - map.[get_attributes](#get_attributes)
 > </details>
 >
 > <details>
@@ -67,6 +80,7 @@
 > - [file_append](#file_append)
 > - [file_delete](#file_delete)
 > - [file_exists](#file_exists)
+> - [file_location_ident](#file_location_ident)
 > - [file_new](#file_new)
 > </details>
 >
@@ -75,19 +89,22 @@
 > 
 > - [bool_text](#bool_text)
 > - [extract_ip](#extract_ip)
+> - [fetch_exploit_requirements](#fetch_exploit_requirements)
+> - [fetch_whois](#fetch_whois)
 > - [force_params](#force_params)
 > - [get_acks](#get_acks)
 > - [get_exploit_address_list](#get_exploit_address_list)
 > - [get_inbox](#get_inbox)
 > - [get_random_ip](#get_random_ip)
-> - [in_null](#in_null)
-> - [is_type](#is_type)
+> - [is_null](#is_null)
+> - [is_typeof](#is_typeof)
 > - [load_lib](#load_lib)
 > - [network_device_list](#network_device_list)
 > - [parse_inbox](#parse_inbox)
 > - [program_name](#program_name)
+> - [report_string_construct__](#report_string_construct__)
 > - [unsafe_check_list](#unsafe_check_list)
-> </details>
+>
 
 ---
 
@@ -235,84 +252,226 @@ print(result)  // Output: ello
 
 ---
 
-### .remove_char_last 
-The `.remove_char_last` method allows you to remove the last character to the given text. Example usage:
+### remove_char_last
 
-![image](../images/docblocks/string/remove_char_last.png)
+#### 📝 Description  
+Removes the last character of the given string.
 
-```
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1  
+
+</details>
+
+#### ➖ Parameters  
+| Parameter | Default Value |
+|-----------|---------------|
+| *(None)*  | *(None)*      |
+
+#### 🔁 Return  
+`string` — The string with the last character removed.
+
+#### 💡 Example
+```greyscript
 newString = "Hello"
-
-print(newString.remove_char_last)  // Output: Hell
+result = newString.remove_char_last
+print(result) // Outputs: Hell
 ```
 
+---
 
-### .remove_italic
-The `.remove_italic` method allows you to remove italic tags from the given text. Example usage:
 
-![image](https://github.com/user-attachments/assets/aeaada4d-8aaf-44ed-8935-e49de4d6f864)
+### remove_italic
 
-```
+#### 📝 Description  
+Removes `<i>` and `</i>` tags from a string.
+
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1  
+
+</details>
+
+#### ➖ Parameters  
+| Parameter | Default Value |
+|-----------|---------------|
+| *(None)*  | *(None)*      |
+
+#### 🔁 Return  
+`string` — The string without `<i>` and `</i>` tags.
+
+
+#### 💡 Example
+```greyscript
 newString = "<i>Hello</i>"
-
-print(newString.remove_italic)  // Output: Hello
+result = newString.remove_italic
+print(result) // Outputs: Hello
 ```
 
-### .remove_underline
-The `.remove_underline` method allows you to remove underline tags from the given text. Example usage:
+---
 
-![image](https://github.com/user-attachments/assets/768e7493-ead8-4a7f-b156-af9f8761815a)
+### remove_mark
 
-```
-newString = "<u>Hello</u>"
+#### 📝 Description  
+Removes `<mark>` and `</mark>` tags from a string.
 
-print(newString.remove_underline)  // Output: Hello
-```
+<details>
+<summary>📃 About</summary>
 
-### .remove_strike
-The `.remove_strike` method allows you to remove strikethrough tags from the given text. Example usage:
+- **Author:** Svarii  
+- **Version:** 0.0.1  
 
-![image](https://github.com/user-attachments/assets/1aeed45f-4ab5-4343-8dba-949faec6c0af)
+</details>
 
-```
-newString = "<s>Hello</s>"
 
-print(newString.remove_strike)  // Output: Hello
-```
+#### ➖ Parameters  
+| Parameter | Default Value |
+|-----------|---------------|
+| *(None)*  | *(None)*      |
 
-### .remove_mark
-The `.remove_mark` method allows you to remove mark tags from the given text. Example usage:
+#### 🔁 Return  
+`string` — The string without `<mark>` and `</mark>` tags.
 
-![image](https://github.com/user-attachments/assets/e8c5bdbe-e881-4ad2-996b-ef8eff80fcbe)
 
-```
+#### 💡 Example
+```greyscript
 newString = "<mark>Hello</mark>"
-
-print(newString.remove_mark)  // Output: Hello
+result = newString.remove_mark
+print(result) // Outputs: Hello
 ```
 
-### .remove_sub
-The `.remove_sub` method allows you to remove sub tags from the given text. Example usage:
+---
 
-![image](https://github.com/user-attachments/assets/db99e8ca-62dc-494b-867a-8ab204fdf366)
+### remove_strike
 
+#### 📝 Description  
+Removes `<s>` and `</s>` (strikethrough) tags from a string.
+
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1  
+
+</details>
+
+
+#### ➖ Parameters  
+| Parameter | Default Value |
+|-----------|---------------|
+| *(None)*  | *(None)*      |
+
+#### 🔁 Return  
+`string` — The string without `<s>` and `</s>` tags.
+
+
+#### 💡 Example
+```greyscript
+newString = "<s>Hello</s>"
+result = newString.remove_strike
+print(result) // Outputs: Hello
 ```
+
+---
+
+### remove_sub
+
+#### 📝 Description  
+Removes `<sub>` and `</sub>` (subscript) tags from a string.
+
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1  
+
+</details>
+
+
+#### ➖ Parameters  
+| Parameter | Default Value |
+|-----------|---------------|
+| *(None)*  | *(None)*      |
+
+#### 🔁 Return  
+`string` — The string without `<sub>` and `</sub>` tags.
+
+
+#### 💡 Example
+```greyscript
 newString = "<sub>Hello</sub>"
-
-print(newString.remove_sub)  // Output: Hello
+result = newString.remove_sub
+print(result) // Outputs: Hello
 ```
 
-### .remove_sup
-The `.remove_sup` method allows you to remove superscript tags from the given text. Example usage:
+---
 
-![image](https://github.com/user-attachments/assets/14996b4a-aa3c-4b02-a06c-2303cde34328)
+### remove_sup
 
-```
+#### 📝 Description  
+Removes `<sup>` and `</sup>` (superscript) tags from a string.
+
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1  
+
+</details>
+
+
+#### ➖ Parameters  
+| Parameter | Default Value |
+|-----------|---------------|
+| *(None)*  | *(None)*      |
+
+#### 🔁 Return  
+`string` — The string without `<sup>` and `</sup>` tags.
+
+
+#### 💡 Example
+```greyscript
 newString = "<sup>Hello</sup>"
-
-print(newString.remove_sup)  // Output: Hello
-
+result = newString.remove_sup
+print(result) // Outputs: Hello
 ```
+
+---
+
+### remove_underline
+
+#### 📝 Description  
+Removes `<u>` and `</u>` (underline) tags from a string.
+
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1  
+
+</details>
+
+
+#### ➖ Parameters  
+| Parameter | Default Value |
+|-----------|---------------|
+| *(None)*  | *(None)*      |
+
+#### 🔁 Return  
+`string` — The string without `<u>` and `</u>` tags.
+
+#### 💡 Example
+```greyscript
+newString = "<u>Hello</u>"
+result = newString.remove_underline
+print(result) // Outputs: Hello
+```
+
+---
 
 ## align
 ### 📝 Description
@@ -677,7 +836,7 @@ Modifies a text string to wrap it in the `<line-indent>` tag.
 
 | Name           | Type     | Description                                           |
 |----------------|----------|-----------------------------------------------------|
-| `indentPercent` | string   | Optional. Accepted input: `em`, `px`, or `%`.       |
+| `indentPercent` | string   | Optional. Accepted input: `em`, `px`, or `%`       |
 | `closeTag`     | boolean  | Optional. Whether to append a closing `</line-indent>` tag. Accepted: `true` or `false`. |
 
 #### ⚙️ Defaults
@@ -2034,9 +2193,9 @@ Returns `null` if no valid IP address is found.
 
 ### 🧮 Parameters
 
-| Name          | Type   | Description                         |
-|---------------|--------|-------------------------------------|
-| `inputString` | string | The text string to search for an IP address. |
+| Name          | Type   | Description                                    |
+|---------------|--------|------------------------------------------------|
+| `inputString` | string | The text string to search for an IP address    |
 
 
 #### 🚫 Defaults
@@ -2586,6 +2745,7 @@ print(aptClientID.name)      // Output: aptclient
 
 ---
 
+
 ## extract_ip
 
 ### 📝 Description  
@@ -2605,11 +2765,12 @@ Scans a string for a valid IPv4 address and returns the first match.
 |---------------|--------|------------------------------------------------|
 | `inputString` | string | The text string to search for an IP address.   |
 
-#### ⚙️ Defaults
 
-| Parameter     | Default |
-|---------------|---------|
-| `inputString` | _none_  |
+#### 🚫 Defaults
+| Parameter | Default Value |
+|-----------|---------------|
+| *inputString*  | *(None)*  |
+
 
 ### 🔁 Return  
 `string | null` — The first matching IPv4 address, or `null` if none is found.
@@ -3055,6 +3216,7 @@ metaLib = metax.load(locals.libLocation)
 exploitMem = find_exploitable_addresses(libLocation, metaxploitObject)
 unsafeCheckList = unsafe_check_list(fetch_exploit_requirements(exploitMem))
 ```
+
 ---
 
 # 🧱 ![Static Badge](https://img.shields.io/badge/greyscript-constructs-gold)
