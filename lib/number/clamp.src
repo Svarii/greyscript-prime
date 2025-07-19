@@ -4,9 +4,9 @@
 	// @description
 	//
 	// @description **Parameters:**
-    // @param {number} min - The mix threshold.
+    // @param {number} min - The min threshold.
     // @param {number} max - The max threshold.    
-	// @description - `min` The mix threshold.
+	// @description - `min` The min threshold.
     // @description - `max` The max threshold.
     //
 	// @description **Parameter Defaults:**
