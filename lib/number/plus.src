@@ -1,3 +1,19 @@
+// @startuml
+// title number.plus(amount=1)
+//
+// participant Caller
+// participant number
+//
+// Caller -> number: call plus(amount=1)
+// activate number
+//
+// note right: locals.amount = amount (default 1)
+//
+// number --> Caller: return self + locals.amount
+// deactivate number
+// @enduml
+
+
 //  **Description:**
     //  Add 1 to the number or optional amount
     //  @description     
@@ -10,15 +26,4 @@
     //  print(result); // Outputs: 42
 number.plus = function(amount = 1)
         return self + locals.amount
-end function
-    //  * @startuml
-    //  * entity NumberObject
-    //  * control ".plus" as plus
-    //  * NumberObject -> plus : number
-    //  * plus -> NumberObject : (number + 1)
-    //  * NumberObject -> plus : number(7)
-    //  * plus -> NumberObject : (number + 7)        
-    //  * footer
-    //  * number.plus
-    //  * endfooter         
-    //  * @enduml            
+end function  

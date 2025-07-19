@@ -1,4 +1,22 @@
-        //  **Description:**
+// @startuml
+// title number.random_from(min=0)
+//
+// participant Caller
+// participant number
+//
+// Caller -> number: call random_from(min=0)
+// activate number
+//
+// note right: locals.max = self
+// note right: locals.min = min (default 0)
+//
+// number --> number: calculate random number\nfloor((rnd * (locals.max - locals.min + 1)) + locals.min)
+// number --> Caller: return random number
+// deactivate number
+// @enduml
+
+
+//  **Description:**
         //  Generate a random number from 0 to number, or from optional minimum to number
         //  @param {number} [min]
         //  @return {number} - The result of the subtraction.
@@ -11,13 +29,4 @@
             locals.max = self
             return floor((rnd * (locals.max - locals.min + 1)) + locals.min)  
     end function
-    //@name random_from
-        //  * @startuml
-        //  * entity NumberObject
-        //  * control ".random_from" as random_from
-        //  *   NumberObject -> random_from : number
-        //  *   random_from -> NumberObject : [random number in range]     
-        //  * footer
-        //  *   number.random_from([opt:min])
-        //  * endfooter         
-        //  * @enduml         
+   

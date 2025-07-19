@@ -1,4 +1,30 @@
+// @startuml
+// title number.is_positive()
+//
+// participant Caller
+// participant number
+//
+// Caller -> number: call is_positive()
+// activate number
+//
+// number -> number: if self >= 0 then return true
+//
+// number --> Caller: return true or false
+// deactivate number
+// @enduml
+
+
+//  **Description:**
+//  Checks if the number is positive (including zero).
+//  @return {boolean} - Returns `true` if the number is greater than or equal to zero, otherwise `false`.
+//  @example num = 10
+//  @example result = num.is_positive
+//  @example print(result)  // Outputs: true
+//  @example
+//  @example num2 = -5
+//  @example result2 = num2.is_positive
+//  @example print(result2) // Outputs: false
 number.is_positive = function()
-    if str(self).indexOf("-") == 0 then return false
-    return true
+    if self >= 0 then return true
+    return false
 end function

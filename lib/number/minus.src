@@ -1,18 +1,18 @@
-
-    //@name minus
-        //  *
-        //  * @uml
-        //  * @startuml
-        //  * entity NumberObject
-        //  * control ".minus" as minus
-        //  * NumberObject -> minus : number
-        //  * minus -> NumberObject : (number - 1)
-        //  * NumberObject -> minus : number(7)
-        //  * minus -> NumberObject : (number - 7)        
-        //  * footer
-        //  * number.minus
-        //  * endfooter         
-        //  * @enduml         
+// @startuml
+// title number.minus(amount=1)
+//
+// participant Caller
+// participant number
+//
+// Caller -> number: call minus(amount=1)
+// activate number
+//
+// note right: locals.amount = amount (default 1)
+//
+// number --> number: calculate subtraction\nself - locals.amount
+// number --> Caller: return result
+// deactivate number
+// @enduml     
 
         //  **Description:**
         //  Subtract 1 from the number or optional amount

@@ -1,6 +1,25 @@
+// @startuml
+// title number.lerp(min, max, offset)
+//
+// participant Caller
+// participant number
+//
+// Caller -> number: call lerp(min, max, offset)
+// activate number
+//
+// note right: Clamp offset between 0 and 1
+// number -> number: if offset > 1 set offset = 1
+// number -> number: if offset < 0 set offset = 0
+//
+// note right: Calculate difference and scaled difference
+// number -> number: difference = max - min
+// number -> number: scaled_difference = offset * difference
+//
+// number --> Caller: return min + scaled_difference
+// deactivate number
+// @enduml
 
-
-    //  **Description:**
+//  **Description:**
 //  Computes the linear interpolation (lerp) between two numbers.
 //  @description Calculates an intermediate value between a start and an end number based on a provided interpolation factor.
 //  @param {number} min - The starting value.
@@ -10,8 +29,9 @@
 //  @example min = 10
 //  @example max = 20
 //  @example offset = 0.5
-//  @example result = lerp(min, max, offset);
-//  @example print(result); // Output: 15
+//  @example result = lerp(min, max, offset)
+//  @example
+//  print(result); // Output: 15
     number.lerp = function(min, max, offset)
         if locals.offset > 1 then locals.offset = 1
         if locals.offset < 0 then locals.offset = 0

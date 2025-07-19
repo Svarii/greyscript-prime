@@ -1809,6 +1809,113 @@ print(result)  // Output: false
 ```
 ---
 
+## is_zero
+
+### 📝 Description  
+Checks if the number is zero.
+
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1  
+
+</details>
+
+### ➖ Parameters  
+| Parameter | Default Value |
+|-----------|---------------|
+| *(None)*  | *(None)*      |
+
+### 🔁 Return  
+`boolean` — Returns `true` if the number is zero, otherwise `false`.
+
+
+### 💡 Example
+```greyscript
+myNumber = 0
+result = myNumber.is_zero
+print(result)  // Outputs: true
+```
+
+---
+
+
+## is_positive
+
+### 📝 Description  
+Checks if the number is positive (including zero).
+
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1  
+
+</details>
+---
+
+### ➖ Parameters  
+| Parameter | Default Value |
+|-----------|---------------|
+| *(None)*  | *(None)*      |
+
+### 🔁 Return  
+`boolean` — Returns `true` if the number is greater than or equal to zero, otherwise `false`.
+
+---
+
+### 💡 Example
+```greyscript
+num = 10
+result = num.is_positive
+print(result)  // true
+
+num2 = -5
+result2 = num2.is_positive
+print(result2) // false
+```
+
+---
+
+## is_negative
+
+### 📝 Description  
+Checks if the number is negative.
+
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1  
+
+</details>
+---
+
+### ➖ Parameters  
+| Parameter | Default Value |
+|-----------|---------------|
+| *(None)*  | *(None)*      |
+
+### 🔁 Return  
+`boolean` — Returns `true` if the number is less than zero, otherwise `false`.
+
+---
+
+### 💡 Example
+```greyscript
+num = -10
+result = num.is_negative
+print(result)  // true
+
+num2 = 5
+result2 = num2.is_negative
+print(result2) // false
+```
+
+---
+
+
 
 ## lerp
 

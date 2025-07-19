@@ -1,3 +1,27 @@
+// @startuml
+// title number.is_zero()
+//
+// participant Caller
+// participant number
+//
+// Caller -> number: call is_zero()
+// activate number
+//
+// number -> number: if self == 0 then return true
+//
+// number --> Caller: return true or false
+// deactivate number
+// @enduml
+
+//  **Description:**
+//  Checks if the number is zero.
+//  @description Returns `true` if the number is exactly zero, otherwise returns `false`.
+//  @param *(none)*
+//  @return {boolean} - `true` if the number is zero, otherwise `false`.
+//  @example myNumber = 0
+//  @example result = myNumber.is_zero
+//  @example
+//  print(result) // Outputs: true
 number.is_zero = function()
     if self == 0 then return true
     return false
