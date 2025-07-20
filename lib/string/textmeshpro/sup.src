@@ -28,36 +28,3 @@
         return "<sup>" + self + "</sup>"    
     end function
 
-    // Applies pos arse tag to the string
-    // @description **Description:**
-    // @description Modifies a text string by prepending it with the pos tag
-    // @description ---
-    //
-    // @description **Parameters:**
-    // @description * `position`
-    //
-    // @description **Parameter Defaults:**
-    // @description - `position`:`"50%"`    
-    //
-    // @description **Return:**
-    // @return {string}
-    // @description `string` The string prepended with the `<pos>` tag
-    // @description ---
-    //
-    // @description **Links:**
-    // @description - [Text Mesh Pro: Horizontal Position](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextPos.html)	
-    // @description ---	
-    //
-    // @description **Author:** Svarii
-    // @description **Version:** 0.0.1
-    // @description ---
-    //
-    //  @example newString = "Hello"
-    //  @example 
-    //  @example result = newString.pos
-    //  @example 
-    //  print(result); // Output: <pos=50%>Hello
-string.pos = function(position = "50%")
-    return "<pos=" + locals.position + ">" + self
-end function
-

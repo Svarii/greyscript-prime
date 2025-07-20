@@ -1,0 +1,5 @@
+list.push_once = function(listItem)
+	if not self.hasIndex(self.indexOf(listItem)) then
+		self.push(targetIP)
+	end if	
+end function

@@ -360,7 +360,7 @@ keepAlive = true
 myMenu = ["item 1", "item2", "item3", "item4"]
 menuSelection = 0
 
-while keepAlive ==  true
+while not userInput ==  "LeftArrow"
     clear_screen
     menu = display_menu(myMenu, menuSelection)
     for line in menu
