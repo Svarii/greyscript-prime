@@ -1,0 +1,53 @@
+// Finds all LAN devices on the same subnet that are not routers
+// @description **Description:**
+// @description Determines which devices on a given router's LAN are **not routers themselves**.
+// @description Returns a list of device IPs that are part of the same subnet.
+// @description Returns `"Router Not Found"` if the input address does not map to a known router.
+// @description
+//
+// @description **Parameters:**
+// @param {string} address
+// @description - `string` The IP address to identify the target router.
+//
+// @description **Parameter Defaults:**
+// @description - `none`
+//
+// @description **Return:**
+// @return {list<string> | string}
+// @description `list<string>` A list of IP addresses on the same subnet that are not routers.
+// @description `string` The message `"router not found."` if no router is associated with the given address.
+// @description
+//
+// @description **Notes:**
+// @description - Filters out router IPs from the LAN device list.
+// @description - Uses `devices_lan_ip()` to get all LAN devices associated with a router.
+// @description
+//
+// @description **Author:** Brostrodamus
+// @description **Contributor:** Svarii
+// @description **Version:** 0.0.1
+// @description
+//
+// @example 
+// print(get_subnet_non_routers("192.168.0.1")) 
+// Output: ["192.168.0.2", "192.168.0.3"]
+//
+// @example 
+// print(get_subnet_non_routers("10.0.0.1")) 
+// Output: "router not found."
+get_subnet_non_routers = function(address)
+    locals.target_router = get_router(locals.address)
+    if locals.target_router == null then
+        return "router not found." 
+    end if
+
+    locals.devices = devices_lan_ip(locals.target_router)
+    locals.subnet = []
+
+    for ip in locals.devices
+        if get_router(locals.ip) == null then
+            subnet.push(locals.ip)
+        end if
+    end for
+    return locals.subnet
+end function

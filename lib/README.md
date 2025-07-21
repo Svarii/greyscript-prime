@@ -148,8 +148,8 @@ Allows for string interpolation by replacing a delimiter (`%s` by default) with 
 <details>
 <summary>📃 About</summary>
 
-- **Author:** Svarii  
-- **Contributor:** dynobytes (original logic)
+- **Author:** dynobytes
+- **Contributor:** Svarii  
 - **Version:** 0.0.1  
 
 </details>
