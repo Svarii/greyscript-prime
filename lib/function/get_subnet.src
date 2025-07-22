@@ -35,7 +35,7 @@
 // @example 
 // print(get_subnet_non_routers("10.0.0.1")) 
 // Output: "router not found."
-get_subnet_non_routers = function(address)
+get_subnet_non_routers = function(address, returnNonRouters = true, returnRouters = false)
     locals.target_router = get_router(locals.address)
     if locals.target_router == null then
         return "router not found." 
@@ -45,9 +45,16 @@ get_subnet_non_routers = function(address)
     locals.subnet = []
 
     for ip in locals.devices
+    if locals.returnNonRouters == true then
         if get_router(locals.ip) == null then
             subnet.push(locals.ip)
         end if
+    end if
+    if locals.returnRouters == true then
+        if typeof(get_router(locals.ip)) == "router" then
+            subnet.push(locals.ip)
+        end if
+    end if    
     end for
     return locals.subnet
 end function
