@@ -1,0 +1,6 @@
+
+map.push_once = function(mapItem)
+	if not self.hasIndex(self.indexOf(mapItem)) then
+		self.push(targetIP)
+	end if	
+end function
