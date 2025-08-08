@@ -1,0 +1,332 @@
+{
+"<align>": {
+    "scope": "greyscript",
+    "prefix": ".align",
+    "body": [
+        ".align(\"${1|center,left,right,justified,flush|}\")"
+    ],
+    "description": "align a string\n * center\n * left\n * right\n * justified\n * flush\n"
+},
+	"<alpha>": {
+		"scope": "greyscript",
+		"prefix": ".alpha",
+		"body": [
+			".alpha(\"${1|#BF,#80,#40|}\")"
+		],
+		"description": "Set the alpha value of a string using #AA\n"
+	},
+	"<b>": {
+		"scope": "greyscript",
+		"prefix": ".bold",
+		"body": [
+			".bold"
+		],
+		"description": "Add bold tag to string\n"
+	},
+
+	"<color>": {
+		"scope": "greyscript",
+		"prefix": ".color",
+		"body": [
+			".color(\"${1|IndianRed,LightCoral,Salmon,DarkSalmon,LightSalmon,Crimson,Red,FireBrick,DarkRed,Pink,LightPink,HotPink,DeepPink,MediumVioletRed,PaleVioletRed,LightSalmon,Coral,Tomato,OrangeRed,DarkOrange,Orange,Gold,Yellow,LightYellow,LemonChiffon,LightGoldenrodYellow,PapayaWhip,Moccasin,PeachPuff,PaleGoldenrod,Khaki,DarkKhaki,Lavender,Thistle,Plum,Violet,Orchid,Fuchsia,Magenta,MediumOrchid,MediumPurple,RebeccaPurple,BlueViolet,DarkViolet,DarkOrchid,DarkMagenta,Purple,Indigo,SlateBlue,DarkSlateBlue,MediumSlateBlue,GreenYellow,Chartreuse,LawnGreen,Lime,LimeGreen,PaleGreen,LightGreen,MediumSpringGreen,SpringGreen,MediumSeaGreen,SeaGreen,ForestGreen,Green,DarkGreen,YellowGreen,OliveDrab,Olive,DarkOliveGreen,MediumAquamarine,DarkSeaGreen,LightSeaGreen,DarkCyan,Teal,Aqua,Cyan,LightCyan,PaleTurquoise,Aquamarine,Turquoise,MediumTurquoise,DarkTurquoise,CadetBlue,SteelBlue,LightSteelBlue,PowderBlue,LightBlue,SkyBlue,LightSkyBlue,DeepSkyBlue,DodgerBlue,CornflowerBlue,MediumSlateBlue,RoyalBlue,Blue,MediumBlue,DarkBlue,Navy,MidnightBlue,Cornsilk,BlanchedAlmond,Bisque,NavajoWhite,Wheat,BurlyWood,Tan,RosyBrown,SandyBrown,Goldenrod,DarkGoldenrod,Peru,Chocolate,SaddleBrown,Sienna,Brown,Maroon,White,Snow,HoneyDew,MintCream,Azure,AliceBlue,GhostWhite,WhiteSmoke,SeaShell,Beige,OldLace,FloralWhite,Ivory,AntiqueWhite,Linen,LavenderBlush,MistyRose,Gainsboro,LightGray,Silver,DarkGray,Gray,DimGray,LightSlateGray,SlateGray,DarkSlateGray,Black|}\")"
+		],
+		"description": "Add color to a string"
+	},
+
+	"<cspace>": {
+		"scope": "greyscript",
+		"prefix": ".cspace",
+		"body": [
+			".cspace(\"${1:1}${2|em,px,%|}\", ${3|true,false|})"
+		],
+		"description": "set the character spacing using `em`, `px`, or `%`\n"
+	},
+
+	"<indent>": {
+		"scope": "greyscript",
+		"prefix": ".indent",
+		"body": [
+			".indent(\"${1:5}${2|em,px,%|}\", ${3|true,false|})"
+		],
+		"description": "set the indent using `em`, `px`, or `%`\n"
+	},
+
+	"<i>": {
+		"scope": "greyscript",
+		"prefix": ".italic",
+		"body": [
+			".italic"
+		],
+		"description": "Add italic tag to string\n"
+	},
+
+	"<line-indent>": {
+		"scope": "greyscript",
+		"prefix": ".line_indent",
+		"body": [
+			".line_indent(\"${1:5}${2|em,px,%|}\", ${3|true,false|})"
+		],
+		"description": "set the line indent using `em`, `px`, or `%`\n"
+	},
+
+	"<lowercase>": {
+		"scope": "greyscript",
+		"prefix": ".lowercase",
+		"body": [
+			".lowercase"
+		],
+		"description": "Add lowercase tag to string\n"
+	},
+
+	"<margin>": {
+		"scope": "greyscript",
+		"prefix": ".margin",
+		"body": [
+			".margin(\"${1:5}${2|em,px,%|}\")"
+		],
+		"description": "set the margin using `em`, `px`, or `%`\n"
+	},	
+
+	"<mark>": {
+		"scope": "greyscript",
+		"prefix": ".mark",
+		"body": [
+			".mark(\"${1|#BF,#80,#40|}\")"
+		],
+		"description": "Set the mark tag and value of a string\n"
+	},	
+
+	"<mspace>": {
+		"scope": "greyscript",
+		"prefix": ".mspace",
+		"body": [
+			".mspace(\"${1|#BF,#80,#40|}\")"
+		],
+		"description": [
+			"//Wrap string in <mspace> tag\n",
+		]
+	},
+
+	"<nobr>": {
+		"scope": "greyscript",
+		"prefix": ".nobr",
+		"body": [
+			".nobr"
+		],
+		"description": [
+			"//Wrap string in <nobr> tag\n",
+		]
+	},	
+	
+	"<noparse>": {
+		"scope": "greyscript",
+		"prefix": ".noparse",
+		"body": [
+			".noparse"
+		],
+		"description": [
+			"//Wrap string in <noparse> tag\n",
+		],
+	},	
+
+	"<page>": {
+		"scope": "greyscript",
+		"prefix": ".page",
+		"body": [
+			".page"
+		],
+		"description": [
+			" //Append page tag\n",
+		],
+	},	
+
+	"<pos>": {
+		"scope": "greyscript",
+		"prefix": ".pos",
+		"body": [
+			".pos(\"${1:1}${2|em,px,%|}\")"
+		],
+		"description": "set the string position using `em`, `px`, or `%`\n"
+	},	
+
+	"<rotate>": {
+		"scope": "greyscript",
+		"prefix": ".rotate",
+		"body": [
+			".rotate(\"${1|180,25,45,75,90,111,140,-25,-45,-75,-90,-111,-140|}\")"
+		],
+		"description": "set the string rotation\n"
+	},	
+	
+	"<size>": {
+		"scope": "greyscript",
+		"prefix": ".size",
+		"body": [
+			".size(\"${1:1}${2|em,px,%|}\")"
+		],
+		"description": "set the string size\n"
+	},		
+
+	"<s>": {
+		"scope": "greyscript",
+		"prefix": ".strike",
+		"body": [
+			".strike"
+		],
+		"description": "Add <s> tag to string\n"
+	},	
+
+	"<sub>": {
+		"scope": "greyscript",
+		"prefix": ".sub",
+		"body": [
+			".sub"
+		],
+		"description": "Add <sub> tag to string\n"
+	},	
+	
+	"<sup>": {
+		"scope": "greyscript",
+		"prefix": ".sup",
+		"body": [
+			".sup"
+		],
+		"description": "Add <sup> tag to string\n"
+	},	
+	
+	"<underline>": {
+		"scope": "greyscript",
+		"prefix": ".underline",
+		"body": [
+			".underline"
+		],
+		"description": "Add <underline> tag to string\n"
+	},		
+	
+	"<voffset>": {
+		"scope": "greyscript",
+		"prefix": ".voffset",
+		"body": [
+			".voffset(\"${1:1}${2|em,px,%|}\")"
+		],
+		"description": "Add the <voffset> tag\n"
+	},	
+	
+	"<width>": {
+		"scope": "greyscript",
+		"prefix": ".width",
+		"body": [
+			".width(\"${1:1}${2|em,px,%|}\")"
+		],
+		"description": "Add the <width> tag\n"
+	},		
+
+	"extract()": {
+		"scope": "greyscript",
+		"prefix": ".extract",
+		"body": [
+			".extract(\"${1:1}\", \"${2:2}\")"
+		],
+		"description": "Extract a value\n"
+	},	
+	
+	"format()": {
+		"scope": "greyscript",
+		"prefix": ".format",
+		"body": [
+			".format(${1:[\"arg1\", \"arg2\"]}, ${2:\"%s\"})"
+		],
+		"description": "String interpolation\n"
+	},		
+
+	"remove_bold": {
+		"scope": "greyscript",
+		"prefix": ".remove_bold",
+		"body": [
+			".remove_bold"
+		],
+		"description": "Remove <b> & </b> tags\n"
+	},	
+
+	"remoce_char_first": {
+		"scope": "greyscript",
+		"prefix": ".remove_char_first",
+		"body": [
+			".remove_char_first"
+		],
+		"description": "Remove first character \n"
+	},	
+
+	"remove_char_last": {
+		"scope": "greyscript",
+		"prefix": ".remove_char_last",
+		"body": [
+			".remove_char_last"
+		],
+		"description": "Remove last character\n"
+	},	
+	
+	"remove_italic": {
+		"scope": "greyscript",
+		"prefix": ".remove_italic",
+		"body": [
+			".remove_italic"
+		],
+		"description": "Remove <i> & </i> tags\n"
+	},	
+	
+	"remove_strike": {
+		"scope": "greyscript",
+		"prefix": ".remove_strike",
+		"body": [
+			".remove_strike"
+		],
+		"description": "Remove <s> & </s> tags\n"
+	},	
+	
+	"remove_sub": {
+		"scope": "greyscript",
+		"prefix": ".remove_sub",
+		"body": [
+			".remove_sub"
+		],
+		"description": "Remove <sub> & </sub> tags\n"
+	},	
+	
+	"remove_sup": {
+		"scope": "greyscript",
+		"prefix": ".remove_sup",
+		"body": [
+			".remove_sup"
+		],
+		"description": "Remove <sup> & </sup> tags\n"
+	},	
+	
+	"remove_underline": {
+		"scope": "greyscript",
+		"prefix": ".remove_underline",
+		"body": [
+			".remove_underline"
+		],
+		"description": "Remove <underline> & </underline> tags\n"
+	},
+
+	"crop": {
+		"scope": "greyscript",
+		"prefix": ".crop",
+		"body": [
+			".crop"
+		],
+		"description": "Crops empty items off list ends\n"
+	},	
+	
+	"push_once": {
+		"scope": "greyscript",
+		"prefix": ".push_once",
+		"body": [
+			".push_once"
+		],
+		"description": "Pushes if not in list\n"
+	},
+	
+}

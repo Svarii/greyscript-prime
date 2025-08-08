@@ -64,11 +64,11 @@
         // print (bool_text(false)) //Output: "false"
         // @example
         // print (bool_text(object)) //Output: null
-    bool_text = function(boolVal)
+bool_text = function(boolVal)
         locals.boolText = {"yes":"Online", "no":"Offline"}
         if locals.boolVal < 0 then return locals.boolText.no
         if locals.boolVal > 1 then return locals.boolText.yes
         if locals.boolVal == 1 then return locals.boolText.yes
         if locals.boolVal == 0 then return locals.boolText.no
     return null
-    end function
+end function

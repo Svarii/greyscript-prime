@@ -115,6 +115,7 @@ string.color = function(colorValue)
 	if colorValue == "PaleGreen" then colorValue = "#98FB98"
 	if colorValue == "LightGreen" then colorValue = "#90EE90"
 	if colorValue == "MediumSpringGreen" then colorValue = "#00FA9A"
+	if colorValue == "SpringGreen" then colorValue = "#00FF7F"
 	if colorValue == "SeaGreen" then colorValue = "#2E8B57"
 	if colorValue == "ForestGreen" then colorValue = "#228B22"                                					
 	if colorValue == "Green" then colorValue = "#008000"
