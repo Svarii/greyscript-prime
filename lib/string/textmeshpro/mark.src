@@ -28,6 +28,6 @@
     //  @example result = newString.mark
     //  @example 
     //  print(result); // Outputs: <mark="#FFFF00AA">Hello</mark>   
-string.mark = function(color="#FFFF00AA")
+string.mark = function(color="#FFFF00BF")
     return "<mark=" + locals.color + ">" + self + "</mark>"
 end function 

@@ -63,6 +63,6 @@ end function
     //  @example result = newString.margin-left
     //  @example 
     //  print(result); // Outputs: <margin-left=5em>Hello</margin-left>           
-string.margin_left = function(marginSpace = "5em")
-    return "<margin-left=" + locals.marginSpace + ">" + self + "</margin-left>"
+string.margin = function(marginSpace = "5em")
+    return "<margin=" + locals.marginSpace + ">" + self + "</margin>"
 end function 
