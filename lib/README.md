@@ -2631,17 +2631,9 @@ Returns a list of structured maps with exploit requirement metadata for each add
 | Name              | Type                  | Description                                                                 |
 |-------------------|-----------------------|-----------------------------------------------------------------------------|
 | `addressList`     | `list<string>`        | List of addresses returned by `metaxploit.scan()`                          |
-| `libLocation`     | `string`              | Library location those addresses were found in                             |
-| `metaxploitObject`| `map<metaxploitLib>`  | A Metaxploit object reference                                               |
-| `remoteTarget`    | `flag` *(optional)*   | Whether to scan the library remotely                                       |
-| `targetPort`      | `number` *(optional)* | Port used to access the remote target                                      |
+| `metaLibObject`     | `map<MetaLib>`              | Library location those addresses were found in                             |
+| `metaxploitObject`| `map<MetaxploitLib>`  | A Metaxploit object reference                                          
 
-#### 🚫 Defaults
-
-| Parameter     | Default Value |
-|---------------|----------------|
-| `remoteTarget`| `false`         |
-| `targetPort`  | `0`             |
 
 
 ### 🔁 Return
