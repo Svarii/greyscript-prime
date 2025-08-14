@@ -2919,6 +2919,43 @@ print find_exploitable_addresses(libLocation, metax)
 
 ---
 
+## get_overflow_owner
+
+### 📝 Description  
+Return a string with the name of the object owner
+<details>
+<summary>📃 About</summary>
+
+- **Author:** Svarii  
+- **Version:** 0.0.1 
+- **Unit Testing:** ❌ Incomplete 
+
+</details>
+
+### 🧮 Parameters
+
+| Name               | Type                 | Description                                |
+|--------------------|----------------------|--------------------------------------------|
+| `overflowObject`      | string               | The object returned from the exploit. |
+
+#### 🚫 Defaults
+
+| Parameter | Default Value |
+|-----------|---------------|
+| *overflowObject*  | *(None)*      |
+
+
+### 🔁 Return  
+`string` — username of object owner
+
+### 💡 Example
+```greyscript
+overflowObject = metaLib.overflow(address, variable)
+print get_overflow_owner(overflowObject)
+```
+
+---
+
 ## get_random_ip
 
 ### 📝 Description  
