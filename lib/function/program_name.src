@@ -10,9 +10,9 @@
 // @description - none
 // @description ---
 //
-// @return {list<list<string>>}
+// @return {string}
 // @description **Return**
-// `The name of the program running`
+// `string`:`The name of the program running`
 // @description ---    
 //    
 // @example
