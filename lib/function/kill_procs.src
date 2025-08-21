@@ -1,0 +1,23 @@
+kill_procs = function(computerObject = get_shell.host_computer, pid = null, killRoot = false)
+termItem = function(termProc)
+	computerObject.close_program(locals.termProc)							
+end function
+if not pid == null then
+	locals.computerObject.close_program(locals.pid)
+else
+	locals.procs = split(get_shell.host_computer.show_procs, char(10), 1)[1:]
+	for proc in range(1, (locals.procs).len - 1)
+		locals.procSections = split(proc, char(32))
+		if not locals.procSections[0] == "root" then
+			locals.computerObject.close_program(locals.procSections[1])					
+		else if locals.procSections[0] == "root" and locals.killRoot == true then
+			termItem(locals.procSections[1])	
+		end if
+		if locals.procSections[0] == "root" then
+			termItem(locals.procSections[1])				
+		end if
+	end for
+end if
+end function
+myComputer = get_shell.host_computer
+kill_procs(myComputer, 5658)
