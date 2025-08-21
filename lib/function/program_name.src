@@ -4,10 +4,7 @@
 // @description ---
 //
 // @description **Parameters:**
-// @param {string} [user]]
-// @param {string} [pass]
-// @description - `user` (**string**, *optional*): The username to use for access
-// @description - `pass` (**string**, *optional*): The password to use for access
+// @param `none`]
 //
 // @description **Default Parameters:**
 // @description - none
@@ -15,7 +12,7 @@
 //
 // @return {list<list<string>>}
 // @description **Return**
-// `list[list[string, string, string]]`:`[adaptor, model, monitor_enabled]`
+// `The name of the program running`
 // @description ---    
 //    
 // @example

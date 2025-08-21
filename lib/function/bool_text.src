@@ -31,15 +31,15 @@
         // @example
         // print (bool_text(1)) //Output: "true"
         // @example
-        // print (bool_text(0)) //Output: false
+        // print (bool_text(0)) //Output: "false"
         // @example
-        // print (bool_text(-1)) //Output: false
+        // print (bool_text(-1)) //Output: "false"
         // @example
         // print (bool_text(false)) //Output: "false"
         // @example
         // print (bool_text(object)) //Output: null
-bool_text = function(boolVal)
-        locals.boolText = {"yes":"Online", "no":"Offline"}
+bool_text = function(boolVal, text = ["true", "false"])
+        locals.boolText = {"yes":"false", "no":"false"}
         if locals.boolVal < 0 then return locals.boolText.no
         if locals.boolVal > 1 then return locals.boolText.yes
         if locals.boolVal == 1 then return locals.boolText.yes
