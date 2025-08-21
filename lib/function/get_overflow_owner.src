@@ -19,22 +19,21 @@
     // @example objectOwner = get_overflow_owner(overflowResult)
 get_overflow_owner = function(overflowObject)
     locals.overflowOwner = null
-    overflowObjectType = typeof(locals.overflowObject)
-    if overflowObjectType == "file" then
+    locals.overflowObjectType = typeof(locals.overflowObject)
+    if locals.overflowObjectType == "file" then
         return locals.overflowObject.owner
     end if
-    if overflowObjectType == "shell" or overflowObjectType == "computer" then
-        if overflowObjectType == "shell" then rootFolder = overflowObject.host_computer.File("/root")
-        if overflowObjectType == "computer" then rootFolder = overflowObject.File("/root")
-        if not rootFolder.has_permission("w") == 0 then return "root"
-        if overflowObjectType == "shell" then homeFolders = overflowObject.host_computer.File("/home").get_folders
-        if overflowObjectType == "computer" then homeFolders = overflowObject.File("/home").get_folders
-        for userFolder in homeFolders
-            if userFolder.has_permission("w") then
-                locals.overflowOwner = userFolder.name
-                if not locals.overflowOwner == "guest" then return userFolder.name
+    if locals.overflowObjectType == "shell" or locals.overflowObjectType == "computer" then
+        if locals.overflowObjectType == "shell" then locals.rootFolder = locals.overflowObject.host_computer.File("/root")
+        if overflowObjectType == "computer" then locals.rootFolder = locals.overflowObject.File("/root")
+        if not locals.rootFolder.has_permission("w") == 0 then return "root"
+        if locals.overflowObjectType == "shell" then locals.homeFolders = locals.overflowObject.host_computer.File("/home").get_folders
+        if locals.overflowObjectType == "computer" then locals.homeFolders = locals.overflowObject.File("/home").get_folders
+        for userFolder in locals.homeFolders
+            if locals.userFolder.has_permission("w") then
+                locals.overflowOwner = locals.userFolder.name
+                if not locals.overflowOwner == "guest" then return locals.userFolder.name
             end if
-            //if locals.overflowOwner == null then return "guest"
         end for
     end if
     return locals.overflowOwner           

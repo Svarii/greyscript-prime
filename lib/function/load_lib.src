@@ -52,30 +52,4 @@ load_lib = function(libName = "metaxploit.so", libDir = "/lib", libType = "")
             return null
         end if
 end function
-// @startuml
-// start
-// :<color:purple>libLocation = libDir + "/" + libName</color>;
-// if (<color:blue>libName == ""?</color>) then (<color:red>Yes</color>)
-//   :<color:purple>return get_shell.host_computer.File("/")</color>;
-//   stop
-// else (<color:blue>No</color>)
-// endif
-// :<color:purple>yield; lib = include_lib(libLocation)</color>;
-// if (<color:blue>typeof(lib) != null?</color>) then (<color:green>Yes</color>)
-//   if (<color:blue>libType == ""?</color>) then (<color:green>Yes</color>)
-//     :<color:purple>return lib</color>;
-//     stop
-//   else (<color:blue>No</color>)
-//     if (<color:blue>typeof(lib) == libType?</color>) then (<color:green>Yes</color>)
-//       :<color:purple>return lib</color>;
-//       stop
-//     else (<color:red>No</color>)
-//       :<color:purple>return null</color>;
-//       stop
-//     endif
-//   endif
-// else (<color:green>Type is null</color>)
-//   :<color:purple>return null</color>;
-//   stop
-// endif
-// @enduml
+

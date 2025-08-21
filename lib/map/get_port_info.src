@@ -1,0 +1,6 @@
+map.get_port_info = function(portNumber)
+	if not typeof(self) == "router" then return "<#FF0000>Type Mismatch, object is not a router"
+	locals.portObject = self.ping_port(locals.portNumber)
+	if not typeof(locals.portObject) == "port" then return "<#FF0000>Type Mismatch, object is not a port"
+    return self.port_info(locals.portObject)
+end function
