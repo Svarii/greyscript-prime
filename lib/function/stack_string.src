@@ -1,0 +1,18 @@
+stack_string = function(stackStringTop, stackStringBottom, stackPosition = "0em")
+      string.pos = function(position = "0em")
+          return "<pos=" + position + ">" + self + "</pos>"
+      end function
+      string.size = function(position = "100%")
+          return "<size=" + position + ">" + self + "</pos>"
+      end function
+      string.sub = function
+          return "<sub>" + self + "</sub>"
+      end function
+      string.sup = function
+          return "<sup>" + self + "</sup>"
+      end function
+return stackStringTop.pos(stackPosition).sup + stackStringBottom.pos(stackPosition).sub
+end function
+
+//print stack_string("420", "247", "10%").size("100%")
+//print stack_string("365", "057", "2em").size("200%") + stack_string("777", "666", "155px").size("300%")
