@@ -1,0 +1,52 @@
+// Detects and masks ipv4 addresses found in string
+// @description **Description**
+// @description Optionally detects and masks ipv4 addresses found in string.
+// @description Custom character and color supported
+// @description ---
+//
+// @param {boolean}[maskString]
+// @param {char}[maskChar]
+// @param {string}[maskColor]
+// @description
+//
+// @description **Default Parameters:**
+// @description - `maskString == true`
+// @description - `maskChar == *`
+// @description - `maskColor == null`
+//
+// @return {string}
+// @description **Return**
+// `string`
+// @description ---    
+//    
+// @description **Author:** Svarii
+// @description **Contibutor:** GrinCulus
+// @description **Version:** 0.0.3
+// @description ---    
+//
+// @description **Notes:**
+// @description - `maskColor` Accepted format: `#RRGGBB` | `#RRGGBBAA`
+//
+// @example myString = "192.168.0.1 is the router for computer 211.131.5.1"
+// @example
+// print myString.mask              //Output *********** is the router for computer ***********
+// @example
+// print myString.mask(true, "x")   //Output xxxxxxxxxxx is the router for computer xxxxxxxxxxx
+// @example
+// print myString.mask(false)       //Output "192.168.0.1 is the router for computer 211.131.5.1"
+string.mask = function(maskString = true, maskChar = char(42), maskColor = null)
+    if not maskColor == null then maskChar = "<" + maskColor + ">" + maskChar + "</color>"
+    locals.ipPattern = "\b(?:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d).){3}(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)\b"
+    locals.matchList = self.matches(locals.ipPattern)
+    locals.newString = ""
+    if locals.maskString == false then return self
+    if locals.matchList.len > 0 then
+        locals.newString = self
+        for match in locals.matchList
+            locals.newString = locals.newString.replace(locals.match.value, maskChar*locals.match.value.len)
+        end for
+        return locals.newString
+    else
+        return self
+    end if
+end function
