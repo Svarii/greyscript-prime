@@ -1,0 +1,16 @@
+
+loadText = get_shell.host_computer.File(home_dir + "/Downloads/fly.txt").get_content.split(char(10))
+
+// your percentage multipliers for each of the 7 lines
+multipliers = [5, 25, 45, 65, 80, 90, 100]
+
+for i in range(0, (loadText.len - multipliers.len) - 1)
+    // for each offset 0..6
+    for offset in range(0, multipliers.len - 1)
+        lineIdx   = i + offset
+        pct       = str(multipliers[offset]) + "%"
+        formatted = loadText[lineIdx].size(pct).align("center")
+        print(formatted, true)
+    end for
+    wait 0.729
+end for

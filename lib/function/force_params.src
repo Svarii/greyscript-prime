@@ -42,7 +42,7 @@
 // @description **Version:** 0.0.1
 // @description ---    
 	force_params = function(usage, minReqParams)
-		if locals.params.len < 1 then exit locals.usage
-		if locals.params[0] == "-h" or locals.params[0] == "--help" then exit locals.usage
-		if locals.params.len < locals.minReqParams then exit locals.usage
+		if globals.params.len < 1 then exit locals.usage
+		if globals.params[0] == "-h" or globals.params[0] == "--help" then exit locals.usage
+		if globals.params.len < locals.minReqParams then exit locals.usage
 	end function
