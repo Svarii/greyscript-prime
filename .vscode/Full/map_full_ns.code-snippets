@@ -1,0 +1,55 @@
+{
+  "map: get_attributes": {
+    "prefix": "map_get_attributes",
+    "scope": "greyscript",
+    "description": "Insert get_attributes (full, with header).",
+    "body": [
+      "// Extracts list of top-level attributes from object",
+      "\t// @description **Description:**",
+      "\t// @description Iterate though the __isa of a list and create a list of key names",
+      "\t// @description ---",
+      "\t//",
+      "\t// @description **Parameters:**",
+      "\t// @description - none",
+      "\t//",
+      "\t// @description **Return:**",
+      "\t// @return {list<string>}",
+      "\t// @description `list<string>` List attributes for the object",
+      "\t// @description ---",
+      "\t//",
+      "\t// @description **Author:** Svarii",
+      "\t// @description **Version:** 0.0.1",
+      "\t// @description ---",
+      "\t//     ",
+      "\t// @description ***footnotes***   ",
+      "\t// @description This method only returns top-level attributes   ",
+      "\t// @description ---",
+      "\t//",
+      "\t// @example myObject = {\"classID\":\"myObject\",\"myVar\":\"some Value\"};",
+      "\t// @example result = myObject.get_attributes",
+      "\t// @example",
+      "\t// print(result); // Output: [\"myObject\":\"myVar\", \"myVar\":\"some Value\"]",
+      "\t// @description ---",
+      "map.get_attributes = function()",
+      "\tlocals.attributeList = []",
+      "\tfor param in self[\"__isa\"]",
+      "\t\tlocals.attributeList.push(locals.param.key)",
+      "\tend for\t",
+      "\treturn locals.attributeList",
+      "end function"
+    ]
+  },
+  "map: push_once": {
+    "prefix": "map_push_once",
+    "scope": "greyscript",
+    "description": "Insert push_once (full, with header).",
+    "body": [
+      "",
+      "map.push_once = function(mapItem)",
+      "\tif not self.hasIndex(self.indexOf(mapItem)) then",
+      "\t\tself.push(targetIP)",
+      "\tend if\t",
+      "end function"
+    ]
+  }
+}

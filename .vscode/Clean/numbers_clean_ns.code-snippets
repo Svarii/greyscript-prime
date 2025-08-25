@@ -1,0 +1,232 @@
+{
+  "numbers: div": {
+    "prefix": "num_div",
+    "scope": "greyscript",
+    "description": "Insert div (clean, header removed).",
+    "body": [
+      "number.div = function(amount = 2)",
+      "    if typeof(locals.amount) == \"number\" then",
+      "        if locals.amount == 0 then return 0",
+      "    end if",
+      "        return self / locals.amount",
+      "end function   ",
+      "// @startuml",
+      "// title <color:purple>number.div Method Diagram</color>",
+      "// ",
+      "// class number {",
+      "//   + value : number",
+      "//   + div(divisor: number) : number",
+      "// }",
+      "// ",
+      "// note right of number",
+      "//   The div method divides the current value by the provided divisor.",
+      "//   For example:",
+      "//     \u2022 44.div(2) returns 22",
+      "//     \u2022 44.div(4) returns 11",
+      "// end note",
+      "// ",
+      "// footer",
+      "// Method: number.div(divisor)",
+      "// endfooter",
+      "// ",
+      "// @enduml"
+    ]
+  },
+  "numbers: is_float": {
+    "prefix": "num_is_float",
+    "scope": "greyscript",
+    "description": "Insert is_float (clean, header removed).",
+    "body": [
+      "number.is_float = function()",
+      "\tif str(self).indexOf(\".\") > 0 then return true",
+      "    return false",
+      "end function"
+    ]
+  },
+  "numbers: is_integer": {
+    "prefix": "num_is_integer",
+    "scope": "greyscript",
+    "description": "Insert is_integer (clean, header removed).",
+    "body": [
+      "number.is_integer = function()",
+      "\tif not self == round(self) then return false",
+      "    return true",
+      "end function"
+    ]
+  },
+  "numbers: is_less": {
+    "prefix": "num_is_less",
+    "scope": "greyscript",
+    "description": "Insert is_less (clean, header removed).",
+    "body": [
+      "    number.is_less = function(is_less)",
+      "            if locals.is_less < self then return true",
+      "            return false",
+      "    end function",
+      "",
+      "    ",
+      "",
+      "    //@name is_less   ",
+      "        //  * @startuml",
+      "        //  * entity NumberObject",
+      "        //  * control \".lesser_than\" as lesser_than",
+      "        //  *   NumberObject -> lesser_than : number",
+      "        //  *   lesser_than -> NumberObject : [true / false]     ",
+      "        //  * footer",
+      "        //  *   number.lesser_than",
+      "        //  * endfooter         ",
+      "        //  * @enduml "
+    ]
+  },
+  "numbers: is_more": {
+    "prefix": "num_is_more",
+    "scope": "greyscript",
+    "description": "Insert is_more (clean, header removed).",
+    "body": [
+      "    number.is_more = function(is_more)",
+      "            if locals.is_more > self then return true",
+      "            return false",
+      "    end function",
+      "    //@name is_more   ",
+      "        //  *",
+      "        //  * @uml",
+      "        //  * @startuml",
+      "        //  * entity NumberObject",
+      "        //  * control \".greater_than\" as greater_than",
+      "        //  * NumberObject -> greater_than : number",
+      "        //  * greater_than -> NumberObject : [true / false]     ",
+      "        //  * footer",
+      "        //  * number.greater_than",
+      "        //  * endfooter         ",
+      "        //  * @enduml     "
+    ]
+  },
+  "numbers: is_negative": {
+    "prefix": "num_is_negative",
+    "scope": "greyscript",
+    "description": "Insert is_negative (clean, header removed).",
+    "body": [
+      "number.is_negative = function()",
+      "    if self < 0 then return true",
+      "    return false",
+      "end function"
+    ]
+  },
+  "numbers: is_positive": {
+    "prefix": "num_is_positive",
+    "scope": "greyscript",
+    "description": "Insert is_positive (clean, header removed).",
+    "body": [
+      "number.is_positive = function()",
+      "    if self >= 0 then return true",
+      "    return false",
+      "end function",
+      ""
+    ]
+  },
+  "numbers: is_zero": {
+    "prefix": "num_is_zero",
+    "scope": "greyscript",
+    "description": "Insert is_zero (clean, header removed).",
+    "body": [
+      "number.is_zero = function()",
+      "    if self == 0 then return true",
+      "    return false",
+      "end function"
+    ]
+  },
+  "numbers: clamp": {
+    "prefix": "num_clamp",
+    "scope": "greyscript",
+    "description": "Insert clamp (clean, header removed).",
+    "body": [
+      "number.clamp = function(min, max)",
+      "            if self < locals.min then return locals.min",
+      "            if self > locals.max then return locals.max",
+      "            return self",
+      "end function",
+      "// @startuml",
+      "// title <color:purple>number.clamp Method Diagram</color>",
+      "//",
+      "// class NumberObject {",
+      "//   + value : number",
+      "//   + clamp(min: number, max: number) : number",
+      "// }",
+      "//",
+      "// note bottom of NumberObject",
+      "//   Limits the object's value within the specified range.",
+      "//   Usage examples:",
+      "//     \u2022 7.clamp(2, 6) \u2192 6  (value exceeds max; clamped to 6)",
+      "//     \u2022 1.clamp(2, 6) \u2192 2  (value below min; clamped to 2)",
+      "// end note",
+      "//",
+      "// @enduml"
+    ]
+  },
+  "numbers: diff": {
+    "prefix": "num_diff",
+    "scope": "greyscript",
+    "description": "Insert diff (clean, header removed).",
+    "body": [
+      "    number.diff = function(distanceTo = 0)",
+      "            return abs(self - locals.distanceTo)",
+      "    end function"
+    ]
+  },
+  "numbers: minus": {
+    "prefix": "num_minus",
+    "scope": "greyscript",
+    "description": "Insert minus (clean, header removed).",
+    "body": [
+      "    number.minus = function(amount = 1)",
+      "            return self - locals.amount",
+      "    end function"
+    ]
+  },
+  "numbers: multiply": {
+    "prefix": "num_multiply",
+    "scope": "greyscript",
+    "description": "Insert multiply (clean, header removed).",
+    "body": [
+      "    number.multiply = function(amount = 2)",
+      "            return self * locals.amount",
+      "    end function "
+    ]
+  },
+  "numbers: plus": {
+    "prefix": "num_plus",
+    "scope": "greyscript",
+    "description": "Insert plus (clean, header removed).",
+    "body": [
+      "number.plus = function(amount = 1)",
+      "        return self + locals.amount",
+      "end function  "
+    ]
+  },
+  "numbers: random_from": {
+    "prefix": "num_random_from",
+    "scope": "greyscript",
+    "description": "Insert random_from (clean, header removed).",
+    "body": [
+      "    number.random_from = function(min = 0)",
+      "            locals.max = self",
+      "            return floor((rnd * (locals.max - locals.min + 1)) + locals.min)  ",
+      "    end function",
+      "   "
+    ]
+  },
+  "numbers: lerp": {
+    "prefix": "num_lerp",
+    "scope": "greyscript",
+    "description": "Insert lerp (clean, header removed).",
+    "body": [
+      "    number.lerp = function(min, max, offset)",
+      "        if locals.offset > 1 then locals.offset = 1",
+      "        if locals.offset < 0 then locals.offset = 0",
+      "        locals.difference = locals.max - locals.min",
+      "        locals.scaled_difference = locals.offset * locals.difference",
+      "        return locals.min + locals.scaled_difference",
+      "    end function"
+    ]
+  }
+}

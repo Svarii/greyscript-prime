@@ -1,0 +1,377 @@
+{
+  "str_textmeshpro: italic": {
+    "prefix": "strtmp_italic",
+    "scope": "greyscript",
+    "description": "Insert italic (clean, header removed).",
+    "body": [
+      "string.italic = function()",
+      "    return \"<i>\" + self + \"</i>\"",
+      "end function    "
+    ]
+  },
+  "str_textmeshpro: line_indent": {
+    "prefix": "strtmp_line_indent",
+    "scope": "greyscript",
+    "description": "Insert line_indent (clean, header removed).",
+    "body": [
+      "string.line_indent = function(lineIndent = \"15%\", closeTag = true)",
+      "    if locals.closeTag == false then",
+      "        return \"<line-indent=\" + locals.lineIndent + \">\" + self",
+      "    else",
+      "        return \"<line-indent=\" + locals.lineIndent + \">\" + self + \"</line-indent>\"",
+      "    end if",
+      "    return null",
+      "end function    "
+    ]
+  },
+  "str_textmeshpro: lowercase": {
+    "prefix": "strtmp_lowercase",
+    "scope": "greyscript",
+    "description": "Insert lowercase (clean, header removed).",
+    "body": [
+      "string.lowercase = function()",
+      "    return \"<lowercase>\" + self + \"</lowercase>\"",
+      "end function    "
+    ]
+  },
+  "str_textmeshpro: margin": {
+    "prefix": "strtmp_margin",
+    "scope": "greyscript",
+    "description": "Insert margin (clean, header removed).",
+    "body": [
+      "string.margin = function(marginSpace = \"5em\")",
+      "    return \"<margin=\" + locals.marginSpace + \">\" + self + \"</margin>\"",
+      "end function ",
+      ""
+    ]
+  },
+  "str_textmeshpro: align": {
+    "prefix": "strtmp_align",
+    "scope": "greyscript",
+    "description": "Insert align (clean, header removed).",
+    "body": [
+      "string.align = function(alignment = \"center\", closeTag = true)",
+      "    locals.newString = \"<align=\" + locals.alignment + \">\" + self",
+      "    if locals.closeTag == true then locals.newString = locals.newString + \"</align>\"",
+      "    return locals.newString",
+      "end function        "
+    ]
+  },
+  "str_textmeshpro: alpha": {
+    "prefix": "strtmp_alpha",
+    "scope": "greyscript",
+    "description": "Insert alpha (clean, header removed).",
+    "body": [
+      "string.alpha = function(hexOpacity = \"#FF\")",
+      "    return \"<alpha=\" + locals.hexOpacity + \">\" + self",
+      "end function"
+    ]
+  },
+  "str_textmeshpro: bold": {
+    "prefix": "strtmp_bold",
+    "scope": "greyscript",
+    "description": "Insert bold (clean, header removed).",
+    "body": [
+      "string.bold = function()",
+      "    return \"<b>\" + self + \"</b>\"",
+      "end function  "
+    ]
+  },
+  "str_textmeshpro: color": {
+    "prefix": "strtmp_color",
+    "scope": "greyscript",
+    "description": "Insert color (clean, header removed).",
+    "body": [
+      "string.color = function(colorValue)",
+      "\tif not typeof(colorValue) == \"string\" then return self",
+      "\t//*****************************************************",
+      "\t// Red HEX Codes",
+      "\t//*****************************************************\t",
+      "\tif colorValue == \"IndianRed\" then colorValue = \"#CD5C5C\"",
+      "\tif colorValue == \"LightCoral\" then colorValue = \"#F08080\"",
+      "\tif colorValue == \"Salmon\" then colorValue = \"#FA8072\"",
+      "\tif colorValue == \"DarkSalmon\" then colorValue = \"#E9967A\"",
+      "\tif colorValue == \"LightSalmon\" then colorValue = \"#FFA07A\"\t\t\t",
+      "\tif colorValue == \"Crimson\" then colorValue = \"#DC143C\"",
+      "\tif colorValue == \"Red\" then colorValue = \"#FF0000\"",
+      "\tif colorValue == \"FireBrick\" then colorValue = \"#B22222\"",
+      "\tif colorValue == \"DarkRed\" then colorValue = \"#8B0000\"",
+      "\t//*****************************************************",
+      "\t// Pink HEX Codes",
+      "\t//*****************************************************\t\t",
+      "\tif colorValue == \"Pink\" then colorValue = \"#FFC0CB\"",
+      "\tif colorValue == \"LightPink\" then colorValue = \"#FFB6C1\"\t\t",
+      "\tif colorValue == \"HotPink\" then colorValue = \"#FF69B4\"\t\t",
+      "\tif colorValue == \"DeepPink\" then colorValue = \"#FF1493\"\t\t",
+      "\tif colorValue == \"MediumVioletRed\" then colorValue = \"#C71585\"\t\t\t\t",
+      "\tif colorValue == \"PaleVioletRed\" then colorValue = \"#DB7093\"\t\t\t\t",
+      "\t//*****************************************************",
+      "\t// Orange HEX Codes",
+      "\t//*****************************************************\t\t\t\t\t",
+      "\tif colorValue == \"Coral\" then colorValue = \"#FF7F50\"\t\t\t\t\t\t",
+      "\tif colorValue == \"Tomato\" then colorValue = \"#FF6347\"\t\t\t\t",
+      "\tif colorValue == \"OrangeRed\" then colorValue = \"#FF4500\"\t\t\t\t\t\t",
+      "\tif colorValue == \"DarkOrange\" then colorValue = \"#FF8C00\"\t\t\t\t",
+      "\tif colorValue == \"Orange\" then colorValue = \"#FFA500\"\t\t\t\t\t\t",
+      "\t//*****************************************************",
+      "\t// Yellow HEX Codes",
+      "\t//*****************************************************",
+      "\tif colorValue == \"Gold\" then colorValue = \"#FFD700\"",
+      "\tif colorValue == \"Yellow\" then colorValue = \"#FFFF00\"",
+      "\tif colorValue == \"LightYellow\" then colorValue = \"#FFFFE0\"",
+      "\tif colorValue == \"LemonChiffon\" then colorValue = \"#FFFACD\"",
+      "\tif colorValue == \"LightGoldenrodYellow\" then colorValue = \"#FAFAD2\"        ",
+      "\tif colorValue == \"PapayaWhip\" then colorValue = \"#FFEFD5\"",
+      "\tif colorValue == \"Moccasin\" then colorValue = \"#FFE4B5\"",
+      "\tif colorValue == \"PeachPuff\" then colorValue = \"#FFDAB9\"",
+      "\tif colorValue == \"PaleGoldenrod\" then colorValue = \"#EEE8AA\"",
+      "\tif colorValue == \"Khaki\" then colorValue = \"#F0E68C\"                                \t\t\t\t\t",
+      "\tif colorValue == \"DarkKhaki\" then colorValue = \"#BDB76B\"                                \t\t\t\t\t        ",
+      "\t//*****************************************************",
+      "\t// Purple HEX Codes",
+      "\t//*****************************************************",
+      "\tif colorValue == \"Lavender\" then colorValue = \"#E6E6FA\"",
+      "\tif colorValue == \"Thistle\" then colorValue = \"#D8BFD8\"",
+      "\tif colorValue == \"Plum\" then colorValue = \"#DDA0DD\"",
+      "\tif colorValue == \"Violet\" then colorValue = \"#EE82EE\"",
+      "\tif colorValue == \"Orchid\" then colorValue = \"#DA70D6\"        ",
+      "\tif colorValue == \"Fuchsia\" then colorValue = \"#FF00FF\"",
+      "\tif colorValue == \"Magenta\" then colorValue = \"#FF00FF\"",
+      "\tif colorValue == \"MediumOrchid\" then colorValue = \"#BA55D3\"",
+      "\tif colorValue == \"MediumPurple\" then colorValue = \"#9370DB\"",
+      "\tif colorValue == \"RebeccaPurple\" then colorValue = \"#663399\"                                \t\t\t\t\t",
+      "\tif colorValue == \"BlueViolet\" then colorValue = \"#8A2BE2\"",
+      "\tif colorValue == \"DarkViolet\" then colorValue = \"#9400D3\"",
+      "\tif colorValue == \"DarkOrchid\" then colorValue = \"#9932CC\"",
+      "\tif colorValue == \"DarkMagenta\" then colorValue = \"#8B008B\"",
+      "\tif colorValue == \"Purple\" then colorValue = \"#800080\"",
+      "\tif colorValue == \"Indigo\" then colorValue = \"#4B0082\"        ",
+      "\tif colorValue == \"SlateBlue\" then colorValue = \"#6A5ACD\"",
+      "\tif colorValue == \"DarkSlateBlue\" then colorValue = \"#483D8B\"",
+      "\t//*****************************************************",
+      "\t// Green HEX Codes",
+      "\t//*****************************************************",
+      "\tif colorValue == \"GreenYellow\" then colorValue = \"#ADFF2F\"",
+      "\tif colorValue == \"Chartreuse\" then colorValue = \"#7FFF00\"",
+      "\tif colorValue == \"LawnGreen\" then colorValue = \"#7CFC00\"",
+      "\tif colorValue == \"Lime\" then colorValue = \"#00FF00\"",
+      "\tif colorValue == \"LimeGreen\" then colorValue = \"#32CD32\"        ",
+      "\tif colorValue == \"PaleGreen\" then colorValue = \"#98FB98\"",
+      "\tif colorValue == \"LightGreen\" then colorValue = \"#90EE90\"",
+      "\tif colorValue == \"MediumSpringGreen\" then colorValue = \"#00FA9A\"",
+      "\tif colorValue == \"SpringGreen\" then colorValue = \"#00FF7F\"",
+      "\tif colorValue == \"SeaGreen\" then colorValue = \"#2E8B57\"",
+      "\tif colorValue == \"ForestGreen\" then colorValue = \"#228B22\"                                \t\t\t\t\t",
+      "\tif colorValue == \"Green\" then colorValue = \"#008000\"",
+      "\tif colorValue == \"DarkGreen\" then colorValue = \"#006400\"",
+      "\tif colorValue == \"YellowGreen\" then colorValue = \"#9ACD32\"",
+      "\tif colorValue == \"OliveDrab\" then colorValue = \"#6B8E23\"",
+      "\tif colorValue == \"Olive\" then colorValue = \"#808000\"",
+      "\tif colorValue == \"DarkOliveGreen\" then colorValue = \"#556B2F\"        ",
+      "\tif colorValue == \"MediumAquamarine\" then colorValue = \"#66CDAA\"",
+      "\tif colorValue == \"DarkSeaGreen\" then colorValue = \"#8FBC8B\"",
+      "\tif colorValue == \"LightSeaGreen\" then colorValue = \"#20B2AA\" ",
+      "\tif colorValue == \"DarkCyan\" then colorValue = \"#008B8B\"        ",
+      "\tif colorValue == \"Teal\" then colorValue = \"#008080\"",
+      "\t//*****************************************************",
+      "\t// Blue HEX Codes",
+      "\t//*****************************************************\t",
+      "\tif colorValue == \"Aqua\" then colorValue = \"#00FFFF\"",
+      "\tif colorValue == \"Cyan\" then colorValue = \"#00FFFF\"",
+      "\tif colorValue == \"LightCyan\" then colorValue = \"#E0FFFF\"",
+      "\tif colorValue == \"PaleTurquoise\" then colorValue = \"#AFEEEE\"",
+      "\tif colorValue == \"Aquamarine\" then colorValue = \"#7FFFD4\"        ",
+      "\tif colorValue == \"Turquoise\" then colorValue = \"#40E0D0\"",
+      "\tif colorValue == \"MediumTurquoise\" then colorValue = \"#48D1CC\"",
+      "\tif colorValue == \"DarkTurquoise\" then colorValue = \"#00CED1\"",
+      "\tif colorValue == \"CadetBlue\" then colorValue = \"#5F9EA0\"",
+      "\tif colorValue == \"SteelBlue\" then colorValue = \"#4682B4\"                           \t\t\t\t\t",
+      "\tif colorValue == \"LightSteelBlue\" then colorValue = \"#B0C4DE\"",
+      "\tif colorValue == \"PowderBlue\" then colorValue = \"#B0E0E6\"",
+      "\tif colorValue == \"LightBlue\" then colorValue = \"#ADD8E6\"",
+      "\tif colorValue == \"SkyBlue\" then colorValue = \"#87CEEB\"",
+      "\tif colorValue == \"LightSkyBlue\" then colorValue = \"#87CEFA\"",
+      "\tif colorValue == \"DeepSkyBlue\" then colorValue = \"#00BFFF\"        ",
+      "\tif colorValue == \"DodgerBlue\" then colorValue = \"#1E90FF\"",
+      "\tif colorValue == \"CornflowerBlue\" then colorValue = \"#6495ED\"",
+      "\tif colorValue == \"MediumSlateBlue\" then colorValue = \"#7B68EE\"",
+      "\tif colorValue == \"RoyalBlue\" then colorValue = \"#4169E1\"",
+      "\tif colorValue == \"Blue\" then colorValue = \"#0000FF\"",
+      "\tif colorValue == \"MediumBlue\" then colorValue = \"#0000CD\"",
+      "\tif colorValue == \"DarkBlue\" then colorValue = \"#00008B\"  ",
+      "\tif colorValue == \"Navy\" then colorValue = \"#000080\"",
+      "\tif colorValue == \"MidnightBlue\" then colorValue = \"#191970\"                        ",
+      "\t//*****************************************************",
+      "\t// Brown HEX Codes",
+      "\t//*****************************************************\t",
+      "\tif colorValue == \"Cornsilk\" then colorValue = \"#FFF8DC\"",
+      "\tif colorValue == \"BlanchedAlmond\" then colorValue = \"#FFEBCD\"",
+      "\tif colorValue == \"Bisque\" then colorValue = \"#FFE4C4\"",
+      "\tif colorValue == \"NavajoWhite\" then colorValue = \"#FFDEAD\"",
+      "\tif colorValue == \"Wheat\" then colorValue = \"#F5DEB3\"        ",
+      "\tif colorValue == \"BurlyWood\" then colorValue = \"#DEB887\"",
+      "\tif colorValue == \"Tan\" then colorValue = \"#D2B48C\"",
+      "\tif colorValue == \"RosyBrown\" then colorValue = \"#BC8F8F\"",
+      "\tif colorValue == \"SandyBrown\" then colorValue = \"#F4A460\"",
+      "\tif colorValue == \"Goldenrod\" then colorValue = \"#DAA520\"                                \t\t\t\t\t",
+      "\tif colorValue == \"DarkGoldenrod\" then colorValue = \"#B8860B\"",
+      "\tif colorValue == \"Peru\" then colorValue = \"#CD853F\"",
+      "\tif colorValue == \"Chocolate\" then colorValue = \"#D2691E\"",
+      "\tif colorValue == \"SaddleBrown\" then colorValue = \"#8B4513\"",
+      "\tif colorValue == \"Sienna\" then colorValue = \"#A0522D\"",
+      "\tif colorValue == \"Brown\" then colorValue = \"#A52A2A\"        ",
+      "\tif colorValue == \"Maroon\" then colorValue = \"#800000\"          \t\t\t",
+      "\t//*****************************************************",
+      "\t// White HEX Codes",
+      "\t//*****************************************************\t",
+      "\tif colorValue == \"White\" then colorValue = \"#FFFFFF\"",
+      "\tif colorValue == \"Snow\" then colorValue = \"#FFFAFA\"",
+      "\tif colorValue == \"HoneyDew\" then colorValue = \"#F0FFF0\"",
+      "\tif colorValue == \"MintCream\" then colorValue = \"#F5FFFA\"",
+      "\tif colorValue == \"Azure\" then colorValue = \"#F0FFFF\"        ",
+      "\tif colorValue == \"AliceBlue\" then colorValue = \"#F0F8FF\"",
+      "\tif colorValue == \"GhostWhite\" then colorValue = \"#F8F8FF\"",
+      "\tif colorValue == \"WhiteSmoke\" then colorValue = \"#F5F5F5\"",
+      "\tif colorValue == \"SeaShell\" then colorValue = \"#FFF5EE\"",
+      "\tif colorValue == \"Beige\" then colorValue = \"#F5F5DC\"                                \t\t\t\t\t",
+      "\tif colorValue == \"OldLace\" then colorValue = \"#FDF5E6\"",
+      "\tif colorValue == \"FloralWhite\" then colorValue = \"#FFFAF0\"",
+      "\tif colorValue == \"Ivory\" then colorValue = \"#FFFFF0\"",
+      "\tif colorValue == \"AntiqueWhite\" then colorValue = \"#FAEBD7\"",
+      "\tif colorValue == \"Linen\" then colorValue = \"#FAF0E6\"",
+      "\tif colorValue == \"LavenderBlush\" then colorValue = \"#FFF0F5\"        ",
+      "\tif colorValue == \"MistyRose\" then colorValue = \"#FFE4E1\"",
+      "\t//*****************************************************",
+      "\t// Grey HEX Codes",
+      "\t//*****************************************************\t",
+      "\tif colorValue == \"Gainsboro\" then colorValue = \"#DCDCDC\"",
+      "\tif colorValue == \"LightGray\" then colorValue = \"#D3D3D3\"",
+      "\tif colorValue == \"Silver\" then colorValue = \"#C0C0C0\"",
+      "\tif colorValue == \"DarkGray\" then colorValue = \"#A9A9A9\"",
+      "\tif colorValue == \"Gray\" then colorValue = \"#808080\"        ",
+      "\tif colorValue == \"DimGray\" then colorValue = \"#696969\"",
+      "\tif colorValue == \"LightSlateGray\" then colorValue = \"#778899\"",
+      "\tif colorValue == \"SlateGray\" then colorValue = \"#708090\"",
+      "\tif colorValue == \"DarkSlateGray\" then colorValue = \"#2F4F4F\"",
+      "\tif colorValue == \"Black\" then colorValue = \"#000000\"",
+      "\t//*****************************************************                                      \t\t\t\t\t   \t",
+      "\treturn \"<color=\" + colorValue + \">\" + self + \"</color>\"",
+      "end function",
+      "",
+      ""
+    ]
+  },
+  "str_textmeshpro: cspace": {
+    "prefix": "strtmp_cspace",
+    "scope": "greyscript",
+    "description": "Insert cspace (clean, header removed).",
+    "body": [
+      "string.cspace = function(charSpacing = \"1em\", closeTag = true)",
+      "    if locals.closeTag == true then",
+      "        return \"<cspace=\" + locals.charSpacing + \">\" + self + \"</cspace>\"",
+      "    end if",
+      "    if locals.closeTag == false then",
+      "        return \"<cspace=\" + locals.charSpacing + \">\" + self",
+      "    end if        ",
+      "end function ",
+      "",
+      ""
+    ]
+  },
+  "str_textmeshpro: indent": {
+    "prefix": "strtmp_indent",
+    "scope": "greyscript",
+    "description": "Insert indent (clean, header removed).",
+    "body": [
+      "string.indent = function(indentPercent=\"15%\", closeTag = true)",
+      "    if locals.closeTag == false then",
+      "        return \"<indent=\" + locals.indentPercent + \">\" + self",
+      "    else",
+      "        return \"<indent=\" + locals.indentPercent + \">\" + self + \"</indent>\"",
+      "    end if",
+      "    return null",
+      "end function "
+    ]
+  },
+  "str_textmeshpro: mspace": {
+    "prefix": "strtmp_mspace",
+    "scope": "greyscript",
+    "description": "Insert mspace (clean, header removed).",
+    "body": [
+      "string.mspace = function(monospace = \"2.75em\")",
+      "    return \"<mspace=\" + locals.monospace + \">\" + self + \"</mspace>\"",
+      "end function   "
+    ]
+  },
+  "str_textmeshpro: nobr": {
+    "prefix": "strtmp_nobr",
+    "scope": "greyscript",
+    "description": "Insert nobr (clean, header removed).",
+    "body": [
+      "string.nobr = function()",
+      "    return \"<nobr>\" + self + \"</nobr>\"",
+      "end function "
+    ]
+  },
+  "str_textmeshpro: noparse": {
+    "prefix": "strtmp_noparse",
+    "scope": "greyscript",
+    "description": "Insert noparse (clean, header removed).",
+    "body": [
+      "string.noparse = function()",
+      "    return \"<noparse>\" + self + \"</noparse>\"",
+      "end function  "
+    ]
+  },
+  "str_textmeshpro: page": {
+    "prefix": "strtmp_page",
+    "scope": "greyscript",
+    "description": "Insert page (clean, header removed).",
+    "body": [
+      "    string.page = function()",
+      "        return self + \"<page>\"",
+      "    end function "
+    ]
+  },
+  "str_textmeshpro: pos": {
+    "prefix": "strtmp_pos",
+    "scope": "greyscript",
+    "description": "Insert pos (clean, header removed).",
+    "body": [
+      "string.pos = function(position = \"50%\")",
+      "    return \"<pos=\" + locals.position + \">\" + self",
+      "end function"
+    ]
+  },
+  "str_textmeshpro: size": {
+    "prefix": "strtmp_size",
+    "scope": "greyscript",
+    "description": "Insert size (clean, header removed).",
+    "body": [
+      "string.size = function(textSize = \"5em\")",
+      "    return \"<size=\" + locals.textSize + \">\" + self + \"</size>\"",
+      "end function"
+    ]
+  },
+  "str_textmeshpro: strike": {
+    "prefix": "strtmp_strike",
+    "scope": "greyscript",
+    "description": "Insert strike (clean, header removed).",
+    "body": [
+      "    string.strike = function()",
+      "        return \"<s>\" + self + \"</s>\"",
+      "    end function"
+    ]
+  },
+  "str_textmeshpro: mark": {
+    "prefix": "strtmp_mark",
+    "scope": "greyscript",
+    "description": "Insert mark (clean, header removed).",
+    "body": [
+      "string.mark = function(color=\"#FFFF00BF\")",
+      "    return \"<mark=\" + locals.color + \">\" + self + \"</mark>\"",
+      "end function ",
+      ""
+    ]
+  }
+}
