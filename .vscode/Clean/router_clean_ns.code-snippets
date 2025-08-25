@@ -1,0 +1,15 @@
+{
+  "router: get_port_info": {
+    "prefix": "router_get_port_info",
+    "scope": "greyscript",
+    "description": "Insert get_port_info (clean, header removed).",
+    "body": [
+      "map.get_port_info = function(portNumber)",
+      "\tif not typeof(self) == \"router\" then return \"<#FF0000>Type Mismatch, object is not a router\"",
+      "\tlocals.portObject = self.ping_port(locals.portNumber)",
+      "\tif not typeof(locals.portObject) == \"port\" then return \"<#FF0000>Type Mismatch, object is not a port\"",
+      "    return self.port_info(locals.portObject)",
+      "end function"
+    ]
+  }
+}

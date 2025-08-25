@@ -1,0 +1,28 @@
+{
+  "map: get_attributes": {
+    "prefix": "map_get_attributes",
+    "scope": "greyscript",
+    "description": "Insert get_attributes (clean, header removed).",
+    "body": [
+      "map.get_attributes = function()",
+      "\tlocals.attributeList = []",
+      "\tfor param in self[\"__isa\"]",
+      "\t\tlocals.attributeList.push(locals.param.key)",
+      "\tend for\t",
+      "\treturn locals.attributeList",
+      "end function"
+    ]
+  },
+  "map: push_once": {
+    "prefix": "map_push_once",
+    "scope": "greyscript",
+    "description": "Insert push_once (clean, header removed).",
+    "body": [
+      "map.push_once = function(mapItem)",
+      "\tif not self.hasIndex(self.indexOf(mapItem)) then",
+      "\t\tself.push(targetIP)",
+      "\tend if\t",
+      "end function"
+    ]
+  }
+}

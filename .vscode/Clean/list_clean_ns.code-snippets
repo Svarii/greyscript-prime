@@ -1,0 +1,62 @@
+{
+  "list: crop": {
+    "prefix": "list_crop",
+    "scope": "greyscript",
+    "description": "Insert crop (clean, header removed).",
+    "body": [
+      "    list.crop = function()",
+      "        while not self[self.len - 1].len > 0",
+      "            self.remove(self.len - 1)",
+      "        end while",
+      "        while not self[0].len > 0",
+      "            self.remove(0)",
+      "        end while",
+      "        return self",
+      "    end function",
+      "//@name crop",
+      "    //  * @startuml",
+      "    //  * entity ListObject",
+      "    //  * control \".crop\" as crop",
+      "    //  *   ListObject -> crop : [//\"\"//,//\"\"//,\"item1\", \"item2\", //\"\"//]",
+      "    //  *   crop -> ListObject : [\"item1\", \"item2\"]",
+      "    //  * footer",
+      "    //  *   list.crop",
+      "    //  * endfooter         ",
+      "    //  * @enduml         "
+    ]
+  },
+  "list: push_once": {
+    "prefix": "list_push_once",
+    "scope": "greyscript",
+    "description": "Insert push_once (clean, header removed).",
+    "body": [
+      "map.push_once = function(mapItem)",
+      "\tif not self.hasIndex(self.indexOf(mapItem)) then",
+      "\t\tself.push(targetIP)",
+      "\tend if\t",
+      "end function"
+    ]
+  },
+  "list: string": {
+    "prefix": "list_string",
+    "scope": "greyscript",
+    "description": "Insert string (clean, header removed).",
+    "body": [
+      "list.string = function(seperator = char(10))",
+      "    locals.printString = split(self, locals.seperator)",
+      "    return locals.printString",
+      "end function",
+      "    //@name string",
+      "        //  * @startuml",
+      "        //  * entity ListObject",
+      "        //  * interface ScreenOutput",
+      "        //  * control \".string\" as string",
+      "        //  *   ListObject -> string : list",
+      "        //  *   string -> ScreenOutput : string()",
+      "        //  * footer",
+      "        //  *   list.string",
+      "        //  * endfooter         ",
+      "        //  * @enduml           "
+    ]
+  }
+}

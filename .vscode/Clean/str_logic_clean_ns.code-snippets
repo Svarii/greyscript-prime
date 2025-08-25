@@ -1,0 +1,72 @@
+{
+  "str_logic: extract": {
+    "prefix": "strlogic_extract",
+    "scope": "greyscript",
+    "description": "Insert extract (clean, header removed).",
+    "body": [
+      "string.extract = function(tagStart = \"<b>\", tagEnd = \"</b>\")",
+      "    locals.startIndex = self.indexOf(locals.tagStart) + (locals.tagStart.len)",
+      "    locals.endIndex = (self.indexOf(locals.tagEnd) - (locals.tagEnd.len - locals.tagStart.len)) + 1",
+      "    return slice(self, locals.startIndex, locals.endIndex)",
+      "end function",
+      "// @startuml",
+      "    // start",
+      "    // :<color:purple>startIndex = tagStart</color>;",
+      "    // :<color:purple>endIndex = tagEnd</color>;",
+      "    // :<color:green>return slice(self, startIndex, endIndex)</color>;",
+      "    // stop",
+      "    // @enduml        "
+    ]
+  },
+  "str_logic: format": {
+    "prefix": "strlogic_format",
+    "scope": "greyscript",
+    "description": "Insert format (clean, header removed).",
+    "body": [
+      "string.format = function(args, delim=\"%s\")",
+      "    locals.splitStr = self.split(locals.delim);",
+      "    locals.recompStr = \"\"",
+      "    for i in range(0, locals.args.len()-1)",
+      "        locals.recompStr = locals.recompStr + locals.splitStr[locals.i] + locals.args[locals.i]  ",
+      "    end for",
+      "        locals.recompStr = locals.recompStr + locals.splitStr[locals.splitStr.len()-1]",
+      "    return locals.recompStr",
+      "end function",
+      "    // @startuml",
+      "    // start",
+      "    // :<color:purple>splitStr = self.split(delim)</color>;",
+      "    // :<color:purple>recompStr = \"\"</color>;",
+      "    // :<color:blue>For i = 0 to args.len()-1</color>;",
+      "    // repeat",
+      "    //   :<color:purple>recompStr = recompStr + splitStr[i] + args[i]</color>;",
+      "    // repeat while (next i exists)",
+      "    // :<color:purple>recompStr = recompStr + splitStr[splitStr.len()-1]</color>;",
+      "    // :<color:green>return recompStr</color>;",
+      "    // stop",
+      "    // @enduml"
+    ]
+  },
+  "str_logic: mask": {
+    "prefix": "strlogic_mask",
+    "scope": "greyscript",
+    "description": "Insert mask (clean, header removed).",
+    "body": [
+      "string.mask = function(maskString = true, maskChar = char(42), maskColor = null)",
+      "    if not maskColor == null then maskChar = \"<\" + maskColor + \">\" + maskChar + \"</color>\"",
+      "    locals.ipPattern = \"\\b(?:(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d).){3}(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)\\b\"",
+      "    locals.matchList = self.matches(locals.ipPattern)",
+      "    locals.newString = \"\"",
+      "    if locals.maskString == false then return self",
+      "    if locals.matchList.len > 0 then",
+      "        locals.newString = self",
+      "        for match in locals.matchList",
+      "            locals.newString = locals.newString.replace(locals.match.value, maskChar*locals.match.value.len)",
+      "        end for",
+      "        return locals.newString",
+      "    else",
+      "        return self",
+      "    end if",
+      "end function"
+    ]
+  }
+}
