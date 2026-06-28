@@ -52,4 +52,3 @@ load_lib = function(libName = "metaxploit.so", libDir = "/lib", libType = "")
             return null
         end if
 end function
-

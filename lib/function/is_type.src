@@ -39,10 +39,10 @@
 	end function
 // @startuml
 // start
-// if (<color:blue>is typeof(object) not equal to objectType?</color>) then (<color:red>Yes</color>)
+// if (<color:blue>is typeof(object) of the specified type</color>) then (<color:red>No</color>)
 //   :<color:purple>return false</color>;
 //   stop
-// else (<color:green>No</color>)
+// else (<color:green>Yes</color>)
 //   :<color:purple>return true</color>;
 //   stop
 // endif

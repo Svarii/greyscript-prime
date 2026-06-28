@@ -1,33 +1,36 @@
-// Extracts list of top-level attributes from object
-	// @description **Description:**
-	// @description Iterate though the __isa of a list and create a list of key names
-	// @description ---
-	//
-	// @description **Parameters:**
-	// @description - none
-	//
-	// @description **Return:**
-	// @return {list<string>}
-	// @description `list<string>` List attributes for the object
-	// @description ---
-	//
-	// @description **Author:** Svarii
-	// @description **Version:** 0.0.1
-	// @description ---
-	//     
-	// @description ***footnotes***   
-	// @description This method only returns top-level attributes   
-	// @description ---
-	//
-	// @example myObject = {"classID":"myObject","myVar":"some Value"};
-	// @example result = myObject.get_attributes
-	// @example
-	// print(result); // Output: ["myObject":"myVar", "myVar":"some Value"]
-	// @description ---
+// @description **Description:**
+// @description Returns a list of top‑level attribute names for the object.
+// @description If the object has an engine‑generated `__isa`, that list is used.
+// @description Otherwise, keys are enumerated directly.
+// @description ---
+//
+// @description **Parameters:**
+// @description - none
+//
+// @description **Return:**
+// @return {list<string>}
+// @description `list<string>` List of attribute names
+// @description ---
+//
+// @description **Author:** Svarii
+// @description **Version:** 0.0.1
+// @description ---
+//
+// @example attributeNames = myObject.get_attributes
+// @example print(attributeNames)
 map.get_attributes = function()
-	locals.attributeList = []
-	for param in self["__isa"]
-		locals.attributeList.push(locals.param.key)
-	end for	
-	return locals.attributeList
+    locals.attributeList = []
+    if self.has("__isa") and typeof(self["__isa"]) == "list" then
+        for entry in self["__isa"]
+            attributeList.push(entry.key)
+        end for
+        return attributeList
+    end if
+    for keyName in self
+        if not keyName == "__isa" then
+            attributeList.push(keyName)
+        end if
+    end for
+
+    return attributeList
 end function

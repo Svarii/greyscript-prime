@@ -30,10 +30,10 @@
 	//  @example	print iScan.compInfo.has_internet  //Output: boolean 1 or 0
 	//  @example	print iScan.ipInfo.public  //Output: public ip of computer
 id_self = function()
-	locals.localRouter = get_router
-        if not typeof(locals.localRouter) == "router" then return "Failed to fetch local router object."
 	locals.localComputer = get_shell.host_computer
         if not typeof(locals.localComputer) == "computer" then return "Failed to fetch local computer object."
+	locals.localRouter = get_router
+        if not typeof(locals.localRouter) == "router" then return "Failed to fetch local router object."		
 	locals.ipInformation = {"classID": "ipInformation", "local": locals.localComputer.local_ip, "public": locals.localComputer.public_ip, "gateway":locals.localComputer.network_gateway}
 	locals.ipScan = locals.ipInformation
 	locals.ComputerInformation = {"classID": "computerInformation","name":locals.localComputer.get_name, "home":home_dir, "location":program_path, "path":current_path, "user":active_user, "has_internet":locals.localComputer.is_network_active}

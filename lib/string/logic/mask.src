@@ -1,3 +1,35 @@
+// @startuml
+// allowmixing
+// title <color:purple>mask Function Overview</color>
+//
+// class mask {
+//   .. <color:blue>Input</color> ..
+//   + maskString : boolean = true
+//   + maskChar   : char    = "*"
+//   + maskColor  : string  = null
+//
+//   .. <color:blue>Return</color> ..
+//   + returns : string
+// }
+//
+// entity StringObject
+// control ".mask" as maskCtrl
+//
+// StringObject -> maskCtrl : string
+// maskCtrl -> StringObject : string
+//
+// note bottom of mask
+//   * Detects IPv4 addresses and masks them
+//   * Applies color tag when maskColor is provided
+//   * Returns original string when maskString=false
+// end note
+//
+// footer
+//   string.mask
+// endfooter
+// @enduml
+
+
 // Detects and masks ipv4 addresses found in string
 // @description **Description**
 // @description Optionally detects and masks ipv4 addresses found in string.

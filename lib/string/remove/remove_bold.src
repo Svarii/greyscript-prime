@@ -37,4 +37,4 @@ end function
     //  * footer
     //  *   string.remove_bold
     //  * endfooter           
-    //  * @enduml          
+    //  * @enduml

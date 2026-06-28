@@ -1,3 +1,25 @@
+// @startuml
+// title <color:purple>line_indent Function Overview</color>
+//
+// class line_indent {
+//   .. <color:blue>Input</color> ..
+//   + indentPercent : string = "15%"
+//   + closeTag      : boolean = true
+//
+//   .. <color:blue>Return</color> ..
+//   + returns : string
+// }
+//
+// note bottom of line_indent
+//   * Wraps the string in a <line-indent> tag
+//   * Closing tag included only when closeTag=true
+//   * No parameter validation
+//   * Invalid values may yield null or malformed output
+// end note
+//
+// @enduml
+
+
 // Applies line-indent tag to the string
     // @description **Description:**
     // @description Modifies a text string to wrap it in the `<line-indent>` tag

@@ -1,3 +1,25 @@
+// @startuml
+// title <color:purple>format Function Overview</color>
+//
+// class format {
+//   .. <color:blue>Input</color> ..
+//   + args  : list<string>
+//   + delim : string = "%s"
+//
+//   .. <color:blue>Return</color> ..
+//   + returns : string
+// }
+//
+// note bottom of format
+//   * Performs delimiter-based string interpolation
+//   * Splits the base string using delim
+//   * Recombines segments with values from args
+//   * Produces a fully formatted string
+// end note
+//
+// @enduml
+
+
 //  **Description:**
 //  Allows for string interpolation using a delimiter (default is "%s").
 //  @contributer dynobytes

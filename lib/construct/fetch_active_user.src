@@ -1,0 +1,3 @@
+fetch_active_user = function()
+	locals.activeUserInfo = {"classID":"activeUserInfo", "user_name":active_user, "mail_address":user_mail_address, "bank_account":user_bank_number, "home_dir":home_dir}
+end function

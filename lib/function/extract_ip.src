@@ -36,8 +36,10 @@
 // @example 
 // print(extractIP("IPs: 10.0.0.1, 172.16.0.1")) 
 // Output: 10.0.0.1
+//
+// @summary {.error}
 extractIP = function(inputString)
-    locals.ipPattern = "\b(?:(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)\\.){3}(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)\b"
+    locals.ipPattern = "(?:(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)\\.){3}(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)"
     locals.matchResult = inputString.matches(locals.ipPattern)
     if locals.matchResult.values.len > 0 then
         return locals.matchResult.values[0]

@@ -1,0 +1,209 @@
+// @description **Description:**
+// @description Returns a list of top‑level attribute names for the object.
+// @description If the object has an engine‑generated `__isa`, that list is used.
+// @description Otherwise, keys are enumerated directly.
+// @description ---
+//
+// @description **Parameters:**
+// @description - none
+//
+// @description **Return:**
+// @return {list<string>}
+// @description `list<string>` List of attribute names
+// @description ---
+//
+// @description **Author:** Svarii
+// @description **Version:** 0.0.1
+// @description ---
+//
+// @example attributeNames = myObject.get_attributes
+// @example print(attributeNames)
+map.get_attributes = function()
+    locals.attributeList = []
+    if self.has("__isa") and typeof(self["__isa"]) == "list" then
+        for entry in self["__isa"]
+            attributeList.push(entry.key)
+        end for
+        return attributeList
+    end if
+    for keyName in self
+        if not keyName == "__isa" then
+            attributeList.push(keyName)
+        end if
+    end for
+
+    return attributeList
+end function
+
+
+// Extracts list of top-level attributes from object
+	// @description **Description:**
+	// @description Iterate though the __isa of a list and create a list of key names
+	// @description ---
+	//
+	// @description **Parameters:**
+	// @description - none
+	//
+	// @description **Return:**
+	// @return {list<string>}
+	// @description `list<string>` List attributes for the object
+	// @description ---
+	//
+	// @description **Author:** Svarii
+	// @description **Version:** 0.0.1
+	// @description ---
+	//     
+	// @description ***footnotes***   
+	// @description This method only returns top-level attributes   
+	// @description ---
+	//
+	// @example myObject = {"classID":"myObject","myVar":"some Value"};
+	// @example result = myObject.get_attributes
+	// @example
+	// print(result); // Output: ["myObject":"myVar", "myVar":"some Value"]
+	// @description ---
+map.get_attributes = function()
+	locals.attributeList = []
+	for param in self["__isa"]
+		locals.attributeList.push(locals.param.key)
+	end for	
+	return locals.attributeList
+end function
+
+// Extract the text between the first found indexies of the given start and end strings        
+    // @description **Description:** Extract the text between the first found bold tag if no paramaters provided
+    // @description ---
+    // @description **Parameters:**
+    // @param {string} [tagStart = "<b>""]
+    // @description `tagStart`:`string`
+    // @param {string} [tagEnd = "</b>"]
+    // @description `tagEnd`:`string`
+    // @description ---
+    // @return {string or null}
+    // @example newString = "<b>0x53C737</b>"
+    // @example result = newString.extract("<b>", "</b>")
+    // @example print(result); // Output: 0x53C737   
+string.extract = function(tagStart = "<b>", tagEnd = "</b>")
+    locals.startIndex = self.indexOf(locals.tagStart) + (locals.tagStart.len)
+    locals.endIndex = (self.indexOf(locals.tagEnd) - (locals.tagEnd.len - locals.tagStart.len)) + 1
+    return slice(self, locals.startIndex, locals.endIndex)
+end function
+// @startuml
+    // start
+    // :<color:purple>startIndex = tagStart</color>;
+    // :<color:purple>endIndex = tagEnd</color>;
+    // :<color:green>return slice(self, startIndex, endIndex)</color>;
+    // stop
+    // @enduml        
+
+// Get Inbox Messages
+// @description **Description:**
+// @description Logs into the mail account and fetches inbox messages.
+// @description ---
+//
+// @description **Parameters:**
+// @param {string} [mailAddress]
+// @description - `mailAddress`:`string` | Optional. Defaults to `user_mail_address`
+// @param {string} [mailPass]
+// @description - `mailPass`:`string` | Optional. Defaults to `"mailpass"`
+//
+// @description **Parameter Defaults:**
+// @description - `mailAddress`:`user_mail_address`
+// @description - `mailPass`:`"mailpass"`
+//
+// @description **Return:**
+// @return {list<object>}
+// @description `list<map>`:`emailDetails`
+// @description - `.id`:`<string>` The email id
+// @description - `.from`:`<string>` The sender email address
+// @description - `.subject`:`<string>` The email subject
+// @description - `.body`:`list<string>` The email message
+// @description - `.contract`:`<boolean>` Is email a mission
+// @description - `.type` :`<string>` | `<null>` If mission, what type
+// @description - `.target_wan`:`<string>` | `<null>` Target Wan IP
+// @description - `.target_lan`:`<string>` | `<null>` Target Lan IP
+// @description - `.target_user`:`<string>` | `<null>` Target Username
+//
+// @description **Author:** Svarii
+// @description **Version:** 0.0.1
+// @description ---
+//
+// @example inbox = fetch_inbox("user@example.com", "mypassword")
+// @example print inbox[0].subject
+    fetch_inbox = function(mailAddress = user_mail_address, mailPass = null)
+        if mailPass == null then return null
+            locals.metaMail = mail_login(locals.mailAddress, locals.mailPass)
+        if typeof(metaMail) == "MetaMail" then
+			emailDetailList = []
+            rawEmailStringList = metaMail.fetch
+            for emailString in rawEmailStringList
+				emailDetails = {"classID":"emailDetails", "id":"", "from":"", "subject":"", "summary":"", "body":"", "contract":true, "type":null, "target_wan":null, "target_lan":null, "target_user":null}
+                //TODO: ADD .targetWAN , .targetLAN , .targetUser , .targetFile?
+				emailDataItems = split(emailString.trim, char(10))
+				emailDetails.id = slice(emailDataItems[0], emailDataItems[0].indexOf(": ") + 2)
+				emailDetails.from = slice(emailDataItems[1], emailDataItems[1].indexOf(": ") + 2)
+				emailDetails.subject = slice(emailDataItems[2], emailDataItems[2].indexOf(": ") + 2)
+				emailDetails.body = emailDataItems[3:]
+                emailDetails.summary = slice(emailDataItems[3], 0, emailDetails.body.indexOf(". "))
+                if emailDetails.summary.indexOf("academic") > 0 then
+                    emailDetails.type = "Academic"
+                end if
+                if emailDetails.summary.indexOf("credentials") > 0 then
+                    emailDetails.type = "Credentials"
+                end if
+                if emailDetails.summary.indexOf("police") > 0 then
+                    emailDetails.type = "Police"
+                end if
+                if emailDetails.summary.indexOf("get") > 0 then
+                    emailDetails.type = "Get"
+                end if
+                if emailDetails.summary.indexOf("delete") > 0 then
+                    emailDetails.type = "Delete"
+                end if
+                if emailDetails.summary.indexOf("corrput") > 0 then
+                    emailDetails.type = "Corrput"
+                end if                
+                if emailDetails.summary.indexOf("watching you for a while") > 0 then
+                    emailDetails.type = "Agent"
+                end if                
+				if not emailDetails.subject == "Mission Contract" then emailDetails.contract = false
+                for sentence in emailDetails.body
+                    splitLines = sentence.split(char(46) + char(32))
+                    for lines in splitLines
+                            if lines.indexOf("record to modify belongs to: ") > 0 then
+                                emailDetails.target_user = lines.extract("<b>", "</b>")
+                            end if                        
+                            if lines.indexOf("credentials of the user") > 0 or lines.indexOf("belongs to:") > 0 then
+                                emailDetails.target_user = lines.extract("<b>", "</b>")
+                            end if 
+                            if lines.indexOf("where the database is located") > 0 then
+                                emailDetails.target_wan = lines.extract("<b>", "</b>")                            
+                            else if lines.indexOf("he victim's") > 0 and lines.indexOf("local IP") > 0 then
+                                emailDetails.target_lan = lines.extract("<b>", "</b>")
+                            end if
+                            if lines.indexOf("of the victim") > 0 then
+                                emailDetails.target_wan = lines.extract("<b>", "</b>")                       
+                            end if                    
+                            if lines.indexOf("any user on the remote machine") > 0 then
+                                emailDetails.target_user = "Any"
+                            end if
+                    end for
+                end for
+                if not emailDetails.id then emailDetails.id == null
+                if not emailDetails.domain then emailDetails.domain == ""
+                if not emailDetails.from then emailDetails.from == null
+                if not emailDetails.subject then emailDetails.subject == null
+                if not emailDetails.body then emailDetails.body == null
+                if not emailDetails.summary then emailDetails.summary == null
+                if not emailDetails.type then emailDetails.type == null
+                if not emailDetails.contract then emailDetails.contract == null
+                if not emailDetails.target_user then emailDetails.target_user == null
+                if not emailDetails.target_wan then emailDetails.target_wan == null
+                if not emailDetails.target_lan then emailDetails.target_lan == null
+                emailDetailList.push(emailDetails)
+            end for
+            return emailDetailList
+        else
+            return null
+        end if
+    end function

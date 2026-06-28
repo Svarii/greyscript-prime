@@ -42,4 +42,74 @@
         //  * footer
         //  *   string.remove_sub
         //  * endfooter          
-        //  * @enduml      
+        //  * @enduml    
+        
+
+        
+//@startuml
+//title Activity Diagram: Cobra Network Interface
+//
+//start
+//:Import "cobra.so";
+//:Initialize Variables (selectedEmailIndex, targetIP, scanLevel = "None");
+//:Fetch Inbox List;
+//
+//while (User Input is NOT "Escape") is (Continue)
+//  :Clear Output Buffer Lists;
+//  
+//  partition "UI Construction" {
+//    :Construct Main Menu based on **scanLevel**;
+//    
+//    group Process Inbox
+//      while (For each email in inboxObjectList)
+//        :Format Column strings;
+//        if (Email is Selected?) then (Yes)
+//          :Apply Highlight;
+//          :Update targetIP, targetLan, targetUser;
+//          :Fetch WHOIS Info;
+//        else (No)
+//          :Add standard entry to output_Inbox;
+//        endif
+//      endwhile
+//    }
+//
+//    if (scanLevel == "None") then (Show Email)
+//      :Parse Email Body;
+//      :Apply Color Highlighting to lines;
+//    endif
+//  }
+//
+//  partition "Scanning Logic" {
+//    if (scanLevel == "Stealth") then (Active)
+//      :Get Router for targetIP;
+//      :Fetch Open/Closed Ports;
+//      :Build output_StealthScan;
+//    endif
+//
+//    group LAN Scan
+//      :Fetch devices_lan_ip;
+//      while (For each device)
+//        :Fetch device_ports;
+//        :Store IP and Services in staging list;
+//        :Format for output_LanScanList;
+//      endwhile
+//    }
+//  }
+//
+//  :Print all buffers to Screen;
+//  :Wait for User Input;
+//
+//  partition "Input Handling" {
+//    if (Input == F1-F4) then
+//      :Change scanLevel;
+//    else if (Input == F5-F6) then
+//      :Launch Browser/Backend;
+//    else if (Input == Arrows) then
+//      :Update selectedEmailIndex or selectedLanIndex;
+//      :Handle Horizontal Column switching;
+//    endif
+//  }
+//endwhile (Exit)
+//
+//stop
+//@enduml

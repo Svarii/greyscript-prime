@@ -24,6 +24,6 @@
     //  @example result = newString.sub
     //  @example 
     //  print(result); // Output: <sub>Hello</sub>    
-    string.sub = function()
-        return "<sub>" + self + "</sub>"    
-    end function  
+string.sub = function()
+    return "<sub>" + self + "</sub>"    
+end function  

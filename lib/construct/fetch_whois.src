@@ -99,5 +99,3 @@ fetch_whois = function(routerPublicIPAddress)
 	locals.whoisInfo.error = false
 	return locals.whoisInfo
 end function
-
-

@@ -24,6 +24,6 @@
     //  @example result = newString.strike
     //  @example 
     //  print(result); // Output: <s>Hello</s>
-    string.strike = function()
-        return "<s>" + self + "</s>"
-    end function
+string.strike = function()
+    return "<s>" + self + "</s>"
+end function

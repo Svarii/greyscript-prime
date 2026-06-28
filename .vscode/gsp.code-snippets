@@ -51,14 +51,6 @@
 		"description": "set the indent using `em`, `px`, or `%`\n"
 	},
 
-	"<i>": {
-		"scope": "greyscript",
-		"prefix": ".italic",
-		"body": [
-			".italic"
-		],
-		"description": "Add italic tag to string\n"
-	},
 
 	"<line-indent>": {
 		"scope": "greyscript",
@@ -69,14 +61,6 @@
 		"description": "set the line indent using `em`, `px`, or `%`\n"
 	},
 
-	"<lowercase>": {
-		"scope": "greyscript",
-		"prefix": ".lowercase",
-		"body": [
-			".lowercase"
-		],
-		"description": "Add lowercase tag to string\n"
-	},
 
 	"<margin>": {
 		"scope": "greyscript",
@@ -118,27 +102,6 @@
 		]
 	},	
 	
-	"<noparse>": {
-		"scope": "greyscript",
-		"prefix": ".noparse",
-		"body": [
-			".noparse"
-		],
-		"description": [
-			"//Wrap string in <noparse> tag\n",
-		],
-	},	
-
-	"<page>": {
-		"scope": "greyscript",
-		"prefix": ".page",
-		"body": [
-			".page"
-		],
-		"description": [
-			" //Append page tag\n",
-		],
-	},	
 
 	"<pos>": {
 		"scope": "greyscript",
@@ -165,42 +128,6 @@
 			".size(\"${1:1}${2|em,px,%|}\")"
 		],
 		"description": "set the string size\n"
-	},		
-
-	"<s>": {
-		"scope": "greyscript",
-		"prefix": ".strike",
-		"body": [
-			".strike"
-		],
-		"description": "Add <s> tag to string\n"
-	},	
-
-	"<sub>": {
-		"scope": "greyscript",
-		"prefix": ".sub",
-		"body": [
-			".sub"
-		],
-		"description": "Add <sub> tag to string\n"
-	},	
-	
-	"<sup>": {
-		"scope": "greyscript",
-		"prefix": ".sup",
-		"body": [
-			".sup"
-		],
-		"description": "Add <sup> tag to string\n"
-	},	
-	
-	"<underline>": {
-		"scope": "greyscript",
-		"prefix": ".underline",
-		"body": [
-			".underline"
-		],
-		"description": "Add <underline> tag to string\n"
 	},		
 	
 	"<voffset>": {
@@ -237,96 +164,6 @@
 			".format(${1:[\"arg1\", \"arg2\"]}, ${2:\"%s\"})"
 		],
 		"description": "String interpolation\n"
-	},		
-
-	"remove_bold": {
-		"scope": "greyscript",
-		"prefix": ".remove_bold",
-		"body": [
-			".remove_bold"
-		],
-		"description": "Remove <b> & </b> tags\n"
-	},	
-
-	"remoce_char_first": {
-		"scope": "greyscript",
-		"prefix": ".remove_char_first",
-		"body": [
-			".remove_char_first"
-		],
-		"description": "Remove first character \n"
-	},	
-
-	"remove_char_last": {
-		"scope": "greyscript",
-		"prefix": ".remove_char_last",
-		"body": [
-			".remove_char_last"
-		],
-		"description": "Remove last character\n"
-	},	
-	
-	"remove_italic": {
-		"scope": "greyscript",
-		"prefix": ".remove_italic",
-		"body": [
-			".remove_italic"
-		],
-		"description": "Remove <i> & </i> tags\n"
-	},	
-	
-	"remove_strike": {
-		"scope": "greyscript",
-		"prefix": ".remove_strike",
-		"body": [
-			".remove_strike"
-		],
-		"description": "Remove <s> & </s> tags\n"
-	},	
-	
-	"remove_sub": {
-		"scope": "greyscript",
-		"prefix": ".remove_sub",
-		"body": [
-			".remove_sub"
-		],
-		"description": "Remove <sub> & </sub> tags\n"
-	},	
-	
-	"remove_sup": {
-		"scope": "greyscript",
-		"prefix": ".remove_sup",
-		"body": [
-			".remove_sup"
-		],
-		"description": "Remove <sup> & </sup> tags\n"
-	},	
-	
-	"remove_underline": {
-		"scope": "greyscript",
-		"prefix": ".remove_underline",
-		"body": [
-			".remove_underline"
-		],
-		"description": "Remove <underline> & </underline> tags\n"
-	},
-
-	"crop": {
-		"scope": "greyscript",
-		"prefix": ".crop",
-		"body": [
-			".crop"
-		],
-		"description": "Crops empty items off list ends\n"
-	},	
-	
-	"push_once": {
-		"scope": "greyscript",
-		"prefix": ".push_once",
-		"body": [
-			".push_once"
-		],
-		"description": "Pushes if not in list\n"
-	},
+	}
 	
 }

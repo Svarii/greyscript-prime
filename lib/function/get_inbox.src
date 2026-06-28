@@ -27,6 +27,6 @@
 // print(inbox)
     get_inbox = function(mailAddress = user_mail_address, mailPass = null)
         if mailPass == null then return null
-        locals.metaMail = mail_login(locals.mailAddress, locals.mailPass)
+            locals.metaMail = mail_login(locals.mailAddress, locals.mailPass)
 		return metaMail.fetch
     end function

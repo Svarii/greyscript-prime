@@ -28,8 +28,11 @@
 // @example
 // file_exists("/DatabaseDir", "addressData.db") // return true if found, otherwise false
 // @description ---  		
-	file_exists = function(filePath, fileName)
-		locals.hostComputer = get_shell.host_computer
+	file_exists = function(filePath, fileName, accessObject)
+		locals.hostComputer = null
+		if typeof(accessObject) == "shell" then locals.hostComputer = locals.accessObject.host_computer
+		if typeof(accessObject) == "computer" then locals.hostComputer = locals.accessObject
+		if locals.hostComputer == null then return null
 		locals.fileLocation = locals.filePath + "/" + locals.fileName
 		locals.fileObj = locals.hostComputer.File(locals.fileLocation)
 		if not locals.fileObj then
@@ -38,3 +41,4 @@
 			return true
 		end if		
 	end function
+

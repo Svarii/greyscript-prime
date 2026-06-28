@@ -25,7 +25,7 @@
 // @description **Author:** Svarii
 // @description **Version:** 0.0.1
 // @description ---   
-display_menu = function(menuList, selectedItem, highlightcolor = "#FFFF002C", textColor = null)
+highlight_list = function(menuList, selectedItem, highlightcolor = "#FFFF002C", textColor = null)
     locals.outputMenu = []
     for menuItem in locals.menuList
         if locals.selectedItem == __menuItem_idx then
@@ -41,20 +41,57 @@ display_menu = function(menuList, selectedItem, highlightcolor = "#FFFF002C", te
     return locals.outputMenu
 end function
 
-user_navigation = function (numberIndex, userInput)
+// Changes index based on user_input
+// @description **Description:**
+// @description Increase or decrease index number based on user_input
+// @description ---
+//
+// @description **Parameters:**
+// @param {number} numberIndex
+// @param {string} userInput
+// @param {list<string><string>} [inputOption]
+//
+// @description - `numberIndex`:`<number>`
+// @description - `selectedItem`:`<number>`
+// @description - `inputOption`:`<list[string,string]>`
+//
+// @description **Parameter Defaults:**
+// @description - `inputOption`:`["UpArrow", "DownArrow"]`
+//
+// @description **Return:**
+// @return {number}
+// @description `number` The selected index number
+// @description ---
+//    
+// @description **Author:** Svarii
+// @description **Version:** 0.0.1
+// @description ---   
+user_navigation = function (numberIndex, userInput, inputOption = null)
+    if locals.inputOption == null then locals.inputOption = ["UpArrow", "DownArrow"]
     indexChange = numberIndex
-    if locals.userInput == "UpArrow" then
+    if locals.userInput == locals.inputOption[0] then
         locals.indexChange = locals.indexChange - 1
     end if
-    if locals.userInput == "DownArrow" then
+    if locals.userInput == locals.inputOption[1] then
         locals.indexChange = locals.indexChange + 1
     end if
     return locals.indexChange
 end function
 
+// @description **Author:** Svarii
+// @description **Version:** 0.0.1
+// @description ---  
+section1 = function
+end function
+
+
 keepAlive = true
 myMenu = ["item 1", "item2", "item3", "item4"]
 menuSelection = 0
+
+menu_select = function(menuSelection, myMenu)
+    return user_navigation(menuSelection, user_input("", false, true)).clamp(0, (myMenu.len - 1))
+end function
 
 while not userInput ==  "LeftArrow"
     clear_screen
@@ -62,5 +99,6 @@ while not userInput ==  "LeftArrow"
     for line in menu
         print line
     end for
-    menuSelection = (user_navigation(menuSelection, user_input("", false, true))).clamp(0, (myMenu.len - 1))
+    menuSelection = menu_select(menuSelection, myMenu)
+    //menuSelection = (user_navigation(menuSelection, user_input("", false, true))).clamp(0, (myMenu.len - 1))
 end while 

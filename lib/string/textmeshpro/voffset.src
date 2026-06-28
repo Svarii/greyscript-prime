@@ -28,6 +28,6 @@
     //  @example result = newString.voffset
     //  @example 
     //  print(result); // Outputs: <voffset=1em>Hello</voffset>        
-    string.voffset = function(verticalOffset = "1em")
-        return "<voffset=" + locals.verticalOffset + ">" + self + "</voffset>"
-    end function         
+string.voffset = function(verticalOffset = "1em")
+    return "<voffset=" + locals.verticalOffset + ">" + self + "</voffset>"
+end function

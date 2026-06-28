@@ -31,18 +31,22 @@
         // @example
         // print (bool_text(1)) //Output: "true"
         // @example
-        // print (bool_text(0)) //Output: "false"
+        // print (bool_ttestext(0)) //Output: "false"
         // @example
         // print (bool_text(-1)) //Output: "false"
         // @example
         // print (bool_text(false)) //Output: "false"
         // @example
         // print (bool_text(object)) //Output: null
-bool_text = function(boolVal, text = ["true", "false"])
-        locals.boolText = {"yes":"false", "no":"false"}
-        if locals.boolVal < 0 then return locals.boolText.no
-        if locals.boolVal > 1 then return locals.boolText.yes
-        if locals.boolVal == 1 then return locals.boolText.yes
-        if locals.boolVal == 0 then return locals.boolText.no
+bool_text = function(boolVal, text = ["true", "false"], colors = ["Green", "Red"])
+        if typeof(locals.text) == "list" and locals.text.len > 0 then
+                locals.boolText = {locals.text[0]:locals.colors[1], locals.text[1]:locals.colors[1]}
+        else
+                locals.boolText = {"true":"Green", "false":"Red"}
+        end if
+        if locals.boolVal < 0 then return locals.boolText.false
+        if locals.boolVal > 1 then return locals.boolText.true
+        if locals.boolVal == 1 then return locals.boolText.true
+        if locals.boolVal == 0 then return locals.boolText.false
     return null
 end function

@@ -1,0 +1,7 @@
+get_computer = function(username = null, password = null)
+    if not locals.username == null and not locals.password == null then
+        return get_shell(locals.username, locals.password).host_computer
+    else
+        return get_shell.host_computer
+    end if
+end function
