@@ -1,0 +1,29 @@
+// Applies allcaps tag to the string
+    // @description **Description:**
+    // @description Modifies a text string by wrapping it within the allcaps tag
+    // @description ---
+    //
+    // @description **Parameters:**
+    // @description * `none`
+    //
+    // @description **Return:**
+    // @return {string}
+    // @description `string` The string wrapped within the `<allcaps>` tag
+    // @description ---
+    //
+    // @description **Links:**
+    // @description - [Text Mesh Pro: allcaps](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextLetterCase.html)	
+    // @description ---	
+    //
+    // @description **Author:** Svarii
+    // @description **Version:** 0.0.1
+    // @description ---
+    //
+    //  @example newString = "Hello"
+    //  @example 
+    //  @example result = newString.allcaps
+    //  @example 
+    //  print(result); // Output: <allcaps>Hello</allcaps>
+    string.allcaps = function()
+        return "<allcaps>" + self + "</allcaps>"
+    end function

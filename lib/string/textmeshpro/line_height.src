@@ -1,0 +1,58 @@
+// Applies line-height tag to the string
+    // @description **Description:**
+    // @description Modifies a text string to wrap it in the `<line-height>` tag
+    // @description ---
+    //
+    // @description **Parameters:**
+    // @param {string} [heightPercent]
+    // @description - `heightPercent` Accepted Input: `em`, `px`, and `%`
+    // @param {boolean} [closeTag]
+    // @description - `closeTag` Accepted values: `true` or `false`
+    //
+    // @description **Parameter Defaults:**
+    // @description - `heightPercent`:`15%`
+    // @description - `closeTag`:`true`
+    //
+    // @description **Return:**
+    // @return {string}
+    // @description `string` the string value embedded in (or appended to) the `<line-height>` tag
+    // @description ---
+    //
+    // @description **Author:** Svarii
+    // @description **Version:** 0.0.1
+    // @description ---
+    //
+    // @description ---        
+    // @description **Links:**
+    // @description [Text Mesh Pro: Rich Text Line Height](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/RichTextLineHeight.html)
+    // @description ---       
+    // @description ***footnotes***   
+    // @description Parameters are not checked for validity   
+    // @description - `heightPercent` will not reject invalid values | **Return**: `string<withParseIssues>`
+    // @description - `closeTag` will not reject invalid values | **Return**: `null`
+    // @description
+    // @description If all parameters passed are invalid | **Return**: `null`
+    // @description ---          
+    //
+    // @return {string}
+    // @example newString = "Hello"
+    // @example 
+    // @example result = newString.line-height        
+    // @example        
+    // print(result); // Outputs: <line-height=15%>Hello</line-height>
+    // @example            
+    // @example result = newString.line-height("3em")
+    // @example        
+    // print(result); // Outputs: <line-height=3em>Hello</line-height>
+    // @example            
+    // @example result = newString.line-height("25px", false)
+    // @example        
+    // print(result); // Outputs: <line-height=25px>Hello            
+string.line_indent = function(lineIndent = "15%", closeTag = true)
+    if locals.closeTag == false then
+        return "<line-height=" + locals.lineIndent + ">" + self
+    else
+        return "<line-height=" + locals.lineIndent + ">" + self + "</line-height>"
+    end if
+    return null
+end function    

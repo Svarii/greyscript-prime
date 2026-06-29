@@ -61,11 +61,11 @@
     // @example 
     // @example result = newString.line-indent        
     // @example        
-    // print(result); // Outputs: <line-indent=15%>Hello</indent>
+    // print(result); // Outputs: <line-indent=15%>Hello</line-indent>
     // @example            
     // @example result = newString.line-indent("3em")
     // @example        
-    // print(result); // Outputs: <line-indent=3em>Hello</indent>
+    // print(result); // Outputs: <line-indent=3em>Hello</line-indent>
     // @example            
     // @example result = newString.line-indent("25px", false)
     // @example        
