@@ -1,3 +1,74 @@
+// @startuml
+// title <color:purple>get_port_info Function Overview</color>
+//
+// class router {
+//   .. <color:blue>Input</color> ..
+//   + portNumber : number
+//
+//   .. <color:blue>Return</color> ..
+//   + returns : portInfo | string
+// }
+//
+// class portInfo {
+//   .. <color:blue>Standard Port Fields</color> ..
+//   + portNumber : number
+//   + status : string
+//   + protocol : string
+//   + service : string
+// }
+//
+// router -right-> portInfo : returns on success
+//
+// note bottom of router
+//   * Validates that `self` is a router object
+//   * Uses `ping_port()` to obtain a port instance
+//   * On type mismatch, returns an error string instead of `portInfo`
+// end note
+//
+// @enduml
+
+// Get detailed information about a router port
+// @description **Description:**
+// Retrieves structured port information from a router object.
+// On type mismatch, returns an error string instead of a portInfo map.
+// @description ---
+//
+// @description **Parameters:**
+// @param {number} portNumber
+// @description - `portNumber`:`<number>` The port index to inspect.
+//
+// @description **Parameter Defaults:**
+// @description - `none`
+//
+// @description **Return:**
+// @return {map<string,any> | string}
+// @description `map`:`portInfo` {on success}
+// @description - `.portNumber`:`<number>` The port number queried
+// @description - `.status`:`<string>` The port's current state (open/closed/etc)
+// @description - `.protocol`:`<string>` The protocol associated with the port
+// @description - `.service`:`<string>` The service bound to the port
+// @description ---
+// @description `string`:`<error>` {on error} Type mismatch description when `self` is not a router
+// @description or when `ping_port()` does not return a `port` object.
+// @description ---
+//
+// @description **Author:** Svarii
+// @description **Version:** 0.0.1
+// @description ---
+//
+// @example portInfo = router.get_port_info(22)
+// @example
+// @example if typeof(portInfo) == "string" then
+// @example
+// print portInfo // error string
+// @example else
+// @example
+// print portInfo.status
+// @example
+// print portInfo.protocol
+// @example
+// print portInfo.service
+// @example end if
 router.get_port_info = function(portNumber)
 	if not typeof(self) == "router" then return "<#FF0000>Type Mismatch, object is not a router"
 	locals.portObject = self.ping_port(locals.portNumber)

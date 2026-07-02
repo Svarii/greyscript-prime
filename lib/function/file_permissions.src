@@ -1,0 +1,9 @@
+	file_permissions = function(filePath, fileName, accessObject)
+		locals.hostComputer = null
+		if typeof(accessObject) == "shell" then locals.hostComputer = locals.accessObject.host_computer
+		if typeof(accessObject) == "computer" then locals.hostComputer = locals.accessObject
+		if locals.hostComputer == null then return null
+		locals.fileLocation = locals.filePath + "/" + locals.fileName
+		locals.filePermissions = locals.hostComputer.File(locals.fileLocation).permissions
+		return locals.filePermissions
+	end function  

@@ -1,3 +1,28 @@
-fetch_active_user = function()
-	locals.activeUserInfo = {"classID":"activeUserInfo", "user_name":active_user, "mail_address":user_mail_address, "bank_account":user_bank_number, "home_dir":home_dir}
-end function
+    // Fetch Active User Information
+    // @description **Description:**
+    // Retrieves data about the currently active user session.
+    // @description ---
+    //
+    // @description **Parameters:**
+    //
+    // @description **Parameter Defaults:**
+    //
+    // @description **Return:**
+    // @return {object}
+    // @description `activeUserInfo`:`object`
+    // @description - `classID`:`<string>` The class identifier string ("activeUserInfo").
+    // @description - `user_name`:`<string>` The username of the active user.
+    // @description - `home_dir`:`<string>` The home directory path of the active user.
+    // @description ---
+    // @description - `error`:`<null>` {on error} Returns null if no active user session is found.
+    // @description ---
+    //
+    // @description **Author:** Svarii
+    // @description **Version:** 0.0.1
+    // @description ---
+    //
+    // @example userData = fetch_active_user()
+    // @example print(userData.user_name)
+    fetch_active_user = function()
+        return {"classID":"activeUserInfo", "user_name":active_user, "home_dir":home_dir}
+    end function

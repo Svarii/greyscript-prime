@@ -1,0 +1,28 @@
+    // Fetch Active Player Information
+    // @description **Description:**
+    // Retrieves account and contact details for the currently active player.
+    // @description ---
+    //
+    // @description **Parameters:**
+    //
+    // @description **Parameter Defaults:**
+    //
+    // @description **Return:**
+    // @return {object}
+    // @description `activePlayerInfo`:`object`
+    // @description - `classID`:`<string>` The class identifier string ("activePlayerInfo").
+    // @description - `mail_address`:`<string>` The registered email address of the player.
+    // @description - `bank_account`:`<string>` The bank account number associated with the player.
+    // @description ---
+    // @description - `error`:`<null>` {on error} Returns null if no player data can be fetched.
+    // @description ---
+    //
+    // @description **Author:** Svarii
+    // @description **Version:** 0.0.1
+    // @description ---
+    //
+    // @example playerData = fetch_active_player()
+    // @example print(playerData.bank_account)
+    fetch_active_player = function()
+        return {"classID":"activePlayerInfo", "mail_address":user_mail_address, "bank_account":user_bank_number}
+    end function
