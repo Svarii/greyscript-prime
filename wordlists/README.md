@@ -114,12 +114,7 @@ Grey Hack supports **every character** in the U+2500 block.
 
 Supported:
 ```
-︵ ︶ ︷ ︸
-```
-
-Unsupported:
-```
-〶 〷 〸 〹 〺
+︵ ︶ ︷ ︸ 〶 〷 〸 〹 〺
 ```
 
 | Block | Range | Status |

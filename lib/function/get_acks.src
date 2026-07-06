@@ -35,7 +35,7 @@
 		end if
 		if locals.signalStrength <= 0 or locals.signalStrength > 100 then return null
 		return ceil(300000 / (locals.signalStrength + 15))
-	end function
+	end function 
 // @startuml
 // start
 // :<color:purple>signalStrength = 1 (default)</color>;
