@@ -1,4 +1,4 @@
-// load a library with 
+// Loads a library
 // @description **Description:**
 // Loads a library from the lib directory, optionally specifiy directory, optionally verify type
 // @description ---
@@ -21,7 +21,7 @@
 // @description ---   
 // 
 // @description **Author:** Svarii
-// @description **Version:** 0.0.1
+// @description **Version:** 0.0.3
 // @description ---    
 //
 // @description *footnotes*
@@ -52,3 +52,24 @@ load_lib = function(libName = "metaxploit.so", libDir = "/lib", libType = "")
             return null
         end if
 end function
+// @startuml
+// title <color:purple>load_lib Function Diagram</color>
+// 
+// class load_lib {
+//   .. <color:blue>Parameters</color> ..
+//   + libName : string = "metaxploit.so"
+//   + libDir : string = "/lib"
+//   + libType : string = ""
+// 
+//   .. <color:blue>Returns</color> ..
+//   + objectLibrary | null
+// }
+// 
+// note right of load_lib
+//   <b>Footnotes:</b>
+//   * libName must be full filename including extension
+//   * libDir should not have trailing slash
+//   * libType is case sensitive
+// end note
+// 
+// @enduml
