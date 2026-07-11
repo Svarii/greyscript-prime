@@ -214,3 +214,30 @@ string.color = function(colorValue)
 	return "<color=" + colorValue + ">" + self + "</color>"
 end function
 
+// @startuml
+// title <color:purple>color Function Diagram</color>
+// 
+// class StringExtensions {
+//   .. <color:blue>Parameters</color> ..
+//   + colorValue : string
+// 
+//   .. <color:blue>Returns</color> ..
+//   + string
+// }
+// 
+// note right of StringExtensions
+//   <b>Description:</b>
+//   Modifies a text string by wrapping it within the color tag.
+//   
+//   <b>Links:</b>
+//   * Text Mesh Pro: Rich Color Text
+//   * HTML Color Names: Supported Name List
+//   
+//   <b>Author:</b> Svarii
+//   <b>Version:</b> 0.0.1
+//   
+//   <b>Footnotes:</b>
+//   * Color names are case sensitive
+// end note
+// 
+// @enduml

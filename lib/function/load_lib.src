@@ -52,6 +52,7 @@ load_lib = function(libName = "metaxploit.so", libDir = "/lib", libType = "")
             return null
         end if
 end function
+
 // @startuml
 // title <color:purple>load_lib Function Diagram</color>
 // 
