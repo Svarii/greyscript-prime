@@ -109,3 +109,36 @@
             return null
         end if
     end function
+// @startuml
+// title <color:purple>fetch_inbox Function Diagram</color>
+//
+// class fetch_inbox {
+//   .. <color:blue>Parameters</color> ..
+//   + mailAddress : string = user_mail_address
+//   + mailPass : string = "mailpass"
+//
+//   .. <color:blue>Returns</color> ..
+//   + list<emailDetails>
+// }
+//
+// class emailDetails {
+//   .. <color:blue>Metadata</color> ..
+//   + id : string
+//   + from : string
+//   + subject : string
+//   + body : list<string>
+//
+//   .. <color:blue>Mission / Contract Details</color> ..
+//   + contract : boolean
+//   + type : string | null
+//   + target_wan : string | null
+//   + target_lan : string | null
+//   + target_user : string | null
+// }
+//
+// note bottom of fetch_inbox
+//   <b>Description:</b>
+//   * Logs into the mail account and fetches inbox messages.
+// end note
+//
+// @enduml 

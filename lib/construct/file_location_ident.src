@@ -50,23 +50,24 @@ file_location_ident = function(absoluteLocation)
         locals.construct = {"classID":"fileID", "ext": locals.ext, "name": locals.name, "parentdir": locals.folder, "dir": locals.dir, "location": locals.location, "filename": locals.filename}
         return locals.construct
 end function
-// @startyaml
+// @startuml
+// title <color:purple>file_location_ident Function Diagram</color>
 //
-// # File Identifier Class Diagram
-// #highlight "fileID" / "File Info"
+// class file_location_ident {
+//   .. <color:blue>Parameters</color> ..
+//   + absoluteLocation : string
 //
-// fileID:
-//   File Info:
-//     ext: "string"      # File extension
-//     name: "string"     # Base name of the file
-//     filename: "string" # Full file name
-//   Path Info:
-//     dir: "string"      # Directory path
-//     parentdir: "string" # Parent directory
-//     location: "string"  # Absolute file path
+//   .. <color:blue>Returns</color> ..
+//   + fileID Object
+// }
 //
-// # Note:
-// # Extracts and assembles file properties
-// # from an absolute location.
-//
-// @endyaml
+// class fileID {
+//   .. <color:blue>Attributes</color> ..
+//   + ext : string
+//   + name : string
+//   + filename : string
+//   + dir : string
+//   + parentdir : string
+//   + location : string
+// }
+// @enduml
