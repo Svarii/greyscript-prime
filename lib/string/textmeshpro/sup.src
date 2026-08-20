@@ -24,7 +24,7 @@
     //  @example result = newString.sup
     //  @example 
     //  print(result); // Output: <sup>Hello</sup> 
-    string.sup = function()
-        return "<sup>" + self + "</sup>"    
-    end function
+string.sup = function()
+    return "<sup>" + self + "</sup>"    
+end function
 

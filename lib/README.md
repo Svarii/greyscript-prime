@@ -2626,6 +2626,13 @@ Returns a list of structured maps with exploit requirement metadata for each add
 
 </details>
 
+<details>
+<summary>📚 docBlock</summary>
+
+![fetch-exploit_requirements](images/fetch_exploit_requirements.png)
+
+</details>
+
 ### 🧮 Parameters
 
 | Name              | Type                  | Description                                                                 |
@@ -2633,8 +2640,6 @@ Returns a list of structured maps with exploit requirement metadata for each add
 | `addressList`     | `list<string>`        | List of addresses returned by `metaxploit.scan()`                          |
 | `metaLibObject`     | `map<MetaLib>`              | Library location those addresses were found in                             |
 | `metaxploitObject`| `map<MetaxploitLib>`  | A Metaxploit object reference                                          
-
-
 
 ### 🔁 Return
 `list<map<string, string>>` — Each item represents an exploit requirement set for an address.

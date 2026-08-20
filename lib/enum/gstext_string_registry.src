@@ -1,4 +1,4 @@
-gstext_string_construct__ = function()
+gstext_string_registry = function()
 	locals.fail = new {"classID": "errorStrings"}
 	locals.pass = new {"classID": "passStrings"}
 	locals.action = new {"classID": "actionStrings"}

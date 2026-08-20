@@ -1,31 +1,6 @@
-// Highlight list item
-// @description **Description:**
-// @description Add a highlight to the specificed list index
-// @description ---
-//
-// @description **Parameters:**
-// @param {list<string>} menuList
-// @param {number} selectedItem
-// @param {string} [highlightcolor]
-// @param {string} [textColor]
-//
-// @description - `menuList`:`<list><string>`
-// @description - `selectedItem`:`<number>`
-// @description - `highlightcolor`:`<#HEXA / #RRGGBBAA>`
-// @description - `textColor`:`<string>`
-//
-// @description **Parameter Defaults:**
-// @description - `highlightcolor`:`#FFFF002C`
-//
-// @description **Return:**
-// @return {list<string>}
-// @description `list` List with marked index
-// @description ---
-//    
-// @description **Author:** Svarii
-// @description **Version:** 0.0.1
-// @description ---   
-highlight_list = function(menuList, selectedItem, highlightcolor = "#FFFF002C", textColor = null)
+
+
+display_menu = function(menuList, selectedItem, highlightcolor = "#FFFF002C", textColor = "#FFFFFF", windowSize = 6)
     locals.outputMenu = []
     for menuItem in locals.menuList
         if locals.selectedItem == __menuItem_idx then
@@ -38,51 +13,11 @@ highlight_list = function(menuList, selectedItem, highlightcolor = "#FFFF002C", 
             locals.outputMenu.push(locals.menuItem)
         end if
     end for
-    return locals.outputMenu
+    return locals.outputMenu[locals.selectedItem:(locals.selectedItem + locals.windowSize)]
 end function
 
-// Changes index based on user_input
-// @description **Description:**
-// @description Increase or decrease index number based on user_input
-// @description ---
-//
-// @description **Parameters:**
-// @param {number} numberIndex
-// @param {string} userInput
-// @param {list<string><string>} [inputOption]
-//
-// @description - `numberIndex`:`<number>`
-// @description - `selectedItem`:`<number>`
-// @description - `inputOption`:`<list[string,string]>`
-//
-// @description **Parameter Defaults:**
-// @description - `inputOption`:`["UpArrow", "DownArrow"]`
-//
-// @description **Return:**
-// @return {number}
-// @description `number` The selected index number
-// @description ---
-//    
-// @description **Author:** Svarii
-// @description **Version:** 0.0.1
-// @description ---   
-user_navigation = function (numberIndex, userInput, inputOption = null)
-    if locals.inputOption == null then locals.inputOption = ["UpArrow", "DownArrow"]
-    indexChange = numberIndex
-    if locals.userInput == locals.inputOption[0] then
-        locals.indexChange = locals.indexChange - 1
-    end if
-    if locals.userInput == locals.inputOption[1] then
-        locals.indexChange = locals.indexChange + 1
-    end if
-    return locals.indexChange
-end function
 
-// @description **Author:** Svarii
-// @description **Version:** 0.0.1
-// @description ---  
-section1 = function
-end function
+
 
 
 keepAlive = true

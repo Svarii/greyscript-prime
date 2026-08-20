@@ -28,6 +28,6 @@
     //  @example result = newString.width
     //  @example 
     //  print(result); // Outputs: <width=50%>Hello</width>       
-    string.width = function(hSize = "50%")
-        return "<width=" + locals.hSize + ">" + self + "</width>"
-    end function
+string.width = function(hSize = "50%")
+    return "<width=" + locals.hSize + ">" + self + "</width>"
+end function

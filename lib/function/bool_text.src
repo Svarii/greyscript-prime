@@ -42,11 +42,11 @@ bool_text = function(boolVal, text = ["true", "false"], colors = ["Green", "Red"
         if typeof(locals.text) == "list" and locals.text.len > 0 then
                 locals.boolText = {locals.text[0]:locals.colors[1], locals.text[1]:locals.colors[1]}
         else
-                locals.boolText = {"true":"Green", "false":"Red"}
+                locals.boolText = {"positive":"Green", "negative":"Red"}
         end if
-        if locals.boolVal < 0 then return locals.boolText.false
-        if locals.boolVal > 1 then return locals.boolText.true
-        if locals.boolVal == 1 then return locals.boolText.true
-        if locals.boolVal == 0 then return locals.boolText.false
+        if locals.boolVal < 0 then return locals.boolText.negative
+        if locals.boolVal > 1 then return locals.boolText.positive
+        if locals.boolVal == 1 then return locals.boolText.positive
+        if locals.boolVal == 0 then return locals.boolText.negative
     return null
 end function

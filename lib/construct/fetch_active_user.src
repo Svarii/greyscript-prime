@@ -23,6 +23,6 @@
     //
     // @example userData = fetch_active_user()
     // @example print(userData.user_name)
-    fetch_active_user = function()
-        return {"classID":"activeUserInfo", "user_name":active_user, "home_dir":home_dir}
-    end function
+fetch_active_user = function()
+    return {"classID":"activeUserInfo", "user_name":active_user, "home_dir":home_dir}
+end function

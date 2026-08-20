@@ -37,7 +37,7 @@
 //
 // @enduml
 
-// Pull whosis information from a public ip address
+// Pull whois information from a public ip address
 	// @description **Description:**
 	// Return map with whois information
 	// @description ---

@@ -1,0 +1,149 @@
+Absolute value
+Add
+Addition
+Analyze
+Angle
+Apply
+Approximate
+Arc
+Area
+Arrange
+Asymptote
+Axiom
+Axis
+Binomial distribution
+Calculate
+Calculus
+Categorize
+Chord
+Circle
+Circumference
+Classify
+Combinations
+Compare
+Complex number
+Composite number
+Compute
+Congruent
+Conic section
+Construct
+Contrast
+Convert
+Cosecant
+Cosine
+Cotangent
+Create
+Cross product
+Decimal
+Derivative
+Derive
+Determine
+Diameter
+Differentiate
+Divide
+Division
+Dot product
+Ellipse
+Equation
+Estimate
+Evaluate
+Expand
+Exponent
+Exponential
+Factor
+Factorial
+Formulate
+Fraction
+Frequency
+Function
+Geometry
+Gradient
+Graph
+Group
+Hyperbola
+Hyperbolic function
+Hypotenuse
+Identify
+Imaginary number
+Inequality
+Integer
+Integral
+Integrate
+Intercept
+Irrational number
+Label
+Limit
+Linear
+List
+Logarithm
+Logarithmic function
+Matrix
+Mean
+Measure
+Median
+Mode
+Model
+Multiplication
+Multiply
+Normal distribution
+Order
+Organize
+Origin
+Orthogonal
+Parabola
+Parallel
+Perimeter
+Permutations
+Perpendicular
+Plot
+Poisson distribution
+Postulate
+Prime number
+Probability
+Proof
+Proportion
+Prove
+Pythagorean theorem
+Quadrant
+Quadratic
+Radius
+Range
+Rank
+Rational number
+Real number
+Reciprocal function
+Reflect
+Represent
+Rotate
+Scalar
+Scale
+Secant
+Sector
+Sequence
+Side
+Similar
+Simplify
+Sine
+Slope
+Solve
+Standard deviation
+Statistics
+Subtract
+Subtraction
+Surface area
+Symmetry
+Tabulate
+Tangent
+Theorem
+Transform
+Translate
+Transversal
+Trigonometric function
+Trigonometry
+Use
+Utilize
+Variable
+Vector
+Verify
+Vertex
+Volume

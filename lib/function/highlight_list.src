@@ -1,0 +1,42 @@
+// Highlight list item
+// @description **Description:**
+// @description Add a highlight to the specificed list index
+// @description ---
+//
+// @description **Parameters:**
+// @param {list<string>} menuList
+// @param {number} selectedItem
+// @param {string} [highlightcolor]
+// @param {string} [textColor]
+//
+// @description - `menuList`:`<list><string>`
+// @description - `selectedItem`:`<number>`
+// @description - `highlightcolor`:`<#HEXA / #RRGGBBAA>`
+// @description - `textColor`:`<string>`
+//
+// @description **Parameter Defaults:**
+// @description - `highlightcolor`:`#FFFF002C`
+//
+// @description **Return:**
+// @return {list<string>}
+// @description `list` List with marked index
+// @description ---
+//    
+// @description **Author:** Svarii
+// @description **Version:** 0.0.1
+// @description ---   
+highlight_list = function(menuList, selectedItem, highlightcolor = "#FFFF002C", textColor = null)
+    locals.outputMenu = []
+    for menuItem in locals.menuList
+        if locals.selectedItem == __menuItem_idx then
+            if locals.textColor == null then
+                locals.outputMenu.push(locals.menuItem.mark(locals.highlightcolor))
+            else
+                locals.outputMenu.push(locals.menuItem.color(locals.textColor).mark(locals.highlightcolor))
+            end if
+        else
+            locals.outputMenu.push(locals.menuItem)
+        end if
+    end for
+    return locals.outputMenu
+end function
